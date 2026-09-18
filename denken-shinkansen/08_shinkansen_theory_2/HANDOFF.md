@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
+Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_19_final_qa_complete`
+current_status: `topic_19_completed`
 
-active_topic: `19 25kV・大電流をどう安全に測る？`
+active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、PowerPoint＋表示QA、完成後独立再解答、最終QA再実施まで完了。初回最終QAで確認された2 blocker（PowerPoint本体欠落、主source進捗記録不一致）はともに解消し、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。次工程は `completed` 状態同期。
+Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、PowerPoint＋表示QA、完成後独立再解答、最終QA再実施を通過し、`completed` 状態同期まで完了。初回最終QAで確認された2 blocker（PowerPoint本体欠落、主source進捗記録不一致）は解消済み。次工程はTopic 20の制作前EXAM_ALIGNMENT。
 
 ## Topic 19 固定範囲
 
@@ -25,7 +25,7 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 変成比
 - 電力量測定
 
-Topic 20の誤差・ブリッジ・波形・サンプリングは先取りしない。実設備CT・VTの定格、結線、精度階級等は一次資料未確認の真値として追加しない。
+Topic 20の誤差・ブリッジ・波形・サンプリングはTopic 19へ先取りしない。実設備CT・VTの定格、結線、精度階級等は一次資料未確認の真値として追加しない。
 
 ## Topic 19 固定EXAM_ALIGNMENT
 
@@ -52,8 +52,8 @@ Topic 20の誤差・ブリッジ・波形・サンプリングは先取りしな
 - PowerPoint QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_powerpoint_qa.md`
 - 完成後独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_reanswer.md`
 - 最終QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_final_qa.md`
-- completion: `in_progress`
-- stage: `FINAL_QA_COMPLETE`
+- completion: `completed`
+- stage: `COMPLETED`
 
 ## 品質ゲート現状
 
@@ -73,17 +73,17 @@ Topic 20の誤差・ブリッジ・波形・サンプリングは先取りしな
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
 
-## 最終QA再実施
+## completed状態同期
 
-- 必須成果物欠落: `0件`
-- 固定一次5問・25答案要素: `25 / 25 PASS`
-- 公式標準解答一致: `25 / 25`
-- PowerPoint本体とQA記録の存在整合: `PASS`
-- 主source / STATUS / HANDOFF の最終QA前進捗整合: `PASS`
-- SPEC固定範囲外追加: `0件`
-- 未確認実設備CT・VT値追加: `0件`
-- 判定: `PASS / FINAL_QA_COMPLETE`
+- 主source: `completion: completed` / `stage: COMPLETED`
+- 練習source: `completion: completed` / `stage: COMPLETED`
+- 固定一次5問・25答案要素: `25 / 25 PASS` 維持
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF・PowerPoint変更: `0件`
+- 仕様外追加: `0件`
+- 判定: `PASS / completed`
 
 ## 次工程
 
-Topic 19の `completed` 状態同期。完成数を `19 / 21` へ更新し、次の未完了テーマTopic 20へ移るのは、その同期が完了した後。
+Topic 20「East iは走りながら何をどう測る？」の制作前EXAM_ALIGNMENT。
