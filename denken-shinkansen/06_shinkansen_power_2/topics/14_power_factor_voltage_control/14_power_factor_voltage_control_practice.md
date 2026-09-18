@@ -1,7 +1,7 @@
 # Topic 14 練習問題・完全解説 - 新幹線の力率と電圧をどう維持する？
 
-更新日: 2026-09-18
-状態: `topic_14_practice_source_complete`
+更新日: 2026-09-19
+状態: `topic_14_practice_source_synced_with_final_qa`
 
 本ファイルは `14_power_factor_voltage_control.md` の固定EXAM_ALIGNMENTと `14_power_factor_voltage_control_explanation.md` だけを土台にした練習プリント用sourceである。公式過去問の転載ではなく、正式固定5問・21答案要素とTopic 14固定範囲を同型問題へ転用できるか確認する独自問題とする。
 
@@ -736,6 +736,6 @@ QL = Qtarget-Qbefore
 
 ## 完成判定との関係
 
-練習問題sourceと完全解説を作成し、固定5問・21答案要素を `21 / 21` 接続した。練習PDF、PowerPoint、完成後blind独立再解答、最終QAは未実施であり、Topic 14は `IN_PROGRESS` のままとする。
+練習問題sourceと完全解説、練習PDF＋PDF QA、PowerPoint作成、修正版成果物に対する完成後blind独立再解答まで実施済み。完成後blindは一次 `10 / 10`、二次 `11 / 11`、合計 `21 / 21 PASS`。最終QAも実施済みだが、現行GitHub正本PowerPointの再QAとWebカタログ登録が未完了のため、Topic 14は `IN_PROGRESS` のままとする。
 
-次工程は本sourceから練習PDFを生成し、表示、文字抽出、全15問の数値・論理、一次型10問の正答一意性をQAする。PowerPointと完成後blind独立再解答はまだ行わない。
+次工程は現行GitHub正本PowerPointを再QAし、現行blobに対応するQA記録へ更新する。固定5問・21答案要素、練習問題内容、教材技術範囲は変更しない。
