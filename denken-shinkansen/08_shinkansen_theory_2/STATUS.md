@@ -43,7 +43,7 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 20の解説画像PowerPoint＋表示QA工程を完了した。ローカル生成物を同一生成source・PptxGenJS 4.0.0で検証済みで、GitHub Actionsによる正本バイナリ生成待ち。
+Topic 20の解説画像PowerPoint＋表示QA工程を完了し、GitHub正本へ反映した。同一生成source・PptxGenJS 4.0.0で表示・構造QA済み。
 
 - PowerPoint: `topics/20_east_i_measurement/20_east_i_measurement_images.pptx`
 - QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
