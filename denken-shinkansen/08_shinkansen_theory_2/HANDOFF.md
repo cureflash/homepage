@@ -6,11 +6,11 @@
 
 Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
 
-current_status: `topic_18_explanation_pdf_complete`
+current_status: `topic_18_practice_pdf_complete`
 
 active_topic: `18 新幹線のセンサ信号をどう増幅する？`
 
-Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QAまで完了。固定一次5問・25答案要素は `25 / 25` を教材へ接続し、必須説明15項目は `15 / 15`、3段階例題は `3 / 3`。解説PDFはA4縦3ページ、200 dpi全ページ表示QA `3 / 3 PASS`、文字抽出QA `PASS`。二次採用0問・二次数合わせ0件。次工程は練習問題source＋練習PDF。
+Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。固定一次5問・25答案要素は `25 / 25` を教材・練習へ接続し、練習問題は12問すべて五肢択一、数値再計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi全ページ表示QA `3 / 3 PASS`、文字抽出QA `PASS`。二次採用0問・二次数合わせ0件。次工程は解説画像PowerPoint＋表示QA。
 
 ## Topic 18 成果物
 
@@ -18,8 +18,11 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 制作前blind独立再解答: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_blind_reanswer.md`
 - 解説PDF: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_explanation.pdf`
 - 解説PDF QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_explanation_pdf_qa.md`
+- 練習source: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_practice.md`
+- 練習PDF: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_practice.pdf`
+- 練習PDF QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_practice_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- stage: `PRACTICE_PDF_COMPLETE`
 
 ## Topic 18 固定範囲
 
@@ -112,6 +115,30 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
+## Topic 18 練習問題＋練習PDF QA
+
+記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_practice_pdf_qa.md`
+
+- source: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_practice.md`
+- PDF: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_practice.pdf`
+- 問題数: `12問`
+- 形式: `全問五肢択一`
+- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
+- A4縦3ページ
+- 200 dpi全ページ表示QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `14da420cc2667d859029fd61abbbc17feb78732f2b3db1d4464a959137e1d6c8`
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 固定一次5問・25答案要素への接続: `25 / 25`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 19・20の先取り: `0件`
+- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## 次工程
 
-Topic 18の練習問題source＋練習PDFを作成し、問題・解答・完全解説、数値再計算・正答一意性、固定一次5問・25答案要素、SPEC境界を確認する。Topic 19・20を先取りせず、実車の特定センサ回路・回路定数・実装方式を未確認のまま追加しない。
+Topic 18の解説画像PowerPoint＋表示QAを作成し、固定一次5問・25答案要素、SPEC固定範囲8項目、解説本文の要点を視覚化する。Topic 19・20を先取りせず、実車の特定センサ回路・回路定数・実装方式を未確認のまま追加しない。
