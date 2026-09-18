@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 19 / 20
-- current_status: `topic_20_practice_source_complete`
+- current_status: `topic_20_practice_pdf_complete`
 - last_completed_topic: `19 最適化入門`
 - active_topic: `20 新幹線を数式モデルだけで走らせる`
-- next_start: Topic 20の練習PDF＋QA
+- next_start: Topic 20の解説画像PowerPoint＋QA
 
 ## Topic 07 制作品質ゲート
 
@@ -338,7 +338,7 @@
 - [x] 解説本文＋3段階例題（必要説明 `6 / 6 PASS`、例題 `3 / 3 PASS`、接続確認5問マッピング `5 / 5 PASS`）
 - [x] 解説PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立数値照合 `3 / 3 PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [ ] 練習PDF＋QA
+- [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [ ] 解説画像PowerPoint＋QA
 - [ ] 完成後独立検証
 - [ ] 最終QA
@@ -346,11 +346,13 @@
 
 ## 今回進めた内容
 
-Topic 20 `新幹線を数式モデルだけで走らせる` の練習問題sourceを完成した。
+Topic 20 `新幹線を数式モデルだけで走らせる` の練習PDF＋QAを完成した。
 
-- 練習source: `topics/20_shinkansen_math_model/20_shinkansen_math_model_practice.md`
-- 全12問: 一次型8問・記述型4問
-- 難易度: 基礎3問・標準6問・複合3問
+- 練習PDF: `topics/20_shinkansen_math_model/20_shinkansen_math_model_practice.pdf`
+- QA記録: `topics/20_shinkansen_math_model/20_shinkansen_math_model_practice_qa.md`
+- A4縦: `4ページ`
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
 - 独立計算・論理QA: `12 / 12 PASS`
 - 一次型正答一意性: `8 / 8 PASS`
 - 接続確認5問の教材内マッピング: `5 / 5 PASS`
@@ -362,8 +364,8 @@ Topic 20 `新幹線を数式モデルだけで走らせる` の練習問題sourc
 
 ## 判定
 
-`topic_20_practice_source_complete / IN_PROGRESS`
+`topic_20_practice_pdf_complete / IN_PROGRESS`
 
 完成数は `19 / 20`。
 
-次はTopic 20の練習PDF＋QA。
+次はTopic 20の解説画像PowerPoint＋QA。
