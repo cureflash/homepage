@@ -140,7 +140,7 @@ QA:
 - `Kp`・`Ki`・`Kd` 一変数比較3グラフ: `PASS`
 - 固定5問・12答案要素: `12 / 12 COVERED`
 - Topic 20/21先取り・未確認実車PID値・固定問題正答保存: `各0件`
-- PPTX Git blob: `f30c3f6aa908052d605aa205ce06516afe00fe8c`
+- PPTX Git blob: `8d863217eee028e3b14b2ddda9c1dcb9e32cf804`
 
 判定: `PASS / topic_19_powerpoint_complete / IN_PROGRESS`
 

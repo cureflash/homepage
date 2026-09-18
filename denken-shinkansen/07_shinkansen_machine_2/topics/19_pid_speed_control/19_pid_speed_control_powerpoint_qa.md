@@ -13,15 +13,15 @@
 
 ## 表示・ファイルQA
 - [x] LibreOffice headlessでPDF変換 `PASS`。
-- [x] 120 dpi・1601×900で全4枚表示確認 `4 / 4 PASS`。
+- [x] 120 dpi・1600×900で全4枚表示確認 `4 / 4 PASS`。
 - [x] 文字・数式・図・グラフの欠落、重なり、切れ、破損グリフ `0件`。
 - [x] スライド境界overflow `0件`。
 - [x] PDF文字抽出のUnicode置換文字 `0件`。
 - [x] `(cid:)` `0件`。
 - [x] PPTX ZIP整合性 `PASS`、スライドXML `4枚`。
-- [x] PPTX SHA-256 `d2d424b3ef72edc02849ac1b4db300b1363444a1feed42db4d728922de3535d8`。
-- [x] PPTX Git blob SHA `f30c3f6aa908052d605aa205ce06516afe00fe8c`。
-- [x] PPTX size `136896 byte`。
+- [x] PPTX SHA-256 `a8a1e6671e1f43b97cbd03b7e8171671fee5ff002b61b40584f237a66d646bb4`。
+- [x] PPTX Git blob SHA `8d863217eee028e3b14b2ddda9c1dcb9e32cf804`。
+- [x] PPTX size `51258 byte`。
 
 ## 数値・論理QA
 - [x] `C(s)=4+2/s+0.8s` から `Ti=2 s`、`Td=0.2 s` の係数変換を独立確認。
