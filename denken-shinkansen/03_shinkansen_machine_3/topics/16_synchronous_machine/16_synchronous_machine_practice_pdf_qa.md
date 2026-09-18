@@ -1,6 +1,6 @@
 # Topic 16 練習PDF QA
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 対象: `16_synchronous_machine_practice.pdf`
 
 ## 判定
@@ -67,5 +67,11 @@ PDF抽出正答: `3,2,5,4,3,4,1,5,2,4,1,5`
 - PDF preflight: openable / 2 pages / not scanned / no XFA
 - 非埋込CID日本語フォントを使用。200 dpi実表示で欠落・破損なし。
 
+## 後続工程同期
+- PowerPoint: source補強反映済み / 表示 `4 / 4 PASS` / はみ出し0件 / ZIP整合性 `PASS`
+- 改訂後blind独立再解答: `6 / 6 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+
 ## 次工程
-Topic 16の解説画像PowerPointへsourceのベクトル図補強を反映し、表示QA・ZIP整合性QAを再実施する。
+Topic 16の進捗記録整合を完了後、技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、最終QA再判定を行う。
