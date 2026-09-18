@@ -4,15 +4,14 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: `37 / 38`
-- current_status: `topic_38_independent_reanswer_complete`
-- last_completed_topic: `37 COSMOS② 新幹線の電力設備を遠隔監視する`
-- active_topic: `38 COSMOS③ システムが壊れても新幹線を止めない`
-- next_start: Topic 38の最終QAを実施し、必須4成果物・固定5問5答案要素・各QA・完成後独立再解答を横断確認してcompleted判定する
+- exam_aligned_completed_topics: `38 / 38`
+- current_status: `series_complete`
+- last_completed_topic: `38 COSMOS③ システムが壊れても新幹線を止めない`
+- active_topic: `none`
+- next_start: MASTER_SPECの全系列制作順に従い、次系列 `02_shinkansen_power_3` の正本・STATUS・HANDOFFを確認して最初の未完了テーマから開始する
 
 ## 新品質ゲート進捗
-- [x] 01〜37 — PASS / COMPLETED
-- [ ] 38 — INDEPENDENT_REANSWER_COMPLETE / PASS。最終QAは未実施
+- [x] 01〜38 — PASS / COMPLETED
 
 ## Topic 37 最終状態
 判定: `PASS / COMPLETED`。
@@ -46,8 +45,8 @@
 - COSMOS-SCADA未確認内部仕様依存: `0件`
 - Topic 38先取り: `0件`
 
-## Topic 38 今回完了した1段階
-完成後独立再解答を実施し、`5 / 5 PASS / INDEPENDENT_REANSWER_COMPLETE`。
+## Topic 38 最終状態
+判定: `PASS / COMPLETED`。
 
 - source: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability.md`
 - EXAM_ALIGNMENT QA: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_exam_alignment_qa.md`
@@ -62,36 +61,30 @@
 - PowerPoint: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_images.pptx`
 - PowerPoint QA: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_images_qa.md`
 - 完成後独立再解答: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_independent_reanswer.md`
+- 最終QA: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_final_qa.md`
+
+### 最終ゲート
+- 必須4成果物: `4 / 4 EXIST / PASS`
 - 固定公式過去問: `5問・5答案要素`
 - 制作前blind独立解答: `5 / 5 PASS`
-- 完成後独立再解答: `5 / 5 PASS`
-- 完成後固定候補: `3, 5, 4, 3, 2`
-- 公式解答一致: `5 / 5 PASS`
-- 候補固定コミット: `b13634cfd502ce968cb5a4bf62ac440b12f3fc47`
-- 教材外知識補完: `0件`
 - 解説本文マッピング: `5 / 5 PASS`
-- 練習問題: `15問`（基礎4 / 標準8 / 複合3）
-- 五肢択一: `15 / 15`
+- 解説PDF反映: `5 / 5 PASS`
 - 練習source独立再解答: `15 / 15 PASS`
-- 練習PDF: A4縦 `4ページ`
-- 練習PDF 180 dpi表示QA: `4 / 4 PASS`
-- PowerPoint: `16:9 / 4スライド`
-- PowerPoint 180 dpi表示QA: `4 / 4 PASS`
+- 練習問題接続: `5 / 5 PASS`
+- PowerPoint接続: `5 / 5 PASS`
+- 完成後独立再解答: `5 / 5 PASS`
+- 公式解答一致: `5 / 5 PASS`
+- 教材外知識補完: `0件`
+- 固定問題追加・差替え: `0件`
+- 固定範囲外追加: `0件`
+- COSMOS-SCADA未確認内部仕様依存: `0件`
+
+### 成果物QA
+- 解説PDF: A4縦 `6ページ` / 180 dpi表示 `6 / 6 PASS` / 文字抽出PASS
+- 練習PDF: A4縦 `4ページ` / 180 dpi表示 `4 / 4 PASS` / 問題・正答・解説同期PASS
+- PowerPoint: `16:9 / 4スライド` / 180 dpi表示 `4 / 4 PASS`
 - PowerPoint shape geometry overflow: `0件 / PASS`
 - PowerPoint PPTX ZIP整合性: `PASS`
-- PowerPoint固定5問5答案要素接続: `5 / 5 PASS`
-- PowerPoint外部引用画像: `0件`
-- 固定問題差替え: `0件`
-- 固定範囲外追加: `0件`
-- COSMOS-SCADA未確認内部仕様追加: `0件`
-
-### Topic 38 source/PDF/練習source・練習PDF/PowerPointで反映した試験論点
-- AND・OR・NOT・ExOR・NOR、論理式、bit演算、タイムチャート
-- 6.6 kV非接地配電、多回線地絡、地絡方向継電器、高圧カットアウト
-- 遮断器、保護継電器、区分開閉器、避雷器、ケッチヒューズ
-- 低圧ネットワーク方式、複数給電線、ネットワークプロテクタ、供給継続
-- 冗長化、バックアップ、フェイルセーフ、システム信頼性
-- 独立故障を仮定した直列・並列信頼度の学習用計算
 
 ### Topic 38 固定範囲
 系列SPECどおり、次だけを対象とする。
@@ -104,7 +97,7 @@
 - 切替
 - システム信頼性
 
-JR東日本公開資料で確認できた「システム信頼度の向上」「事故時の情報収集・制御・早期復旧」だけを実システム事実として扱う。COSMOS/COSMOS-SCADAのサーバ台数、二重系/三重系、待機方式、通信経路、切替時間、切替条件、同期方式は推測しない。信頼度数値・式の適用例は独立故障を仮定した学習用モデルであり、COSMOS/COSMOS-SCADAの実信頼度とは扱わない。
+JR東日本公開資料で確認できた「システム信頼度の向上」「新幹線電力設備の状態監視・制御」「事故時の情報収集・制御・早期復旧」だけを実システム事実として扱う。COSMOS/COSMOS-SCADAのサーバ台数、二重系/三重系、待機方式、通信経路、切替時間、切替条件、同期方式は推測しない。信頼度数値・式の適用例は独立故障を仮定した学習用モデルであり、COSMOS/COSMOS-SCADAの実信頼度とは扱わない。
 
 ## 完成数
-`37 / 38`。Topic 38は完成後独立再解答まで完了。次は最終QA。
+`38 / 38`。`01_shinkansen_vehicle_3` は新品質ゲート上で系列完了。
