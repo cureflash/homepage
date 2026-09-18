@@ -2,18 +2,18 @@
 
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
-active_topic: `14`
-theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_powerpoint_rebuild_reqa_complete`
-completed_topics: `13 / 22`
+active_topic: `15`
+theme: 回生した電力が大量に戻ったら？
+current_status: `topic_14_completed`
+completed_topics: `14 / 22`
 
-## Completed through Topic 13
+## Completed through Topic 14
 
-Topic 01〜13は `completed`。
+Topic 01〜14は `completed`。
 
-## Topic 14 progress
+## Topic 14 completion
 
-制作前EXAM_ALIGNMENT、制作前blind、解説source/PDF、練習source/PDF、PowerPoint、各QA、修正版learner-facing成果物に対する完成後blindまで実施済み。
+制作前EXAM_ALIGNMENT、制作前blind、解説source/PDF、練習source/PDF、PowerPoint、各QA、修正版learner-facing成果物に対する完成後blind、Webカタログ登録、最終QAまで完了。
 
 完成後blind:
 - R6一次「電力」問5: `5 / 5 PASS`
@@ -29,14 +29,10 @@ Topic 01〜13は `completed`。
 
 ### PowerPoint復旧・再QA
 
-破損していた `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx` を、既存source・固定仕様だけで再構成した。
+`topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx` は既存source・固定仕様だけで再構成し、再QA済み。
 
-新正本:
-- size: `35351 bytes`
 - Git blob: `74ef08c777c67cf30811d48230a6e143a2377a48`
 - SHA-256: `bf643bbb5190cf8fe45a67f99696c345d1c66612f4494b0f49dba6a27b908a41`
-
-QA:
 - ZIP整合性: `PASS`
 - 16:9・4スライド: `PASS`
 - 200 dpi相当表示: `4 / 4 PASS`
@@ -48,17 +44,13 @@ QA:
 - 固定5問・21答案要素のPowerPoint説明接続: `21 / 21 PASS`
 - H23二次問3 (2a) `66.258 × 154/66 = 154.6 kV ≒ 155 kV`: 収録・確認済み
 
-### 最終QA
+### Web公開・最終QA
+
+`qualifications/denken-shinkansen/catalog.json` にTopic 14を既存形式どおり登録済み。
 
 `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
-
-技術内容・過去問対応・必須成果物はPASS。残るblockerはWebカタログ登録1件のみ。
-
-### 最終QA blocker（残り1件）
-
-1. `qualifications/denken-shinkansen/catalog.json` にTopic 14を既存カタログ仕様どおり登録し、最終QAを再判定する。
+判定: `PASS / COMPLETED`
 
 ### 品質境界
 
@@ -88,10 +80,9 @@ QA:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — PowerPoint復旧・再QA PASS、Webカタログ未登録
+- [x] Topic 14 completed
+- [ ] Topic 15 — 未着手
 
 ## next_start
 
-`qualifications/denken-shinkansen/catalog.json` の既存Topic登録形式を確認し、Topic 14を仕様追加なしで登録する。登録後に最終QAを再判定する。
-
-全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
+Topic 15「回生した電力が大量に戻ったら？」について、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲を確認し、制作前EXAM_ALIGNMENTから開始する。
