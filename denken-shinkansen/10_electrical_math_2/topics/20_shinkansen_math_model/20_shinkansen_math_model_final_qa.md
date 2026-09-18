@@ -8,7 +8,7 @@
 
 `NEEDS_REVISION / IN_PROGRESS`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` と最新mainを再確認した。技術内容、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、仕様境界はPASSしたが、進捗記録5ファイルが実成果物より古いため `completed` にはしない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` と最新mainを再確認した。技術内容、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、仕様境界はPASSしたが、進捗記録が実成果物より古いため `completed` にはしない。
 
 ## 必須成果物の実在確認
 
@@ -130,13 +130,13 @@ GitHub正本上で次を確認した。
    - 次工程がPowerPoint作成のまま。
 5. `20_shinkansen_math_model_powerpoint_qa.md`: FAIL
    - 次工程が完成後独立検証のまま。
-6. `../../HANDOFF.md`: PASS
-   - 本QAと同時に `current_status` を `topic_20_final_qa_needs_revision` へ同期する。
-   - 次工程をTopic 20の進捗記録5ファイル同期へ更新する。
+6. `../../HANDOFF.md`: FAIL
+   - `current_status` が `topic_20_post_completion_validation_complete` のまま。
+   - 次工程がTopic 20最終QAのまま。
 
-進捗記録整合: `1 / 6 PASS`。
+進捗記録整合: `0 / 6 PASS`。
 
-`STATUS.md`、`HANDOFF.md`、完成後独立検証記録は現在の実成果物状態へ同期する。
+さらに系列 `STATUS.md` も `topic_20_post_completion_validation_complete` / 「Topic 20の最終QA」のままで、本QA結果が未反映である。
 
 技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF、PowerPoint、完成後独立検証の技術内容変更: `0件`。
 
@@ -152,8 +152,8 @@ GitHub正本上で次を確認した。
 - 固定範囲外追加0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- 進捗記録と実成果物の整合: `1 / 6 PASS` → FAIL
+- 進捗記録と実成果物の整合: `0 / 6 PASS` → FAIL
 
 総合判定: `NEEDS_REVISION / topic_20_final_qa_needs_revision / IN_PROGRESS`。
 
-次工程は上記5ファイルだけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PowerPoint・完成後独立検証結果は変更しない。同期後に最終QAを再実施する。
+次工程は上記5ファイルと `STATUS.md` / `HANDOFF.md` だけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PowerPoint・完成後独立検証結果は変更しない。同期後に最終QAを再実施する。
