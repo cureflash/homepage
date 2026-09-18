@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `17 / 22`
-- current_status: `topic_18_independent_reanswer_complete`
+- current_status: `topic_18_final_qa_needs_revision`
 - last_completed_topic: `17 新幹線の速度をフィードバック制御する`
 - active_topic: `18 速度指令を変えたら何秒で追従する？`
-- next_start: Topic 18 最終QA
+- next_start: Topic 18 現行練習PDF再QA
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
-- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint・独立再解答前ゲート・完成後独立再解答 `PASS`、次は最終QA
+- [ ] Topic 18 `IN_PROGRESS` — 最終QAは `NEEDS_REVISION`。現行練習PDFのblobと既存QA対象blobが不一致のため、現行PDF再QAが必要
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -456,8 +456,20 @@
 - 記録: `topics/18_speed_transient_response/18_speed_transient_response_independent_reanswer.md`
 - 判定: `PASS / topic_18_independent_reanswer_complete / IN_PROGRESS`
 
+## Topic 18 最終QA（前回）
+- [x] 必須成果物実在: PASS
+- [x] 固定一次1問＋二次4問・12答案要素: `12 / 12 PASS`
+- [x] 完成後独立再解答: `12 / 12 PASS`
+- [x] 解説PDF・PowerPoint QA: PASS
+- [ ] 練習PDF QA: FAIL — 現行PDF blob `df2f12f4ffdf74edc5266e95e1badb2dad4d64bc` に対し、既存QAは旧blob `0fc7e767eec6ffb5bc5295cff87ef55ddef0ce10` を対象としている
+- [ ] 進捗記録整合: FAIL — main source `## 状態`・main source末尾 `# 次工程`・練習source末尾 `# 次工程` が旧工程のまま
+- [x] 仕様境界: PASS
+- [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・解説PDF・PowerPoint・独立再解答結果の変更 `0件`
+- 記録: `topics/18_speed_transient_response/18_speed_transient_response_final_qa.md`
+- 判定: `NEEDS_REVISION / topic_18_final_qa_needs_revision / IN_PROGRESS`
+
 ## 今回進めた内容
-固定5問・12答案要素を、公式正答・標準解答を見る前に完成済みTopic 18教材だけで再解答し、答案をGitHubへロックした。その後、電気技術者試験センター公式正答・標準解答と照合し `12 / 12 PASS` を確認した。教材外知識による補完、Topic 19〜21先取り、仕様外独立論点追加、未確認実車値追加は `0件`。
+Topic 18最終QAを実施した。固定5問・12答案要素、完成後独立再解答 `12 / 12`、解説PDF、PowerPoint、仕様境界はPASS。現行練習PDFが既存QA対象とは別blobへ置換されているため練習PDF QAをFAILとし、進捗記録3箇所の不整合も確認した。品質ゲート上、completedにはしない。
 
 ## 判定
-Topic 18は `PASS / topic_18_independent_reanswer_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18最終QA。
+Topic 18は `NEEDS_REVISION / topic_18_final_qa_needs_revision / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程は現行blob `df2f12f4ffdf74edc5266e95e1badb2dad4d64bc` の練習PDF再QA。
