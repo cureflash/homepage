@@ -1,7 +1,7 @@
 # Topic 13 練習問題・完全解説 - 単相の新幹線負荷は三相系統を乱さない？
 
 更新日: 2026-09-18
-状態: `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`
+状態: `topic_13_progress_records_synced`
 
 本ファイルは `13_three_phase_unbalance.md` の固定EXAM_ALIGNMENTと `13_three_phase_unbalance_explanation.md` だけを土台にした練習プリント用sourceである。公式過去問の転載ではなく、正式固定2問・8答案要素とTopic 13固定範囲を同型問題へ転用できるか確認する独自問題とする。
 
@@ -660,4 +660,4 @@ I2 = 0
 
 ## 完成判定との関係
 
-本sourceの完成はTopic 13の完成を意味しない。次工程で練習PDF化・PDF QAを行い、その後も必要成果物を順に制作する。最終的には固定2問8答案要素を教材のみで完成後blind独立再解答し、`8 / 8 PASS` しなければ `completed` としない。
+練習source、練習PDF、PDF QAは完了済みで、全15問の数値・論理確認は `15 / 15 PASS`、一次型正答一意性は `10 / 10 PASS`。完成後blind独立再解答も固定2問8答案要素 `8 / 8 PASS`、制作前不足2要素 `2 / 2 改善確認` まで完了している。次工程は進捗記録整合を含むTopic 13最終QA再判定であり、それまでは `IN_PROGRESS` を維持する。固定EXAM_ALIGNMENT、問題・正答、練習PDF実体は変更しない。
