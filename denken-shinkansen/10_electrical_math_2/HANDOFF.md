@@ -8,11 +8,11 @@ Topic 01〜16は最終QAまで `PASS / completed`。
 
 完成数: `16 / 20`
 
-current_status: `topic_17_final_qa_needs_revision`
+current_status: `topic_17_progress_sync_complete`
 
 active_topic: `17 常微分方程式の数値解法`
 
-次工程: Topic 17の進捗記録4ファイルを実成果物へ同期する。
+次工程: Topic 17の最終QAを再判定する。
 
 ## 上位仕様
 
@@ -148,6 +148,17 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 
 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立検証への修正要求: `0件`。
 
+## 進捗記録同期
+
+初回最終QAで指摘された4ファイルの次工程記録を実成果物へ同期した。
+
+- `17_ode_numerical_methods_explanation_qa.md`: 同期済み
+- `17_ode_numerical_methods_practice.md`: 同期済み
+- `17_ode_numerical_methods_practice_qa.md`: 同期済み
+- `17_ode_numerical_methods_powerpoint_qa.md`: 同期済み
+
+固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更していない。
+
 ## 現在の品質ゲート
 
 - [x] 系列SPEC確認
@@ -167,10 +178,10 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 - [x] PowerPoint表示QA
 - [x] 完成後独立検証 `PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] 進捗記録4ファイルの同期
+- [x] 進捗記録4ファイルの同期
 - [ ] 最終QA再判定 → `PASS`
 - [ ] `completed`
 
 ## 次工程
 
-Topic 17の進捗記録4ファイルだけを実成果物へ同期する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証は変更しない。同期後に最終QAを再判定する。
+Topic 17の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証は変更しない。
