@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験三種「電力」
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 14 / 16
-- current_status: `topic_15_powerpoint_complete`
+- current_status: `topic_15_progress_sync_complete`
 - last_completed_topic: `14 駅やトンネルにはどう電気を配る？`
 - active_topic: `15 回生した電気はどこへ行く？`
-- next_start: Topic 15の完成後ブラインド独立再解答を実施する。完成教材だけで固定5出題回・8答案要素を解き直し、公式解答一致・教材外知識補完0件・SPEC固定範囲外追加0件を確認する
+- next_start: Topic 15の最終QAを再実施する。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -25,7 +25,7 @@
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋QA・練習問題source・練習PDF＋QA・解説画像PowerPoint＋QA完了。PowerPointは16:9・4枚、固定5出題回・8答案要素への可視化 `8 / 8 PASS`、表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`。次は完成後ブラインド独立再解答
+- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋QA・練習問題source・練習PDF＋QA・解説画像PowerPoint＋QA・完成後ブラインド独立再解答まで完了。固定5出題回・8答案要素 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。初回最終QAは技術内容・成果物・過去問品質ゲート・SPEC境界PASS、進捗記録整合のみFAIL。旧進捗記録7箇所を `7 / 7` 同期済み。次は最終QA再実施
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
 ## Topic 07 完了記録
@@ -540,6 +540,9 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 練習PDF QA: `topics/15_regenerative_power/15_regenerative_power_practice_qa.md`
 解説画像PowerPoint: `topics/15_regenerative_power/15_regenerative_power_images.pptx`
 PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md`
+固定候補: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer_candidates.md`
+完成後独立再解答: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md`
+最終QA: `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
 
 固定5出題回・8答案要素:
 - R8上 電力 問5
@@ -597,6 +600,18 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - SPEC固定範囲外追加: `0件`
 - Topic 16先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
+- 完成後ブラインド独立再解答: `8 / 8 PASS`
+- 完成後公式解答一致: `8 / 8 PASS`
+- 完成後教材外知識補完: `0件`
+- 候補固定後の答案変更: `0件`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 初回最終QAの唯一の未達カテゴリ: 進捗記録整合
+- 旧進捗記録7箇所同期: `7 / 7 完了`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 数式・技術本文変更: `0件`
+- 練習問題・正答変更: `0件`
+- PDF/PPTX変更: `0件`
+- 完成後独立再解答結果変更: `0件`
 
 制作前独立答案:
 - R8上 電力 問5: `(4)`
@@ -605,5 +620,12 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - H29 法規 問13(a)(b): `(2),(5)`
 - H25 法規 問12(a)(b): `(2),(3)`
 
+完成後独立答案:
+- R8上 電力 問5: `(4)`
+- R7上 法規 問13(a)(b): `(2),(3)`
+- R4下 電力 問11: `(5)`
+- H29 法規 問13(a)(b): `(2),(5)`
+- H25 法規 問12(a)(b): `(2),(3)`
+
 ## 次
-Topic 15の完成後ブラインド独立再解答を実施する。完成教材だけで固定5出題回・8答案要素を解き直し、公式解答一致・教材外知識補完0件・SPEC固定範囲外追加0件を確認する。
+Topic 15の最終QAを再実施する。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする。
