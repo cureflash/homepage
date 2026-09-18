@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 18 / 21
-- current_status: `topic_18_completed`
+- current_status: `topic_19_preproduction_exam_alignment_complete`
 - last_completed_topic: `18 新幹線のセンサ信号をどう増幅する？`
 - active_topic: `19 25kV・大電流をどう安全に測る？`
-- next_start: Topic 19 制作前EXAM_ALIGNMENT
+- next_start: Topic 19 制作前blind独立再解答
 
 ## 完成済み
 
@@ -24,14 +24,7 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] H23 一次 理論 問8を採用
 - [x] H21 一次 理論 問8を採用
 - [x] 品質ゲート対象を一次5問・25答案要素に固定
-- [x] R4一次理論問7は利得帯域幅積・周波数特性を含むため非採用
-- [x] R2一次理論問8は電圧安定化・トランジスタ・損失計算を含むため非採用
-- [x] H26一次理論問8は発振回路が主題のため非採用
-- [x] R8二次は2026-09-18時点で未実施、R7〜R1二次を確認
-- [x] 固定範囲だけで完答する直接対応二次問題なし
 - [x] 二次採用0問・二次数合わせ0件
-- [x] Topic 19以降の先取り0件
-- [x] 実車の特定センサ回路・定数の未確認追加0件
 
 ## Topic 18 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・25答案要素
@@ -42,29 +35,59 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
 - [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
 - [x] 完成後独立再解答: `25 / 25 PASS`
-- [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- [x] 進捗記録同期: `PASS / topic_18_progress_records_synced`
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - [x] completed状態同期
 - [x] 最終判定: `PASS / completed`
 
+## Topic 19 固定EXAM_ALIGNMENT
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 固定範囲: 電圧計、電流計、内部抵抗、倍率器、分流器、電力計、CT、VT、変成比、電力量測定
+- [x] 一次・二次を含む関連候補を直近年度から調査
+- [x] R5 一次 理論 問8を採用
+- [x] R1 一次 理論 問4を採用
+- [x] H29 一次 理論 問4を採用
+- [x] H25 一次 理論 問8を採用
+- [x] H21 一次 理論 問6を採用
+- [x] 品質ゲート対象を一次5問・25答案要素に固定
+- [x] R8/R7/R6/R4/R3/R2の校正・ブリッジ系は固定範囲外またはTopic 20側として非採用
+- [x] H20一次理論問6は測定誤差が主題のためTopic 20側として非採用
+- [x] R8二次は2026-09-18時点で未実施
+- [x] R7〜R1二次に固定範囲だけで完答する直接対応問題なし
+- [x] 二次採用0問・二次数合わせ0件
+- [x] Topic 20先取り0件
+- [x] 実設備CT・VTの未確認実値追加0件
+
+## Topic 19 制作進捗
+- [x] 制作前EXAM_ALIGNMENT: `PASS / 一次5問・25答案要素`
+- [ ] 制作前blind独立再解答
+- [ ] 公式標準解答照合
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋表示QA
+- [ ] 練習問題source＋練習PDF
+- [ ] 解説画像PowerPoint＋表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] completed状態同期
+
 ## 今回進めた内容
 
-Topic 18のcompleted状態同期を実施した。
+Topic 19の制作前EXAM_ALIGNMENTを実施した。
 
-- 主source: `completion: completed`、`stage: COMPLETED`
-- 練習source: `completion: completed`、`stage: COMPLETED`
-- STATUS: 完成数 `18 / 21`、Topic 19をactiveへ更新
-- HANDOFF: Topic 01〜18 `PASS / completed` へ更新
-- 固定一次5問・25答案要素: `25 / 25 PASS`
-- 公式標準解答一致: `25 / 25`
+- source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement.md`
+- 固定一次5問・25答案要素
+- R5一次理論問8: 熱電形交流電力計
+- R1一次理論問4: コンデンサ形計器用変圧器
+- H29一次理論問4: エアトン分流器
+- H25一次理論問8: 可動コイル形計器の測定範囲拡大
+- H21一次理論問6: 静電電圧計
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
-- 仕様外追加: `0件`
+- 公式標準解答・正答記号のsource事前保存: `0件`
+- Topic 20先取り: `0件`
+- 実設備CT・VTの未確認実値追加: `0件`
 
 ## 判定
 
-`PASS / completed`。
+`PASS / topic_19_preproduction_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `18 / 21`。次工程はTopic 19「25kV・大電流をどう安全に測る？」の制作前EXAM_ALIGNMENT。
+完成数は `18 / 21`。次工程はTopic 19の制作前blind独立再解答。
