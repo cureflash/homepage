@@ -2,13 +2,13 @@
 
 対象: `18 非線形方程式と反復計算`
 
-実施日: 2026-09-18
+再判定日: 2026-09-18
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` と最新mainを再確認した。技術内容、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、仕様境界はPASSしたが、進捗記録5ファイルが実成果物より古いため `completed` にはしない。
+初回 `NEEDS_REVISION` の原因だった進捗記録5ファイルは実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、SPEC境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -53,7 +53,7 @@ GitHub正本上で次を確認した。
 
 ## 完成後独立検証の再確認
 
-完成教材の固定範囲だけで、保存済み例題・制作前検証と異なる新規3ケースを独立検証済み。最終QAでも数値を再計算した。
+完成教材の固定範囲だけで、保存済み例題・制作前検証と異なる新規3ケースを独立検証済み。最終QAでも数値を再確認した。
 
 - Case A `f(x)=cos x-x` の二分法: `PASS`
   - 19反復
@@ -110,29 +110,31 @@ GitHub正本上で次を確認した。
 
 判定: `PASS`。
 
-## 進捗記録整合QA
+## 進捗記録整合QAの再判定
 
-進捗記録6ファイルをGitHub正本で確認した。
+初回FAILだった5ファイルを含む進捗記録6ファイルをGitHub正本で再確認した。
 
-1. `18_nonlinear_equations_iteration.md`: FAIL
-   - 状態が `topic_18_practice_source_complete / IN_PROGRESS` のまま。
-   - 末尾の制作品質ゲートが練習PDF・PowerPoint・完成後独立検証を未完了としている。
-   - 次工程が練習PDF作成のまま。
-2. `18_nonlinear_equations_iteration_explanation_qa.md`: FAIL
-   - 次工程が練習問題source作成のまま。
-3. `18_nonlinear_equations_iteration_practice.md`: FAIL
-   - 次工程が練習PDF作成のまま。
-4. `18_nonlinear_equations_iteration_practice_qa.md`: FAIL
-   - 次工程がPowerPoint作成のまま。
-5. `18_nonlinear_equations_iteration_powerpoint_qa.md`: FAIL
-   - 次工程が完成後独立検証のまま。
-6. `../../HANDOFF.md`: PASS
-   - `current_status`: `topic_18_post_completion_validation_complete`
-   - 次工程: Topic 18最終QA
+1. `18_nonlinear_equations_iteration.md`
+   - 状態: `topic_18_final_qa_needs_revision / IN_PROGRESS` — PASS
+   - 練習PDF・PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 18最終QA再判定 — PASS
+2. `18_nonlinear_equations_iteration_explanation_qa.md`
+   - 練習PDF・PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 18最終QA再判定 — PASS
+3. `18_nonlinear_equations_iteration_practice.md`
+   - 練習PDF・PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 18最終QA再判定 — PASS
+4. `18_nonlinear_equations_iteration_practice_qa.md`
+   - PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 18最終QA再判定 — PASS
+5. `18_nonlinear_equations_iteration_powerpoint_qa.md`
+   - PowerPoint本体・QA、完成後独立検証、初回最終QAまで実体化済み — PASS
+   - 次工程: Topic 18最終QA再判定 — PASS
+6. `../../HANDOFF.md`
+   - `current_status`: `topic_18_progress_sync_complete` — PASS
+   - 次工程: Topic 18最終QA再判定 — PASS
 
-進捗記録整合: `1 / 6 PASS`。
-
-`STATUS.md` と完成後独立検証記録は現在の実成果物状態へ同期済み。
+進捗記録整合: `6 / 6 PASS`。
 
 技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF、PowerPoint、完成後独立検証の技術内容変更: `0件`。
 
@@ -148,8 +150,8 @@ GitHub正本上で次を確認した。
 - 固定範囲外追加0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- 進捗記録と実成果物の整合: `1 / 6 PASS` → FAIL
+- 進捗記録と実成果物の整合: `6 / 6 PASS`
 
-総合判定: `NEEDS_REVISION / topic_18_final_qa_needs_revision / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-次工程は上記5ファイルだけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PowerPoint・完成後独立検証結果は変更しない。同期後に最終QAを再実施する。
+Topic 18を完了とし、次はTopic 19 `最適化入門` の制作前EXAM_ALIGNMENTへ進む。
