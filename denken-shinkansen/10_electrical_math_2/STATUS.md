@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_17_progress_sync_complete`
-- last_completed_topic: `16 数値微分・数値積分`
-- active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の最終QAを再判定する
+- exam_aligned_completed_topics: 17 / 20
+- current_status: `topic_17_completed`
+- last_completed_topic: `17 常微分方程式の数値解法`
+- active_topic: `18 非線形方程式と反復計算`
+- next_start: Topic 18の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -270,26 +270,36 @@
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、直接Euler/RK要求0問・水増し0件を維持）
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] 進捗記録4ファイルの同期
-- [ ] 最終QA再判定 → `PASS`
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 17の進捗記録4ファイルを実成果物へ同期した。
+Topic 17の最終QAを再判定し、全品質ゲートPASSで `completed` とした。
 
-- `17_ode_numerical_methods_explanation_qa.md`: 次工程を最終QA再判定へ同期
-- `17_ode_numerical_methods_practice.md`: 次工程を最終QA再判定へ同期
-- `17_ode_numerical_methods_practice_qa.md`: 次工程を最終QA再判定へ同期
-- `17_ode_numerical_methods_powerpoint_qa.md`: 次工程を最終QA再判定へ同期
+- 必須成果物実在: `PASS`
+- 接続確認した第二種公式過去問: `5問`
+- 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
+- 非該当5問の固定品質ゲート件数への水増し: `0件`
+- 完成後独立検証: 新規3ケース `3 / 3 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 練習PDF表示QA: `1 / 1 PASS`
+- PowerPoint表示QA: `5 / 5 PASS`
+- 進捗記録整合: `6 / 6 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 技術本文・練習問題・正答の変更: `0件`
 - PDF・PowerPoint・完成後独立検証の変更: `0件`
 - 仕様外追加: `0件`
 
+最終QA:
+`topics/17_ode_numerical_methods/17_ode_numerical_methods_final_qa.md`
+
 ## 判定
 
-`topic_17_progress_sync_complete / IN_PROGRESS`
+`topic_17_completed / completed`
 
-完成数は `16 / 20` のまま。
+完成数は `17 / 20`。
 
-次はTopic 17の最終QAを再判定する。
+次はTopic 18 `非線形方程式と反復計算` の制作前EXAM_ALIGNMENTを実施する。
