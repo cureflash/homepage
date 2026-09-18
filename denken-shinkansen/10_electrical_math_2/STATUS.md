@@ -264,7 +264,7 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [x] 練習PDF（A4縦6ページ、200 dpi表示 `6 / 6 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
+- [x] 練習PDF（A4縦1ページ、200 dpi表示 `1 / 1 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
 - [ ] 完成後独立検証
@@ -277,8 +277,8 @@ Topic 17の練習PDFを作成し、sourceとの数値・論理整合と表示品
 
 - 練習PDF: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.pdf`
 - QA記録: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice_qa.md`
-- A4縦6ページ
-- 200 dpi表示QA: `6 / 6 PASS`
+- A4縦1ページ
+- 200 dpi表示QA: `1 / 1 PASS`
 - 文字切れ・重なり・壊れた日本語グリフ: `0件`
 - 文字抽出QA: `PASS`
 - 全12問の独立計算・論理QA: `12 / 12 PASS`
