@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_15_explanation_source_complete`
+current_status: `topic_15_explanation_pdf_needs_revision`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
@@ -13,10 +13,11 @@ Topic 01〜14は `completed`。
 
 ## Topic 15 current progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成まで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QAまで実施。
 
 正式品質ゲート対象は一次3問＋二次2問、計5問・24答案要素で固定したまま変更なし。
 
+制作前blind:
 - R2一次「電力」問6: `5 / 5 PASS`
 - H28一次「電力」問5: `5 / 5 PASS`
 - H26一次「電力」問1: `5 / 5 PASS`
@@ -34,9 +35,27 @@ Topic 01〜14は `completed`。
 - 固定本文節マッピング `8 / 8` 接続
 - MASTER SPEC最低構成を収録
 - 基礎・本試験標準・複合の3段階例題を収録
-- SPEC指定「力行・回生電力の時間変化」の仮定時系列データを収録
+- SPEC指定時系列データを収録
 
-解説PDF、練習問題、PowerPointは未着手。
+解説PDF:
+- `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
+- `topics/15_regenerative_power/15_regenerative_power_explanation_pdf_qa.md`
+- A4縦 `5ページ`
+- 200 dpi表示: `5 / 5 PASS`
+- 文字抽出: `PASS / U+FFFD 0件 / 黒四角0件`
+- SPEC固定可視化: `3 / 3 PASS`
+- 固定5問・24答案要素の説明接続: `24 / 24 covered`
+- 数値整合: `PASS`
+- PDF QA総合判定: `NEEDS_REVISION`
+
+blocker:
+- 系列SPEC固定の `系統受容性` をlearner-facing用語として明示する説明が不足
+- 系列SPEC固定の `電圧上昇` の最小限の説明が不足
+- 系列SPEC固定の `回生失効の概念` の説明が不足
+
+これらは新規仕様ではなく、既存SPECの固定項目。固定過去問・答案要素の変更は行わない。
+
+練習問題、PowerPoint、完成後blindは未着手。
 
 ## Topic 14 completion
 
@@ -54,31 +73,6 @@ Topic 01〜14は `completed`。
 
 固定EXAM_ALIGNMENT、固定5問・21答案要素、教材技術範囲は変更していない。
 
-### PowerPoint復旧・再QA
-
-`topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx` は既存source・固定仕様だけで再構成し、再QA済み。
-
-- Git blob: `74ef08c777c67cf30811d48230a6e143a2377a48`
-- SHA-256: `bf643bbb5190cf8fe45a67f99696c345d1c66612f4494b0f49dba6a27b908a41`
-- ZIP整合性: `PASS`
-- 16:9・4スライド: `PASS`
-- 200 dpi相当表示: `4 / 4 PASS`
-- overflow: `0件`
-- LibreOffice PDF変換: `4ページ PASS`
-- PDF文字抽出: `PASS / U+FFFD 0件`
-- SPEC固定10項目: `10 / 10 PASS`
-- SPEC固定3可視化: `3 / 3 PASS`
-- 固定5問・21答案要素のPowerPoint説明接続: `21 / 21 PASS`
-- H23二次問3 (2a) `66.258 × 154/66 = 154.6 kV ≒ 155 kV`: 収録・確認済み
-
-### Web公開・最終QA
-
-`qualifications/denken-shinkansen/catalog.json` にTopic 14を既存形式どおり登録済み。
-
-`topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
-
-判定: `PASS / COMPLETED`
-
 ## 品質境界
 
 Topic 15:
@@ -90,8 +84,12 @@ Topic 15:
 - 解説source固定本文節: `8 / 8` 接続
 - 周辺問題による件数水増し: `0件`
 - Topic 14問題の重複採用: `0件`
-- Topic 16/17/20/21先取り: `0件`
+- Topic 16故障計算先取り: `0件`
+- Topic 17保護・FRT設計先取り: `0件`
+- Topic 20安定度先取り: `0件`
+- Topic 21需給制御一般の新規展開: `0件`
 - 未確認実設備値の真値化: `0件`
+- 公式過去問転載: `0件`
 - 仕様追加: `0件`
 
 ## Gate checklist
@@ -110,8 +108,8 @@ Topic 15:
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — IN_PROGRESS / 解説source完了
+- [ ] Topic 15 — IN_PROGRESS / 解説PDF QA `NEEDS_REVISION`
 
 ## next_start
 
-`topics/15_regenerative_power/15_regenerative_power_explanation.md` を正本として解説PDFを生成し、PDF QAを行う。固定5問・24答案要素、本文節マッピング、仮定値/実値境界を変更しない。
+`topics/15_regenerative_power/15_regenerative_power_explanation.md` と解説PDFへ、系列SPECで既に固定されている `系統受容性`、`電圧上昇`、`回生失効の概念` の3項目だけを補完し、PDFを再生成・再QAする。固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更しない。
