@@ -7,9 +7,9 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_blind_reanswer_candidates_refreshed`。Topic 16 `700系 多レベル変換器とPWM` は、blind再解答QAで検出した R7一次「機械」問4 (3) の1答案要素不足を main source・解説PDF・練習source/PDF・PowerPointへ最小補正し、blind再解答前ゲートを再構築済み。今回、公式解答・標準解答・旧候補答案本文・旧blind QA本文を先に見ず、固定5問の公式問題文と改訂済み教材sourceだけで26答案要素を独立再解答し、新候補答案を固定した。Topic 16は公式照合未実施のためcompletedにしない。
+現在地は `topic_16_blind_reanswer_qa_pass`。Topic 16 `700系 多レベル変換器とPWM` は、blind再解答QAで検出した R7一次「機械」問4 (3) の1答案要素不足を main source・解説PDF・練習source/PDF・PowerPointへ最小補正し、blind再解答前ゲートを再構築済み。その後、公式解答・標準解答・旧候補答案本文・旧blind QA本文を先に見ず、固定5問の公式問題文と改訂済み教材sourceだけで26答案要素を独立再解答して候補答案を固定し、固定後に公式解答・標準解答と照合した。固定5問・26答案要素は `26 / 26 PASS`、教材外知識補完0件。Topic 16は最終QA未実施のためcompletedにしない。
 
-次工程は、新候補答案を変更せずに公式解答・標準解答を開き、固定5問・26答案要素を照合して `16_700series_multilevel_converter_pwm_blind_reanswer_qa.md` へ記録する。
+次工程は、Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT・必須成果物・表示QA・blind再解答QA・進捗記録の整合を確認する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -158,19 +158,20 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 
 ## Topic 16 完成後独立再解答QA
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_qa.md`
-- 旧QAは改訂前教材に対する記録で、新候補答案の照合結果としては使用しない
-- source補正: `完了`
-- 解説PDF同期: `完了`
-- 練習PDF同期: `完了`
-- PowerPoint同期: `完了`
-- blind再解答前ゲート再構築: `完了`
-- 新候補答案固定: `完了 / 26 / 26`
-- 次は固定済み候補答案を変更せず公式解答・標準解答と照合する
+- 固定済み新候補答案の後付け変更: `0件`
+- 公式解答・標準解答照合: `5問 / 26答案要素 / 26 / 26 PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `6 / 6 PASS`
+- 教材だけで導出: `26 / 26 PASS`
+- 教材外知識補完: `0件`
+- R7 一次 機械 問4 (3): `PASS / MOSFET（チ）を改訂教材内根拠から独立固定`
+- H24 二次 (2b): `PASS / 候補K≈0.950、標準K≈0.949は同一式・同一厳密値の丸め差`
+- 公式解答／標準解答との内容不一致: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定8項目・3可視化・共通仮定モデル変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `PENDING / OFFICIAL_COMPARISON_REQUIRED`
+- 判定: `PASS / BLIND_REANSWER_QA_PASS`
 
 ## Topic 16 SPEC固定範囲
 扱う内容:
@@ -209,4 +210,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-新候補答案を固定済み。新しいrunで候補答案を変更せず、公式解答・標準解答を開いて固定5問・26答案要素を照合し、結果を `16_700series_multilevel_converter_pwm_blind_reanswer_qa.md` に記録する。
+Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT、必須成果物、表示QA、blind再解答QA、進捗記録の整合を確認する。最終QAがPASSした場合のみ `completed` とする。
