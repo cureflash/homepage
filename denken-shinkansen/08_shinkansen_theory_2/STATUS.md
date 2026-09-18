@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 19 / 21
-- current_status: `topic_20_reanswer_complete`
+- current_status: `topic_20_final_qa_needs_revision`
 - last_completed_topic: `19 25kV・大電流をどう安全に測る？`
 - active_topic: `20 East iは走りながら何をどう測る？`
-- next_start: Topic 20 最終QA
+- next_start: Topic 20 主source進捗記録同期
 
 ## 完成済み
 
@@ -38,31 +38,33 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
 - [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
 - [x] 完成後独立再解答: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
-- [ ] 最終QA
+- [x] 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+- [ ] 主source進捗記録同期
+- [ ] 最終QA再実施
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 20の完成後独立再解答を実施し、GitHub正本へ反映した。
+Topic 20の最終QAを実施した。
 
-- 成果物: `topics/20_east_i_measurement/20_east_i_measurement_reanswer.md`
-- R8 一次 理論 問4: `5 / 5 PASS`
-- R7 一次 理論 問4: `5 / 5 PASS`
-- R6 一次 理論 問6: `5 / 5 PASS`
-- H24 一次 理論 問7: `5 / 5 PASS`
-- H20 一次 理論 問6: `5 / 5 PASS`
-- 一次合計: `25 / 25 PASS`
-- 公式標準解答直接一致: `20 / 20`
+- 成果物: `topics/20_east_i_measurement/20_east_i_measurement_final_qa.md`
+- 必須成果物欠落: `0件`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- R8/R7/R6/H24 公式標準解答直接一致: `20 / 20`
 - H20二次資料掲載解答一致: `5 / 5`
-- 完成教材内の固定範囲だけで再構成: `PASS`
-- 教材外知識補完: `0件`
+- SPEC固定範囲: `12 / 12`
+- 解説PDF表示QA: `8 / 8 PASS`
+- 練習PDF表示QA: `4 / 4 PASS`
+- 練習12問QA: `12 / 12 PASS`
+- PowerPoint表示QA: `8 / 8 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
 - East i内部測定回路・未公開定数の推測追加: `0件`
+- blocker: 主source `20_east_i_measurement.md` の状態欄が `EXPLANATION_SOURCE_COMPLETE` のままで実進捗と不一致 `1件`
 
 ## 判定
 
-`PASS / topic_20_reanswer_complete / IN_PROGRESS`。
+`NEEDS_REVISION / topic_20_final_qa_needs_revision / IN_PROGRESS`。
 
-完成数は `19 / 21`。次工程はTopic 20の最終QA。
+完成数は `19 / 21`。次工程はTopic 20主sourceの進捗記録同期。
