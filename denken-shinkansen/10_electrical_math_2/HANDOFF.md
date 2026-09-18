@@ -8,11 +8,11 @@ Topic 01〜16は最終QAまで `PASS / completed`。
 
 完成数: `16 / 20`
 
-current_status: `topic_17_post_completion_validation_complete`
+current_status: `topic_17_final_qa_needs_revision`
 
 active_topic: `17 常微分方程式の数値解法`
 
-次工程: Topic 17の最終QAを実施する。
+次工程: Topic 17の進捗記録4ファイルを実成果物へ同期する。
 
 ## 上位仕様
 
@@ -84,6 +84,7 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 - PowerPoint QA: `topics/17_ode_numerical_methods/17_ode_numerical_methods_powerpoint_qa.md`
 - 完成後独立検証: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.md`
 - 完成後独立検証スクリプト: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.py`
+- 最終QA: `topics/17_ode_numerical_methods/17_ode_numerical_methods_final_qa.md`
 
 既存成果物QA:
 
@@ -127,6 +128,26 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 
 固定EXAM_ALIGNMENT変更0件。非該当問題の件数水増し0件。Topic 18以降の先取り0件。未確認実車値依存0件。
 
+## 初回最終QA
+
+記録:
+`topics/17_ode_numerical_methods/17_ode_numerical_methods_final_qa.md`
+
+判定: `NEEDS_REVISION / IN_PROGRESS`。
+
+技術品質ゲートはPASSしたが、実成果物より古い次工程記録が4ファイル残っているため、GitHub正本の進捗記録整合でFAILとした。
+
+古い進捗記録:
+
+1. `17_ode_numerical_methods_explanation_qa.md`
+2. `17_ode_numerical_methods_practice.md`
+3. `17_ode_numerical_methods_practice_qa.md`
+4. `17_ode_numerical_methods_powerpoint_qa.md`
+
+進捗記録整合: `2 / 6 PASS`。
+
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立検証への修正要求: `0件`。
+
 ## 現在の品質ゲート
 
 - [x] 系列SPEC確認
@@ -145,9 +166,11 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
 - [x] 完成後独立検証 `PASS`
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`
+- [ ] 進捗記録4ファイルの同期
+- [ ] 最終QA再判定 → `PASS`
 - [ ] `completed`
 
 ## 次工程
 
-Topic 17の最終QAを実施する。固定範囲、直接Euler/RK要求0問、非該当問題の件数水増し0件を維持する。
+Topic 17の進捗記録4ファイルだけを実成果物へ同期する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証は変更しない。同期後に最終QAを再判定する。
