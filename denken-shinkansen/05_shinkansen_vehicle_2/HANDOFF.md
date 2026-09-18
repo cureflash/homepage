@@ -7,9 +7,9 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_explanation_pdf_revision_sync_complete`。Topic 16 `700系 多レベル変換器とPWM` は、blind再解答QAで検出した R7一次「機械」問4 (3) の1答案要素不足について、main source と練習sourceを最小補正済み。今回、その同じ補正を解説PDFへ同期し、IGBT/MOSFETを自己消弧形スイッチング素子として識別し、逆並列ダイオードを還流用の別素子として区別できる説明を収録した。A4 4ページ、180 dpi表示 `4 / 4 PASS`、固定5問・26答案要素 `26 / 26 PASS`、SPEC指定8項目・3可視化も維持している。固定EXAM_ALIGNMENT、共通仮定モデル、範囲境界は変更していない。練習PDF・PowerPoint同期とblind再試験が残るためTopic 16はcompletedにしない。
+現在地は `topic_16_practice_pdf_revision_sync_complete`。Topic 16 `700系 多レベル変換器とPWM` は、blind再解答QAで検出した R7一次「機械」問4 (3) の1答案要素不足について、main source と練習sourceを最小補正済み。解説PDFに続き、今回その同じ補正を練習PDFへ同期した。一次問1・二次問1(d)で IGBT/MOSFET を自己消弧形スイッチング素子として識別し、逆並列ダイオードを還流用の別素子として区別できる。A4 4ページ、180 dpi表示 `4 / 4 PASS`、文字抽出PASS、固定5問・26答案要素 `26 / 26 PASS`、SPEC指定8項目・3可視化の条件も維持している。固定EXAM_ALIGNMENT、共通仮定モデル、範囲境界は変更していない。PowerPoint同期とblind再試験が残るためTopic 16はcompletedにしない。
 
-次工程は同じ最小補正を練習PDFへ同期し、A4ページ・文字抽出・180 dpi表示QA・一次8問/二次4問の整合を再確認する。
+次工程は同じ最小補正を解説画像PowerPointへ同期し、16:9 4枚・1600×900表示QA・PPTX ZIP整合性・固定5問26答案要素・SPEC指定8項目3可視化の整合を再確認する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -95,15 +95,19 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - 完全解説: `12 / 12`
 - 180 dpiレンダリング: `4 / 4 PASS`
 - PDF open/preflight・文字抽出: `PASS`
+- 文字欠落・文字化け・重なり・クリップ: `0件`
 - 数値・論理整合: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
+- 固定5過去問・26答案要素接続: `26 / 26 PASS`
+- R7 一次 機械 問4 (3): `PASS / IGBT・MOSFETの識別と逆並列ダイオードとの差をPDF同期済み`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
 - 共通仮定式系の変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- blind QAの1答案要素不足を同期改訂するまで最終ゲート未通過
+- SHA-256: `8d9b05092f2aab33ab139bffb14d235076820b9ea06485875890011c50b636df`
+- 判定: `PASS / PRACTICE_PDF_REVISION_SYNC_COMPLETE`
 
 ## Topic 16 解説画像PowerPoint
 - PowerPoint: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_images.pptx`
@@ -150,7 +154,8 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - FAIL: `R7 一次 機械 問4 (3)` — 旧完成教材に当該識別知識が不足
 - source補正: `完了`
 - 解説PDF同期: `完了`
-- 練習PDF・PowerPoint同期後にblind再解答ゲートを作り直す
+- 練習PDF同期: `完了`
+- PowerPoint同期後にblind再解答ゲートを作り直す
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定8項目・3可視化・共通仮定モデル変更: `0件`
 - SPEC外追加: `0件`
@@ -194,4 +199,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-source補正と解説PDF同期は完了。固定範囲を広げず、同じ最小補正を練習PDFへ同期して表示QAする。その後、PowerPoint同期、公式解答と旧blind QAを先読み対象から外す再解答ゲート再作成へ進む。
+source補正・解説PDF同期・練習PDF同期は完了。固定範囲を広げず、同じ最小補正を解説画像PowerPointへ同期して表示QAする。その後、公式解答と旧blind QAを先読み対象から外す再解答ゲート再作成へ進む。

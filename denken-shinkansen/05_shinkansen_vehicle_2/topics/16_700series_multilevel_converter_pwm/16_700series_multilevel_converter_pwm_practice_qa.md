@@ -6,6 +6,12 @@
 - PDF: `16_700series_multilevel_converter_pwm_practice.pdf`
 - source: `16_700series_multilevel_converter_pwm_practice_source.md`
 
+## 改訂内容
+- blind再解答QAで不足した R7一次「機械」問4 (3) の1答案要素だけを同期。
+- 一次問1: IGBT/MOSFETを自己消弧形スイッチング素子として識別し、逆並列ダイオードを還流用の別素子として区別。
+- 二次問1(d): IGBT以外の代表例としてMOSFETを示し、逆並列ダイオードとの役割差を明記。
+- 固定EXAM_ALIGNMENT、問題数、正答、共通仮定モデル、SPEC指定8項目・3可視化、範囲境界は変更なし。
+
 ## 構成
 - A4縦: `4ページ`
 - 一次試験型: `8 / 8`、全問五肢択一
@@ -16,28 +22,30 @@
 - 180 dpiレンダリング: `4 / 4 PASS`
 - PDF open/preflight: `PASS`
 - 文字抽出: `PASS`
-- 文字欠落・黒四角・重なり・クリップ: `0件`
 - 抽出置換文字 U+FFFD: `0件`
+- 文字欠落・黒四角・重なり・クリップ: `0件`
+- preflight注意: `HeiseiKakuGo-W5非埋込 / 180 dpi表示・文字抽出はPASS`
 
 ## 試験対応・数値QA
 - 固定5過去問・26答案要素接続: `26 / 26 PASS`
+- R7 一次 機械 問4 (3): `PASS / PDF同期済み`
 - 数値・論理整合: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
-- 解説source/PDFと練習sourceの共通仮定式系の変更: `0件`
+- 共通仮定式系の変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 問題・正答・完全解説の変更: `0件`
+- 問題数・正答・式系の変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
 
 ## ファイル
-- PDF SHA-256: `9ed1e71c9f8044df53422e1449675d2e83ef8e3d0b4e5af1dd1952bc763665f7`
-- Git blob SHA: `466e50761991d86972a8e5bba87515745369727f`
+- PDF SHA-256: `8d9b05092f2aab33ab139bffb14d235076820b9ea06485875890011c50b636df`
+- Git blob SHA: `da4c1cdc6000436ad8bc3a004b98b3c3d0da8b27`
 
-判定: `PASS / PRACTICE_PDF_COMPLETE`
+判定: `PASS / PRACTICE_PDF_REVISION_SYNC_COMPLETE`
 
 ## 現在地
-current_status: `topic_16_practice_pdf_complete`
+current_status: `topic_16_practice_pdf_revision_sync_complete`
 
-次工程はTopic 16の解説画像PowerPointを制作する。固定5問・26答案要素、SPEC指定8項目・3可視化、解説source、共通仮定モデル、練習問題source、問題・正答・完全解説、範囲境界を変更しない。
+次工程は同じ最小補正を解説画像PowerPointへ同期し、16:9 4枚・1600×900表示QA・PPTX ZIP整合性・固定5問26答案要素・SPEC指定8項目3可視化の整合を再確認する。
