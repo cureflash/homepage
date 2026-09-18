@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_source_revision_complete`
+- current_status: `topic_16_explanation_pdf_revision_sync_complete`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: sourceで補正した R7一次「機械」問4 (3) の最小説明を解説PDF・練習PDF・PowerPointへ同期し、表示QA後にblind再解答前ゲートを作り直す
+- next_start: sourceで補正した R7一次「機械」問4 (3) の最小説明を練習PDFへ同期し、A4ページ・文字抽出・180 dpi表示QA・一次8問/二次4問の整合を再確認する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — SOURCE_REVISION_COMPLETE / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — EXPLANATION_PDF_REVISION_SYNC_COMPLETE / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -63,15 +63,18 @@
 - QA: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_explanation_pdf_qa.md`
 - A4縦: `4ページ`
 - 180 dpi表示QA: `4 / 4 PASS`
-- 文字抽出・表示: `PASS`
+- PDF open/preflight・文字抽出: `PASS`
+- 文字欠落・文字化け・重なり・クリップ: `0件`
 - 3段階例題: `3 / 3 PASS`
+- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- R7 一次 機械 問4 (3): `PASS / IGBT・MOSFETの識別と逆並列ダイオードとの差をPDF同期済み`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 PASS`
 - source共通仮定モデルとの整合: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- blind QAの1答案要素不足を同期改訂するまで最終ゲート未通過
+- 判定: `PASS / EXPLANATION_PDF_REVISION_SYNC_COMPLETE`
 
 ## Topic 16 練習問題source
 - source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_practice_source.md`
@@ -143,8 +146,10 @@
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_qa.md`
 - 公式解答・標準解答との照合: `26 / 26 一致相当`
 - 教材だけでの導出: `25 / 26 PASS`
-- FAIL: `R7 一次 機械 問4 (3)` — 完成教材に必要な自己消弧形スイッチング素子の識別説明が不足
-- 練習source対応表: 当該要素を逆並列ダイオードへ誤マッピング
+- FAIL: `R7 一次 機械 問4 (3)` — 旧完成教材に必要な自己消弧形スイッチング素子の識別説明が不足
+- source補正: `完了`
+- 解説PDF同期: `完了`
+- 練習PDF・PowerPoint同期後にblind再解答ゲートを作り直す
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定8項目・3可視化変更: `0件`
 - SPEC外追加: `0件`
@@ -177,4 +182,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-source補正は完了。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルを変更せず、同じ最小補正を解説PDF・練習PDF・PowerPointへ同期して表示QAする。その後、公式解答と旧blind QAを先読み対象から外す再解答ゲートを作り直す。
+source補正と解説PDF同期は完了。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルを変更せず、同じ最小補正を練習PDFへ同期して表示QAする。その後にPowerPoint同期、blind再解答前ゲート再作成へ進む。

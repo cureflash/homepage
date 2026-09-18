@@ -6,6 +6,7 @@
 - PDF: `16_700series_multilevel_converter_pwm_explanation.pdf`
 - source: `16_700series_multilevel_converter_pwm.md`
 - 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・26答案要素
+- 同期補正: R7 一次「機械」問4 (3) — IGBT/MOSFETを自己消弧形スイッチング素子として識別し、逆並列ダイオードと役割を区別
 
 ## PDF構造・表示QA
 - A4縦: `4ページ`
@@ -14,10 +15,11 @@
 - 文字抽出: `PASS`
 - 文字欠落・文字化け: `0件`
 - 重なり・クリップ: `0件`
-- SHA-256: `f80880da951131efa119ad1a08067fde0dc55b2083fc1e3bc571f42b3d2b5ede`
+- SHA-256: `79d802587c25f5308b2a8902256bacf4f75cb435f2c56af4d9fffbc65a65c4e8`
 
 ## 内容QA
 - 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- R7 一次「機械」問4 (3): `PASS / PDF同期済み`
 - 3段階例題: `3 / 3 PASS`
 - 基礎例題: `200 V/μs`, `100 V/μs` を再確認
 - 本試験標準例題: `A1=1.96157`, `A5=1.11114`, `A7=0.390181` を再確認
@@ -33,7 +35,7 @@
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / EXPLANATION_PDF_REVISION_SYNC_COMPLETE`
 
 ## 次工程
-固定一次4問＋二次1問・26答案要素、解説source、SPEC指定8項目・3可視化、範囲境界を変更せず、Topic 16の練習問題sourceを制作する。
+同じ最小補正を練習PDFへ同期し、A4ページ・文字抽出・180 dpi表示QA・一次8問/二次4問の整合を再確認する。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルは変更しない。
