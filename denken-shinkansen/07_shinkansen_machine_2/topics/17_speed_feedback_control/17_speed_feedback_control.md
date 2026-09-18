@@ -4,9 +4,9 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説source本文、解説PDF＋QA、練習source＋練習PDF＋QA、解説画像PowerPoint＋QA、独立再解答前ゲート、答案ロック、完成後独立再解答を完了した。
+制作前EXAM_ALIGNMENT、解説source本文、解説PDF＋QA、練習source＋練習PDF＋QA、解説画像PowerPoint＋QA、独立再解答前ゲート、答案ロック、完成後独立再解答、最終QAまで完了した。
 
-現在 `topic_17_progress_records_synced / IN_PROGRESS`。固定一次1問＋二次4問、計5問・6答案要素を維持し、完成後独立再解答 `6 / 6 PASS`、各表示QAもPASS。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。次工程はTopic 17最終QA再実施。
+現在 `topic_17_final_qa_pass / completed`。固定一次1問＋二次4問、計5問・6答案要素を維持し、完成後独立再解答 `6 / 6 PASS`、各表示QA、仕様境界、進捗整合をすべてPASSした。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。次工程はTopic 18制作前EXAM_ALIGNMENT。
 
 ## 固定範囲
 
@@ -357,7 +357,6 @@ Topic 18以降で扱う時間応答、PID、安定判別、周波数応答はこ
 `= 6/(s+4)`
 
 ここでは時間応答を求めず、直列経路の伝達関数を積でまとめるところまでを扱う。
-
 ## 12. 本試験標準例題 — 閉ループ出力と偏差を分ける
 
 前向き伝達関数
@@ -521,4 +520,4 @@ Topic 18以降で扱う時間応答、PID、安定判別、周波数応答はこ
 
 # 次工程
 
-Topic 17最終QAを再実施する。固定5問・6答案要素、完成後独立再解答 `6 / 6 PASS`、各PDF/PPTX QA、仕様境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
+Topic 17は最終QA `PASS / completed`。次はTopic 18「速度指令を変えたら何秒で追従する？」の制作前EXAM_ALIGNMENTを行う。
