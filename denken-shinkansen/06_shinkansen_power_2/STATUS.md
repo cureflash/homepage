@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_powerpoint_complete`
+current_status: `topic_14_independent_reanswer_needs_revision`
 completed_topics: `13 / 22`
 
 ## Topic 12 final result
@@ -122,7 +122,7 @@ source:
 
 ## Topic 14 progress
 
-Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了。完成後blind独立再解答は未着手。
+Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QA、完成後blind独立再解答まで実施。完成後blindは `20 / 21 PASS` でH23二次問3 (2a)に1 blockerが残り、`NEEDS_REVISION`。最終QAは未着手。
 
 正式固定問題:
 - 令和6年度 第二種一次「電力」問5 — `5答案要素`
@@ -204,6 +204,19 @@ PowerPoint・QA:
 - 練習問8・問12では `1.8769 Mvar` の境界に対し、`0.1 Mvar` 刻みなら `1.9 Mvar` を採用する同型処理を再訓練する。
 - PowerPoint Slide 4では同じ仮定例をP-Q容量円と `1.8 / 1.9 Mvar` の再代入比較で可視化した。
 
+完成後blind独立再解答:
+- R6一次「電力」問5: `5 / 5 PASS`
+- R4一次「法規」問4: `5 / 5 PASS`
+- R5二次「電力・管理」問4: `2 / 2 PASS`
+- R2二次「電力・管理」問6: `4 / 4 PASS`
+- H23二次「電力・管理」問3: `4 / 5 PASS`
+- 合計: `20 / 21 PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `10 / 11 PASS`
+- 制作前blind不足1要素「最低必要容量を不足側へ丸めない」: `1 / 1 改善確認`
+- 新規blocker: H23二次問3 (2a)。66 kV側等価値 `66.258 kV` を一次母線へ `154/66` で戻す答案処理をblind解答で落とした。公式標準解答は `154.6 kV ≒ 155 kV`。
+- 判定: `NEEDS_REVISION`
+
 品質境界:
 - 固定5問・21答案要素の変更: `0件`
 - SPEC指定10項目: `10 / 10 covered`
@@ -228,6 +241,7 @@ source:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice_pdf_qa.md`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_powerpoint_qa.md`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_reanswer_20260918.md`
 
 ## Gate checklist
 
@@ -244,8 +258,8 @@ source:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — PowerPoint + QA complete; completion blind re-answer pending
+- [ ] Topic 14 — completion blind re-answer `20 / 21`; H23 primary-side voltage conversion revision pending
 
 ## next_start
 
-Topic 14の完成後blind独立再解答を行う。固定5問・21答案要素を変更せず、保存済み正答・公式解答を先に見ずに教材だけで再解答し、制作前blind不足1要素「最低必要容量を不足側へ丸めない」を含めて全答案要素を再検証する。最終QAはまだ行わない。
+H23二次問3 (2a) を根拠に、固定範囲を増やさず解説sourceへ「66 kV側等価値から一次母線へ154/66で戻す」答案処理を明示し、必要なlearner-facing成果物へ同期する。全21答案要素PASSまでは最終QAを行わない。
