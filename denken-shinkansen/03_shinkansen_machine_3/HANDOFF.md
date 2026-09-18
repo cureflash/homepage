@@ -5,9 +5,9 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
 
-Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDFまで完成。系列 `SPEC.md` の固定範囲だけで公式過去問6問・6答案要素を維持し、制作前検証 `6 / 6 PASS`、本文マッピング `6 / 6 PASS`、3段階例題 `PASS`、解説source QA `PASS`。解説PDFはA4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、固定過去問マッピング `6 / 6`。練習問題sourceは12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。練習PDFはA4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`、正答一覧source一致 `12 / 12`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。始動法・制動巻線、短絡比、無負荷飽和曲線・三相短絡曲線を使う試験法、同期調相機、負荷角・脱出トルク等の仕様外追加は0件。未確認のL0系実車値・詳細方式追加も0件。固定EXAM_ALIGNMENTの正答選択肢番号・計算問題の最終数値は完成後blind独立再解答のため制作前記録へ保存していない。
+Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで完成。系列 `SPEC.md` の固定範囲だけで公式過去問6問・6答案要素を維持し、制作前検証 `6 / 6 PASS`、本文マッピング `6 / 6 PASS`、3段階例題 `PASS`、解説source QA `PASS`。解説PDFはA4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`、固定過去問マッピング `6 / 6`。練習問題sourceは12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。練習PDFはA4縦2ページ、表示QA `2 / 2 PASS`、文字抽出QA `PASS`、正答一覧source一致 `12 / 12`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。解説画像PowerPointは16:9・4枚、表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字切れ・重なり・判読不能0件、欠落・破損グリフ0件、ZIP整合性 `PASS`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。始動法・制動巻線、短絡比、無負荷飽和曲線・三相短絡曲線を使う試験法、同期調相機、負荷角・脱出トルク等の仕様外追加は0件。未確認のL0系実車値・詳細方式追加も0件。固定EXAM_ALIGNMENTの正答選択肢番号・計算問題の最終数値は完成後blind独立再解答のため制作前記録へ保存していない。
 
-状態: `topic_16_practice_pdf_complete / IN_PROGRESS`
+状態: `topic_16_powerpoint_complete / IN_PROGRESS`
 
 ## Topic 16 固定範囲
 - 同期機
@@ -51,6 +51,12 @@ Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・�
 練習PDF文字抽出QA: `PASS`。
 練習PDF正答一覧source一致: `12 / 12 PASS`。
 練習PDF→固定EXAM_ALIGNMENT接続: `6 / 6 PASS`。
+PowerPoint表示QA: `4 / 4 PASS`。
+PowerPointスライド外はみ出し: `0件`。
+PowerPoint文字欠落・重なり・判読不能: `0件`。
+PowerPoint欠落・破損グリフ: `0件`。
+PowerPoint ZIP整合性: `PASS`。
+PowerPoint→固定EXAM_ALIGNMENT接続: `6 / 6 PASS`。
 固定範囲外知識による答案補完: `0件`。
 固定EXAM_ALIGNMENT変更: `0件`。
 
@@ -68,7 +74,8 @@ source: `topics/16_synchronous_machine/16_synchronous_machine.md`
 練習問題source: `topics/16_synchronous_machine/16_synchronous_machine_practice.md` 完成（12問）。
 練習PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` 完成（A4縦2ページ）。
 練習PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` / `PASS`。
-解説画像PowerPoint: 未着手。
+解説画像PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` 完成（16:9・4枚）。
+PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` / `PASS`。
 完成後blind独立再解答: 未実施。
 
 ## Topic 15
@@ -92,4 +99,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 16「同期機って新幹線には使わないの？」の解説画像PowerPointを作成する。固定範囲と固定EXAM_ALIGNMENT 6問・6答案要素への接続を維持し、表示QA・スライド外はみ出し・文字欠落/重なり・ZIP整合性を確認する。
+Topic 16「同期機って新幹線には使わないの？」の完成後blind独立再解答を、固定6問・6答案要素に対して公式解答・保存済み正答を先に見ず教材だけで実施する。
