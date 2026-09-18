@@ -8,11 +8,11 @@ Topic 01〜19は最終QAまで `PASS / completed`。
 
 完成数: `19 / 20`
 
-current_status: `topic_20_practice_pdf_complete`
+current_status: `topic_20_powerpoint_complete`
 
 active_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 20の解説画像PowerPoint＋QA。
+次工程: Topic 20の完成後独立検証。
 
 ## 上位仕様
 
@@ -220,6 +220,32 @@ PWM波形・FFT
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`。
 
+## 解説画像PowerPoint＋QA
+
+成果物:
+
+- `topics/20_shinkansen_math_model/20_shinkansen_math_model_images.pptx`
+- `topics/20_shinkansen_math_model/20_shinkansen_math_model_powerpoint_qa.md`
+
+固定済みEXAM_ALIGNMENT・教材本文・練習問題の範囲を変えず、統合モデルを16:9・5枚で可視化した。
+
+- 16:9: `5枚`
+- SPEC固定統合範囲: `7 / 7 covered`
+- 教材で必要な説明6項目の可視化: `6 / 6 PASS`
+- 接続確認5問との対応: `5 / 5 PASS`
+- 数値整合QA: `PASS`
+- 全5スライド表示QA: `5 / 5 PASS`
+- shape geometry overflow: `0件`
+- `slides_test.py`: `PASS`
+- PPTX ZIP/XML整合性: `PASS`
+- 統合モデル自体を直接要求する確認済み第二種過去問: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 第一種・第三種問題の追加: `0件`
+- 仕様外数学・算法の追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / POWERPOINT_COMPLETE`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -237,11 +263,11 @@ PWM波形・FFT
 - [x] 解説PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立数値照合 `3 / 3 PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [ ] 解説画像PowerPoint＋QA
+- [x] 解説画像PowerPoint＋QA（16:9・5枚、固定統合範囲 `7 / 7`、必要説明 `6 / 6 PASS`、接続確認5問 `5 / 5 PASS`、表示QA `5 / 5 PASS`、overflow `0件`）
 - [ ] 完成後独立検証
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDFを変更せず、Topic 20の解説画像PowerPoint＋QAを作成する。
+固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDF・PowerPointを変更せず、Topic 20の完成後独立検証を行う。
