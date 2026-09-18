@@ -4,11 +4,11 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceを完了した。練習PDF・PowerPoint・完成後clean blindは未着手。
+制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFを完了した。PowerPoint・完成後clean blindは未着手。
 
 固定過去問は第二種の一次4問＋二次1問、計5問。Topic 19へ直接対応する答案要素だけをゲート対象とし、周辺論点で件数を水増ししない。
 
-current_status: `topic_19_practice_source_complete`
+current_status: `topic_19_practice_pdf_complete`
 
 必須成果物:
 - 主source: `19_mini_shinkansen_dual_voltage_main_circuit.md`
@@ -16,8 +16,10 @@ current_status: `topic_19_practice_source_complete`
 - 解説PDF: `19_mini_shinkansen_dual_voltage_main_circuit_explanation.pdf` — `PASS / EXPLANATION_PDF_COMPLETE`
 - 解説PDF QA: `19_mini_shinkansen_dual_voltage_main_circuit_explanation_pdf_qa.md`
 - 練習source: `19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md` — `PASS / PRACTICE_SOURCE_COMPLETE`
+- 練習PDF: `19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf` — `PASS / PRACTICE_PDF_COMPLETE`
+- 練習PDF QA: `19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md`
 
-次工程: 練習PDFを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3計算/グラフの範囲を変えない。ミニ新幹線の実車架線電圧、主変圧器巻数・タップ構成、絶縁定格、主変換装置・補助電源・電源切替の実構成は、一次資料で確認できたもの以外を真値化しない。
+次工程: 解説画像PowerPointを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3計算/グラフの範囲を変えない。解説／練習sourceとPDFの問題・正答・数式を変更せず、未確認の実車仕様は真値化しない。
 
 ## 固定範囲
 

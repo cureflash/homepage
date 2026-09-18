@@ -8,7 +8,26 @@
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 
-現在地は `topic_19_practice_source_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceまで完了。次は練習PDF。PowerPoint・完成後clean blindは未着手。
+現在地は `topic_19_practice_pdf_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFまで完了。次はPowerPoint。完成後clean blindは未着手。
+
+## Topic 19 練習PDF
+
+成果物:
+- 練習PDF: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf`
+- QA: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+品質:
+- A4縦: `5 pages`
+- pdfium / pdftoppm 180 dpi: `5 / 5 PASS`
+- qpdf構造・文字抽出・外周クリップ安全域: `PASS`
+- 一次8問＋二次4問・完全解説: `12 / 12`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5問・9答案要素接続: `9 / 9 PASS`
+- SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
+- 完成後clean blind公式照合: `未実施 / PowerPoint完成後`
 
 ## Topic 19 練習source
 
@@ -172,4 +191,4 @@ source:
 
 ## 次工程
 
-Topic 19の練習PDFを作る。練習sourceの一次8問＋二次4問をそのままPDF化し、固定5問・9答案要素とSPEC指定9項目・3可視化の接続を維持する。表示QA、数式・数値QA、一次8問の正答一意性を再確認する。H25負荷時タップ切換装置は一般原理としてのみ扱い、未確認実車値・実構成は真値化しない。
+Topic 19の解説画像PowerPointを作る。固定5問・9答案要素、SPEC指定9項目・3可視化、解説／練習sourceとPDFの問題・正答・数式を変更しない。PowerPoint完成後にclean blind公式照合へ進む。
