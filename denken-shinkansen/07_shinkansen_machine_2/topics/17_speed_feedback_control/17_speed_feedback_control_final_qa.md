@@ -6,25 +6,28 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / FINAL_QA_COMPLETE`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` と最新mainを再確認した。技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、仕様境界はPASSしたが、進捗記録3箇所が実状態へ未同期のため completed にはしない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` と最新mainを再確認した。前回最終QAで唯一FAILだった進捗記録3箇所は同期済みであり、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、仕様境界、進捗記録整合を再判定して全項目PASSとした。
+
+本runでは最終QA再実施までを1段階とし、`completed` 状態への同期は次工程へ分離する。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。
 
 ## reconcile
 
-- 最初の未完了テーマは Topic 17。
+- 最終QA再実施開始時点の最初の未完了テーマは Topic 17。
 - 固定EXAM_ALIGNMENTは一次1問＋二次記述4問、計5問・6答案要素のまま変更なし。
 - source Markdown、解説PDF、練習source/PDF、PowerPoint、各QA、独立再解答前ゲート、答案ロック、完成後独立再解答記録の実在を確認。
+- main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` が、いずれも「最終QA再実施直前」の実状態へ同期済みであることを確認。
 - 技術本文・練習問題・正答・PDF/PPTX・固定EXAM_ALIGNMENTの内容変更 `0件`。
 
 ## 必須成果物
 
-- source Markdown: PASS (`b0faf60a08ccca3ce389bf7cc58603bf1b780546`)
+- source Markdown: PASS (`47cd65c4ee61d37773b53a4a5acf949e16645676`)
 - 解説PDF: PASS (`171afc11b64f8ece63702473bdef84c20865ca80`)
 - 解説PDF QA: PASS (`b8586ce663ab0d9d3ac5f8c63a34b4910e926fd4`)
-- 練習source: PASS (`261aef7e59de4fdbd055d9611b6a1e6e5668150e`)
+- 練習source: PASS (`1c6acd6c680e1e1f29110afd846258a7998bbbd3`)
 - 練習PDF: PASS (`87e988deffbbede3e4b76031a98a4e50762d7e8f`)
-- 練習PDF QA: PASS
+- 練習PDF QA: PASS (`46b1610b3a2dd7ddbbee96322985c3bf7c06f3dd`)
 - 解説画像PowerPoint: PASS (`d712faec67a64ff8b3c4157f8c4ae032802da626`)
 - PowerPoint QA: PASS (`58fff28d9a9bbe6ea467b08a17db2fdf4d0594a4`)
 - 独立再解答前ゲート: PASS (`a878bfaf503ab1887ae689d54e53ea6237893338`)
@@ -64,20 +67,22 @@
 
 判定: `PASS`。
 
-## 進捗記録整合
+## 進捗記録整合（再実施）
 
-次の3箇所が実状態と不一致。
+前回FAILだった3箇所を再確認した。
 
-1. main source `## 状態`: `topic_17_explanation_pdf_complete / IN_PROGRESS` のままで、練習source/PDF・PowerPoint・独立再解答完了を反映していない。
-2. main source末尾 `# 次工程`: 「Topic 17練習sourceを制作する」のまま。
-3. 練習source末尾 `# 次工程`: 「Topic 17練習PDFを制作する」のまま。
+1. main source `## 状態`: 全成果物・完成後独立再解答完了後の実状態、`topic_17_progress_records_synced / IN_PROGRESS` へ同期済み — PASS。
+2. main source末尾 `# 次工程`: `Topic 17最終QAを再実施する` へ同期済み — PASS。
+3. 練習source末尾 `# 次工程`: `Topic 17最終QAを再実施する` へ同期済み — PASS。
 
-系列 `STATUS.md` / `HANDOFF.md` は独立再解答完了まで同期済みだが、上記3箇所が不一致のため進捗記録整合はFAIL。
+系列 `STATUS.md` / `HANDOFF.md` も最終QA再実施直前の状態と整合している。
 
-判定: `FAIL`。
+進捗記録整合: `3 / 3 PASS`。
 
 ## 最終判定
 
-`NEEDS_REVISION / topic_17_final_qa_needs_revision / IN_PROGRESS`。
+`PASS / topic_17_final_qa_pass / FINAL_QA_COMPLETE`。
 
-技術内容と試験対応品質ゲートはPASSしている。次工程は上記3箇所だけを実成果物状態へ同期し、技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更しない。同期後に最終QAを再実施する。
+固定5問・6答案要素、完成後独立再解答 `6 / 6 PASS`、練習QA、解説PDF・練習PDF・PowerPoint QA、仕様境界、進捗記録整合をすべて満たした。
+
+次工程は Topic 17 の completed 状態同期。主source・練習source・`STATUS.md`・`HANDOFF.md` の進捗表記だけを完成状態へ同期し、その後に Topic 18「速度指令を変えたら何秒で追従する？」の制作前EXAM_ALIGNMENTへ進む。
