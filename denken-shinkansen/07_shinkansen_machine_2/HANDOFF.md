@@ -6,19 +6,21 @@
 - Topic 01〜17: 最終QA `PASS / completed`
 - 完成数: `17 / 22`
 - active topic: `18 速度指令を変えたら何秒で追従する？`
-- current status: `topic_18_exam_alignment_complete`
-- 次工程: Topic 18 解説source本文
+- current status: `topic_18_explanation_source_complete`
+- 次工程: Topic 18 解説PDF＋表示QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md` を確認した。
+- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、直近変更を確認した。
 - 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」であることを確認した。
-- R08一次「機械」まで直近年度から公式過去問を確認し、Topic 18固定範囲へ接続できる一次1問＋二次4問、計5問・12答案要素を固定した。
+- 既存の「機械二種を進行」枠が制作前EXAM_ALIGNMENTまで完了していたため、その成果を正本として再利用し、重複調査は行っていない。
+- 固定一次1問＋二次4問、計5問・12答案要素を変更せず、Topic 18解説source本文を完成した。
+- 一次遅れ・二次遅れ・時定数・減衰係数・固有角周波数・オーバーシュート・立上り時間・整定時間・定常偏差を本文へ接続し、固定12答案要素を `12 / 12` カバーした。
 - Topic 19〜21先取り、仕様外独立論点、未確認実車値追加は `0件`。
 - 固定問題の正答記号・最終数値・完成済み個別解答の保存は `0件`。
 - source: `topics/18_speed_transient_response/18_speed_transient_response.md`
-- 次工程はTopic 18解説source本文。
+- 次工程はTopic 18解説PDF＋表示QA・文字抽出QA・数値整合QA。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -256,5 +258,21 @@ Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘�
 
 判定: `PASS / topic_18_exam_alignment_complete / IN_PROGRESS`
 
+## Topic 18 解説source
+- source: `topics/18_speed_transient_response/18_speed_transient_response.md`
+- 一次遅れ `K/(Ts+1)` の時定数・単位・ステップ応答・`t=T` の63.2%を説明
+- 10〜90%立上り時間、2%/5%整定時間を定義付きで説明
+- 二次遅れ標準形、係数比較、固有角周波数 `ω_n`、減衰係数 `ζ` を説明
+- `ζ` による振動性、オーバーシュート、整定の違いを説明
+- ステップ・インパルス・指数入力のラプラス変換から逆ラプラス変換までの解法手順を説明
+- 最終値の定理と定常値・定常偏差の使い分けを説明
+- 一次遅れの時定数比較、二次遅れの減衰係数比較について、実車値ではない教材仮定条件を固定
+- 基礎／本試験標準／複合例題を独立再計算PASS
+- 固定5問・12答案要素へ `12 / 12` 接続
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加: `0件`
+- 固定問題の正答記号・最終数値・完成済み個別解答保存: `0件`
+
+判定: `PASS / topic_18_explanation_source_complete / IN_PROGRESS`
+
 ## 次に行うこと
-固定5問・12答案要素と系列 `SPEC.md` の固定範囲を変更せず、Topic 18解説source本文を作成する。
+固定5問・12答案要素と解説source本文を変更せず、Topic 18解説PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
