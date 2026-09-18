@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 18 / 20
-- current_status: `topic_19_explanation_pdf_complete`
+- current_status: `topic_19_practice_source_complete`
 - last_completed_topic: `18 非線形方程式と反復計算`
 - active_topic: `19 最適化入門`
-- next_start: Topic 19の練習問題sourceを作成する
+- next_start: Topic 19の練習PDF＋QAを作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -313,7 +313,7 @@
 - [x] 制作前独立検証（一変数境界・二変数等式制約・ラグランジュ法入口 `PASS`）
 - [x] 解説本文＋3段階例題（必要説明 `6 / 6 PASS`、例題 `3 / 3 PASS`、接続確認5問マッピング `5 / 5 PASS`）
 - [x] 解説PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
-- [ ] 練習問題source
+- [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [ ] 練習PDF＋QA
 - [ ] 解説画像PowerPoint＋QA
 - [ ] 完成後独立検証
@@ -322,14 +322,14 @@
 
 ## 今回進めた内容
 
-Topic 19の解説PDF＋QAを作成した。
+Topic 19の練習問題sourceを作成した。
 
-- A4縦4ページ
-- 200 dpi表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 必要説明6項目: `6 / 6 PASS`
-- 3段階例題の独立数値再計算: `3 / 3 PASS`
-- 接続確認5問の教材内マッピング: `5 / 5 PASS`
+- 全12問
+- 一次型8問・記述型4問
+- 基礎3問・標準6問・複合3問
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 接続確認5問の教材内接続: `5 / 5`
 - 直接最適化・ラグランジュ法要求の確認済み第二種過去問: `0問`
 - 接続5問の固定品質ゲート件数への水増し: `0件`
 - H17問6の固定件数追加: `0件`
@@ -339,8 +339,8 @@ Topic 19の解説PDF＋QAを作成した。
 
 ## 判定
 
-`topic_19_explanation_pdf_complete / IN_PROGRESS`
+`topic_19_practice_source_complete / IN_PROGRESS`
 
 完成数は `18 / 20`。
 
-次はTopic 19の練習問題sourceを作成する。
+次はTopic 19の練習PDF＋QAを作成する。
