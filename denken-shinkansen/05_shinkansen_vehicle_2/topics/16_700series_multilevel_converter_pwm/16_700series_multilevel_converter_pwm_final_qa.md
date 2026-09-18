@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容、固定EXAM_ALIGNMENT、完成後blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界は全件PASS。進捗記録4箇所だけが現在工程へ同期されていないため、completedにはしない。
+技術内容、固定EXAM_ALIGNMENT、完成後blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合を再確認し、全件PASSとした。
 
 ## 1. 上位仕様確認
 
@@ -114,18 +114,16 @@ SPEC境界: `PASS`
 
 ## 7. 進捗記録整合
 
-技術成果物は現在工程まで到達しているが、次の4箇所に旧工程表現が残っている。
+初回最終QAで唯一FAILだった4箇所を再確認した。
 
-1. 主source冒頭 `## 状態`: `topic_16_source_revision_complete` のまま、PDF/PPTX同期とblind再解答前ゲート再構築を次工程としている。
-2. 主source末尾 `## 次工程`: PDF/PPTX同期とblind再解答前ゲート再構築を次工程としている。
-3. 練習source末尾 `## 次工程`: `topic_16_source_revision_complete` のまま、練習PDF同期を次工程としている。
-4. 練習PDF QA末尾 `## 現在地`: `topic_16_practice_pdf_revision_sync_complete` のまま、PowerPoint同期を次工程としている。
+1. 主source冒頭 `## 状態`: `topic_16_progress_sync_complete`、次工程を最終QA再判定へ同期済み。
+2. 主source末尾 `## 次工程`: Topic 16最終QA再判定へ同期済み。
+3. 練習source末尾 `## 次工程`: `topic_16_progress_sync_complete`、Topic 16最終QA再判定へ同期済み。
+4. 練習PDF QA末尾 `## 現在地`: `topic_16_progress_sync_complete`、Topic 16最終QA再判定へ同期済み。
 
-`STATUS.md` と `HANDOFF.md` は `topic_16_blind_reanswer_qa_pass` まで同期済み。
+旧工程表現は `4 / 4` 解消済み。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の修正は不要だった。
 
-進捗記録整合: `FAIL / 4箇所要同期`
-
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind候補答案・blind再解答結果は変更しない。
+進捗記録整合: `PASS`
 
 ## 8. 最終判定
 
@@ -136,9 +134,9 @@ SPEC境界: `PASS`
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4箇所`
+- 進捗記録整合: `PASS`
 - SPEC外追加: `0件`
 
-したがって最終判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `15 / 39` のまま。
+したがって最終判定は `PASS / completed`。完成数は `16 / 39`。
 
-次工程は、上記4箇所の進捗記録だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 16最終QAを再判定する。
+次工程はTopic 17「パワー半導体の損失比較」の制作前EXAM_ALIGNMENT。
