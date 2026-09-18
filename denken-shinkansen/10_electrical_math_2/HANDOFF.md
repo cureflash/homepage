@@ -12,7 +12,7 @@ current_status: `topic_19_final_qa_needs_revision`
 
 active_topic: `19 最適化入門`
 
-次工程: Topic 19の進捗記録5ファイルを実成果物状態へ同期する。
+次工程: Topic 19の最終QA再判定。
 
 ## 上位仕様
 
@@ -636,6 +636,18 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 
 技術内容変更: `0件`。
 
+## 進捗記録同期
+
+初回最終QAで指摘された5ファイルを実成果物状態へ同期した。
+
+- `topics/19_optimization_intro/19_optimization_intro.md`: 同期済み
+- `topics/19_optimization_intro/19_optimization_intro_explanation_qa.md`: 同期済み
+- `topics/19_optimization_intro/19_optimization_intro_practice.md`: 同期済み
+- `topics/19_optimization_intro/19_optimization_intro_practice_qa.md`: 同期済み
+- `topics/19_optimization_intro/19_optimization_intro_powerpoint_qa.md`: 同期済み
+
+固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更していない。直接最適化・ラグランジュ未定乗数法要求0問、接続確認5問の件数水増し0件、H17問6固定件数追加0件、仕様外追加0件を維持した。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -656,10 +668,10 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 - [x] 解説画像PowerPoint＋QA
 - [x] 完成後独立検証
 - [x] 最終QA実施 → `NEEDS_REVISION`（進捗記録整合 `1 / 6 PASS`）
-- [ ] 進捗記録5ファイルの同期
+- [x] 進捗記録5ファイルの同期
 - [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 次工程
 
-Topic 19配下の進捗記録5ファイルだけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PowerPoint・完成後独立検証結果は変更しない。同期後に最終QAを再実施する。
+Topic 19の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更しない。
