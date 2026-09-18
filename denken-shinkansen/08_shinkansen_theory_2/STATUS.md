@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 19 / 21
-- current_status: `topic_20_blind_reanswer_complete`
+- current_status: `topic_20_explanation_source_complete`
 - last_completed_topic: `19 25kV・大電流をどう安全に測る？`
 - active_topic: `20 East iは走りながら何をどう測る？`
-- next_start: Topic 20 解説本文＋3段階例題
+- next_start: Topic 20 解説PDF＋表示QA
 
 ## 完成済み
 
@@ -70,7 +70,7 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 制作前EXAM_ALIGNMENT: `PASS / 一次5問・25答案要素`
 - [x] 制作前blind独立再解答: `25 / 25 PASS`
 - [x] 標準解答照合: `R8/R7/R6/H24 20 / 20公式一致 + H20 5 / 5二次資料一致`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
@@ -80,25 +80,24 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 20の制作前blind独立再解答を完成させた。
+Topic 20の解説本文＋3段階例題を完成させた。
 
-- 成果物: `topics/20_east_i_measurement/20_east_i_measurement_blind_reanswer.md`
-- 固定一次過去問: `5 / 5再解答`
-- 固定答案要素: `25 / 25導出`
-- R8一次理論問4: `カ / ワ / リ / ホ / イ`
-- R7一次理論問4: `ル / チ / ヌ / ヲ / ヨ`
-- R6一次理論問6: `ヘ / ハ / ワ / チ / ヲ`
-- H24一次理論問7: `ニ / ヨ / ヌ / イ / ヲ`
-- H20一次理論問6: `ニ / カ / ヨ / リ / ワ`
-- 公式標準解答直接照合: `20 / 20一致`（R8/R7/R6/H24）
-- H20: 現行公式アーカイブ外のため、電験王の問題転記・解答で `5 / 5二次照合`
+- 成果物: `topics/20_east_i_measurement/20_east_i_measurement.md`
+- SPEC固定範囲: `12 / 12収録`
+- 過去問から逆算した必須説明: `20 / 20収録`
+- 固定一次過去問: `5 / 5接続`
+- 固定答案要素: `25 / 25接続`
+- 3段階例題: `3 / 3`
+- 例題数値独立再計算: `3 / 3 PASS`
+- A/D・サンプリング・エイリアシングを存在しない過去問へ接続: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- East i内部測定回路の推測追加: `0件`
+- East i内部測定回路・未公開定数の推測追加: `0件`
 - 固定範囲外追加: `0件`
 
 ## 判定
 
-`PASS / topic_20_blind_reanswer_complete / IN_PROGRESS`。
+`PASS / topic_20_explanation_source_complete / IN_PROGRESS`。
 
-完成数は `19 / 21`。次工程はTopic 20の解説本文＋3段階例題。
+完成数は `19 / 21`。次工程はTopic 20の解説PDF＋表示QA。
