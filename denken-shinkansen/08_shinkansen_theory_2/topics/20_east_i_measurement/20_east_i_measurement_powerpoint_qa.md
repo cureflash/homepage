@@ -6,8 +6,8 @@
 
 - PowerPoint: `20_east_i_measurement_images.pptx`
 - 16:9 / 8枚
-- サイズ: PPTX_SIZE_PENDING bytes
-- SHA-256: `PPTX_SHA_PENDING`
+- サイズ: 279872 bytes
+- SHA-256: `2a35298811f8a54f1aa3b9448235bbc829ac9031140aa40f45702da82d7fb179`
 - 作成根拠: `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列 `SPEC.md` / Topic 20 source / 固定EXAM_ALIGNMENT
 
 ## 表示・ファイルQA
@@ -56,6 +56,6 @@
 - A/D・サンプリング・エイリアシングを存在しない公式過去問へ接続: `0件`
 - 実車未公開値の追加: `0件`
 
-判定: `POWERPOINT_BUILD_PENDING`
+判定: `PASS / POWERPOINT_COMPLETE`
 
 次工程: Topic 20 完成後独立再解答。

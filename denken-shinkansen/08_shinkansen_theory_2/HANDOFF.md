@@ -6,11 +6,11 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_20_powerpoint_build_pending`
+current_status: `topic_20_powerpoint_complete`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。PowerPoint生成待ち。
+Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QAまで完了。次工程は完成後独立再解答。
 
 ## Topic 20 固定範囲
 
@@ -59,7 +59,7 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - 練習PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_practice_pdf_qa.md`
 - PowerPoint: `topics/20_east_i_measurement/20_east_i_measurement_images.pptx`
 - PowerPoint QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
-- stage: `POWERPOINT_BUILD_PENDING`
+- stage: `POWERPOINT_COMPLETE`
 - completion: `in_progress`
 
 ## PowerPoint QA
@@ -75,8 +75,8 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - SPEC固定範囲: `12 / 12可視化`
 - 固定一次5問・25答案要素: `25 / 25可視化`
 - 共通解法8ステップ: `PASS`
-- SHA-256: `PPTX_SHA_PENDING`
-- 判定: `POWERPOINT_BUILD_PENDING`
+- SHA-256: `2a35298811f8a54f1aa3b9448235bbc829ac9031140aa40f45702da82d7fb179`
+- 判定: `PASS / POWERPOINT_COMPLETE`
 
 ## East i一次資料
 
@@ -90,4 +90,4 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 
 ## 次工程
 
-PowerPoint生成待ち。生成・SHA記録後、Topic 20の完成後独立再解答。保存済み正答を先に見ず、固定一次5問・25答案要素を教材内容だけで再解答し、各答案要素の根拠を説明できるか確認する。外部知識で補完した場合はFAILとする。
+Topic 20の完成後独立再解答。保存済み正答を先に見ず、固定一次5問・25答案要素を教材内容だけで再解答し、各答案要素の根拠を説明できるか確認する。外部知識で補完した場合はFAILとする。
