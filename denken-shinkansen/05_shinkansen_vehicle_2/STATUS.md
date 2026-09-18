@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_blind_reanswer_qa_needs_revision`
+- current_status: `topic_16_source_revision_complete`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: 固定範囲を広げず、R7一次「機械」問4 (3) に必要な自己消弧形スイッチング素子の最小説明を教材へ補い、練習sourceの当該EXAM_ALIGNMENT対応を修正し、必要成果物へ同期する
+- next_start: sourceで補正した R7一次「機械」問4 (3) の最小説明を解説PDF・練習PDF・PowerPointへ同期し、表示QA後にblind再解答前ゲートを作り直す
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — BLIND_REANSWER_QA_NEEDS_REVISION / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — SOURCE_REVISION_COMPLETE / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -48,14 +48,15 @@
 - 未確認700系実車値の真値化: `0件`
 
 ## Topic 16 解説source
-- 解説本文: `完成 / blind QAで1答案要素の説明不足を検出`
+- 解説本文: `完成 / blind QA指摘1答案要素を最小補正済み`
 - 3段階例題: `3 / 3 PASS`
-- 固定5過去問・26答案要素の実効本文マッピング: `25 / 26 PASS`
-- 不足: `R7 一次 機械 問4 (3) 自己消弧形スイッチング素子の識別`
+- 固定5過去問・26答案要素の実効本文マッピング: `26 / 26 PASS`
+- 補正: `R7 一次 機械 問4 (3) — IGBT/MOSFETを自己消弧形スイッチング素子として識別し、逆並列ダイオードとの差を明記`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化の再生成条件: `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 判定: `NEEDS_REVISION`
+- SPEC外追加: `0件`
+- 判定: `PASS / SOURCE_REVISION_COMPLETE`
 
 ## Topic 16 解説PDF
 - PDF: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_explanation.pdf`
@@ -79,15 +80,15 @@
 - 完全解説: `12 / 12`
 - 数値・論理再計算: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
-- 固定5過去問・26答案要素の実効接続: `25 / 26 PASS`
-- 不整合: `R7 一次 機械 問4 (3) を逆並列ダイオードへ誤マッピング`
+- 固定5過去問・26答案要素の実効接続: `26 / 26 PASS`
+- 補正: `R7 一次 機械 問4 (3) を自己消弧形スイッチング素子（IGBT/MOSFET）の識別へ正しく再マッピング`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
 - 解説source/PDFの共通仮定式系の変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `NEEDS_REVISION`
+- 判定: `PASS / SOURCE_REVISION_COMPLETE`
 
 ## Topic 16 練習PDF
 - PDF: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_practice.pdf`
@@ -176,4 +177,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-固定範囲を広げず、R7一次「機械」問4 (3) に必要な自己消弧形スイッチング素子の最小説明をmain sourceへ補い、練習sourceの当該EXAM_ALIGNMENT対応を修正する。必要なPDF・PowerPointにも同じ最小補正を同期する。その後、公式解答と本QAを先読み対象から外す再解答ゲートを作り直す。
+source補正は完了。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルを変更せず、同じ最小補正を解説PDF・練習PDF・PowerPointへ同期して表示QAする。その後、公式解答と旧blind QAを先読み対象から外す再解答ゲートを作り直す。
