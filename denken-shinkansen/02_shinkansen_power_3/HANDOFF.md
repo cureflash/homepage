@@ -8,9 +8,9 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 15の初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。一方、旧工程を指す進捗記録7箇所が現在地と不一致のため、判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `14 / 16` のまま。
+Topic 15の初回最終QAで唯一FAILだった進捗記録整合を修正した。旧工程を指していた7箇所を `7 / 7` 現在地へ同期し、`current_status` は `topic_15_progress_sync_complete`。技術内容、必須成果物、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTX、完成後ブラインド独立再解答結果は変更していない。完成数は `14 / 16` のまま。
 
-最終QA: `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
+初回最終QA: `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
 固定候補: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer_candidates.md`
 完成後独立再解答: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md`
 source: `topics/15_regenerative_power/15_regenerative_power.md`
@@ -47,17 +47,18 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - 未確認新幹線実設備値の真値化: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - 初回最終QAの唯一の未達カテゴリ: 進捗記録整合
+- 旧進捗記録同期: `7 / 7 完了`
 
-## 進捗記録の未同期7箇所
-1. `STATUS.md` — PowerPoint完了／次工程=完成後独立再解答のまま。
-2. `topics/15_regenerative_power/15_regenerative_power.md` — 状態・次工程が完成後独立再解答前のままで、完成後独立再解答 `8 / 8 PASS` が主sourceへ未同期。
-3. `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md` — 次工程が練習問題source作成のまま。
-4. `topics/15_regenerative_power/15_regenerative_power_practice_source.md` — 次工程が練習PDF作成のまま。
-5. `topics/15_regenerative_power/15_regenerative_power_practice_qa.md` — 次工程がPowerPoint作成のまま。
-6. `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md` — 次工程が完成後独立再解答のまま。
-7. `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md` — 次工程が最終QA実施のまま。
+## 進捗記録同期
+1. `STATUS.md` — `topic_15_progress_sync_complete`、次工程=最終QA再実施へ同期。
+2. `topics/15_regenerative_power/15_regenerative_power.md` — 完成後独立再解答 `8 / 8 PASS`、初回最終QA、進捗同期結果、次工程を同期。
+3. `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md` — 次工程を最終QA再実施へ同期。
+4. `topics/15_regenerative_power/15_regenerative_power_practice_source.md` — 次工程を最終QA再実施へ同期。
+5. `topics/15_regenerative_power/15_regenerative_power_practice_qa.md` — 次工程を最終QA再実施へ同期。
+6. `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md` — 次工程を最終QA再実施へ同期。
+7. `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md` — 初回最終QA結果と次工程を同期。
 
-`15_regenerative_power_independent_reanswer_candidates.md` はblind固定証跡なので更新しない。
+`15_regenerative_power_independent_reanswer_candidates.md` はblind固定証跡のため変更していない。
 
 ## 範囲境界
 - 回生電力が架線へ戻った後、他負荷・系統・蓄電設備へ流れる電力収支を扱う。
@@ -68,7 +69,7 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - Topic 16の総合系統計算は先取りしない。
 
 ## 次
-上記7箇所の進捗記録を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、完成後独立再解答結果は変更しない。同期後にTopic 15の最終QAを再実施し、全件PASSの場合のみ `completed` とする。
+Topic 15の最終QAを再実施する。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする。
 
 ## 直前完了テーマ
 Topic 14 `駅やトンネルにはどう電気を配る？` は `PASS / completed`。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
