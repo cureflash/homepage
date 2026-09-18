@@ -3,49 +3,52 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
-current_status: `topic_14_explanation_pdf_complete`
+current_status: `topic_14_completion_blind_rerun_pass`
 
 ## 今回完了
 
-Topic 14「新幹線の力率と電圧をどう維持する？」を1段階進め、前回再QAで確認した解説PDFの4 blockerを修正し、再QAを `PASS` とした。
+Topic 14「新幹線の力率と電圧をどう維持する？」を1段階進め、2026-09-19時点の修正版learner-facing成果物に対して完成後blind独立再解答を再実施した。
 
-更新:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.pdf`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation_pdf_qa.md`
+固定5問・21答案要素は変更せず、候補解を現行教材と公式問題文から再計算し、公式解答・標準解答は候補固定後に照合した。
 
-現行PDF:
-- Git blob SHA: `af004d565ace53bcb2334ae038e4355fc57bc649`
-- A4縦5ページ
-- 200 dpi表示: `5 / 5 PASS`
-- ページ外逸脱・文字重なり・本文切れ: `0件`
-- 黒四角・欠損グリフ: `0件`
-- 文字抽出: `PASS / U+FFFD 0件`
+結果:
+- R6一次「電力」問5: `5 / 5 PASS`
+- R4一次「法規」問4: `5 / 5 PASS`
+- R5二次「電力・管理」問4: `2 / 2 PASS`
+- R2二次「電力・管理」問6: `4 / 4 PASS`
+- H23二次「電力・管理」問3: `5 / 5 PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `11 / 11 PASS`
+- 合計: `5 / 5問・21 / 21答案要素 PASS`
 
-解消したblocker:
-1. 近似記号3箇所の黒四角化 — learner-facing表記を `約` に統一して解消。
-2. source 11.2 本試験標準例題の欠落 — 条件、途中式、`Qnet=-0.25 Mvar`, `Qdevice=-0.85 Mvar` まで収録。
-3. MASTER必須「新幹線への接続」欠落 — `P-Q` 負荷から電流・損失・電圧・補償への接続を収録。
-4. 固定答案要素の説明不足 — R2二次問6のP-Qベクトル/力率角を図示し、固定5問・21答案要素をlearner-facing説明へ接続。
+改善確認:
+- R2二次問6「最低必要容量を不足側へ丸めない」: `PASS`
+- 前回blockerのH23二次問3 (2a) `66 kV側等価値 → 154 kV一次側` 復元: `PASS`
 
-H23二次問3 (2a) の `66.258 x 154/66 = 154.6 kV 約155 kV` も維持した。SPEC固定3可視化は `3 / 3 PASS`。固定5問・21答案要素、正式過去問、教材技術範囲は変更していない。
+記録:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_reanswer_20260919.md`
 
 ## 現在地
 
 Topic 01〜13: `completed`。
 完成数: `13 / 22`。
-Topic 14は解説PDF再QAまで `PASS`。Topic自体は未完了。
-
-前回の完成後blind結果 `20 / 21 PASS` は修正前成果物に対する記録なので、Topic 14 completed判定には再利用しない。
+Topic 14は完成後blind再実施まで `PASS`。Topic自体はまだ未完了。
 
 ## 次に行う
 
-保存済み正答を先に見ず、固定5問・21答案要素の完成後blind独立再解答を再実施する。
+Topic 14の最終QAを実施する。
 
-- 一次2問・10答案要素
-- 二次3問・11答案要素
-- 合計 `5問・21答案要素`
+確認対象:
+- 上位仕様・系列SPEC
+- 固定EXAM_ALIGNMENT 5問・21答案要素
+- 必須成果物の実在
+- 解説PDF・練習PDF・PowerPointと各QA
+- 2026-09-19完成後blind `21 / 21 PASS`
+- 進捗記録整合
+- Web公開状態
+- SPEC境界
 
-全21答案要素PASSを確認するまでは最終QA・Topic 15へ進めない。
+最終QAで全件PASSするまではTopic 14を `completed` にせず、Topic 15へ進めない。
 
 ## 品質境界
 
@@ -55,5 +58,6 @@ Topic 14は解説PDF再QAまで `PASS`。Topic自体は未完了。
 - Topic 16故障計算先取り: `0件`
 - Topic 17保護・Topic 20安定度先取り: `0件`
 - 未確認実設備値の真値化: `0件`
+- 教材外知識補完: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
