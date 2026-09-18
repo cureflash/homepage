@@ -4,12 +4,36 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_14_completed`
+current_status: `topic_15_exam_alignment_complete`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
 
 Topic 01〜14は `completed`。
+
+## Topic 15 current progress
+
+制作前EXAM_ALIGNMENTを完了。
+
+正式品質ゲート対象を一次3問＋二次2問、計5問に固定した。
+
+- R2一次「電力」問6: 電池電力貯蔵設備
+- H28一次「電力」問5: 電力貯蔵装置としての二次電池
+- H26一次「電力」問1: 揚水発電所の総合効率
+- H25二次「電力・管理」問6: 電力の需給及び貯蔵
+- H21二次「電力・管理」問4: 中・小規模の電力貯蔵装置
+
+`topics/15_regenerative_power/15_regenerative_power.md`
+
+直近年度候補も確認し、固定範囲外へ広がる問題は正式採用していない。
+
+- R6二次問6: 逆潮流は関連するがFRTまで要求するため不採用
+- R5二次問4: Topic 14で採用済みのため重複不採用
+- R4二次問5: 安定度・需給一般へ広がるため不採用
+- R7一次問3: 同期安定性が中心のため不採用
+- R7二次問6: 需給計画・デマンドレスポンスが中心のため不採用
+
+教材本文・例題・練習問題は未着手。
 
 ## Topic 14 completion
 
@@ -52,17 +76,16 @@ Topic 01〜14は `completed`。
 
 判定: `PASS / COMPLETED`
 
-### 品質境界
+## 品質境界
 
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 固定5問・21答案要素変更: `0件`
-- 新規正式過去問追加: `0件`
-- Topic 15以降の先取り: `0件`
-- Topic 16故障計算先取り: `0件`
-- Topic 17保護・Topic 20安定度先取り: `0件`
+Topic 15:
+- 固定EXAM_ALIGNMENT: `5問`（一次3・二次2）
+- 一次多肢選択: `15空欄`
+- 二次記述を含む: `PASS`
+- 周辺問題による件数水増し: `0件`
+- Topic 14問題の重複採用: `0件`
+- Topic 16/17/20/21先取り: `0件`
 - 未確認実設備値の真値化: `0件`
-- 教材外知識補完: `0件`
-- 公式過去問転載: `0件`
 - 仕様追加: `0件`
 
 ## Gate checklist
@@ -81,8 +104,8 @@ Topic 01〜14は `completed`。
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — 未着手
+- [ ] Topic 15 — IN_PROGRESS / EXAM_ALIGNMENT完了
 
 ## next_start
 
-Topic 15「回生した電力が大量に戻ったら？」について、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲を確認し、制作前EXAM_ALIGNMENTから開始する。
+Topic 15の固定5問を教材なしで独立再解答し、公式解答と照合する制作前blindを実施する。不一致があれば本文制作へ進まずexact blockerを記録する。
