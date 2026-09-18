@@ -5,15 +5,35 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `18 / 39`
-- current_status: `topic_19_clean_blind_official_check_complete`
-- last_completed_topic: `18 E2系 50Hz・60Hzと磁束`
-- active_topic: `19 ミニ新幹線 複電圧主回路`
-- next_start: Topic 19最終QA。必須成果物・各QA・clean blind記録・SPEC境界・進捗整合を確認する
+- exam_aligned_completed_topics: `19 / 39`
+- current_status: `topic_19_completed`
+- last_completed_topic: `19 ミニ新幹線 複電圧主回路`
+- active_topic: `20 N700系 フィードバック制御`
+- next_start: Topic 20制作前EXAM_ALIGNMENT。公式過去問を直近年度から確認し、一次・二次を含む固定ゲートをSPEC範囲内で確定する
 
 ## 完了済み
 
-Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
+Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
+
+## Topic 19 最終QA
+
+判定: `PASS / completed`
+
+最終QA記録:
+- `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_final_qa.md`
+
+品質:
+- 固定過去問: `一次4問＋二次1問 / 5問 / 変更なし`
+- 固定答案要素: `一次7＋二次2 / 9`
+- 完成後clean blind: `9 / 9 PASS`
+- 必須成果物: `PASS`
+- 解説PDF: `2 pages / pdfium・pdftoppm 2 / 2 PASS`
+- 練習PDF: `5 pages / pdfium・pdftoppm 5 / 5 PASS`
+- 練習問題: `一次8問＋二次4問 / 12 / 12再計算 PASS / 一次8 / 8正答一意`
+- PowerPoint: `4 slides / 1600×900 4 / 4 PASS`
+- SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
+- 最終QA工程で問題・正答・数式・PDF/PPTX本体の変更: `0件`
 
 ## Topic 19 clean blind公式照合
 
@@ -305,4 +325,4 @@ PDF/PPTX本体・問題・正答・数式・固定過去問は最終QA再実施�
 
 ## 次工程
 
-Topic 19最終QA。既存PDF/PPTX、問題、正答、数式、固定EXAM_ALIGNMENTは変更せず、必須成果物・各QA・clean blind記録・SPEC境界・進捗整合のみを最終確認する。
+Topic 20「N700系 フィードバック制御」の制作前EXAM_ALIGNMENT。公式過去問を直近年度から確認し、一次・二次を含む固定ゲートをSPEC範囲内で確定する。
