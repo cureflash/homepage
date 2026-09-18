@@ -6,8 +6,8 @@
 - Topic 01〜16: 最終QA `PASS / completed`
 - 完成数: `16 / 22`
 - active topic: `17 新幹線の速度をフィードバック制御する`
-- current status: `topic_17_blind_reanswer_ready`
-- 次工程: Topic 17 完成後独立再解答
+- current status: `topic_17_independent_reanswer_complete`
+- 次工程: Topic 17 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -17,9 +17,10 @@
 - 最初の未完了テーマはTopic 17「新幹線の速度をフィードバック制御する」。
 - 既存枠で完了済みの制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・PowerPointを正本としてreconcileし、重複制作していない。
 - 固定一次1問＋二次4問、計5問・6答案要素を変更していない。
-- Topic 17独立再解答前ゲートを実施し、公式正答記号・標準解答本文・完成済み個別解答の事前保存 `0件` を確認した。
+- Topic 17独立再解答前ゲート後、公式正答・標準解答を参照する前に6答案要素をGitHubへ答案ロックした。
+- 完成教材だけで固定6答案要素を独立再解答し、答案ロック後に公式正答・標準解答と照合して `6 / 6 PASS` を確認した。
 - 解説PDF表示 `6 / 6 PASS`、練習PDF表示 `5 / 5 PASS`、PowerPoint表示 `4 / 4 PASS` を維持。
-- Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加は `0件`。
+- Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加、教材外知識による補完は `0件`。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -161,5 +162,19 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
 
+## Topic 17 完成後独立再解答
+- 答案ロック: `topics/17_speed_feedback_control/17_speed_feedback_control_answer_lock.md`
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_independent_reanswer.md`
+- 公式正答・標準解答を見る前に固定5問・6答案要素を完成教材だけで解答し、答案をGitHubへ固定
+- R07二次 問4 (1): `1 / 1 PASS`
+- R06二次 問4 (1): `1 / 1 PASS`
+- R04二次 問4 (3): `1 / 1 PASS`
+- R03二次 問4 (1),(2): `2 / 2 PASS`
+- H21一次 問4 (1): `1 / 1 PASS`
+- 厳密ブラインド再解答: `6 / 6 PASS`
+- 教材外知識による補完、Topic 18〜21先取り、仕様外論点追加、未確認実車値追加: `0件`
+
+判定: `PASS / topic_17_independent_reanswer_complete / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 17完成後独立再解答を実施する。固定5問・6答案要素を変更せず、完成教材だけを使って答案を先に確定し、その後に公式解答・標準解答と照合する。
+Topic 17最終QAを実施する。必須成果物、固定5問・6答案要素、完成後独立再解答、解説PDF・練習PDF・PowerPoint各QA、仕様境界、進捗記録整合を総合判定し、すべてPASSの場合のみ `completed` とする。
