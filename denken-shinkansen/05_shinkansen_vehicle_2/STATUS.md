@@ -6,14 +6,41 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `17 / 39`
-- current_status: `topic_18_practice_pdf_complete`
+- current_status: `topic_18_powerpoint_complete`
 - last_completed_topic: `17 パワー半導体の損失比較`
 - active_topic: `18 E2系 50Hz・60Hzと磁束`
-- next_start: Topic 18の解説画像PowerPoint。固定5問・15答案要素、SPEC指定7項目・3可視化、解説／練習の問題・正答・数式を変更せず作成し、表示・文字・数値QAを行う
+- next_start: Topic 18の完成後clean blind公式照合。固定5問・15答案要素を教材だけで再解答し、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式を変更しない
 
 ## 完了済み
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
+
+## Topic 18 解説画像PowerPoint
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+成果物:
+- PowerPoint: `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_images.pptx`
+- QA: `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_powerpoint_qa.md`
+
+品質:
+- 画面比 / スライド数: `16:9 / 4 slides`
+- LibreOffice PDF変換: `PASS / 4ページ`
+- python-pptx open / ZIP整合性: `PASS / PASS`
+- 1600×900表示QA: `4 / 4 PASS`
+- 文字欠落・文字化け・重なり・クリップ: `0件`
+- PDF文字抽出: `PASS`
+- 固定過去問: `一次3問＋二次2問 / 5問`
+- 固定答案要素への可視化・接続: `一次7＋二次8 / 15 / 15 PASS`
+- R2二次 問1の回転磁界相対速度: `7 / 7 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 数値・論理QA: `7 / 7 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 解説／練習の問題・正答・数式変更: `0件`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+- 完成後clean blind公式照合: `未実施 / 次工程`
 
 ## Topic 18 練習PDF
 
@@ -219,4 +246,4 @@ clean blind候補答案:
 
 ## 次工程
 
-Topic 18の解説画像PowerPointを作る。固定5問・15答案要素、SPEC指定7項目・3可視化、解説／練習の問題・正答・数式を変更しない。PowerPoint完成後に表示QA・文字QA・数値QAを行い、その後clean blind公式照合へ進む。
+Topic 18の完成後clean blind公式照合を行う。固定5問・15答案要素を教材だけで再解答し、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。
