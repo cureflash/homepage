@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_14_completion_blind_rerun_pass`
+`topic_14_source_progress_sync_complete`
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで作成済み。修正前完成後blindで残ったH23二次問3 (2a) の1 blockerをsource/PDF/PPTへ補強し、現行解説PDFの再QAもPASS。その修正版learner-facing成果物に対して2026-09-19に完成後blind独立再解答を再実施し、固定5問・21答案要素を `21 / 21 PASS` とした。Topic 14は最終QA未実施のためまだ `completed` ではない。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、PowerPoint作成、修正版learner-facing成果物に対する完成後blind独立再解答まで実施済み。完成後blindは固定5問・21答案要素を `21 / 21 PASS`。2026-09-19の最終QAでは技術内容・過去問対応品質ゲートはPASSしたが、進捗記録整合、現行GitHub正本PowerPointのQA指紋整合、Web公開にblockerがあった。本runで主source・解説source・練習sourceの進捗記録を現行工程へ同期した。残りは現行GitHub正本PowerPointの再QAとWebカタログ登録であり、Topic 14はまだ `completed` ではない。
 
 成果物:
 - `14_power_factor_voltage_control_explanation.md`
@@ -18,6 +18,7 @@
 - `14_power_factor_voltage_control_images.pptx`
 - `14_power_factor_voltage_control_powerpoint_qa.md`
 - `14_power_factor_voltage_control_blind_reanswer_20260919.md`
+- `14_power_factor_voltage_control_final_qa.md`
 
 ## SPEC固定範囲
 
@@ -297,12 +298,13 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - SPEC固定3可視化: `3 / 3 source data defined`
 - 固定5問・21答案要素: `21 / 21 mapped`
 - 制作前blind不足1要素: `1 / 1 explanation strengthened`
+- 修正版完成後blind独立再解答: `21 / 21 PASS`
 - 3段階例題: `3 / 3`
 - Topic 15以降の先取り: `0件`
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_SOURCE_SYNCED_WITH_FINAL_QA / IN_PROGRESS`
 
 ## 解説PDF進捗
 
@@ -326,11 +328,12 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 固定5問・21答案要素: `21 / 21 mapped`
 - SPEC固定10項目: `10 / 10 covered`
 - 制作前blind不足1要素: 問8・問12で再訓練
+- 修正版完成後blind独立再解答: `21 / 21 PASS`
 - Topic 15以降の先取り: `0件`
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
-- stage: `PRACTICE_SOURCE_COMPLETE`
+- stage: `PRACTICE_SOURCE_SYNCED_WITH_FINAL_QA / IN_PROGRESS`
 
 ## 練習PDF進捗
 
@@ -350,21 +353,11 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 
 - PPTX: `14_power_factor_voltage_control_images.pptx`
 - QA: `14_power_factor_voltage_control_powerpoint_qa.md`
-- 16:9: `4スライド`
-- 全スライド表示: `4 / 4 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- LibreOffice PDF変換: `4ページ PASS`
-- PDF文字抽出: `PASS / U+FFFD 0件`
-- SPEC固定10項目: `10 / 10 PASS`
-- SPEC固定3可視化: `3 / 3 PASS`
-- 固定5問・21答案要素: `21 / 21` 説明接続
-- 制作前blind不足1要素: Slide 4で `1 / 1` 改善説明維持
-- Topic 15以降の先取り: `0件`
-- 未確認実設備値の真値化: `0件`
-- 公式過去問転載: `0件`
-- 仕様追加: `0件`
-- stage: `POWERPOINT_COMPLETE / IN_PROGRESS`
+- 旧QA対象: `39281 bytes`, SHA-256 `3e8088524754227fbfddf027784cf2c5961fba01646b7ded626932eb70748047`
+- 現行GitHub正本: `15002 bytes`, blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8`
+- 指紋不一致のため現行PPTXは `REQUIRES_REQA / CURRENT_BINARY_UNVERIFIED`
+- 旧QAの4スライド表示PASS、overflow 0、PDF変換等の結果を現行バイナリへ流用しない。
+- 固定5問・21答案要素と教材技術範囲は変更しない。
 
 ## 完成後blind独立再解答（修正版成果物、2026-09-19）
 
@@ -383,6 +376,19 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 仕様追加: `0件`
 - stage: `COMPLETION_BLIND_RERUN_PASS / IN_PROGRESS`
 
+## 最終QA進捗
+
+- record: `14_power_factor_voltage_control_final_qa.md`
+- 技術内容・過去問対応品質ゲート: `PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `11 / 11 PASS`
+- 合計: `21 / 21 PASS`
+- Topic全体判定: `NEEDS_REVISION / IN_PROGRESS`
+- 本runで主source・解説source・練習sourceの旧進捗記録を現行工程へ同期済み。
+- 残りblocker: `2件`
+  1. 現行GitHub正本PowerPointを再QAし、現行blobに対応するQA記録へ更新する。
+  2. `qualifications/denken-shinkansen/catalog.json` にTopic 14を登録する。
+
 ## 次工程
 
-Topic 14の最終QAを行う。上位仕様、固定EXAM_ALIGNMENT、必須成果物、各PDF/PPTX QA、2026-09-19完成後blind `21 / 21 PASS`、進捗記録整合、Web公開状態、SPEC境界をまとめて確認する。最終QAで全件PASSするまではTopic 14を `completed` にせず、Topic 15へ進めない。
+現行GitHub正本 `14_power_factor_voltage_control_images.pptx` を再QAし、現行blobに対応する `14_power_factor_voltage_control_powerpoint_qa.md` へ更新する。その後、Webカタログ登録、最終QA再判定を行う。全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
