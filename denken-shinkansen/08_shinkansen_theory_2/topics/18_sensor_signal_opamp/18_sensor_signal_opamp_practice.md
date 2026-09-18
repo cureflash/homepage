@@ -7,12 +7,14 @@
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 18固定範囲だけから練習問題12問を作成した。二種理論は一次試験が中心であり、固定範囲だけで完結する二次記述式を採用していないため、二次数合わせは行わない。
 
 - completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
-- 次工程: 解説画像PowerPoint＋表示QA
+- stage: `PROGRESS_RECORDS_SYNCED`
+- 次工程: Topic 18最終QA再実施
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
 - 固定品質ゲート接続: `一次5問・25 / 25答案要素`
+- 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `25 / 25 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
@@ -273,4 +275,4 @@ V+>V- なので理想コンパレータの出力は正側へ飽和する方向�
 
 # 次工程
 
-解説画像PowerPoint＋表示QAへ進む。
+Topic 18最終QAを再実施する。固定一次5問・25答案要素、完成後独立再解答 `25 / 25 PASS`、解説PDF・練習PDF・PowerPoint各QA、SPEC境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
