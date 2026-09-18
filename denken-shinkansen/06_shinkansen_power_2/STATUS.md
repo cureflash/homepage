@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_independent_reanswer_needs_revision`
+current_status: `topic_14_explanation_pdf_complete`
 completed_topics: `13 / 22`
 
 ## Topic 12 final result
@@ -122,7 +122,7 @@ source:
 
 ## Topic 14 progress
 
-Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QA、完成後blind独立再解答まで実施。完成後blindは `20 / 21 PASS` でH23二次問3 (2a)に1 blockerが残り、`NEEDS_REVISION`。その補強をsource/PDF/PPTへ反映した後、現行4ページ解説PDFを再QAしたところ、旧6ページ版QAを継承できない追加blockerを確認した。最終QAは未着手。
+Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QA、完成後blind独立再解答まで実施。前回完成後blindは `20 / 21 PASS` でH23二次問3 (2a)に1 blockerが残ったためsource/PDF/PPTを補強。その後、現行解説PDFで追加確認された表示・learner-facing 4 blockerを修正し、2026-09-19の解説PDF再QAを `PASS` とした。最終QAは未着手。
 
 正式固定問題:
 - 令和6年度 第二種一次「電力」問5 — `5答案要素`
@@ -152,17 +152,19 @@ Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXA
 解説PDF・再QA:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.pdf`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation_pdf_qa.md`
-- 現行Git blob: `b58d43886e27e9133a73ce21067ccc83cd2f113c`
-- A4縦: `4ページ`
-- 200 dpiレンダリング: `4 / 4` 実施
+- 現行Git blob: `af004d565ace53bcb2334ae038e4355fc57bc649`
+- A4縦: `5ページ`
+- 200 dpi表示: `5 / 5 PASS`
 - ページ外逸脱・文字重なり・本文切れ: `0件`
-- 近似記号の黒四角化: `3件`（p.1, p.2, p.3）→ `FAIL`
-- `pdftotext -layout`: 抽出可能、U+FFFD `0件`。ただし上記3記号は抽出でも欠落
-- source固定3段階例題: `2 / 3`。11.2「指定電圧を保つ補償」の完全な数値例・途中式が現行PDFに欠落 → `FAIL`
-- MASTER必須「新幹線への接続」: 現行PDFに欠落 → `FAIL`
-- 固定5問・21答案要素: page 4に論点名は列挙されるが、少なくともR2二次問6 `P-Qベクトル図・角度` が名称のみでlearner-facing解法がないため `21 / 21 covered` を再認定せず → `FAIL`
-- H23二次問3 (2a) の要求側復元手順: page 3に収録済み
-- 判定: `NEEDS_REVISION`
+- 黒四角・欠損グリフ: `0件`
+- `pdftotext -layout`: `PASS / U+FFFD 0件`
+- source固定3段階例題: `3 / 3 PASS`
+- MASTER必須「新幹線への接続」: `PASS`
+- SPEC固定3可視化: `3 / 3 PASS`
+- 固定5問・21答案要素: `21 / 21 covered`
+- R2二次問6 `P-Qベクトル図・角度`: learner-facing図と組立て方を収録
+- H23二次問3 (2a): `66.258 x 154/66 = 154.6 kV 約155 kV` を収録
+- 判定: `PASS`
 
 練習source:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice.md`
@@ -210,7 +212,7 @@ PowerPoint・QA:
 - PowerPoint Slide 4では同じ仮定例をP-Q容量円と `1.8 / 1.9 Mvar` の再代入比較で可視化した。
 - H23二次問3 (2a) は、66 kV側等価値を154 kV一次母線へ定格電圧比で戻す最終答案処理をsource/PDF/PPTへ補強した。
 
-完成後blind独立再解答:
+前回（修正前）完成後blind独立再解答:
 - R6一次「電力」問5: `5 / 5 PASS`
 - R4一次「法規」問4: `5 / 5 PASS`
 - R5二次「電力・管理」問4: `2 / 2 PASS`
@@ -220,13 +222,12 @@ PowerPoint・QA:
 - 一次: `10 / 10 PASS`
 - 二次: `10 / 11 PASS`
 - 制作前blind不足1要素「最低必要容量を不足側へ丸めない」: `1 / 1 改善確認`
-- 新規blocker: H23二次問3 (2a)。66 kV側等価値 `66.258 kV` を一次母線へ `154/66` で戻す答案処理をblind解答で落とした。公式標準解答は `154.6 kV ≒ 155 kV`。
-- 判定: `NEEDS_REVISION`
+- blocker: H23二次問3 (2a)。この不足はsource/PDF/PPTへ補強済みだが、修正版成果物に対するblind再実施前なので完成判定には使わない。
 
 品質境界:
 - 固定5問・21答案要素の変更: `0件`
 - SPEC指定10項目: `10 / 10 covered`
-- SPEC指定3可視化: `3 / 3 source/PPT data maintained`
+- SPEC指定3可視化: `3 / 3 source/PDF/PPT maintained`
 - 一次・二次合計5問: `PASS`
 - 二次記述・計算: `3問`
 - 参考教材2系統以上: `PASS / e-sysnet.com + 電験王2`
@@ -264,8 +265,8 @@ source:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — current explanation PDF re-QA `NEEDS_REVISION`; completion blind remains `20 / 21`
+- [ ] Topic 14 — explanation PDF re-QA `PASS`; completion blind rerun pending
 
 ## next_start
 
-固定5問・21答案要素とTopic 14技術範囲を変えず、現行 `14_power_factor_voltage_control_explanation.md` のlearner-facing内容をPDFへ同期する。近似記号3箇所の黒四角化を解消し、source 11.2本試験標準例題、source 12新幹線への接続、固定答案要素の解法説明を現行PDFへ戻す。修正版PDFを同じ基準で再QAし、PASS後に固定5問・21答案要素の完成後blind独立再解答を再実施する。全21答案要素PASSまでは最終QAを行わない。
+保存済み正答を先に見ず、固定5問・21答案要素の完成後blind独立再解答を再実施する。一次2問・10答案要素、二次3問・11答案要素を全件再検証し、全21答案要素PASSまでは最終QA・Topic 15へ進めない。
