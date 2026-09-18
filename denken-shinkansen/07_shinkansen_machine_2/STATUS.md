@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_practice_source_complete`
+- current_status: `topic_19_practice_pdf_complete`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 練習PDF＋QA
+- next_start: Topic 19 解説画像PowerPoint source
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -108,8 +108,26 @@ QA:
 
 判定: `PASS / topic_19_practice_source_complete`
 
+## Topic 19 練習PDF＋QA
+成果物:
+- `topics/19_pid_speed_control/19_pid_speed_control_practice.pdf`
+- `topics/19_pid_speed_control/19_pid_speed_control_practice_pdf_qa.md`
+
+QA:
+- A4縦15ページ: `PASS`
+- Poppler 200 dpiレンダリング: `15 / 15 PASS`
+- 全ページ寸法: `1654x2339 px`
+- ページ端接触・bboxはみ出し: `0件`
+- 最小レンダリング余白: `56 px`
+- 文字抽出: `PASS`（Unicode置換文字0件、`(cid:)` 0件）
+- 固定5問・12答案要素: `12 / 12 COVERED`
+- canonical source blob: `f1015f13e5deefcbd7e67fbd8d0891249d684333`
+- PDF Git blob: `5983354776827cfb38889a944d1cbb4c6c269fbe`
+
+判定: `PASS / topic_19_practice_pdf_complete / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 19練習sourceを作成した。一次10問＋二次5問、一次正答一意性10/10、全15問15/15、固定5問・12答案要素12/12を確認して `PASS` とした。Topic 20/21先取り、未確認実車PID値、固定問題の個別正答保存はいずれも0件。完成数は `18 / 22` のまま。
+Topic 19練習PDFをcanonical練習sourceから生成し、A4縦15ページ、200 dpiレンダリング15/15、文字抽出、ページ境界、固定5問・12答案要素の接続維持を確認して `PASS` とした。技術sourceは変更していない。完成数は `18 / 22` のまま。
 
 ## 次工程
-Topic 19「PIDで新幹線の速度を制御する」の練習PDF＋QAを作成する。
+Topic 19「PIDで新幹線の速度を制御する」の解説画像PowerPoint sourceを作成する。
