@@ -3,22 +3,18 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
-current_status: `topic_14_qa_progress_sync_partial`
+current_status: `topic_14_source_progress_sync_complete`
 
 ## 今回完了
 
-最新main、`STATUS.md` / `HANDOFF.md`、直近同系列コミットをreconcileし、他workerが実施済みのTopic 14最終QAを再実施せず、そのblocker解消を1段階進めた。
+Topic 14最終QAで残っていた進捗記録blockerを1段階進め、主source・解説source・練習sourceの3件を現行工程へ同期した。
 
-旧QA進捗記録3件を現行工程へ同期:
-- `14_power_factor_voltage_control_explanation_pdf_qa.md`
-  - 完成後blind再実施前という旧次工程を解消。
-  - 本PDF QA自体は `PASS` 維持。
-- `14_power_factor_voltage_control_practice_pdf_qa.md`
-  - PowerPoint制作前という旧次工程を解消。
-  - 本練習PDF QA自体は `PASS` 維持。
-- `14_power_factor_voltage_control_powerpoint_qa.md`
-  - Topic全体をblind再実施前としていた旧状態を解消。
-  - 旧QA対象 `39281 bytes` と現行GitHub正本 `15002 bytes`・blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8` の指紋不一致を明示し、`REQUIRES_REQA / CURRENT_BINARY_UNVERIFIED` とした。
+- `14_power_factor_voltage_control.md`
+  - 最終QA済み、完成後blind `21 / 21 PASS`、残blockerを反映。
+- `14_power_factor_voltage_control_explanation.md`
+  - learner-facing反映、解説PDF再QA、完成後blind再実施済みへ同期。
+- `14_power_factor_voltage_control_practice.md`
+  - 練習PDF、PowerPoint作成、完成後blind、最終QA実施済みへ同期。
 
 固定EXAM_ALIGNMENT、固定5問・21答案要素、教材技術範囲、learner-facing成果物の内容は変更していない。
 
@@ -34,15 +30,18 @@ current_status: `topic_14_qa_progress_sync_partial`
 最終QA記録:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
 
-## 未完了blocker（残り5件）
+## 未完了blocker（残り2件）
 
-1. 主source `14_power_factor_voltage_control.md` が最終QA未実施・次工程を最終QAとしている旧状態。
-2. 解説sourceのstage・次工程が旧状態。
-3. 練習sourceが練習PDF・PowerPoint・blindを未実施としている。
-4. PowerPoint QA記録のファイル指紋と現行GitHub正本PPTXが不一致。現行PPTXの再QAが必要。
-5. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
+1. PowerPoint QA記録のファイル指紋と現行GitHub正本PPTXが不一致。現行PPTXの再QAが必要。
+   - 旧QA対象: `39281 bytes`, SHA-256 `3e8088524754227fbfddf027784cf2c5961fba01646b7ded626932eb70748047`
+   - 現行GitHub正本: `15002 bytes`, blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8`
+   - 現状: `REQUIRES_REQA / CURRENT_BINARY_UNVERIFIED`
+2. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
 
-旧最終QA blocker 8件のうち、解説PDF QA、練習PDF QA、PowerPoint QAの旧進捗状態3件は今回解消した。
+今回解消したblocker:
+- 主sourceの旧進捗記録
+- 解説sourceの旧stage・次工程
+- 練習sourceの旧進捗記録
 
 ## 現在地
 
@@ -52,14 +51,9 @@ Topic 14は最終QA `NEEDS_REVISION`。Topic自体はまだ未完了。
 
 ## 次に行う
 
-固定5問・21答案要素と教材技術範囲を変更せず、残りblockerを順番に解消する。
+固定5問・21答案要素と教材技術範囲を変更せず、現行GitHub正本 `14_power_factor_voltage_control_images.pptx` を再QAし、現行blobに対応する `14_power_factor_voltage_control_powerpoint_qa.md` へ更新する。
 
-1. 主source・解説source・練習sourceの旧進捗記録3件を現行工程へ同期する。
-2. 現行GitHub正本PPTXを再QAし、現行blobに対応するQA記録へ更新する。
-3. Topic 14をWebカタログへ登録する。
-4. 最終QAを再判定する。
-
-全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
+その後、Topic 14をWebカタログへ登録し、最終QAを再判定する。全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
 
 ## 品質境界
 
