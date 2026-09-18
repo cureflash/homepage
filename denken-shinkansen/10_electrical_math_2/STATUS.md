@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_17_final_qa_needs_revision`
+- current_status: `topic_17_progress_sync_complete`
 - last_completed_topic: `16 数値微分・数値積分`
 - active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の進捗記録4ファイルを実成果物へ同期する
+- next_start: Topic 17の最終QAを再判定する
 
 ## Topic 07 制作品質ゲート
 
@@ -269,34 +269,27 @@
 - [x] PowerPoint表示QA（再レンダリング `5 / 5 PASS`、overflow `0件`、`slides_test.py` `PASS`）
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、直接Euler/RK要求0問・水増し0件を維持）
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] 進捗記録4ファイルの同期
+- [x] 進捗記録4ファイルの同期
 - [ ] 最終QA再判定 → `PASS`
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 17の最終QAを実施した。
+Topic 17の進捗記録4ファイルを実成果物へ同期した。
 
-- 最終QA記録: `topics/17_ode_numerical_methods/17_ode_numerical_methods_final_qa.md`
-- 必須成果物実在: `PASS`
-- 第二種公式過去問調査: `PASS`
-- 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
-- 接続確認した第二種公式過去問: `5問`
-- 非該当5問の固定品質ゲート件数への水増し: `0件`
-- 完成後独立検証: 新規3ケース `3 / 3 PASS`
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- SPEC固定範囲外追加: `0件`
-- Topic 18以降の先取り: `0件`
-- 未確認実車値依存: `0件`
-- 進捗記録整合: `2 / 6 PASS`
-- blocker: 解説PDF QA、練習source、練習PDF QA、PowerPoint QAの次工程記録4ファイルが実状態より古い
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立検証への修正要求: `0件`
+- `17_ode_numerical_methods_explanation_qa.md`: 次工程を最終QA再判定へ同期
+- `17_ode_numerical_methods_practice.md`: 次工程を最終QA再判定へ同期
+- `17_ode_numerical_methods_practice_qa.md`: 次工程を最終QA再判定へ同期
+- `17_ode_numerical_methods_powerpoint_qa.md`: 次工程を最終QA再判定へ同期
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 技術本文・練習問題・正答の変更: `0件`
+- PDF・PowerPoint・完成後独立検証の変更: `0件`
+- 仕様外追加: `0件`
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`topic_17_progress_sync_complete / IN_PROGRESS`
 
 完成数は `16 / 20` のまま。
 
-次はTopic 17の進捗記録4ファイルだけを実成果物へ同期し、その後に最終QAを再判定する。
+次はTopic 17の最終QAを再判定する。
