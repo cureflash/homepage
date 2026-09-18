@@ -5,18 +5,18 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: `36 / 38`
-- current_status: `topic_37_practice_pdf_revised`
+- current_status: `topic_37_powerpoint_revised`
 - last_completed_topic: `36 COSMOS① 新幹線全体を統合管理する`
 - active_topic: `37 COSMOS② 新幹線の電力設備を遠隔監視する`
-- next_start: 改訂済み解説source・練習sourceを正本としてTopic 37のPowerPointを同期修正し、16:9表示・overflow・固定5問6答案要素の反映・PPTX ZIP整合性をQAする。完成後blind独立再解答・最終QAにはまだ進まない
+- next_start: 完成教材を変更せず、Topic 37の完成後blind独立再解答を固定5問・6答案要素で再実施する。全答案確定後に公式解答と照合し、教材だけで一意導出できるかを判定する。最終QAにはまだ進まない
 
 ## 新品質ゲート進捗
 - [x] 01〜36 — PASS / COMPLETED
-- [ ] 37 — IN PROGRESS / PRACTICE_PDF_REVISED
+- [ ] 37 — IN PROGRESS / POWERPOINT_REVISED
 - [ ] 38 — 未着手
 
 ## Topic 37 現在進捗
-判定: `IN PROGRESS / PRACTICE_PDF_REVISED_PASS`。
+判定: `IN PROGRESS / POWERPOINT_REVISED_PASS`。
 
 - source: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring.md`
 - EXAM_ALIGNMENT QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_exam_alignment_qa.md`
@@ -39,25 +39,27 @@
 - 固定問題追加・差替え: `0件`
 
 ### 今回完了した1段階
-改訂済み練習sourceを正本として、Topic 37の練習PDFを同期修正しQAした。
+改訂済み解説source・練習sourceを正本として、Topic 37のPowerPointを同期修正しQAした。
 
-- PDF: `A4縦 / 4ページ`
-- 練習問題: `15問`（基礎4 / 標準8 / 複合3）
-- 五肢択一・完全解説: `15 / 15`
-- 正答位置: A/B/C/D/E各3問
-- Q9: R6上 法規 問7用の系統連系保護を反映
-- Q15: H23 法規 問6用の逆潮流・自立運転・単独運転・逆充電・転送遮断装置を反映
-- 180 dpi表示: `4 / 4 PASS`
-- 文字抽出: PASS
-- 問題/正答/解説整合: PASS
-- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6` PDF接続
+- PowerPoint: `16:9 / 4枚`
+- slide 1: COSMOS-SCADA公開範囲とSCADA一般機能
+- slide 2: 遠隔計測、A-D変換、二重積分形、クロック数比
+- slide 3: デジタル情報、シーケンス制御、遠隔制御、R6上 法規 問7の系統連系保護、H23 法規 問6の関連用語定義
+- slide 4: 固定5問・6答案要素のPowerPoint対応と解法手順
+- R6上 法規 問7: 発電電圧異常、系統側短絡・地絡、地絡過電圧、単独運転、転送遮断まで反映
+- H23 法規 問6: 逆潮流、自立運転、単独運転、逆充電、転送遮断装置まで反映
+- 180 dpi相当表示: `4 / 4 PASS`
+- shape geometry overflow: `0件 / PASS`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `4ページ / PASS`
+- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6` PowerPoint接続
 - 固定範囲外追加: `0件`
 - COSMOS-SCADA未確認内部仕様追加: `0件`
 - 転送遮断・系統連系保護をCOSMOS-SCADA固有実装と断定: `0件`
 - Topic 38先取り: `0件`
 - 完成後blind独立再解答の再実施: `未実施`
 
-PowerPointは改訂source未反映のため、まだ最終成果物同期済みとはみなさない。
+PowerPointまで改訂sourceへ同期済み。旧完成後blind独立再解答の `4 / 6 PASS / NEEDS_REVISION` は履歴として維持し、次段階で完成教材だけを使って再実施する。
 
 ## Topic 37 固定範囲
 系列SPECどおり、次を対象とする。
@@ -81,4 +83,4 @@ PowerPointは改訂source未反映のため、まだ最終成果物同期済み�
 - 完成後blind独立再解答: `8 / 8 PASS`
 
 ## 完成数
-`36 / 38`。Topic 37は練習PDFの改訂同期まで完了したが、PowerPoint未同期かつ完成後blind独立再解答の再実施前なので完成扱いにしない。
+`36 / 38`。Topic 37はPowerPointの改訂同期まで完了したが、完成後blind独立再解答の再実施前なので完成扱いにしない。
