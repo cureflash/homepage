@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_blind_reanswer_candidates_fixed`
+- current_status: `topic_16_blind_reanswer_qa_needs_revision`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: Topic 16の固定候補答案を変更せず、公式解答・標準解答と固定5問・26答案要素を照合し、教材だけで導けたかを含めて独立再解答QAを確定する
+- next_start: 固定範囲を広げず、R7一次「機械」問4 (3) に必要な自己消弧形スイッチング素子の最小説明を教材へ補い、練習sourceの当該EXAM_ALIGNMENT対応を修正し、必要成果物へ同期する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — BLIND_REANSWER_CANDIDATES_FIXED / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — BLIND_REANSWER_QA_NEEDS_REVISION / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -48,14 +48,14 @@
 - 未確認700系実車値の真値化: `0件`
 
 ## Topic 16 解説source
-- 解説本文: `完成`
+- 解説本文: `完成 / blind QAで1答案要素の説明不足を検出`
 - 3段階例題: `3 / 3 PASS`
-- 固定5過去問・26答案要素の本文マッピング: `26 / 26 PASS`
+- 固定5過去問・26答案要素の実効本文マッピング: `25 / 26 PASS`
+- 不足: `R7 一次 機械 問4 (3) 自己消弧形スイッチング素子の識別`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化の再生成条件: `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 正答記号・固定過去問の個別最終解保存: `0件`
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 判定: `NEEDS_REVISION`
 
 ## Topic 16 解説PDF
 - PDF: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_explanation.pdf`
@@ -63,16 +63,14 @@
 - A4縦: `4ページ`
 - 180 dpi表示QA: `4 / 4 PASS`
 - 文字抽出・表示: `PASS`
-- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
 - 3段階例題: `3 / 3 PASS`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 PASS`
 - source共通仮定モデルとの整合: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 正答記号・固定過去問の個別最終解保存: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- blind QAの1答案要素不足を同期改訂するまで最終ゲート未通過
 
 ## Topic 16 練習問題source
 - source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_practice_source.md`
@@ -81,15 +79,15 @@
 - 完全解説: `12 / 12`
 - 数値・論理再計算: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
-- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- 固定5過去問・26答案要素の実効接続: `25 / 26 PASS`
+- 不整合: `R7 一次 機械 問4 (3) を逆並列ダイオードへ誤マッピング`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
 - 解説source/PDFの共通仮定式系の変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 正答記号・固定過去問の個別最終解保存: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 判定: `NEEDS_REVISION`
 
 ## Topic 16 練習PDF
 - PDF: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_practice.pdf`
@@ -100,17 +98,15 @@
 - 完全解説: `12 / 12`
 - 180 dpi表示QA: `4 / 4 PASS`
 - PDF open/preflight・文字抽出: `PASS`
-- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
 - 数値・論理整合: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
 - 共通仮定式系の変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 問題・正答・完全解説の変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+- blind QAの1答案要素不足を同期改訂するまで最終ゲート未通過
 
 ## Topic 16 解説画像PowerPoint
 - PowerPoint: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_images.pptx`
@@ -118,42 +114,40 @@
 - 16:9: `4枚`
 - 1600×900表示QA: `4 / 4 PASS`
 - LibreOffice PDF変換・PPTX ZIP整合性: `PASS`
-- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 PASS`
 - 共通仮定モデル変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 問題・正答・完全解説の変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `PASS / POWERPOINT_COMPLETE`
+- blind QAの1答案要素不足を同期改訂するまで最終ゲート未通過
 
 ## Topic 16 完成後独立再解答前ゲート
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_gate.md`
 - 固定5過去問・26答案要素: `変更なし`
 - 必須先読み対象の公式正答番号・標準解答本文保存: `0件`
 - 必須先読み対象の完成済み個別答案・個別数値解・導出結果保存: `0件`
-- main sourceの公式問題・公式解答URL: `URLのみ / 正答内容保存なし`
-- 練習sourceの正答・解説: `教材自身の練習問題 / 固定公式過去問の保存済み正答ではない`
-- SPEC指定8項目・3可視化・共通仮定モデル変更: `0件`
-- SPEC外追加: `0件`
-- 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / BLIND_REANSWER_READY`
 
 ## Topic 16 完成後独立再解答 候補答案固定
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_candidates.md`
 - 実施条件: `公式問題文＋完成教材のみ / 公式解答・標準解答は未参照`
-- 固定5過去問・26答案要素: `変更なし`
+- 固定過去問・26答案要素: `変更なし`
 - 一次候補答案: `20 / 20 固定`
 - 二次候補答案: `6 / 6 固定`
 - 合計: `26 / 26 固定`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 教材本文・PDF/PPTX変更: `0件`
-- SPEC指定8項目・3可視化・共通仮定モデル変更: `0件`
-- SPEC外追加: `0件`
-- 未確認700系実車値の真値化: `0件`
-- 公式解答・標準解答との照合: `未実施`
 - 判定: `PASS / BLIND_REANSWER_CANDIDATES_FIXED`
+
+## Topic 16 完成後独立再解答QA
+- path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_qa.md`
+- 公式解答・標準解答との照合: `26 / 26 一致相当`
+- 教材だけでの導出: `25 / 26 PASS`
+- FAIL: `R7 一次 機械 問4 (3)` — 完成教材に必要な自己消弧形スイッチング素子の識別説明が不足
+- 練習source対応表: 当該要素を逆並列ダイオードへ誤マッピング
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC指定8項目・3可視化変更: `0件`
+- SPEC外追加: `0件`
+- 判定: `NEEDS_REVISION / BLIND_REANSWER_QA_COMPLETE`
 
 ## Topic 16 SPEC固定範囲
 扱う内容:
@@ -182,4 +176,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16の固定候補答案を変更せず、公式解答・標準解答を開いて固定5問・26答案要素を照合する。各答案要素が完成教材内の根拠だけで導けたかも確認し、完成後独立再解答のPASS/FAILを確定する。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデル、範囲境界を変更しない。
+固定範囲を広げず、R7一次「機械」問4 (3) に必要な自己消弧形スイッチング素子の最小説明をmain sourceへ補い、練習sourceの当該EXAM_ALIGNMENT対応を修正する。必要なPDF・PowerPointにも同じ最小補正を同期する。その後、公式解答と本QAを先読み対象から外す再解答ゲートを作り直す。
