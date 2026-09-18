@@ -4,11 +4,9 @@
 実施日: 2026-09-18
 
 ## 判定
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。進捗記録整合のみFAILと判定する。
-
-Topic 14はまだ `completed` にしない。仕様追加、固定問題変更、数式・問題・正答・PDF/PPTXの変更は行わない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。初回最終QAで唯一FAILだった旧進捗記録5箇所は現在地へ同期済みで、技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASSと判定した。仕様追加は行っていない。
 
 ## 必須成果物
 GitHub正本上で以下の実在を確認した。
@@ -89,17 +87,17 @@ GitHub正本上で以下の実在を確認した。
 SPEC境界: PASS。
 
 ## 進捗記録整合
-最終QA実施時点で、以下5箇所が旧工程を次工程として残しており、現在地と不整合。
+初回最終QAでFAILだった5箇所を再確認した。
 
-1. `14_distribution_explanation_qa.md` — `次` が「練習問題sourceを作成する」のまま。
-2. `14_distribution_practice_source.md` — `次` が「練習PDFを作成する」のまま。`practice_source_complete` は当該成果物自体のローカル状態として保持可能だが、後工程未反映の `次` は同期が必要。
-3. `14_distribution_practice_qa.md` — `次` が「最終QAを実施する」のまま。
-4. `14_distribution_powerpoint_qa.md` — `次` が「最終QAを実施する」のまま。
-5. `14_distribution_independent_reanswer.md` — `次` が「最終QAを実施する」のまま。
+1. `14_distribution_explanation_qa.md` — 練習問題source、練習PDF、PowerPoint、完成後ブラインド独立再解答、初回最終QA実施済みを反映済み。
+2. `14_distribution_practice_source.md` — 練習PDF、PowerPoint、完成後ブラインド独立再解答、初回最終QA実施済みを反映済み。`PRACTICE_SOURCE_COMPLETE` は当該成果物自体の完成状態を示すローカル状態であり、後工程の未実施を意味しない。
+3. `14_distribution_practice_qa.md` — PowerPoint、完成後ブラインド独立再解答、初回最終QA実施済みを反映済み。
+4. `14_distribution_powerpoint_qa.md` — 完成後ブラインド独立再解答 `6 / 6 PASS`、初回最終QA実施済みを反映済み。
+5. `14_distribution_independent_reanswer.md` — 初回最終QA実施済みと、再実施が次工程であることを反映済み。
 
 技術内容、数式、固定問題、正答、PDF/PPTX、独立再解答結果に修正事項はない。
 
-進捗記録整合: FAIL。
+進捗記録整合: PASS。
 
 ## 最終判定
 - 必須成果物: PASS
@@ -108,8 +106,8 @@ SPEC境界: PASS。
 - 教材外知識補完: `0件`
 - PDF/PPTX QA: PASS
 - SPEC境界: PASS
-- 進捗記録整合: FAIL（旧工程5箇所）
+- 進捗記録整合: PASS
 
-Topic 14は `NEEDS_REVISION / IN_PROGRESS`。新品質基準の完成数は `13 / 16` のまま。
+Topic 14は `PASS / completed`。新品質基準の完成数は `14 / 16`。
 
-次工程は旧進捗記録5箇所を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。同期後に最終QAを再実施し、全件PASSの場合のみ `completed` とする。
+次工程はTopic 15 `回生した電気はどこへ行く？` の制作前EXAM_ALIGNMENT。Topic 14の固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
