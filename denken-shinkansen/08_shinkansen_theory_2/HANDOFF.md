@@ -6,11 +6,11 @@
 
 Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
 
-current_status: `topic_18_powerpoint_complete`
+current_status: `topic_18_reanswer_complete`
 
 active_topic: `18 新幹線のセンサ信号をどう増幅する？`
 
-Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QAまで完了。固定一次5問・25答案要素は教材・練習・PowerPointへ `25 / 25` 接続。二次採用0問・二次数合わせ0件。次工程は完成後独立再解答。
+Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次5問・25答案要素は完成教材だけで再構成し `25 / 25 PASS`、公式標準解答とも `25 / 25` 一致。二次採用0問・二次数合わせ0件。次工程は最終QA。
 
 ## Topic 18 成果物
 
@@ -23,8 +23,9 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 練習PDF QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_practice_pdf_qa.md`
 - PowerPoint: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_images.pptx`
 - PowerPoint QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_powerpoint_qa.md`
+- 完成後独立再解答: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_reanswer.md`
 - completion: `in_progress`
-- stage: `POWERPOINT_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 
 ## Topic 18 固定範囲
 
@@ -155,6 +156,28 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 18 完成後独立再解答
+
+記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_reanswer.md`
+
+- R8 一次 理論 問8: `ニ / ヨ / ヌ / ホ / リ` → `5 / 5 PASS`
+- R1 一次 理論 問8: `ヨ / イ / ト / ロ / ヲ` → `5 / 5 PASS`
+- H29 一次 理論 問8: `カ / ハ / ロ / ホ / ヘ` → `5 / 5 PASS`
+- H23 一次 理論 問8: `ヌ / ト / ル / ニ / ヲ` → `5 / 5 PASS`
+- H21 一次 理論 問8: `ル / ニ / ホ / ハ / チ` → `5 / 5 PASS`
+- 固定一次合計: `25 / 25 PASS`
+- 公式標準解答との一致: `25 / 25`
+- 完成教材内の理想条件・節点電位・KCL・反転／非反転・加算・差動・帰還抵抗網だけで再構成: `PASS`
+- 教材外知識補完: `0件`
+- 二次採用方針変更: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 19・20の先取り: `0件`
+- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
+
+判定: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
+
 ## 次工程
 
-Topic 18の完成後独立再解答を、固定一次5問・25答案要素について教材内容だけを使って実施する。公式標準解答・保存済み正答を先に見ず、各答案要素の根拠を説明できることまで確認する。
+Topic 18の最終QAを実施し、必須成果物、固定一次5問・25答案要素、完成後独立再解答、PDF/PPTX QA、仕様境界、進捗記録整合を総合判定する。
