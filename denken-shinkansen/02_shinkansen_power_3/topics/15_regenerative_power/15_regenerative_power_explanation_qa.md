@@ -1,6 +1,6 @@
 # Topic 15 解説PDF QA
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 成果物: `15_regenerative_power_explanation.pdf`
 
@@ -42,4 +42,4 @@
 
 ## 次
 
-Topic 15の練習問題sourceを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、固定5出題回・8答案要素へ接続する。SPEC固定範囲外へ広げない。
+完成後ブラインド独立再解答 `8 / 8 PASS` と初回最終QA `NEEDS_REVISION / IN_PROGRESS` を確認済み。初回最終QAで唯一未達だった進捗記録整合の同期を完了した。次はTopic 15の最終QAを再実施する。固定EXAM_ALIGNMENT、技術内容、問題・正答、PDF/PPTX、完成後独立再解答結果は変更しない。
