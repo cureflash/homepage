@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_explanation_source_complete`
+current_status: `topic_13_explanation_pdf_complete`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -50,7 +50,7 @@ source:
 
 ## Topic 13 progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source本文まで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QAまで完了。
 
 正式品質ゲート:
 - 平成28年度 第二種一次「法規」問6 — `5答案要素`
@@ -70,6 +70,14 @@ source:
 - 制作前不足2要素について、二つの単相負荷を同一とする最大条件、Ta/Tbの回路電流、フェーザ合成、`P1,max = Sb - Sa cos30°`、利用率までを説明し、教材上の改善箇所 `2 / 2` を反映。
 - 3段階例題をsourceへ実装。数値は教材用仮定値とし、未確認実設備値を使用していない。
 
+解説PDF＋QA:
+- `13_three_phase_unbalance_explanation.pdf`: A4縦 `4ページ`。
+- 200 dpi表示QA: `4 / 4 PASS`。
+- 文字抽出QA: PASS、U+FFFD `0件`。
+- 3段階例題独立再計算: `3 / 3 PASS`。
+- 正式2問8答案要素のPDF説明マッピング: `8 / 8`。
+- 制作前不足2要素の改善説明: `2 / 2`。
+
 この `8 / 8` は教材内説明箇所の存在確認であり、完成後blind独立再解答のPASSではない。完成判定では固定2問8答案要素を教材のみで `8 / 8 PASS` する必要がある。
 
 品質境界:
@@ -83,6 +91,8 @@ source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_preproduction_blind_reanswer_20260918.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation.md`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation.pdf`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation_pdf_qa.md`
 
 ## Gate checklist
 
@@ -98,8 +108,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer + explanation source complete; explanation PDF pending
+- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer + explanation source + explanation PDF complete; practice pending
 
 ## next_start
 
-Topic 13の解説PDFを制作し、表示・文字抽出・数式欠落・3段階例題の再計算QAを行う。固定2問8答案要素、SPEC境界、制作前不足2要素の改善説明を維持し、Topic 14以降・Topic 16故障計算は先取りしない。
+Topic 13の練習問題・完全解説sourceを制作する。固定2問8答案要素と制作前不足2要素の改善説明を維持し、一次試験型に加えて二次試験へ接続する記述式問題を含める。Topic 14以降・Topic 16故障計算は先取りしない。
