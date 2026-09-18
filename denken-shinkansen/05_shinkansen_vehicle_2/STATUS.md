@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `16 / 39`
-- current_status: `topic_17_exam_alignment_remap_complete`
+- current_status: `topic_17_clean_blind_candidates_fixed`
 - last_completed_topic: `16 700系 多レベル変換器とPWM`
 - active_topic: `17 パワー半導体の損失比較`
-- next_start: 旧候補答案記録を参照せず、是正後の固定5問・23答案要素をclean条件でblind再解答する。候補固定までは公式解答・標準解答を開かない
+- next_start: 固定済みclean blind候補23答案要素を、電気技術者試験センター公式解答・標準解答と照合する。候補答案は変更せず、正誤と教材内導出根拠を記録する
 
 ## 完了済み
 
@@ -32,7 +32,6 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 - SPEC指定3可視化: `3 / 3 aligned`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 公式解答・標準解答の再参照: `0件`
 
 監査記録:
 - `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_exam_alignment_remap_audit.md`
@@ -61,11 +60,24 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 
 旧成果物・旧QAの「固定5問・26答案要素 `26 / 26`」表記は再マッピング前の履歴値であり、最終品質ゲートには使用しない。
 
-## Topic 17 完成後blind再解答履歴
+## Topic 17 clean blind再解答
 
-旧26要素前提では `23 / 26 derivable`。不足した3要素は今回の再監査でSPEC外と確認し、ゲート対象から除外した。
+是正後の固定5問・23答案要素をclean条件で再解答し、公式解答・標準解答を開く前に候補答案を固定した。
 
-ただし旧候補答案試行はR7/R4についてstrict blind provenanceを満たしていないため、その `23` を最終PASSには使わない。
+- 旧候補答案ファイル: `未参照`
+- 公式解答・標準解答: `未参照`
+- 電験解説サイトの各問題解説: `未参照`
+- R7一次 問4: `5 / 5 candidate fixed`
+- R4一次 問4: `5 / 5 candidate fixed`
+- R2一次 問2: `5 / 5 candidate fixed`
+- H24一次 問6 (2)(3): `2 / 2 candidate fixed`
+- H24二次 問1: `6 / 6 candidate fixed`
+- 合計: `23 / 23 candidate fixed`
+- 公式照合: `未実施`
+- completed化: `不可`
+
+候補答案記録:
+- `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md`
 
 ## Topic 17 SPEC固定範囲
 
@@ -75,4 +87,4 @@ Topic 16の多レベル波形・高調波解析は再展開せず、後続Topic�
 
 ## 次工程
 
-旧候補答案記録を参照せず、是正後の固定5問・23答案要素をclean条件でblind再解答する。候補固定までは公式解答・標準解答を開かない。
+固定済みclean blind候補23答案要素を、電気技術者試験センター公式解答・標準解答と照合する。候補答案は変更せず、正誤と教材内導出根拠を記録する。
