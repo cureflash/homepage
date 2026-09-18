@@ -2,9 +2,9 @@
 
 ## 状態
 
-`topic_18_practice_source_complete / IN_PROGRESS`
+`topic_18_final_qa_needs_revision / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題、解説PDF＋QA、練習問題sourceまで完了した。固定5説明項目を `5 / 5` 実装し、接続確認した第二種公式過去問5問との教材内接続を明示した。直接二分法・Newton法を要求する確認済み第二種過去問は0問のままで、件数水増しは行っていない。解説PDFはA4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出・数値整合とも `PASS`。練習問題は全12問（一次型8・記述型4）、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`。次工程は練習PDF＋QAである。
+2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立検証、初回最終QAまで完了した。固定5説明項目を `5 / 5` 実装し、接続確認した第二種公式過去問5問との教材内接続を明示した。直接二分法・Newton法を要求する確認済み第二種過去問は0問のままで、件数水増しは行っていない。初回最終QAでは技術品質はPASSしたが、進捗記録5ファイルが古い状態だったため `NEEDS_REVISION` とした。次工程は進捗同期後の最終QA再判定である。
 
 ## 固定範囲
 
@@ -702,12 +702,12 @@ QA結果:
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋QA
 - [x] 練習問題source
-- [ ] 練習PDF＋QA
-- [ ] 解説画像PowerPoint＋QA
-- [ ] 完成後独立検証
-- [ ] 最終QA
+- [x] 練習PDF＋QA
+- [x] 解説画像PowerPoint＋QA
+- [x] 完成後独立検証
+- [x] 初回最終QA実施 → `NEEDS_REVISION`（技術品質PASS、進捗記録整合のみFAIL）
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDF・練習問題sourceを変更せず、Topic 18の練習PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
+進捗記録同期後にTopic 18の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更しない。
