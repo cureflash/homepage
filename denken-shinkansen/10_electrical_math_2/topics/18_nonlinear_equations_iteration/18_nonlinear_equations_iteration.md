@@ -2,9 +2,9 @@
 
 ## 状態
 
-`topic_18_exam_alignment_complete / IN_PROGRESS`
+`topic_18_preproduction_validation_complete / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENTを完了した。第二種公式過去問を直近年度から確認し、非線形な電力・電圧関係や平衡点へ接続する二次「電力・管理」5問を確認した。一方、今回確認できた第二種過去問には二分法またはNewton法そのものを解法として要求する問題はなかったため、5問を反復法の固定品質ゲート件数へ水増ししない。次工程は固定範囲だけを使う制作前独立数値検証である。
+2026-09-18、制作前独立数値検証を完了した。固定範囲だけを使い、二分法・Newton法・収束・初期値依存・許容誤差を教育用ベンチマークで検証し、すべてPASSした。第二種公式過去問の接続確認5問は反復法の固定品質ゲート件数へ水増しせず、直接二分法/Newton要求は0問のままとする。次工程は解説本文＋3段階例題の作成である。
 
 ## 固定範囲
 
@@ -166,6 +166,25 @@ x_(n+1) = x_n - f(x_n)/f'(x_n)
   - https://denken-ou.com/c1/denryokukanrir3-3/
   - Newton-Raphson法による多母線電力潮流計算を直接扱うが、第一種のため第二種品質ゲート件数には含めない
 
+## 制作前独立数値検証
+
+記録:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_preproduction_validation.md`
+
+再現用:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_preproduction_validation.py`
+
+固定範囲の数値検証結果:
+
+- 二分法 `f(x)=x^3-x-2`, `[1,2]`, 区間半幅許容誤差 `1e-6`: 20反復、近似根 `1.5213804244995117`, 最終区間半幅 `9.5367431640625e-7`
+- Newton法 同式, `x0=1.5`, 残差許容誤差 `1e-10`: 3反復、近似根 `1.5213797068045751`, 残差 `4.529709940470639e-14`
+- 初期値依存 `g(x)=x^3-x`: `x0=0.2` は根0、`x0=0.8` は根1へ収束
+- `x=1/sqrt(3)` で `g'(x)=0` となりNewton更新式を適用できないことを確認
+
+判定: `PASS / PREPRODUCTION_NUMERICAL_VALIDATION_COMPLETE`。
+
+固定EXAM_ALIGNMENT変更0件。接続確認5問の件数水増し0件。第一種問題の件数加算0件。Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加0件。未確認実車値依存0件。
+
 ## 制作前品質ゲート
 
 - [x] MASTER_SPEC確認
@@ -179,7 +198,7 @@ x_(n+1) = x_n - f(x_n)/f'(x_n)
 - [x] 電験学習資料を複数系統確認
 - [x] 数値求根の基礎資料を複数確認
 - [x] 必要説明とSPEC境界を固定
-- [ ] 制作前独立数値検証
+- [x] 制作前独立数値検証
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
@@ -191,4 +210,4 @@ x_(n+1) = x_n - f(x_n)/f'(x_n)
 
 ## 次工程
 
-固定範囲だけを使い、二分法・Newton法・収束・初期値依存・許容誤差について制作前独立数値検証を行う。
+固定済みEXAM_ALIGNMENTと制作前独立数値検証を変更せず、Topic 18の解説本文＋3段階例題を作成する。
