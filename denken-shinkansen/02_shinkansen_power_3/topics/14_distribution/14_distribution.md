@@ -1,7 +1,7 @@
 # 14 駅やトンネルにはどう電気を配る？
 
 ## 状態
-`independent_reanswer_complete`。制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPointを完了し、固定5問・6答案要素の完成後独立再解答も `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完 `0件` を確認した。最終QAは未実施。
+`final_qa_needs_revision`。制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了し、初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。進捗記録整合のみFAIL（旧工程5箇所）のため、Topic 14は未完了のまま。
 
 品質ゲート対象は、電気技術者試験センター公式過去問を直近年度から遡って確認し、`SPEC.md` のTopic 14固定範囲だけで解ける5問・6答案要素に固定する。件数合わせのためSPECを拡張しない。固定5問・6答案要素は、制作前独立検証 `6 / 6 PASS`、完成後独立再解答 `6 / 6 PASS`、公式解答との不一致`0件`を確認した。
 
@@ -417,6 +417,7 @@
 - 本試験標準例題再計算: `IN=10 A`、負荷端電圧 `97.5 V / 99.0 V` — PASS
 - 複合例題再計算: `ΔVmax=198 V`、`Rmax≈0.635 Ω`、`Amin≈51.0 mm²`、最小選択肢`60 mm²` — PASS
 - 複合例題境界確認: `50 mm² → ΔV≈202 V`でFAIL、`60 mm² → ΔV≈168 V`でPASS
+- 3段階例題独立再計算: `3 / 3 PASS`
 - 固定5問・6答案要素の本文要求事項マッピング: `6 / 6 PASS`
 - 単相三線式の電流方向・中性点移動・電圧降下: PASS
 - 理想変圧器の電圧比・電流比・電力保存: PASS
@@ -453,6 +454,9 @@
 - SPEC固定範囲外追加: `0件`
 - Topic 15の回生・蓄電・電力融通先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
+- 初回最終QA: `topics/14_distribution/14_distribution_final_qa.md` — `NEEDS_REVISION / IN_PROGRESS`
+- 初回最終QAの技術内容・必須成果物・固定EXAM_ALIGNMENT・独立再解答・PDF/PPTX QA・SPEC境界: PASS
+- 初回最終QAの進捗記録整合: FAIL（旧工程5箇所）
 
 完成後独立答案:
 - R8上 電力 問13: `(2)`
@@ -462,4 +466,4 @@
 - H20 電力 問17(a)(b): `(2),(3)`
 
 ## 次
-Topic 14の最終QAを実施する。固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` とする。
+`14_distribution_explanation_qa.md`、`14_distribution_practice_source.md`、`14_distribution_practice_qa.md`、`14_distribution_powerpoint_qa.md`、`14_distribution_independent_reanswer.md` の旧工程記録5箇所を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
