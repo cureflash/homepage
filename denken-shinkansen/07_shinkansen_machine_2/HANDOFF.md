@@ -6,8 +6,8 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_practice_pdf_complete / IN_PROGRESS`
-- 次工程: Topic 19 解説画像PowerPoint source
+- current status: `topic_19_powerpoint_complete / IN_PROGRESS`
+- 次工程: Topic 19 独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -34,7 +34,7 @@
 制作前EXAM_ALIGNMENTは `PASS / topic_19_exam_alignment_complete`。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。
 
 ## 今回完了した段階
-Topic 19練習PDF＋QAまで完成した。
+Topic 19解説画像PowerPoint＋QAまで完成した。
 
 成果物:
 - `topics/19_pid_speed_control/19_pid_speed_control.md`
@@ -43,44 +43,38 @@ Topic 19練習PDF＋QAまで完成した。
 - `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
 - `topics/19_pid_speed_control/19_pid_speed_control_practice.pdf`
 - `topics/19_pid_speed_control/19_pid_speed_control_practice_pdf_qa.md`
+- `topics/19_pid_speed_control/19_pid_speed_control_images.pptx`
+- `topics/19_pid_speed_control/19_pid_speed_control_powerpoint_qa.md`
 
-練習source構成:
-- 一次試験型10問（全問五肢択一）
-- 二次試験型5問（記述・式変形・検算付き）
-- 合計15問
-
-練習source QA:
+練習source/PDF QA:
+- 一次試験型10問＋二次試験型5問、計15問
 - 一次正答一意性: `10 / 10 PASS`
 - 全15問の独立再計算・論理確認: `15 / 15 PASS`
 - 固定5問・12答案要素: `12 / 12 COVERED`
-- P・I・D、PI・PD・PID、係数変換、偏差伝達関数、ステップ／ランプ定常偏差、応答速度、オーバーシュート比較: `PASS`
-- `Kp`・`Ki`・`Kd` 一変数比較: `PASS`
-- Topic 20先取り: `0件`
-- Topic 21先取り: `0件`
-- 未確認実車PID値: `0件`
-- 固定問題の個別正答記号・最終数値・完成済み個別解答保存: `0件`
-- 判定: `PASS / topic_19_practice_source_complete`
+- 練習PDF 15ページ表示・文字抽出: `PASS`
+- Topic 20/21先取り、未確認実車PID値、固定問題個別正答保存: `各0件`
 
-練習PDF QA:
-- A4縦15ページ: `PASS`
-- Poppler 200 dpiレンダリング: `15 / 15 PASS`
-- 全ページ寸法: `1654x2339 px`
-- ページ端接触・bboxはみ出し: `0件`
-- 最小レンダリング余白: `56 px`
-- 文字抽出: `PASS`（Unicode置換文字0件、`(cid:)` 0件）
+PowerPoint QA:
+- 16:9・4枚
+- 1枚目: P・I・D各動作、P・PI・PD・PID、係数変換
+- 2枚目: 偏差伝達関数、最終値の定理、ステップ／ランプ定常偏差
+- 3枚目: 教材用 `G(s)=1/(2s+1)` で `Kp`・`Ki`・`Kd` を一つずつ変えた速度応答3グラフ
+- 4枚目: 本試験解法フローと固定5問・12答案要素対応
+- LibreOffice PDF変換・120 dpi表示: `4 / 4 PASS`
+- 文字・数式・図・グラフの欠落、重なり、切れ: `0件`
+- PDF文字抽出: `PASS`
+- PPTX ZIP整合性: `PASS`
 - 固定5問・12答案要素: `12 / 12 COVERED`
-- canonical source blob: `f1015f13e5deefcbd7e67fbd8d0891249d684333`
-- PDF Git blob: `5983354776827cfb38889a944d1cbb4c6c269fbe`
-- 判定: `PASS / topic_19_practice_pdf_complete / IN_PROGRESS`
+- Topic 20/21先取り、未確認実車PID値、固定問題個別正答保存: `各0件`
+- PPTX Git blob: `f30c3f6aa908052d605aa205ce06516afe00fe8c`
+- 判定: `PASS / topic_19_powerpoint_complete / IN_PROGRESS`
 
 ## GitHub反映
-- 解説source: 反映済み
-- 解説PDF: Git blob `bbbe79949058c62725f644236b78f8c961365291`
-- 解説PDF QA: `PASS / topic_19_explanation_pdf_complete`
-- 練習source: `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
-- 練習PDF: Git blob `5983354776827cfb38889a944d1cbb4c6c269fbe`
-- 練習PDF QA: `PASS / topic_19_practice_pdf_complete`
-- STATUS/HANDOFF: `topic_19_practice_pdf_complete / IN_PROGRESS` へ同期
+- 解説source/PDF/QA: 反映済み
+- 練習source/PDF/QA: 反映済み
+- 解説画像PowerPoint: `topics/19_pid_speed_control/19_pid_speed_control_images.pptx`
+- PowerPoint QA: `topics/19_pid_speed_control/19_pid_speed_control_powerpoint_qa.md`
+- STATUS/HANDOFF: `topic_19_powerpoint_complete / IN_PROGRESS` へ同期
 
 ## 次に行うこと
-Topic 19の解説画像PowerPoint sourceを作成する。固定一次1問＋二次4問・12答案要素への接続と系列SPEC境界を維持し、Topic 20/21を先取りしない。
+固定5問・12答案要素と完成教材を変更せず、Topic 19の独立再解答前ゲートを実施する。公式正答・標準解答・完成済み個別解答を事前保存せず、問題だけを再取得して独立再解答へ進む準備を確認する。

@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_practice_pdf_complete`
+- current_status: `topic_19_powerpoint_complete`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 解説画像PowerPoint source
+- next_start: Topic 19 独立再解答前ゲート
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -126,8 +126,26 @@ QA:
 
 判定: `PASS / topic_19_practice_pdf_complete / IN_PROGRESS`
 
+## Topic 19 解説画像PowerPoint＋QA
+成果物:
+- `topics/19_pid_speed_control/19_pid_speed_control_images.pptx`
+- `topics/19_pid_speed_control/19_pid_speed_control_powerpoint_qa.md`
+
+QA:
+- 16:9・4枚: `PASS`
+- LibreOffice PDF変換・120 dpiレンダリング: `4 / 4 PASS`
+- 文字・数式・図・グラフの欠落、重なり、切れ: `0件`
+- PDF文字抽出: `PASS`（Unicode置換文字0件、`(cid:)` 0件）
+- PPTX ZIP整合性: `PASS`
+- `Kp`・`Ki`・`Kd` 一変数比較3グラフ: `PASS`
+- 固定5問・12答案要素: `12 / 12 COVERED`
+- Topic 20/21先取り・未確認実車PID値・固定問題正答保存: `各0件`
+- PPTX Git blob: `f30c3f6aa908052d605aa205ce06516afe00fe8c`
+
+判定: `PASS / topic_19_powerpoint_complete / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 19練習PDFをcanonical練習sourceから生成し、A4縦15ページ、200 dpiレンダリング15/15、文字抽出、ページ境界、固定5問・12答案要素の接続維持を確認して `PASS` とした。技術sourceは変更していない。完成数は `18 / 22` のまま。
+Topic 19解説画像PowerPointを作成し、P・I・Dの判別、定常偏差、`Kp`・`Ki`・`Kd` 一変数応答比較、本試験解法フローを4枚に整理した。表示・文字抽出・ZIP整合性・数値論理・固定5問12答案要素・仕様境界を再確認し、`PASS / topic_19_powerpoint_complete` とした。完成数は `18 / 22` のまま。
 
 ## 次工程
-Topic 19「PIDで新幹線の速度を制御する」の解説画像PowerPoint sourceを作成する。
+固定5問・12答案要素と完成教材を変更せず、Topic 19の独立再解答前ゲートを実施する。
