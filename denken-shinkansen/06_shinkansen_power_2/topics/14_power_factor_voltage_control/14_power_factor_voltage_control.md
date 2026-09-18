@@ -4,15 +4,19 @@
 
 ## 状態
 
-`topic_14_practice_source_complete`
+`topic_14_powerpoint_complete`
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説sourceまで完了した。正式固定5問・21答案要素は変更せず、解説sourceと練習sourceへ `21 / 21` マッピング済み。制作前blindで不足した令和2年度二次問6の「最低必要設備容量を不足側へ丸めない」答案処理は、解説と練習問8・問12で補強した。練習PDF・PowerPoint・完成後blind独立再解答は未着手である。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了した。正式固定5問・21答案要素は変更せず、各成果物へ `21 / 21` を接続済み。制作前blindで不足した令和2年度二次問6の「最低必要設備容量を不足側へ丸めない」答案処理は、解説、練習問8・問12、PowerPoint Slide 4で補強した。完成後blind独立再解答は未着手である。
 
 成果物:
 - `14_power_factor_voltage_control_explanation.md`
 - `14_power_factor_voltage_control_explanation.pdf`
 - `14_power_factor_voltage_control_explanation_pdf_qa.md`
 - `14_power_factor_voltage_control_practice.md`
+- `14_power_factor_voltage_control_practice.pdf`
+- `14_power_factor_voltage_control_practice_pdf_qa.md`
+- `14_power_factor_voltage_control_images.pptx`
+- `14_power_factor_voltage_control_powerpoint_qa.md`
 
 ## SPEC固定範囲
 
@@ -324,8 +328,42 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
-- stage: `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`
+- stage: `PRACTICE_SOURCE_COMPLETE`
+
+## 練習PDF進捗
+
+- PDF: `14_power_factor_voltage_control_practice.pdf`
+- QA: `14_power_factor_voltage_control_practice_pdf_qa.md`
+- A4縦: `7ページ`
+- 200 dpi表示: `7 / 7 PASS`
+- 文字抽出: `PASS / U+FFFD 0件`
+- 収録問題・完全解説: `15 / 15 PASS`
+- 数値・論理独立再計算: `15 / 15 PASS`
+- 一次型10問正答一意性: `10 / 10 PASS`
+- 固定5問・21答案要素: `21 / 21 covered`
+- 制作前blind不足1要素: 問8・問12で再訓練PASS
+- stage: `PRACTICE_PDF_COMPLETE`
+
+## PowerPoint進捗
+
+- PPTX: `14_power_factor_voltage_control_images.pptx`
+- QA: `14_power_factor_voltage_control_powerpoint_qa.md`
+- 16:9: `4スライド`
+- 全スライド表示: `4 / 4 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- LibreOffice PDF変換: `4ページ PASS`
+- PDF文字抽出: `PASS / U+FFFD 0件`
+- SPEC固定10項目: `10 / 10 PASS`
+- SPEC固定3可視化: `3 / 3 PASS`
+- 固定5問・21答案要素: `21 / 21` 説明接続
+- 制作前blind不足1要素: Slide 4で `1 / 1` 改善説明維持
+- Topic 15以降の先取り: `0件`
+- 未確認実設備値の真値化: `0件`
+- 公式過去問転載: `0件`
+- 仕様追加: `0件`
+- stage: `POWERPOINT_COMPLETE / IN_PROGRESS`
 
 ## 次工程
 
-`14_power_factor_voltage_control_practice.md` から練習PDFを生成し、表示、文字抽出、全15問の数値・論理、一次型10問の正答一意性をQAする。PowerPoint・完成後blind独立再解答はまだ行わない。
+固定5問・21答案要素の完成後blind独立再解答を行う。保存済み正答・公式解答を先に見ず、教材だけで全答案要素を再解答し、制作前blind不足1要素「最低必要容量を不足側へ丸めない」も再検証する。最終QAはまだ行わない。
