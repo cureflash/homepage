@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_17_practice_source_complete`
+- current_status: `topic_17_practice_pdf_complete`
 - last_completed_topic: `16 数値微分・数値積分`
 - active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の練習PDFを作成し、表示QA・文字抽出QA・数値整合を確認する
+- next_start: Topic 17の解説画像PowerPointを作成し、PowerPoint表示QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -264,7 +264,7 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [ ] 練習PDF
+- [x] 練習PDF（A4縦6ページ、200 dpi表示 `6 / 6 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
 - [ ] 完成後独立検証
@@ -273,13 +273,16 @@
 
 ## 今回進めた内容
 
-既存枠の成果をreconcileし、Topic 17の解説PDFが既に完成済みであることを確認したうえで、次の安全な工程として練習問題sourceを作成した。
+Topic 17の練習PDFを作成し、sourceとの数値・論理整合と表示品質を確認した。
 
-- 解説PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`
-- 練習問題source: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.md`
-- 全12問: 一次型8問／記述型4問
-- 独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
+- 練習PDF: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.pdf`
+- QA記録: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice_qa.md`
+- A4縦6ページ
+- 200 dpi表示QA: `6 / 6 PASS`
+- 文字切れ・重なり・壊れた日本語グリフ: `0件`
+- 文字抽出QA: `PASS`
+- 全12問の独立計算・論理QA: `12 / 12 PASS`
+- 一次型8問の正答一意性: `8 / 8 PASS`
 - 接続確認した第二種公式過去問: `5問`
 - 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
 - 非該当5問の固定品質ゲート件数への水増し: `0件`
@@ -289,8 +292,8 @@
 
 ## 判定
 
-`topic_17_practice_source_complete / IN_PROGRESS`
+`topic_17_practice_pdf_complete / IN_PROGRESS`
 
 完成数は `16 / 20` のまま。
 
-次はTopic 17の練習PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。
+次はTopic 17の解説画像PowerPointを作成し、PowerPoint表示QAを行う。
