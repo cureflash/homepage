@@ -4,45 +4,39 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceまで確定した。練習PDF・PowerPointは未着手。
+固定EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPoint、完成後clean blind公式照合まで完了している。前回最終QAで検出された進捗不整合は、この主sourceの状態欄だけだったため、技術本文・問題・正答・数式・PDF/PPTX・固定EXAM_ALIGNMENTを変更せず現行状態へ同期した。
 
 固定過去問は第二種の一次3問＋二次2問、計5問。Topic 18へ直接対応する答案要素だけをゲート対象とし、周辺論点で件数を水増ししない。
 
-current_status: `topic_18_practice_source_complete`
+current_status: `topic_18_progress_alignment_sync_complete`
 
-練習source:
-- `18_e2series_50hz_60hz_flux_practice_source.md`
-- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
-- 一次試験型: `8 / 8`、全問五肢択一
-- 二次試験型: `4 / 4`、記述式
-- 数値・論理独立再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- 固定5問・15答案要素: `15 / 15 PASS`
+必須成果物:
+- 主source: `18_e2series_50hz_60hz_flux.md`
+- 解説source: `18_e2series_50hz_60hz_flux_explanation_source.md` — `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: `18_e2series_50hz_60hz_flux_explanation.pdf` — `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習source: `18_e2series_50hz_60hz_flux_practice_source.md` — `PASS / PRACTICE_SOURCE_COMPLETE`
+- 練習PDF: `18_e2series_50hz_60hz_flux_practice.pdf` — `PASS / PRACTICE_PDF_COMPLETE`
+- 解説画像PowerPoint: `18_e2series_50hz_60hz_flux_images.pptx` — `PASS / POWERPOINT_COMPLETE`
+- clean blind候補答案: `18_e2series_50hz_60hz_flux_blind_reanswer_candidates_clean.md`
+- 公式照合: `18_e2series_50hz_60hz_flux_blind_reanswer_official_check.md` — `PASS / 15 / 15`
+- 前回最終QA: `18_e2series_50hz_60hz_flux_final_qa.md` — `NEEDS_REVISION / PROGRESS_ALIGNMENT_SYNC_REQUIRED`。本同期後に再実施する
+
+品質:
+- 固定過去問: `一次3問＋二次2問 / 5問`
+- 固定答案要素: `一次7＋二次8 / 15`
+- clean blind公式照合: `15 / 15 PASS`
+- 候補答案変更: `0件`
+- 教材外知識による補完: `0件`
+- 固定問題差替え: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定7項目: `7 / 7 covered`
-- SPEC指定3可視化: `3 / 3 aligned`
-- 仕様追加: `0件`
+- SPEC指定3可視化: `3 / 3 PASS`
+- SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
 
-解説PDF:
-- `18_e2series_50hz_60hz_flux_explanation.pdf`
-- QA: `18_e2series_50hz_60hz_flux_explanation_pdf_qa.md`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-- A4縦6ページ、180 dpi `6 / 6 PASS`
-- 固定5問・15答案要素: `15 / 15 PASS`
-- SPEC指定7項目・3可視化: `7 / 7 PASS`, `3 / 3 PASS`
+進捗記録同期: `PASS / PROGRESS_ALIGNMENT_SYNC_COMPLETE`。
 
-解説source:
-- `18_e2series_50hz_60hz_flux_explanation_source.md`
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 固定要求知識: `15 / 15 covered`
-- SPEC指定7項目: `7 / 7 covered`
-- SPEC指定3可視化: `3 / 3 fixed`
-- 3段階例題: `3 / 3`
-- 例題数値再計算: `3 / 3 PASS`
-- 仕様追加: `0件`
-- 未確認E2系実車値の真値化: `0件`
-
-次工程: 練習sourceから練習PDFを作り、表示QA・文字抽出QA・数値／正答一意性QAを行う。固定5問・15答案要素、7項目、3可視化、問題・正答・数式は変更しない。
+次工程: Topic 18の最終QAを再実施する。固定5問・15答案要素、clean blind `15 / 15 PASS`、SPEC指定7項目・3可視化、必須成果物・各QA・進捗記録の整合を確認し、合格した場合のみcompleted化する。既存PDF/PPTX、問題、正答、数式、固定過去問は変更しない。
 
 ## 固定範囲
 
