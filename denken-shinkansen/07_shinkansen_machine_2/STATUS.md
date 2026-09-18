@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_explanation_pdf_complete`
+- current_status: `topic_19_practice_source_complete`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 練習source
+- next_start: Topic 19 練習PDF＋QA
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -86,8 +86,30 @@ QA:
 
 判定: `PASS / topic_19_explanation_pdf_complete`
 
+## Topic 19 練習source
+成果物:
+- `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
+
+構成:
+- 一次試験型10問（全問五肢択一）
+- 二次試験型5問（記述・式変形・検算付き）
+- 合計15問
+
+QA:
+- 一次正答一意性: `10 / 10 PASS`
+- 全15問の独立再計算・論理確認: `15 / 15 PASS`
+- 固定5問・12答案要素への演習接続: `12 / 12 COVERED`
+- P・I・D、PI・PD・PID、係数変換、偏差伝達関数、ステップ／ランプ定常偏差、応答速度、オーバーシュート比較: `PASS`
+- `Kp`・`Ki`・`Kd` 一変数比較: `PASS`
+- Topic 20先取り: `0件`
+- Topic 21先取り: `0件`
+- 未確認実車PID値の実車値化: `0件`
+- 固定問題の個別正答記号・最終数値・完成済み個別解答保存: `0件`
+
+判定: `PASS / topic_19_practice_source_complete`
+
 ## 今回進めた内容
-Topic 19解説PDFを生成し、表示6/6、文字抽出、数値・論理15/15、固定5問・12答案要素12/12を確認してQA `PASS` とした。Topic 20/21先取り、未確認実車PID値、固定問題の個別正答保存はいずれも0件。完成数は `18 / 22` のまま。
+Topic 19練習sourceを作成した。一次10問＋二次5問、一次正答一意性10/10、全15問15/15、固定5問・12答案要素12/12を確認して `PASS` とした。Topic 20/21先取り、未確認実車PID値、固定問題の個別正答保存はいずれも0件。完成数は `18 / 22` のまま。
 
 ## 次工程
-Topic 19「PIDで新幹線の速度を制御する」の練習sourceを作成する。
+Topic 19「PIDで新幹線の速度を制御する」の練習PDF＋QAを作成する。
