@@ -2,42 +2,39 @@
 
 対象: `18 速度指令を変えたら何秒で追従する？`
 
-更新日: 2026-09-19
+実施日: 2026-09-19
 
 ## 判定
 
-`NEEDS_REVISION / topic_18_progress_records_need_sync`。
+`PASS / FINAL_QA_COMPLETE`。
 
-固定EXAM_ALIGNMENT、完成後独立再解答、解説PDF、PowerPoint、仕様境界に加え、修正版の現行練習PDF再QAもPASSした。残るblockerは進捗記録同期のみであり、Topic 18はまだcompletedにしない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` と最新mainを再確認した。前回blockerだった現行練習PDF再QAと進捗記録同期は完了しており、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、仕様境界、進捗記録整合を再判定して全項目PASSとした。
+
+本runでは最終QA再実施までを1段階とし、`completed` 状態への同期は次工程へ分離する。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。
 
 ## reconcile
 
-- `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列 `SPEC.md` と現行mainを確認した。
-- 最初の未完了テーマはTopic 18。
-- 固定EXAM_ALIGNMENTは一次1問＋二次4問、計5問・12答案要素のまま変更なし。
-- 完成後独立再解答 `12 / 12 PASS`、教材外知識による補完 `0件`。
-- 解説PDF・PowerPoint・仕様境界は既存最終QAでPASS。
-- 前回blockerだった練習PDFの近似記号 `≈` 欠落グリフを生成側で修正し、現行PDF再QAを完了した。
+- 最終QA再実施開始時点の最初の未完了テーマは Topic 18。
+- 系列SPECのTopic 18固定範囲は、一次遅れ、二次遅れ、時定数、減衰係数、固有角周波数、オーバーシュート、立上り時間、整定時間、定常偏差、および指定3種の比較グラフで変更なし。
+- 固定EXAM_ALIGNMENTは一次1問＋二次記述4問、計5問・12答案要素のまま変更なし。
+- source Markdown、解説PDF、練習source/PDF、PowerPoint、各QA、独立再解答前ゲート、答案ロック、完成後独立再解答記録の実在を確認。
+- main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程`、`STATUS.md`、`HANDOFF.md` は、いずれも「最終QA再実施直前」の実状態へ同期済み。
+- 練習PDF QA記録の `PDF size` は、現行Git blob `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242` のGitHub正本メタデータに合わせ `22060 byte` へ訂正した。PDF本体、blob SHA、SHA-256、技術内容、表示QA結果は変更していない。
+- 技術本文・練習問題・正答・PDF/PPTX・固定EXAM_ALIGNMENTの内容変更 `0件`。
 
-## 現行練習PDF再QA
+## 必須成果物
 
-対象:
-- Git blob: `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242`
-- SHA-256: `50fdfc549fdefd89e14577f671e5e13261a95b3141acd9cba69637f5e2d1f209`
-- size: `32909 byte`
-- A4縦・3ページ
-
-確認結果:
-- 一次10問＋二次5問、問1〜問15: PASS
-- 固定H23 / R07 / R06 / R03 / H29対応表: PASS
-- 固定5問・12答案要素接続: `12 / 12 PASS`
-- 一次10問正答一意性: `10 / 10 PASS`
-- 全15問数値・論理: `15 / 15 PASS`
-- 160 dpi表示: PDFium / Popplerの2系統で全3ページ確認、切れ・重なり・overflow・欠落グリフ `0件`
-- `pdftotext -layout`: 抽出成功、Unicode置換文字 `0件`、`(cid:)` `0件`
-- source中の `≈` 17箇所に対しPDF抽出も `17件`
-
-判定: `PASS / topic_18_practice_pdf_reqa_pass`。
+- source Markdown: PASS (`c7538db08d7aa9274ad75f7a1ac8f9f73d136550`)
+- 解説PDF: PASS (`4693ebb4d6314b5f2ae4f87dc7a9e352a5770127`)
+- 解説PDF QA: PASS (`d1d7cd7331ba5f3223de583b20c0f6b5f416d405`)
+- 練習source: PASS (`eaa691e6f39f50e84eb0243b52a68000d9a25e44`)
+- 練習PDF: PASS (`fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242`)
+- 練習PDF QA: PASS (`31f634522629b66386489792fe1c95244c57e005`)
+- 解説画像PowerPoint: PASS (`1c65123ba298961a5dac0be4c87fdef6efcbcc14`)
+- PowerPoint QA: PASS (`a12608a301472a755469dadbb5630309081e6c6f`)
+- 独立再解答前ゲート: PASS (`facd63779e09e0940beda793091b154045697979`)
+- 答案ロック: PASS (`8d2d84e8e9aaf0a09cb0e674649720ac2e089b8e`)
+- 完成後独立再解答記録: PASS (`633a6a60b411dadcc95fe0e2f9103f61afab6864`)
 
 ## EXAM_ALIGNMENT・独立再解答
 
@@ -49,39 +46,45 @@
 - 合計: `12 / 12 PASS`
 - 教材外知識による補完: `0件`
 
-判定: PASS。
+二種の一次・二次を合わせて5問を固定し、二次記述4問を含む。完成教材だけで12答案要素を独立再解答し、公式照合までPASSしている。
 
-## 解説PDF・PowerPoint
+## 練習・表示QA
 
-- 解説PDF: A4縦5ページ、表示QA `5 / 5 PASS`、文字抽出QA PASS、主要11チェックポイント `11 / 11 PASS`。
-- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS、主要数値再計算PASS。
-
-判定: PASS。
+- 練習問題: 一次10問＋二次記述5問
+- 一次正答一意性: `10 / 10 PASS`
+- 独立再計算・論理QA: `15 / 15 PASS`
+- 固定12答案要素への接続: `12 / 12 PASS`
+- 解説PDF: A4縦5ページ、表示QA `5 / 5 PASS`、文字抽出QA PASS、主要11チェックポイント `11 / 11 PASS`
+- 練習PDF: A4縦3ページ、PDFium / Poppler表示QA `3 / 3 PASS`、文字抽出QA PASS、`≈` `17 / 17`、欠落グリフ `0件`
+- 練習PDF現行Git blob: `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242`、size `22060 byte`
+- PowerPoint: 16:9・4スライド、表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS
 
 ## 仕様境界
 
-- Topic 19 PID先取り: `0件`
-- Topic 20 安定判別・周波数応答先取り: `0件`
-- Topic 21 再粘着制御先取り: `0件`
+- Topic 19のP・PI・PD・PID制御・ゲイン調整先取り: `0件`
+- Topic 20の安定判別・周波数応答先取り: `0件`
+- Topic 21の空転・再粘着制御先取り: `0件`
 - 仕様外独立論点追加: `0件`
 - 未確認の新幹線実車時定数・制御ゲイン・整定時間等の実車値化: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-判定: PASS。
+判定: `PASS`。
 
-## 進捗記録整合
+## 進捗記録整合（再実施）
 
-- main source `18_speed_transient_response.md` の `## 状態` と末尾 `# 次工程` は完成後実状態へ未同期。
-- 練習source `18_speed_transient_response_practice.md` の末尾 `# 次工程` は未同期。
-- `STATUS.md` / `HANDOFF.md` は修正版練習PDF再QA PASS後の実状態へ未同期。
-- 技術本文・問題・正答・固定EXAM_ALIGNMENTを変更せず、上記4記録だけを同期する必要がある。
+前回FAILだった進捗記録を再確認した。
 
-判定: FAIL。
+1. main source `## 状態`: `topic_18_progress_records_synced / IN_PROGRESS` へ同期済み — PASS。
+2. main source末尾 `# 次工程`: `Topic 18最終QAを再実施する` へ同期済み — PASS。
+3. 練習source末尾 `# 次工程`: `Topic 18最終QAを再実施する` へ同期済み — PASS。
+4. `STATUS.md` / `HANDOFF.md`: 完成数 `17 / 22`、active Topic 18、次工程「最終QA再実施」で同期済み — PASS。
 
-## exact blocker
+進捗記録整合: `4 / 4 PASS`。
 
-`現行練習PDFの表示・文字抽出・数値論理・固定12答案要素接続はPASSした。Topic 18をcompletedにする前に、main source・練習source・STATUS・HANDOFFを現状態へ同期し、最終QAを再実施する必要がある。`
+## 最終判定
 
-## 次工程
+`PASS / topic_18_final_qa_pass / FINAL_QA_COMPLETE`。
 
-Topic 18の進捗記録4箇所を同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更しない。
+固定5問・12答案要素、完成後独立再解答 `12 / 12 PASS`、練習QA、解説PDF・練習PDF・PowerPoint QA、仕様境界、進捗記録整合をすべて満たした。
+
+次工程は Topic 18 の completed 状態同期。main source・練習source・`STATUS.md`・`HANDOFF.md` の進捗表記だけを完成状態へ同期し、その後に Topic 19「PIDで新幹線の速度を制御する」の制作前EXAM_ALIGNMENTへ進む。
