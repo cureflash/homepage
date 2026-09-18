@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_17_explanation_body_complete`
+- current_status: `topic_17_practice_source_complete`
 - last_completed_topic: `16 数値微分・数値積分`
 - active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の解説PDFを作成し、表示QA・文字抽出QA・数値整合を確認する
+- next_start: Topic 17の練習PDFを作成し、表示QA・文字抽出QA・数値整合を確認する
 
 ## Topic 07 制作品質ゲート
 
@@ -262,8 +262,8 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
 - [x] 制作前独立数値検証
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
-- [ ] 練習問題source
+- [x] 解説PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
+- [x] 練習問題source（全12問、一次型8問・記述型4問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
@@ -273,26 +273,24 @@
 
 ## 今回進めた内容
 
-Topic 17「常微分方程式の数値解法」の解説本文＋3段階例題を主sourceへ実装した。
+既存枠の成果をreconcileし、Topic 17の解説PDFが既に完成済みであることを確認したうえで、次の安全な工程として練習問題sourceを作成した。
 
-- 固定範囲: Euler法、Runge-Kutta法の概念、刻み幅と誤差、初期値問題、簡略列車運動式のみ
-- 教材で必要な説明6項目: `6 / 6 PASS`
-- 接続確認した第二種公式過去問5問: 教材内接続 `5 / 5`
+- 解説PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`
+- 練習問題source: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.md`
+- 全12問: 一次型8問／記述型4問
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 接続確認した第二種公式過去問: `5問`
 - 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
 - 非該当5問の固定品質ゲート件数への水増し: `0件`
-- 基礎例題: `dy/dt=-y` のEuler法、制作前検証と一致
-- 本試験標準例題: RL過渡をEuler法で計算し、解析解・時定数・刻み幅依存と照合
-- 複合例題: 教育用列車モデルで速度・位置を同一刻みの始点値から更新
-- 3段階例題の独立再計算: `3 / 3 PASS`
 - Runge-Kutta法: `SPEC.md` どおり概念説明に限定
 - Topic 18以降の先取り: `0件`
 - 未確認実車値依存: `0件`
-- source: `topics/17_ode_numerical_methods/17_ode_numerical_methods.md`
 
 ## 判定
 
-`topic_17_explanation_body_complete / IN_PROGRESS`
+`topic_17_practice_source_complete / IN_PROGRESS`
 
 完成数は `16 / 20` のまま。
 
-次はTopic 17の解説PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。
+次はTopic 17の練習PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。
