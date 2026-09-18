@@ -6,14 +6,38 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `19 / 39`
-- current_status: `topic_19_completed`
+- current_status: `topic_20_exam_alignment_complete`
 - last_completed_topic: `19 ミニ新幹線 複電圧主回路`
 - active_topic: `20 N700系 フィードバック制御`
-- next_start: Topic 20制作前EXAM_ALIGNMENT。公式過去問を直近年度から確認し、一次・二次を含む固定ゲートをSPEC範囲内で確定する
+- next_start: Topic 20解説source。固定5問・19答案要素を逆算し、SPEC指定10項目・3可視化を教材内へ接続する
 
 ## 完了済み
 
 Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
+
+## Topic 20 制作前EXAM_ALIGNMENT
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+source:
+- `topics/20_n700_feedback_control/20_n700_feedback_control.md`
+
+品質:
+- 固定過去問: `一次1問＋二次4問 / 5問`
+- 固定答案要素: `一次1＋二次18 / 19`
+- 二次記述問題: `4問`
+- SPEC指定10項目 / 3可視化: `10 / 10`, `3 / 3 mapped`
+- 参考教材: `2系統以上 / e-sysnet含む`
+- 公式解答・標準解答の個別正答保存: `0件`
+- SPEC外追加: `0件`
+- 未確認N700系実車制御値の真値化: `0件`
+
+固定対象:
+- H25 一次 機械 問6 `(1)`: 1要素
+- R7 二次 機械・制御 問4 `(1)〜(5)`: 5要素
+- R6 二次 機械・制御 問4 `(1)〜(4)`: 4要素
+- R4 二次 機械・制御 問4 `(1)〜(4)`: 4要素
+- R3 二次 機械・制御 問4 `(1)〜(5)`: 5要素
 
 ## Topic 19 最終QA
 
@@ -325,4 +349,4 @@ PDF/PPTX本体・問題・正答・数式・固定過去問は最終QA再実施�
 
 ## 次工程
 
-Topic 20「N700系 フィードバック制御」の制作前EXAM_ALIGNMENT。公式過去問を直近年度から確認し、一次・二次を含む固定ゲートをSPEC範囲内で確定する。
+Topic 20「N700系 フィードバック制御」の解説source。固定5問・19答案要素を逆算し、SPEC指定10項目・3可視化を教材内へ接続する。
