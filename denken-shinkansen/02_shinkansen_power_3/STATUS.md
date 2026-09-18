@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 13 / 16
-- current_status: `topic_14_independent_reanswer_complete`
+- current_status: `topic_14_final_qa_needs_revision`
 - last_completed_topic: `13 新幹線の架線は何でできている？`
 - active_topic: `14 駅やトンネルにはどう電気を配る？`
-- next_start: Topic 14の最終QAを実施し、固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認する
+- next_start: Topic 14の旧進捗記録5箇所（解説PDF QA、練習問題source、練習PDF QA、PowerPoint QA、完成後独立再解答）を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -24,7 +24,7 @@
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 14 駅やトンネルにはどう電気を配る？ — 必須成果物・QA・完成後独立再解答まで完了。固定5問・6答案要素の完成後独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件、SPEC外追加0件。次は最終QA
+- [ ] 14 駅やトンネルにはどう電気を配る？ — 初回最終QA `NEEDS_REVISION / IN_PROGRESS`。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・PDF/PPTX QA・SPEC境界はPASS。進捗記録整合のみFAIL（旧工程5箇所）。完成数は13 / 16のまま
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
@@ -463,6 +463,7 @@ source: `topics/14_distribution/14_distribution.md`
 解説画像PowerPoint: `topics/14_distribution/14_distribution_images.pptx`
 PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 完成後独立再解答: `topics/14_distribution/14_distribution_independent_reanswer.md`
+最終QA: `topics/14_distribution/14_distribution_final_qa.md`
 
 固定5問・6答案要素:
 - R8上 電力 問13
@@ -517,7 +518,9 @@ PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - main sourceへの完成後独立再解答結果同期: 完了
 - 練習PDF QA・PowerPoint QA進捗同期: 完了
 - HANDOFF同期: 完了
-- 最終QA: 未実施
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・PDF/PPTX QA・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
+- 初回最終QA記録: `topics/14_distribution/14_distribution_final_qa.md`
+- 旧進捗記録5箇所同期: 未実施
 
 完成後独立答案:
 - R8上 電力 問13: `(2)`
@@ -527,4 +530,4 @@ PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - H20 電力 問17(a)(b): `(2),(3)`
 
 ## 次
-Topic 14の最終QAを実施し、すべてPASSした場合のみ `completed` とする。
+`14_distribution_explanation_qa.md`、`14_distribution_practice_source.md`、`14_distribution_practice_qa.md`、`14_distribution_powerpoint_qa.md`、`14_distribution_independent_reanswer.md` の旧工程記録5箇所を現在地へ同期する。同期後に最終QAを再実施し、全件PASSの場合のみ `completed` とする。
