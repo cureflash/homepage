@@ -1,10 +1,10 @@
 # 18 速度指令を変えたら何秒で追従する？
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説source本文を完了した。現在 `topic_18_explanation_source_complete / IN_PROGRESS`。PDF・練習問題・PowerPoint・独立再解答は未着手。次工程はTopic 18解説PDF＋表示QA。
+Topic 18の必須成果物、固定一次1問＋二次4問・12答案要素、完成後独立再解答 `12 / 12 PASS`、解説PDF、練習PDF、PowerPointを確認済み。練習PDFは `≈` 欠落グリフ修正後の現行blob `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242` に対して再QAし、表示・文字抽出・数値論理・固定12答案要素接続をすべてPASSした。現在 `topic_18_progress_records_synced / IN_PROGRESS`。次工程はTopic 18最終QA再実施。
 
 ## 固定範囲
 
@@ -758,4 +758,4 @@ PDF・PowerPointで作る比較グラフは、実車値ではなく教材上の�
 
 # 次工程
 
-固定5問・12答案要素と本文内容を維持し、Topic 18解説PDFを作成して表示QA・文字抽出QA・数値整合QAを行う。
+固定5問・12答案要素、技術本文、成果物、独立再解答結果を変更せず、Topic 18最終QAを再実施する。
