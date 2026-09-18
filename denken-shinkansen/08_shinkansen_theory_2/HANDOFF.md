@@ -6,11 +6,11 @@
 
 Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_19_powerpoint_restored`
+current_status: `topic_19_progress_records_synced`
 
 active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、完成後独立再解答まで完了。初回最終QAではPowerPoint本体欠落と主source進捗記録不一致の2点で `NEEDS_REVISION` となった。今回、PowerPoint本体を既存source・固定範囲・固定EXAM_ALIGNMENTだけから再生成し、表示QAを再実施してGitHub正本へ復元した。残blockerは主source進捗記録の同期のみ。
+Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAで確認された2 blocker（PowerPoint本体欠落、主source進捗記録不一致）はともに解消した。主sourceはGitHub正本の実在成果物・QA記録へ同期済み。次工程は最終QA再実施。
 
 ## Topic 19 固定範囲
 
@@ -53,7 +53,7 @@ Topic 20の誤差・ブリッジ・波形・サンプリングは先取りしな
 - 完成後独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_reanswer.md`
 - 初回最終QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_final_qa.md`
 - completion: `in_progress`
-- stage: `POWERPOINT_RESTORED`
+- stage: `PROGRESS_RECORDS_SYNCED`
 
 ## 品質ゲート現状
 
@@ -65,6 +65,7 @@ Topic 20の誤差・ブリッジ・波形・サンプリングは先取りしな
 - 解説PDF表示QA: `5 / 5 PASS`
 - 練習12問QA: `12 / 12 PASS`
 - 練習PDF表示QA: `5 / 5 PASS`
+- PowerPoint表示QA: `6 / 6 PASS`
 - 完成後独立再解答: `25 / 25 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
@@ -85,10 +86,17 @@ Topic 20の誤差・ブリッジ・波形・サンプリングは先取りしな
 - SPEC固定範囲外追加: `0件`
 - Topic 20先取り: `0件`
 
-## 残 blocker
+## 進捗記録同期
 
-`topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement.md` の状態欄が旧工程 `EXPLANATION_SOURCE_COMPLETE` のまま。初回最終QA記録はこの不整合もblockerとしているため、PowerPoint復元だけでTopic 19を `completed` にしない。
+- 主source stage: `PROGRESS_RECORDS_SYNCED`
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
+- PowerPoint QA: `PASS / POWERPOINT_RESTORED`
+- 完成後独立再解答: `25 / 25 PASS`
+- 初回blocker「PowerPoint本体欠落」: `解消済み`
+- 初回blocker「主source進捗記録不一致」: `解消済み`
+- 判定: `PASS / PROGRESS_RECORDS_SYNCED`
 
 ## 次工程
 
-主sourceの状態・工程記録をGitHub正本の実状態へ同期する。その後、Topic 19最終QAを再実施する。
+Topic 19の最終QAを再実施する。固定一次5問・25答案要素、二次採用0問・二次数合わせ0件、SPEC固定範囲10項目、実在成果物と進捗記録の整合を再確認し、PASSの場合のみ `completed` 状態同期へ進む。
