@@ -6,8 +6,8 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_practice_source_complete / IN_PROGRESS`
-- 次工程: Topic 19 練習PDF＋QA
+- current status: `topic_19_practice_pdf_complete / IN_PROGRESS`
+- 次工程: Topic 19 解説画像PowerPoint source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -34,13 +34,15 @@
 制作前EXAM_ALIGNMENTは `PASS / topic_19_exam_alignment_complete`。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。
 
 ## 今回完了した段階
-Topic 19練習sourceまで完成した。
+Topic 19練習PDF＋QAまで完成した。
 
 成果物:
 - `topics/19_pid_speed_control/19_pid_speed_control.md`
 - `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`
 - `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`
 - `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
+- `topics/19_pid_speed_control/19_pid_speed_control_practice.pdf`
+- `topics/19_pid_speed_control/19_pid_speed_control_practice_pdf_qa.md`
 
 練習source構成:
 - 一次試験型10問（全問五肢択一）
@@ -59,12 +61,26 @@ Topic 19練習sourceまで完成した。
 - 固定問題の個別正答記号・最終数値・完成済み個別解答保存: `0件`
 - 判定: `PASS / topic_19_practice_source_complete`
 
+練習PDF QA:
+- A4縦15ページ: `PASS`
+- Poppler 200 dpiレンダリング: `15 / 15 PASS`
+- 全ページ寸法: `1654x2339 px`
+- ページ端接触・bboxはみ出し: `0件`
+- 最小レンダリング余白: `56 px`
+- 文字抽出: `PASS`（Unicode置換文字0件、`(cid:)` 0件）
+- 固定5問・12答案要素: `12 / 12 COVERED`
+- canonical source blob: `f1015f13e5deefcbd7e67fbd8d0891249d684333`
+- PDF Git blob: `5983354776827cfb38889a944d1cbb4c6c269fbe`
+- 判定: `PASS / topic_19_practice_pdf_complete / IN_PROGRESS`
+
 ## GitHub反映
 - 解説source: 反映済み
 - 解説PDF: Git blob `bbbe79949058c62725f644236b78f8c961365291`
 - 解説PDF QA: `PASS / topic_19_explanation_pdf_complete`
 - 練習source: `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
-- STATUS/HANDOFF: `topic_19_practice_source_complete / IN_PROGRESS` へ同期
+- 練習PDF: Git blob `5983354776827cfb38889a944d1cbb4c6c269fbe`
+- 練習PDF QA: `PASS / topic_19_practice_pdf_complete`
+- STATUS/HANDOFF: `topic_19_practice_pdf_complete / IN_PROGRESS` へ同期
 
 ## 次に行うこと
-Topic 19練習PDF＋QAを作成し、一次10問＋二次5問、固定一次1問＋二次4問・12答案要素への演習接続を維持してQAする。
+Topic 19の解説画像PowerPoint sourceを作成する。固定一次1問＋二次4問・12答案要素への接続と系列SPEC境界を維持し、Topic 20/21を先取りしない。
