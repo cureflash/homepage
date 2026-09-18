@@ -4,15 +4,17 @@
 
 対象: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_images.pptx`
 
+今回改訂: blind再解答QAで不足した R7一次「機械」問4 (3) の1答案要素だけを同期。自己消弧形スイッチング素子として IGBT・MOSFET を識別し、逆並列ダイオードを誘導性負荷電流の還流経路を与える別素子として区別した。固定EXAM_ALIGNMENT・共通仮定モデル・SPEC範囲は変更していない。
+
 ## 成果物
 - 形式: PowerPoint 16:9
 - スライド数: 4
-- 1枚目: 2レベル・理想3レベル出力波形、`dv/dt`、H29/R7型論点
+- 1枚目: 2レベル・理想3レベル出力波形、`dv/dt`、H29/R7型論点、IGBT/MOSFETと逆並列ダイオードの役割区別
 - 2枚目: 高調波・位相差、多重化、H24一次型論点
 - 3枚目: 素子電圧、`dv/dt`、H24二次型論点
-- 4枚目: PWM、スイッチング周波数、損失、変換効率
-- SHA-256: `3cae8061b27e955e541b3f2239422a6c2c040dea0b64b7c78fc09316ca64c0bc`
-- Git blob SHA: `3fc2de5b0e93b9fc16021b414e1225413067504c`
+- 4枚目: PWM、スイッチング周波数、損失、変換効率、自己消弧形素子と還流ダイオードの区別
+- SHA-256: `dc175b814c514d82e55ab8c8f3d50248c8adcbd8676708424a3282bb8861f4de`
+- Git blob SHA: `fec7c9b85c3d756e49833615a69ee8fd18a685c4`
 
 ## 表示・ファイルQA
 - [x] LibreOffice headless PDF変換: `PASS`
@@ -40,6 +42,7 @@
 - [x] 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問 `変更なし`
 - [x] 固定答案要素: 一次20＋二次6、計26 `変更なし`
 - [x] R7 一次 機械 問4: スライド1・4
+- [x] R7 一次 機械 問4 (3): `PASS / IGBT・MOSFETを自己消弧形スイッチング素子として識別し、逆並列ダイオードを還流用の別素子として区別`
 - [x] R4 一次 機械 問4: スライド4
 - [x] H29 一次 機械 問3: スライド1
 - [x] H24 一次 機械 問3: スライド2
@@ -57,6 +60,6 @@
 - [x] 未確認700系実車回路・レベル数・電圧・素子定格・キャリア周波数・効率の真値化: `0件`
 - [x] 固定公式過去問の個別正答記号・完成済み答案保存: `0件`
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `PASS / POWERPOINT_REVISION_SYNC_COMPLETE`
 
-次工程: blind再解答対象を開く前に、必須成果物・固定EXAM_ALIGNMENT・解説source・PDF/PPTX・練習問題を監査し、その後blind再解答候補を固定する。
+次工程: 公式解答・標準解答・旧blind再解答QAを先読み対象から外した状態で、必須成果物・固定EXAM_ALIGNMENT・解説source・PDF/PPTX・練習問題を再監査し、blind再解答前ゲートを作り直す。
