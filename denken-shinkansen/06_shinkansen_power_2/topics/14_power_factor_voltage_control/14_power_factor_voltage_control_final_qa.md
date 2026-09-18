@@ -24,7 +24,7 @@
 | 練習PDF | PASS | A4縦7ページ、表示 `7 / 7 PASS`、文字抽出PASS、完全解説 `15 / 15` |
 | PowerPoint | NEEDS_REVISION | QA本文は内容・表示をPASSとしているが、QA記録のファイルサイズ `39281 bytes` と現行GitHub正本 `15002 bytes`・blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8` が一致しない。現行バイナリへのQA証跡として確定できない |
 | SPEC境界 | PASS | Topic 15以降先取り0件、Topic 16故障計算先取り0件、Topic 17保護・Topic 20安定度先取り0件、未確認実設備値0件、仕様追加0件 |
-| 進捗記録整合 | NEEDS_REVISION | 解説source、練習source、解説PDF QA、練習PDF QA、PowerPoint QAに完了済み工程を「次工程」「未実施」とする旧記述が残る |
+| 進捗記録整合 | NEEDS_REVISION | 主source、解説source、練習source、解説PDF QA、練習PDF QA、PowerPoint QAに完了済み工程を「次工程」「未実施」とする旧記述が残る |
 | Web公開 | NEEDS_REVISION | `qualifications/denken-shinkansen/catalog.json` はTopic 12・13までで、Topic 14の解説PDF・練習PDF・PowerPoint・source登録がない |
 
 ## 正式過去問対応品質ゲート
@@ -44,13 +44,14 @@
 
 ## 未完了blocker
 
-1. `14_power_factor_voltage_control_explanation.md` のstage・次工程が旧状態。
-2. `14_power_factor_voltage_control_practice.md` が練習PDF・PowerPoint・blindを未実施としている。
-3. `14_power_factor_voltage_control_explanation_pdf_qa.md` の次工程が完成後blind再実施のまま。
-4. `14_power_factor_voltage_control_practice_pdf_qa.md` の次工程がPowerPoint制作のまま。
-5. `14_power_factor_voltage_control_powerpoint_qa.md` がTopic全体を「blind再実施前」としている。
-6. PowerPoint QA記録のファイル指紋が現行GitHub正本と一致しない。現行PPTXを再QAし、現行blobに対応する記録へ同期する必要がある。
-7. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
+1. `14_power_factor_voltage_control.md` が最終QA未実施・次工程を最終QAとしている旧状態。
+2. `14_power_factor_voltage_control_explanation.md` のstage・次工程が旧状態。
+3. `14_power_factor_voltage_control_practice.md` が練習PDF・PowerPoint・blindを未実施としている。
+4. `14_power_factor_voltage_control_explanation_pdf_qa.md` の次工程が完成後blind再実施のまま。
+5. `14_power_factor_voltage_control_practice_pdf_qa.md` の次工程がPowerPoint制作のまま。
+6. `14_power_factor_voltage_control_powerpoint_qa.md` がTopic全体を「blind再実施前」としている。
+7. PowerPoint QA記録のファイル指紋が現行GitHub正本と一致しない。現行PPTXを再QAし、現行blobに対応する記録へ同期する必要がある。
+8. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
 
 ## 完了判定
 
@@ -58,4 +59,4 @@ Topic 14は `IN_PROGRESS` を維持する。
 
 完成数: `13 / 22`
 
-次工程は上記7 blockerの解消。固定5問・21答案要素、教材本文の技術範囲、練習問題、正答、PDF内容は変更しない。現行PPTXの再QA、進捗記録同期、Webカタログ登録後に最終QAを再判定する。全件PASSまではTopic 15へ進めない。
+次工程は上記8 blockerの解消。固定5問・21答案要素、教材本文の技術範囲、練習問題、正答、PDF内容は変更しない。現行PPTXの再QA、進捗記録同期、Webカタログ登録後に最終QAを再判定する。全件PASSまではTopic 15へ進めない。
