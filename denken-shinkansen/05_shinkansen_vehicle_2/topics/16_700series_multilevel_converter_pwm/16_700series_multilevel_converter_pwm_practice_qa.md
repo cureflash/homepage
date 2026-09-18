@@ -46,6 +46,6 @@
 判定: `PASS / PRACTICE_PDF_REVISION_SYNC_COMPLETE`
 
 ## 現在地
-current_status: `topic_16_practice_pdf_revision_sync_complete`
+current_status: `topic_16_progress_sync_complete`
 
-次工程は同じ最小補正を解説画像PowerPointへ同期し、16:9 4枚・1600×900表示QA・PPTX ZIP整合性・固定5問26答案要素・SPEC指定8項目3可視化の整合を再確認する。
+次工程はTopic 16最終QAの再判定。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
