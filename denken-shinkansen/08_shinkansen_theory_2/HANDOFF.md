@@ -6,11 +6,11 @@
 
 Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
 
-current_status: `topic_18_reanswer_complete`
+current_status: `topic_18_final_qa_needs_progress_sync`
 
 active_topic: `18 新幹線のセンサ信号をどう増幅する？`
 
-Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次5問・25答案要素は完成教材だけで再構成し `25 / 25 PASS`、公式標準解答とも `25 / 25` 一致。二次採用0問・二次数合わせ0件。次工程は最終QA。
+Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAでは技術品質ゲートは全件PASSしたが、主source・練習sourceの進捗記録4箇所が旧工程のまま残っているため `NEEDS_REVISION / IN_PROGRESS`。次工程は進捗記録同期。
 
 ## Topic 18 成果物
 
@@ -24,8 +24,9 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - PowerPoint: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_images.pptx`
 - PowerPoint QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_powerpoint_qa.md`
 - 完成後独立再解答: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_reanswer.md`
+- 最終QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_final_qa.md`
 - completion: `in_progress`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `FINAL_QA_NEEDS_PROGRESS_SYNC`
 
 ## Topic 18 固定範囲
 
@@ -178,6 +179,33 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 判定: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
 
+## Topic 18 初回最終QA
+
+記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_final_qa.md`
+
+技術品質は全件PASSした。
+
+- 必須成果物: `PASS`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲: `PASS`
+- 解説PDF表示QA: `3 / 3 PASS`
+- 練習PDF表示QA: `3 / 3 PASS`
+- 練習12問QA: `12 / 12 PASS`
+- PowerPoint表示QA: `5 / 5 PASS`
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXの修正blocker: `0件`
+
+進捗記録のみ4件不整合。
+
+1. 主source冒頭: stage `EXPLANATION_PDF_COMPLETE`、次工程 `練習問題source＋練習PDF` のまま
+2. 主source末尾: 次工程 `練習問題source＋練習PDF` のまま
+3. 練習source冒頭: stage `PRACTICE_PDF_COMPLETE`、次工程 `解説画像PowerPoint＋表示QA` のまま
+4. 練習source末尾: 次工程 `解説画像PowerPoint＋表示QA` のまま
+
+判定: `NEEDS_REVISION / PROGRESS_RECORDS_OUT_OF_SYNC`
+
 ## 次工程
 
-Topic 18の最終QAを実施し、必須成果物、固定一次5問・25答案要素、完成後独立再解答、PDF/PPTX QA、仕様境界、進捗記録整合を総合判定する。
+主source・練習sourceの進捗記録4箇所を、完成後独立再解答済み・最終QA再実施待ちの状態へ同期する。技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXは変更しない。同期後、最終QAを再実施する。
