@@ -6,23 +6,23 @@
 - Topic 01〜17: 最終QA `PASS / completed`
 - 完成数: `17 / 22`
 - active topic: `18 速度指令を変えたら何秒で追従する？`
-- current status: `topic_18_powerpoint_complete`
-- 次工程: Topic 18 独立再解答前ゲート
+- current status: `topic_18_blind_reanswer_ready`
+- 次工程: Topic 18 完成後独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
 - 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 18実在成果物を確認した。
 - 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」であることを確認した。
-- 既存の制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDFはすべてPASSで、固定一次1問＋二次4問、計5問・12答案要素を維持した。
-- 今回、Topic 18解説画像PowerPointを16:9・4枚で作成した。120 dpi・1601×900表示QA `4 / 4 PASS`、ZIP整合性PASS、文字抽出PASS、スライド境界overflow `0件`。
-- `G(s)=25/(s^2+6s+25)` の `ω_n=5 rad/s`、`ζ=0.6`、`ω_d=4 rad/s`、`M_p≈9.48%`、2%整定 `t_s≈1.33 s` を独立再計算PASS。
-- `Y(s)/R(s)=4/(s+5)` の単位ステップで `y(0.4)≈0.692`、`y(∞)=0.8`、`e(∞)=0.2` を独立再計算PASS。
-- 固定5問・12答案要素への可視化対応 `12 / 12 PASS`。
-- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加、固定過去問正答保存は `0件`。
-- PowerPoint: `topics/18_speed_transient_response/18_speed_transient_response_images.pptx`
-- QA: `topics/18_speed_transient_response/18_speed_transient_response_powerpoint_qa.md`
-- 次工程はTopic 18独立再解答前ゲート。
+- 既存の制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPointはすべてPASSで、固定一次1問＋二次4問、計5問・12答案要素を維持した。
+- 今回、独立再解答前ゲートを実施し、公式正答・標準解答・完成済み個別解答を事前参照していないことを確認した。
+- 固定5過去問の公式正答記号・標準解答本文・完成済み個別解答の事前保存は `0件`。
+- 解説PDF表示QA `5 / 5 PASS`、練習PDF表示QA `6 / 6 PASS`、PowerPoint表示QA `4 / 4 PASS`。
+- 練習一次正答一意性 `10 / 10 PASS`、全15問の独立再計算・論理QA `15 / 15 PASS`。
+- 固定5問・12答案要素への教材接続 `12 / 12 PASS`。
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加、固定EXAM_ALIGNMENT変更は `0件`。
+- ゲート記録: `topics/18_speed_transient_response/18_speed_transient_response_blind_reanswer_gate.md`
+- 次工程はTopic 18完成後独立再解答。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -330,5 +330,14 @@ Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘�
 
 判定: `PASS / topic_18_powerpoint_complete / IN_PROGRESS`
 
+## Topic 18 独立再解答前ゲート
+- 記録: `topics/18_speed_transient_response/18_speed_transient_response_blind_reanswer_gate.md`
+- 最新mainと必須spec、Topic 18全成果物を再監査
+- 固定一次1問＋二次4問、計5問・12答案要素を維持
+- 固定5過去問の公式正答記号・標準解答本文・完成済み個別解答の事前保存 `0件`
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加、固定EXAM_ALIGNMENT変更 `0件`
+
+判定: `BLIND_REANSWER_READY / IN_PROGRESS`
+
 ## 次に行うこと
-固定5問・12答案要素とTopic 18既存成果物を変更せず、Topic 18独立再解答前ゲートを実施する。公式正答・標準解答・完成済み個別解答を事前に参照せず、全成果物の実在・範囲・固定EXAM_ALIGNMENTを再監査する。
+完成教材だけを使って固定5問・12答案要素を先に再解答し、答案を固定した後で公式解答・標準解答と照合する。
