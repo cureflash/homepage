@@ -1,9 +1,9 @@
 # 16 同期機って新幹線には使わないの？ — 練習問題 source
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 状態
-Topic 16 の練習問題sourceは12問を維持する。完成後blind独立再解答でR5下 機械 問5のベクトル矢印の始点・終点を誤読したため、問10を `V = E + jXsI` の尾→頭作図を直接判定する問題へ改訂した。系列 `SPEC.md` と固定済み `EXAM_ALIGNMENT`（6問・6答案要素）は変更していない。
+Topic 16 の練習問題sourceは12問を維持する。完成後blind独立再解答でR5下 機械 問5のベクトル矢印の始点・終点を誤読したため、問10を `V = E + jXsI` の尾→頭作図を直接判定する問題へ改訂した。その後、練習PDF・解説PDF・PowerPointへ改訂を再同期し、改訂後blind独立再解答は `6 / 6 PASS`。系列 `SPEC.md` と固定済み `EXAM_ALIGNMENT`（6問・6答案要素）は変更していない。
 
 扱う範囲は、同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本に限定する。始動法・制動巻線、短絡比、無負荷飽和曲線・三相短絡曲線を使う試験法、同期調相機、負荷角・脱出トルク、永久磁石同期機の詳細、突極機・円筒機の詳細理論は扱わない。
 
@@ -335,10 +335,13 @@ Cは正しい。同期発電機の遅れ力率0では減磁作用となる。D�
 - 未確認L0系実車値追加: `0件`
 
 ## 後続工程同期
-- 練習PDF: `16_synchronous_machine_practice.pdf` 既存版あり / 本source改訂未反映 / `REGEN_REQUIRED`
-- 練習PDF QA: 既存版の `16_synchronous_machine_practice_pdf_qa.md` は改訂前sourceに対する `PASS`
+- 練習PDF: `16_synchronous_machine_practice.pdf` / 本source改訂反映済み / `PASS`
+- 練習PDF QA: `16_synchronous_machine_practice_pdf_qa.md` / 200 dpi表示 `2 / 2 PASS` / 正答一覧 `12 / 12 PASS`
+- 解説PDF: source補強反映済み / `PASS`
+- PowerPoint: source補強反映済み / 表示 `4 / 4 PASS` / ZIP整合性 `PASS`
+- 改訂後blind独立再解答: `6 / 6 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 
 ## 次工程
-解説sourceのベクトル図補強を解説PDFへ反映した後、本練習sourceの問10改訂を練習PDFへ反映し、表示QA・文字抽出QA・正答一覧一致を再実施する。
+Topic 16の進捗記録整合を完了後、技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、最終QA再判定を行う。
