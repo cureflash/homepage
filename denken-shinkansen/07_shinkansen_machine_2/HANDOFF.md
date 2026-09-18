@@ -6,23 +6,23 @@
 - Topic 01〜17: 最終QA `PASS / completed`
 - 完成数: `17 / 22`
 - active topic: `18 速度指令を変えたら何秒で追従する？`
-- current status: `topic_18_practice_pdf_complete`
-- 次工程: Topic 18 解説画像PowerPoint＋表示QA
+- current status: `topic_18_powerpoint_complete`
+- 次工程: Topic 18 独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 18実在成果物、直近のTopic 18変更を確認した。
+- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 18実在成果物を確認した。
 - 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」であることを確認した。
-- 既存のTopic 18練習sourceは `PASS / topic_18_practice_source_complete` で、重複制作せず次工程の練習PDF＋QAを実施した。
-- 練習PDFはA4縦6ページ、一次10問＋二次5問。160 dpi表示QA `6 / 6 PASS`、文字抽出PASS。
-- 一次正答一意性 `10 / 10 PASS`、全15問の独立再計算・論理QA `15 / 15 PASS`。
-- 固定一次1問＋二次4問、計5問・12答案要素への接続 `12 / 12 PASS` を維持した。
-- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加は `0件`。
-- 固定問題の正答記号・完成済み個別解答の保存は `0件`。
-- PDF: `topics/18_speed_transient_response/18_speed_transient_response_practice.pdf`
-- QA: `topics/18_speed_transient_response/18_speed_transient_response_practice_pdf_qa.md`
-- 次工程はTopic 18解説画像PowerPoint＋表示QA。
+- 既存の制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDFはすべてPASSで、固定一次1問＋二次4問、計5問・12答案要素を維持した。
+- 今回、Topic 18解説画像PowerPointを16:9・4枚で作成した。120 dpi・1601×900表示QA `4 / 4 PASS`、ZIP整合性PASS、文字抽出PASS、スライド境界overflow `0件`。
+- `G(s)=25/(s^2+6s+25)` の `ω_n=5 rad/s`、`ζ=0.6`、`ω_d=4 rad/s`、`M_p≈9.48%`、2%整定 `t_s≈1.33 s` を独立再計算PASS。
+- `Y(s)/R(s)=4/(s+5)` の単位ステップで `y(0.4)≈0.692`、`y(∞)=0.8`、`e(∞)=0.2` を独立再計算PASS。
+- 固定5問・12答案要素への可視化対応 `12 / 12 PASS`。
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加、固定過去問正答保存は `0件`。
+- PowerPoint: `topics/18_speed_transient_response/18_speed_transient_response_images.pptx`
+- QA: `topics/18_speed_transient_response/18_speed_transient_response_powerpoint_qa.md`
+- 次工程はTopic 18独立再解答前ゲート。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -316,5 +316,19 @@ Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘�
 
 判定: `PASS / topic_18_practice_pdf_complete / IN_PROGRESS`
 
+## Topic 18 解説画像PowerPoint
+- PowerPoint: `topics/18_speed_transient_response/18_speed_transient_response_images.pptx`
+- QA: `topics/18_speed_transient_response/18_speed_transient_response_powerpoint_qa.md`
+- 16:9・4枚
+- 固定5問・12答案要素 `12 / 12 PASS`
+- 120 dpi・1601×900で全4枚表示QA `4 / 4 PASS`
+- PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- PPTX ZIP整合性 PASS
+- PPTX SHA-256 `76bcb73050138d3074507058f4b751d41c424eb303a6f8b84ed1e540f3e3a9af`
+- Git blob SHA `1c65123ba298961a5dac0be4c87fdef6efcbcc14`
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値、固定過去問正答保存 `0件`
+
+判定: `PASS / topic_18_powerpoint_complete / IN_PROGRESS`
+
 ## 次に行うこと
-固定5問・12答案要素とTopic 18既存成果物を変更せず、Topic 18解説画像PowerPointを作成し、表示QA・ZIP整合性QA・仕様境界確認を行う。
+固定5問・12答案要素とTopic 18既存成果物を変更せず、Topic 18独立再解答前ゲートを実施する。公式正答・標準解答・完成済み個別解答を事前に参照せず、全成果物の実在・範囲・固定EXAM_ALIGNMENTを再監査する。
