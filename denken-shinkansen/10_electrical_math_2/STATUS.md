@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 18 / 20
-- current_status: `topic_19_exam_alignment_complete`
+- current_status: `topic_19_preproduction_validation_complete`
 - last_completed_topic: `18 非線形方程式と反復計算`
 - active_topic: `19 最適化入門`
-- next_start: Topic 19の制作前独立検証を実施する
+- next_start: Topic 19の解説本文＋3段階例題を作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -310,7 +310,7 @@
 - [x] H17二次「電力・管理」問6は公式一次資料未確認のため正式件数へ含めない
 - [x] 電験学習資料を2系統以上確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
-- [ ] 制作前独立検証
+- [x] 制作前独立検証（一変数境界・二変数等式制約・ラグランジュ法入口 `PASS`）
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
@@ -322,21 +322,22 @@
 
 ## 今回進めた内容
 
-Topic 19の制作前EXAM_ALIGNMENTを確定した。
+Topic 19の制作前独立検証を完了した。
 
-- 接続確認した第二種公式過去問: `5問`
-- 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
+- Case A: 一変数境界最適化 `x=2`, `f=2` → `PASS`
+- Case B: 二変数等式制約 `x=23/3`, `y=13/3`, `F=407/3` → `PASS`
+- 一変数消去による独立照合: `PASS`
+- Case C: 無次元の運行配分モデル `u=7.5`, `v=2.5`, `E=75` → `PASS`
+- 直接最適化・ラグランジュ法要求の確認済み第二種過去問: `0問`
 - 接続5問の固定品質ゲート件数への水増し: `0件`
-- H17二次「電力・管理」問6: 公式一次資料未確認のため件数外
-- 教材で必要な説明: `6項目` 固定
-- Topic 04との重複再制作: `0件`
-- 仕様外の最適制御・一般数値最適化追加: `0件`
+- H17問6の固定件数追加: `0件`
+- KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_19_exam_alignment_complete / IN_PROGRESS`
+`topic_19_preproduction_validation_complete / IN_PROGRESS`
 
 完成数は `18 / 20`。
 
-次はTopic 19「最適化入門」の制作前独立検証を実施する。
+次はTopic 19「最適化入門」の解説本文＋3段階例題を作成する。
