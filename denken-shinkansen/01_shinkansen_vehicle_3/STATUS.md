@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: `37 / 38`
-- current_status: `topic_38_powerpoint_complete`
+- current_status: `topic_38_independent_reanswer_complete`
 - last_completed_topic: `37 COSMOS② 新幹線の電力設備を遠隔監視する`
 - active_topic: `38 COSMOS③ システムが壊れても新幹線を止めない`
-- next_start: Topic 38の完成後blind独立再解答を実施し、固定5問5答案要素を完成教材だけで導出後、公式解答と照合する
+- next_start: Topic 38の最終QAを実施し、必須4成果物・固定5問5答案要素・各QA・完成後独立再解答を横断確認してcompleted判定する
 
 ## 新品質ゲート進捗
 - [x] 01〜37 — PASS / COMPLETED
-- [ ] 38 — POWERPOINT_COMPLETE / PASS。完成後blind独立再解答・最終QAは未実施
+- [ ] 38 — INDEPENDENT_REANSWER_COMPLETE / PASS。最終QAは未実施
 
 ## Topic 37 最終状態
 判定: `PASS / COMPLETED`。
@@ -47,7 +47,7 @@
 - Topic 38先取り: `0件`
 
 ## Topic 38 今回完了した1段階
-解説画像PowerPointを制作・QAし、`PASS / POWERPOINT_COMPLETE`。
+完成後独立再解答を実施し、`5 / 5 PASS / INDEPENDENT_REANSWER_COMPLETE`。
 
 - source: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability.md`
 - EXAM_ALIGNMENT QA: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_exam_alignment_qa.md`
@@ -61,8 +61,14 @@
 - 練習PDF QA: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_practice_pdf_qa.md`
 - PowerPoint: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_images.pptx`
 - PowerPoint QA: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_images_qa.md`
+- 完成後独立再解答: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_independent_reanswer.md`
 - 固定公式過去問: `5問・5答案要素`
 - 制作前blind独立解答: `5 / 5 PASS`
+- 完成後独立再解答: `5 / 5 PASS`
+- 完成後固定候補: `3, 5, 4, 3, 2`
+- 公式解答一致: `5 / 5 PASS`
+- 候補固定コミット: `b13634cfd502ce968cb5a4bf62ac440b12f3fc47`
+- 教材外知識補完: `0件`
 - 解説本文マッピング: `5 / 5 PASS`
 - 練習問題: `15問`（基礎4 / 標準8 / 複合3）
 - 五肢択一: `15 / 15`
@@ -101,4 +107,4 @@
 JR東日本公開資料で確認できた「システム信頼度の向上」「事故時の情報収集・制御・早期復旧」だけを実システム事実として扱う。COSMOS/COSMOS-SCADAのサーバ台数、二重系/三重系、待機方式、通信経路、切替時間、切替条件、同期方式は推測しない。信頼度数値・式の適用例は独立故障を仮定した学習用モデルであり、COSMOS/COSMOS-SCADAの実信頼度とは扱わない。
 
 ## 完成数
-`37 / 38`。Topic 38はPowerPointまで完了。次は完成後blind独立再解答。
+`37 / 38`。Topic 38は完成後独立再解答まで完了。次は最終QA。
