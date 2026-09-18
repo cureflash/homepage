@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 17 / 20
-- current_status: `topic_18_preproduction_validation_complete`
+- current_status: `topic_18_explanation_body_complete`
 - last_completed_topic: `17 常微分方程式の数値解法`
 - active_topic: `18 非線形方程式と反復計算`
-- next_start: Topic 18の解説本文＋3段階例題を作成する
+- next_start: Topic 18の解説PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -286,7 +286,7 @@
 - [x] 数値求根の基礎資料を複数確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
 - [x] 制作前独立数値検証（固定範囲 `PASS`、二分法20反復・Newton法3反復・初期値依存・導関数ゼロ条件を確認）
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題（固定説明 `5 / 5 PASS`、例題 `3 / 3 PASS`、接続確認5問マッピング `5 / 5 PASS`）
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
@@ -298,13 +298,14 @@
 
 ## 今回進めた内容
 
-Topic 18の制作前独立数値検証を完了した。
+Topic 18の解説本文＋3段階例題を完了した。
 
-- ベンチマーク: `f(x)=x^3-x-2`
-- 二分法 `[1,2]`, 区間半幅許容誤差 `1e-6`: 20反復、近似根 `1.5213804244995117`
-- Newton法 `x0=1.5`, 残差許容誤差 `1e-10`: 3反復、近似根 `1.5213797068045751`
-- 初期値依存: `g(x)=x^3-x` で `x0=0.2` は根0、`x0=0.8` は根1へ収束
-- `g'(1/sqrt(3))=0` のためNewton更新式を適用できないことを確認
+- 固定説明項目: `5 / 5 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 接続確認5問の教材内マッピング: `5 / 5 PASS`
+- 二分法: 符号反転条件、区間半減、区間幅・誤差上限、重根注意を実装
+- Newton法: 接線から更新式を導出し、導関数ゼロ・初期値依存・残差停止条件を実装
+- 本試験標準例題: `P=(VsVr/X)sinδ` を1変数Newton法へ接続し、残差 `1.1901338×10^-8` まで独立計算確認
 - 直接二分法・Newton法要求の第二種過去問: `0問` のまま
 - 接続確認5問の固定品質ゲート件数への水増し: `0件`
 - 第一種Newton-Raphson潮流問題による件数水増し: `0件`
@@ -314,16 +315,10 @@ Topic 18の制作前独立数値検証を完了した。
 source:
 `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration.md`
 
-validation:
-`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_preproduction_validation.md`
-
-script:
-`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_preproduction_validation.py`
-
 ## 判定
 
-`topic_18_preproduction_validation_complete / IN_PROGRESS`
+`topic_18_explanation_body_complete / IN_PROGRESS`
 
 完成数は `17 / 20`。
 
-次はTopic 18の解説本文＋3段階例題を作成する。
+次はTopic 18の解説PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
