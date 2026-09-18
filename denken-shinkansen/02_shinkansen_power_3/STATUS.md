@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 13 / 16
-- current_status: `topic_14_explanation_pdf_complete`
+- current_status: `topic_14_practice_source_complete`
 - last_completed_topic: `13 新幹線の架線は何でできている？`
 - active_topic: `14 駅やトンネルにはどう電気を配る？`
-- next_start: Topic 14の練習問題sourceを作成し、12問以上・本試験形式・正答一意性・固定5問6答案要素への接続・数値論理QAを確認する
+- next_start: Topic 14の練習PDFを作成し、表示QA・文字抽出QA・12問再検算・正答一意性・固定5問6答案要素への接続を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -24,7 +24,7 @@
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 14 駅やトンネルにはどう電気を配る？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF完了。A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`、数値・論理再検算 `3 / 3 PASS`、固定5問・6答案要素のPDF対応 `6 / 6`。次は練習問題source
+- [ ] 14 駅やトンネルにはどう電気を配る？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source完了。練習sourceは全12問・全問五肢択一、基礎3／本試験標準7／複合2、数値・論理再計算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5問・6答案要素への接続 `6 / 6 PASS`。次は練習PDF
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
@@ -74,7 +74,7 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 集計:
 - 制作前独立検証: `7 / 7 PASS`
 - 解説本文: §1〜§9 完成
-- 3段階例題: 基礎・本試験標準・複合 各1問完成
+- 3段階例題: 基礎・本試験標準7 / 複合2
 - 固定5問・7小問の本文要求事項マッピング: `7 / 7`
 - 解説PDF: A4縦4ページ
 - 解説PDF表示QA: 200 dpi `4 / 4 PASS`
@@ -232,7 +232,7 @@ PowerPoint QA: `topics/10_load_variation/10_load_variation_powerpoint_qa.md`
 - 教材外知識補完: `0件`
 - Topic 11以降の論点による補完: `0件`
 - SPEC固定範囲外追加（独立再解答時）: `0件`
-- 未確認実設備値の使用: `0件`
+- 未確認新幹線実設備値の使用: `0件`
 - main sourceへの完成後独立再解答結果同期: 完了
 - 前回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程3箇所）
 - 旧進捗記録3箇所同期: 完了
@@ -457,6 +457,7 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 source: `topics/14_distribution/14_distribution.md`
 解説PDF: `topics/14_distribution/14_distribution_explanation.pdf`
 解説PDF QA: `topics/14_distribution/14_distribution_explanation_qa.md`
+練習問題source: `topics/14_distribution/14_distribution_practice_source.md`
 
 固定5問・6答案要素:
 - R8上 電力 問13
@@ -484,7 +485,12 @@ source: `topics/14_distribution/14_distribution.md`
 - 解説PDF文字抽出QA: `PASS`
 - 解説PDF数値・論理再検算: `3 / 3 PASS`
 - 固定5問・6答案要素のPDF対応: `6 / 6`
-- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPDF転記 `0件`
+- 練習問題source: 全12問・全問五肢択一
+- 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5問・6答案要素への接続: `6 / 6 PASS`
+- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案の練習source転記 `0件`
 - SPEC固定範囲外の採用問題・本文・PDF追加: `0件`
 - 既完了Topic固定過去問との重複採用: `0件`
 - 未確認新幹線実設備値への依存・真値化: `0件`
@@ -501,4 +507,4 @@ source: `topics/14_distribution/14_distribution.md`
 - H20 電力 問17(a)(b): `(2),(3)`
 
 ## 次
-Topic 14の練習問題sourceを作成し、12問以上・本試験形式・正答一意性・固定5問6答案要素への接続・数値論理QAを確認する。
+Topic 14の練習PDFを作成し、表示QA・文字抽出QA・12問再検算・正答一意性・固定5問6答案要素への接続を確認する。
