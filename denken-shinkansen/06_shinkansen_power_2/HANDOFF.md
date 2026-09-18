@@ -21,8 +21,8 @@ current_status: `topic_15_explanation_pdf_needs_revision`
 
 ## PDF QA結果
 
-- A4縦: `5ページ`
-- 200 dpi表示: `5 / 5 PASS`
+- A4縦: `3ページ`
+- 200 dpi表示: `3 / 3 PASS`
 - ページ外逸脱・文字重なり・本文切れ: `0件`
 - 黒四角・欠損グリフ: `0件`
 - 文字抽出: `PASS / U+FFFD 0件`

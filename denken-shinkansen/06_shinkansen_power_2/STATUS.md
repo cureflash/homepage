@@ -40,8 +40,8 @@ Topic 01〜14は `completed`。
 解説PDF:
 - `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
 - `topics/15_regenerative_power/15_regenerative_power_explanation_pdf_qa.md`
-- A4縦 `5ページ`
-- 200 dpi表示: `5 / 5 PASS`
+- A4縦 `3ページ`
+- 200 dpi表示: `3 / 3 PASS`
 - 文字抽出: `PASS / U+FFFD 0件 / 黒四角0件`
 - SPEC固定可視化: `3 / 3 PASS`
 - 固定5問・24答案要素の説明接続: `24 / 24 covered`

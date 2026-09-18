@@ -8,22 +8,20 @@ source: `15_regenerative_power_explanation.md`
 
 ## 現行成果物
 
-- Git blob SHA: `09f9b04975f980a6be9ca1808460f665cafa2dbd`
-- ファイルサイズ: `18505 bytes`
-- SHA-256: `9a7905872284e6e6e21e70b4dd5c2a4f7787d40263b8ae757153d6deb2ab4e92`
+- Git blob SHA: `847ed1e846d6ee734c1c5a14e00169a65ce58910`
+- ファイルサイズ: `8867 bytes`
+- SHA-256: `075f8d9752da0c66d716bb837d137cebb3313a03ea369b01748b4fb175e54bfe`
 - 用紙: A4縦
-- ページ数: `5`
+- ページ数: `3`
 - 正式品質ゲート: 一次3問＋二次2問、固定`5問・24答案要素`（変更なし）
 
 ## 200 dpi表示QA
 
-5ページすべてを200 dpiでレンダリングして確認した。
+3ページすべてを200 dpiでレンダリングして確認した。
 
 - page 1: `PASS`
 - page 2: `PASS`
 - page 3: `PASS`
-- page 4: `PASS`
-- page 5: `PASS`
 - ページ外逸脱、文字重なり、本文切れ: `0件`
 - 黒四角・欠損グリフ: `0件`
 
