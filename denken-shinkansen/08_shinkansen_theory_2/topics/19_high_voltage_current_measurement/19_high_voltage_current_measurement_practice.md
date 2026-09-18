@@ -1,14 +1,14 @@
 # Topic 19 練習問題 source - 25kV・大電流をどう安全に測る？
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 状態
 
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 19のSPEC固定範囲10項目だけから練習問題12問を作成した。二種理論は一次試験が中心であり、固定範囲だけで完結する二次記述式を採用していないため、二次数合わせは行わない。
 
-- completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
-- 次工程: 解説画像PowerPoint＋表示QA
+- completion: `completed`
+- stage: `COMPLETED`
+- 次工程: Topic 20 制作前EXAM_ALIGNMENT
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
