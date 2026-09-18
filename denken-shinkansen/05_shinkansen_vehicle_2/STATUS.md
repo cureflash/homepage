@@ -6,14 +6,36 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `17 / 39`
-- current_status: `topic_18_explanation_pdf_complete`
+- current_status: `topic_18_practice_source_complete`
 - last_completed_topic: `17 パワー半導体の損失比較`
 - active_topic: `18 E2系 50Hz・60Hzと磁束`
-- next_start: Topic 18の練習source。完成済み解説source/PDFと固定5問・15答案要素、SPEC指定7項目・3可視化を変更せず、一次・二次の演習へ落とす
+- next_start: Topic 18の練習PDF。完成済み練習source、固定5問・15答案要素、SPEC指定7項目・3可視化、問題・正答・数式を変更せずPDF化し、表示・文字抽出・数値QAを行う
 
 ## 完了済み
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
+
+## Topic 18 練習source
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
+source:
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_practice_source.md`
+
+品質:
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次試験型: `4 / 4`、途中式・前提・単位・理由を収録
+- 完全解説: `12 / 12`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定過去問: `一次3問＋二次2問 / 5問`
+- 固定答案要素の実効接続: `一次7＋二次8 / 15 / 15 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+- 完成後clean blind公式照合: `未実施 / 練習PDF・PowerPoint完成後`
 
 ## Topic 18 解説PDF
 
@@ -167,4 +189,4 @@ clean blind候補答案:
 
 ## 次工程
 
-Topic 18の練習sourceを作る。`18_e2series_50hz_60hz_flux_explanation_source.md` と解説PDFを正本として、固定5問・15答案要素、SPEC指定7項目・3可視化を変更しない。一次・二次の過去問要求へ接続する練習問題を作り、各問の正答一意性・数値再計算・固定答案要素カバレッジをQAする。
+Topic 18の練習PDFを作る。`18_e2series_50hz_60hz_flux_practice_source.md` を正本として、固定5問・15答案要素、SPEC指定7項目・3可視化、一次8問・二次4問の問題・正答・数式を変更しない。PDF生成後に表示QA、文字抽出QA、数値・正答一意性QAを行う。
