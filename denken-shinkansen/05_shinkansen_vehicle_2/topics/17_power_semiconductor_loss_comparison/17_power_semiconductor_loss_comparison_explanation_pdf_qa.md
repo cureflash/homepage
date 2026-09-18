@@ -36,5 +36,5 @@
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
-## 次工程
-Topic 17の練習問題sourceを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
+## 現在地
+Topic 17の練習問題sourceは `PASS / PRACTICE_SOURCE_COMPLETE`。次工程は練習PDF作成。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
