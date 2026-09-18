@@ -6,19 +6,19 @@
 - Topic 01〜17: 最終QA `PASS / completed`
 - 完成数: `17 / 22`
 - active topic: `18 速度指令を変えたら何秒で追従する？`
-- current status: `topic_17_completed`
-- 次工程: Topic 18 制作前EXAM_ALIGNMENT
+- current status: `topic_18_exam_alignment_complete`
+- 次工程: Topic 18 解説source本文
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 17 source、解説PDF・QA、練習source・練習PDF・QA、PowerPoint・QA、独立再解答記録を再確認した。
-- Topic 17は最終QA `PASS`、完成後独立再解答 `6 / 6 PASS`、PDF/PPTX各QA PASSを維持したまま completed 状態へ同期した。
-- main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程`、系列 `STATUS.md` / `HANDOFF.md` を完成状態へ同期した。
-- 固定一次1問＋二次4問、計5問・6答案要素を変更していない。
-- Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加、教材外知識による補完は `0件`。
-- 技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更は `0件`。
-- 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」。次工程は制作前EXAM_ALIGNMENT。
+- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md` を確認した。
+- 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」であることを確認した。
+- R08一次「機械」まで直近年度から公式過去問を確認し、Topic 18固定範囲へ接続できる一次1問＋二次4問、計5問・12答案要素を固定した。
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加は `0件`。
+- 固定問題の正答記号・最終数値・完成済み個別解答の保存は `0件`。
+- source: `topics/18_speed_transient_response/18_speed_transient_response.md`
+- 次工程はTopic 18解説source本文。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -219,5 +219,42 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `PASS / topic_17_completed / completed`
 
+## Topic 18 固定範囲
+- 一次遅れ
+- 二次遅れ
+- 時定数
+- 減衰係数
+- 固有角周波数
+- オーバーシュート
+- 立上り時間
+- 整定時間
+- 定常偏差
+- グラフ: ステップ応答、時定数変更比較、減衰係数変更比較
+
+Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘着制御は先取りしない。Topic 17の伝達関数・ブロック線図は既習事項として必要最小限だけ使う。未確認の新幹線実車時定数・制御ゲイン・整定時間等は使用しない。
+
+## Topic 18 固定EXAM_ALIGNMENT
+- H23 一次 機械 問7 (2) — 1答案要素
+- R07 二次 機械・制御 問4 (2),(4),(5) — 4答案要素
+- R06 二次 機械・制御 問4 (2),(3),(4) — 3答案要素
+- R03 二次 機械・制御 問4 (3),(4) — 2答案要素
+- H29 二次 機械・制御 問4 (5) — 2答案要素
+
+一次1問＋二次4問、計5問。品質ゲート対象は12答案要素。
+
+制作前EXAM_ALIGNMENT source:
+`topics/18_speed_transient_response/18_speed_transient_response.md`
+
+## Topic 18 制作前EXAM_ALIGNMENT
+- R08一次「機械」まで直近年度から公式過去問を確認
+- 一次1問＋二次4問、計5問・12答案要素を固定
+- 時間応答、定常値・定常偏差、二次遅れの固有角周波数・減衰係数へ直接対応する小問を採用
+- 二次記述・計算問題を4問含む
+- 参考教材2系統以上を確認
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加: `0件`
+- 固定問題の正答記号・最終数値・完成済み個別解答保存: `0件`
+
+判定: `PASS / topic_18_exam_alignment_complete / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 18「速度指令を変えたら何秒で追従する？」の制作前EXAM_ALIGNMENTを行う。系列 `SPEC.md` の固定範囲（一次遅れ、二次遅れ、時定数、減衰係数、固有角周波数、オーバーシュート、立上り時間、整定時間、定常偏差、ステップ応答）から逸脱せず、二種一次・二次の公式過去問を直近年度から調査し、品質ゲート対象を固定する。
+固定5問・12答案要素と系列 `SPEC.md` の固定範囲を変更せず、Topic 18解説source本文を作成する。
