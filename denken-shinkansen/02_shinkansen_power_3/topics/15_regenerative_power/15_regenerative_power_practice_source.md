@@ -406,7 +406,7 @@
 - 数値問題は一般的な学習用仮定値として構成。
 
 ## 判定
-`PASS / PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`
+`PASS / PRACTICE_SOURCE_COMPLETE`
 
 ## 次
-完成後ブラインド独立再解答 `8 / 8 PASS` と初回最終QA `NEEDS_REVISION / IN_PROGRESS` を確認済み。初回最終QAで唯一未達だった進捗記録整合の同期を完了した。次はTopic 15の最終QAを再実施する。固定EXAM_ALIGNMENT、技術内容、問題・正答、PDF/PPTX、完成後独立再解答結果は変更しない。
+Topic 15の最終QA再実施は `PASS / completed`。固定EXAM_ALIGNMENT、技術内容、問題・正答、PDF/PPTX、完成後独立再解答結果は変更していない。次はTopic 16の制作前EXAM_ALIGNMENT。
