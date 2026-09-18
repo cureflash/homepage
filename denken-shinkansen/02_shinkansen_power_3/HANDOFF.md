@@ -8,7 +8,7 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 16の完成後独立再解答を完了した。固定5出題回・7答案要素を完成教材の式・解法だけで問題文から再計算し `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件、SPEC固定範囲外追加0件、件数合わせ0件、未確認新幹線実設備値の真値化0件。Topic 16は最終QA未実施のため `in_progress`、完成数は `15 / 16` のまま。
+Topic 16 main sourceへ完成後独立再解答結果を同期した。固定5出題回・7答案要素は完成教材だけで `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件、SPEC固定範囲外追加0件、件数合わせ0件、未確認新幹線実設備値の真値化0件で変更なし。PowerPoint QAもsourceへ同期済み。Topic 16は最終QA未実施のため `in_progress`、完成数は `15 / 16` のまま。
 
 source: `topics/16_power_system_integration/16_power_system_integration.md`
 解説PDF: `topics/16_power_system_integration/16_power_system_integration_explanation.pdf`
@@ -65,6 +65,7 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - 完成後独立再解答: `7 / 7 PASS`
 - 完成後公式標準解答一致: `7 / 7 PASS`
 - 完成後教材外知識補完: `0件`
+- main sourceへの完成後独立再解答結果同期: 完了
 - SPEC固定範囲外追加: `0件`
 - 件数合わせの仕様追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
@@ -76,7 +77,7 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - 実設備値は一次資料確認済みのものだけを実値とする。
 
 ## 次
-Topic 16 main sourceへ完成後独立再解答結果を同期する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。最終QAにはまだ進まない。
+Topic 16最終QAを実施する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。
 
 ## 直前完了テーマ
 Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
