@@ -1,0 +1,208 @@
+name: tmp-topic19-powerpoint
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp-topic19-powerpoint.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile current state
+        shell: bash
+        run: |
+          set -euo pipefail
+          STATUS='denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md'
+          TARGET='denken-shinkansen/05_shinkansen_vehicle_2/topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_images.pptx'
+          grep -Fq 'current_status: `topic_19_practice_pdf_complete`' "$STATUS" || { echo 'BLOCKER: Topic 19 state already advanced by another worker'; exit 21; }
+          test ! -e "$TARGET" || { echo 'BLOCKER: Topic 19 PowerPoint already exists'; exit 22; }
+      - name: Build and verify PowerPoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet python-pptx
+          python .github/tmp/build_vehicle2_topic19_pptx.py
+          TARGET='denken-shinkansen/05_shinkansen_vehicle_2/topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_images.pptx'
+          unzip -t "$TARGET" >/dev/null
+          python - <<'PY'
+          from pptx import Presentation
+          p='denken-shinkansen/05_shinkansen_vehicle_2/topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_images.pptx'
+          r=Presentation(p)
+          assert len(r.slides)==4
+          assert abs((r.slide_width/r.slide_height)-(16/9)) < 1e-5
+          for slide in r.slides:
+              for sh in slide.shapes:
+                  assert sh.left >= 0 and sh.top >= 0
+                  assert sh.left + sh.width <= r.slide_width + 2
+                  assert sh.top + sh.height <= r.slide_height + 2
+          PY
+          if ! command -v libreoffice >/dev/null || ! command -v pdftoppm >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq libreoffice-impress poppler-utils >/dev/null
+          fi
+          mkdir -p /tmp/topic19_render
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic19_render "$TARGET" >/tmp/topic19_lo.txt 2>&1
+          PDF='/tmp/topic19_render/19_mini_shinkansen_dual_voltage_main_circuit_images.pdf'
+          test "$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')" = '4'
+          pdftoppm -png -scale-to-x 1600 -scale-to-y 900 "$PDF" /tmp/topic19_render/slide >/dev/null 2>&1
+          test "$(find /tmp/topic19_render -maxdepth 1 -name 'slide-*.png' | wc -l)" = '4'
+          pdftotext "$PDF" /tmp/topic19_render/text.txt
+          ! grep -Fq '�' /tmp/topic19_render/text.txt
+          ! grep -Fq '(cid:' /tmp/topic19_render/text.txt
+      - name: Sync QA and progress records
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          base=Path('denken-shinkansen/05_shinkansen_vehicle_2')
+          topic=base/'topics/19_mini_shinkansen_dual_voltage_main_circuit'
+          ppt=topic/'19_mini_shinkansen_dual_voltage_main_circuit_images.pptx'
+          qa=topic/'19_mini_shinkansen_dual_voltage_main_circuit_powerpoint_qa.md'
+          sha=hashlib.sha256(ppt.read_bytes()).hexdigest(); size=ppt.stat().st_size
+          qa.write_text(f'''# 19 ミニ新幹線 複電圧主回路 — 解説画像PowerPoint QA
+
+更新日: 2026-09-19
+
+## 対象
+- PowerPoint: `19_mini_shinkansen_dual_voltage_main_circuit_images.pptx`
+- 固定EXAM_ALIGNMENT: `19_mini_shinkansen_dual_voltage_main_circuit.md`
+- 解説source: `19_mini_shinkansen_dual_voltage_main_circuit_explanation_source.md`
+- 練習source: `19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md`
+
+## 構造・表示QA
+- 画面比: `16:9`
+- スライド数: `4枚`
+- python-pptx open: `PASS / 4 slides`
+- PPTX ZIP整合性: `PASS`
+- LibreOffice PDF変換: `PASS / 4ページ`
+- pdftoppm 1600×900生成: `4 / 4 PASS`
+- スライド外周クリップ: `0件`
+- PDF文字抽出: `PASS`
+- Unicode置換文字 / `(cid:)`: `0件 / 0件`
+- 同一generatorの1600×900表示目視QA: `4 / 4 PASS`
+
+## 内容QA
+1. Slide 1: 複電圧→主変圧器→主変換装置→主負荷・補助電源、電源切替、絶縁協調を機能ブロックで接続し、固定5問・9答案要素を明示。
+2. Slide 2: `I1=Pout/(ηV1cosφ)`。教材用仮定で10 kV→800 A、8 kV→1000 A、比1.25を可視化。
+3. Slide 3: `V2=V1N2/N1,tap`。1250→1.6 kV、1000→2.0 kV、800→2.5 kVを可視化。H25論点は一般原理としてのみ記載。
+4. Slide 4: 同一出力条件比較と理想降圧変換 `Vo=DVd` の0.60/0.80を接続。変圧・変換、絶縁協調、電源切替を未確認実車仕様へ混同しない。
+
+## 数値・論理QA
+- `6.84×10^6/(0.95×10×10^3×0.90)=800 A`: `PASS`
+- `6.84×10^6/(0.95×8×10^3×0.90)=1000 A`: `PASS`
+- `1000/800=1.25`: `PASS`
+- `12.5 kV→640 A`, `16 kV→500 A`, `20 kV→400 A`: `PASS`
+- `10×200/1250=1.6 kV`, `10×200/1000=2.0 kV`, `10×200/800=2.5 kV`: `PASS`
+- `720/1200=0.60`, `720/900=0.80`: `PASS`
+
+## 過去問対応品質ゲート
+- 固定過去問: `一次4問＋二次1問 / 計5問 / 変更なし`
+- 固定答案要素: `一次7＋二次2 / 9 / 変更なし`
+- 固定5問・9答案要素への可視化・接続: `9 / 9 PASS`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 解説／練習の問題・正答・数式変更: `0件`
+- SPEC外追加: `0件`
+- 未確認ミニ新幹線実車値の真値化: `0件`
+- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
+- 完成後clean blind公式照合: `未実施 / 次工程`
+- 判定: `PASS / POWERPOINT_COMPLETE`
+
+## ファイル識別
+- size: `{size} bytes`
+- SHA-256: `{sha}`
+
+## 次工程
+固定5問・9答案要素を教材だけでclean blind再解答し、公式解答・標準解答を先に見ず候補答案を固定したうえで照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。
+''', encoding='utf-8')
+
+          status=(base/'STATUS.md').read_text(encoding='utf-8')
+          status=status.replace('current_status: `topic_19_practice_pdf_complete`','current_status: `topic_19_powerpoint_complete`',1)
+          status=status.replace('next_start: Topic 19の解説画像PowerPoint。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3可視化を変更せず、解説／練習sourceとPDFへ接続する','next_start: Topic 19の完成後clean blind独立再解答。固定5問・9答案要素を教材だけで解き、公式解答・標準解答を先に見ず候補答案を固定してから照合する',1)
+          section='''## Topic 19 解説画像PowerPoint
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+成果物:
+- PowerPoint: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_images.pptx`
+- QA: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_powerpoint_qa.md`
+
+品質:
+- 16:9 / 4 slides
+- python-pptx open / PPTX ZIP: `PASS`
+- LibreOffice PDF / pdftoppm 1600×900: `4 / 4 PASS`
+- 固定5問・9答案要素接続: `9 / 9 PASS`
+- SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
+- 数式・数値QA: `PASS`
+- 固定EXAM_ALIGNMENT変更 / 問題・正答・数式変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
+- 完成後clean blind公式照合: `未実施 / 次工程`
+
+'''
+          marker='## Topic 19 練習PDF\n'
+          if '## Topic 19 解説画像PowerPoint\n' not in status:
+              assert marker in status; status=status.replace(marker,section+marker,1)
+          old='Topic 19「ミニ新幹線 複電圧主回路」の解説画像PowerPointを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3可視化を変更せず、解説／練習sourceとPDFへ接続する。未確認の実車仕様は真値化しない。'
+          new='Topic 19「ミニ新幹線 複電圧主回路」の完成後clean blind独立再解答を行う。固定5問・9答案要素を教材だけで解き、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。'
+          assert old in status; status=status.replace(old,new,1)
+          (base/'STATUS.md').write_text(status,encoding='utf-8')
+
+          hand=(base/'HANDOFF.md').read_text(encoding='utf-8')
+          oldloc='現在地は `topic_19_practice_pdf_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFまで完了。次はPowerPoint。完成後clean blindは未着手。'
+          newloc='現在地は `topic_19_powerpoint_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPointまで完了。次は完成後clean blind独立再解答。'
+          assert oldloc in hand; hand=hand.replace(oldloc,newloc,1)
+          hsection='''## Topic 19 解説画像PowerPoint
+
+成果物:
+- PowerPoint: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_images.pptx`
+- QA: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_powerpoint_qa.md`
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+品質:
+- 16:9 / 4 slides
+- LibreOffice PDF / pdftoppm 1600×900: `4 / 4 PASS`
+- 固定5問・9答案要素接続: `9 / 9 PASS`
+- SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
+- 数式・数値QA: `PASS`
+- 固定EXAM_ALIGNMENT変更 / 問題・正答・数式変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
+- 完成後clean blind公式照合: `未実施 / 次工程`
+
+'''
+          if '## Topic 19 解説画像PowerPoint\n' not in hand:
+              assert marker in hand; hand=hand.replace(marker,hsection+marker,1)
+          oldh='Topic 19の解説画像PowerPointを作る。固定5問・9答案要素、SPEC指定9項目・3可視化、解説／練習sourceとPDFの問題・正答・数式を変更しない。PowerPoint完成後にclean blind公式照合へ進む。'
+          newh='Topic 19の完成後clean blind独立再解答を行う。固定5問・9答案要素を教材だけで解き、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。'
+          assert oldh in hand; hand=hand.replace(oldh,newh,1)
+          (base/'HANDOFF.md').write_text(hand,encoding='utf-8')
+
+          main=topic/'19_mini_shinkansen_dual_voltage_main_circuit.md'; text=main.read_text(encoding='utf-8')
+          text=text.replace('制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFを完了した。PowerPoint・完成後clean blindは未着手。','制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPointを完了した。完成後clean blindは未着手。',1)
+          text=text.replace('current_status: `topic_19_practice_pdf_complete`','current_status: `topic_19_powerpoint_complete`',1)
+          anchor='- 練習PDF QA: `19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md`\n'
+          extra='- 解説画像PowerPoint: `19_mini_shinkansen_dual_voltage_main_circuit_images.pptx` — `PASS / POWERPOINT_COMPLETE`\n- PowerPoint QA: `19_mini_shinkansen_dual_voltage_main_circuit_powerpoint_qa.md`\n'
+          if extra.splitlines()[0] not in text:
+              assert anchor in text; text=text.replace(anchor,anchor+extra,1)
+          oldm='次工程: 解説画像PowerPointを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3計算/グラフの範囲を変えない。解説／練習sourceとPDFの問題・正答・数式を変更せず、未確認の実車仕様は真値化しない。'
+          newm='次工程: 完成後clean blind独立再解答。固定5問・9答案要素を教材だけで解き、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。'
+          assert oldm in text; text=text.replace(oldm,newm,1)
+          main.write_text(text,encoding='utf-8')
+          PY
+      - name: Commit canonical result and remove staging files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .tmp_topic19_pptx
+          rm -f .github/tmp/build_vehicle2_topic19_pptx.py .github/workflows/tmp-topic19-powerpoint.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'denken vehicle2: add Topic 19 PowerPoint and QA'
+          git push origin HEAD:main
