@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 18 / 20
-- current_status: `topic_18_completed`
+- current_status: `topic_19_exam_alignment_complete`
 - last_completed_topic: `18 非線形方程式と反復計算`
 - active_topic: `19 最適化入門`
-- next_start: Topic 19の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 19の制作前独立検証を実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -298,29 +298,45 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 19 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 最新main・STATUS・HANDOFF・Topic 04境界確認
+- [x] 第二種公式過去問を直近年度から調査
+- [x] 接続確認5問を整理
+- [x] 直接最適化・ラグランジュ未定乗数法を要求する確認済み第二種過去問0問を記録
+- [x] 接続5問を固定品質ゲート件数へ水増ししないことを確定
+- [x] H17二次「電力・管理」問6は公式一次資料未確認のため正式件数へ含めない
+- [x] 電験学習資料を2系統以上確認
+- [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
+- [ ] 制作前独立検証
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋QA
+- [ ] 練習問題source
+- [ ] 練習PDF＋QA
+- [ ] 解説画像PowerPoint＋QA
+- [ ] 完成後独立検証
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 18の最終QAを再判定した。
+Topic 19の制作前EXAM_ALIGNMENTを確定した。
 
-- 必須成果物実在: `PASS`
-- 固定EXAM_ALIGNMENT: `PASS`
-- 直接二分法・Newton法要求の確認済み第二種過去問: `0問`
 - 接続確認した第二種公式過去問: `5問`
-- 非該当5問の固定品質ゲート件数への水増し: `0件`
-- 完成後独立検証: `3 / 3 PASS`
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- 解説PDF表示QA: `4 / 4 PASS`
-- 練習PDF表示QA: `5 / 5 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- 進捗記録整合: `6 / 6 PASS`
-- 仕様外追加: `0件`
+- 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
+- 接続5問の固定品質ゲート件数への水増し: `0件`
+- H17二次「電力・管理」問6: 公式一次資料未確認のため件数外
+- 教材で必要な説明: `6項目` 固定
+- Topic 04との重複再制作: `0件`
+- 仕様外の最適制御・一般数値最適化追加: `0件`
 - 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_18_completed / completed`
+`topic_19_exam_alignment_complete / IN_PROGRESS`
 
 完成数は `18 / 20`。
 
-次はTopic 19「最適化入門」の制作前EXAM_ALIGNMENTを実施する。
+次はTopic 19「最適化入門」の制作前独立検証を実施する。
