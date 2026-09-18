@@ -6,14 +6,38 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `18 / 39`
-- current_status: `topic_19_explanation_pdf_complete`
+- current_status: `topic_19_practice_source_complete`
 - last_completed_topic: `18 E2系 50Hz・60Hzと磁束`
 - active_topic: `19 ミニ新幹線 複電圧主回路`
-- next_start: Topic 19の練習source。固定5問・9答案要素とSPEC指定9項目・3可視化を変更せず、一次・二次の練習問題へ接続する
+- next_start: Topic 19の練習PDF。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3可視化を変更せずPDF化し、表示・数式・正答一意性QAを行う
 
 ## 完了済み
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
+
+## Topic 19 練習source
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
+成果物:
+- 主source: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit.md`
+- 練習source: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md`
+
+品質:
+- 一次試験型: `8問 / 8問五肢択一`
+- 二次試験型: `4問 / 記述式`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問: `一次4問＋二次1問 / 5問`
+- 固定答案要素: `一次7＋二次2 / 9`
+- 固定答案要素の練習問題接続: `9 / 9 covered`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定3可視化の式系・条件: `3 / 3 aligned`
+- SPEC外追加: `0件`
+- 未確認ミニ新幹線実車値の真値化: `0件`
+- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
+- 完成後clean blind公式照合: `未実施 / 成果物完成後に実施`
 
 ## Topic 19 解説PDF
 
@@ -205,4 +229,4 @@ PDF/PPTX本体・問題・正答・数式・固定過去問は最終QA再実施�
 
 ## 次工程
 
-Topic 19「ミニ新幹線 複電圧主回路」の練習sourceを作る。固定5問・9答案要素、SPEC指定9項目・3可視化を変更せず、一次・二次の解法を教材だけで再現できる問題・解答・解説へ接続する。未確認の実車電圧・巻数・タップ構成・絶縁定格・切替方式は真値化しない。
+Topic 19「ミニ新幹線 複電圧主回路」の練習PDFを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3可視化の式系・条件を変更せずPDF化する。表示崩れ、数式・数値、一次正答一意性を再確認し、未確認の実車電圧・巻数・タップ構成・絶縁定格・切替方式は真値化しない。
