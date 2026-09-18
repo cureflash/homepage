@@ -103,23 +103,20 @@ GitHub正本で実在を確認した。
 
 ## 6. 進捗記録整合
 
-現行mainには次の不整合が残る。
+直近同系列workerの更新を再reconcileした結果、`STATUS.md` と `HANDOFF.md` は `topic_18_blind_reanswer_official_check_complete`、clean blind `15 / 15 PASS`、次工程「Topic 18最終QA」へ同期済み。
+
+現行mainに残る不整合は1記録のみ。
 
 1. `18_e2series_50hz_60hz_flux.md`
    - `current_status: topic_18_practice_source_complete` のまま。
    - 「練習PDF・PowerPointは未着手」「次工程: 練習PDF」と記録されており、実在する練習PDF・PowerPoint・clean blind `15 / 15 PASS` と一致しない。
-2. `HANDOFF.md`
-   - 現在地が `topic_18_powerpoint_complete` のまま。
-   - clean blind公式照合を `未実施 / 次工程` と記録しており、現行公式照合記録 `15 / 15 PASS` と一致しない。
 
-`STATUS.md` は `topic_18_blind_reanswer_official_check_complete` と最終QA開始前状態へ同期済み。
-
-進捗記録整合: `FAIL / 2 records stale`。
+進捗記録整合: `FAIL / 1 record stale`。
 
 ## exact blocker
 
-`Topic 18の技術成果物・一次/二次過去問ゲートは全てPASSしているが、主sourceとHANDOFFの2記録が現行mainの実状態へ未同期。これらを同期し、最終QAを再実施するまでcompleted化できない。`
+`Topic 18の技術成果物・一次/二次過去問ゲート、STATUS/HANDOFFは現状態へ同期済みだが、主sourceの状態欄だけがpractice_source_completeのまま。主sourceを現行状態へ同期し、最終QAを再実施するまでcompleted化できない。`
 
 ## 次工程
 
-主sourceと `HANDOFF.md` の進捗表記だけを、固定5問・15答案要素、clean blind `15 / 15 PASS`、次工程「最終QA再実施」へ同期する。技術本文、問題、正答、数式、PDF/PPTX、固定EXAM_ALIGNMENTは変更しない。
+主source `18_e2series_50hz_60hz_flux.md` の進捗表記だけを、固定5問・15答案要素、clean blind `15 / 15 PASS`、次工程「最終QA再実施」へ同期する。技術本文、問題、正答、数式、PDF/PPTX、固定EXAM_ALIGNMENTは変更しない。
