@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_final_qa_needs_revision`
+- current_status: `topic_16_progress_records_synced`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の進捗記録6ファイルだけを現在地へ同期する
+- next_start: Topic 16の最終QAを再判定する
 
 ## Topic 07 制作品質ゲート
 
@@ -245,38 +245,33 @@
 - [x] 完成後独立再解答前のブラインドゲート整備（当runは保存済み正答視認のため再解答不実施）
 - [x] 完成後独立再解答 `8 / 8 PASS`（post-completion lock commit `4688e138f4d32329e0db432740e8f0cd44ee34a6`）
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] 進捗記録6ファイルの同期
+- [x] 進捗記録6ファイルの同期
 - [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 16の最終QAを実施した。
+Topic 16の初回最終QAで指摘された進捗記録6ファイルを、実成果物の現在地へ同期した。
 
-技術内容と過去問対応品質ゲートはすべてPASS。
-
-- 必須成果物実在: PASS
-- 固定第二種公式4問・8答案要素: PASS
-- 制作前独立再解答・公式解答照合: `8 / 8 PASS`
-- 完成後独立再解答: `8 / 8 PASS`
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- 解説PDF表示QA: `3 / 3 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立再解答結果の変更: 0件
+- 固定第二種公式4問・8答案要素: 維持
+- 制作前独立再解答・公式解答照合: `8 / 8 PASS` を維持
+- 完成後独立再解答: `8 / 8 PASS` を維持
+- 練習問題独立計算・論理QA: `12 / 12 PASS` を維持
+- 一次型正答一意性: `8 / 8 PASS` を維持
 - 仕様外論点追加: 0件
 - 第一種・第三種による件数水増し: 0件
 - 未確認実車値依存: 0件
 
-ただし実成果物より古い進捗記録が6ファイルに残っているため、進捗記録整合QAはFAIL。
+最終QAはこの段階では再判定していない。
 
 最終QA:
 `topics/16_numerical_differentiation_integration/16_numerical_differentiation_integration_final_qa.md`
 
 ## 判定
 
-`topic_16_final_qa_needs_revision / IN_PROGRESS`
+`topic_16_progress_records_synced / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次はTopic 16の進捗記録6ファイルだけを現在地へ同期する。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、完成後独立再解答結果は変更しない。
+次はTopic 16の最終QAを再判定する。
