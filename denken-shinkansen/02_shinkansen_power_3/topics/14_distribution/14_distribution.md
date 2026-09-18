@@ -1,9 +1,9 @@
 # 14 駅やトンネルにはどう電気を配る？
 
 ## 状態
-`practice_source_complete`。制作前EXAM_ALIGNMENT・制作前独立検証・固定5問6答案要素の本文マッピング・解説本文・3段階例題・解説PDFに続き、練習問題sourceまで完了した。練習sourceは全12問・全問五肢択一、基礎3問／本試験標準7問／複合2問。数値・論理独立再計算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5問・6答案要素への接続 `6 / 6 PASS`。練習PDF、PowerPoint、完成後独立再解答、最終QAは未実施。
+`independent_reanswer_complete`。制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPointを完了し、固定5問・6答案要素の完成後独立再解答も `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完 `0件` を確認した。最終QAは未実施。
 
-品質ゲート対象は、電気技術者試験センター公式過去問を直近年度から遡って確認し、`SPEC.md` のTopic 14固定範囲だけで解ける5問・6答案要素に固定する。件数合わせのためSPECを拡張しない。固定5問・6答案要素は、公式標準解答を先に見ずに独立計算・論理判定してから照合し、`6 / 6 PASS`、公式解答との不一致`0件`を確認した。
+品質ゲート対象は、電気技術者試験センター公式過去問を直近年度から遡って確認し、`SPEC.md` のTopic 14固定範囲だけで解ける5問・6答案要素に固定する。件数合わせのためSPECを拡張しない。固定5問・6答案要素は、制作前独立検証 `6 / 6 PASS`、完成後独立再解答 `6 / 6 PASS`、公式解答との不一致`0件`を確認した。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 14から範囲を追加しない。
@@ -433,10 +433,33 @@
 - 練習source数値・論理独立再計算: `12 / 12 PASS`
 - 練習source正答一意性: `12 / 12 PASS`
 - 練習source固定5問・6答案要素への接続: `6 / 6 PASS`
-- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案の練習source転記 `0件`
+- 練習PDF: `topics/14_distribution/14_distribution_practice.pdf`
+- 練習PDF QA: `topics/14_distribution/14_distribution_practice_qa.md` — PASS
+- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF数値・論理再検算: `12 / 12 PASS`
+- 練習PDF正答一意性: `12 / 12 PASS`
+- 解説画像PowerPoint: `topics/14_distribution/14_distribution_images.pptx`
+- PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md` — PASS
+- PowerPoint固定5問・6答案要素の要求事項可視化: `6 / 6 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- 完成後独立再解答: `topics/14_distribution/14_distribution_independent_reanswer.md`
+- 完成教材のみでの独立再解答: `6 / 6 PASS`
+- 公式解答一致: `6 / 6 PASS`
+- 教材外知識補完: `0件`
+- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案の練習source・PDF・PowerPoint転記 `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 15の回生・蓄電・電力融通先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
+完成後独立答案:
+- R8上 電力 問13: `(2)`
+- R7下 電力 問10: `(5)`
+- R3 電力 問12: `(5)`
+- H23 電力 問9: `(1)`
+- H20 電力 問17(a)(b): `(2),(3)`
+
 ## 次
-Topic 14の練習PDFを作成し、表示QA・文字抽出QA・12問再検算・正答一意性・固定5問6答案要素への接続を確認する。
+Topic 14の最終QAを実施する。固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` とする。
