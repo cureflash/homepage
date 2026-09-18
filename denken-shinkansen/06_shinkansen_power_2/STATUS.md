@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_15_preproduction_blind_complete`
+current_status: `topic_15_explanation_source_complete`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
@@ -13,7 +13,7 @@ Topic 01〜14は `completed`。
 
 ## Topic 15 current progress
 
-制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成まで完了。
 
 正式品質ゲート対象は一次3問＋二次2問、計5問・24答案要素で固定したまま変更なし。
 
@@ -29,7 +29,14 @@ Topic 01〜14は `completed`。
 制作前blind記録:
 - `topics/15_regenerative_power/15_regenerative_power_preproduction_blind_20260919.md`
 
-教材本文・例題・練習問題は未着手。
+解説source:
+- `topics/15_regenerative_power/15_regenerative_power_explanation.md`
+- 固定本文節マッピング `8 / 8` 接続
+- MASTER SPEC最低構成を収録
+- 基礎・本試験標準・複合の3段階例題を収録
+- SPEC指定「力行・回生電力の時間変化」の仮定時系列データを収録
+
+解説PDF、練習問題、PowerPointは未着手。
 
 ## Topic 14 completion
 
@@ -80,6 +87,7 @@ Topic 15:
 - 二次記述: `9答案要素`
 - 合計: `24答案要素`
 - 制作前blind: `24 / 24 PASS`
+- 解説source固定本文節: `8 / 8` 接続
 - 周辺問題による件数水増し: `0件`
 - Topic 14問題の重複採用: `0件`
 - Topic 16/17/20/21先取り: `0件`
@@ -102,8 +110,8 @@ Topic 15:
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — IN_PROGRESS / 制作前blind完了
+- [ ] Topic 15 — IN_PROGRESS / 解説source完了
 
 ## next_start
 
-Topic 15の固定済み本文節マッピングに従い、解説sourceを作成する。固定5問・24答案要素を全て教材内の該当節へ接続し、Topic 16/17/20/21へ範囲を広げない。
+`topics/15_regenerative_power/15_regenerative_power_explanation.md` を正本として解説PDFを生成し、PDF QAを行う。固定5問・24答案要素、本文節マッピング、仮定値/実値境界を変更しない。
