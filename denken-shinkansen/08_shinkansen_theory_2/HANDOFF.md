@@ -6,11 +6,11 @@
 
 Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_17_progress_records_synced`
+current_status: `topic_17_final_qa_complete`
 
 active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 17の初回最終QAでblockerだった主source・練習sourceの旧進捗記録4箇所を実成果物状態へ同期済み。固定一次5問・25答案要素、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界は維持してPASS。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程は最終QA再実施。
+Topic 17の最終QA再実施を `PASS / FINAL_QA_COMPLETE` で完了。固定一次5問・25答案要素 `25 / 25 PASS`、公式標準解答一致 `25 / 25`、二次採用0問・二次数合わせ0件、初回blocker `4 / 4 PASS`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程はcompleted状態同期。
 
 ## Topic 16 成果物
 
@@ -173,7 +173,7 @@ Topic 17の初回最終QAでblockerだった主source・練習sourceの旧進捗
 - 完成後独立再解答: `topics/17_transistor_fet_switching/17_transistor_fet_switching_reanswer.md`
 - 最終QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_final_qa.md`
 - completion: `in_progress`
-- stage: `PROGRESS_RECORDS_SYNCED`
+- stage: `FINAL_QA_COMPLETE`
 
 ## Topic 17 固定範囲
 
@@ -349,6 +349,23 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 判定: `PASS / PROGRESS_RECORDS_SYNCED`
 
+## Topic 17 最終QA再実施
+
+記録: `topics/17_transistor_fet_switching/17_transistor_fet_switching_final_qa.md`
+
+- 必須成果物: `PASS`
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- 二次採用判断: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC境界: `PASS`
+- PDF/PPTX表示QA・練習QA: `PASS`
+- 初回blocker解消: `4 / 4 PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
+
+判定: `PASS / FINAL_QA_COMPLETE`
+
 ## 次工程
 
-Topic 17の技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXを変更せず、最終QAを再実施する。
+Topic 17の主source・練習source・STATUS・HANDOFFをcompleted状態へ同期する。
