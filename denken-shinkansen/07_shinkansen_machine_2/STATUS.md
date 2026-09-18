@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_practice_source_complete`
+- current_status: `topic_17_practice_pdf_complete`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 練習PDF制作
+- next_start: Topic 17 解説画像PowerPoint制作
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source `PASS` / 次は練習PDF
+- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF `PASS` / 次は解説画像PowerPoint
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -231,8 +231,21 @@
 - [x] Topic 18〜21先取り、二自由度制御の独立論点追加、未確認実車値、固定問題の正答保存 `0件`
 - 判定: `PASS / topic_17_practice_source_complete`
 
+## Topic 17 練習PDF
+- [x] `topics/17_speed_feedback_control/17_speed_feedback_control_practice.pdf`
+- [x] A4縦・5ページ、一次10問＋二次5問
+- [x] 固定5問・6答案要素へ `6 / 6` 接続
+- [x] 主要式14チェックポイント `14 / 14 PASS`
+- [x] 160 dpi 全5ページ表示QA `5 / 5 PASS`
+- [x] 文字・数式・表の欠落、重なり、切れ、overflow `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] PDF SHA-256 `e4011a7e383e4dc94f5c7a3c6fd4e9a1a85ee93b7d6054830e06f9c9dff71f01`
+- [x] PDF Git blob SHA `87e988deffbbede3e4b76031a98a4e50762d7e8f`
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_practice_pdf_qa.md`
+- 判定: `PASS / topic_17_practice_pdf_complete`
+
 ## 今回進めた内容
-Topic 17を解説PDF完了状態から1段階進め、一次10問＋二次5問の練習sourceを完成した。固定5問・6答案要素へ `6 / 6` 接続し、一次正答一意性 `10 / 10 PASS`、全15問の独立再計算・論理確認 `15 / 15 PASS`。仕様境界を維持した。
+Topic 17を練習source完了状態から1段階進め、一次10問＋二次5問の練習PDFを完成した。固定5問・6答案要素を `6 / 6` 維持し、主要式 `14 / 14 PASS`、160 dpi全5ページ表示 `5 / 5 PASS`、文字抽出QA PASS。仕様境界を維持した。
 
 ## 判定
-Topic 17は `PASS / topic_17_practice_source_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は練習PDF制作。
+Topic 17は `PASS / topic_17_practice_pdf_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は解説画像PowerPoint制作。
