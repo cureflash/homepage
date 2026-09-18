@@ -1,40 +1,50 @@
 # HANDOFF
 
-updated: 2026-09-18
+updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
 current_status: `topic_14_independent_reanswer_needs_revision`
 
 ## 今回完了
 
-Topic 14「新幹線の力率と電圧をどう維持する？」の完成後blind `20 / 21 PASS` で残ったH23二次問3 (2a) 一次母線電圧だけを根拠に、固定範囲を増やさず解説sourceを補強した。
+Topic 14「新幹線の力率と電圧をどう維持する？」を1段階進め、完成後blind `20 / 21 PASS` のblockerだったH23二次問3 (2a) の「等価側→要求側」電圧換算をlearner-facing PowerPointへ同期し、PowerPoint QAを再実施した。
 
 更新:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.md`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_remediation_20260918.md`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_powerpoint_qa.md`
 
-補強内容:
-- 変圧器％リアクタンスをどの電圧側へ換算したかを答案上で明示。
-- 等価回路から得た端電圧は、その換算側の等価値であることを明示。
-- 問題の要求電圧側が異なる場合、`Vreq = Veq × Vbase,req / Vbase,eq` で要求側へ戻す手順を追加。
-- H23二次問3 (2a) の確認値を `66.258 kV → ×154/66 → 154.6 kV ≒ 155 kV` として9.2・10.4へ接続。
-- 頻出ミス、正式21答案要素マッピング、公式まとめにも同じ処理を同期。
+Slide 3で以下を明示:
+- `Vs(eq, 66 kV side)=66.258 kV`
+- `66.258 × 154/66 = 154.6 kV ≒ 155 kV`
+- `Vreq = Veq × Vbase,req / Vbase,eq`
 
-完成後blind前回結果:
-- R6一次「電力」問5: `5 / 5 PASS`
-- R4一次「法規」問4: `5 / 5 PASS`
-- R5二次「電力・管理」問4: `2 / 2 PASS`
-- R2二次「電力・管理」問6: `4 / 4 PASS`
-- H23二次「電力・管理」問3: `4 / 5 PASS`
-- 合計: `20 / 21 PASS`
-- 一次: `10 / 10 PASS`
-- 二次: `10 / 11 PASS`
+PowerPoint QA:
+- 16:9・4スライド
+- 200 dpi表示 `4 / 4 PASS`
+- `slides_test.py` overflow `0件`
+- ZIP整合性 PASS
+- PDF変換 `4ページ PASS`
+- 文字抽出 U+FFFD `0件`
+- SPEC固定10項目 `10 / 10 PASS`
+- SPEC固定3可視化 `3 / 3 PASS`
+- 固定5問・21答案要素の説明接続 `21 / 21`
 
-source補強判定: `PASS`。
+固定EXAM_ALIGNMENT、問題、答案要素、教材技術範囲は変更していない。
 
-ただしlearner-facingの解説PDF等へ未同期で、完成後blind再実施も未完了。Topic 14全体の判定は引き続き `NEEDS_REVISION` とし、completedにせず最終QAへ進めない。
+## 現在地
 
-品質境界:
+Topic 01〜13: `completed`。
+完成数: `13 / 22`。
+Topic 14は完成後blind再実施前なので `NEEDS_REVISION` のまま。最終QAへは進めない。
+
+なお、修正版解説PDF自体は既にGitHubへ同期済みだが、現行PDFは4ページである一方、既存 `14_power_factor_voltage_control_explanation_pdf_qa.md` は旧6ページ版の記録のため、QA記録が現行成果物と不整合。
+
+## 次に行う
+
+現行4ページの修正版解説PDFを再QAし、`14_power_factor_voltage_control_explanation_pdf_qa.md` を現行成果物へ同期する。そのPASS確認後、固定5問・21答案要素の完成後blind独立再解答を再実施する。全21答案要素PASSまでは最終QAを行わない。
+
+## 品質境界
+
 - 固定5問・21答案要素変更: `0件`
 - 新規正式過去問追加: `0件`
 - Topic 15以降の先取り: `0件`
@@ -43,17 +53,3 @@ source補強判定: `PASS`。
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
-
-## 現在地
-
-Topic 01〜13: `completed`。
-
-完成数: `13 / 22`。
-
-active topic: Topic 14「新幹線の力率と電圧をどう維持する？」。
-
-current status: `topic_14_independent_reanswer_needs_revision`。
-
-## 次に行う
-
-修正版解説sourceをlearner-facing解説PDFへ同期する。必要なPowerPoint該当箇所にも「等価側→要求側」の答案処理を同期し、表示・文字抽出・数値整合QAを再実施する。その後、固定5問・21答案要素の完成後blind独立再解答を再実施する。全21答案要素PASSまでは最終QAを行わない。
