@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 19 / 20
-- current_status: `topic_19_completed`
+- current_status: `topic_20_exam_alignment_complete`
 - last_completed_topic: `19 最適化入門`
 - active_topic: `20 新幹線を数式モデルだけで走らせる`
-- next_start: Topic 20の制作前EXAM_ALIGNMENT
+- next_start: Topic 20の制作前独立検証
 
 ## Topic 07 制作品質ゲート
 
@@ -322,30 +322,46 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 20 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 最新main・STATUS・HANDOFF・既完了Topic 05 / 10 / 13 / 14 / 16 / 17をreconcile
+- [x] 第二種公式過去問の現行アーカイブを確認（R8一次・R7二次まで公開）
+- [x] 統合モデル各要素へ接続する第二種公式過去問5問を整理
+- [x] 統合新幹線モデル自体を直接要求する確認済み第二種過去問0問を記録
+- [x] 接続5問を直接対応品質ゲート件数へ水増ししないことを確定
+- [x] 第一種・第三種問題による件数水増し0件を確認
+- [x] 電験学習資料を2系統以上確認
+- [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
+- [ ] 制作前独立検証
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋QA
+- [ ] 練習問題source
+- [ ] 練習PDF＋QA
+- [ ] 解説画像PowerPoint＋QA
+- [ ] 完成後独立検証
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 19の最終QAを再判定した。
+Topic 20 `新幹線を数式モデルだけで走らせる` の制作前EXAM_ALIGNMENTを完了した。
 
-- 進捗記録整合: `6 / 6 PASS`
-- 必須成果物実在: `PASS`
-- 完成後独立検証: `3 / 3 PASS`
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- 解説PDF表示QA: `4 / 4 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
-- 接続確認5問の固定品質ゲート件数への水増し: `0件`
-- H17問6の固定件数追加: `0件`
-- Topic 04の一変数極値一般の再制作: `0件`
-- KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
-- 未確認実車値依存: `0件`
+- 主source: `topics/20_shinkansen_math_model/20_shinkansen_math_model.md`
+- 第二種公式アーカイブ: R8一次、R7二次までの公開を確認
+- 接続確認: `5問`
+- 統合モデル自体を直接要求する確認済み第二種過去問: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 第一種・第三種問題の追加: `0件`
+- 仕様外数学の追加: `0件`
+- 未確認実車値の固定: `0件`
+- 固定範囲: 牽引力・走行抵抗→運動方程式→数値積分→速度・位置→消費/回生電力→簡略制御モデル→PWM/FFT
 
 ## 判定
 
-`PASS / completed`
+`topic_20_exam_alignment_complete / IN_PROGRESS`
 
 完成数は `19 / 20`。
 
-次はTopic 20 `新幹線を数式モデルだけで走らせる` の制作前EXAM_ALIGNMENT。
+次はTopic 20の制作前独立検証。
