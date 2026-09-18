@@ -6,8 +6,8 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_explanation_source_complete / IN_PROGRESS`
-- 次工程: Topic 19 解説PDF＋QA
+- current status: `topic_19_explanation_pdf_complete / IN_PROGRESS`
+- 次工程: Topic 19 練習source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -34,10 +34,12 @@
 制作前EXAM_ALIGNMENTは `PASS / topic_19_exam_alignment_complete`。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。
 
 ## 今回完了した段階
-Topic 19解説source本文を完成した。
+Topic 19解説PDF＋QAまで完成した。
 
 成果物:
 - `topics/19_pid_speed_control/19_pid_speed_control.md`
+- `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`
+- `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`
 
 含めた内容:
 - P・I・D各動作の時間領域／ラプラス領域対応
@@ -56,11 +58,13 @@ QA:
 - Topic 21先取り: `0件`
 - 未確認実車PID値: `0件`
 - 固定問題の個別正答記号・最終数値保存: `0件`
-- 判定: `PASS / topic_19_explanation_source_complete`
+- 解説PDF: 表示6/6、文字抽出PASS、数値・論理15/15
+- 判定: `PASS / topic_19_explanation_pdf_complete`
 
 ## GitHub反映
-- 解説source commit: `a1f2a2386037904c493b96e7820f1c2bc73ade5e`
-- STATUS同期 commit: `6f0e96eab98a03028c85a4983c31e78aa3be5992`
+- 解説source: GitHub正本反映済み
+- 解説PDF: Git blob `bbbe79949058c62725f644236b78f8c961365291`
+- 解説PDF QA: `PASS / topic_19_explanation_pdf_complete`
 
 ## 次に行うこと
-Topic 19解説sourceから解説PDFを生成し、表示・文字抽出・式・数値・固定12答案要素接続をQAする。
+Topic 19練習sourceを作成し、固定一次1問＋二次4問・12答案要素への演習接続を維持してQAする。

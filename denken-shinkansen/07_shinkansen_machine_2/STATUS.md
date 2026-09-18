@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_explanation_source_complete`
+- current_status: `topic_19_explanation_pdf_complete`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 解説PDF＋QA
+- next_start: Topic 19 練習source
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -70,8 +70,24 @@ QA:
 
 判定: `PASS / topic_19_explanation_source_complete`
 
+## Topic 19 解説PDF＋QA
+成果物:
+- `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`
+- `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`
+
+QA:
+- A4縦6ページ: `PASS`
+- 固定5問・12答案要素: `12 / 12 COVERED`
+- 表示QA: `6 / 6 PASS`
+- 文字抽出: `PASS`
+- 数値・論理QA: `15 / 15 PASS`
+- Topic 20/21先取り・未確認実車PID値・固定問題正答保存: `各0件`
+- Git blob: `bbbe79949058c62725f644236b78f8c961365291`
+
+判定: `PASS / topic_19_explanation_pdf_complete`
+
 ## 今回進めた内容
-Topic 19解説source本文を作成した。P・I・D各動作、PID二表現の係数変換、P/PI/PD/PID判別、単位負帰還の偏差伝達関数、最終値の定理、ステップ・ランプ定常偏差、Topic 18の二次遅れへの接続、教材用仮定プラントでの `Kp`・`Ki`・`Kd` 一変数比較条件を記録した。固定5問・12答案要素を教材節へ `12 / 12` 接続した。完成数は `18 / 22` のまま。
+Topic 19解説PDFを生成し、表示6/6、文字抽出、数値・論理15/15、固定5問・12答案要素12/12を確認してQA `PASS` とした。Topic 20/21先取り、未確認実車PID値、固定問題の個別正答保存はいずれも0件。完成数は `18 / 22` のまま。
 
 ## 次工程
-Topic 19「PIDで新幹線の速度を制御する」の解説PDF＋QAを作成する。
+Topic 19「PIDで新幹線の速度を制御する」の練習sourceを作成する。
