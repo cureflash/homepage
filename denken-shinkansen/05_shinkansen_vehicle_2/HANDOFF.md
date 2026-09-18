@@ -8,7 +8,28 @@
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
 
-現在地は `topic_18_powerpoint_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+現在地は `topic_18_blind_reanswer_official_check_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+
+## Topic 18 完成後clean blind公式照合
+
+成果物:
+- 候補答案固定: `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_blind_reanswer_candidates_clean.md`
+- 公式照合: `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_blind_reanswer_official_check.md`
+
+判定: `PASS / BLIND_REANSWER_OFFICIAL_CHECK_COMPLETE`
+
+品質:
+- 候補固定commit: `9f35eca9899a02cc132d504ca95cba9f9e0c2b24`
+- 固定過去問: `一次3問＋二次2問 / 5問`
+- 一次: `7 / 7 PASS`
+- 二次: `8 / 8 PASS`
+- 合計: `15 / 15 PASS`
+- 候補答案変更: `0件`
+- 教材外知識による補完: `0件`
+- 固定問題差替え: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
 
 ## Topic 18 解説画像PowerPoint
 
@@ -34,7 +55,7 @@ Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
 - 解説／練習の問題・正答・数式変更: `0件`
 - SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
-- clean blind公式照合: `未実施 / 次工程`
+- clean blind公式照合: `PASS / 15 / 15`
 
 ## Topic 18 練習PDF
 
@@ -62,7 +83,7 @@ Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
 - 問題・正答・数式変更: `0件`
 - SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
-- clean blind公式照合: `未実施 / PowerPoint完成後`
+- clean blind公式照合: `PASS / 15 / 15`
 
 ## Topic 18 練習source
 
@@ -86,7 +107,7 @@ source:
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
-- clean blind公式照合: `未実施 / PowerPoint完成後`
+- clean blind公式照合: `PASS / 15 / 15`
 
 ## Topic 18 解説PDF
 
@@ -110,6 +131,7 @@ source:
 - 二次試験用回転磁界相対速度: `7 / 7 covered`
 - SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
+- clean blind公式照合: `PASS / 15 / 15`
 
 ## Topic 18 解説source
 
@@ -139,6 +161,7 @@ source:
 - SPEC指定7項目: `7 / 7 covered`
 - SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
+- clean blind公式照合: `PASS / 15 / 15`
 
 ## Topic 18 制作前EXAM_ALIGNMENT
 
@@ -157,9 +180,7 @@ source:
 - 二次: `8答案要素`
 - 合計: `5問・15答案要素`
 
-直近年度から公式問題を確認したうえで、固定SPECへ直接接続しないR8一次の鉄損・効率中心問題、R7一次、R4一次のトルク符号中心問題は件数合わせで採用していない。
-
-教材本文・練習へ必ず接続する事項:
+教材本文・練習へ接続済み:
 - `E = 4.44 f N Φ_m`
 - 同一V・Nで `Φ_m ∝ 1/f`
 - `B_m = Φ_m/A` と周波数―磁束密度
@@ -168,8 +189,8 @@ source:
 - `s = (N_s-N)/N_s`
 - `f_2 = sf`
 - 電源周波数50/60 Hzとインバータ出力周波数の区別
-- 機器定格を電圧・周波数・巻数・磁束／磁束密度の組で判断すること
-- SPEC指定3可視化を同じモデルから生成すること
+- 機器定格を電圧・周波数・巻数・磁束／磁束密度の組で判断
+- SPEC指定3可視化を同じモデルから生成
 
 仕様追加: `0件`
 未確認E2系実車値の真値化: `0件`
@@ -181,16 +202,9 @@ source:
 判定: `PASS / completed`
 
 固定EXAM_ALIGNMENT:
-- R7 一次 機械 問4 (1)〜(5): 5要素
-- R4 一次 機械 問4 (1)〜(5): 5要素
-- R2 一次 機械 問2 (1)〜(5): 5要素
-- H24 一次 機械 問6 (2)(3): 2要素
-- H24 二次 機械・制御 問1 (1)〜(6): 6要素
 - 一次: `17答案要素`
 - 二次: `6答案要素`
 - 合計: `5問・23答案要素`
-
-H24一次 問6は問題自体を固定5問の一つとして維持するが、Topic 17に直接対応する `(2) 放熱設計`、`(3) 半導体接合部温度` のみゲート対象。照明固有の `(1)(4)(5)` は固定SPEC外として対象外。
 
 完成後clean blind:
 - 一次: `17 / 17 PASS`
@@ -206,22 +220,13 @@ H24一次 問6は問題自体を固定5問の一つとして維持するが、To
 - 練習source: `PASS / 一次8＋二次4`
 - 練習PDF: `PASS / 6 pages / 180 dpi 6 / 6`
 - PowerPoint: `PASS / 4 slides / 1600×900 4 / 4`
-- SPEC指定7項目: `7 / 7 PASS`
-- SPEC指定3可視化: `3 / 3 PASS`
-- SPEC外追加: `0件`
-- 未確認700系実車値の真値化: `0件`
-
-前回最終QAで検出した旧26答案要素前提の6記録は、是正後 `5問・23答案要素` とclean blind `23 / 23 PASS` へ同期済み。PDF/PPTX本体・問題・正答・数式・固定過去問は変更していない。
 
 履歴:
 - 再監査: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_exam_alignment_remap_audit.md`
 - clean blind候補: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md`
 - 公式照合: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md`
-- 旧 `blind_reanswer_gate.md` と旧 `blind_reanswer_candidates.md` は再マッピング前の履歴として保存
 
 ## Topic 18 固定SPEC境界
-
-`SPEC.md` Topic 18 の固定範囲は次のとおり。
 
 主題:
 - 異なる電源周波数が変圧器・主変換装置・誘導機へ与える条件を解析する。
@@ -244,4 +249,4 @@ H24一次 問6は問題自体を固定5問の一つとして維持するが、To
 
 ## 次工程
 
-Topic 18の完成後clean blind公式照合を行う。固定5問・15答案要素を教材だけで再解答し、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。
+Topic 18の最終QAを行う。必須成果物、各QA、完成後clean blind `15 / 15 PASS`、固定EXAM_ALIGNMENT、SPEC境界、進捗記録の整合を確認する。既存PDF/PPTX、問題、正答、数式、固定過去問は変更しない。
