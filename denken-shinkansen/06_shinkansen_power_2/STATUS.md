@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_final_qa_needs_revision`
+current_status: `topic_14_qa_progress_sync_partial`
 completed_topics: `13 / 22`
 
 ## Completed through Topic 13
@@ -25,6 +25,12 @@ Topic 01〜13は `completed`。
 Topic 14「新幹線の力率と電圧をどう維持する？」は、制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source/PDF、練習source/PDF、PowerPoint、各QA、修正版成果物に対する完成後blind独立再解答まで実施済み。
 
 2026-09-19に最終QAを実施し、技術内容・過去問対応品質ゲートはPASSしたが、進捗記録整合、PowerPoint QAと現行GitHub正本バイナリの指紋整合、Web公開にblockerがあるため `NEEDS_REVISION / IN_PROGRESS` とした。
+
+今回、他workerの最終QA結果を最新mainへreconcileし、旧QA進捗記録3件を現行工程へ同期した。
+
+- `14_power_factor_voltage_control_explanation_pdf_qa.md`: 完成後blind再実施前という旧次工程を解消。現行状態を `PASS` として同期。
+- `14_power_factor_voltage_control_practice_pdf_qa.md`: PowerPoint制作前という旧次工程を解消。現行状態を `PASS` として同期。
+- `14_power_factor_voltage_control_powerpoint_qa.md`: blind再実施前という旧状態を解消し、現行GitHub正本PPTXとの指紋不一致を `REQUIRES_REQA / CURRENT_BINARY_UNVERIFIED` と明示。
 
 最終QA:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
@@ -82,19 +88,22 @@ Topic 14「新幹線の力率と電圧をどう維持する？」は、制作前
 PowerPoint:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_powerpoint_qa.md`
-- QA本文上は4スライド、表示 `4 / 4 PASS`、overflow 0、SPEC固定10項目 `10 / 10`、3可視化 `3 / 3`、固定21答案要素 `21 / 21`
-- ただしQA記録のファイルサイズ `39281 bytes` と現行GitHub正本 `15002 bytes`・blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8` が不一致。現行バイナリを再QAするまで最終証跡として確定しない。
+- 旧QA対象: `39281 bytes`, SHA-256 `3e8088524754227fbfddf027784cf2c5961fba01646b7ded626932eb70748047`
+- 現行GitHub正本: `15002 bytes`, blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8`
+- 指紋不一致のため現行PPTXは `CURRENT_BINARY_UNVERIFIED`。旧QAの4スライド表示PASS等を現行バイナリへ流用しない。
 
-### 最終QA blocker
+### 最終QA blocker（残り5件）
 
 1. `14_power_factor_voltage_control.md` が最終QA未実施・次工程を最終QAとしている旧状態。
 2. `14_power_factor_voltage_control_explanation.md` のstage・次工程が旧状態。
 3. `14_power_factor_voltage_control_practice.md` が練習PDF・PowerPoint・blindを未実施としている。
-4. `14_power_factor_voltage_control_explanation_pdf_qa.md` の次工程が完成後blind再実施のまま。
-5. `14_power_factor_voltage_control_practice_pdf_qa.md` の次工程がPowerPoint制作のまま。
-6. `14_power_factor_voltage_control_powerpoint_qa.md` がTopic全体をblind再実施前としている。
-7. PowerPoint QA記録のファイル指紋が現行GitHub正本と不一致。
-8. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
+4. PowerPoint QA記録のファイル指紋が現行GitHub正本と不一致。現行PPTXの再QAが必要。
+5. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
+
+今回解消した旧blocker:
+- 解説PDF QAの旧次工程
+- 練習PDF QAの旧次工程
+- PowerPoint QAの「blind再実施前」という旧進捗状態
 
 ### 品質境界
 
@@ -124,13 +133,13 @@ PowerPoint:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — final QA `NEEDS_REVISION`; blocker 8件
+- [ ] Topic 14 — final QA `NEEDS_REVISION`; blocker残り5件
 
 ## next_start
 
-Topic 14の最終QA blocker 8件を解消する。固定5問・21答案要素と教材技術範囲は変更しない。
+Topic 14の残りblockerを固定5問・21答案要素と教材技術範囲を変更せず解消する。
 
-1. 旧進捗記録を現行工程へ同期する。
+1. 主source・解説source・練習sourceの旧進捗記録3件を現行工程へ同期する。
 2. 現行GitHub正本PPTXを再QAし、現行blobに対応するQA記録へ更新する。
 3. Topic 14の解説PDF・練習PDF・PowerPoint・sourceを `qualifications/denken-shinkansen/catalog.json` へ登録する。
 4. 最終QAを再判定する。
