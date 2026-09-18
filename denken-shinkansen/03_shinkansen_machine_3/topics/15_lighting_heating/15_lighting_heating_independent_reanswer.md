@@ -4,13 +4,13 @@
 
 対象: Topic 15 固定EXAM_ALIGNMENT 7問・12答案要素
 
-状態: `ANSWER_LOCKED / official answer check pending`
+状態: `COMPLETE / 12 of 12 verified`
 
 ## 実施条件
 
 完成済み教材 `15_lighting_heating.md` の固定範囲だけを使い、固定EXAM_ALIGNMENT 7問を再解答した。光束発散度、熱伝導・熱放射、工業電熱、未確認の実車値、Topic 16の知識は補っていない。
 
-答案固定までは電気技術者試験センターの問題PDFだけを参照し、公式解答PDFは参照していない。このファイルの初回commitで12答案要素を固定し、その後に公式解答と照合する。
+答案固定までは電気技術者試験センターの問題PDFだけを参照し、公式解答PDFは参照していない。12答案要素はcommit `e5dc7884e5500fe7b407f67c758b45e51c9501a3` で先に固定し、その後に公式解答と照合した。
 
 ## blind答案固定
 
@@ -165,4 +165,49 @@ blind答案: `(3)`
 
 合計: `12答案要素`。
 
-公式解答照合はこの答案固定commit後に実施する。
+## 公式解答照合
+
+答案固定commit後、電気技術者試験センター公式解答PDFを確認した。
+
+| 対象 | blind答案 | 公式解答 | 判定 |
+|---|---|---|---|
+| R8上 機械 問17(a) | 5 | 5 | PASS |
+| R8上 機械 問17(b) | 2 | 2 | PASS |
+| R7上 機械 問12 | 4 | 4 | PASS |
+| R7上 機械 問17(a) | 2 | 2 | PASS |
+| R7上 機械 問17(b) | 2 | 2 | PASS |
+| R6下 機械 問17(a) | 2 | 2 | PASS |
+| R6下 機械 問17(b) | 3 | 3 | PASS |
+| R6上 機械 問17(a) | 2 | 2 | PASS |
+| R6上 機械 問17(b) | 1 | 1 | PASS |
+| R4上 機械 問17(a) | 5 | 5 | PASS |
+| R4上 機械 問17(b) | 5 | 5 | PASS |
+| R2 機械 問12 | 3 | 3 | PASS |
+
+公式解答一致: `12 / 12 PASS`。
+
+公式資料:
+- R8上: https://www.shiken.or.jp/chief/upload/20260830_ch_third_q03.pdf / https://www.shiken.or.jp/chief/upload/20260830_ch_third_a01.pdf
+- R7上: https://www.shiken.or.jp/chief/upload/20250831_ch_third_q03.pdf / https://www.shiken.or.jp/chief/upload/20250831_ch_third_a01.pdf
+- R6下: https://www.shiken.or.jp/chief/upload/20250323_ch_third_q03.pdf / https://www.shiken.or.jp/chief/upload/2024_3_2.pdf
+- R6上: https://www.shiken.or.jp/chief/upload/20240818_ch_third_q03.pdf / https://www.shiken.or.jp/chief/upload/20240818_ch_third_a01.pdf
+- R4上: https://www.shiken.or.jp/chief/upload/20220821_ch_third_q03.pdf / https://www.shiken.or.jp/chief/upload/20220821_ch_third_a01.pdf
+- R2: https://www.shiken.or.jp/chief/upload/20200913_ch_third_q03.pdf / https://www.shiken.or.jp/chief/upload/20200913_ch_third_a01.pdf
+- 参照日: 2026-09-18
+
+## 品質ゲート判定
+
+- 完成教材だけで必要公式を選択: `12 / 12 PASS`
+- 完成教材だけで途中式を構成: `12 / 12 PASS`
+- 選択肢を一意に確定: `12 / 12 PASS`
+- 公式解答一致: `12 / 12 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 光束発散度・熱伝導・熱放射・工業電熱の追加: `0件`
+- 未確認新幹線車内設備実値追加: `0件`
+- Topic 16先取り: `0件`
+
+判定: `PASS`
+
+次工程はTopic 15の最終QA。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
