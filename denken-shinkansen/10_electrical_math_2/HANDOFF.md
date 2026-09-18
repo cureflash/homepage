@@ -4,15 +4,17 @@
 
 ## 現在地
 
-Topic 01〜19は最終QAまで `PASS / completed`。
+Topic 01〜20は最終QAまで `PASS / completed`。
 
-完成数: `19 / 20`
+完成数: `20 / 20`
 
-current_status: `topic_20_final_qa_needs_revision`
+current_status: `series_completed`
 
-active_topic: `20 新幹線を数式モデルだけで走らせる`
+last_completed_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 20の最終QA再判定。
+active_topic: `なし`
+
+次工程: `なし（本系列完了）`。
 
 ## 上位仕様
 
@@ -30,11 +32,10 @@ active_topic: `20 新幹線を数式モデルだけで走らせる`
 
 ## 完了済みTopic
 
-Topic 01〜19は完了済み。各テーマの固定EXAM_ALIGNMENT、独立検証、成果物QA、最終QAの詳細は各 `topics/<topic>/` 配下のsource・QA記録を正本とする。
+Topic 01〜20は完了済み。各テーマの固定EXAM_ALIGNMENT、独立検証、成果物QA、最終QAの詳細は各 `topics/<topic>/` 配下のsource・QA記録を正本とする。
 
 直近完了:
 
-- Topic 18 `非線形方程式と反復計算`: `PASS / completed`
 - Topic 19 `最適化入門`: `PASS / completed`
   - 最終QA再判定: `PASS`
   - 進捗記録整合: `6 / 6 PASS`
@@ -42,6 +43,14 @@ Topic 01〜19は完了済み。各テーマの固定EXAM_ALIGNMENT、独立検�
   - 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
   - 接続確認5問の固定品質ゲート件数への水増し: `0件`
   - 仕様外追加: `0件`
+- Topic 20 `新幹線を数式モデルだけで走らせる`: `PASS / completed`
+  - 最終QA再判定: `PASS`
+  - 進捗記録整合: `6 / 6 PASS`
+  - 完成後独立検証: `3 / 3 PASS`
+  - 統合新幹線モデル自体を直接要求する確認済み第二種過去問: `0問`
+  - 接続確認5問の直接対応品質ゲート件数への水増し: `0件`
+  - 仕様外追加: `0件`
+  - 未確認実車値依存: `0件`
 
 # Topic 20 新幹線を数式モデルだけで走らせる
 
@@ -307,6 +316,28 @@ PWM波形・FFT
 
 判定: `PASS / PROGRESS_RECORDS_SYNCED`。
 
+## 最終QA再判定
+
+記録:
+`topics/20_shinkansen_math_model/20_shinkansen_math_model_final_qa.md`
+
+初回FAILだった進捗記録を再確認し、技術内容を変更せず全品質ゲートを再判定した。
+
+- 必須成果物実在: `PASS`
+- 第二種公式過去問接続5問: `PASS`
+- 統合モデル直接要求: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 完成後独立検証: `3 / 3 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 表示QA: `PASS`
+- 進捗記録整合: `6 / 6 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / completed`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -328,9 +359,9 @@ PWM波形・FFT
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、統合モデル直接要求0問・接続5問の水増し0件を維持）
 - [x] 初回最終QA → `NEEDS_REVISION`（技術品質PASS、進捗記録不整合のみ）
 - [x] 進捗記録同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT、技術本文・問題・正答・PDF・PowerPoint・完成後独立検証結果を変更せず、Topic 20の最終QAを再判定する。PASSの場合のみ `completed` とし、系列完成数を `20 / 20` へ更新する。
+本系列についての次工程はない。`10_electrical_math_2` は `20 / 20` 完了。
