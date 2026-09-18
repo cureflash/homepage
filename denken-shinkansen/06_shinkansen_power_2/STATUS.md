@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_explanation_pdf_complete`
+current_status: `topic_14_completion_blind_rerun_pass`
 completed_topics: `13 / 22`
 
 ## Topic 12 final result
@@ -122,7 +122,7 @@ source:
 
 ## Topic 14 progress
 
-Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QA、完成後blind独立再解答まで実施。前回完成後blindは `20 / 21 PASS` でH23二次問3 (2a)に1 blockerが残ったためsource/PDF/PPTを補強。その後、現行解説PDFで追加確認された表示・learner-facing 4 blockerを修正し、2026-09-19の解説PDF再QAを `PASS` とした。最終QAは未着手。
+Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで作成済み。修正前の完成後blindは `20 / 21 PASS` でH23二次問3 (2a)に1 blockerが残ったためsource/PDF/PPTを補強し、現行解説PDFの追加4 blockerも修正して再QAを `PASS` とした。その修正版learner-facing成果物に対し2026-09-19に完成後blind独立再解答を再実施し、固定5問・21答案要素を `21 / 21 PASS` とした。最終QAは未着手。
 
 正式固定問題:
 - 令和6年度 第二種一次「電力」問5 — `5答案要素`
@@ -224,6 +224,20 @@ PowerPoint・QA:
 - 制作前blind不足1要素「最低必要容量を不足側へ丸めない」: `1 / 1 改善確認`
 - blocker: H23二次問3 (2a)。この不足はsource/PDF/PPTへ補強済みだが、修正版成果物に対するblind再実施前なので完成判定には使わない。
 
+修正版成果物に対する完成後blind独立再解答（2026-09-19）:
+- 記録: `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_reanswer_20260919.md`
+- R6一次「電力」問5: `5 / 5 PASS`
+- R4一次「法規」問4: `5 / 5 PASS`
+- R5二次「電力・管理」問4: `2 / 2 PASS`
+- R2二次「電力・管理」問6: `4 / 4 PASS`
+- H23二次「電力・管理」問3: `5 / 5 PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `11 / 11 PASS`
+- 合計: `5 / 5問・21 / 21答案要素 PASS`
+- R2二次問6の制作前不足: `PASS / 改善維持`
+- H23二次問3 (2a) の前回完成後blind blocker: `PASS / 改善確認`
+- 判定: `PASS`
+
 品質境界:
 - 固定5問・21答案要素の変更: `0件`
 - SPEC指定10項目: `10 / 10 covered`
@@ -249,6 +263,7 @@ source:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_powerpoint_qa.md`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_reanswer_20260918.md`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_reanswer_20260919.md`
 
 ## Gate checklist
 
@@ -265,8 +280,8 @@ source:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — explanation PDF re-QA `PASS`; completion blind rerun pending
+- [ ] Topic 14 — completion blind rerun `21 / 21 PASS`; final QA pending
 
 ## next_start
 
-保存済み正答を先に見ず、固定5問・21答案要素の完成後blind独立再解答を再実施する。一次2問・10答案要素、二次3問・11答案要素を全件再検証し、全21答案要素PASSまでは最終QA・Topic 15へ進めない。
+Topic 14の最終QAを実施する。上位仕様、固定EXAM_ALIGNMENT、必須成果物、各PDF/PPTX QA、2026-09-19完成後blind `21 / 21 PASS`、進捗記録整合、Web公開状態、SPEC境界を確認し、全件PASSまでは `completed` にせずTopic 15へ進めない。
