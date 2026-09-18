@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_practice_source_complete`
+- current_status: `topic_16_practice_pdf_complete`
 - last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
 - active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: Topic 16の練習PDFを作成する
+- next_start: Topic 16の解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 練習問題source完成 / IN_PROGRESS
+- [ ] 16 同期機って新幹線には使わないの？ — 練習PDF完成 / IN_PROGRESS
 
 ## Topic 16 制作品質状態
 - 固定範囲: 同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本
@@ -59,11 +59,19 @@
 - 練習問題独立計算・論理QA: `12 / 12 PASS`
 - 練習問題正答一意性QA: `12 / 12 PASS`
 - 練習問題→固定EXAM_ALIGNMENT接続: `6 / 6 PASS`
-- 練習PDF: 未着手
+- 練習PDF: 完成（A4縦2ページ）
+- 練習PDF表示QA: `2 / 2 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- 練習PDF欠落・破損グリフ: `0件`
+- 練習PDF正答一覧source一致: `12 / 12 PASS`
+- 練習PDF固定過去問マッピング: `6 / 6`
+- practice PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf`
+- practice PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md`
 - 解説画像PowerPoint: 未着手
 - 完成後blind独立再解答: 未実施
-- 状態: `topic_16_practice_source_complete / IN_PROGRESS`
-- 次工程: `16_synchronous_machine_practice.md` の12問・正答・解説を変更せず練習PDFを作成し、表示QA・文字抽出QA・正答一覧source一致・固定6問・6答案要素への接続を確認する
+- 状態: `topic_16_practice_pdf_complete / IN_PROGRESS`
+- 次工程: Topic 16の解説画像PowerPointを作成し、固定6問・6答案要素への接続、表示QA、スライド外はみ出し、文字欠落・重なり、ZIP整合性を確認する
 
 ## Topic 15 最終品質状態
 - 固定範囲（照明）: 光束 / 光度 / 照度 / 輝度 / lm / cd / lx / 逆二乗則 / 照明率 / 保守率 / 所要灯数 / 発光効率 / LED
@@ -419,6 +427,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 16「同期機って新幹線には使わないの？」の練習問題sourceを完成した。全12問、基礎3 / 本試験標準7 / 複合・応用2、全12問五肢択一。独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`、固定EXAM_ALIGNMENT 6問・6答案要素への接続 `6 / 6 PASS`。固定EXAM_ALIGNMENT変更・固定範囲外追加・未確認L0系実車値追加は0件。
+Topic 16「同期機って新幹線には使わないの？」の練習PDFを完成した。A4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`、正答一覧source一致 `12 / 12 PASS`、固定EXAM_ALIGNMENT 6問・6答案要素への接続 `6 / 6 PASS`。固定EXAM_ALIGNMENT変更・固定範囲外追加・未確認L0系実車値追加は0件。
 
-完成数は `15 / 16`。次工程はTopic 16の練習PDF。
+完成数は `15 / 16`。次工程はTopic 16の解説画像PowerPoint。
