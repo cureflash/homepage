@@ -8,7 +8,7 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_17_clean_blind_candidates_fixed`。Topic 17 `パワー半導体の損失比較` は成果物自体のQAまでPASSし、是正後の固定5問・23答案要素についてclean blind候補答案を固定済み。公式解答・標準解答との照合は未実施なので、完成後blind再解答の最終品質ゲートは未完了。
+現在地は `topic_17_official_check_complete`。Topic 17 `パワー半導体の損失比較` は成果物自体のQAまでPASSし、是正後の固定5問・23答案要素についてclean blind候補答案を公式解答・標準解答と照合済み。`23 / 23 PASS`。候補答案変更0件、教材外知識補完0件。completed化はまだ行っていない。
 
 ## EXAM_ALIGNMENT是正
 
@@ -60,6 +60,7 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - blind再解答前ゲート: `17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — 旧26要素前提の履歴
 - blind再解答候補試行: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` — 旧26要素前提の履歴
 - clean blind候補答案: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md` — `23 / 23 candidate fixed`
+- 公式照合記録: `17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md` — `23 / 23 PASS`
 
 旧成果物・旧QA内の `26 / 26` 表記は再マッピング前の履歴値として扱い、最終品質判定には使わない。
 
@@ -73,10 +74,26 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - H24一次 問6 (2)(3): `2 / 2 candidate fixed`
 - H24二次 問1: `6 / 6 candidate fixed`
 - 合計: `23 / 23 candidate fixed`
-- 公式解答・標準解答との照合: `未実施`
-- 最終PASS: `未判定`
 
-候補答案は次工程で変更しない。公式解答・標準解答を開いた後は、各候補の正誤と教材内の導出根拠だけを記録する。
+## 公式解答・標準解答との照合
+
+候補固定後に初めて公式解答・標準解答を開き、候補答案は変更せず照合した。
+
+- R7一次 問4: `5 / 5 PASS`
+- R4一次 問4: `5 / 5 PASS`
+- R2一次 問2: `5 / 5 PASS`
+- H24一次 問6 (2)(3): `2 / 2 PASS`
+- H24二次 問1: `6 / 6 PASS`
+- 一次: `17 / 17 PASS`
+- 二次: `6 / 6 PASS`
+- 合計: `23 / 23 PASS`
+- 候補答案変更: `0件`
+- 教材外知識での補完: `0件`
+- 固定問題差替え: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+
+公式照合工程は `PASS / OFFICIAL_CHECK_COMPLETE`。Topic 17のcompleted判定は次工程の最終QAで行う。
 
 ## Topic 17 範囲境界
 
@@ -89,4 +106,4 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 
 ## 次工程
 
-固定済みclean blind候補23答案要素を、電気技術者試験センター公式解答・標準解答と照合する。候補答案は変更せず、正誤と教材内導出根拠を記録する。
+Topic 17の成果物・固定EXAM_ALIGNMENT・clean blind公式照合結果をまとめて最終QAし、completed可否を判定する。
