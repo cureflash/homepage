@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜17は最終QAまで `PASS / completed`。
+Topic 01〜18は最終QAまで `PASS / completed`。
 
-完成数: `17 / 20`
+完成数: `18 / 20`
 
-current_status: `topic_18_progress_sync_complete`
+current_status: `topic_18_completed`
 
-active_topic: `18 非線形方程式と反復計算`
+active_topic: `19 最適化入門`
 
-次工程: Topic 18の最終QAを再判定する。
+次工程: Topic 19の制作前EXAM_ALIGNMENTを実施する。
 
 ## 上位仕様
 
@@ -398,6 +398,12 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 
 固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更していない。直接二分法/Newton要求0問、接続確認5問の件数水増し0件、仕様外追加0件を維持した。
 
+## 最終QA再判定
+
+進捗記録6ファイルを再確認し、整合 `6 / 6 PASS`。必須成果物、固定EXAM_ALIGNMENT、完成後独立検証、練習問題QA、PDF/PowerPoint表示QA、SPEC境界もすべてPASSを維持した。
+
+判定: `PASS / completed`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -419,8 +425,9 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - [x] 完成後独立検証
 - [x] 最終QA実施 → `NEEDS_REVISION`（進捗記録整合 `1 / 6 PASS`）
 - [x] 進捗記録5ファイルの同期
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 次工程
 
-Topic 18の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更しない。
+Topic 19「最適化入門」の制作前EXAM_ALIGNMENTを実施する。
