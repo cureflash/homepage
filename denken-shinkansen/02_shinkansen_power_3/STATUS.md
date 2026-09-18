@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 15 / 16
-- current_status: `topic_16_preproduction_reanswer_complete`
+- current_status: `topic_16_explanation_source_complete`
 - last_completed_topic: `15 回生した電気はどこへ行く？`
 - active_topic: `16 発電所からN700Sまで全部つないでみる`
-- next_start: Topic 16の解説本文＋3段階例題を作成する
+- next_start: Topic 16の解説PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 15 回生した電気はどこへ行く？ — completed。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録7箇所の整合を再確認し `PASS / completed`。Webカタログ登録済み
-- [ ] 16 発電所からN700Sまで全部つないでみる — 制作前EXAM_ALIGNMENT・制作前独立再解答完了。固定5出題回・7答案要素 `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`。次は解説本文＋3段階例題
+- [ ] 16 発電所からN700Sまで全部つないでみる — 制作前EXAM_ALIGNMENT・制作前独立再解答、解説本文＋3段階例題まで完了。固定5出題回・7答案要素の本文要求事項マッピング `7 / 7 PASS`、例題独立再計算 `3 / 3 PASS`。次は解説PDF
 
 ## Topic 07 完了記録
 source: `topics/07_phase_conversion/07_phase_conversion.md`
@@ -629,5 +629,37 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - H29 法規 問13(a)(b): `(2),(5)`
 - H25 法規 問12(a)(b): `(2),(3)`
 
+## Topic 16 進行記録
+source: `topics/16_power_system_integration/16_power_system_integration.md`
+
+固定5出題回・7答案要素:
+- R8上 電力 問2
+- H30 電力 問8
+- R7下 電力 問16 (a)(b)
+- R7下 電力 問12
+- R7上 法規 問13 (a)(b)
+
+集計:
+- 制作前EXAM_ALIGNMENT: 完了
+- 制作前独立検証: `7 / 7 PASS`
+- 公式標準解答一致: `7 / 7 PASS`
+- Topic 16固定範囲外の知識補完: `0件`
+- 解説本文: §1〜§15 完成
+- 3段階例題: 基礎・本試験標準・複合 各1問完成
+- 3段階例題独立再計算: `3 / 3 PASS`
+- 固定5出題回・7答案要素の本文要求事項マッピング: `7 / 7 PASS`
+- 発電電力・電力量・J/Wh換算: PASS
+- 変圧器電圧比・平衡三相電力・力率: PASS
+- 電圧降下・線路損失: PASS
+- %インピーダンス・三相短絡電流・遮断定格: PASS
+- 発電・負荷・回生の双方向エネルギーフロー: PASS
+- SPEC固定範囲外追加: `0件`
+- 件数合わせの仕様追加: `0件`
+- 未確認新幹線実設備値の真値化: `0件`
+- 解説PDF: 未着手
+- 練習問題source / PDF: 未着手
+- 解説画像PowerPoint: 未着手
+- 完成後ブラインド独立再解答: 未実施
+
 ## 次
-Topic 16の解説本文＋3段階例題を作成する。
+Topic 16の解説PDFを作成する。
