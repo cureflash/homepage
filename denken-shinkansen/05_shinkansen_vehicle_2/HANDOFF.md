@@ -7,9 +7,9 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_blind_reanswer_ready`。Topic 16 `700系 多レベル変換器とPWM` は制作前EXAM_ALIGNMENT、解説source＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲートまで完了した。独立再解答前ゲートは `PASS / BLIND_REANSWER_READY`。必須先読み対象に固定5過去問の公式正答番号・標準解答本文・完成済み個別答案・個別数値解・導出結果は保存されていない。main sourceには公式問題・公式解答URLのみを記録し、正答内容は保存していない。
+現在地は `topic_16_blind_reanswer_candidates_fixed`。Topic 16 `700系 多レベル変換器とPWM` は制作前EXAM_ALIGNMENT、解説source＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲートまで完了済み。さらに、公式解答・標準解答を先に開かず、完成教材と固定5問の公式問題文だけで一次20＋二次6、計26答案要素を再解答し、候補答案をGitHubへ固定した。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデル、範囲境界は変更していない。
 
-次工程は Topic 16 の完成後独立再解答。公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・26答案要素を再解答し、候補答案をGitHubへ固定してから公式照合する。
+次工程は、固定候補答案を変更せず公式解答・標準解答と照合し、26答案要素の一致と、各答案が完成教材内の根拠だけで導けたことを確認して完成後独立再解答のPASS/FAILを確定する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -133,6 +133,21 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
 
+## Topic 16 完成後独立再解答 候補答案固定
+- path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_candidates.md`
+- 実施条件: `公式問題文＋完成教材のみ / 公式解答・標準解答は未参照`
+- 固定過去問: `一次4問＋二次1問、計5問`
+- 一次候補答案: `20 / 20 固定`
+- 二次候補答案: `6 / 6 固定`
+- 合計: `26 / 26 固定`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 教材本文・PDF/PPTX変更: `0件`
+- SPEC指定8項目・3可視化・共通仮定モデル変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 公式解答・標準解答との照合: `未実施`
+- 判定: `PASS / BLIND_REANSWER_CANDIDATES_FIXED`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -170,4 +185,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16 `700系 多レベル変換器とPWM` の完成後独立再解答を実施する。公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・26答案要素を再解答し、候補答案をGitHubへ固定してから公式照合する。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデル、範囲境界を変更しない。
+Topic 16 `700系 多レベル変換器とPWM` の固定候補答案を変更せず、公式解答・標準解答を開いて固定5問・26答案要素を照合する。各答案要素が完成教材内の根拠だけで導けたかも確認して完成後独立再解答のPASS/FAILを確定する。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデル、範囲境界を変更しない。
