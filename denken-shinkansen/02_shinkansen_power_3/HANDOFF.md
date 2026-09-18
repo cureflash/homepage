@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は完成済み。active themeはTopic 14。
 
 ## 今回進捗
-Topic 14 `駅やトンネルにはどう電気を配る？` の完成後独立再解答を実施した。固定5問・6答案要素を完成教材内の既存説明だけで再計算・再判定し `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完 `0件` を確認した。SPEC固定範囲外追加、Topic 15論点先取り、未確認新幹線実設備値の使用はいずれも0件。main source、練習PDF QA、PowerPoint QAを現在地へ同期した。Topic 14は最終QA前のため未完了のまま。
+Topic 14 `駅やトンネルにはどう電気を配る？` の初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はすべてPASSしたが、旧工程を次工程として残す進捗記録5箇所があるため進捗記録整合のみFAILと判定し、`NEEDS_REVISION / IN_PROGRESS` とした。Topic 14は未完了で、完成数は `13 / 16` のまま。仕様追加、固定問題変更、数式・問題・正答・PDF/PPTX・独立再解答結果の変更は行っていない。
 
 source: `topics/14_distribution/14_distribution.md`
 解説PDF: `topics/14_distribution/14_distribution_explanation.pdf`
@@ -17,6 +17,7 @@ source: `topics/14_distribution/14_distribution.md`
 解説画像PowerPoint: `topics/14_distribution/14_distribution_images.pptx`
 PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 完成後独立再解答: `topics/14_distribution/14_distribution_independent_reanswer.md`
+最終QA: `topics/14_distribution/14_distribution_final_qa.md`
 
 現在の品質ゲート:
 - 制作前EXAM_ALIGNMENT: 完了
@@ -63,7 +64,8 @@ PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - Topic 15論点先取り: `0件`
 - 未確認新幹線実設備値への依存・真値化・再解答使用: `0件`
 - 件数合わせの仕様追加: `0件`
-- 最終QA: 未実施
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・PDF/PPTX QA・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
+- 旧進捗記録5箇所同期: 未実施
 
 ## 前回進捗（Topic 13）
 Topic 13 `新幹線の架線は何でできている？` の最終QAを再実施した。初回最終QAで唯一FAILだった進捗記録整合について、`13_electrical_materials_explanation_qa.md`、`13_electrical_materials_practice_source.md`、`13_electrical_materials_practice_qa.md`、`13_electrical_materials_powerpoint_qa.md`、`13_electrical_materials_independent_reanswer.md` の5箇所が現在地へ同期済みであることを再確認し、技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を全件PASSと判定した。Topic 13を `PASS / completed` とし、main source・STATUS・HANDOFFを同期した。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更していない。
@@ -252,7 +254,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_14_independent_reanswer_complete`
+- `current_status`: `topic_14_final_qa_needs_revision`
 - 完成数: `13 / 16`
 - last completed: Topic 13 `新幹線の架線は何でできている？`
 - active: Topic 14 `駅やトンネルにはどう電気を配る？`
@@ -265,6 +267,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 14 解説画像PowerPoint: `topics/14_distribution/14_distribution_images.pptx`
 - Topic 14 PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - Topic 14 完成後独立再解答: `topics/14_distribution/14_distribution_independent_reanswer.md`
+- Topic 14 最終QA: `topics/14_distribution/14_distribution_final_qa.md`
 - Topic 14 固定問題: `5問・6答案要素`
 - Topic 14 制作前EXAM_ALIGNMENT: 完了
 - Topic 14 制作前独立検証: `6 / 6 PASS`
@@ -297,7 +300,10 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 14 未確認新幹線実設備値への依存・真値化・再解答使用: `0件`
 - Topic 14 Topic 15論点先取り: `0件`
 - Topic 14 件数合わせの仕様追加: `0件`
-- Topic 14 最終QA: 未実施
+- Topic 14 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- Topic 14 初回最終QAで技術内容・必須成果物・固定EXAM_ALIGNMENT・独立再解答・PDF/PPTX QA・SPEC境界: PASS
+- Topic 14 初回最終QAで進捗記録整合: FAIL（旧工程5箇所）
+- Topic 14 旧進捗記録5箇所同期: 未実施
 - Topic 13 source: `topics/13_electrical_materials/13_electrical_materials.md`
 - Topic 13 解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
 - Topic 13 練習問題source: `topics/13_electrical_materials/13_electrical_materials_practice_source.md`
@@ -328,4 +334,4 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 12 最終QA: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 14の最終QAを実施する。固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` とする。
+`14_distribution_explanation_qa.md`、`14_distribution_practice_source.md`、`14_distribution_practice_qa.md`、`14_distribution_powerpoint_qa.md`、`14_distribution_independent_reanswer.md` の旧工程記録5箇所を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
