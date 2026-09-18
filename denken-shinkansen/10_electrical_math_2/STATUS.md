@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_17_preproduction_numerical_validation_complete`
+- current_status: `topic_17_explanation_body_complete`
 - last_completed_topic: `16 数値微分・数値積分`
 - active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の解説本文＋3段階例題を作成する
+- next_start: Topic 17の解説PDFを作成し、表示QA・文字抽出QA・数値整合を確認する
 
 ## Topic 07 制作品質ゲート
 
@@ -261,7 +261,7 @@
 - [x] 数値ODEの基礎資料を複数確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
 - [x] 制作前独立数値検証
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
@@ -273,24 +273,26 @@
 
 ## 今回進めた内容
 
-Topic 17「常微分方程式の数値解法」の制作前独立数値検証を実施した。
+Topic 17「常微分方程式の数値解法」の解説本文＋3段階例題を主sourceへ実装した。
 
-- 検証問題: `dy/dt=-y, y(0)=1`、解析解 `y(t)=e^(-t)`
-- `h=0.25` の手計算: `1 -> 0.75 -> 0.5625 -> 0.421875 -> 0.31640625`
-- 手計算と検証スクリプト: `PASS`
-- `t=1` の絶対誤差: `0.117879441171 -> 0.051473191171 -> 0.024270525366 -> 0.011805310720` (`h=0.5, 0.25, 0.125, 0.0625`)
-- 刻み幅を半分にしたときの誤差単調減少: `PASS`
-- 第二種公式過去問5問の扱い: 接続確認のみ、固定過去問への水増し `0件`
-- Runge-Kutta法の体系的先取り: `0件`
+- 固定範囲: Euler法、Runge-Kutta法の概念、刻み幅と誤差、初期値問題、簡略列車運動式のみ
+- 教材で必要な説明6項目: `6 / 6 PASS`
+- 接続確認した第二種公式過去問5問: 教材内接続 `5 / 5`
+- 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
+- 非該当5問の固定品質ゲート件数への水増し: `0件`
+- 基礎例題: `dy/dt=-y` のEuler法、制作前検証と一致
+- 本試験標準例題: RL過渡をEuler法で計算し、解析解・時定数・刻み幅依存と照合
+- 複合例題: 教育用列車モデルで速度・位置を同一刻みの始点値から更新
+- 3段階例題の独立再計算: `3 / 3 PASS`
+- Runge-Kutta法: `SPEC.md` どおり概念説明に限定
 - Topic 18以降の先取り: `0件`
 - 未確認実車値依存: `0件`
-- record: `topics/17_ode_numerical_methods/17_ode_numerical_methods_preproduction_validation.md`
-- script: `topics/17_ode_numerical_methods/17_ode_numerical_methods_preproduction_validation.py`
+- source: `topics/17_ode_numerical_methods/17_ode_numerical_methods.md`
 
 ## 判定
 
-`topic_17_preproduction_numerical_validation_complete / IN_PROGRESS`
+`topic_17_explanation_body_complete / IN_PROGRESS`
 
-完成数は `16 / 20`。
+完成数は `16 / 20` のまま。
 
-次はTopic 17の解説本文＋3段階例題を作成する。
+次はTopic 17の解説PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。
