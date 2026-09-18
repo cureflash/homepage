@@ -2,9 +2,9 @@
 
 ## 状態
 
-`topic_18_explanation_body_complete / IN_PROGRESS`
+`topic_18_explanation_pdf_complete / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題まで完了した。固定5説明項目を `5 / 5` 実装し、接続確認した第二種公式過去問5問との教材内接続を明示した。直接二分法・Newton法を要求する確認済み第二種過去問は0問のままで、件数水増しは行っていない。次工程は解説PDFの作成と表示・数値整合QAである。
+2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題、解説PDF＋QAまで完了した。固定5説明項目を `5 / 5` 実装し、接続確認した第二種公式過去問5問との教材内接続を明示した。直接二分法・Newton法を要求する確認済み第二種過去問は0問のままで、件数水増しは行っていない。解説PDFはA4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出・数値整合とも `PASS`。次工程は練習問題sourceの作成である。
 
 ## 固定範囲
 
@@ -644,6 +644,25 @@ Newton法:
 
 判定: `PASS / EXPLANATION_BODY_COMPLETE`
 
+## 解説PDF＋QA
+
+成果物:
+- `18_nonlinear_equations_iteration_explanation.pdf`
+- `18_nonlinear_equations_iteration_explanation_qa.md`
+
+QA結果:
+- A4縦4ページ
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字切れ・重なり・ページ外はみ出し・豆腐文字: `0件`
+- `pdftotext` 文字抽出: `PASS`
+- 3段階例題の独立数値再計算: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- 第一種問題の件数加算: `0件`
+- 仕様外追加: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
 ## 制作品質ゲート
 
 - [x] MASTER_SPEC確認
@@ -659,7 +678,7 @@ Newton法:
 - [x] 必要説明とSPEC境界を固定
 - [x] 制作前独立数値検証
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋QA
+- [x] 解説PDF＋QA
 - [ ] 練習問題source
 - [ ] 練習PDF＋QA
 - [ ] 解説画像PowerPoint＋QA
@@ -669,4 +688,4 @@ Newton法:
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文を変更せず、Topic 18の解説PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
+固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDFを変更せず、Topic 18の練習問題sourceを作成する。

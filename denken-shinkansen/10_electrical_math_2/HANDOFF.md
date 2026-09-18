@@ -8,11 +8,11 @@ Topic 01〜17は最終QAまで `PASS / completed`。
 
 完成数: `17 / 20`
 
-current_status: `topic_18_explanation_body_complete`
+current_status: `topic_18_explanation_pdf_complete`
 
 active_topic: `18 非線形方程式と反復計算`
 
-次工程: Topic 18の解説PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
+次工程: Topic 18の練習問題sourceを作成する。
 
 ## 上位仕様
 
@@ -259,6 +259,25 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
+## 解説PDF＋QA
+
+成果物:
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_explanation.pdf`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_explanation_qa.md`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`。
+
+- A4縦4ページ
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字切れ・表/本文重なり・ページ外はみ出し・豆腐文字: `0件`
+- `pdftotext` 文字抽出: `PASS`
+- 3段階例題の独立数値再計算: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- 第一種問題の件数加算: `0件`
+- Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -273,7 +292,7 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - [x] sourceへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
 - [x] 制作前独立数値検証
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋QA
+- [x] 解説PDF＋QA
 - [ ] 練習問題source
 - [ ] 練習PDF＋QA
 - [ ] 解説画像PowerPoint＋QA
@@ -283,4 +302,4 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文を変更せず、Topic 18の解説PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
+固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDFを変更せず、Topic 18の練習問題sourceを作成する。
