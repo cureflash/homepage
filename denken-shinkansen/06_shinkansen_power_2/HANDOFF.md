@@ -2,25 +2,27 @@
 
 updated: 2026-09-18
 series: `06_shinkansen_power_2`
-active_topic: `13`
-current_status: `topic_13_progress_records_synced`
+active_topic: `14`
+current_status: `topic_13_completed`
 
 ## 今回完了
 
-Topic 13「単相の新幹線負荷は三相系統を乱さない？」の初回最終QAで残った4 blockerを解消した。
+Topic 13「単相の新幹線負荷は三相系統を乱さない？」の最終QAを再判定し、`PASS / completed` とした。
 
-同期内容:
-1. `13_three_phase_unbalance.md` の状態・次工程を実成果物状態へ同期。
-2. `13_three_phase_unbalance_practice.md` の状態・次工程を実成果物状態へ同期。
-3. `13_three_phase_unbalance_powerpoint_qa.md` を完成後blind `8 / 8 PASS` の実績へ同期。
-4. `qualifications/denken-shinkansen/catalog.json` にTopic 13を登録。
-
-維持した品質ゲート:
+再判定確認:
 - H28二種一次「法規」問6: `5 / 5 PASS`
 - H23二種二次「電力・管理」問4: `3 / 3 PASS`
 - 合計: `2 / 2問・8 / 8答案要素 PASS`
 - 制作前不足2答案要素: `2 / 2 改善確認`
-- 技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind結果の変更: `0件`
+- 解説PDF: `4 / 4 PASS`
+- 練習PDF: `10 / 10 PASS`
+- 練習15問: `15 / 15 PASS`
+- 一次型正答一意性: `10 / 10 PASS`
+- PowerPoint: `4 / 4 PASS`、SPEC固定8項目 `8 / 8`
+- 進捗記録整合: PASS
+- Webカタログ登録: PASS
+
+初回最終QAの4 blockerはすべて解消済み。
 
 品質境界:
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -34,14 +36,12 @@ Topic 13「単相の新幹線負荷は三相系統を乱さない？」の初回
 
 ## 現在地
 
-Topic 01〜12: `completed`。
+Topic 01〜13: `completed`。
 
-完成数: `12 / 22`。
+完成数: `13 / 22`。
 
-active topic: Topic 13「単相の新幹線負荷は三相系統を乱さない？」。
-
-4 blockerは解消済みだが、最終QA再判定前なのでTopic 13は `IN_PROGRESS` を維持する。
+active topic: Topic 14「新幹線の力率と電圧をどう維持する？」。
 
 ## 次に行う
 
-Topic 13の最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・完成後blind独立再解答結果は変更しない。再判定PASS時のみ `completed` として完成数を `13 / 22` へ更新する。再判定完了まではTopic 14以降・Topic 16故障計算を先取りしない。
+Topic 14の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 14固定範囲だけを使い、二種一次・二次の公式過去問を直近年度優先で調査する。Topic 15以降を先取りしない。
