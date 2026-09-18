@@ -1,0 +1,47 @@
+name: finalize-topic19-pid-pptx
+on:
+  push:
+    paths:
+      - '.github/tmp/build_topic19_pptx.py'
+permissions:
+  contents: write
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check python-pptx scipy numpy
+      - name: Build and record canonical PPTX
+        shell: bash
+        run: |
+          set -euo pipefail
+          P='denken-shinkansen/07_shinkansen_machine_2/topics/19_pid_speed_control/19_pid_speed_control_images.pptx'
+          QA='denken-shinkansen/07_shinkansen_machine_2/topics/19_pid_speed_control/19_pid_speed_control_powerpoint_qa.md'
+          ST='denken-shinkansen/07_shinkansen_machine_2/STATUS.md'
+          HO='denken-shinkansen/07_shinkansen_machine_2/HANDOFF.md'
+          python .github/tmp/build_topic19_pptx.py "$P"
+          BLOB=$(git hash-object "$P")
+          SIZE=$(stat -c%s "$P")
+          SHA256=$(sha256sum "$P" | cut -d' ' -f1)
+          python - "$QA" "$ST" "$HO" "$BLOB" "$SIZE" "$SHA256" <<'PY'
+          from pathlib import Path
+          import re,sys
+          qa,st,ho,blob,size,sha=sys.argv[1:]
+          old='f30c3f6aa908052d605aa205ce06516afe00fe8c'
+          for f in (qa,st,ho):
+              p=Path(f); t=p.read_text(); t=t.replace(old,blob); p.write_text(t)
+          p=Path(qa); t=p.read_text(); t=re.sub(r'PPTX SHA-256 `[^`]+`',f'PPTX SHA-256 `{sha}`',t); t=re.sub(r'PPTX size `[^`]+`',f'PPTX size `{size} byte`',t); t=t.replace('1601×900','1600×900'); p.write_text(t)
+          PY
+          rm -f .github/tmp/build_topic19_pptx.py .github/workflows/finalize_topic19_pid_pptx.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'denken machine2: finalize Topic 19 PID PowerPoint binary'
+          git pull --rebase origin main
+          git push origin HEAD:main
