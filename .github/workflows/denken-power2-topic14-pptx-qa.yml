@@ -1,0 +1,135 @@
+name: Denken Power2 Topic14 PPTX QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/denken-power2-topic14-pptx-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install QA dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice-impress poppler-utils unzip fonts-noto-cjk
+          python3 -m pip install --disable-pip-version-check python-pptx pillow lxml
+
+      - name: Open XML and geometry QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET='denken-shinkansen/06_shinkansen_power_2/topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx'
+          mkdir -p qa_output
+          printf 'file_size_bytes=' | tee qa_output/binary.txt
+          wc -c < "$TARGET" | tee -a qa_output/binary.txt
+          printf 'git_blob=' | tee -a qa_output/binary.txt
+          git hash-object "$TARGET" | tee -a qa_output/binary.txt
+          sha256sum "$TARGET" | tee -a qa_output/binary.txt
+          unzip -t "$TARGET" | tee qa_output/unzip.txt
+          python3 - <<'PY' | tee qa_output/pptx_structure.txt
+          from pptx import Presentation
+          from pathlib import Path
+          p = Path('denken-shinkansen/06_shinkansen_power_2/topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx')
+          prs = Presentation(str(p))
+          print(f'slides={len(prs.slides)}')
+          print(f'slide_width_emu={prs.slide_width}')
+          print(f'slide_height_emu={prs.slide_height}')
+          ratio = prs.slide_width / prs.slide_height
+          print(f'aspect_ratio={ratio:.9f}')
+          assert len(prs.slides) == 4, f'expected 4 slides, got {len(prs.slides)}'
+          assert abs(ratio - 16/9) < 0.005, f'not 16:9: {ratio}'
+          all_text=[]
+          overflow=[]
+          for i, slide in enumerate(prs.slides, 1):
+              parts=[]
+              for j, shape in enumerate(slide.shapes, 1):
+                  x,y,w,h = shape.left, shape.top, shape.width, shape.height
+                  if x < 0 or y < 0 or x+w > prs.slide_width or y+h > prs.slide_height:
+                      overflow.append((i,j,x,y,w,h))
+                  if hasattr(shape, 'text') and shape.text:
+                      parts.append(shape.text)
+              txt='\n'.join(parts)
+              all_text.append(txt)
+              print(f'--- SLIDE {i} ---')
+              print(txt)
+          print(f'geometry_overflow_count={len(overflow)}')
+          for row in overflow:
+              print('OVERFLOW', row)
+          assert not overflow, f'shape geometry overflow: {overflow}'
+          joined='\n'.join(all_text)
+          required_values=['66.258','154.6','155','Vreq','154','66']
+          for v in required_values:
+              print(f'required_value[{v}]={v in joined}')
+              assert v in joined, f'missing required remediation value/text: {v}'
+          spec_terms=['有効電力','無効電力','皮相電力','力率','電圧','コンデンサ','リアクトル','P','Q']
+          for term in spec_terms:
+              print(f'term[{term}]={joined.count(term)}')
+          Path('qa_output/slide_text.txt').write_text(joined, encoding='utf-8')
+          PY
+
+      - name: LibreOffice conversion and 200 dpi render QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET='denken-shinkansen/06_shinkansen_power_2/topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx'
+          libreoffice --headless --convert-to pdf --outdir qa_output "$TARGET" | tee qa_output/libreoffice.txt
+          PDF='qa_output/14_power_factor_voltage_control_images.pdf'
+          test -s "$PDF"
+          pdfinfo "$PDF" | tee qa_output/pdfinfo.txt
+          pages=$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')
+          test "$pages" = '4'
+          pdftotext -layout "$PDF" qa_output/rendered_text.txt
+          pdftotext -bbox-layout "$PDF" qa_output/rendered_bbox.xhtml
+          pdftoppm -png -r 200 "$PDF" qa_output/slide >/dev/null 2>&1
+          test "$(find qa_output -maxdepth 1 -name 'slide-*.png' | wc -l)" = '4'
+          python3 - <<'PY' | tee qa_output/render_qa.txt
+          from pathlib import Path
+          from PIL import Image, ImageStat
+          import xml.etree.ElementTree as ET
+          text=Path('qa_output/rendered_text.txt').read_text(encoding='utf-8', errors='replace')
+          print('replacement_char_count=', text.count('\ufffd'))
+          assert '\ufffd' not in text
+          imgs=sorted(Path('qa_output').glob('slide-*.png'))
+          print('rendered_pages=', len(imgs))
+          assert len(imgs)==4
+          for p in imgs:
+              im=Image.open(p).convert('RGB')
+              stat=ImageStat.Stat(im)
+              extrema=im.getextrema()
+              print(p.name, 'size=', im.size, 'mean=', tuple(round(x,2) for x in stat.mean), 'extrema=', extrema)
+              assert im.width > im.height
+              assert any(lo != hi for lo,hi in extrema), f'blank/constant page: {p}'
+          root=ET.parse('qa_output/rendered_bbox.xhtml').getroot()
+          ns={'x':'http://www.w3.org/1999/xhtml'}
+          pages=root.findall('.//x:page', ns)
+          print('bbox_pages=', len(pages))
+          assert len(pages)==4
+          out=[]
+          for pi,page in enumerate(pages,1):
+              W=float(page.attrib['width']); H=float(page.attrib['height'])
+              words=page.findall('.//x:word', ns)
+              bad=0
+              for w in words:
+                  x0=float(w.attrib['xMin']); y0=float(w.attrib['yMin']); x1=float(w.attrib['xMax']); y1=float(w.attrib['yMax'])
+                  if x0 < -0.1 or y0 < -0.1 or x1 > W+0.1 or y1 > H+0.1:
+                      bad += 1
+              print(f'page={pi} words={len(words)} bbox_outside_page={bad} page_size={W}x{H}')
+              assert len(words) > 5
+              assert bad == 0
+          PY
+
+      - name: Upload QA evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: topic14-pptx-qa-evidence
+          path: qa_output/
+          if-no-files-found: error
