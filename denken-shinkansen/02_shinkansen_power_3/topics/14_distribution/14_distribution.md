@@ -1,7 +1,7 @@
 # 14 駅やトンネルにはどう電気を配る？
 
 ## 状態
-`progress_records_synced`。制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了し、初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。初回最終QAで唯一FAILだった旧工程5箇所の進捗記録を現在地へ同期した。Topic 14は最終QA再実施前のため、まだ未完了。
+`completed`。制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了し、初回最終QAで唯一FAILだった旧工程5箇所の進捗記録を同期後、最終QAを再実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界、進捗記録整合は全件PASS。Topic 14は `PASS / completed`。
 
 品質ゲート対象は、電気技術者試験センター公式過去問を直近年度から遡って確認し、`SPEC.md` のTopic 14固定範囲だけで解ける5問・6答案要素に固定する。件数合わせのためSPECを拡張しない。固定5問・6答案要素は、制作前独立検証 `6 / 6 PASS`、完成後独立再解答 `6 / 6 PASS`、公式解答との不一致`0件`を確認した。
 
@@ -458,6 +458,8 @@
 - 初回最終QAの技術内容・必須成果物・固定EXAM_ALIGNMENT・独立再解答・PDF/PPTX QA・SPEC境界: PASS
 - 初回最終QAの進捗記録整合: FAIL（旧工程5箇所）
 - 旧進捗記録5箇所同期: 完了
+- 最終QA再実施: `topics/14_distribution/14_distribution_final_qa.md` — `PASS / completed`
+- Webカタログ登録: `qualifications/denken-shinkansen/catalog.json` — 完了
 
 完成後独立答案:
 - R8上 電力 問13: `(2)`
@@ -467,4 +469,4 @@
 - H20 電力 問17(a)(b): `(2),(3)`
 
 ## 次
-Topic 14の最終QAを再実施する。固定EXAM_ALIGNMENT、教材内容、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` とする。
+Topic 15 `回生した電気はどこへ行く？` の制作前EXAM_ALIGNMENTを行う。`SPEC.md` のTopic 15固定範囲だけで解ける公式過去問を直近年度から遡って調査し、件数合わせの仕様追加をしない。
