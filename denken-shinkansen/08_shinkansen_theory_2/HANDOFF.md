@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
+Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_18_final_qa_complete`
+current_status: `topic_18_completed`
 
-active_topic: `18 新幹線のセンサ信号をどう増幅する？`
+active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、進捗記録同期、最終QA再実施まで完了。判定は `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`。次工程は `completed` 状態同期。
+Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、進捗記録同期、最終QA再実施、completed状態同期まで完了。判定は `PASS / completed`。次工程はTopic 19 制作前EXAM_ALIGNMENT。
 
 ## Topic 18 成果物
 
@@ -25,8 +25,8 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - PowerPoint QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_powerpoint_qa.md`
 - 完成後独立再解答: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_reanswer.md`
 - 最終QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_final_qa.md`
-- completion: `in_progress`
-- stage: `FINAL_QA_COMPLETE`
+- completion: `completed`
+- stage: `COMPLETED`
 
 ## Topic 18 固定範囲
 
@@ -177,6 +177,22 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 判定: `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
 
+## Topic 18 completed状態同期
+
+主source・練習source・STATUS・HANDOFFを実成果物状態へ同期した。
+
+- 主source: `completion: completed`、`stage: COMPLETED`
+- 練習source: `completion: completed`、`stage: COMPLETED`
+- STATUS: 完成数 `18 / 21`、Topic 19をactiveへ更新
+- HANDOFF: Topic 01〜18 `PASS / completed` へ更新
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 仕様外追加: `0件`
+
+判定: `PASS / completed`
+
 ## 次工程
 
-Topic 18を `completed` へ状態同期する。完成数を `18 / 21` に更新するのは、この状態同期が完了した時点とする。
+Topic 19「25kV・大電流をどう安全に測る？」の制作前EXAM_ALIGNMENT。
