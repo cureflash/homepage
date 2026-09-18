@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_preproduction_exam_alignment_complete`
+current_status: `topic_13_preproduction_reanswer_complete_with_gap`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -50,17 +50,30 @@ source:
 
 ## Topic 13 progress
 
-制作前EXAM_ALIGNMENT完了。
+制作前EXAM_ALIGNMENTと制作前blind独立再解答まで完了。
 
 正式品質ゲート:
-- 平成28年度 第二種一次「法規」問6 — 三相不平衡、交流式電気鉄道、逆相電流、同期機への影響、不平衡対策 — `5答案要素`
-- 平成23年度 第二種二次「電力・管理」問4 — 異容量V結線、三相平衡負荷＋単相負荷、フェーザ合成、設備利用率 — `3答案要素`
+- 平成28年度 第二種一次「法規」問6 — `5答案要素`
+- 平成23年度 第二種二次「電力・管理」問4 — `3答案要素`
 - 合計: 一次1問＋二次1問、`2問 / 8答案要素`
 
-原則5問未満だが、固定範囲外の故障計算・配電方式・保護を混ぜて件数を水増ししない。平成16年度一次「電力」問2と平成10年度一次「電力」問6(B)は関連履歴を確認したが、現行公式アーカイブ外で公式問題・公式解答を再確認できないため正式ゲートには数えない。
+制作前blind独立再解答:
+- H28一次 法規 問6: `5 / 5 PASS`
+- H23二次 電力・管理 問4: `1 / 3 PASS`
+- 合計: `6 / 8 PASS`
+
+H23二次問4の不足:
+- 二つの単相負荷を各変圧器へ独立に加えるモデルとして扱い、(2)単相負荷合計と(3)利用率を誤った。
+- 教材本文では、二つの単相負荷が同一のときの回路電流、30 kVA側は三相負荷電流のみ、50 kVA側は三相負荷電流＋単相負荷電流となるフェーザ関係を説明する。
+- `P1,max = 50 - 30 cos30° = 24.02 kW` と利用率 `94.97 -> 95.0 %` へ途中式から到達できる説明が必要。
+
+この `6 / 8` は制作前ベースラインであり、完成判定ではない。完成後blind独立再解答では `8 / 8 PASS` が必要。
+
+原則5問未満だが、固定範囲外の故障計算・配電方式・保護を混ぜて件数を水増ししない。正式問題の追加はしない。
 
 source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance.md`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_preproduction_blind_reanswer_20260918.md`
 
 ## Gate checklist
 
@@ -76,8 +89,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — production-pre EXAM_ALIGNMENT complete; independent re-answer pending
+- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer complete; explanation source pending
 
 ## next_start
 
-Topic 13の正式2問8答案要素を、保存済み正答を先に見ずに制作前独立再解答する。固定範囲外の故障計算等で補完せず、不足した中間知識だけを教材要件として記録する。
+Topic 13の解説source本文を制作する。既存SPEC範囲を増やさず、制作前再解答で不足したH23二次問4の回路電流・フェーザ合成・容量制約を必須中間説明として組み込む。Topic 14以降・Topic 16故障計算は先取りしない。
