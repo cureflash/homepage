@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 19 / 20
-- current_status: `topic_20_exam_alignment_complete`
+- current_status: `topic_20_preproduction_validation_complete`
 - last_completed_topic: `19 最適化入門`
 - active_topic: `20 新幹線を数式モデルだけで走らせる`
-- next_start: Topic 20の制作前独立検証
+- next_start: Topic 20の解説本文＋3段階例題
 
 ## Topic 07 制作品質ゲート
 
@@ -334,7 +334,7 @@
 - [x] 第一種・第三種問題による件数水増し0件を確認
 - [x] 電験学習資料を2系統以上確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
-- [ ] 制作前独立検証
+- [x] 制作前独立検証（4ケース `4 / 4 PASS`、教育用仮定値のみ）
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
@@ -346,22 +346,24 @@
 
 ## 今回進めた内容
 
-Topic 20 `新幹線を数式モデルだけで走らせる` の制作前EXAM_ALIGNMENTを完了した。
+Topic 20 `新幹線を数式モデルだけで走らせる` の制作前独立検証を完了した。
 
-- 主source: `topics/20_shinkansen_math_model/20_shinkansen_math_model.md`
-- 第二種公式アーカイブ: R8一次、R7二次までの公開を確認
-- 接続確認: `5問`
+- 記録: `topics/20_shinkansen_math_model/20_shinkansen_math_model_preproduction_validation.md`
+- 再現スクリプト: `topics/20_shinkansen_math_model/20_shinkansen_math_model_preproduction_validation.py`
+- Case A: 牽引力→速度・位置→仕事・電力量 `PASS`
+- Case B: 回生側の符号規約 `PASS`
+- Case C: Euler刻み幅・解析解・一次伝達関数 `PASS`
+- Case D: 周期成分・サンプリング・周波数スペクトル `PASS`
 - 統合モデル自体を直接要求する確認済み第二種過去問: `0問`
 - 接続5問の直接対応品質ゲート件数への水増し: `0件`
 - 第一種・第三種問題の追加: `0件`
 - 仕様外数学の追加: `0件`
-- 未確認実車値の固定: `0件`
-- 固定範囲: 牽引力・走行抵抗→運動方程式→数値積分→速度・位置→消費/回生電力→簡略制御モデル→PWM/FFT
+- 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_20_exam_alignment_complete / IN_PROGRESS`
+`topic_20_preproduction_validation_complete / IN_PROGRESS`
 
 完成数は `19 / 20`。
 
-次はTopic 20の制作前独立検証。
+次はTopic 20の解説本文＋3段階例題。
