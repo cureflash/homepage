@@ -4,8 +4,8 @@
 
 ## 状態
 
-- stage: `PROGRESS_RECORDS_SYNCED`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: 一次5問・25答案要素
 - 制作前blind独立再解答: `25 / 25 PASS`
@@ -15,13 +15,16 @@
 - 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
 - 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
 - 完成後独立再解答: `25 / 25 PASS`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録同期: `PASS / PROGRESS_RECORDS_SYNCED`
+- 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - 必須説明: `15 / 15`
 - 固定一次5問への接続: `25 / 25答案要素`
 - 3段階例題: `3 / 3`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 公式標準解答・保存済み正答の先見: `0件`
-- 次工程: Topic 18最終QA再実施
+- 次工程: Topic 19 制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -591,4 +594,4 @@ H29・H21一次理論問8型では、帰還部分を一つの `Rf` に見立て�
 
 ## 9. 次工程
 
-Topic 18最終QAを再実施する。固定一次5問・25答案要素、完成後独立再解答 `25 / 25 PASS`、解説PDF・練習PDF・PowerPoint各QA、SPEC境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
+Topic 19「25kV・大電流をどう安全に測る？」の制作前EXAM_ALIGNMENTへ進む。
