@@ -6,14 +6,53 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `17 / 39`
-- current_status: `topic_17_completed`
+- current_status: `topic_18_exam_alignment_complete`
 - last_completed_topic: `17 パワー半導体の損失比較`
 - active_topic: `18 E2系 50Hz・60Hzと磁束`
-- next_start: Topic 18の制作前EXAM_ALIGNMENT。本文・PDF等を先に作らない
+- next_start: Topic 18の解説source本文。固定5問・15答案要素から逆算し、SPEC指定3グラフまで設計する。PDF・PowerPointはsource完成後
 
 ## 完了済み
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
+
+## Topic 18 制作前EXAM_ALIGNMENT
+
+判定: `PASS / exam_alignment_complete`
+
+source:
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux.md`
+
+### 固定EXAM_ALIGNMENT
+
+- R7 二次 機械・制御 問2 `(1)の滑り算出`: 1要素
+- R2 二次 機械・制御 問1 `(1)〜(7)`: 7要素
+- R2 一次 機械 問3 `(1)(4)(5)`: 3要素
+- R2 一次 機械 問5 `(3)(4)(5)`: 3要素
+- H25 一次 機械 問2 `(5)`: 1要素
+- 一次: `7答案要素`
+- 二次: `8答案要素`
+- 合計: `5問・15答案要素`
+
+直近年度から公式問題を確認し、R8一次の鉄損・効率中心問題、R7一次、R4一次のV/f前提だがトルク符号中心の問題は、Topic 18の固定SPEC外へ広がるため件数合わせで採用していない。
+
+### 固定SPEC境界
+
+扱う内容:
+- V/f
+- 磁束
+- 変圧器誘起電圧
+- 鉄心磁束密度
+- 同期速度
+- インバータ出力周波数
+- 機器定格
+
+指定計算・グラフ:
+- 周波数―磁束密度
+- V/f特性
+- 周波数―同期速度
+
+仕様追加: `0件`
+未確認E2系実車値の真値化: `0件`
 
 ## Topic 17 最終QA
 
@@ -80,4 +119,4 @@ clean blind候補答案:
 
 ## 次工程
 
-Topic 18「E2系 50Hz・60Hzと磁束」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、二種一次・二次を含む対応過去問を先に固定し、教材必要事項を逆算する。
+Topic 18の解説source本文を作る。固定5問・15答案要素から必要事項を逆算し、`E = 4.44 f N Φ_m`、`B_m = Φ_m/A`、V/f一定、`N_s = 120f/p`、滑り・滑り周波数、電源周波数とインバータ出力周波数の区別、SPEC指定3グラフを固定範囲内で接続する。未確認E2系実車値は真値化しない。
