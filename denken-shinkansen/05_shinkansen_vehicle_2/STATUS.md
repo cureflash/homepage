@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `16 / 39`
-- current_status: `topic_17_powerpoint_complete`
+- current_status: `topic_17_blind_reanswer_gate_complete`
 - last_completed_topic: `16 700系 多レベル変換器とPWM`
 - active_topic: `17 パワー半導体の損失比較`
-- next_start: 新しいrunでTopic 17の完成後独立再解答前ゲートを作成する
+- next_start: 新しい独立runで、公式解答・標準解答を先に見ずTopic 17の固定5問・26答案要素を完成教材だけで再解答し、候補答案を固定する
 
 ## 完了済み
 
@@ -51,6 +51,16 @@ Topic 01〜16は最終QAまで `PASS / completed`。各Topicの固定EXAM_ALIGNM
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 17 完成後独立再解答前ゲート
+
+- gate: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_gate.md`
+- 判定: `PASS / BLIND_REANSWER_READY`
+- 固定5問・26答案要素: `変更なし`
+- 完成教材への接続: `26 / 26 PASS`
+- 公式解答・標準解答の内容を本ゲート作成runで参照: `0件`
+- 候補答案固定: `未実施`
+- 完成数: `16 / 39` のまま
+
 ## Topic 17 SPEC固定範囲
 
 扱う内容は導通損失、スイッチング損失、スイッチング周波数、素子電流、接合温度、冷却、変換効率。指定可視化は電流―導通損失、スイッチング周波数―損失、出力―変換効率。
@@ -59,4 +69,4 @@ Topic 16の多レベル波形・高調波解析は再展開せず、後続Topic�
 
 ## 次工程
 
-Topic 17の完成後独立再解答前ゲートを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
+新しい独立runで、公式解答・標準解答を先に見ず、固定5問の公式問題文と完成教材だけを使って26答案要素を再解答し、候補答案を固定する。固定EXAM_ALIGNMENT・SPEC指定7項目・3可視化は変更しない。
