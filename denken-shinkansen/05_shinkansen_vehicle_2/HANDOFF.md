@@ -8,9 +8,9 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_17_exam_alignment_remap_complete`。Topic 17 `パワー半導体の損失比較` は成果物自体のQAまでPASSしているが、完成後blind再解答の品質ゲートは未完了。
+現在地は `topic_17_clean_blind_candidates_fixed`。Topic 17 `パワー半導体の損失比較` は成果物自体のQAまでPASSし、是正後の固定5問・23答案要素についてclean blind候補答案を固定済み。公式解答・標準解答との照合は未実施なので、完成後blind再解答の最終品質ゲートは未完了。
 
-## 今回の是正
+## EXAM_ALIGNMENT是正
 
 完成後blind再解答で、H24一次「機械」問6の (1)(4)(5) がTopic 17教材から導出できず、しかも固定SPEC外の照明固有知識であることが判明した。
 
@@ -22,7 +22,7 @@ Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 - (4): 光へのエネルギー変換 — SPEC外 / 対象外
 - (5): 自然空冷照明器具の具体的設計周囲温度 — SPEC外 / 対象外
 
-問題そのものは固定5問の一つとして残す。上位仕様は「関連過去問の要求事項を教材へ接続する」ことを求めるが、採用した問題の全空欄を無条件で教材化する規定ではないため、この是正は品質ゲートの緩和ではなく誤マッピング修正である。
+問題そのものは固定5問の一つとして残す。この是正は品質ゲートの緩和ではなく誤マッピング修正である。
 
 監査記録:
 - `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_exam_alignment_remap_audit.md`
@@ -59,14 +59,24 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - PowerPoint QA: `17_power_semiconductor_loss_comparison_powerpoint_qa.md`
 - blind再解答前ゲート: `17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — 旧26要素前提の履歴
 - blind再解答候補試行: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` — 旧26要素前提の履歴
+- clean blind候補答案: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md` — `23 / 23 candidate fixed`
 
 旧成果物・旧QA内の `26 / 26` 表記は再マッピング前の履歴値として扱い、最終品質判定には使わない。
 
-## blind再解答の扱い
+## clean blind候補固定
 
-旧候補答案試行は `23 / 26 derivable` だった。今回ゲート外へ是正した3要素が、その未導出3要素と一致する。
+是正後23答案要素を、旧候補答案・公式解答・標準解答・電験解説サイトの個別解説を参照せず再解答した。
 
-ただし旧試行では工程形式確認のためTopic 16候補答案を参照しており、R7/R4の10要素がstrict blind provenanceを満たさない。したがって `23 / 23 PASS` と読み替えてcompleted化してはいけない。
+- R7一次 問4: `5 / 5 candidate fixed`
+- R4一次 問4: `5 / 5 candidate fixed`
+- R2一次 問2: `5 / 5 candidate fixed`
+- H24一次 問6 (2)(3): `2 / 2 candidate fixed`
+- H24二次 問1: `6 / 6 candidate fixed`
+- 合計: `23 / 23 candidate fixed`
+- 公式解答・標準解答との照合: `未実施`
+- 最終PASS: `未判定`
+
+候補答案は次工程で変更しない。公式解答・標準解答を開いた後は、各候補の正誤と教材内の導出根拠だけを記録する。
 
 ## Topic 17 範囲境界
 
@@ -79,4 +89,4 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 
 ## 次工程
 
-旧候補答案記録を参照せず、是正後の固定5問・23答案要素をclean条件でblind再解答する。候補答案を固定するまで公式解答・標準解答を開かない。
+固定済みclean blind候補23答案要素を、電気技術者試験センター公式解答・標準解答と照合する。候補答案は変更せず、正誤と教材内導出根拠を記録する。
