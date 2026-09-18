@@ -6,43 +6,39 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は `36 / 38`。01〜36がPASS。active topicは37 `COSMOS② 新幹線の電力設備を遠隔監視する`。
 
 ## 今回進捗
-Topic 37を1段階進め、完成済み練習sourceだけを正本として練習PDFを作成した。全15問・全選択肢・全正答・完全解説を反映し、固定5問・6答案要素との練習接続を維持した。A4縦3ページを180 dpiで全ページ表示確認し、文字抽出、問題/解答整合、範囲境界をQAした。
+Topic 37を1段階進め、完成済み解説sourceと固定EXAM_ALIGNMENTだけを正本として解説画像PowerPointを作成した。16:9・4枚で、SCADAの公開範囲、遠隔計測/A-D変換、デジタル情報/シーケンス制御/遠隔制御、固定5問・6答案要素との対応を可視化した。180 dpi全スライド表示、shape geometry、PPTX ZIP整合性、PDF変換、範囲境界をQAした。
 
-判定: `PASS / PRACTICE_PDF_COMPLETE`。
+判定: `PASS / POWERPOINT_COMPLETE`。
 
-- 練習PDF: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_practice.pdf`
-- 練習PDF QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_practice_pdf_qa.md`
-- A4縦: PASS
-- ページ数: `3`
-- 表示QA: `3 / 3 PASS (180 dpi)`
+- PowerPoint: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_images.pptx`
+- PowerPoint QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_images_qa.md`
+- 16:9: PASS
+- スライド数: `4`
+- 表示QA: `4 / 4 PASS (180 dpi)`
 - 文字切れ・重なり・黒塗り・欠落: `0件`
-- PDF文字抽出: PASS
-- Q1〜Q15: `15 / 15`
-- 正答表記: `15 / 15`
-- 正答位置: A=3 / B=3 / C=3 / D=3 / E=3
+- shape geometry overflow: `0件`
+- PPTX ZIP整合性: PASS
+- PDF変換: `4ページ / PASS`
 - 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6 PASS`
-- sourceとの問題・正答・解説不一致: `0件`
 - 固定問題差替え: `0件`
 - 固定範囲外追加: `0件`
 - Topic 38先取り: `0件`
 - COSMOS-SCADA未確認内部仕様追加: `0件`
 - 完成数: `36 / 38`
 
-## Topic 37 練習PDF内容
-1. Q1〜Q4: 基礎4問
-2. Q5〜Q12: 本試験標準8問
-3. Q13〜Q15: 複合3問
-4. 全15問五肢択一・完全解説
-5. 固定EXAM_ALIGNMENT 5問・6答案要素の練習接続表
-6. 系列SPEC固定範囲とTopic 38境界の明示
+## Topic 37 PowerPoint構成
+1. COSMOS-SCADAの公開範囲とSCADA一般機能
+2. 遠隔計測、センサ、A-D変換、二重積分形A-D変換
+3. 2進/10進/16進、PLC/シーケンス制御、通信による遠隔制御
+4. 固定EXAM_ALIGNMENT 5問・6答案要素と解法手順
 
-## 固定EXAM_ALIGNMENT練習接続
-1. R6上 法規 問7 — Q8, Q9, Q14, Q15
-2. R3 機械 問14 — Q4, Q11, Q13
-3. R1 理論 問18(a) — Q5, Q13
-4. R1 理論 問18(b) — Q6, Q13
-5. H26 機械 問13 — Q2, Q7, Q14, Q15
-6. H23 法規 問6 — Q9, Q15
+## 固定EXAM_ALIGNMENT可視化
+1. R6上 法規 問7 — slide 3・4
+2. R3 機械 問14 — slide 3・4
+3. R1 理論 問18(a) — slide 2・4
+4. R1 理論 問18(b) — slide 2・4
+5. H26 機械 問13 — slide 3・4
+6. H23 法規 問6 — slide 3・4
 
 結果: `6 / 6答案要素 PASS`。
 
@@ -62,4 +58,4 @@ Topic 37を1段階進め、完成済み練習sourceだけを正本として練�
 - Topic 38の冗長化・バックアップ・フェイルセーフ・論理回路・障害検知・切替・システム信頼性は先取りしない。
 
 ## 次の正確な開始点
-Topic 37の解説画像PowerPoint作成。完成済み `37_cosmos_power_remote_monitoring.md` と固定EXAM_ALIGNMENTだけを正本として可視化し、16:9表示、overflow、PPTX ZIP整合性、固定EXAM_ALIGNMENT反映、範囲境界をQAする。完成後blind独立再解答へはまだ進まない。
+Topic 37の完成後blind独立再解答。PowerPoint・解説/練習成果物は変更せず、固定した公式問題PDFと完成教材だけを使い、6答案要素を先に独立導出する。全答案確定後に公式解答表を開いて照合し、教材外知識補完がないか判定する。最終QAへはまだ進まない。
