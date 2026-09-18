@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 17 / 21
-- current_status: `topic_18_final_qa_needs_progress_sync`
+- current_status: `topic_18_progress_records_synced`
 - last_completed_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 - active_topic: `18 新幹線のセンサ信号をどう増幅する？`
-- next_start: Topic 18 進捗記録同期
+- next_start: Topic 18 最終QA再実施
 
 ## 完成済み
 
@@ -43,29 +43,26 @@ Topic 01〜17は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
 - [x] 完成後独立再解答: `25 / 25 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 進捗記録同期
+- [x] 進捗記録同期: `PASS / topic_18_progress_records_synced`
 - [ ] 最終QA再実施
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 18「新幹線のセンサ信号をどう増幅する？」の初回最終QAを実施した。
+初回最終QAで指摘された進捗記録4箇所だけをGitHub正本の実態へ同期した。
 
-- 記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_final_qa.md`
-- 必須成果物: `PASS`
-- 固定一次5問・25答案要素: `25 / 25 PASS`
-- 公式標準解答との一致: `25 / 25`
-- 表示QA・練習QA・PowerPoint QA: `PASS`
-- SPEC固定範囲: `PASS`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXの修正blocker: `0件`
-- 進捗記録blocker: `4件`
-  - 主source冒頭のstage/次工程が旧状態
-  - 主source末尾の次工程が旧状態
-  - 練習source冒頭のstage/次工程が旧状態
-  - 練習source末尾の次工程が旧状態
+- 主source冒頭: stageを `PROGRESS_RECORDS_SYNCED`、次工程をTopic 18最終QA再実施へ同期
+- 主source末尾: 次工程をTopic 18最終QA再実施へ同期
+- 練習source冒頭: stageを `PROGRESS_RECORDS_SYNCED`、次工程をTopic 18最終QA再実施へ同期
+- 練習source末尾: 次工程をTopic 18最終QA再実施へ同期
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・独立再解答結果の変更: `0件`
+- 固定一次5問・25答案要素: 維持
+- 完成後独立再解答: `25 / 25 PASS` 維持
+- 二次採用: `0問`、二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
 
 ## 判定
 
-Topic 18は技術品質ゲート自体はPASS。ただし進捗記録4箇所がGitHub正本の実態と不整合のため `NEEDS_REVISION / IN_PROGRESS`。完成数は `17 / 21` のまま。次工程は進捗記録同期。
+`PASS / topic_18_progress_records_synced / IN_PROGRESS`。
+
+完成数は `17 / 21` のまま。次工程はTopic 18最終QA再実施。
