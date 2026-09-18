@@ -7,12 +7,20 @@ current_status: `topic_14_independent_reanswer_needs_revision`
 
 ## 今回完了
 
-Topic 14「新幹線の力率と電圧をどう維持する？」の完成後blind独立再解答を実施した。正式固定5問・21答案要素は変更していない。
+Topic 14「新幹線の力率と電圧をどう維持する？」の完成後blind `20 / 21 PASS` で残ったH23二次問3 (2a) 一次母線電圧だけを根拠に、固定範囲を増やさず解説sourceを補強した。
 
-成果物:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_reanswer_20260918.md`
+更新:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.md`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_remediation_20260918.md`
 
-結果:
+補強内容:
+- 変圧器％リアクタンスをどの電圧側へ換算したかを答案上で明示。
+- 等価回路から得た端電圧は、その換算側の等価値であることを明示。
+- 問題の要求電圧側が異なる場合、`Vreq = Veq × Vbase,req / Vbase,eq` で要求側へ戻す手順を追加。
+- H23二次問3 (2a) の確認値を `66.258 kV → ×154/66 → 154.6 kV ≒ 155 kV` として9.2・10.4へ接続。
+- 頻出ミス、正式21答案要素マッピング、公式まとめにも同じ処理を同期。
+
+完成後blind前回結果:
 - R6一次「電力」問5: `5 / 5 PASS`
 - R4一次「法規」問4: `5 / 5 PASS`
 - R5二次「電力・管理」問4: `2 / 2 PASS`
@@ -22,18 +30,13 @@ Topic 14「新幹線の力率と電圧をどう維持する？」の完成後bli
 - 一次: `10 / 10 PASS`
 - 二次: `10 / 11 PASS`
 
-制作前blind不足1要素「最低必要容量を不足側へ丸めない」はR2二次問6で改善確認PASS。
+source補強判定: `PASS`。
 
-新規blocker:
-- H23二次問3 (2a) 一次母線電圧。
-- 66 kV側換算リアクタンスで `Vs(eq)=66.258 kV` までは計算できたが、問題が要求する一次母線電圧へ `154/66` で戻す工程をblind答案で落とした。
-- 公式標準解答: `154.6 kV ≒ 155 kV`。
-- 現行教材の9.2/10.4は等価側計算を説明しているが、最終答案で要求電圧側へ戻す処理が明示不足。
-
-判定: `NEEDS_REVISION`。Topic 14はcompletedにせず、最終QAへ進めない。
+ただしlearner-facingの解説PDF等へ未同期で、完成後blind再実施も未完了。Topic 14全体の判定は引き続き `NEEDS_REVISION` とし、completedにせず最終QAへ進めない。
 
 品質境界:
 - 固定5問・21答案要素変更: `0件`
+- 新規正式過去問追加: `0件`
 - Topic 15以降の先取り: `0件`
 - Topic 16故障計算先取り: `0件`
 - Topic 17保護・Topic 20安定度先取り: `0件`
@@ -53,4 +56,4 @@ current status: `topic_14_independent_reanswer_needs_revision`。
 
 ## 次に行う
 
-H23二次問3 (2a) だけを根拠に、固定範囲を増やさず解説sourceへ「66 kV側等価値を一次母線電圧へ定格電圧比で戻す」答案処理を明示する。必要なlearner-facing成果物へ同期し、その後に完成後blind独立再解答を再実施する。全21答案要素PASSまでは最終QAを行わない。
+修正版解説sourceをlearner-facing解説PDFへ同期する。必要なPowerPoint該当箇所にも「等価側→要求側」の答案処理を同期し、表示・文字抽出・数値整合QAを再実施する。その後、固定5問・21答案要素の完成後blind独立再解答を再実施する。全21答案要素PASSまでは最終QAを行わない。
