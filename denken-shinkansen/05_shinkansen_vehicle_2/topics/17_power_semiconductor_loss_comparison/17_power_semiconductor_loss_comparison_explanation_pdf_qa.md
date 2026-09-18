@@ -1,11 +1,11 @@
 # 17 パワー半導体の損失比較 — 解説PDF QA
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 対象
 - PDF: `17_power_semiconductor_loss_comparison_explanation.pdf`
 - source: `17_power_semiconductor_loss_comparison_explanation_source.md`
-- 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・26答案要素
+- 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・23答案要素
 
 ## PDF構造・表示QA
 - A4縦: `4ページ`
@@ -18,7 +18,9 @@
 - SHA-256: `8d5934da49b062049afb86c8b9ccd12b79e53ce4bdeda79936c54211148198a4`
 
 ## 内容QA
-- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- 固定5過去問・23答案要素への接続: `23 / 23 PASS`
+- clean blind公式照合: `23 / 23 PASS`
+- H24一次「機械」問6のゲート対象: `(2)(3)のみ / PASS`
 - 3段階例題: `3 / 3 PASS`
 - 基礎例題: `P_cond=210 W` を再確認
 - 本試験標準例題: `E_on=0.040 J`、`E_off=0.060 J`、`P_sw=500 W` を再確認
@@ -33,8 +35,11 @@
 - 固定過去問の正答記号・個別最終解の新規保存: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
+- PDF本体変更: `0件`
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## 現在地
-Topic 17の練習問題sourceは `PASS / PRACTICE_SOURCE_COMPLETE`。次工程は練習PDF作成。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
+旧26答案要素前提の記録を是正後の固定5問・23答案要素へ同期した。PDF本体・問題・正答・数式は変更していない。
+
+次工程は Topic 17 の最終QA再実施。
