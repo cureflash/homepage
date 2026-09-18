@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 17 / 20
-- current_status: `topic_18_powerpoint_complete`
+- current_status: `topic_18_post_completion_validation_complete`
 - last_completed_topic: `17 常微分方程式の数値解法`
 - active_topic: `18 非線形方程式と反復計算`
-- next_start: Topic 18の完成後独立検証を行う
+- next_start: Topic 18の最終QAを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -292,37 +292,34 @@
 - [x] 練習PDF（A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [x] 解説画像PowerPoint（16:9・5枚、固定範囲 `5 / 5`、接続確認5問 `5 / 5`）
 - [x] PowerPoint表示QA（再レンダリング `5 / 5 PASS`、overflow `0件`、`slides_test.py` `PASS`、ZIP/XML整合性 `PASS`）
-- [ ] 完成後独立検証
+- [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、直接二分法/Newton要求0問・水増し0件を維持）
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 18の解説画像PowerPoint＋表示QAを完了した。
+Topic 18の完成後独立検証を完了した。
 
-- 16:9: `PASS`
-- スライド数: `5`
-- SPEC固定範囲: `5 / 5 covered`
-- 接続確認した第二種二次「電力・管理」5問との対応: `5 / 5 PASS`
+- Case A: `f(x)=cos x-x` を二分法、`[0,1]`、区間半幅許容誤差 `1e-6` で検証 → 19反復、近似根 `0.7390851974487305`
+- Case B: `g(x)=x^3-7x+6` をNewton法で検証 → `x0=0.5` は根1、`x0=2.5` は根2へ各5反復で収束
+- Case B補足: `x=±sqrt(7/3)` で `g'(x)=0` となりNewton更新不可を確認
+- Case C: 教育用 `P=K sinδ`, `K=3.0`, `P=1.7` をNewton法で検証 → 4反復、`δ=0.6024546333849905 rad`
+- 新規3ケース: `3 / 3 PASS`
 - 二分法・Newton法そのものを直接要求する確認済み第二種過去問: `0問`
 - 接続確認5問の固定品質ゲート件数への水増し: `0件`
-- 数値整合QA: `PASS`
-- 全5スライド再レンダリング: `5 / 5 PASS`
-- 文字切れ・重なり・文字化け: `0件`
-- overflow: `0件`
-- `slides_test.py`: `PASS`
-- ZIP/XML整合性: `PASS`
-- Topic 19最適化、多変数Newton-Raphson潮流、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
+- 第一種Newton-Raphson潮流問題の件数加算: `0件`
+- Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
 
 成果物:
-- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_images.pptx`
-- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_powerpoint_qa.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_post_completion_validation.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_post_completion_validation.py`
 
 ## 判定
 
-`topic_18_powerpoint_complete / IN_PROGRESS`
+`topic_18_post_completion_validation_complete / IN_PROGRESS`
 
 完成数は `17 / 20`。
 
-次はTopic 18の完成後独立検証を行う。
+次はTopic 18の最終QAを実施する。
