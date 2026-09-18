@@ -7,9 +7,9 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_16_completed`。Topic 16 `700系 多レベル変換器とPWM` は、固定一次4問＋二次1問・26答案要素、解説source/PDF、練習source/PDF、PowerPoint、完成後blind再解答、最終QAまで品質ゲートを通過した。初回最終QAで唯一FAILだった進捗記録4箇所は `4 / 4` 同期済みで、再判定により `PASS / completed` とした。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更していない。
+現在地は `topic_17_exam_alignment_complete`。Topic 17 `パワー半導体の損失比較` は制作前EXAM_ALIGNMENTを完了し、固定一次4問＋二次1問・26答案要素を公式問題・公式解答／標準解答で照合した。制作前独立検証は `26 / 26 PASS`、SPEC指定7項目・3可視化も整合済み。完成数はまだ `16 / 39` のまま。
 
-次工程はTopic 17 `パワー半導体の損失比較` の制作前EXAM_ALIGNMENT。
+次工程はTopic 17の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -233,8 +233,39 @@ SPEC指定可視化:
 - 変換効率: `η=P_out/(P_out+P_loss)`
 - SPEC指定3可視化は `E_d=1.0 pu` の共通仮定条件から再生成する
 
+## Topic 17 固定EXAM_ALIGNMENT
+source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison.md`
+
+固定過去問:
+- R7 一次 機械 問4 (1)〜(5)
+- R4 一次 機械 問4 (1)〜(5)
+- R2 一次 機械 問2 (1)〜(5)
+- H24 一次 機械 問6 (1)〜(5)
+- H24 二次 機械・制御 問1 (1)〜(6)
+
+品質ゲート:
+- 一次: `4問・20答案要素`
+- 二次: `1問・6答案要素`
+- 合計: `5問・26答案要素`
+- 制作前独立検証: `26 / 26 PASS`
+- 二次記述・計算問題: `1問`
+- 公式解答／標準解答との内容不一致: `0件`
+- 参考教材2系統以上: `PASS / e-sysnet.com + 電験王2`
+- R8一次「機械」直近年度確認: `PASS / Topic 17へ直接対応する問題は固定採用せず`
+- SPEC指定7項目: `7 / 7 aligned`
+- SPEC指定3可視化: `3 / 3 aligned`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+範囲境界:
+- Topic 16のPWM・スイッチング周波数は前提確認だけに使い、多レベル波形・高調波解析は再展開しない
+- 後続TopicのSiC採用・機器小型化は先取りしない
+- 接合温度・冷却は損失から温度上昇へ接続する最小限の熱抵抗モデルまで扱う
+- 素子比較は一般モデル・教材内仮定値で行い、未確認700系実車の素子型式・定格・損失・温度・冷却条件・効率を真値化しない
+
 ## 過去Topic
 Topic 01〜16は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 17「パワー半導体の損失比較」の制作前EXAM_ALIGNMENTを開始する。
+Topic 17「パワー半導体の損失比較」の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。
