@@ -2,11 +2,11 @@
 
 更新日: 2026-09-19
 
-状態: `topic_16_progress_records_synchronized / IN_PROGRESS`
+状態: `completed / FINAL_QA_PASS`
 
 制作前 `EXAM_ALIGNMENT` で固定した6問・6答案要素と系列 `SPEC.md` の Topic 16 固定範囲は変更しない。旧版blind独立再解答でR5下 機械 問5のみ、式 `V = E + jXsI` と位相関係は選べた一方、選択肢図の `jXsI` の始点・終点を逆に読んだためFAILとなった。このため、同期電動機ベクトル図について「Eの終点を `jXsI` の始点とし、その終点がVの終点に一致する」という尾→頭の判定手順を本文へ補強し、解説PDF・練習source/PDF・PowerPointへ再同期した。改訂後blind独立再解答は `6 / 6 PASS`。固定範囲外論点、固定EXAM_ALIGNMENT、既存の正答は変更していない。
 
-次工程は、進捗記録整合を確認したうえでTopic 16の最終QAを再判定する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+最終QA再判定で、必須成果物、表示QA、固定EXAM_ALIGNMENT、改訂後blind独立再解答、固定範囲境界、進捗記録整合を再確認し `PASS`。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの追加変更は0件。
 
 ## EXAM_ALIGNMENT
 
@@ -553,6 +553,16 @@ V曲線: 横軸 If、縦軸 Ia
 - 固定範囲外知識による答案補完: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-## 次工程
+## 最終QA再判定
 
-進捗記録整合を確認したうえでTopic 16の最終QAを再判定する。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+- 必須成果物存在: `PASS`
+- 解説PDF QA: `PASS`
+- 練習PDF QA: `PASS`
+- PowerPoint QA: `PASS`
+- 固定EXAM_ALIGNMENT: `6問・6答案要素` / 変更 `0件`
+- 完成後blind独立再解答: `6 / 6 PASS`
+- 教材内根拠へ戻せる: `6 / 6 PASS`
+- 固定範囲外知識による答案補完: `0件`
+- 固定範囲外追加: `0件`
+- 進捗記録整合: `PASS`
+- 最終判定: `PASS / completed`
