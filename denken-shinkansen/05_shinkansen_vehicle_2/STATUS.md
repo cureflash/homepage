@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_practice_pdf_revision_sync_complete`
+- current_status: `topic_16_powerpoint_revision_sync_complete`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: sourceで補正した R7一次「機械」問4 (3) の最小説明を解説画像PowerPointへ同期し、16:9 4枚・1600×900表示QA・PPTX ZIP整合性・固定5問26答案要素・SPEC指定8項目3可視化の整合を再確認する
+- next_start: 公式解答・標準解答・旧blind再解答QAを先読み対象から外し、必須成果物・固定5問26答案要素・SPEC指定8項目3可視化を再監査してblind再解答前ゲートを作り直す
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — PRACTICE_PDF_REVISION_SYNC_COMPLETE / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — POWERPOINT_REVISION_SYNC_COMPLETE / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -123,20 +123,26 @@
 - 16:9: `4枚`
 - 1600×900表示QA: `4 / 4 PASS`
 - LibreOffice PDF変換・PPTX ZIP整合性: `PASS`
+- PDF文字抽出Unicode置換文字・`(cid:)`: `0件 / 0件`
+- 固定5過去問・26答案要素の可視化・接続: `26 / 26 PASS`
+- R7 一次 機械 問4 (3): `PASS / IGBT・MOSFETを自己消弧形スイッチング素子として識別し、逆並列ダイオードとの差をスライド1・4へ同期済み`
 - SPEC指定8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 PASS`
 - 共通仮定モデル変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- blind QAの1答案要素不足を同期改訂するまで最終ゲート未通過
+- SHA-256: `dc175b814c514d82e55ab8c8f3d50248c8adcbd8676708424a3282bb8861f4de`
+- Git blob SHA: `fec7c9b85c3d756e49833615a69ee8fd18a685c4`
+- 判定: `PASS / POWERPOINT_REVISION_SYNC_COMPLETE`
 
 ## Topic 16 完成後独立再解答前ゲート
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_gate.md`
 - 固定5過去問・26答案要素: `変更なし`
 - 必須先読み対象の公式正答番号・標準解答本文保存: `0件`
 - 必須先読み対象の完成済み個別答案・個別数値解・導出結果保存: `0件`
-- 判定: `PASS / BLIND_REANSWER_READY`
+- 旧ゲートはblind QA指摘前の成果物に対する記録のため、改訂済みPowerPointを含む必須成果物再監査後に作り直す
+- 判定: `REBUILD_REQUIRED`
 
 ## Topic 16 完成後独立再解答 候補答案固定
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_candidates.md`
@@ -145,7 +151,8 @@
 - 一次候補答案: `20 / 20 固定`
 - 二次候補答案: `6 / 6 固定`
 - 合計: `26 / 26 固定`
-- 判定: `PASS / BLIND_REANSWER_CANDIDATES_FIXED`
+- 旧候補答案は改訂前教材によるもののため、ゲート再作成後に再固定する
+- 判定: `REFRESH_REQUIRED`
 
 ## Topic 16 完成後独立再解答QA
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_qa.md`
@@ -155,7 +162,8 @@
 - source補正: `完了`
 - 解説PDF同期: `完了`
 - 練習PDF同期: `完了`
-- PowerPoint同期後にblind再解答ゲートを作り直す
+- PowerPoint同期: `完了`
+- 改訂済み全成果物でblind再解答前ゲートを作り直し、その後に独立再解答を再実施する
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定8項目・3可視化変更: `0件`
 - SPEC外追加: `0件`
@@ -188,4 +196,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-source補正・解説PDF同期・練習PDF同期は完了。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルを変更せず、同じ最小補正を解説画像PowerPointへ同期して表示QAする。その後にblind再解答前ゲート再作成へ進む。
+source補正・解説PDF同期・練習PDF同期・PowerPoint同期は完了。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルを変更せず、公式解答・標準解答・旧blind再解答QAを先読み対象から外して必須成果物を再監査し、blind再解答前ゲートを作り直す。
