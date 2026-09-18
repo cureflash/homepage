@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_16_completed`
+- current_status: `topic_17_exam_alignment_complete`
 - last_completed_topic: `16 数値微分・数値積分`
 - active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 17の制作前独立数値検証を実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -249,31 +249,45 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 17 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 第二種公式過去問を直近年度から確認
+- [x] 常微分方程式＋初期条件へ接続する第二種一次「理論」5問を確認
+- [x] Euler法・Runge-Kutta法そのものを直接要求する確認済み過去問が0問であることを記録
+- [x] 直接該当しない5問を固定品質ゲート件数へ水増ししないことを確定
+- [x] 電験学習資料を複数系統確認
+- [x] 数値ODEの基礎資料を複数確認
+- [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
+- [ ] 制作前独立数値検証
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立検証
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 16の最終QAを再判定し、全品質ゲートPASSで `completed` とした。
+Topic 17「常微分方程式の数値解法」の制作前EXAM_ALIGNMENTを実施した。
 
-- 必須成果物実在: PASS
-- 固定第二種公式4問・8答案要素: PASS
-- 制作前独立再解答・公式解答照合: `8 / 8 PASS`
-- 完成後独立再解答: `8 / 8 PASS`
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- 解説PDF表示QA: `3 / 3 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- 進捗記録整合: `6 / 6 PASS`
-- 仕様外論点追加: 0件
-- 第一種・第三種による件数水増し: 0件
-- 未確認実車値依存: 0件
-
-最終QA:
-`topics/16_numerical_differentiation_integration/16_numerical_differentiation_integration_final_qa.md`
+- 固定範囲: Euler法、Runge-Kutta法の概念、刻み幅と誤差、初期値問題、簡略列車運動式
+- 第二種公式過去問: 常微分方程式＋初期条件へ接続する一次「理論」5問を確認
+- Euler法・Runge-Kutta法を直接要求する確認済み問題: `0問`
+- 非該当問題の固定品質ゲート件数への水増し: `0件`
+- 第一種・第三種による件数水増し: `0件`
+- Topic 18以降の先取り: `0件`
+- 未確認実車値依存: `0件`
+- source: `topics/17_ode_numerical_methods/17_ode_numerical_methods.md`
 
 ## 判定
 
-`topic_16_completed / completed`
+`topic_17_exam_alignment_complete / IN_PROGRESS`
 
 完成数は `16 / 20`。
 
-次はTopic 17 `常微分方程式の数値解法` の制作前EXAM_ALIGNMENTを実施する。
+次はTopic 17の制作前独立数値検証を実施する。
