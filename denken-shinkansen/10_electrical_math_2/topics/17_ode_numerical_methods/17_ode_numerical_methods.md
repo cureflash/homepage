@@ -2,9 +2,9 @@
 
 ## 状態
 
-`topic_17_powerpoint_complete / IN_PROGRESS`
+`topic_17_post_completion_validation_complete / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint＋表示QAまで完了した。固定6説明項目と固定範囲5項目を維持し、接続確認した第二種公式過去問5問は直接Euler法・Runge-Kutta法を要求しないため品質ゲート件数へ水増ししていない。次工程は完成後独立検証である。
+2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint＋表示QA、完成後独立検証まで完了した。固定6説明項目と固定範囲5項目を維持し、接続確認した第二種公式過去問5問は直接Euler法・Runge-Kutta法を要求しないため品質ゲート件数へ水増ししていない。次工程は最終QAである。
 
 ## 固定範囲
 
@@ -610,6 +610,25 @@ Runge-Kutta法は、1刻み内の複数の傾きを評価して次の値を決�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## 完成後独立検証
+
+記録:
+`17_ode_numerical_methods_post_completion_validation.md`
+
+再現用:
+`17_ode_numerical_methods_post_completion_validation.py`
+
+保存済み例題と異なる新規数値条件で、初期値問題、Euler法、刻み幅と誤差、RL過渡、簡略列車運動式を独立検証した。
+
+- 新規3ケース: `3 / 3 PASS`
+- 直接Euler/RK要求の確認済み第二種過去問: `0問`
+- 接続確認5問の品質ゲート件数への水増し: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 18以降の先取り: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / POST_COMPLETION_VALIDATION_COMPLETE`
+
 ## 制作品質ゲート
 
 - `SPEC.md` 固定範囲外追加: `0件`
@@ -622,9 +641,10 @@ Runge-Kutta法は、1刻み内の複数の傾きを評価して次の値を決�
 - 解説PDF＋QA: `PASS`
 - 練習問題source＋練習PDF＋QA: `PASS`
 - 解説画像PowerPoint＋表示QA: `PASS`
+- 完成後独立検証: `PASS`
 - Topic 18以降の先取り: `0件`
 - 未確認実車値依存: `0件`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENTと教材内容を変更せず、完成後独立検証を行う。直接Euler/RK要求0問と非該当問題の件数水増し0件を維持する。
+固定済みEXAM_ALIGNMENTと教材内容を変更せず、Topic 17の最終QAを実施する。直接Euler/RK要求0問と非該当問題の件数水増し0件を維持する。
