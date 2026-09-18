@@ -6,21 +6,21 @@
 - Topic 01〜17: 最終QA `PASS / completed`
 - 完成数: `17 / 22`
 - active topic: `18 速度指令を変えたら何秒で追従する？`
-- current status: `topic_18_independent_reanswer_complete`
-- 次工程: Topic 18 最終QA
+- current status: `topic_18_final_qa_needs_revision`
+- 次工程: Topic 18 現行練習PDF再QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
 - 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 18実在成果物を確認した。
 - 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」であることを確認した。
-- 既存の制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint・独立再解答前ゲートはすべてPASSで、固定一次1問＋二次4問、計5問・12答案要素を維持した。
-- 今回、公式正答・標準解答を見る前に固定5問・12答案要素を完成教材だけで解答し、`18_speed_transient_response_answer_lock.md` へ答案を固定した。
-- 答案固定後に電気技術者試験センター公式正答・標準解答と照合し、厳密ブラインド再解答 `12 / 12 PASS`。
-- 教材外知識による補完、Topic 19〜21先取り、仕様外独立論点追加、未確認実車値追加、固定EXAM_ALIGNMENT変更は `0件`。
-- 答案ロック: `topics/18_speed_transient_response/18_speed_transient_response_answer_lock.md`
-- 独立再解答記録: `topics/18_speed_transient_response/18_speed_transient_response_independent_reanswer.md`
-- 次工程はTopic 18最終QA。
+- 固定EXAM_ALIGNMENTは一次1問＋二次4問、計5問・12答案要素のまま。完成後独立再解答 `12 / 12 PASS`、教材外知識補完 `0件`。
+- 解説PDF・PowerPoint・仕様境界は最終QAでPASS。
+- 現行練習PDFのGit blobは `df2f12f4ffdf74edc5266e95e1badb2dad4d64bc`。既存練習PDF QAの対象blobは `0fc7e767eec6ffb5bc5295cff87ef55ddef0ce10` で一致しないため、現行PDFのQAは未成立。
+- main source `## 状態`・main source末尾 `# 次工程`・練習source末尾 `# 次工程` も実状態と不一致。ただし最終QA記録の手順どおり、現行練習PDF再QAがPASSした後に同期する。
+- 技術本文・問題・正答・固定EXAM_ALIGNMENT・解説PDF・PowerPoint・独立再解答結果は変更していない。
+- 最終QA記録: `topics/18_speed_transient_response/18_speed_transient_response_final_qa.md`
+- 次工程は現行練習PDF再QA。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -351,5 +351,18 @@ Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘�
 
 判定: `PASS / topic_18_independent_reanswer_complete / IN_PROGRESS`
 
+## Topic 18 最終QA（前回）
+- 記録: `topics/18_speed_transient_response/18_speed_transient_response_final_qa.md`
+- 必須成果物: PASS
+- 固定一次1問＋二次4問・12答案要素: `12 / 12 PASS`
+- 完成後独立再解答: `12 / 12 PASS`
+- 解説PDF・PowerPoint QA: PASS
+- 練習PDF QA: FAIL — 現行PDF blob `df2f12f4ffdf74edc5266e95e1badb2dad4d64bc` に対し、既存QAは旧blob `0fc7e767eec6ffb5bc5295cff87ef55ddef0ce10` を対象としている
+- 進捗記録整合: FAIL — main source `## 状態`・main source末尾 `# 次工程`・練習source末尾 `# 次工程` が旧工程のまま
+- 仕様境界: PASS
+- 技術本文・問題・正答・固定EXAM_ALIGNMENT・解説PDF・PowerPoint・独立再解答結果の変更: `0件`
+
+判定: `NEEDS_REVISION / topic_18_final_qa_needs_revision / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 18最終QAを実施し、必須成果物・固定12答案要素・独立再解答・PDF/PPTX QA・仕様境界・進捗記録整合を総合判定する。
+現行blob `df2f12f4ffdf74edc5266e95e1badb2dad4d64bc` の練習PDFに対し、表示QA・文字抽出QA・一次10問正答一意性・全15問数値論理QA・固定12答案要素接続を再実施する。PASSした場合のみmain sourceと練習sourceの進捗記録を実状態へ同期し、その後Topic 18最終QAを再実施する。
