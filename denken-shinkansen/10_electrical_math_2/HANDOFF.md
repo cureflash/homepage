@@ -8,11 +8,11 @@ Topic 01〜18は最終QAまで `PASS / completed`。
 
 完成数: `18 / 20`
 
-current_status: `topic_19_practice_pdf_complete`
+current_status: `topic_19_final_qa_needs_revision`
 
 active_topic: `19 最適化入門`
 
-次工程: Topic 19の解説画像PowerPoint＋QAを作成する。
+次工程: Topic 19の進捗記録5ファイルを実成果物状態へ同期する。
 
 ## 上位仕様
 
@@ -577,6 +577,65 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 - KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
+## 解説画像PowerPoint＋QA
+
+成果物:
+- `topics/19_optimization_intro/19_optimization_intro_images.pptx`
+- `topics/19_optimization_intro/19_optimization_intro_powerpoint_qa.md`
+
+判定: `PASS / POWERPOINT_COMPLETE`。
+
+- 16:9・5枚
+- SPEC固定範囲: `5 / 5 covered`
+- 接続確認した第二種二次「電力・管理」5問との対応: `5 / 5 PASS`
+- 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- 数値整合QA: `PASS`
+- 全5スライド再レンダリング: `5 / 5 PASS`
+- 文字切れ・重なり・文字化け: `0件`
+- overflow: `0件`
+- `slides_test.py`: `PASS`
+- PPTX ZIP/XML整合性: `PASS`
+- Topic 04の一変数極値一般の再制作: `0件`
+- KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
+## 完成後独立検証
+
+記録:
+`topics/19_optimization_intro/19_optimization_intro_post_completion_validation.md`
+
+再現用:
+`topics/19_optimization_intro/19_optimization_intro_post_completion_validation.py`
+
+直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問が0問のため、接続確認5問を品質ゲートへ格上げせず、完成教材の固定範囲だけを使って保存済み例題・制作前検証と異なる新規数値条件を独立検証した。
+
+- Case A: `J(x)=(x-5)^2+2`, `0<=x<=4` → `x=4`, `J_min=3`
+- Case B: `C=P1^2+3P2^2`, `P1+P2=16` → `P1=12`, `P2=4`, `C=192`
+- Case C: 教育用無次元モデル `E=2u^2+v^2`, `u+v=15`, `0<=u<=4`, `11<=v<=15` → 等式制約のみの候補 `(5,10)` は制約外、境界解 `(4,11)`, `E=153`
+
+判定: `PASS / POST_COMPLETION_VALIDATION_COMPLETE`。新規3ケース `3 / 3 PASS`。
+
+固定EXAM_ALIGNMENT変更0件。接続確認5問の件数水増し0件。H17問6の固定件数追加0件。Topic 04の再制作0件。KKT条件・一般数値最適化・最適制御理論の仕様外追加0件。未確認実車値依存0件。
+
+## 初回最終QA
+
+記録:
+`topics/19_optimization_intro/19_optimization_intro_final_qa.md`
+
+判定: `NEEDS_REVISION / topic_19_final_qa_needs_revision / IN_PROGRESS`。
+
+技術内容、固定EXAM_ALIGNMENT、完成後独立検証、練習問題QA、PDF/PowerPoint表示QA、SPEC境界はすべてPASS。進捗記録6ファイルのうち、HANDOFFのみ現在状態と整合し、Topic 19配下の5ファイルが古い次工程・状態のままのため、進捗記録整合は `1 / 6 PASS` とした。
+
+未同期5ファイル:
+- `topics/19_optimization_intro/19_optimization_intro.md`
+- `topics/19_optimization_intro/19_optimization_intro_explanation_qa.md`
+- `topics/19_optimization_intro/19_optimization_intro_practice.md`
+- `topics/19_optimization_intro/19_optimization_intro_practice_qa.md`
+- `topics/19_optimization_intro/19_optimization_intro_powerpoint_qa.md`
+
+技術内容変更: `0件`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -594,11 +653,13 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 - [x] 解説PDF＋QA
 - [x] 練習問題source
 - [x] 練習PDF＋QA
-- [ ] 解説画像PowerPoint＋QA
-- [ ] 完成後独立検証
-- [ ] 最終QA
+- [x] 解説画像PowerPoint＋QA
+- [x] 完成後独立検証
+- [x] 最終QA実施 → `NEEDS_REVISION`（進捗記録整合 `1 / 6 PASS`）
+- [ ] 進捗記録5ファイルの同期
+- [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・解説本文・解説PDF・練習問題source・練習PDFを変更せず、Topic 19「最適化入門」の解説画像PowerPoint＋QAを作成する。
+Topic 19配下の進捗記録5ファイルだけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PowerPoint・完成後独立検証結果は変更しない。同期後に最終QAを再実施する。
