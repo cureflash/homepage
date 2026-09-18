@@ -6,11 +6,11 @@
 
 Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_19_explanation_pdf_complete`
+current_status: `topic_19_practice_pdf_complete`
 
 active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QAまで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、公式標準解答照合 `25 / 25`、本文/PDF接続 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は練習問題source＋練習PDF。
+Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、公式標準解答照合 `25 / 25`、本文/PDF/練習への接続 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は解説画像PowerPoint＋表示QA。
 
 ## Topic 18 成果物
 
@@ -49,7 +49,10 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 制作前blind独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_blind_reanswer.md`
 - 解説PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_explanation.pdf`
 - 解説PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_explanation_pdf_qa.md`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- 練習source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.md`
+- 練習PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.pdf`
+- 練習PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice_pdf_qa.md`
+- stage: `PRACTICE_PDF_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 19 固定範囲
@@ -133,6 +136,25 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 実設備CT・VTの未確認実値追加: `0件`
 - 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
+## Topic 19 練習問題source＋練習PDF
+
+- 問題数: `12問`
+- 形式: `全問五肢択一`
+- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
+- A4縦5ページ
+- 200 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `ee688b55214354282ecdfcfbffc2d31500d7c867fe80cba616198cdc7ef70c2e`
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- SPEC固定範囲: `10 / 10接続`
+- 固定一次5問・25答案要素: `25 / 25接続`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- Topic 20先取り: `0件`
+- 実設備CT・VTの未確認実値追加: `0件`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## 次工程
 
-Topic 19の練習問題source＋練習PDF。固定一次5問・25答案要素とSPEC固定範囲10項目を維持し、Topic 20の誤差・ブリッジ・波形・サンプリングを混在させず、本試験形式へ接続する問題と完全解説を作成する。
+Topic 19の解説画像PowerPoint＋表示QA。固定一次5問・25答案要素、SPEC固定範囲10項目、練習12問との接続を維持し、Topic 20の誤差・ブリッジ・波形・サンプリングを混在させない。
