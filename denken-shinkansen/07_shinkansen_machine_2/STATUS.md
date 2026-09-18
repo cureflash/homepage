@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `17 / 22`
-- current_status: `topic_18_practice_pdf_complete`
+- current_status: `topic_18_powerpoint_complete`
 - last_completed_topic: `17 新幹線の速度をフィードバック制御する`
 - active_topic: `18 速度指令を変えたら何秒で追従する？`
-- next_start: Topic 18 解説画像PowerPoint＋表示QA
+- next_start: Topic 18 独立再解答前ゲート
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
-- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF `PASS`、次は解説画像PowerPoint＋表示QA
+- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint `PASS`、次は独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -420,8 +420,22 @@
 - [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値、固定問題の正答保存 `0件`
 - 判定: `PASS / topic_18_practice_pdf_complete / IN_PROGRESS`
 
+## Topic 18 解説画像PowerPoint
+- [x] `topics/18_speed_transient_response/18_speed_transient_response_images.pptx`
+- [x] QA: `topics/18_speed_transient_response/18_speed_transient_response_powerpoint_qa.md`
+- [x] 16:9・4枚、固定5問・12答案要素 `12 / 12`
+- [x] 120 dpi・1601×900で全4枚表示QA `4 / 4 PASS`
+- [x] 文字・数式・図・グラフの欠落、重なり、切れ、overflow、破損グリフ `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] PPTX ZIP整合性 PASS
+- [x] 主要数値を独立再計算 PASS
+- [x] PPTX SHA-256 `76bcb73050138d3074507058f4b751d41c424eb303a6f8b84ed1e540f3e3a9af`
+- [x] Git blob SHA `1c65123ba298961a5dac0be4c87fdef6efcbcc14`
+- [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値、固定問題の正答保存 `0件`
+- 判定: `PASS / topic_18_powerpoint_complete / IN_PROGRESS`
+
 ## 今回進めた内容
-最新main、必須spec、系列進捗、Topic 18実在成果物と直近変更をreconcileし、既存の練習sourceを変更せず練習PDF＋QAを追加した。A4縦6ページ、160 dpi表示 `6 / 6 PASS`、文字抽出PASS、一次正答一意性 `10 / 10 PASS`、全15問の独立再計算・論理QA `15 / 15 PASS`、固定5問・12答案要素 `12 / 12 PASS`。Topic 19〜21先取り、仕様外論点、未確認実車値追加は `0件`。
+最新main、必須spec、系列進捗、Topic 18実在成果物をreconcileし、固定5問・12答案要素と既存成果物を変更せず解説画像PowerPoint＋QAを追加した。16:9・4枚、120 dpi表示 `4 / 4 PASS`、ZIP整合性・文字抽出・overflow QA PASS、主要数値の独立再計算PASS、固定5問・12答案要素 `12 / 12 PASS`。Topic 19〜21先取り、仕様外独立論点、未確認実車値、固定過去問正答保存は `0件`。
 
 ## 判定
-Topic 18は `PASS / topic_18_practice_pdf_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18解説画像PowerPoint＋表示QA。
+Topic 18は `PASS / topic_18_powerpoint_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18独立再解答前ゲート。
