@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `17 / 22`
-- current_status: `topic_18_blind_reanswer_ready`
+- current_status: `topic_18_independent_reanswer_complete`
 - last_completed_topic: `17 新幹線の速度をフィードバック制御する`
 - active_topic: `18 速度指令を変えたら何秒で追従する？`
-- next_start: Topic 18 完成後独立再解答
+- next_start: Topic 18 最終QA
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
-- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint・独立再解答前ゲート `PASS`、次は完成後独立再解答
+- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint・独立再解答前ゲート・完成後独立再解答 `PASS`、次は最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -443,8 +443,21 @@
 - 記録: `topics/18_speed_transient_response/18_speed_transient_response_blind_reanswer_gate.md`
 - 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
 
+## Topic 18 完成後独立再解答
+- [x] 公式正答・標準解答を見る前に答案を `18_speed_transient_response_answer_lock.md` へ固定
+- [x] H23一次 機械 問7 (2): `1 / 1 PASS`
+- [x] R07二次 機械・制御 問4 (2),(4),(5): `4 / 4 PASS`
+- [x] R06二次 機械・制御 問4 (2),(3),(4): `3 / 3 PASS`
+- [x] R03二次 機械・制御 問4 (3),(4): `2 / 2 PASS`
+- [x] H29二次 機械・制御 問4 (5): `2 / 2 PASS`
+- [x] 厳密ブラインド再解答 `12 / 12 PASS`
+- [x] 教材外知識による補完 `0件`
+- [x] Topic 19〜21先取り・仕様外独立論点追加・未確認実車値追加 `0件`
+- 記録: `topics/18_speed_transient_response/18_speed_transient_response_independent_reanswer.md`
+- 判定: `PASS / topic_18_independent_reanswer_complete / IN_PROGRESS`
+
 ## 今回進めた内容
-最新main、必須spec、系列進捗、Topic 18実在成果物をreconcileし、固定5問・12答案要素と既存成果物を変更せず独立再解答前ゲートを実施した。公式正答・標準解答の内容は開かず、固定問題の完成済み個別解答保存 `0件`、全必須成果物実在、PDF/PPTX QA、固定12答案要素接続、仕様境界を再確認した。
+固定5問・12答案要素を、公式正答・標準解答を見る前に完成済みTopic 18教材だけで再解答し、答案をGitHubへロックした。その後、電気技術者試験センター公式正答・標準解答と照合し `12 / 12 PASS` を確認した。教材外知識による補完、Topic 19〜21先取り、仕様外独立論点追加、未確認実車値追加は `0件`。
 
 ## 判定
-Topic 18は `BLIND_REANSWER_READY / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18完成後独立再解答。
+Topic 18は `PASS / topic_18_independent_reanswer_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18最終QA。
