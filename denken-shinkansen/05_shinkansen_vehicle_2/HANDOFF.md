@@ -8,7 +8,24 @@
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 
-現在地は `topic_19_practice_pdf_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFまで完了。次はPowerPoint。完成後clean blindは未着手。
+現在地は `topic_19_powerpoint_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPointまで完了。次は完成後clean blind独立再解答。
+
+## Topic 19 解説画像PowerPoint
+
+成果物:
+- PowerPoint: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_images.pptx`
+- QA: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_powerpoint_qa.md`
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+品質:
+- 16:9 / 4 slides
+- LibreOffice PDF / pdftoppm 1600×900: `4 / 4 PASS`
+- 固定5問・9答案要素接続: `9 / 9 PASS`
+- SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
+- 数式・数値QA: `PASS`
+- 固定EXAM_ALIGNMENT変更 / 問題・正答・数式変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
+- 完成後clean blind公式照合: `未実施 / 次工程`
 
 ## Topic 19 練習PDF
 
@@ -191,4 +208,4 @@ source:
 
 ## 次工程
 
-Topic 19の解説画像PowerPointを作る。固定5問・9答案要素、SPEC指定9項目・3可視化、解説／練習sourceとPDFの問題・正答・数式を変更しない。PowerPoint完成後にclean blind公式照合へ進む。
+Topic 19の完成後clean blind独立再解答を行う。固定5問・9答案要素を教材だけで解き、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。

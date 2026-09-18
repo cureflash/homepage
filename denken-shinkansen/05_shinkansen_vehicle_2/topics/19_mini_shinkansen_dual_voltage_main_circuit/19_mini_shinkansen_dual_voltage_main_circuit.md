@@ -4,11 +4,11 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFを完了した。PowerPoint・完成後clean blindは未着手。
+制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPointを完了した。完成後clean blindは未着手。
 
 固定過去問は第二種の一次4問＋二次1問、計5問。Topic 19へ直接対応する答案要素だけをゲート対象とし、周辺論点で件数を水増ししない。
 
-current_status: `topic_19_practice_pdf_complete`
+current_status: `topic_19_powerpoint_complete`
 
 必須成果物:
 - 主source: `19_mini_shinkansen_dual_voltage_main_circuit.md`
@@ -18,8 +18,10 @@ current_status: `topic_19_practice_pdf_complete`
 - 練習source: `19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md` — `PASS / PRACTICE_SOURCE_COMPLETE`
 - 練習PDF: `19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf` — `PASS / PRACTICE_PDF_COMPLETE`
 - 練習PDF QA: `19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md`
+- 解説画像PowerPoint: `19_mini_shinkansen_dual_voltage_main_circuit_images.pptx` — `PASS / POWERPOINT_COMPLETE`
+- PowerPoint QA: `19_mini_shinkansen_dual_voltage_main_circuit_powerpoint_qa.md`
 
-次工程: 解説画像PowerPointを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3計算/グラフの範囲を変えない。解説／練習sourceとPDFの問題・正答・数式を変更せず、未確認の実車仕様は真値化しない。
+次工程: 完成後clean blind独立再解答。固定5問・9答案要素を教材だけで解き、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。
 
 ## 固定範囲
 
