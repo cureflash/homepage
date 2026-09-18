@@ -8,11 +8,11 @@ Topic 01〜19は最終QAまで `PASS / completed`。
 
 完成数: `19 / 20`
 
-current_status: `topic_20_preproduction_validation_complete`
+current_status: `topic_20_explanation_body_complete`
 
 active_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 20の解説本文＋3段階例題。
+次工程: Topic 20の解説PDF＋QA。
 
 ## 上位仕様
 
@@ -137,6 +137,24 @@ PWM波形・FFT
 
 判定: `PASS / PREPRODUCTION_VALIDATION_COMPLETE`。
 
+## 解説本文＋3段階例題
+
+主sourceへ固定範囲だけで解説本文を追加し、教材で必要な説明6項目と3段階例題を完成した。
+
+- 教材で必要な説明: `6 / 6 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 接続確認5問の教材内マッピング: `5 / 5 PASS`
+- 例題1: 力→速度・位置→仕事・電力積分の整合 `PASS`
+- 例題2: 一次運動モデル→伝達関数→時間応答の整合 `PASS`
+- 例題3: 回生符号・エネルギー収支・サンプリング条件 `PASS`
+- 統合モデル直接要求の確認済み第二種過去問: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 第一種・第三種問題追加: `0件`
+- 仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / EXPLANATION_BODY_COMPLETE`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -150,7 +168,7 @@ PWM波形・FFT
 - [x] 電験学習資料を複数系統確認
 - [x] source MarkdownへEXAM_ALIGNMENT・必要説明・境界を固定
 - [x] 制作前独立検証
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
 - [ ] 練習PDF＋QA
@@ -161,4 +179,4 @@ PWM波形・FFT
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENTと制作前独立検証結果を変更せず、Topic 20の解説本文＋3段階例題を作成する。
+固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文を変更せず、Topic 20の解説PDF＋QAを作成する。
