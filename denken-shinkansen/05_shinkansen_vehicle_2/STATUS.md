@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_blind_reanswer_qa_pass`
+- current_status: `topic_16_final_qa_needs_progress_sync`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: 新しいrunで、Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT・必須成果物・表示QA・blind再解答QA・進捗記録の整合を確認する
+- next_start: 新しいrunで、最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — BLIND_REANSWER_QA_PASS / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — FINAL_QA_NEEDS_PROGRESS_SYNC / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -177,6 +177,19 @@
 - SPEC外追加: `0件`
 - 判定: `PASS / BLIND_REANSWER_QA_PASS`
 
+## Topic 16 最終QA
+- path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_final_qa.md`
+- 技術内容: `PASS`
+- 固定一次4問＋二次1問・26答案要素: `PASS`
+- 完成後blind再解答: `26 / 26 PASS`
+- 必須成果物: `PASS`
+- PDF/PPTX表示・構造QA: `PASS`
+- 練習問題QA: `12 / 12 PASS`
+- SPEC境界: `PASS`
+- 進捗記録整合: `FAIL / 4箇所要同期`
+- SPEC外追加: `0件`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -204,4 +217,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT、必須成果物、表示QA、blind再解答QA、進捗記録の整合を確認する。最終QAがPASSした場合のみ `completed` とする。
+Topic 16最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 16最終QAを再判定する。
