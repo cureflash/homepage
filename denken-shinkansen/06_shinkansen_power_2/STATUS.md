@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_preproduction_blind_reanswer_complete`
+current_status: `topic_14_explanation_source_complete`
 completed_topics: `13 / 22`
 
 ## Topic 12 final result
@@ -120,9 +120,9 @@ source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_final_qa.md`
 - `qualifications/denken-shinkansen/catalog.json`
 
-## Topic 14 preproduction progress
+## Topic 14 progress
 
-Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENTと制作前blind独立再解答まで完了。本文・PDF・練習問題・PowerPointは未着手。
+Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説sourceまで完了。解説PDF・練習問題・PowerPoint・完成後blind独立再解答は未着手。
 
 正式固定問題:
 - 令和6年度 第二種一次「電力」問5 — `5答案要素`
@@ -140,13 +140,21 @@ Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXA
 - H23二次「電力・管理」問3: `5 / 5 PASS`
 - 合計: `20 / 21 PASS`
 
-不足1答案要素:
-- R2二次問6の最小コンデンサ容量。境界値 `2690.5 kvar` の導出は正しいが、照合前候補では最終提示を約2690/2691 kvarとしていた。公式標準解答は、不等式で「少なくとも必要」な容量を不足側へ丸めないため `2.70×10^3 kvar`。解説sourceで答案処理を明示的に補強する。
+解説source:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.md`
+- SPEC固定10項目: `10 / 10 covered`
+- SPEC固定3可視化: `3 / 3 source data defined`
+- 固定5問・21答案要素: `21 / 21 mapped`
+- 3段階例題: `3 / 3`
+- 制作前blind不足1答案要素: `1 / 1 explanation strengthened`
+
+不足1答案要素の補強:
+- R2二次問6の最小コンデンサ容量。容量制約を `S<=ST` の不等式として扱い、境界値が正しくても最終設備容量を不足側へ丸めない手順を明記した。正式問題の境界 `2690.52 kvar` に対して、公式標準解答の `2.70×10^3 kvar` へ接続する。
 
 品質境界:
 - 固定5問・21答案要素の変更: `0件`
-- SPEC指定10項目: `10 / 10 aligned`
-- SPEC指定3可視化: `3 / 3 aligned`
+- SPEC指定10項目: `10 / 10 covered`
+- SPEC指定3可視化: `3 / 3 source data defined`
 - 一次・二次合計5問: `PASS`
 - 二次記述・計算: `3問`
 - 参考教材2系統以上: `PASS / e-sysnet.com + 電験王2`
@@ -159,6 +167,7 @@ Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXA
 source:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control.md`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_preproduction_blind_reanswer_20260918.md`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.md`
 
 ## Gate checklist
 
@@ -175,8 +184,8 @@ source:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — preproduction blind reanswer complete; explanation source pending
+- [ ] Topic 14 — explanation source complete; explanation PDF + QA pending
 
 ## next_start
 
-Topic 14の解説sourceを作成する。固定5問・21答案要素を変更せず全要素を説明箇所へマッピングし、制作前blindで不足した「最低必要設備容量を不足側へ丸めない」答案処理を補強する。Topic 15以降を先取りしない。
+Topic 14の解説PDFを `14_power_factor_voltage_control_explanation.md` から生成し、表示、文字抽出、3段階例題の数値再計算、固定5問・21答案要素の説明欠落がないことをQAする。練習問題・PowerPoint・完成後blind独立再解答はまだ行わない。
