@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は完成済み。active themeはTopic 14。
 
 ## 今回進捗
-Topic 14 `駅やトンネルにはどう電気を配る？` の制作前独立検証を完了した。前工程で固定した5問・6答案要素を、公式標準解答を先に見ずに独立計算・論理判定し、その後に照合した。結果は `6 / 6 PASS`、公式解答との不一致`0件`。R8上問13`(2)`、R7下問10`(5)`、R3問12`(5)`、H23問9`(1)`、H20問17(a)(b)`(2),(3)`。`SPEC.md` の固定範囲から追加せず、既完了Topic固定問題との重複、未確認新幹線実設備値への依存、件数合わせの仕様追加はいずれも0件。
+Topic 14 `駅やトンネルにはどう電気を配る？` の解説sourceを完成させた。制作前に固定した5問・6答案要素を本文へ `6 / 6` マッピングし、§1〜§16の解説本文と3段階例題（基礎・本試験標準・複合）を作成した。例題は独立再計算して `3 / 3 PASS`。単相三線式の電流方向・中性点移動・電圧降下、配電変圧器の理想変圧器関係、三相三線式 `ΔV=√3IR` と導体断面積逆算、直接埋設式・管路式・暗きょ式と放熱・許容電流を、固定範囲内で説明した。SPEC固定範囲外追加、Topic 15論点先取り、未確認新幹線実設備値の真値化はいずれも0件。
 
 source: `topics/14_distribution/14_distribution.md`
 
@@ -21,9 +21,14 @@ source: `topics/14_distribution/14_distribution.md`
 - 制作前独立検証: `6 / 6 PASS`
 - 公式解答との一致: `6 / 6 PASS`
 - 公式解答との不一致: `0件`
-- SPEC固定範囲外の採用問題: `0件`
+- 解説本文: §1〜§16 完成
+- 3段階例題: 基礎・本試験標準・複合 各1問完成
+- 3段階例題独立再計算: `3 / 3 PASS`
+- 固定5問・6答案要素の本文要求事項マッピング: `6 / 6 PASS`
+- SPEC固定範囲外の採用問題・本文追加: `0件`
 - 既完了Topic固定過去問との重複採用: `0件`
-- 未確認新幹線実設備値への依存: `0件`
+- Topic 15論点先取り: `0件`
+- 未確認新幹線実設備値への依存・真値化: `0件`
 - 件数合わせの仕様追加: `0件`
 
 ## 前回進捗（Topic 13）
@@ -213,7 +218,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_14_preproduction_independent_verification_complete`
+- `current_status`: `topic_14_explanation_source_complete`
 - 完成数: `13 / 16`
 - last completed: Topic 13 `新幹線の架線は何でできている？`
 - active: Topic 14 `駅やトンネルにはどう電気を配る？`
@@ -222,9 +227,13 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 14 制作前EXAM_ALIGNMENT: 完了
 - Topic 14 制作前独立検証: `6 / 6 PASS`
 - Topic 14 公式解答一致: `6 / 6 PASS`
-- Topic 14 SPEC固定範囲外採用: `0件`
+- Topic 14 解説本文: §1〜§16 完成
+- Topic 14 3段階例題: `3 / 3 PASS`
+- Topic 14 本文要求事項マッピング: `6 / 6 PASS`
+- Topic 14 SPEC固定範囲外採用・本文追加: `0件`
 - Topic 14 既完了Topic固定過去問との重複採用: `0件`
-- Topic 14 未確認新幹線実設備値への依存: `0件`
+- Topic 14 未確認新幹線実設備値への依存・真値化: `0件`
+- Topic 14 Topic 15論点先取り: `0件`
 - Topic 14 件数合わせの仕様追加: `0件`
 - Topic 13 source: `topics/13_electrical_materials/13_electrical_materials.md`
 - Topic 13 解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
@@ -256,4 +265,4 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 12 最終QA: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 14の固定5問・6答案要素を本文へマッピングし、解説本文と3段階例題（基礎・本試験標準・複合）を作成する。
+Topic 14の解説本文をA4解説PDFへ反映し、表示・文字抽出・数値論理QAを行う。
