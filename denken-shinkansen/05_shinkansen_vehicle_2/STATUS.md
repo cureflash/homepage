@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_progress_sync_complete`
-- last_completed_topic: `15 500系 高速域の出力・熱解析`
-- active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: 新しいrunでTopic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない
+- exam_aligned_completed_topics: `16 / 39`
+- current_status: `topic_16_completed`
+- last_completed_topic: `16 700系 多レベル変換器とPWM`
+- active_topic: `17 パワー半導体の損失比較`
+- next_start: 新しいrunでTopic 17の制作前EXAM_ALIGNMENTを開始する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — PROGRESS_SYNC_COMPLETE / 制作中
+- [x] 16 700系 多レベル変換器とPWM — PASS
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -186,12 +186,12 @@
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4箇所要同期`
+- 進捗記録整合: `PASS`
 - SPEC外追加: `0件`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 判定: `PASS / completed`
 
 ## Topic 16 進捗記録同期
-- 最終QA指摘4箇所: `4 / 4 同期完了`
+- 初回最終QA指摘4箇所: `4 / 4 同期完了`
 - 主source冒頭 `## 状態`: `topic_16_progress_sync_complete`
 - 主source末尾 `## 次工程`: `最終QA再判定`
 - 練習source末尾 `## 次工程`: `topic_16_progress_sync_complete / 最終QA再判定`
@@ -228,7 +228,7 @@ SPEC指定可視化:
 - 未確認700系実車回路・レベル数・電圧・素子定格・キャリア周波数・効率を真値化しない
 
 ## 過去Topic
-Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
+Topic 01〜16は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
+Topic 17「パワー半導体の損失比較」の制作前EXAM_ALIGNMENTを開始する。
