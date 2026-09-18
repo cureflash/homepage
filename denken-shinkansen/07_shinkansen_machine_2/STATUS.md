@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_blind_reanswer_ready`
+- current_status: `topic_17_independent_reanswer_complete`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 完成後独立再解答
+- next_start: Topic 17 最終QA
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint・独立再解答前ゲート `PASS` / 次は完成後独立再解答
+- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint・独立再解答前ゲート・完成後独立再解答 `PASS` / 次は最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -267,8 +267,21 @@
 - 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_blind_reanswer_gate.md`
 - 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
 
+## Topic 17 完成後独立再解答
+- [x] 公式正答・標準解答を見る前に答案を `17_speed_feedback_control_answer_lock.md` へ固定
+- [x] R07二次 問4 (1): `1 / 1 PASS`
+- [x] R06二次 問4 (1): `1 / 1 PASS`
+- [x] R04二次 問4 (3): `1 / 1 PASS`
+- [x] R03二次 問4 (1),(2): `2 / 2 PASS`
+- [x] H21一次 問4 (1): `1 / 1 PASS`
+- [x] 厳密ブラインド再解答 `6 / 6 PASS`
+- [x] 教材外知識による補完 `0件`
+- [x] Topic 18〜21先取り・仕様外論点追加・未確認実車値追加 `0件`
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_independent_reanswer.md`
+- 判定: `PASS / topic_17_independent_reanswer_complete`
+
 ## 今回進めた内容
-Topic 17をPowerPoint完了状態から1段階進め、完成後独立再解答前ゲートを完了した。固定一次1問＋二次4問、計5問・6答案要素と既存成果物をreconcileし、公式正答・標準解答・完成済み個別解答の事前保存 `0件`、仕様境界違反 `0件` を確認した。
+Topic 17を独立再解答前ゲート完了状態から1段階進め、完成後独立再解答を完了した。固定一次1問＋二次4問、計5問・6答案要素を、公式正答・標準解答を見る前にGitHubへ答案ロックし、完成教材だけで解答した後に公式と照合して `6 / 6 PASS` を確認した。教材外補完、仕様境界違反、未確認実車値追加は `0件`。
 
 ## 判定
-Topic 17は `BLIND_REANSWER_READY / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は完成後独立再解答。
+Topic 17は `PASS / topic_17_independent_reanswer_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程はTopic 17最終QA。
