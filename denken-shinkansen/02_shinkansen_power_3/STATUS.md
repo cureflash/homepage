@@ -74,7 +74,7 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 集計:
 - 制作前独立検証: `7 / 7 PASS`
 - 解説本文: §1〜§9 完成
-- 3段階例題: 基礎・本試験標準7 / 複合2
+- 3段階例題: 基礎・本試験標準・複合 各1問完成
 - 固定5問・7小問の本文要求事項マッピング: `7 / 7`
 - 解説PDF: A4縦4ページ
 - 解説PDF表示QA: 200 dpi `4 / 4 PASS`
