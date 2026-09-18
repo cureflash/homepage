@@ -7,7 +7,9 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_powerpoint_complete`。Topic 16 `700系 多レベル変換器とPWM` は制作前EXAM_ALIGNMENT、解説source＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了した。次工程はblind再解答対象を開く前に必須成果物・固定EXAM_ALIGNMENT・解説source・PDF/PPTX・練習問題を監査し、その後blind再解答候補を固定する。
+現在地は `topic_16_blind_reanswer_ready`。Topic 16 `700系 多レベル変換器とPWM` は制作前EXAM_ALIGNMENT、解説source＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲートまで完了した。独立再解答前ゲートは `PASS / BLIND_REANSWER_READY`。必須先読み対象に固定5過去問の公式正答番号・標準解答本文・完成済み個別答案・個別数値解・導出結果は保存されていない。main sourceには公式問題・公式解答URLのみを記録し、正答内容は保存していない。
+
+次工程は Topic 16 の完成後独立再解答。公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・26答案要素を再解答し、候補答案をGitHubへ固定してから公式照合する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -119,6 +121,18 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 16 完成後独立再解答前ゲート
+- path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_gate.md`
+- 判定: `PASS / BLIND_REANSWER_READY`
+- 必須先読み対象: `MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / main source / 練習source / 各QA / 成果物一覧`
+- 固定公式過去問の公式正答番号・標準解答本文保存: `0件`
+- 固定公式過去問の完成済み個別答案・個別数値解・導出結果保存: `0件`
+- main sourceの公式問題・公式解答URL: `URLのみ / 正答内容保存なし`
+- 練習sourceの正答・解説: `教材自身の練習問題 / 固定公式過去問の保存済み正答ではない`
+- 固定EXAM_ALIGNMENT・教材本文・PDF/PPTX・共通仮定モデル変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -156,4 +170,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16のblind再解答対象を開く前に、必須成果物・固定EXAM_ALIGNMENT・解説source・PDF/PPTX・練習問題を監査し、その後blind再解答候補を固定する。固定5問・26答案要素、SPEC指定8項目・3可視化、共通仮定モデル、範囲境界を変更しない。
+Topic 16 `700系 多レベル変換器とPWM` の完成後独立再解答を実施する。公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・26答案要素を再解答し、候補答案をGitHubへ固定してから公式照合する。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデル、範囲境界を変更しない。
