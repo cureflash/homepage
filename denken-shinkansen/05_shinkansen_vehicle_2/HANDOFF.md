@@ -7,9 +7,9 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_blind_reanswer_gate_rebuilt`。Topic 16 `700系 多レベル変換器とPWM` は、blind再解答QAで検出した R7一次「機械」問4 (3) の1答案要素不足を main source・解説PDF・練習source/PDF・PowerPointへ最小補正済み。今回、改訂済み全成果物を再監査し、固定5問・26答案要素、SPEC指定8項目・3可視化、共通仮定モデル、範囲境界が変更されていないことを確認してblind再解答前ゲートを再構築した。旧候補答案・旧blind QAは改訂前教材に対する記録として再利用しない。Topic 16は独立再解答未完了のためcompletedにしない。
+現在地は `topic_16_blind_reanswer_candidates_refreshed`。Topic 16 `700系 多レベル変換器とPWM` は、blind再解答QAで検出した R7一次「機械」問4 (3) の1答案要素不足を main source・解説PDF・練習source/PDF・PowerPointへ最小補正し、blind再解答前ゲートを再構築済み。今回、公式解答・標準解答・旧候補答案本文・旧blind QA本文を先に見ず、固定5問の公式問題文と改訂済み教材sourceだけで26答案要素を独立再解答し、新候補答案を固定した。Topic 16は公式照合未実施のためcompletedにしない。
 
-次工程は新しい独立runで、公式解答・標準解答・旧候補答案・旧blind QAを先に見ず、公式問題文＋改訂済み教材だけで固定5問・26答案要素を再解答し、新候補答案を固定する。
+次工程は、新候補答案を変更せずに公式解答・標準解答を開き、固定5問・26答案要素を照合して `16_700series_multilevel_converter_pwm_blind_reanswer_qa.md` へ記録する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -142,28 +142,35 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 
 ## Topic 16 完成後独立再解答 候補答案固定
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_candidates.md`
-- 旧候補答案は改訂前教材によるため再利用しない
-- 固定過去問: `一次4問＋二次1問、計5問`
-- 固定答案要素: `26 / 26 変更なし`
-- 現判定: `REFRESH_REQUIRED`
+- 固定過去問: `一次4問＋二次1問 / 5問`
+- 固定答案要素: `一次20＋二次6 / 26 / 26 固定`
+- 候補答案固定前の公式解答・標準解答先読み: `0件`
+- 旧候補答案本文・旧blind QA本文の先読み: `0件`
+- 使用資料: `固定5問の公式問題文＋改訂済みTopic 16教材sourceのみ`
+- R7一次 問4(3): `MOSFETとして教材内根拠から独立固定`
+- H24二次: `V_v≈100.7 V / K≈0.950 / tanφ=0.12 / I_Qmin≈-15.2 A`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC指定8項目・3可視化変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 公式解答・標準解答との照合: `未実施`
+- 判定: `PASS / CANDIDATES_REFRESHED`
 
 ## Topic 16 完成後独立再解答QA
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_qa.md`
-- 旧照合: 公式解答・標準解答と `26 / 26 一致相当`
-- H24二次の変調率: `候補0.950 / 標準解答0.949` は同一式・同一厳密値の途中丸め差
-- 旧独立再解答: 教材だけでの導出 `25 / 26 PASS`
-- 旧FAIL: `R7 一次 機械 問4 (3)` — 改訂前教材に当該識別知識が不足
+- 旧QAは改訂前教材に対する記録で、新候補答案の照合結果としては使用しない
 - source補正: `完了`
 - 解説PDF同期: `完了`
 - 練習PDF同期: `完了`
 - PowerPoint同期: `完了`
 - blind再解答前ゲート再構築: `完了`
-- 次は新候補答案を独立条件で再固定する
+- 新候補答案固定: `完了 / 26 / 26`
+- 次は固定済み候補答案を変更せず公式解答・標準解答と照合する
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定8項目・3可視化・共通仮定モデル変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `NEEDS_REVISION / REANSWER_PENDING`
+- 判定: `PENDING / OFFICIAL_COMPARISON_REQUIRED`
 
 ## Topic 16 SPEC固定範囲
 扱う内容:
@@ -202,4 +209,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-blind再解答前ゲート再構築まで完了。固定範囲を広げず、新しい独立runで公式解答・標準解答・旧候補答案・旧blind QAを先に見ない条件を守り、公式問題文＋改訂済み教材だけで固定5問・26答案要素を再解答し、新候補答案を固定する。
+新候補答案を固定済み。新しいrunで候補答案を変更せず、公式解答・標準解答を開いて固定5問・26答案要素を照合し、結果を `16_700series_multilevel_converter_pwm_blind_reanswer_qa.md` に記録する。
