@@ -2,7 +2,7 @@
 
 ## 状態
 
-`topic_19_powerpoint_complete / IN_PROGRESS`
+`topic_19_final_qa_needs_revision / IN_PROGRESS`
 
 2026-09-18、制作前EXAM_ALIGNMENTを完了した。最新main、`STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、Topic 04の既存成果物をreconcileし、Topic 18完了後の最初の未完了テーマがTopic 19であることを確認した。
 
@@ -21,6 +21,8 @@
 2026-09-18、固定済みEXAM_ALIGNMENT・解説本文・解説PDF・練習問題sourceを変更せず、練習PDFとQAを作成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出`PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`。直接最適化・ラグランジュ法要求0問、接続確認5問の件数水増し0件、仕様外追加0件を維持し、`PASS / PRACTICE_PDF_COMPLETE` とした。
 
 2026-09-18、固定済みEXAM_ALIGNMENT・解説本文・PDF・練習問題を変更せず、解説画像PowerPointとQAを作成した。16:9・5枚で固定範囲5項目を `5 / 5`、接続確認5問との対応を `5 / 5 PASS` とし、全5枚の再レンダリング、`slides_test.py`、PPTX ZIP/XML整合性をすべて `PASS`。直接最適化・ラグランジュ法要求0問、接続5問の水増し0件、仕様外追加0件を維持し、`PASS / POWERPOINT_COMPLETE` とした。
+
+2026-09-18、完成後独立検証、初回最終QAまで完了した。完成後独立検証は新規3ケース `3 / 3 PASS`。直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問0問、接続確認5問の件数水増し0件、H17問6固定件数追加0件、仕様外追加0件を維持した。初回最終QAでは技術品質はPASSしたが、進捗記録5ファイルが古いため `NEEDS_REVISION` とした。本ファイルを含む5ファイルを実成果物状態へ同期済みで、次工程は最終QA再判定である。
 
 ## 固定範囲
 
@@ -662,10 +664,10 @@ C=8^2+2*2^2=72
 - [x] 練習問題source
 - [x] 練習PDF＋QA
 - [x] 解説画像PowerPoint＋QA
-- [ ] 完成後独立検証
-- [ ] 最終QA
+- [x] 完成後独立検証
+- [x] 初回最終QA実施 → `NEEDS_REVISION`（技術品質PASS、進捗記録整合のみFAIL）
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・既存成果物を変更せず、Topic 19の完成後独立検証を行う。直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問は0問のため、接続確認5問を固定品質ゲートへ格上げせず、完成教材の固定範囲を新規条件で独立検証する。
+進捗記録同期後にTopic 19の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更しない。
