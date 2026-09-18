@@ -4,7 +4,7 @@
 
 ## 状態
 
-- stage: `EXPLANATION_PDF_COMPLETE`
+- stage: `PROGRESS_RECORDS_SYNCED`
 - completion: `in_progress`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: 一次5問・25答案要素
@@ -12,13 +12,16 @@
 - 公式標準解答照合: `25 / 25`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
+- 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `25 / 25 PASS`
 - 必須説明: `15 / 15`
 - 固定一次5問への接続: `25 / 25答案要素`
 - 3段階例題: `3 / 3`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 公式標準解答・保存済み正答の先見: `0件`
-- 次工程: 練習問題source＋練習PDF
+- 次工程: Topic 18最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -588,4 +591,4 @@ H29・H21一次理論問8型では、帰還部分を一つの `Rf` に見立て�
 
 ## 9. 次工程
 
-練習問題source＋練習PDFを作成し、問題・解答・完全解説、数値再計算・正答一意性、固定一次5問・25答案要素、SPEC境界を確認する。Topic 19・20を先取りせず、実車の特定センサ回路・回路定数・実装方式を未確認のまま追加しない。
+Topic 18最終QAを再実施する。固定一次5問・25答案要素、完成後独立再解答 `25 / 25 PASS`、解説PDF・練習PDF・PowerPoint各QA、SPEC境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
