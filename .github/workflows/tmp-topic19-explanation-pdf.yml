@@ -21,7 +21,25 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .tmp_topic19_pdf/{00,01,02,03,04,05,06}.b64 | tr -d '\r\n' | base64 -d > /tmp/topic19.pdf
+          cat \
+            .tmp_topic19_pdf/00.b64 \
+            .tmp_topic19_pdf/01.b64 \
+            .tmp_topic19_pdf/02.b64 \
+            .tmp_topic19_pdf/03a.b64 \
+            .tmp_topic19_pdf/03b.b64 \
+            .tmp_topic19_pdf/03c0.b64 \
+            .tmp_topic19_pdf/03c1.b64 \
+            .tmp_topic19_pdf/03c2.b64 \
+            .tmp_topic19_pdf/03c3a.b64 \
+            .tmp_topic19_pdf/03c3b.b64 \
+            .tmp_topic19_pdf/03d0.b64 \
+            .tmp_topic19_pdf/03d1.b64 \
+            .tmp_topic19_pdf/03d2.b64 \
+            .tmp_topic19_pdf/03d3.b64 \
+            .tmp_topic19_pdf/04.b64 \
+            .tmp_topic19_pdf/05.b64 \
+            .tmp_topic19_pdf/06.b64 \
+            | tr -d '\r\n' | base64 -d > /tmp/topic19.pdf
           echo "size=$(wc -c < /tmp/topic19.pdf)"
           echo "sha256=$(sha256sum /tmp/topic19.pdf | awk '{print $1}')"
           echo "blob=$(git hash-object /tmp/topic19.pdf)"
