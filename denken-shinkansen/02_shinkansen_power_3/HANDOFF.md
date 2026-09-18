@@ -3,13 +3,15 @@
 更新日: 2026-09-18
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は完成済み。active themeはTopic 15 `回生した電気はどこへ行く？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。MASTER_SPEC順で `01_shinkansen_vehicle_3` は完了、`02_shinkansen_power_3` が最初の未完了系列。新品質基準の完成数は `14 / 16`。Topic 01〜14は完成済み。active themeはTopic 15 `回生した電気はどこへ行く？`。
 
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 15の解説画像PowerPoint＋QAを作成した。16:9・4枚。固定5出題回・8答案要素の要求事項可視化 `8 / 8 PASS`、1600×900相当表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`、数値・論理QA `PASS`。SPEC固定範囲外追加0件、Topic 16先取り0件、未確認新幹線実設備値の真値化0件。公式正答番号・制作前最終答案のPowerPoint転記0件。
+Topic 15の完成後ブラインド独立再解答を実施した。固定5出題回・8答案要素の候補答案を公式標準解答参照前に `2366cffd425cb781868a6e2144266bb38d7e7a87` で固定し、その後に電気技術者試験センター公式標準解答と照合。`8 / 8 PASS`、固定後の答案変更0件、教材外知識補完0件、SPEC固定範囲外追加0件、Topic 16先取り0件、未確認新幹線実設備値の真値化0件。
 
+固定候補: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer_candidates.md`
+完成後独立再解答: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md`
 source: `topics/15_regenerative_power/15_regenerative_power.md`
 解説PDF: `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
 解説PDF QA: `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md`
@@ -19,51 +21,26 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 解説画像PowerPoint: `topics/15_regenerative_power/15_regenerative_power_images.pptx`
 PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md`
 
-固定品質ゲート:
-- R8上 電力 問5 — Slide 3で二次電池、Li-ion、NAS、電力貯蔵、出力平滑化へ接続
-- R7上 法規 問13(a)(b) — Slide 2で余剰送電、面積計算、自家消費、自給率へ接続
-- R4下 電力 問11 — Slide 3で需給バランス、負荷平準化、蓄電池、揚水、運転予備力へ接続
-- H29 法規 問13(a)(b) — Slide 2で双方向送受電、自家消費比率へ接続
-- H25 法規 問12(a)(b) — R7上問13の再出題としてSlide 2で同一解法を再現
+## 固定品質ゲート
+- R8上 電力 問5 — `(4)` / 公式 `(4)` — PASS
+- R7上 法規 問13(a)(b) — `(2),(3)` / 公式 `(2),(3)` — PASS
+- R4下 電力 問11 — `(5)` / 公式 `(5)` — PASS
+- H29 法規 問13(a)(b) — `(2),(5)` / 公式 `(2),(5)` — PASS
+- H25 法規 問12(a)(b) — `(2),(3)` / 公式 `(2),(3)` — PASS
 
 集計:
-- 制作前EXAM_ALIGNMENT: 完了
 - 固定問題: `5出題回・8答案要素`
 - 実質問題パターン: `4`（R7上法規問13はH25法規問12の再出題）
+- 制作前EXAM_ALIGNMENT: 完了
 - 制作前独立検証: `8 / 8 PASS`
+- 解説本文＋3段階例題: 完了
+- 解説PDF＋QA: 完了
+- 練習問題source＋練習PDF＋QA: 完了
+- 解説画像PowerPoint＋QA: 完了
+- 完成後ブラインド独立再解答: `8 / 8 PASS`
 - 公式解答一致: `8 / 8 PASS`
-- 解説本文: §1〜§15 完成
-- 3段階例題: 基礎・本試験標準・複合 各1問完成
-- 3段階例題独立再計算: `3 / 3 PASS`
-- 固定5出題回・8答案要素の本文要求事項マッピング: `8 / 8 PASS`
-- 解説PDF: A4縦4ページ
-- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF数値・論理再検算: `3 / 3 PASS`
-- 固定5出題回・8答案要素のPDF対応: `8 / 8 PASS`
-- 練習問題source: 全12問・全問五肢択一
-- 練習難易度: 基礎3 / 本試験標準7 / 複合2
-- 練習source数値・論理独立再計算: `12 / 12 PASS`
-- 練習source正答一意性: `12 / 12 PASS`
-- 練習source固定5出題回・8答案要素への接続: `8 / 8 PASS`
-- 練習PDF: A4縦4ページ
-- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF数値・論理再検算: `12 / 12 PASS`
-- 練習PDF正答一意性: `12 / 12 PASS`
-- 練習PDF固定5出題回・8答案要素への接続: `8 / 8 PASS`
-- 解説画像PowerPoint: 16:9・4枚
-- PowerPoint固定5出題回・8答案要素の要求事項可視化: `8 / 8 PASS`
-- PowerPoint表示QA: 1600×900相当 `4 / 4 PASS`
-- PowerPoint overflow: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint内数値・論理QA: `PASS`
-- `kW` / `kWh`、`W=Pt`、`W=∫Pdt`、グラフ面積: PASS
-- 余剰・不足・送電・受電の方向判定: PASS
-- 自家消費量・自家消費比率・自給率の分母区別: PASS
-- 蓄電池・電力貯蔵・負荷平準化・需給バランス: PASS
-- 回生失効・受入余力・省エネルギーの因果: PASS
-- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPowerPoint転記 `0件`
+- 教材外知識補完: `0件`
+- 候補固定後の答案変更: `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 16先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
@@ -77,10 +54,7 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - Topic 16の総合系統計算は先取りしない。
 
 ## 次
-Topic 15の完成後ブラインド独立再解答を実施する。完成教材だけで固定5出題回・8答案要素を解き直し、公式解答一致・教材外知識補完0件・SPEC固定範囲外追加0件を確認する。
+Topic 15の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答 `8 / 8 PASS`、PDF/PPTX QA、SPEC境界、進捗記録整合を再確認し、PASSの場合のみ `completed` とする。
 
 ## 直前完了テーマ
 Topic 14 `駅やトンネルにはどう電気を配る？` は `PASS / completed`。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
-
-source: `topics/14_distribution/14_distribution.md`
-最終QA: `topics/14_distribution/14_distribution_final_qa.md`
