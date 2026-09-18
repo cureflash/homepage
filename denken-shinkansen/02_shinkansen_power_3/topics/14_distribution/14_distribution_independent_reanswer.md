@@ -149,6 +149,9 @@
 - H23 公式解答: https://www.shiken.or.jp/chief/upload/20110904_ch_third_a01.pdf
 - H20 電力 問17(a)(b): 電気技術者試験センター公式過去問・標準解答を制作前EXAM_ALIGNMENTで照合済み。現行公式過去問案内: https://www.shiken.or.jp/chief/third/qa/
 
+## 進捗同期
+初回最終QAで指摘された旧工程記録を現在地へ同期済み。固定EXAM_ALIGNMENT、独立答案、公式解答照合結果は変更していない。
+
 ## 次
 
-Topic 14の最終QAを実施する。固定EXAM_ALIGNMENT、教材内容、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` とする。
+Topic 14の最終QAを再実施する。固定EXAM_ALIGNMENT、教材内容、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` とする。
