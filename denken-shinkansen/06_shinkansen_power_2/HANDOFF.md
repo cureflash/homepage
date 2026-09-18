@@ -3,17 +3,16 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
-current_status: `topic_15_explanation_pdf_needs_revision`
+current_status: `topic_15_explanation_pdf_complete`
 
 ## 今回完了
 
-最新main、MASTER SPEC、EXAM_ALIGNMENT SPEC、本系列SPEC、STATUS/HANDOFF、Topic 15の既存成果物をreconcileし、次工程の解説PDF生成＋PDF QAだけを実施した。
-
-作成:
-- `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
-- `topics/15_regenerative_power/15_regenerative_power_explanation_pdf_qa.md`
+最新main、MASTER SPEC、EXAM_ALIGNMENT SPEC、本系列SPEC、STATUS/HANDOFF、直近の同系列worker成果をreconcileした。直前workerが差し替えたTopic 15解説PDFとQAを起点に、前回QAで残っていた既存SPEC固定3項目だけを補完し、解説PDFを再生成・再QAした。
 
 更新:
+- `topics/15_regenerative_power/15_regenerative_power_explanation.md`
+- `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
+- `topics/15_regenerative_power/15_regenerative_power_explanation_pdf_qa.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -30,28 +29,29 @@ current_status: `topic_15_explanation_pdf_needs_revision`
 - SPEC固定可視化: `3 / 3 PASS`
 - 固定5問・24答案要素の説明接続: `24 / 24 covered`
 - 数値整合: `PASS`
+- PDF QA総合判定: `PASS`
 
-ただし系列SPECとの再照合で、learner-facing説明に次の不足を確認した。
+前回blocker再QA:
+1. `系統受容性` のlearner-facing定義 — `PASS`
+2. 逆潮流時の `電圧上昇` の最小限の説明 — `PASS`
+3. `回生失効の概念` — `PASS`
 
-1. `系統受容性` の明示的定義
-2. 逆潮流時の `電圧上昇` の最小限の説明
-3. `回生失効の概念`
-
-これらは新規仕様ではなく、既存SPEC固定項目であるため、PDF QA総合判定は `NEEDS_REVISION`。Topic 15は未完了のまま。
+3項目はいずれも既存SPEC固定項目。Topic 14の無効電力制御、Topic 17の保護・FRT、Topic 20の安定度、Topic 21の需給制御一般へは拡張していない。実設備の受入限界・電圧しきい値・失効条件も真値化していない。
 
 ## reconcile結果
 
 - Topic 01〜14: `completed`
-- Topic 15: `IN_PROGRESS / 解説PDF QA NEEDS_REVISION`
+- Topic 15: `IN_PROGRESS / 解説PDF complete`
 - 完成数: `14 / 22`
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問のまま
 - 制作前blind: `5 / 5問・24 / 24答案要素 PASS`
+- 解説PDF: `PASS`
 - 新規正式過去問追加: `0件`
 - 練習問題、PowerPoint、完成後blind: 未着手
 
 ## 次に行う
 
-`topics/15_regenerative_power/15_regenerative_power_explanation.md` とPDFへ、既存SPECの `系統受容性`、`電圧上昇`、`回生失効の概念` の3項目だけを補完し、PDFを再生成・再QAする。
+Topic 15の練習問題sourceを作成する。
 
 変更しない:
 - 固定5問・24答案要素

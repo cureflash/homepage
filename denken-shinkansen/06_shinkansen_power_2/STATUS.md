@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_15_explanation_pdf_needs_revision`
+current_status: `topic_15_explanation_pdf_complete`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
@@ -13,7 +13,7 @@ Topic 01〜14は `completed`。
 
 ## Topic 15 current progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QAまで実施。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QAまで完了。
 
 正式品質ゲート対象は一次3問＋二次2問、計5問・24答案要素で固定したまま変更なし。
 
@@ -36,24 +36,26 @@ Topic 01〜14は `completed`。
 - MASTER SPEC最低構成を収録
 - 基礎・本試験標準・複合の3段階例題を収録
 - SPEC指定時系列データを収録
+- 既存SPEC固定の `系統受容性`、`電圧上昇`、`回生失効の概念` をlearner-facing説明へ補完
 
 解説PDF:
 - `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
 - `topics/15_regenerative_power/15_regenerative_power_explanation_pdf_qa.md`
 - A4縦 `3ページ`
 - 200 dpi表示: `3 / 3 PASS`
+- ページ外逸脱・文字重なり・本文切れ: `0件`
 - 文字抽出: `PASS / U+FFFD 0件 / 黒四角0件`
+- 3段階例題: `3 / 3 PASS`
 - SPEC固定可視化: `3 / 3 PASS`
 - 固定5問・24答案要素の説明接続: `24 / 24 covered`
 - 数値整合: `PASS`
-- PDF QA総合判定: `NEEDS_REVISION`
+- 前回blocker再QA: `3 / 3 PASS`
+- PDF QA総合判定: `PASS`
 
-blocker:
-- 系列SPEC固定の `系統受容性` をlearner-facing用語として明示する説明が不足
-- 系列SPEC固定の `電圧上昇` の最小限の説明が不足
-- 系列SPEC固定の `回生失効の概念` の説明が不足
-
-これらは新規仕様ではなく、既存SPECの固定項目。固定過去問・答案要素の変更は行わない。
+前回blocker:
+- `系統受容性` の明示的定義 — `RESOLVED`
+- 逆潮流時の `電圧上昇` の最小限の説明 — `RESOLVED`
+- `回生失効の概念` — `RESOLVED`
 
 練習問題、PowerPoint、完成後blindは未着手。
 
@@ -82,6 +84,7 @@ Topic 15:
 - 合計: `24答案要素`
 - 制作前blind: `24 / 24 PASS`
 - 解説source固定本文節: `8 / 8` 接続
+- 解説PDF QA: `PASS`
 - 周辺問題による件数水増し: `0件`
 - Topic 14問題の重複採用: `0件`
 - Topic 16故障計算先取り: `0件`
@@ -108,8 +111,8 @@ Topic 15:
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — IN_PROGRESS / 解説PDF QA `NEEDS_REVISION`
+- [ ] Topic 15 — IN_PROGRESS / 解説PDF `PASS`
 
 ## next_start
 
-`topics/15_regenerative_power/15_regenerative_power_explanation.md` と解説PDFへ、系列SPECで既に固定されている `系統受容性`、`電圧上昇`、`回生失効の概念` の3項目だけを補完し、PDFを再生成・再QAする。固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更しない。
+固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、Topic 15の練習問題sourceを作成する。PowerPoint、完成後blindはまだ行わない。
