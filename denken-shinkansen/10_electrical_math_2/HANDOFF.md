@@ -8,11 +8,11 @@ Topic 01〜17は最終QAまで `PASS / completed`。
 
 完成数: `17 / 20`
 
-current_status: `topic_18_exam_alignment_complete`
+current_status: `topic_18_preproduction_validation_complete`
 
 active_topic: `18 非線形方程式と反復計算`
 
-次工程: Topic 18の制作前独立数値検証を実施する。
+次工程: Topic 18の解説本文＋3段階例題を作成する。
 
 ## 上位仕様
 
@@ -223,6 +223,25 @@ R3第一種二次「電力・管理」問3はNewton-Raphson法による多母線
 
 H20一次「理論」の非線形抵抗問題は候補として確認したが、現行公式アーカイブで問題本文・公式解答を直接再確認できないため正式件数には含めない。
 
+## 制作前独立数値検証
+
+記録:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_preproduction_validation.md`
+
+再現用:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_preproduction_validation.py`
+
+固定範囲だけを使って検証し、`PASS / PREPRODUCTION_NUMERICAL_VALIDATION_COMPLETE`。
+
+- 二分法 `f(x)=x^3-x-2`, `[1,2]`, 区間半幅許容誤差 `1e-6`: 20反復、近似根 `1.5213804244995117`
+- Newton法 同式, `x0=1.5`, 残差許容誤差 `1e-10`: 3反復、近似根 `1.5213797068045751`
+- 初期値依存 `g(x)=x^3-x`: `x0=0.2` は根0、`x0=0.8` は根1へ収束
+- `x=1/sqrt(3)` で `g'(x)=0` となりNewton更新式を適用できないことを確認
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- 第一種Newton-Raphson潮流問題の件数加算: `0件`
+- Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
 ## 制作前品質ゲート
 
 - [x] 系列SPEC確認
@@ -235,7 +254,7 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - [x] 電験学習資料を複数系統確認
 - [x] 数値求根の基礎資料を複数確認
 - [x] sourceへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
-- [ ] 制作前独立数値検証
+- [x] 制作前独立数値検証
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
@@ -247,4 +266,4 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 
 ## 次工程
 
-Topic 18の固定範囲だけを使い、二分法・Newton法・収束・初期値依存・許容誤差について制作前独立数値検証を実施する。
+固定済みEXAM_ALIGNMENTと制作前独立数値検証を変更せず、Topic 18の解説本文＋3段階例題を作成する。
