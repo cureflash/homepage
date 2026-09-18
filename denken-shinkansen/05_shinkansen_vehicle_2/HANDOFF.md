@@ -8,11 +8,11 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_17_powerpoint_complete`。Topic 17 `パワー半導体の損失比較` は、制作前EXAM_ALIGNMENTで固定した一次4問＋二次1問・26答案要素を変更せず、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成した。
+現在地は `topic_17_blind_reanswer_gate_complete`。Topic 17 `パワー半導体の損失比較` は、制作前EXAM_ALIGNMENTで固定した一次4問＋二次1問・26答案要素を変更せず、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成した。
 
-解説画像PowerPointは16:9・4枚。1600×900表示QA `4 / 4 PASS`、PPTX ZIP整合性、LibreOffice PDF変換、python-pptx open、PDF文字抽出はPASS。固定5問・26答案要素への可視化・接続 `26 / 26 PASS`、SPEC指定7項目 `7 / 7 covered`、指定3可視化 `3 / 3 PASS`。固定EXAM_ALIGNMENT変更、SPEC外追加、未確認700系実車値の真値化はすべて0件。
+完成後独立再解答前ゲート `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` を作成し、完成教材と品質記録を再監査した。固定5問・26答案要素への教材接続 `26 / 26 PASS`、SPEC指定7項目 `7 / 7 covered`、指定3可視化 `3 / 3 PASS`、固定EXAM_ALIGNMENT変更・SPEC外追加・未確認700系実車値の真値化はいずれも0件。候補答案の固定と公式解答／標準解答照合は未実施で、完成数は `16 / 39` のまま。
 
-次工程はTopic 17の完成後独立再解答前ゲートを作成する。完成数はまだ `16 / 39` のまま。
+次工程は、公式解答・標準解答を先に見ず、固定5問の公式問題文と完成教材だけを使って26答案要素を再解答し、候補答案を固定する。
 
 ## Topic 17 固定EXAM_ALIGNMENT
 
@@ -45,6 +45,7 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - 練習PDF: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_practice.pdf` — `PASS / 6 pages`
 - PowerPoint: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_images.pptx` — `PASS / 4 slides`
 - PowerPoint QA: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_powerpoint_qa.md`
+- blind再解答前ゲート: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — `PASS / BLIND_REANSWER_READY`
 
 PowerPoint QA:
 - 16:9: `4枚`
@@ -61,6 +62,16 @@ PowerPoint QA:
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / POWERPOINT_COMPLETE`
+
+## Topic 17 blind再解答前ゲート
+
+- 判定: `PASS / BLIND_REANSWER_READY`
+- 固定EXAM_ALIGNMENT: `変更なし`
+- 固定5問・26答案要素: `変更なし`
+- 完成教材への接続: `26 / 26 PASS`
+- 本ゲート作成runで公式解答・標準解答の内容参照: `0件`
+- 候補答案固定: `未実施`
+- 完成数: `16 / 39`
 
 ## Topic 17 範囲境界
 
@@ -82,4 +93,4 @@ Topic 01〜16の個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最
 
 ## 次工程
 
-Topic 17「パワー半導体の損失比較」の完成後独立再解答前ゲートを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
+Topic 17の固定5問・26答案要素を、公式解答・標準解答を先に見ず、公式問題文＋完成教材だけで独立再解答して候補答案を固定する。その後の工程で公式解答・標準解答と照合する。固定EXAM_ALIGNMENT・SPEC指定7項目・3可視化は変更しない。
