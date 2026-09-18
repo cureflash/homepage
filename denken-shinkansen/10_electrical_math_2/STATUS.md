@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 19 / 20
-- current_status: `topic_20_practice_pdf_complete`
+- current_status: `topic_20_powerpoint_complete`
 - last_completed_topic: `19 最適化入門`
 - active_topic: `20 新幹線を数式モデルだけで走らせる`
-- next_start: Topic 20の解説画像PowerPoint＋QA
+- next_start: Topic 20の完成後独立検証
 
 ## Topic 07 制作品質ゲート
 
@@ -339,23 +339,26 @@
 - [x] 解説PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立数値照合 `3 / 3 PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [ ] 解説画像PowerPoint＋QA
+- [x] 解説画像PowerPoint＋QA（16:9・5枚、固定統合範囲 `7 / 7`、必要説明 `6 / 6 PASS`、接続確認5問 `5 / 5 PASS`、表示QA `5 / 5 PASS`、overflow `0件`）
 - [ ] 完成後独立検証
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 20 `新幹線を数式モデルだけで走らせる` の練習PDF＋QAを完成した。
+Topic 20 `新幹線を数式モデルだけで走らせる` の解説画像PowerPoint＋QAを完成した。
 
-- 練習PDF: `topics/20_shinkansen_math_model/20_shinkansen_math_model_practice.pdf`
-- QA記録: `topics/20_shinkansen_math_model/20_shinkansen_math_model_practice_qa.md`
-- A4縦: `4ページ`
-- 200 dpi表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- 接続確認5問の教材内マッピング: `5 / 5 PASS`
+- PowerPoint: `topics/20_shinkansen_math_model/20_shinkansen_math_model_images.pptx`
+- QA記録: `topics/20_shinkansen_math_model/20_shinkansen_math_model_powerpoint_qa.md`
+- 16:9: `5枚`
+- SPEC固定統合範囲: `7 / 7 covered`
+- 教材で必要な説明6項目の可視化: `6 / 6 PASS`
+- 接続確認5問との対応: `5 / 5 PASS`
+- 数値整合QA: `PASS`
+- 全5スライド表示QA: `5 / 5 PASS`
+- shape geometry overflow: `0件`
+- `slides_test.py`: `PASS`
+- PPTX ZIP/XML整合性: `PASS`
 - 統合モデル自体を直接要求する確認済み第二種過去問: `0問`
 - 接続5問の直接対応品質ゲート件数への水増し: `0件`
 - 第一種・第三種問題の追加: `0件`
@@ -364,8 +367,8 @@ Topic 20 `新幹線を数式モデルだけで走らせる` の練習PDF＋QAを
 
 ## 判定
 
-`topic_20_practice_pdf_complete / IN_PROGRESS`
+`topic_20_powerpoint_complete / IN_PROGRESS`
 
 完成数は `19 / 20`。
 
-次はTopic 20の解説画像PowerPoint＋QA。
+次はTopic 20の完成後独立検証。
