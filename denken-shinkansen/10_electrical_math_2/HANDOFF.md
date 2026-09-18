@@ -8,11 +8,11 @@ Topic 01〜17は最終QAまで `PASS / completed`。
 
 完成数: `17 / 20`
 
-current_status: `topic_18_powerpoint_complete`
+current_status: `topic_18_post_completion_validation_complete`
 
 active_topic: `18 非線形方程式と反復計算`
 
-次工程: Topic 18の完成後独立検証を行う。
+次工程: Topic 18の最終QAを実施する。
 
 ## 上位仕様
 
@@ -339,6 +339,35 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - Topic 19最適化、多変数Newton-Raphson潮流、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
+## 完成後独立検証
+
+記録:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_post_completion_validation.md`
+
+再現用:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_post_completion_validation.py`
+
+直接二分法/Newton要求の第二種過去問が0問のため、接続確認5問を品質ゲートへ格上げせず、完成教材の固定範囲だけを使って保存済み例題・制作前検証と異なる新規数値条件を独立検証した。
+
+- Case A: `f(x)=cos x-x`, `[0,1]`, 区間半幅許容誤差 `1e-6`
+  - 19反復
+  - 近似根 `0.7390851974487305`
+  - 最終区間半幅 `9.5367431640625e-7`
+  - 残差 `-1.0750207668497325e-7`
+- Case B: `g(x)=x^3-7x+6`
+  - `x0=0.5` → 5反復で根 `1`
+  - `x0=2.5` → 5反復で根 `2.0000000000000906`
+  - `x=±sqrt(7/3)` で `g'(x)=0` を確認
+- Case C: 教育用 `P=K sinδ`, `K=3.0`, `P=1.7`, `δ0=0.4 rad`
+  - 4反復
+  - `δ=0.6024546333849905 rad`
+  - 残差 `0`
+  - `0<δ<π/2` を満たす
+
+判定: `PASS / POST_COMPLETION_VALIDATION_COMPLETE`。
+
+固定EXAM_ALIGNMENT変更0件。接続確認5問の件数水増し0件。第一種問題の件数加算0件。Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加0件。未確認実車値依存0件。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -357,10 +386,10 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - [x] 練習問題source
 - [x] 練習PDF＋QA
 - [x] 解説画像PowerPoint＋QA
-- [ ] 完成後独立検証
+- [x] 完成後独立検証
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDF・練習問題source・練習PDF・PowerPointを変更せず、Topic 18の完成後独立検証を行う。
+固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDF・練習問題source・練習PDF・PowerPoint・完成後独立検証を変更せず、Topic 18の最終QAを実施する。
