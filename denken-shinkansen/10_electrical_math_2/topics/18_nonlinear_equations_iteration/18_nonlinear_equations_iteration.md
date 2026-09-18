@@ -2,9 +2,9 @@
 
 ## 状態
 
-`topic_18_explanation_pdf_complete / IN_PROGRESS`
+`topic_18_practice_source_complete / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題、解説PDF＋QAまで完了した。固定5説明項目を `5 / 5` 実装し、接続確認した第二種公式過去問5問との教材内接続を明示した。直接二分法・Newton法を要求する確認済み第二種過去問は0問のままで、件数水増しは行っていない。解説PDFはA4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出・数値整合とも `PASS`。次工程は練習問題sourceの作成である。
+2026-09-18、制作前EXAM_ALIGNMENT、制作前独立数値検証、解説本文＋3段階例題、解説PDF＋QA、練習問題sourceまで完了した。固定5説明項目を `5 / 5` 実装し、接続確認した第二種公式過去問5問との教材内接続を明示した。直接二分法・Newton法を要求する確認済み第二種過去問は0問のままで、件数水増しは行っていない。解説PDFはA4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出・数値整合とも `PASS`。練習問題は全12問（一次型8・記述型4）、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`。次工程は練習PDF＋QAである。
 
 ## 固定範囲
 
@@ -663,6 +663,28 @@ QA結果:
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
+## 練習問題source
+
+成果物:
+- `18_nonlinear_equations_iteration_practice.md`
+
+QA結果:
+- 全問題数: `12`
+- 一次型: `8`
+- 記述型: `4`
+- 基礎: `3`
+- 標準: `6`
+- 複合: `3`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 直接二分法・Newton法要求の確認済み第二種過去問: `0問`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- 第一種Newton-Raphson潮流問題の件数加算: `0件`
+- 仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
 ## 制作品質ゲート
 
 - [x] MASTER_SPEC確認
@@ -679,7 +701,7 @@ QA結果:
 - [x] 制作前独立数値検証
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋QA
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF＋QA
 - [ ] 解説画像PowerPoint＋QA
 - [ ] 完成後独立検証
@@ -688,4 +710,4 @@ QA結果:
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDFを変更せず、Topic 18の練習問題sourceを作成する。
+固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDF・練習問題sourceを変更せず、Topic 18の練習PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
