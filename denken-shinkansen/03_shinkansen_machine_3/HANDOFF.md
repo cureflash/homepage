@@ -5,11 +5,11 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
 
-Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで完成。系列 `SPEC.md` の固定範囲だけで公式過去問6問・6答案要素を維持し、制作前検証 `6 / 6 PASS`、本文マッピング `6 / 6 PASS`、3段階例題 `PASS`、解説source QA `PASS`。解説PDFはA4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`、固定過去問マッピング `6 / 6`。練習問題sourceは12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。練習PDFはA4縦2ページ、表示QA `2 / 2 PASS`、文字抽出QA `PASS`、正答一覧source一致 `12 / 12`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。解説画像PowerPointは16:9・4枚、表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字切れ・重なり・判読不能0件、欠落・破損グリフ0件、ZIP整合性 `PASS`、固定EXAM_ALIGNMENT接続 `6 / 6 PASS`。始動法・制動巻線、短絡比、無負荷飽和曲線・三相短絡曲線を使う試験法、同期調相機、負荷角・脱出トルク等の仕様外追加は0件。未確認のL0系実車値・詳細方式追加も0件。
+Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで完成したが、完成後blind独立再解答は `5 / 6 PASS`。R5下 機械 問5のみ、`V = E + jXsI` と `jXsI` が `I` より90°進む関係までは教材だけで判断できた一方、選択肢図で `jXsI` の始点・終点を逆に読み、blind答案(5)、公式解答(3)となった。MASTER SPEC / EXAM_ALIGNMENT SPECの品質ゲートにより未完了、判定は `NEEDS_REVISION` のまま。
 
-完成後blind独立再解答は、答案を commit `1f687fdde925e4aeebb39f6ce8a01b28bdd418fd` で先に固定してから公式解答と照合した。結果は `5 / 6 PASS`。R5下 機械 問5のみ、`V = E + jXsI` と遅れ力率・90°進みの関係までは教材だけで選べたが、選択肢図のベクトル矢印の始点・終点を誤読してblind答案(5)、公式解答(3)となった。MASTER SPEC / EXAM_ALIGNMENT SPECの品質ゲートにより未完了、判定は `NEEDS_REVISION`。固定範囲外知識による答案補完0件、固定EXAM_ALIGNMENT変更0件。
+今回、固定範囲・固定EXAM_ALIGNMENTを変更せずsourceレベルの補強を実施した。解説sourceでは `V = E + jXsI` を尾→頭で読む手順を明記し、「Eの終点を `jXsI` の始点とし、その終点がVの終点に一致する」「Vの終点→Eの終点は逆向きで誤り」と固定した。練習sourceの問10も、同じ始点・終点判定を直接問う五肢択一へ改訂し、独立論理QA・正答一意性QAともPASS。仕様外論点追加0件、固定EXAM_ALIGNMENT変更0件。
 
-状態: `topic_16_blind_reanswer_needs_revision / IN_PROGRESS`
+状態: `topic_16_vector_source_remediation_complete / IN_PROGRESS`
 
 ## Topic 16 固定範囲
 - 同期機
@@ -43,24 +43,12 @@ Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・�
 固定過去問要求事項の本文マッピング: `6 / 6 PASS`。
 3段階例題: `PASS`。
 解説source QA: `PASS`。
-解説PDF表示QA: `4 / 4 PASS`。
-解説PDF文字抽出QA: `PASS`。
-解説PDF固定過去問マッピング: `6 / 6`。
-練習問題独立計算・論理QA: `12 / 12 PASS`。
-練習問題正答一意性QA: `12 / 12 PASS`。
-練習問題→固定EXAM_ALIGNMENT接続: `6 / 6 PASS`。
-練習PDF表示QA: `2 / 2 PASS`。
-練習PDF文字抽出QA: `PASS`。
-練習PDF正答一覧source一致: `12 / 12 PASS`。
-練習PDF→固定EXAM_ALIGNMENT接続: `6 / 6 PASS`。
-PowerPoint表示QA: `4 / 4 PASS`。
-PowerPointスライド外はみ出し: `0件`。
-PowerPoint文字欠落・重なり・判読不能: `0件`。
-PowerPoint欠落・破損グリフ: `0件`。
-PowerPoint ZIP整合性: `PASS`。
-PowerPoint→固定EXAM_ALIGNMENT接続: `6 / 6 PASS`。
-完成後blind独立再解答: `5 / 6 PASS / NEEDS_REVISION`。
-blind再解答記録: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md`。
+ベクトル尾→頭・始点終点判定source QA: `PASS`。
+練習問題source: 問10を尾→頭判定問題へ改訂 / `12 / 12 PASS` / 正答一意性 `12 / 12 PASS`。
+解説PDF: 既存版あり / source改訂未反映 / `REGEN_REQUIRED`。
+練習PDF: 既存版あり / practice source改訂未反映 / `REGEN_REQUIRED`。
+PowerPoint: 既存版あり / source改訂未反映 / `REGEN_REQUIRED`。
+完成後blind独立再解答: 旧版で `5 / 6 PASS / NEEDS_REVISION`。派生成果物同期後に再実施する。
 固定範囲外知識による答案補完: `0件`。
 固定EXAM_ALIGNMENT変更: `0件`。
 
@@ -72,15 +60,15 @@ blind再解答記録: `topics/16_synchronous_machine/16_synchronous_machine_inde
 - R4下 機械 問4 — V曲線は範囲内だが、完答に同期調相機が必要で固定範囲外。
 
 source: `topics/16_synchronous_machine/16_synchronous_machine.md`
-解説本文: 完成。
-解説PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` 完成（A4縦4ページ）。
-解説PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` / `PASS`。
-練習問題source: `topics/16_synchronous_machine/16_synchronous_machine_practice.md` 完成（12問）。
-練習PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` 完成（A4縦2ページ）。
-練習PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` / `PASS`。
-解説画像PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` 完成（16:9・4枚）。
-PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` / `PASS`。
-完成後blind独立再解答: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md` / `5 / 6 PASS / NEEDS_REVISION`。
+解説本文: ベクトル図の尾→頭判定を補強済み。
+解説PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` 既存版は改訂前sourceに対応。
+解説PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` は改訂前PDFに対する記録。
+練習問題source: `topics/16_synchronous_machine/16_synchronous_machine_practice.md` 問10改訂済み（12問を維持）。
+練習PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` 既存版は改訂前sourceに対応。
+練習PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` は改訂前PDFに対する記録。
+解説画像PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` 既存版は改訂前sourceに対応。
+PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` は改訂前PowerPointに対する記録。
+完成後blind独立再解答: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md` / 旧版 `5 / 6 PASS / NEEDS_REVISION`。
 
 ## Topic 15
 Topic 15「車内の照明・空調にはどれだけ電気が必要？」は最終QA再判定PASSで `completed`。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、進捗記録整合、固定範囲境界は全件PASS。Webカタログにも登録済み。
@@ -103,4 +91,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-固定範囲・固定EXAM_ALIGNMENTを変更せず、R5下 機械 問5に対応する同期電動機ベクトル図の選択肢判定手順を補強する。`V = E + jXsI` について「Eの終点を `jXsI` の始点とし、その終点がVの終点に一致する」という尾→頭の確認を明示し、解説source / PDF / PowerPoint / 練習問題の整合を取る。その後に品質ゲートを再判定する。
+`topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` にsource改訂を反映する。固定範囲・固定EXAM_ALIGNMENTを変更せず、既存A4縦構成を維持して「Eの終点→Vの終点が `jXsI`」という尾→頭判定を入れ、表示QA・文字抽出QAを再実施する。練習PDF・PowerPointの同期とblind再解答はその後に行う。
