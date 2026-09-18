@@ -672,4 +672,4 @@ f'(2)=2×2-4=0
 
 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
-次工程: 練習PDF＋表示QA・文字抽出QA・数値整合QA。
+練習PDF、解説画像PowerPoint、完成後独立検証、初回最終QAまで完了済み。次工程: Topic 18の最終QA再判定。
