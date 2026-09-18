@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `17 / 22`
-- current_status: `topic_18_exam_alignment_complete`
+- current_status: `topic_18_explanation_source_complete`
 - last_completed_topic: `17 新幹線の速度をフィードバック制御する`
 - active_topic: `18 速度指令を変えたら何秒で追従する？`
-- next_start: Topic 18 解説source本文
+- next_start: Topic 18 解説PDF＋表示QA
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
-- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、次は解説source本文
+- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source `PASS`、次は解説PDF＋表示QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -366,8 +366,24 @@
 - source: `topics/18_speed_transient_response/18_speed_transient_response.md`
 - 判定: `PASS / topic_18_exam_alignment_complete / IN_PROGRESS`
 
+## Topic 18 解説source
+- [x] 一次遅れ `K/(Ts+1)` の時定数・単位・ステップ応答・`t=T` の63.2%を説明
+- [x] 10〜90%立上り時間と2%/5%整定時間を定義付きで説明
+- [x] 二次遅れ標準形、係数比較、固有角周波数 `ω_n`、減衰係数 `ζ` を説明
+- [x] `ζ` による振動性、オーバーシュート、整定の違いを説明
+- [x] ステップ・インパルス・指数入力について `Y(s)=G(s)U(s)` から逆ラプラス変換する手順を説明
+- [x] 二次遅れのインパルス応答を導出
+- [x] 最終値の定理と定常値・定常偏差の使い分けを説明
+- [x] 一次遅れの時定数変更比較、二次遅れの減衰係数変更比較のグラフ条件を教材仮定値として固定
+- [x] 基礎／本試験標準／複合例題を独立再計算PASS
+- [x] 固定5問・12答案要素へ本文を `12 / 12` 接続
+- [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値追加 `0件`
+- [x] 固定問題の正答記号・最終数値・完成済み個別解答保存 `0件`
+- source: `topics/18_speed_transient_response/18_speed_transient_response.md`
+- 判定: `PASS / topic_18_explanation_source_complete / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 18の制作前EXAM_ALIGNMENTを完了した。公式二種一次・二次過去問を直近年度から確認し、一次1問＋二次4問、計5問・12答案要素を固定した。系列SPECの一次遅れ・二次遅れ・時定数・減衰係数・固有角周波数・オーバーシュート・立上り時間・整定時間・定常偏差だけを教材範囲とし、Topic 19〜21の先取りは行っていない。
+既存の「機械二種を進行」枠が完了したTopic 18制作前EXAM_ALIGNMENTをreconcileし、重複調査せず次工程の解説source本文を作成した。一次遅れ・二次遅れ・時定数・減衰係数・固有角周波数・オーバーシュート・立上り時間・整定時間・定常偏差を、固定5問・12答案要素へ接続した。新幹線側の数値は教材仮定値として明示し、未確認実車値は使用していない。
 
 ## 判定
-Topic 18は `PASS / topic_18_exam_alignment_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18解説source本文。
+Topic 18は `PASS / topic_18_explanation_source_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18解説PDF＋表示QA。
