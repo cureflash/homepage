@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `17 / 22`
-- current_status: `topic_18_explanation_source_complete`
+- current_status: `topic_18_practice_source_complete`
 - last_completed_topic: `17 新幹線の速度をフィードバック制御する`
 - active_topic: `18 速度指令を変えたら何秒で追従する？`
-- next_start: Topic 18 解説PDF＋表示QA
+- next_start: Topic 18 練習PDF＋表示QA
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
-- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source `PASS`、次は解説PDF＋表示QA
+- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source `PASS`、次は練習PDF＋表示QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -141,7 +141,7 @@
 
 ## Topic 16 進捗記録同期
 - [x] main source `## 状態` を全成果物・独立再解答完了後の実状態へ同期
-- [x] main source末尾 `## 次工程` を最終QA再実施へ同期
+- [x] main source末尾 `# 次工程` を最終QA再実施へ同期
 - [x] 練習source末尾 `# 次工程` を最終QA再実施へ同期
 - [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更 `0件`
 - 判定: `PASS / topic_16_progress_records_synced`
@@ -382,8 +382,31 @@
 - source: `topics/18_speed_transient_response/18_speed_transient_response.md`
 - 判定: `PASS / topic_18_explanation_source_complete / IN_PROGRESS`
 
+## Topic 18 解説PDF
+- [x] `topics/18_speed_transient_response/18_speed_transient_response_explanation.pdf`
+- [x] QA: `topics/18_speed_transient_response/18_speed_transient_response_explanation_pdf_qa.md`
+- [x] A4縦・5ページ、固定5問・12答案要素 `12 / 12`
+- [x] 160 dpi 全5ページ表示QA `5 / 5 PASS`
+- [x] 文字・数式・表・グラフの欠落、重なり、切れ、overflow、破損グリフ `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] 主要11チェックポイント `11 / 11 PASS`
+- [x] PDF SHA-256 `3480b19014fff8ac82bca34b468d6d18884032694a7e9e0404a7daa58a5b0c5e`
+- [x] PDF Git blob SHA `4693ebb4d6314b5f2ae4f87dc7a9e352a5770127`
+- [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値、固定問題の正答保存 `0件`
+- 判定: `PASS / topic_18_explanation_pdf_complete / IN_PROGRESS`
+
+## Topic 18 練習source
+- [x] `topics/18_speed_transient_response/18_speed_transient_response_practice.md`
+- [x] 一次10問＋二次5問
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 独立再計算・論理QA `15 / 15 PASS`
+- [x] 固定5問・12答案要素へ `12 / 12` 接続
+- [x] 一次遅れ、二次遅れ、時定数、`ω_n`、`ζ`、オーバーシュート、立上り時間、整定時間、定常値・定常偏差、ステップ・インパルス・指数入力を一次・二次で確認可能
+- [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値、固定問題の正答保存 `0件`
+- 判定: `PASS / topic_18_practice_source_complete / IN_PROGRESS`
+
 ## 今回進めた内容
-既存の「機械二種を進行」枠が完了したTopic 18制作前EXAM_ALIGNMENTをreconcileし、重複調査せず次工程の解説source本文を作成した。一次遅れ・二次遅れ・時定数・減衰係数・固有角周波数・オーバーシュート・立上り時間・整定時間・定常偏差を、固定5問・12答案要素へ接続した。新幹線側の数値は教材仮定値として明示し、未確認実車値は使用していない。
+GitHub上で既に存在していたTopic 18解説PDF＋QAを正本としてreconcileし、固定5問・12答案要素を変更せず次工程の練習sourceを作成した。一次10問は全問五肢択一、二次5問は式変形・途中計算・検算付きとし、15問を独立再計算・論理確認した。Topic 19〜21先取り、仕様外独立論点、未確認実車値追加は `0件`。
 
 ## 判定
-Topic 18は `PASS / topic_18_explanation_source_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18解説PDF＋表示QA。
+Topic 18は `PASS / topic_18_practice_source_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18練習PDF＋表示QA。
