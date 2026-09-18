@@ -5,9 +5,20 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は品質ゲートPASSでcompleted。active topicは15「車内の照明・空調にはどれだけ電気が必要？」。
 
-Topic 15は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後blind独立再解答まで完了。固定7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`、練習問題→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`、PowerPoint→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`。練習問題は12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問を五肢択一とし、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi表示QA `3 / 3 PASS`。PowerPointは16:9・4枚、約180 dpi相当表示QA `4 / 4 PASS`、スライド外はみ出し・文字切れ・重なり・判読不能・欠落破損グリフはいずれも0件、ZIP整合性PASS。完成後blind独立再解答は、答案をcommit `e5dc7884e5500fe7b407f67c758b45e51c9501a3` で先に固定してから公式解答を照合し、`12 / 12 PASS`。教材外・固定範囲外知識による補完は0件。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。
+Topic 15の最終QAを実施した。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、固定範囲境界はすべて `PASS`。ただし `topics/15_lighting_heating/15_lighting_heating_practice.md` と `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` の次工程が「解説画像PowerPointを作成する」のままで、実成果物（PowerPoint完成、blind独立再解答完成）と不整合のため進捗記録整合のみ `FAIL`。最終判定は `NEEDS_REVISION` とし、Topic 15は未completedのまま維持する。
 
-状態: `topic_15_independent_reanswer_complete / IN_PROGRESS`
+状態: `topic_15_final_qa_needs_revision / IN_PROGRESS`
+
+## Topic 15 最終QA
+- 技術内容: `PASS`
+- 必須成果物: `PASS`
+- 表示QA: `PASS`
+- 固定EXAM_ALIGNMENT＋完成後blind独立再解答: `PASS`
+- 進捗記録整合: `FAIL`（旧進捗2ファイル）
+- 固定範囲境界: `PASS`
+- 最終判定: `NEEDS_REVISION`
+- 旧進捗1: `topics/15_lighting_heating/15_lighting_heating_practice.md` — 次工程がPowerPoint作成のまま
+- 旧進捗2: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` — 次工程がPowerPoint作成のまま
 
 ## Topic 15 固定範囲
 照明:
@@ -73,4 +84,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 15の最終QAを実施する。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。Topic 16は先取りしない。
+旧進捗2ファイルだけを現状（PowerPoint完成、blind独立再解答完成、次工程は最終QA再判定）へ同期する。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更しない。Topic 16は先取りしない。
