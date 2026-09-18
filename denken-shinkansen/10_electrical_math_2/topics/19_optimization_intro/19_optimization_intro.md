@@ -2,7 +2,7 @@
 
 ## 状態
 
-`topic_19_explanation_pdf_complete / IN_PROGRESS`
+`topic_19_practice_source_complete / IN_PROGRESS`
 
 2026-09-18、制作前EXAM_ALIGNMENTを完了した。最新main、`STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、Topic 04の既存成果物をreconcileし、Topic 18完了後の最初の未完了テーマがTopic 19であることを確認した。
 
@@ -15,6 +15,8 @@
 2026-09-18、固定済みEXAM_ALIGNMENTを変更せず、解説本文と3段階例題を追加した。教材で必要な説明6項目、3段階例題3問、接続確認5問の教材内対応を確認し、`PASS / EXPLANATION_BODY_COMPLETE` とした。
 
 2026-09-18、解説PDFとQAを作成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出`PASS`、3段階例題の数値整合`PASS`。初回表示QAで解法アルゴリズムの日本語コードブロックに豆腐文字を検出したため、表示用書体だけをCID日本語書体へ修正して再生成し、固定EXAM_ALIGNMENT・技術内容・数値・固定範囲の変更0件で `PASS / EXPLANATION_PDF_COMPLETE` とした。
+
+2026-09-18、固定済みEXAM_ALIGNMENT・解説本文・解説PDFを変更せず、練習問題sourceを作成した。全12問（一次型8問・記述型4問、基礎3問・標準6問・複合3問）について独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`。直接最適化・ラグランジュ法要求0問、接続確認5問の件数水増し0件、仕様外追加0件を維持し、`PASS / PRACTICE_SOURCE_COMPLETE` とした。
 
 ## 固定範囲
 
@@ -607,7 +609,7 @@ C=8^2+2*2^2=72
 - [x] 制作前独立検証
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋QA
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF＋QA
 - [ ] 解説画像PowerPoint＋QA
 - [ ] 完成後独立検証
@@ -616,4 +618,4 @@ C=8^2+2*2^2=72
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENTと解説本文・解説PDFを変更せず、Topic 19の練習問題sourceを作成する。
+固定済みEXAM_ALIGNMENT・解説本文・解説PDF・練習問題sourceを変更せず、Topic 19の練習PDF＋QAを作成する。
