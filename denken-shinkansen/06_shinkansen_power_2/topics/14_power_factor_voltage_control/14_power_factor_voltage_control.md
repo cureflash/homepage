@@ -4,9 +4,12 @@
 
 ## 状態
 
-`topic_14_preproduction_exam_alignment_complete`
+`topic_14_explanation_source_complete`
 
-制作前EXAM_ALIGNMENTを完了した。本文・PDF・練習問題・PowerPointはまだ制作しない。次工程は、ここで固定した公式過去問を保存済み正答を見ずに制作前独立再解答し、教材化前の不足点を確定することである。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説sourceまで完了した。正式固定5問・21答案要素は変更せず、解説sourceへ `21 / 21` マッピング済み。制作前blindで不足した令和2年度二次問6の「最低必要設備容量を不足側へ丸めない」答案処理も補強した。PDF・練習問題・PowerPoint・完成後blind独立再解答は未着手である。
+
+解説source:
+- `14_power_factor_voltage_control_explanation.md`
 
 ## SPEC固定範囲
 
@@ -81,7 +84,7 @@ Topic 01〜13で扱った複素電力、三相交流、フェーザ、線路イ�
 - 令和5年度二次「電力・管理」問4: 有効・無効電力と配電線電圧を計算し、指定電圧を保つためのリアクトル容量を求めるため採用。
 - 令和4年度一次「法規」問4: 電力用コンデンサ、分路リアクトル、電圧上昇・電圧降下、力率改善容量をTopic 14固定範囲内で直接問うため科目横断で採用。
 - 令和2年度二次「電力・管理」問6: 負荷増設時の受電設備容量、力率、必要コンデンサ容量を途中式付きで求めるため採用。
-- 平成23年度二次「電力・管理」問3: 線路・変圧器を含む受電端のP-Qと電圧を求め、指定電圧に調整する調相設備種別・容量を求めるため採用。
+- 平成23年度二次「電力・管理」問3: 線路・変圧器を含む受電端のP-Qと電圧を求め、指定受電端電圧に調整する調相設備種別・容量を求めるため採用。
 
 ### 科目横断採用の根拠
 
@@ -213,7 +216,7 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 直近年度優先確認: `PASS`
 - Topic 14固定範囲外の問題による件数水増し: `0件`
 
-制作前独立再解答用として、正答記号・最終数値の一覧は本sourceへ固定保存しない。次工程で各問題を問題条件から独立に解き、その後に公式解答・標準解答と照合する。
+制作前blind独立再解答は完了済みで、結果は `20 / 21 PASS`。不足1答案要素は解説sourceで補強した。完成後blind独立再解答では固定5問・21答案要素を変更せず全件再検証する。
 
 ## 参考教材
 
@@ -279,6 +282,20 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 仕様追加: `0件`
 - 判定: `PASS / PREPRODUCTION_EXAM_ALIGNMENT_COMPLETE`
 
+## 解説source進捗
+
+- source: `14_power_factor_voltage_control_explanation.md`
+- SPEC固定10項目: `10 / 10 covered`
+- SPEC固定3可視化: `3 / 3 source data defined`
+- 固定5問・21答案要素: `21 / 21 mapped`
+- 制作前blind不足1要素: `1 / 1 explanation strengthened`
+- 3段階例題: `3 / 3`
+- Topic 15以降の先取り: `0件`
+- 未確認実設備値の真値化: `0件`
+- 公式過去問転載: `0件`
+- 仕様追加: `0件`
+- stage: `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`
+
 ## 次工程
 
-固定5問・21答案要素を変更せず、保存済み正答を見ない制作前blind独立再解答を行う。各問題を問題条件とTopic 14固定範囲の既習知識だけから解き、候補解・途中式・根拠を固定した後に公式解答／標準解答と照合する。
+`14_power_factor_voltage_control_explanation.md` から解説PDFを生成し、表示、文字抽出、3段階例題の数値再計算、固定5問・21答案要素の説明欠落がないことをQAする。練習問題・PowerPoint・完成後blind独立再解答はまだ行わない。
