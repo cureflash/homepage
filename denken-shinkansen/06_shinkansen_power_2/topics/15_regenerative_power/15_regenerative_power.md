@@ -4,12 +4,16 @@
 
 ## 状態
 
-`topic_15_preproduction_blind_complete`
+`topic_15_explanation_source_complete`
 
-制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了した。正式品質ゲート対象は一次3問＋二次2問の固定5問・24答案要素。制作前blindは `5 / 5問・24 / 24答案要素 PASS`。教材本文・例題・練習問題は未着手。次工程は固定済み本文節マッピングに従う解説source作成。
+制作前EXAM_ALIGNMENTと制作前blind独立再解答、解説source作成まで完了した。正式品質ゲート対象は一次3問＋二次2問の固定5問・24答案要素。制作前blindは `5 / 5問・24 / 24答案要素 PASS`。解説PDF、練習問題、PowerPointは未着手。次工程は解説sourceから解説PDFを生成しPDF QAを行う。
 
 制作前blind記録:
 - `15_regenerative_power_preproduction_blind_20260919.md`
+
+解説source:
+- `15_regenerative_power_explanation.md`
+- 固定本文節マッピング `8 / 8` 接続
 
 ## SPEC固定範囲
 
@@ -277,4 +281,18 @@ https://www.shiken.or.jp/chief/upload/20091129_ch_second_a01.pdf
 - 二次: `9 / 9 PASS`
 - 合計: `5 / 5問・24 / 24答案要素 PASS`
 
-固定5問の候補解を公式解答・標準解答を見る前に確定し、その後に照合した。blockerなし。次工程は本文節マッピングに従う解説source作成。
+固定5問の候補解を公式解答・標準解答を見る前に確定し、その後に照合した。blockerなし。
+
+## 解説source
+
+`15_regenerative_power_explanation.md` を作成済み。
+
+- 固定本文節マッピング: `8 / 8` 接続
+- MASTER SPEC最低構成: 収録
+- 3段階例題: 収録
+- SPEC指定時系列可視化データ: 収録
+- 固定5問・24答案要素: 変更なし
+- 後続Topic先取り: `0件`
+- 仕様追加: `0件`
+
+次工程は解説sourceから解説PDFを生成し、PDF QAを行う。
