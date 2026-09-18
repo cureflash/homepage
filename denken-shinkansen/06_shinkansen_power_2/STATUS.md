@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_explanation_pdf_complete`
+current_status: `topic_13_practice_source_complete`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -50,7 +50,7 @@ source:
 
 ## Topic 13 progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QAまで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説sourceまで完了。
 
 正式品質ゲート:
 - 平成28年度 第二種一次「法規」問6 — `5答案要素`
@@ -78,13 +78,23 @@ source:
 - 正式2問8答案要素のPDF説明マッピング: `8 / 8`。
 - 制作前不足2要素の改善説明: `2 / 2`。
 
-この `8 / 8` は教材内説明箇所の存在確認であり、完成後blind独立再解答のPASSではない。完成判定では固定2問8答案要素を教材のみで `8 / 8 PASS` する必要がある。
+練習問題・完全解説source:
+- `13_three_phase_unbalance_practice.md` を作成。
+- 全15問: 基礎4、本試験標準8、複合・応用3。
+- 二種一次型五肢択一10問＋二種二次型記述5問。
+- 正式2問8答案要素の練習問題マッピング: `8 / 8`。
+- 制作前不足2要素に対応する異容量V結線のフェーザ投影、単相負荷合計、利用率を問14で再訓練。
+- 対称座標変換、逆変換、電圧不平衡率、逆相の同期機影響、強い系統、相振り分けを固定範囲内で演習化。
+- 数値独立再計算: 問3、4、7、8、11、12、13、14、15の主要値すべて一致。
+
+この `8 / 8` は教材内の練習カバレッジであり、完成後blind独立再解答のPASSではない。完成判定では固定2問8答案要素を教材のみで `8 / 8 PASS` する必要がある。
 
 品質境界:
 - 正式過去問追加: `0件`
 - Topic 14以降の先取り: `0件`
 - Topic 16故障計算先取り: `0件`
 - 未確認実設備値の真値使用: `0件`
+- 公式過去問転載: `0件`
 - 仕様追加: `0件`
 
 source:
@@ -93,6 +103,7 @@ source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation.pdf`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation_pdf_qa.md`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_practice.md`
 
 ## Gate checklist
 
@@ -108,8 +119,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer + explanation source + explanation PDF complete; practice pending
+- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer + explanation source/PDF + practice source complete; practice PDF pending
 
 ## next_start
 
-Topic 13の練習問題・完全解説sourceを制作する。固定2問8答案要素と制作前不足2要素の改善説明を維持し、一次試験型に加えて二次試験へ接続する記述式問題を含める。Topic 14以降・Topic 16故障計算は先取りしない。
+Topic 13の練習PDFを制作し、全ページ表示QA・文字抽出QA・全15問の数値/論理再確認を行う。固定2問8答案要素と制作前不足2要素の改善説明を維持し、Topic 14以降・Topic 16故障計算は先取りしない。
