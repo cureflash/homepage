@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_18_final_qa_pass`
+- current_status: `topic_19_exam_alignment_complete`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 制作前EXAM_ALIGNMENT
+- next_start: Topic 19 解説source本文
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `NOT_STARTED` — 制作前EXAM_ALIGNMENTから開始
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -91,8 +91,33 @@
 - 進捗記録整合: PASS
 - 最終判定: `PASS / topic_18_final_qa_pass / completed`
 
+## Topic 19 固定範囲
+系列 `SPEC.md` の次だけを扱う。
+
+- P・PI・PD・PID制御を速度応答で比較
+- 比例制御、積分制御、微分制御、PI、PID
+- 定常偏差、オーバーシュート、応答速度
+- `Kp`、`Ki`、`Kd` を変化させた速度応答グラフ
+
+境界:
+- Topic 20の一般的な安定判別・ラウス・フルビッツ・根軌跡・周波数応答・ボード線図・余裕・発振判定を追加しない
+- Topic 21の空転・再粘着制御を先取りしない
+- 未確認の新幹線実車PIDゲイン・制御周期・制御則を実車値化しない
+
+## Topic 19 固定EXAM_ALIGNMENT
+一次1問＋二次4問、計5問・12答案要素。
+
+- H25 一次 機械 問6 (2) — 1答案要素
+- R07 二次 機械・制御 問4 (1),(2),(3) — 3答案要素
+- H30 二次 機械・制御 問4 (1) — 2答案要素
+- H23 二次 機械・制御 問4 (4) — 4答案要素
+- R02 二次 機械・制御 問4 (1),(2) — 2答案要素
+
+制作前EXAM_ALIGNMENT: `PASS / topic_19_exam_alignment_complete`。
+固定問題の個別正答・最終数値・完成済み式変形結果は未保存。Topic 20相当小問は固定ゲートから除外した。
+
 ## 今回進めた内容
-Topic 18最終QA PASSをreconcileし、main source、練習source、`STATUS.md`、`HANDOFF.md` の完成状態同期を進めた。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。完成数を `18 / 22` へ更新した。
+Topic 19制作前EXAM_ALIGNMENTを作成し、一次1問＋二次4問、計5問・12答案要素を固定した。公式過去問を直近年度から確認し、e-sysnet・電験王の2系統で説明粒度を照合した。技術本文・PDF・PPTXはまだ作成していない。完成数は `18 / 22` のまま。
 
 ## 次工程
-Topic 19「PIDで新幹線の速度を制御する」の制作前EXAM_ALIGNMENTを行う。
+Topic 19「PIDで新幹線の速度を制御する」の解説source本文を作成する。
