@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 17 / 20
-- current_status: `topic_18_progress_sync_complete`
-- last_completed_topic: `17 常微分方程式の数値解法`
-- active_topic: `18 非線形方程式と反復計算`
-- next_start: Topic 18の最終QAを再判定する
+- exam_aligned_completed_topics: 18 / 20
+- current_status: `topic_18_completed`
+- last_completed_topic: `18 非線形方程式と反復計算`
+- active_topic: `19 最適化入門`
+- next_start: Topic 19の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -295,32 +295,32 @@
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、直接二分法/Newton要求0問・水増し0件を維持）
 - [x] 最終QA実施 → `NEEDS_REVISION`（技術品質PASS、進捗記録整合 `1 / 6 PASS`）
 - [x] 進捗記録5ファイルの同期
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 18の進捗記録5ファイルを実成果物状態へ同期した。
+Topic 18の最終QAを再判定した。
 
-同期済み:
-- `18_nonlinear_equations_iteration.md`
-- `18_nonlinear_equations_iteration_explanation_qa.md`
-- `18_nonlinear_equations_iteration_practice.md`
-- `18_nonlinear_equations_iteration_practice_qa.md`
-- `18_nonlinear_equations_iteration_powerpoint_qa.md`
-
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 技術本文・練習問題・正答変更: `0件`
-- PDF・PowerPoint・完成後独立検証の技術内容変更: `0件`
+- 必須成果物実在: `PASS`
+- 固定EXAM_ALIGNMENT: `PASS`
 - 直接二分法・Newton法要求の確認済み第二種過去問: `0問`
 - 接続確認した第二種公式過去問: `5問`
 - 非該当5問の固定品質ゲート件数への水増し: `0件`
+- 完成後独立検証: `3 / 3 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 練習PDF表示QA: `5 / 5 PASS`
+- PowerPoint表示QA: `5 / 5 PASS`
+- 進捗記録整合: `6 / 6 PASS`
 - 仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_18_progress_sync_complete / IN_PROGRESS`
+`topic_18_completed / completed`
 
-完成数は `17 / 20` のまま。
+完成数は `18 / 20`。
 
-次はTopic 18の最終QAを再判定する。
+次はTopic 19「最適化入門」の制作前EXAM_ALIGNMENTを実施する。
