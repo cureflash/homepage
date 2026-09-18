@@ -3,18 +3,13 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
-current_status: `topic_14_source_progress_sync_complete`
+current_status: `topic_14_final_qa_progress_sync_complete`
 
 ## 今回完了
 
-Topic 14最終QAで残っていた進捗記録blockerを1段階進め、主source・解説source・練習sourceの3件を現行工程へ同期した。
+最新main、`STATUS.md` / `HANDOFF.md`、直近の同系列コミットをreconcileし、他workerの成果と重複しないことを確認した。
 
-- `14_power_factor_voltage_control.md`
-  - 最終QA済み、完成後blind `21 / 21 PASS`、残blockerを反映。
-- `14_power_factor_voltage_control_explanation.md`
-  - learner-facing反映、解説PDF再QA、完成後blind再実施済みへ同期。
-- `14_power_factor_voltage_control_practice.md`
-  - 練習PDF、PowerPoint作成、完成後blind、最終QA実施済みへ同期。
+Topic 14最終QA記録に残っていた旧blocker 1〜6を、既に同期済みの実成果物・進捗記録へ合わせて解消済みとして更新した。進捗記録整合は `PASS`。残blockerは2件のみ。
 
 固定EXAM_ALIGNMENT、固定5問・21答案要素、教材技術範囲、learner-facing成果物の内容は変更していない。
 
@@ -26,6 +21,7 @@ Topic 14最終QAで残っていた進捗記録blockerを1段階進め、主sourc
 - 練習: 15問、一次型10＋二次型5、数値・論理 `15 / 15 PASS`
 - 練習PDF: `7 / 7` ページ表示PASS
 - SPEC境界: PASS
+- 仕様追加: `0件`
 
 最終QA記録:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
@@ -38,10 +34,8 @@ Topic 14最終QAで残っていた進捗記録blockerを1段階進め、主sourc
    - 現状: `REQUIRES_REQA / CURRENT_BINARY_UNVERIFIED`
 2. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
 
-今回解消したblocker:
-- 主sourceの旧進捗記録
-- 解説sourceの旧stage・次工程
-- 練習sourceの旧進捗記録
+今回解消した整合不良:
+- 最終QA記録が、既に解消済みの旧blocker 1〜6を未解消として列挙していた状態。
 
 ## 現在地
 
