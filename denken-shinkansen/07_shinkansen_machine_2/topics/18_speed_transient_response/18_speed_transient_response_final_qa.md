@@ -6,31 +6,38 @@
 
 ## 判定
 
-`NEEDS_REVISION / topic_18_final_qa_needs_revision`。
+`NEEDS_REVISION / topic_18_progress_records_need_sync`。
 
-固定EXAM_ALIGNMENT、完成後独立再解答、解説PDF、PowerPoint、仕様境界はPASSしている。現行練習PDFの再QAを実施して旧QAとのblob不一致は解消したが、近似記号 `≈` の破損グリフを確認したためTopic 18をcompletedにはしない。
+固定EXAM_ALIGNMENT、完成後独立再解答、解説PDF、PowerPoint、仕様境界に加え、修正版の現行練習PDF再QAもPASSした。残るblockerは進捗記録同期のみであり、Topic 18はまだcompletedにしない。
 
 ## reconcile
 
-- `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列 `SPEC.md` / `STATUS.md` / `HANDOFF.md` と現行mainを確認した。
+- `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列 `SPEC.md` と現行mainを確認した。
 - 最初の未完了テーマはTopic 18。
 - 固定EXAM_ALIGNMENTは一次1問＋二次4問、計5問・12答案要素のまま変更なし。
-- 解説source、解説PDF、練習source、現行練習PDF、PowerPoint、各QA、独立再解答前ゲート、答案ロック、完成後独立再解答記録の実在を確認した。
-- 現行練習PDF Git blob `df2f12f4ffdf74edc5266e95e1badb2dad4d64bc` を対象に再QAした。
-- 再QA記録: `18_speed_transient_response_practice_pdf_qa.md`。
+- 完成後独立再解答 `12 / 12 PASS`、教材外知識による補完 `0件`。
+- 解説PDF・PowerPoint・仕様境界は既存最終QAでPASS。
+- 前回blockerだった練習PDFの近似記号 `≈` 欠落グリフを生成側で修正し、現行PDF再QAを完了した。
 
-## 必須成果物
+## 現行練習PDF再QA
 
-- source Markdown: 実在 PASS (`c9e2f56d99793905008cd4fd7e80bc68e922e141`)
-- 解説PDF: PASS (`4693ebb4d6314b5f2ae4f87dc7a9e352a5770127`)
-- 解説PDF QA: PASS (`d1d7cd7331ba5f3223de583b20c0f6b5f416d405`)
-- 練習source: PASS (`390b830fc34ecf382fc6b216a6ce04164780e95c`)
-- 練習PDF: 実在 (`df2f12f4ffdf74edc5266e95e1badb2dad4d64bc`) / 再QA `NEEDS_REVISION`
-- 解説画像PowerPoint: PASS (`1c65123ba298961a5dac0be4c87fdef6efcbcc14`)
-- PowerPoint QA: PASS (`a12608a301472a755469dadbb5630309081e6c6f`)
-- 独立再解答前ゲート: PASS (`facd63779e09e0940beda793091b154045697979`)
-- 答案ロック: 実在 (`8d2d84e8e9aaf0a09cb0e674649720ac2e089b8e`)
-- 完成後独立再解答記録: PASS (`633a6a60b411dadcc95fe0e2f9103f61afab6864`)
+対象:
+- Git blob: `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242`
+- SHA-256: `50fdfc549fdefd89e14577f671e5e13261a95b3141acd9cba69637f5e2d1f209`
+- size: `32909 byte`
+- A4縦・3ページ
+
+確認結果:
+- 一次10問＋二次5問、問1〜問15: PASS
+- 固定H23 / R07 / R06 / R03 / H29対応表: PASS
+- 固定5問・12答案要素接続: `12 / 12 PASS`
+- 一次10問正答一意性: `10 / 10 PASS`
+- 全15問数値・論理: `15 / 15 PASS`
+- 160 dpi表示: PDFium / Popplerの2系統で全3ページ確認、切れ・重なり・overflow・欠落グリフ `0件`
+- `pdftotext -layout`: 抽出成功、Unicode置換文字 `0件`、`(cid:)` `0件`
+- source中の `≈` 17箇所に対しPDF抽出も `17件`
+
+判定: `PASS / topic_18_practice_pdf_reqa_pass`。
 
 ## EXAM_ALIGNMENT・独立再解答
 
@@ -51,26 +58,6 @@
 
 判定: PASS。
 
-## 現行練習PDF再QA
-
-対象:
-- Git blob: `df2f12f4ffdf74edc5266e95e1badb2dad4d64bc`
-- SHA-256: `ae2913569943e1cb4a7ea58f09ca1c0d6d3ea15da3de6b822130189cec35bead`
-- size: `13044 byte`
-- A4縦・5ページ
-
-確認結果:
-- 問1〜問15、固定H23 / R07 / R06 / R03 / H29対応表: PASS
-- 固定5問・12答案要素接続: `12 / 12 PASS`
-- 一次10問正答一意性・全15問数値論理: 既存source QAと矛盾なし
-- 160 dpi表示: ページ切れ・重なり・overflow `0件`
-- `pdftotext -layout`: 抽出成功、Unicode置換文字 `0件`、`(cid:)` `0件`
-- source中の `≈` 16箇所に対しPDF抽出は `≈` 0件。レンダリングでは該当位置が四角い欠落グリフとして表示される
-
-したがって数値・論理ではなくPDFグリフ品質でFAIL。
-
-判定: `NEEDS_REVISION / topic_18_practice_pdf_reqa_needs_revision`。
-
 ## 仕様境界
 
 - Topic 19 PID先取り: `0件`
@@ -84,19 +71,17 @@
 
 ## 進捗記録整合
 
-- `STATUS.md` / `HANDOFF.md` は前工程「現行練習PDF再QA」を次工程としているため、今回の再QA完了後の実状態とは未同期。
-- main source `18_speed_transient_response.md` の状態・次工程は完成後実状態へ未同期。
-- 練習source `18_speed_transient_response_practice.md` の次工程も未同期。
-- PDFがPASSする前にcompleted方向へ同期しない。
+- main source `18_speed_transient_response.md` の `## 状態` と末尾 `# 次工程` は完成後実状態へ未同期。
+- 練習source `18_speed_transient_response_practice.md` の末尾 `# 次工程` は未同期。
+- `STATUS.md` / `HANDOFF.md` は修正版練習PDF再QA PASS後の実状態へ未同期。
+- 技術本文・問題・正答・固定EXAM_ALIGNMENTを変更せず、上記4記録だけを同期する必要がある。
 
 判定: FAIL。
 
 ## exact blocker
 
-`現行 18_speed_transient_response_practice.pdf は固定5問・12答案要素および数値論理を維持しているが、sourceで使用する近似記号 ≈ がPDFでは欠落グリフになる。表示品質ゲートを満たさないため、Topic 18をcompletedにできない。`
+`現行練習PDFの表示・文字抽出・数値論理・固定12答案要素接続はPASSした。Topic 18をcompletedにする前に、main source・練習source・STATUS・HANDOFFを現状態へ同期し、最終QAを再実施する必要がある。`
 
 ## 次工程
 
-1. 技術本文・問題・正答・固定EXAM_ALIGNMENTを変更せず、練習PDF生成側で `≈` を正しく表示できるよう修正してPDFを再生成する。
-2. 現行PDFへ表示・文字抽出・一次10問正答一意性・全15問数値論理・固定12答案要素接続QAを再実施する。
-3. PASS後にのみ進捗記録を実状態へ同期し、Topic 18最終QAを再実施する。
+Topic 18の進捗記録4箇所を同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更しない。
