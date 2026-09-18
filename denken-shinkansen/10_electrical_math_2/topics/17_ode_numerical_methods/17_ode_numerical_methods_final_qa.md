@@ -70,6 +70,8 @@ GitHub正本上で次を確認した。
 
 ## 表示・成果物QA
 
+既存QA記録を再照合した。
+
 - 解説PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`
 - 3段階例題: `3 / 3 PASS`
 - 練習問題: 全12問（一次型8問／記述型4問）、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`
@@ -98,26 +100,26 @@ GitHub正本上で次を確認した。
 
 ## 進捗記録整合QAの再判定
 
-初回FAILの原因だった4ファイルと系列進捗2ファイルをGitHub正本で再確認した。
+初回FAILだった4ファイルを含む進捗記録6ファイルをGitHub正本で再確認した。
 
-1. `17_ode_numerical_methods_explanation_qa.md`
+1. `17_ode_numerical_methods.md`
+   - 実成果物・完成後独立検証まで完了済みの説明: PASS
+   - `次工程`: Topic 17最終QA — PASS
+2. `17_ode_numerical_methods_explanation_qa.md`
    - `次工程`: Topic 17最終QA再判定 — PASS
-2. `17_ode_numerical_methods_practice.md`
+3. `17_ode_numerical_methods_practice.md`
    - `次工程`: Topic 17最終QA再判定 — PASS
-3. `17_ode_numerical_methods_practice_qa.md`
+4. `17_ode_numerical_methods_practice_qa.md`
    - `次工程`: Topic 17最終QA再判定 — PASS
-4. `17_ode_numerical_methods_powerpoint_qa.md`
+5. `17_ode_numerical_methods_powerpoint_qa.md`
    - `次工程`: Topic 17最終QA再判定 — PASS
-5. `../../STATUS.md`
-   - `current_status`: `topic_17_progress_sync_complete` — PASS
-   - `next_start`: Topic 17最終QA再判定 — PASS
 6. `../../HANDOFF.md`
    - `current_status`: `topic_17_progress_sync_complete` — PASS
    - `次工程`: Topic 17最終QA再判定 — PASS
 
 進捗記録整合: `6 / 6 PASS`。
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立検証の技術内容変更: `0件`。
+技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF、PowerPoint、完成後独立検証の技術内容変更: `0件`。
 
 ## 最終判定
 
@@ -127,6 +129,7 @@ GitHub正本上で次を確認した。
 - 完成後独立検証 `3 / 3`: PASS
 - 練習問題独立計算・論理QA `12 / 12`: PASS
 - 一次型正答一意性 `8 / 8`: PASS
+- 教材外知識補完0件: PASS
 - 固定範囲外追加0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
