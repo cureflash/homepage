@@ -8,11 +8,11 @@ Topic 01〜18は最終QAまで `PASS / completed`。
 
 完成数: `18 / 20`
 
-current_status: `topic_19_explanation_pdf_complete`
+current_status: `topic_19_practice_source_complete`
 
 active_topic: `19 最適化入門`
 
-次工程: Topic 19の練習問題sourceを作成する。
+次工程: Topic 19の練習PDF＋QAを作成する。
 
 ## 上位仕様
 
@@ -535,6 +535,25 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 - KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
+## 練習問題source
+
+成果物:
+- `topics/19_optimization_intro/19_optimization_intro_practice.md`
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
+
+- 全12問: 一次型8問、記述型4問
+- 難易度: 基礎3問、標準6問、複合3問
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 接続確認した第二種公式過去問: `5問`
+- 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- H17二次「電力・管理」問6の固定件数追加: `0件`
+- Topic 04の一変数極値一般の再制作: `0件`
+- KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -550,7 +569,7 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 - [x] 制作前独立検証
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋QA
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF＋QA
 - [ ] 解説画像PowerPoint＋QA
 - [ ] 完成後独立検証
@@ -559,4 +578,4 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENTと解説本文・解説PDFを変更せず、Topic 19「最適化入門」の練習問題sourceを作成する。
+固定済みEXAM_ALIGNMENT・解説本文・解説PDF・練習問題sourceを変更せず、Topic 19「最適化入門」の練習PDF＋QAを作成する。
