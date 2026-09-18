@@ -101,9 +101,9 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - 完成後ブラインド独立再解答: `5 / 5 PASS`
 - 公式解答一致: `5 / 5 PASS`
 - 教材外知識補完: `0件`
-- SPEC固定範囲外追加: `0件`
 - Topic 14以降の論点による補完: `0件`
-- 未確認新幹線実設備値の真値化: `0件`
+- SPEC固定範囲外追加（独立再解答時）: `0件`
+- 未確認新幹線実設備値の使用: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
 - 旧進捗記録5箇所同期: 完了
 - 最終QA再実施: `PASS / completed`
