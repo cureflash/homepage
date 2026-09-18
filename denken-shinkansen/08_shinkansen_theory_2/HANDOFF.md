@@ -6,11 +6,11 @@
 
 Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
 
-current_status: `topic_18_final_qa_needs_progress_sync`
+current_status: `topic_18_progress_records_synced`
 
 active_topic: `18 新幹線のセンサ信号をどう増幅する？`
 
-Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAでは技術品質ゲートは全件PASSしたが、主source・練習sourceの進捗記録4箇所が旧工程のまま残っているため `NEEDS_REVISION / IN_PROGRESS`。次工程は進捗記録同期。
+Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAで技術品質ゲートは全件PASSし、唯一のblockerだった主source・練習sourceの進捗記録4箇所をGitHub正本の実態へ同期した。現在 `PASS / topic_18_progress_records_synced / IN_PROGRESS`。次工程はTopic 18最終QA再実施。
 
 ## Topic 18 成果物
 
@@ -26,7 +26,7 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 完成後独立再解答: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_reanswer.md`
 - 最終QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_final_qa.md`
 - completion: `in_progress`
-- stage: `FINAL_QA_NEEDS_PROGRESS_SYNC`
+- stage: `PROGRESS_RECORDS_SYNCED`
 
 ## Topic 18 固定範囲
 
@@ -206,6 +206,23 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 判定: `NEEDS_REVISION / PROGRESS_RECORDS_OUT_OF_SYNC`
 
+## Topic 18 進捗記録同期
+
+初回最終QAで指摘された4箇所だけを同期した。
+
+- main source `## 状態`: `PROGRESS_RECORDS_SYNCED`、練習PDF・PowerPoint・完成後独立再解答済みへ同期
+- main source末尾 `## 9. 次工程`: Topic 18最終QA再実施へ同期
+- 練習source `## 状態`: `PROGRESS_RECORDS_SYNCED`、PowerPoint・完成後独立再解答済みへ同期
+- 練習source末尾 `# 次工程`: Topic 18最終QA再実施へ同期
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・独立再解答結果の変更: `0件`
+- 固定一次5問・25答案要素: 維持
+- 完成後独立再解答: `25 / 25 PASS` 維持
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+
+判定: `PASS / topic_18_progress_records_synced / IN_PROGRESS`
+
 ## 次工程
 
-主source・練習sourceの進捗記録4箇所を、完成後独立再解答済み・最終QA再実施待ちの状態へ同期する。技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXは変更しない。同期後、最終QAを再実施する。
+Topic 18最終QAを再実施する。固定一次5問・25答案要素、完成後独立再解答 `25 / 25 PASS`、解説PDF・練習PDF・PowerPoint各QA、SPEC境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
