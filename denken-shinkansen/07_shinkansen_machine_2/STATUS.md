@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_powerpoint_complete`
+- current_status: `topic_19_blind_reanswer_ready`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 独立再解答前ゲート
+- next_start: Topic 19 完成後独立再解答
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -144,8 +144,26 @@ QA:
 
 判定: `PASS / topic_19_powerpoint_complete / IN_PROGRESS`
 
+## Topic 19 独立再解答前ゲート
+成果物:
+- `topics/19_pid_speed_control/19_pid_speed_control_blind_reanswer_gate.md`
+
+QA:
+- 固定一次1問＋二次4問・12答案要素: `維持`
+- 公式正答記号・標準解答本文の事前保存: `0件`
+- 完成済み固定過去問個別解答・導出結果の事前保存: `0件`
+- 解説PDF表示QA: `6 / 6 PASS`
+- 練習PDF表示QA: `15 / 15 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- 練習一次正答一意性: `10 / 10 PASS`
+- 全15問の独立再計算・論理確認: `15 / 15 PASS`
+- Topic 20/21先取り: `0件`
+- 未確認実車PID値の実車値化: `0件`
+
+判定: `BLIND_REANSWER_READY / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 19解説画像PowerPointを作成し、P・I・Dの判別、定常偏差、`Kp`・`Ki`・`Kd` 一変数応答比較、本試験解法フローを4枚に整理した。表示・文字抽出・ZIP整合性・数値論理・固定5問12答案要素・仕様境界を再確認し、`PASS / topic_19_powerpoint_complete` とした。完成数は `18 / 22` のまま。
+Topic 19の独立再解答前ゲートを実施した。完成教材と固定5問・12答案要素を変更せず、公式正答・標準解答・完成済み個別解答の事前保存がないこと、全成果物QAと仕様境界が維持されていることを確認し、`BLIND_REANSWER_READY` とした。完成数は `18 / 22` のまま。
 
 ## 次工程
-固定5問・12答案要素と完成教材を変更せず、Topic 19の独立再解答前ゲートを実施する。
+完成教材だけを使って固定5問・12答案要素を先に再解答し、答案確定後に公式解答・標準解答と照合する。
