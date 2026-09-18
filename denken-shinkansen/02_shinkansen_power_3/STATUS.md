@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 14 / 16
-- current_status: `topic_15_progress_sync_complete`
-- last_completed_topic: `14 駅やトンネルにはどう電気を配る？`
-- active_topic: `15 回生した電気はどこへ行く？`
-- next_start: Topic 15の最終QAを再実施する。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする
+- exam_aligned_completed_topics: 15 / 16
+- current_status: `topic_15_completed`
+- last_completed_topic: `15 回生した電気はどこへ行く？`
+- active_topic: `16 発電所からN700Sまで全部つないでみる`
+- next_start: Topic 16の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -25,7 +25,7 @@
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋QA・練習問題source・練習PDF＋QA・解説画像PowerPoint＋QA・完成後ブラインド独立再解答まで完了。固定5出題回・8答案要素 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。初回最終QAは技術内容・成果物・過去問品質ゲート・SPEC境界PASS、進捗記録整合のみFAIL。旧進捗記録7箇所を `7 / 7` 同期済み。次は最終QA再実施
+- [x] 15 回生した電気はどこへ行く？ — completed。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録7箇所の整合を再確認し `PASS / completed`。Webカタログ登録済み
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
 ## Topic 07 完了記録
@@ -531,7 +531,7 @@ PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - H23 電力 問9: `(1)`
 - H20 電力 問17(a)(b): `(2),(3)`
 
-## Topic 15 進行記録
+## Topic 15 完了記録
 source: `topics/15_regenerative_power/15_regenerative_power.md`
 解説PDF: `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
 解説PDF QA: `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md`
@@ -612,6 +612,8 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - 練習問題・正答変更: `0件`
 - PDF/PPTX変更: `0件`
 - 完成後独立再解答結果変更: `0件`
+- 最終QA再実施: `PASS / completed`
+- Webカタログ登録: `qualifications/denken-shinkansen/catalog.json` — 完了
 
 制作前独立答案:
 - R8上 電力 問5: `(4)`
@@ -628,4 +630,4 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - H25 法規 問12(a)(b): `(2),(3)`
 
 ## 次
-Topic 15の最終QAを再実施する。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする。
+Topic 16 `発電所からN700Sまで全部つないでみる` の制作前EXAM_ALIGNMENTを実施する。
