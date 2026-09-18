@@ -3,24 +3,15 @@
 更新日: 2026-09-19
 
 ## 正本・現在地
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。`03_shinkansen_machine_3` は新品質基準で `16 / 16 completed`。Topic 01〜16はすべて品質ゲートPASS。
 
-Topic 16は制作前EXAM_ALIGNMENT固定後、解説source・解説PDF・練習source・練習PDF・解説画像PowerPointまで作成済み。旧版blind独立再解答 `5 / 6 PASS` のR5下 機械 問5を受け、固定範囲・固定EXAM_ALIGNMENTを変更せず `V = E + jXsI` の尾→頭判定「`E` の終点 → `V` の終点 = `jXsI`」を全成果物へ補強・再同期した。
+Topic 16「同期機って新幹線には使わないの？」は、制作前EXAM_ALIGNMENT固定後、解説source・解説PDF・練習source・練習PDF・解説画像PowerPointを作成済み。旧版blind独立再解答 `5 / 6 PASS` のR5下 機械 問5を受け、固定範囲・固定EXAM_ALIGNMENTを変更せず `V = E + jXsI` の尾→頭判定「`E` の終点 → `V` の終点 = `jXsI`」を全成果物へ補強・再同期した。
 
 改訂後blind独立再解答は、公式解答照合前に commit `a6d6452528cf03e9a055d9410aff8c33c3503dd6` で答案を固定し、その後公式解答と照合して `6 / 6 PASS`。教材内根拠 `6 / 6 PASS`、固定範囲外知識による答案補完0件、固定EXAM_ALIGNMENT変更0件。
 
-2026-09-19の前回最終QA再判定では、技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、固定範囲境界、改訂後blind独立再解答はすべてPASSしたが、進捗記録3件に旧「進捗記録整合完了後に最終QA」とする前向き文言が残っていたため `NEEDS_REVISION / IN_PROGRESS` とした。
+2026-09-19の前回最終QAでは、技術内容・必須成果物・PDF/PPTX表示QA・固定EXAM_ALIGNMENT・固定範囲境界・改訂後blind独立再解答はすべてPASSしたが、進捗記録3件の旧文言だけが残っていたため `NEEDS_REVISION / IN_PROGRESS` とした。その3件を同期後、今回の最終QA再判定で全項目を再確認し `PASS / completed` とした。
 
-今回、以下3件の進捗文言だけを現状へ同期した。
-1. `topics/16_synchronous_machine/16_synchronous_machine_practice.md`
-2. `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md`
-3. `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md`
-
-技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更は0件。
-
-状態: `topic_16_progress_records_synchronized / IN_PROGRESS`
-
-## 最終QA再判定結果
+## Topic 16 最終QA
 - 必須成果物存在: `PASS`
   - `topics/16_synchronous_machine/16_synchronous_machine.md`
   - `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf`
@@ -35,12 +26,9 @@ Topic 16は制作前EXAM_ALIGNMENT固定後、解説source・解説PDF・練習s
 - 教材内根拠: `6 / 6 PASS`
 - 固定範囲外追加: `0件`
 - 固定範囲外知識による答案補完: `0件`
-- 技術内容・問題・正答・派生成果物: `PASS`
-- 前回進捗記録整合: `FAIL`（3件のみ）
-- 今回進捗記録整合修正: `PASS`
-- 前回最終QA判定: `NEEDS_REVISION / IN_PROGRESS`
-- 現在状態: `topic_16_progress_records_synchronized / IN_PROGRESS`
-- Topic 16 completed化: `最終QA再判定前のためまだ不可`
+- 進捗記録整合: `PASS`
+- 技術内容・問題・正答・PDF/PPTXの最終QA時追加変更: `0件`
+- 判定: `PASS / completed`
 
 ## Topic 16 固定範囲
 - 同期機
@@ -98,14 +86,5 @@ PowerPoint: source改訂反映済み / 16:9・4枚 / 表示QA `4 / 4 PASS` / は
 - R5上 機械 問5 — 短絡比が固定範囲外。
 - R4下 機械 問4 — V曲線は範囲内だが、完答に同期調相機が必要で固定範囲外。
 
-## Topic 15
-Topic 15「車内の照明・空調にはどれだけ電気が必要？」は最終QA再判定PASSで `completed`。完成後blind独立再解答 `12 / 12 PASS`。
-
-## Topic 14
-Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判定PASSで `completed`。完成後blind独立再解答 `1 / 1 PASS`。
-
-## Topic 13
-Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。完成後blind独立再解答 `5 / 5 PASS`。
-
-## 次工程
-技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、Topic 16の最終QAを再判定する。
+## 系列完了
+`03_shinkansen_machine_3` は `16 / 16 completed`。MASTER制作順の次は `04_shinkansen_theory_3` の最初の未完了テーマ。
