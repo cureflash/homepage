@@ -6,14 +6,58 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `18 / 39`
-- current_status: `topic_18_completed`
+- current_status: `topic_19_exam_alignment_complete`
 - last_completed_topic: `18 E2系 50Hz・60Hzと磁束`
 - active_topic: `19 ミニ新幹線 複電圧主回路`
-- next_start: Topic 19の制作前EXAM_ALIGNMENT。本文・PDF等を先に作らない
+- next_start: Topic 19の解説source本文。固定5問・9答案要素とSPEC指定3計算・グラフから逆算する。PDF・PowerPointはsource完成後
 
 ## 完了済み
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
+
+## Topic 19 制作前EXAM_ALIGNMENT
+
+判定: `PASS / exam_alignment_complete`
+
+source:
+- `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit.md`
+
+### 固定EXAM_ALIGNMENT
+
+- R5 一次 機械 問3 `(2)`: 1要素
+- R5 一次 機械 問4 `(4)(5)`: 2要素
+- R5 一次 電力 問6 `(3)`: 1要素
+- H25 一次 電力 問2 `(1)(2)(3)`: 3要素
+- R5 二次 機械・制御 問2 `(1)(2)`: 2要素
+- 一次: `7答案要素`
+- 二次: `2答案要素`
+- 合計: `5問・9答案要素`
+
+直近年度側から公式問題を確認し、R7一次「機械」問3の短絡試験・換算インピーダンス等は固定SPEC外へ広がるため採用していない。R5/H25からTopic 19へ直接接続する答案要素だけを固定した。
+
+### 固定SPEC境界
+
+扱う内容:
+- 複電圧
+- 主変圧器
+- 巻数比
+- タップ
+- 一次電流
+- 絶縁
+- 主変換装置
+- 補助電源
+- 電源切替
+
+指定計算・グラフ:
+- 電源電圧―一次電流
+- タップ条件―二次電圧
+- 同一出力時の電源条件比較
+
+品質:
+- 固定問題の個別正答記号・最終数値保存: `0件`
+- SPEC外追加: `0件`
+- 未確認ミニ新幹線実車値の真値化: `0件`
+- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
 
 ## Topic 18 最終QA
 
@@ -111,4 +155,4 @@ PDF/PPTX本体・問題・正答・数式・固定過去問は最終QA再実施�
 
 ## 次工程
 
-Topic 19「ミニ新幹線 複電圧主回路」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、二種一次・二次を含む対応公式過去問を直近年度から先に固定し、教材必要事項を逆算する。本文・PDF・PowerPoint等はEXAM_ALIGNMENT確定前に作らない。
+Topic 19「ミニ新幹線 複電圧主回路」の解説source本文を作る。固定5問・9答案要素とSPEC指定3計算・グラフから必要事項を逆算し、巻数比・電圧比・電流比、タップ、一次電流、絶縁協調、主変換装置、補助電源、電源切替を固定範囲内で接続する。未確認の実車電圧・巻数・タップ構成・絶縁定格・切替方式は真値化しない。

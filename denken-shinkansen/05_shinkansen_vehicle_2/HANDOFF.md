@@ -8,7 +8,46 @@
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 
-現在地は `topic_18_completed`。次の未完了テーマは Topic 19 `ミニ新幹線 複電圧主回路`。
+現在地は `topic_19_exam_alignment_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENTは完了し、本文・PDF・PowerPointは未着手。
+
+## Topic 19 制作前EXAM_ALIGNMENT
+
+source:
+- `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit.md`
+
+判定: `PASS / exam_alignment_complete`
+
+固定公式過去問:
+- R5 一次 機械 問3 `(2)`: 1要素
+- R5 一次 機械 問4 `(4)(5)`: 2要素
+- R5 一次 電力 問6 `(3)`: 1要素
+- H25 一次 電力 問2 `(1)(2)(3)`: 3要素
+- R5 二次 機械・制御 問2 `(1)(2)`: 2要素
+- 一次: `7答案要素`
+- 二次: `2答案要素`
+- 合計: `5問・9答案要素`
+
+固定SPEC境界:
+- 複電圧
+- 主変圧器
+- 巻数比
+- タップ
+- 一次電流
+- 絶縁
+- 主変換装置
+- 補助電源
+- 電源切替
+- 指定計算・グラフ: `電源電圧―一次電流`、`タップ条件―二次電圧`、`同一出力時の電源条件比較`
+
+境界:
+- R5一次機械問3は `(2)` の定格電圧・変圧比だけ。
+- R5一次機械問4は `(4)(5)` の出力電圧条件・通流率だけ。
+- R5一次電力問6は `(3)` の絶縁協調だけ。
+- H25一次電力問2は一般的なタップ切換原理用で、ミニ新幹線が負荷時タップ切換装置を採用する根拠にはしない。
+- R5二次機械・制御問2は `(1)(2)` の電圧・電流換算だけ。
+- 固定問題の個別正答記号・最終数値は保存していない。
+- 未確認のミニ新幹線実車電圧、主変圧器巻数・タップ構成、絶縁定格、主変換装置・補助電源・電源切替方式は推測しない。
+- SPEC外追加: `0件`
 
 ## Topic 18 完了記録
 
@@ -54,24 +93,6 @@ Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 - clean blind候補: `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_blind_reanswer_candidates_clean.md`
 - 公式照合: `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_blind_reanswer_official_check.md`
 
-## Topic 19 固定SPEC境界
-
-主題:
-- 異なる架線電圧へ対応する主回路を、主変圧器・電流・絶縁・出力条件から解析する。
-
-扱う内容:
-- 複電圧
-- 主変圧器
-- 巻数比
-- タップ
-- 一次電流
-- 絶縁
-- 主変換装置
-- 補助電源
-- 電源切替
-
-この範囲を勝手に追加・変更しない。
-
 ## 次工程
 
-Topic 19の制作前EXAM_ALIGNMENTを行う。最新mainと他worker成果をreconcileし、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、二種一次・二次を含む公式過去問を直近年度から調査して固定する。本文・PDF・PowerPoint等はEXAM_ALIGNMENT確定前に作らない。不整合や確定不能事項があれば推測せずexact blockerを記録して停止する。
+Topic 19の解説source本文を作る。固定5問・9答案要素から必要事項を逆算し、SPEC指定3計算・グラフまで固定範囲内で設計する。H25負荷時タップ切換装置は一般原理としてのみ扱い、ミニ新幹線実車への採用を推測しない。未確認実車値・実構成は一次資料確認前に真値化しない。
