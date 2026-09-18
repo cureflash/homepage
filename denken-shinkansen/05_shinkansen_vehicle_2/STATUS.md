@@ -6,14 +6,16 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `17 / 39`
-- current_status: `topic_18_blind_reanswer_official_check_complete`
+- current_status: `topic_18_progress_alignment_sync_complete`
 - last_completed_topic: `17 パワー半導体の損失比較`
 - active_topic: `18 E2系 50Hz・60Hzと磁束`
-- next_start: Topic 18の最終QA。必須成果物、各QA、完成後clean blind `15 / 15 PASS`、固定EXAM_ALIGNMENT、SPEC境界、進捗記録の整合を確認する。既存PDF/PPTXの問題・正答・数式は変更しない
+- next_start: Topic 18の最終QAを再実施する。固定5問・15答案要素、完成後clean blind `15 / 15 PASS`、SPEC指定7項目・3可視化、必須成果物・各QA・進捗記録の整合を確認し、合格した場合のみcompleted化する。既存PDF/PPTX、問題、正答、数式、固定過去問は変更しない
 
 ## 完了済み
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
+
+Topic 18は技術成果物・clean blind公式照合までPASS。前回最終QAで検出された主source状態欄の不整合を現行状態へ同期済み。最終QA再実施前のため、まだcompletedに数えない。
 
 ## Topic 18 完成後clean blind公式照合
 
@@ -267,4 +269,4 @@ clean blind候補答案:
 
 ## 次工程
 
-Topic 18の最終QAを行う。必須成果物、各QA、完成後clean blind `15 / 15 PASS`、固定EXAM_ALIGNMENT、SPEC境界、進捗記録の整合を確認する。既存PDF/PPTX、問題、正答、数式、固定過去問は変更しない。
+Topic 18の最終QAを再実施する。固定5問・15答案要素、clean blind `15 / 15 PASS`、SPEC指定7項目・3可視化、必須成果物・各QA・進捗記録の整合を確認し、合格した場合のみcompleted化する。既存PDF/PPTX、問題、正答、数式、固定過去問は変更しない。
