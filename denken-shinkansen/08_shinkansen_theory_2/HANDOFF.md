@@ -6,18 +6,18 @@
 
 Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
 
-current_status: `topic_18_blind_reanswer_complete`
+current_status: `topic_18_explanation_source_complete`
 
 active_topic: `18 新幹線のセンサ信号をどう増幅する？`
 
-Topic 18の制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了。固定一次5問・25答案要素は `25 / 25 PASS`、独立導出後の公式標準解答照合も `25 / 25`。二次採用0問・二次数合わせ0件。次工程は解説本文＋3段階例題。
+Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題まで完了。固定一次5問・25答案要素は `25 / 25` を本文へ接続し、必須説明15項目は `15 / 15`、3段階例題は `3 / 3`。二次採用0問・二次数合わせ0件。次工程は解説PDF＋表示QA。
 
 ## Topic 18 成果物
 
 - source: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp.md`
 - 制作前blind独立再解答: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_blind_reanswer.md`
 - completion: `in_progress`
-- stage: `BLIND_REANSWER_COMPLETE`
+- stage: `EXPLANATION_SOURCE_COMPLETE`
 
 ## Topic 18 固定範囲
 
@@ -73,6 +73,23 @@ Topic 18の制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了。�
 
 判定: `PASS / BLIND_REANSWER_COMPLETE`
 
+## Topic 18 解説本文＋3段階例題
+
+主source `topics/18_sensor_signal_opamp/18_sensor_signal_opamp.md` へ解説本文を追加した。
+
+- SPEC固定範囲: `8 / 8収録`
+- 過去問から逆算した必須説明: `15 / 15収録`
+- 固定一次5問: `5 / 5接続`
+- 固定一次25答案要素: `25 / 25接続`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 19以降の先取り: `0件`
+- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
 ## 次工程
 
-固定一次5問・25答案要素と主sourceの必須説明15項目を漏れなく接続する解説本文を作成し、基礎・本試験標準・複合／ひっかけの3段階例題を作る。
+主sourceを正本としてTopic 18の解説PDFを生成し、表示QAを実施する。
