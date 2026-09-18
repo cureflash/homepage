@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_progress_records_synced`
+- current_status: `topic_17_final_qa_pass`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 最終QA再実施
+- next_start: Topic 17 completed状態同期
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 技術・試験対応品質ゲートPASS、進捗記録同期PASS / 次は最終QA再実施
+- [ ] Topic 17 `IN_PROGRESS` — 最終QA `PASS / FINAL_QA_COMPLETE` / 次はcompleted状態同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -300,8 +300,21 @@
 - [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更 `0件`
 - 判定: `PASS / topic_17_progress_records_synced`
 
+## Topic 17 最終QA（再実施）
+- [x] 必須成果物実在: PASS
+- [x] 固定一次1問＋二次記述4問・6答案要素: `6 / 6 PASS`
+- [x] 完成後独立再解答: `6 / 6 PASS`
+- [x] 練習一次正答一意性: `10 / 10 PASS`
+- [x] 練習独立再計算・論理QA: `15 / 15 PASS`
+- [x] 解説PDF・練習PDF・PowerPoint各QA: PASS
+- [x] 仕様境界: PASS
+- [x] 前回blockerの進捗記録3箇所: `3 / 3 PASS`
+- [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更 `0件`
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_final_qa.md`
+- 判定: `PASS / topic_17_final_qa_pass / FINAL_QA_COMPLETE`
+
 ## 今回進めた内容
-Topic 17の前回最終QAで特定された進捗記録3箇所だけを実状態へ同期した。技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果は変更していない。
+Topic 17最終QAを再実施した。前回唯一FAILだった進捗記録3箇所の同期を再確認して `3 / 3 PASS`。固定5問・6答案要素、完成後独立再解答 `6 / 6 PASS`、練習QA、PDF/PPTX QA、仕様境界も全件PASS。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。
 
 ## 判定
-Topic 17は `PASS / topic_17_progress_records_synced / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程はTopic 17最終QA再実施。
+Topic 17は `PASS / topic_17_final_qa_pass / FINAL_QA_COMPLETE / IN_PROGRESS`。本runでは最終QA再実施までを1段階とし、完成数は `16 / 22` のまま。次工程はTopic 17 completed状態同期。
