@@ -8,58 +8,39 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 15 `回生した電気はどこへ行く？` の最終QAを再実施し、`PASS / completed` とした。初回最終QAで唯一FAILだった進捗記録整合は旧記録7箇所を `7 / 7` 同期済みで、再監査でもPASS。技術内容、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTX、完成後ブラインド独立再解答結果は変更していない。Webカタログにも登録した。
+Topic 16の制作前 `EXAM_ALIGNMENT` を完了した。SPECの総合確認12項目から範囲を追加せず、公式過去問を直近年度優先で確認し、総合フローを検証する固定品質ゲートを `5出題回・7答案要素` に確定した。解説本文・PDF・練習問題・PowerPointは未着手。
 
-最終QA: `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
-固定候補: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer_candidates.md`
-完成後独立再解答: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md`
-source: `topics/15_regenerative_power/15_regenerative_power.md`
-解説PDF: `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
-解説PDF QA: `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md`
-練習問題source: `topics/15_regenerative_power/15_regenerative_power_practice_source.md`
-練習PDF: `topics/15_regenerative_power/15_regenerative_power_practice.pdf`
-練習PDF QA: `topics/15_regenerative_power/15_regenerative_power_practice_qa.md`
-解説画像PowerPoint: `topics/15_regenerative_power/15_regenerative_power_images.pptx`
-PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md`
-Webカタログ: `../../qualifications/denken-shinkansen/catalog.json`
+source: `topics/16_power_system_integration/16_power_system_integration.md`
 
-## Topic 15 固定品質ゲート
-- R8上 電力 問5 — `(4)` / 公式 `(4)` — PASS
-- R7上 法規 問13(a)(b) — `(2),(3)` / 公式 `(2),(3)` — PASS
-- R4下 電力 問11 — `(5)` / 公式 `(5)` — PASS
-- H29 法規 問13(a)(b) — `(2),(5)` / 公式 `(2),(5)` — PASS
-- H25 法規 問12(a)(b) — `(2),(3)` / 公式 `(2),(3)` — PASS
+## Topic 16 固定品質ゲート
+- R8上 電力 問2 — 発電電力・電力量・単位換算
+- H30 電力 問8 — 変圧・三相電力・力率
+- R7下 電力 問16(a)(b) — 電圧降下・送電損失・力率・配電
+- R7下 電力 問12 — %インピーダンス・短絡電流・遮断器
+- R7上 法規 問13(a)(b) — 発電/負荷の時間変化・送受電・系統エネルギーフロー
 
 集計:
-- 固定問題: `5出題回・8答案要素`
-- 実質問題パターン: `4`（R7上法規問13はH25法規問12の再出題）
+- 固定問題: `5出題回・7答案要素`
 - 制作前EXAM_ALIGNMENT: 完了
-- 制作前独立検証: `8 / 8 PASS`
-- 解説本文＋3段階例題: 完了
-- 解説PDF＋QA: 完了
-- 練習問題source＋練習PDF＋QA: 完了
-- 解説画像PowerPoint＋QA: 完了
-- 完成後ブラインド独立再解答: `8 / 8 PASS`
-- 公式解答一致: `8 / 8 PASS`
-- 教材外知識補完: `0件`
-- 候補固定後の答案変更: `0件`
+- 制作前独立再解答: 未実施
+- 解説本文: 未着手
+- 解説PDF: 未着手
+- 練習問題source / PDF: 未着手
+- 解説画像PowerPoint: 未着手
+- 完成後ブラインド独立再解答: 未実施
 - SPEC固定範囲外追加: `0件`
-- Topic 16先取り: `0件`
+- 件数合わせの仕様追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
-- 進捗記録整合: `7 / 7 PASS`
-- 最終QA再実施: `PASS / completed`
-- Webカタログ登録: 完了
+- 公式解答番号のTopic 16 sourceへの先行記録: `0件`
 
 ## 範囲境界
-- 回生電力が架線へ戻った後、他負荷・系統・蓄電設備へ流れる電力収支を扱う。
-- `P[kW]` と `W[kWh]`、`W=Pt`、時間変化時の面積計算、余剰・不足・送受電、自家消費を扱う。
-- 蓄電池は電力貯蔵・充放電の役割まで。電池化学・UPS・充電方式へ広げない。
-- 需給調整で固定過去問に現れる太陽光・揚水・運転予備力・火力は必要最小限の例に限定する。
-- 回生失効の具体的車両制御や新幹線実設備値は一次資料確認前に断定しない。
-- Topic 16の総合系統計算はTopic 15へ先取りしていない。
+- Topic 01〜15の既習事項を `発電 → 送電 → 変電 → 相変換 → き電 → 架線 → 車両` と回生時の逆方向まで一本につなぐ総復習に限定する。
+- 水力・火力・原子力・再エネ、変圧、三相電力、力率、電圧降下、損失、短絡・保護、電線、配電、回生をSPEC指定どおり接続し、新規分野・新規公式を追加しない。
+- N700Sは電力フローの到達点として扱い、車両内部主回路の詳細へ広げない。
+- 実設備値は一次資料確認済みのものだけを実値とする。
 
 ## 次
-Topic 16 `発電所からN700Sまで全部つないでみる` の制作前EXAM_ALIGNMENTを実施する。
+固定5出題回・7答案要素を、保存済み正答を見ずに問題文とTopic 16固定範囲だけから制作前独立再解答し、答案固定後に公式解答と照合する。
 
 ## 直前完了テーマ
 Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
