@@ -7,9 +7,9 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_blind_reanswer_qa_pass`。Topic 16 `700系 多レベル変換器とPWM` は、blind再解答QAで検出した R7一次「機械」問4 (3) の1答案要素不足を main source・解説PDF・練習source/PDF・PowerPointへ最小補正し、blind再解答前ゲートを再構築済み。その後、公式解答・標準解答・旧候補答案本文・旧blind QA本文を先に見ず、固定5問の公式問題文と改訂済み教材sourceだけで26答案要素を独立再解答して候補答案を固定し、固定後に公式解答・標準解答と照合した。固定5問・26答案要素は `26 / 26 PASS`、教材外知識補完0件。Topic 16は最終QA未実施のためcompletedにしない。
+現在地は `topic_16_final_qa_needs_progress_sync`。Topic 16 `700系 多レベル変換器とPWM` は、固定一次4問＋二次1問・26答案要素、解説source/PDF、練習source/PDF、PowerPoint、完成後blind再解答まで品質ゲートを通過済み。最終QAでは技術内容・必須成果物・表示QA・試験対応・SPEC境界は全PASSだったが、主source等4箇所の進捗記録だけに旧工程表現が残っているため `NEEDS_REVISION / IN_PROGRESS` とした。completedにはしない。
 
-次工程は、Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT・必須成果物・表示QA・blind再解答QA・進捗記録の整合を確認する。
+次工程は、最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 16最終QAを再判定する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -173,6 +173,19 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / BLIND_REANSWER_QA_PASS`
 
+## Topic 16 最終QA
+- path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_final_qa.md`
+- 技術内容: `PASS`
+- 固定一次4問＋二次1問・26答案要素: `PASS`
+- 完成後blind再解答: `26 / 26 PASS`
+- 必須成果物: `PASS`
+- PDF/PPTX表示・構造QA: `PASS`
+- 練習問題QA: `12 / 12 PASS`
+- SPEC境界: `PASS`
+- 進捗記録整合: `FAIL / 4箇所要同期`
+- SPEC外追加: `0件`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -210,4 +223,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT、必須成果物、表示QA、blind再解答QA、進捗記録の整合を確認する。最終QAがPASSした場合のみ `completed` とする。
+Topic 16最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 16最終QAを再判定する。
