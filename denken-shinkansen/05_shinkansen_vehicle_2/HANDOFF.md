@@ -7,7 +7,7 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_exam_alignment_complete`。Topic 16 `700系 多レベル変換器とPWM` の制作前EXAM_ALIGNMENTまで完了した。次工程は固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を制作する。
+現在地は `topic_16_explanation_source_complete`。Topic 16 `700系 多レベル変換器とPWM` は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了した。次工程は固定EXAM_ALIGNMENTと本文を変更せず、解説PDFを制作する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -35,6 +35,20 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - 正答記号・個別最終解のsource保存: `0件`
 - 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
+## Topic 16 解説source
+- 解説本文: `完成`
+- 3段階例題: `3 / 3 PASS`
+- 例題数値再計算: `PASS`
+- 固定5過去問・26答案要素の本文マッピング: `26 / 26 PASS`
+- SPEC指定8項目: `8 / 8 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 PASS`
+- 共通仮定モデルの実車値誤認防止: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 正答記号・固定過去問の個別最終解保存: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -55,19 +69,21 @@ SPEC指定可視化:
 - Topic 11のPWMコンバータは前提確認に必要な範囲だけ参照する
 - Topic 12のVVVF・V/f・誘導機速度制御、Topic 13の回生・四象限運転は追加しない
 - Topic 17のパワー半導体損失比較へ先取りしない
-- `dv/dt`はSPEC指定項目として扱うが、今回固定した第二種公式過去問で直接問われたとは記載しない
+- `dv/dt`はSPEC指定項目として扱うが、今回固定した第二種公式過去問で直接問われた論点とは記載しない
 - 公開一次資料で確認できない700系の変換器レベル数、直流電圧、素子耐圧、キャリア周波数、損失・効率値を実車値として置かない
 
-## 調査・検証メモ
-- 電気技術者試験センターの第二種公式過去問を直近年度から確認した。
-- R8一次「機械」は「インバータ」「PWM」「スイッチング」に直接対応する出題を確認できなかったため不採用。件数合わせで範囲外問題を採用していない。
-- H24一次問3を多重化・高調波の中核、H29一次問3を2レベル基準、R7一次問4をPWM・スイッチング周波数、R4一次問4を損失・効率、H24二次問3をPWM基本波電圧の二次計算ゲートとして固定した。
-- 制作前独立検証は公式解答を先に保存せず問題条件から実施し、その後公式解答／標準解答と照合。一次 `20 / 20 PASS`、二次 `6 / 6 PASS`。
-- blind再解答の独立性を維持するため、正答記号・個別最終解はmain sourceへ保存していない。
-- 参考教材は電験王2と「目指せ！電気主任技術者～解説ノート～」の2系統を比較。e-sysnet.com は今回の多レベル／多重インバータを直接扱うページを確認できなかった。
+## 解説sourceで固定した教材モデル
+- 2レベルの基準: 中点基準 `±E_d/2`
+- 多レベル比較: 実車値ではない理想分担3レベルモデルを使用
+- 位相差合成: `sin(nωt)+sin(n(ωt-φ))=2cos(nφ/2)sin(nωt-nφ/2)`
+- H24二次型: `V_v=E_dK/√2`、`V_v=V_L+jXI`
+- `dv/dt≈Δv/Δt`
+- 簡略スイッチング損失: `P_sw≈f_swE_sw`
+- 変換効率: `η=P_out/(P_out+P_loss)`
+- SPEC指定3可視化は `E_d=1.0 pu` の共通仮定条件から再生成する
 
 ## 過去Topic
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16の解説本文＋3段階例題を制作する。固定5問・26答案要素、SPEC指定8項目・3可視化、範囲境界を変更しない。
+Topic 16の解説PDFを制作する。固定5問・26答案要素、SPEC指定8項目・3可視化、解説本文、範囲境界を変更しない。
