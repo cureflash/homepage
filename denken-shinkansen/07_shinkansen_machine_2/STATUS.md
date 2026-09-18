@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_explanation_source_complete`
+- current_status: `topic_17_explanation_pdf_complete`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 解説PDF制作
+- next_start: Topic 17 練習source制作
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source `PASS` / 次は解説PDF
+- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF `PASS` / 次は練習source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -209,8 +209,20 @@
 - [x] 固定問題の正答記号・完成済み解答保存 `0件`
 - 判定: `PASS / topic_17_explanation_source_complete`
 
+## Topic 17 解説PDF
+- [x] `topics/17_speed_feedback_control/17_speed_feedback_control_explanation.pdf`
+- [x] A4縦・6ページ、固定5問・6答案要素 `6 / 6`
+- [x] 基礎／本試験標準／複合の3段階例題を収録
+- [x] 160 dpi 全6ページ表示QA `6 / 6 PASS`
+- [x] 文字・数式の欠落、重なり、切れ、overflow、破損グリフ `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] PDF SHA-256 `eb2582b3ed669824c7546c75b7dfa4737cc4daace2ec834c73ea5e1eb73746bc`
+- [x] PDF Git blob SHA `171afc11b64f8ece63702473bdef84c20865ca80`
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_explanation_pdf_qa.md`
+- 判定: `PASS / topic_17_explanation_pdf_complete`
+
 ## 今回進めた内容
-Topic 17を制作前EXAM_ALIGNMENT完了状態から1段階進め、固定5問・6答案要素から逆算した解説source本文を完成した。閉ループ、偏差、外乱経路までを固定範囲内で導出し、3段階例題と過去問接続表を作成した。
+既存枠のTopic 17解説source成果をreconcileし、重複制作せず次工程の解説PDFを制作した。固定5問・6答案要素、3段階例題、仕様境界を維持し、表示・文字抽出QAをPASSした。
 
 ## 判定
-Topic 17は `PASS / topic_17_explanation_source_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は解説PDF制作。
+Topic 17は `PASS / topic_17_explanation_pdf_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は練習source制作。
