@@ -72,4 +72,4 @@ sourceで確定した12問をPDF化した後、主要計算を別計算で再確
 
 `PASS / PRACTICE_PDF_COMPLETE`
 
-次工程はTopic 19の解説画像PowerPoint＋QAである。
+解説画像PowerPoint、完成後独立検証、初回最終QAまで完了済み。次工程はTopic 19の最終QA再判定である。
