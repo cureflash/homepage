@@ -6,83 +6,61 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_18_final_qa_pass`
-- 次工程: Topic 19 制作前EXAM_ALIGNMENT
+- current status: `topic_19_explanation_source_complete / IN_PROGRESS`
+- 次工程: Topic 19 解説PDF＋QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
-## reconcile結果
-- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、Topic 18成果物・最終QAを確認した。
-- Topic 18は最終QA `PASS / topic_18_final_qa_pass / completed`。
-- 固定EXAM_ALIGNMENTは一次1問＋二次4問、計5問・12答案要素のまま変更なし。
-- 完成後独立再解答 `12 / 12 PASS`、教材外知識補完 `0件`。
-- 解説PDF・練習PDF・PowerPoint QA、仕様境界、進捗記録整合は全PASS。
-- main source、練習source、`STATUS.md`、`HANDOFF.md` の完成状態だけを同期した。
-- 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。
-- 最初の未完了テーマはTopic 19「PIDで新幹線の速度を制御する」。
+## Topic 19 固定範囲
+- P・PI・PD・PID制御を速度応答で比較
+- 比例制御、積分制御、微分制御、PI、PID
+- 定常偏差、オーバーシュート、応答速度
+- `Kp`、`Ki`、`Kd` を変化させた速度応答グラフ
 
-## Topic 18 固定範囲
-- 一次遅れ
-- 二次遅れ
-- 時定数
-- 減衰係数
-- 固有角周波数
-- オーバーシュート
-- 立上り時間
-- 整定時間
-- 定常偏差
-- グラフ: ステップ応答、時定数変更比較、減衰係数変更比較
+境界:
+- Topic 20の一般安定判別、ラウス・フルビッツ、根軌跡、周波数応答、ボード線図、ゲイン余裕、位相余裕、発振判定は追加しない
+- Topic 21の空転・滑走・再粘着制御は先取りしない
+- 未確認の新幹線実車PIDゲイン、制御周期、制御則は実車値化しない
 
-Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘着制御はTopic 18へ先取りしていない。未確認の新幹線実車時定数・制御ゲイン・整定時間等も使用していない。
-
-## Topic 18 固定EXAM_ALIGNMENT
-- H23 一次 機械 問7 (2) — 1答案要素
-- R07 二次 機械・制御 問4 (2),(4),(5) — 4答案要素
-- R06 二次 機械・制御 問4 (2),(3),(4) — 3答案要素
-- R03 二次 機械・制御 問4 (3),(4) — 2答案要素
-- H29 二次 機械・制御 問4 (5) — 2答案要素
-
+## Topic 19 固定EXAM_ALIGNMENT
 一次1問＋二次4問、計5問・12答案要素。
 
-## Topic 18 成果物
-- 解説source: `topics/18_speed_transient_response/18_speed_transient_response.md`
-- 解説PDF: `topics/18_speed_transient_response/18_speed_transient_response_explanation.pdf`
-- 解説PDF QA: `topics/18_speed_transient_response/18_speed_transient_response_explanation_pdf_qa.md`
-- 練習source: `topics/18_speed_transient_response/18_speed_transient_response_practice.md`
-- 練習PDF: `topics/18_speed_transient_response/18_speed_transient_response_practice.pdf`
-- 練習PDF QA: `topics/18_speed_transient_response/18_speed_transient_response_practice_pdf_qa.md`
-- PowerPoint: `topics/18_speed_transient_response/18_speed_transient_response_images.pptx`
-- PowerPoint QA: `topics/18_speed_transient_response/18_speed_transient_response_powerpoint_qa.md`
-- 独立再解答前ゲート: `topics/18_speed_transient_response/18_speed_transient_response_blind_reanswer_gate.md`
-- 答案ロック: `topics/18_speed_transient_response/18_speed_transient_response_answer_lock.md`
-- 独立再解答: `topics/18_speed_transient_response/18_speed_transient_response_independent_reanswer.md`
-- 最終QA記録: `topics/18_speed_transient_response/18_speed_transient_response_final_qa.md`
+- H25 一次 機械 問6 (2) — 1答案要素
+- R07 二次 機械・制御 問4 (1),(2),(3) — 3答案要素
+- H30 二次 機械・制御 問4 (1) — 2答案要素
+- H23 二次 機械・制御 問4 (4) — 4答案要素
+- R02 二次 機械・制御 問4 (1),(2) — 2答案要素
 
-## Topic 18 品質ゲート
-- 制作前EXAM_ALIGNMENT: `PASS`
-- 固定5問・12答案要素接続: `12 / 12 PASS`
-- 一次10問正答一意性: `10 / 10 PASS`
-- 練習全15問独立再計算・論理QA: `15 / 15 PASS`
-- 完成後独立再解答: `12 / 12 PASS`
-- 教材外知識補完: `0件`
-- 解説PDF QA: `PASS`
-- 練習PDF QA: `PASS`
-- PowerPoint QA: `PASS`
-- 仕様境界: `PASS`
-- 進捗記録整合: `PASS`
+制作前EXAM_ALIGNMENTは `PASS / topic_19_exam_alignment_complete`。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。
 
-## Topic 18 練習PDF現行QA
-- Git blob: `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242`
-- PDF SHA-256: `50fdfc549fdefd89e14577f671e5e13261a95b3141acd9cba69637f5e2d1f209`
-- A4縦・3ページ、一次10問＋二次5問
-- PDFium / Poppler表示 `3 / 3 PASS`
-- 欠落グリフ `0件`
-- source中 `≈` 17箇所 / PDF抽出 `≈` 17箇所
+## 今回完了した段階
+Topic 19解説source本文を完成した。
 
-## Topic 18 最終判定
-`PASS / topic_18_final_qa_pass / completed`
+成果物:
+- `topics/19_pid_speed_control/19_pid_speed_control.md`
 
-完成数は `18 / 22`。Topic 18の技術成果物は変更せず、完成状態の進捗表記だけを同期した。
+含めた内容:
+- P・I・D各動作の時間領域／ラプラス領域対応
+- PID並列形と時間定数表示の相互変換
+- P・PI・PD・PIDの判別
+- 単位負帰還の偏差伝達関数
+- 最終値の定理によるステップ・ランプ定常偏差
+- Topic 18の二次遅れ・減衰係数・応答指標への接続
+- 教材用仮定プラントでの `Kp`、`Ki`、`Kd` 一変数比較条件
+- 基礎・本試験標準・複合例題
+- 固定5問・12答案要素の教材節マッピング
+
+QA:
+- 固定5問・12答案要素: `12 / 12 COVERED`
+- Topic 20先取り: `0件`
+- Topic 21先取り: `0件`
+- 未確認実車PID値: `0件`
+- 固定問題の個別正答記号・最終数値保存: `0件`
+- 判定: `PASS / topic_19_explanation_source_complete`
+
+## GitHub反映
+- 解説source commit: `a1f2a2386037904c493b96e7820f1c2bc73ade5e`
+- STATUS同期 commit: `6f0e96eab98a03028c85a4983c31e78aa3be5992`
 
 ## 次に行うこと
-Topic 19「PIDで新幹線の速度を制御する」の制作前EXAM_ALIGNMENTを行う。
+Topic 19解説sourceから解説PDFを生成し、表示・文字抽出・式・数値・固定12答案要素接続をQAする。
