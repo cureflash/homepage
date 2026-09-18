@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 14 / 16
-- current_status: `topic_15_preproduction_independent_validation_complete`
+- current_status: `topic_15_explanation_source_complete`
 - last_completed_topic: `14 駅やトンネルにはどう電気を配る？`
 - active_topic: `15 回生した電気はどこへ行く？`
-- next_start: Topic 15の解説本文＋3段階例題を作成する。固定5出題回・8答案要素を本文へすべてマッピングし、SPEC固定範囲外へ広げない
+- next_start: Topic 15の解説PDFを作成する。本文§1〜§15と3段階例題をA4解説プリントへ落とし込み、固定5出題回・8答案要素のPDF対応、表示QA、文字抽出QA、数値・論理再検算を行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -25,7 +25,7 @@
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT・制作前独立検証完了。固定5出題回・8答案要素 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、固定範囲外補完0件。次は解説本文＋3段階例題
+- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題完了。固定5出題回・8答案要素の本文マッピング `8 / 8 PASS`、3段階例題再計算 `3 / 3 PASS`。次は解説PDF
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
 ## Topic 07 完了記録
@@ -555,6 +555,18 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 - 公式解答との不一致: `0件`
 - Topic 15固定範囲外の知識補完: `0件`
 - 再出題の水増し: `0件`
+- 解説本文: §1〜§15 完成
+- 3段階例題: 基礎・本試験標準・複合 各1問完成
+- 3段階例題独立再計算: `3 / 3 PASS`
+- 固定5出題回・8答案要素の本文要求事項マッピング: `8 / 8 PASS`
+- `kW` / `kWh`、`W=Pt`、`W=∫Pdt`、グラフ面積: PASS
+- 余剰・不足・送電・受電の方向判定: PASS
+- 自家消費量・自家消費比率・自給率の分母区別: PASS
+- 蓄電池・電力貯蔵・負荷平準化・需給バランス: PASS
+- 回生失効・受入余力・省エネルギーの因果: PASS
+- SPEC固定範囲外追加: `0件`
+- Topic 16先取り: `0件`
+- 未確認新幹線実設備値の真値化: `0件`
 
 制作前独立答案:
 - R8上 電力 問5: `(4)`
@@ -564,4 +576,4 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 - H25 法規 問12(a)(b): `(2),(3)`
 
 ## 次
-Topic 15の解説本文＋3段階例題を作成する。固定5出題回・8答案要素を本文へすべてマッピングし、基礎・本試験標準・複合の各例題を途中式・単位・成立条件付きで作る。SPEC固定範囲外へ広げない。
+Topic 15の解説PDFを作成する。本文§1〜§15と3段階例題をA4解説プリントへ落とし込み、固定5出題回・8答案要素のPDF対応、表示QA、文字抽出QA、数値・論理再検算を行う。SPEC固定範囲外へ広げない。
