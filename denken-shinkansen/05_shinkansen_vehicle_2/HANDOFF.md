@@ -8,7 +8,32 @@
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 
-現在地は `topic_19_explanation_source_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENTと解説source本文まで完了し、次は解説PDF。練習source・練習PDF・PowerPoint・完成後clean blindは未着手。
+現在地は `topic_19_explanation_pdf_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDFまで完了し、次は練習source。練習PDF・PowerPoint・完成後clean blindは未着手。
+
+## Topic 19 解説PDF
+
+成果物:
+- 解説PDF: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_explanation.pdf`
+- QA: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_explanation_pdf_qa.md`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+品質:
+- A4縦: `2 pages`
+- pdfium 180 dpi: `2 / 2 PASS`
+- pdftoppm 180 dpi: `2 / 2 PASS`
+- 欠落グリフ・黒四角・重なり・クリップ: `0件`
+- 数式・数値QA: `PASS`
+- 固定過去問: `一次4問＋二次1問 / 5問`
+- 固定答案要素: `一次7＋二次2 / 9`
+- 固定答案要素のPDF接続: `9 / 9 covered`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- SPEC外追加: `0件`
+- 未確認ミニ新幹線実車値の真値化: `0件`
+- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
+- 完成後clean blind公式照合: `未実施 / 成果物完成後に実施`
 
 ## Topic 19 解説source
 
@@ -123,4 +148,4 @@ source:
 
 ## 次工程
 
-Topic 19の解説PDFを作る。`19_mini_shinkansen_dual_voltage_main_circuit_explanation_source.md` を正本として、固定5問・9答案要素、SPEC指定9項目・3可視化を変更せずPDF化し、表示QAと数式・数値QAを行う。H25負荷時タップ切換装置は一般原理としてのみ扱い、ミニ新幹線実車への採用を推測しない。未確認実車値・実構成は一次資料確認前に真値化しない。
+Topic 19の練習sourceを作る。固定5問・9答案要素、SPEC指定9項目・3可視化を変更せず、一次・二次の解法を教材だけで再現できる問題・解答・解説へ接続する。H25負荷時タップ切換装置は一般原理としてのみ扱い、ミニ新幹線実車への採用を推測しない。未確認実車値・実構成は一次資料確認前に真値化しない。
