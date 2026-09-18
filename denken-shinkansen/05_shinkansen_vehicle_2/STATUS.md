@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_practice_source_complete`
+- current_status: `topic_16_practice_pdf_complete`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: Topic 16の固定EXAM_ALIGNMENT・解説source・共通仮定モデル・練習問題sourceを変更せず、練習PDFを制作する
+- next_start: Topic 16の固定EXAM_ALIGNMENT・解説source・共通仮定モデル・練習問題source・練習PDFを変更せず、解説画像PowerPointを制作する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — PRACTICE_SOURCE_COMPLETE / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — PRACTICE_PDF_COMPLETE / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -91,6 +91,27 @@
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
+## Topic 16 練習PDF
+- PDF: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_practice.pdf`
+- QA: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_practice_qa.md`
+- A4縦: `4ページ`
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次試験型: `4 / 4`、途中式・前提・単位・理由を収録
+- 完全解説: `12 / 12`
+- 180 dpi表示QA: `4 / 4 PASS`
+- PDF open/preflight・文字抽出: `PASS`
+- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- 数値・論理整合: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- SPEC指定8項目: `8 / 8 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 共通仮定式系の変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 問題・正答・完全解説の変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -118,4 +139,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16「700系 多レベル変換器とPWM」の練習PDFを制作する。固定一次4問＋二次1問・26答案要素、SPEC指定8項目・3可視化、解説source、共通仮定モデル、練習問題source、範囲境界を変更しない。
+Topic 16「700系 多レベル変換器とPWM」の解説画像PowerPointを制作する。固定一次4問＋二次1問・26答案要素、SPEC指定8項目・3可視化、解説source、共通仮定モデル、練習問題source、練習PDF、範囲境界を変更しない。
