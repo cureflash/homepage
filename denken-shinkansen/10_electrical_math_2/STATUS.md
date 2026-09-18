@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 17 / 20
-- current_status: `topic_17_completed`
+- current_status: `topic_18_exam_alignment_complete`
 - last_completed_topic: `17 常微分方程式の数値解法`
 - active_topic: `18 非線形方程式と反復計算`
-- next_start: Topic 18の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 18の制作前独立数値検証を実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -273,33 +273,49 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 18 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 第二種公式過去問を直近年度から調査
+- [x] 二次「電力・管理」の非線形関係へ接続する5問を確認
+- [x] 二分法・Newton法を直接要求する確認済み第二種過去問0問を記録
+- [x] 直接該当しない5問を反復法の固定品質ゲート件数へ水増ししないことを確定
+- [x] R3第一種二次「電力・管理」問3のNewton-Raphson潮流問題を件数外として確認
+- [x] 電験学習資料を複数系統確認
+- [x] 数値求根の基礎資料を複数確認
+- [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
+- [ ] 制作前独立数値検証
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立検証
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 17の最終QAを再判定し、全品質ゲートPASSで `completed` とした。
+Topic 18の制作前EXAM_ALIGNMENTを完了した。
 
-- 必須成果物実在: `PASS`
-- 接続確認した第二種公式過去問: `5問`
-- 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
+- 第二種二次「電力・管理」の接続確認: `5問`
+- 対象: R5問3、R4問3、R1問2、H30問3、H23問3
+- 二分法・Newton法を直接要求する確認済み第二種過去問: `0問`
 - 非該当5問の固定品質ゲート件数への水増し: `0件`
-- 完成後独立検証: 新規3ケース `3 / 3 PASS`
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- 解説PDF表示QA: `4 / 4 PASS`
-- 練習PDF表示QA: `1 / 1 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- 進捗記録整合: `6 / 6 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 技術本文・練習問題・正答の変更: `0件`
-- PDF・PowerPoint・完成後独立検証の変更: `0件`
-- 仕様外追加: `0件`
+- 第一種Newton-Raphson潮流問題による件数水増し: `0件`
+- H20一次「理論」の非線形抵抗問題: 現行公式アーカイブで直接再確認できないため正式件数外
+- 固定範囲: 二分法 / Newton法 / 収束 / 初期値依存 / 許容誤差 / 電力潮流・非線形動作点への接続
+- Topic 19最適化の先取り: `0件`
 
-最終QA:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_final_qa.md`
+source:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration.md`
 
 ## 判定
 
-`topic_17_completed / completed`
+`topic_18_exam_alignment_complete / IN_PROGRESS`
 
 完成数は `17 / 20`。
 
-次はTopic 18 `非線形方程式と反復計算` の制作前EXAM_ALIGNMENTを実施する。
+次はTopic 18の制作前独立数値検証を実施する。
