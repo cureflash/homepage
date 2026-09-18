@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 18 / 21
-- current_status: `topic_19_practice_pdf_complete`
+- current_status: `topic_19_powerpoint_complete`
 - last_completed_topic: `18 新幹線のセンサ信号をどう増幅する？`
 - active_topic: `19 25kV・大電流をどう安全に測る？`
-- next_start: Topic 19 解説画像PowerPoint＋表示QA
+- next_start: Topic 19 完成後独立再解答
 
 ## 完成済み
 
@@ -64,37 +64,34 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - [x] 解説PDF＋表示QA: `PASS / EXPLANATION_PDF_COMPLETE`
 - [x] 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
-- [ ] 解説画像PowerPoint＋表示QA
+- [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 19の練習問題source＋練習PDFを完成させた。
+Topic 19の解説画像PowerPoint＋表示QAを完成させた。
 
-- source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.md`
-- PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.pdf`
-- PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice_pdf_qa.md`
-- A4縦5ページ
-- 200 dpi全ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: `PASS`
-- SHA-256: `ee688b55214354282ecdfcfbffc2d31500d7c867fe80cba616198cdc7ef70c2e`
-- 問題数: `12問`
-- 形式: `全問五肢択一`
-- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
-- 数値再計算・論理QA: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
-- SPEC固定範囲: `10 / 10接続`
-- 固定一次5問・25答案要素: `25 / 25接続`
-- 一次・二次過去問対応方針変更: `0件`
+- PowerPoint: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_images.pptx`
+- QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_powerpoint_qa.md`
+- 16:9 / 6枚
+- 200 dpi全スライド表示QA: `6 / 6 PASS`
+- shape geometry overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `6ページ / PASS`
+- PDF文字抽出QA: `PASS`
+- SHA-256: `28e66278adf5dcac60809ca22d4a51936483e7e87dd043f32a1bdf8ad659f0c5`
+- SPEC固定範囲: `10 / 10可視化`
+- 練習12問要求論点: `12 / 12接続`
+- 固定一次5問・25答案要素: `25 / 25可視化`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
-- 実設備CT・VTの未確認実値追加: `0件`
+- 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
 
 ## 判定
 
-`PASS / topic_19_practice_pdf_complete / IN_PROGRESS`。
+`PASS / topic_19_powerpoint_complete / IN_PROGRESS`。
 
-完成数は `18 / 21`。次工程はTopic 19の解説画像PowerPoint＋表示QA。
+完成数は `18 / 21`。次工程はTopic 19の完成後独立再解答。
