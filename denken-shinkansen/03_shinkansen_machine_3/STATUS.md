@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_progress_records_synchronized`
+- current_status: `topic_16_final_qa_recheck_needs_progress_record_fix`
 - last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
 - active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: Topic 16の最終QAを再判定する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、進捗記録整合を含む全ゲートを再確認する
+- next_start: Topic 16の進捗記録に残る旧「進捗記録整合完了後」文言3件だけを現状へ同期する。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,10 +26,10 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 技術・成果物・blind独立再解答PASS / 進捗記録同期完了 / 最終QA再判定待ち
+- [ ] 16 同期機って新幹線には使わないの？ — 技術・成果物・blind独立再解答PASS / 最終QA再判定は進捗記録整合3件のみNEEDS_REVISION
 
 ## Topic 16 最終QA再判定
-- 前回実施日: `2026-09-19`
+- 実施日: `2026-09-19`
 - 必須成果物存在: `PASS`
   - 解説source: `topics/16_synchronous_machine/16_synchronous_machine.md`
   - 解説PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf`
@@ -45,16 +45,13 @@
 - 固定範囲外知識による答案補完: `0件`
 - 固定範囲外追加: `0件`
 - 技術内容・問題・正答・派生成果物の品質: `PASS`
-- 前回の進捗記録整合: `FAIL`
-  - `16_synchronous_machine.md` が旧状態・旧blind結果・旧次工程だった
-  - `16_synchronous_machine_practice.md` が練習PDFを `REGEN_REQUIRED` とする旧同期状態だった
-  - `16_synchronous_machine_explanation_pdf_qa.md` が練習PDF・PowerPoint未同期 / blind再実施前の旧全体判定だった
-  - `16_synchronous_machine_practice_pdf_qa.md` の次工程がPowerPoint再同期のままだった
-- 進捗記録整合修正: `PASS`
-  - 上記4ファイルを、再同期済みPDF/PPTXと改訂後blind `6 / 6 PASS` の現状へ同期
-  - 技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
-- 前回最終QA判定: `NEEDS_REVISION / IN_PROGRESS`
-- 現在: `最終QA再判定待ち`
+- 進捗記録整合: `FAIL`
+  - `topics/16_synchronous_machine/16_synchronous_machine_practice.md` の「次工程」が「進捗記録整合を完了後、最終QA再判定」と残っている
+  - `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` が「残作業は進捗記録整合の完了後に最終QA再判定」と残っている
+  - `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` の「次工程」が「進捗記録整合を完了後、最終QA再判定」と残っている
+- 今回最終QA判定: `NEEDS_REVISION / IN_PROGRESS`
+- 修正対象: 上記3ファイルの進捗文言のみ
+- 技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
 - Topic 16 completed化: `まだ不可`
 
 ## Topic 16 制作品質状態
@@ -161,4 +158,4 @@
 - 状態: `completed`
 
 ## 次工程
-Topic 16の最終QAを再判定する。進捗記録整合を含め、必須成果物、PDF/PPTX QA、固定EXAM_ALIGNMENT、固定範囲境界、改訂後blind独立再解答を再確認する。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・派生成果物は変更しない。
+Topic 16の進捗記録に残る旧「進捗記録整合完了後」文言3件だけを現状へ同期する。対象は `16_synchronous_machine_practice.md`、`16_synchronous_machine_explanation_pdf_qa.md`、`16_synchronous_machine_practice_pdf_qa.md`。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
