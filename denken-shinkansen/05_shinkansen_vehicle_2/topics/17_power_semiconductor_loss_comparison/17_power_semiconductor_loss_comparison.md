@@ -4,11 +4,11 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT` を完了した。固定過去問は一次4問＋二次1問、計5問・26答案要素。公式問題の条件から独立に再導出し、公式解答／標準解答と照合して `26 / 26 PASS` を確認した。
+制作前 `EXAM_ALIGNMENT` を完了した。固定過去問は一次4問＋二次1問、計5問・26答案要素。公式問題の条件から独立に再導出し、公式解答／標準解答と照合して `26 / 26 PASS` を確認した。固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を `17_power_semiconductor_loss_comparison_explanation_source.md` に作成し、固定要求知識 `26 / 26 covered`、SPEC指定7項目 `7 / 7 covered`、指定3可視化の再生成条件 `3 / 3 fixed` を確認した。
 
-current_status: `topic_17_exam_alignment_complete`
+current_status: `topic_17_explanation_source_complete`
 
-次工程: 固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。
+次工程: 固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定範囲を変更せず、解説PDFを作成する。
 
 ## 固定範囲
 
@@ -174,6 +174,20 @@ current_status: `topic_17_exam_alignment_complete`
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
+## 解説source
+
+- path: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_explanation_source.md`
+- 解説本文: `完成`
+- 3段階例題: `3 / 3 PASS`
+- 例題数値再計算: `3 / 3 PASS`
+- 固定5問・26答案要素の実効本文マッピング: `26 / 26 covered`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 fixed`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
 ## 次工程
 
-固定5問・26答案要素とSPEC指定7項目・3可視化を変更せず、解説本文＋基礎・本試験標準・複合の3段階例題を作成する。
+解説PDFを作成する。固定5問・26答案要素とSPEC指定7項目・3可視化は変更しない。
