@@ -6,24 +6,25 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は完成済み。active themeはTopic 14。
 
 ## 今回進捗
-Topic 14 `駅やトンネルにはどう電気を配る？` の制作前EXAM_ALIGNMENTを完了した。`SPEC.md` の固定範囲（高圧配電、低圧配電、単相三線式、三相三線式、配電変圧器、ケーブル、CVケーブル、地中電線路、許容電流、電圧降下）から追加せず、電気技術者試験センター公式過去問を直近年度から遡って調査し、品質ゲートを5問・6答案要素に固定した。R8上問13、R7下問10、R3問12、H23問9、H20問17(a)(b)を採用。バランサ、詳細ケーブル損失、OF/CVT比較、固定範囲外機材を要求する候補と、既完了Topic 08固定問題との重複候補は除外した。制作前独立検証を汚染しないため正答番号・最終数値解はsourceに記録していない。
+Topic 14 `駅やトンネルにはどう電気を配る？` の制作前独立検証を完了した。前工程で固定した5問・6答案要素を、公式標準解答を先に見ずに独立計算・論理判定し、その後に照合した。結果は `6 / 6 PASS`、公式解答との不一致`0件`。R8上問13`(2)`、R7下問10`(5)`、R3問12`(5)`、H23問9`(1)`、H20問17(a)(b)`(2),(3)`。`SPEC.md` の固定範囲から追加せず、既完了Topic固定問題との重複、未確認新幹線実設備値への依存、件数合わせの仕様追加はいずれも0件。
 
 source: `topics/14_distribution/14_distribution.md`
 
 現在の品質ゲート:
 - 制作前EXAM_ALIGNMENT: 完了
 - 固定問題: `5問・6答案要素`
-- R8上 電力 問13 — 単相三線式、配電変圧器、電圧降下
-- R7下 電力 問10 — 地中ケーブル布設方式、放熱、許容電流
-- R3 電力 問12 — 単相三線式の構成・特徴
-- H23 電力 問9 — 単相三線式、配電変圧器、電圧降下
-- H20 電力 問17(a)(b) — 三相三線式高圧配電、電圧降下、断面積逆算
-- 制作前独立検証: 未実施（次工程）
+- R8上 電力 問13 — 単相三線式、配電変圧器、電圧降下 — `(2)` PASS
+- R7下 電力 問10 — 地中ケーブル布設方式、放熱、許容電流 — `(5)` PASS
+- R3 電力 問12 — 単相三線式の構成・特徴 — `(5)` PASS
+- H23 電力 問9 — 単相三線式、配電変圧器、電圧降下 — `(1)` PASS
+- H20 電力 問17(a)(b) — 三相三線式高圧配電、電圧降下、断面積逆算 — `(2),(3)` PASS
+- 制作前独立検証: `6 / 6 PASS`
+- 公式解答との一致: `6 / 6 PASS`
+- 公式解答との不一致: `0件`
 - SPEC固定範囲外の採用問題: `0件`
 - 既完了Topic固定過去問との重複採用: `0件`
 - 未確認新幹線実設備値への依存: `0件`
 - 件数合わせの仕様追加: `0件`
-- 正答番号・最終数値解のsource記録: `0件`
 
 ## 前回進捗（Topic 13）
 Topic 13 `新幹線の架線は何でできている？` の最終QAを再実施した。初回最終QAで唯一FAILだった進捗記録整合について、`13_electrical_materials_explanation_qa.md`、`13_electrical_materials_practice_source.md`、`13_electrical_materials_practice_qa.md`、`13_electrical_materials_powerpoint_qa.md`、`13_electrical_materials_independent_reanswer.md` の5箇所が現在地へ同期済みであることを再確認し、技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を全件PASSと判定した。Topic 13を `PASS / completed` とし、main source・STATUS・HANDOFFを同期した。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更していない。
@@ -212,14 +213,15 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_14_exam_alignment_complete`
+- `current_status`: `topic_14_preproduction_independent_verification_complete`
 - 完成数: `13 / 16`
 - last completed: Topic 13 `新幹線の架線は何でできている？`
 - active: Topic 14 `駅やトンネルにはどう電気を配る？`
 - Topic 14 source: `topics/14_distribution/14_distribution.md`
 - Topic 14 固定問題: `5問・6答案要素`
 - Topic 14 制作前EXAM_ALIGNMENT: 完了
-- Topic 14 制作前独立検証: 未実施（次工程）
+- Topic 14 制作前独立検証: `6 / 6 PASS`
+- Topic 14 公式解答一致: `6 / 6 PASS`
 - Topic 14 SPEC固定範囲外採用: `0件`
 - Topic 14 既完了Topic固定過去問との重複採用: `0件`
 - Topic 14 未確認新幹線実設備値への依存: `0件`
@@ -254,4 +256,4 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 12 最終QA: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 14の固定5問・6答案要素について制作前独立検証を行う。公式標準解答を先に見ずに解答・根拠を固定し、その後に公式解答と照合する。
+Topic 14の固定5問・6答案要素を本文へマッピングし、解説本文と3段階例題（基礎・本試験標準・複合）を作成する。
