@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_final_qa_recheck_needs_progress_record_fix`
+- current_status: `topic_16_progress_records_synchronized`
 - last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
 - active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: Topic 16の進捗記録に残る旧「進捗記録整合完了後」文言3件だけを現状へ同期する。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない
+- next_start: 技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、Topic 16の最終QAを再判定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 技術・成果物・blind独立再解答PASS / 最終QA再判定は進捗記録整合3件のみNEEDS_REVISION
+- [ ] 16 同期機って新幹線には使わないの？ — 技術・成果物・blind独立再解答PASS / 進捗記録整合PASS / 最終QA再判定待ち
 
 ## Topic 16 最終QA再判定
 - 実施日: `2026-09-19`
@@ -45,14 +45,15 @@
 - 固定範囲外知識による答案補完: `0件`
 - 固定範囲外追加: `0件`
 - 技術内容・問題・正答・派生成果物の品質: `PASS`
-- 進捗記録整合: `FAIL`
-  - `topics/16_synchronous_machine/16_synchronous_machine_practice.md` の「次工程」が「進捗記録整合を完了後、最終QA再判定」と残っている
-  - `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` が「残作業は進捗記録整合の完了後に最終QA再判定」と残っている
-  - `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` の「次工程」が「進捗記録整合を完了後、最終QA再判定」と残っている
-- 今回最終QA判定: `NEEDS_REVISION / IN_PROGRESS`
-- 修正対象: 上記3ファイルの進捗文言のみ
+- 前回最終QA判定: `NEEDS_REVISION / IN_PROGRESS`
+- 前回FAIL原因: 進捗記録3件に旧「進捗記録整合完了後」文言が残存
+- 進捗記録整合修正: `PASS`
+  - `topics/16_synchronous_machine/16_synchronous_machine_practice.md` 同期済み
+  - `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` 同期済み
+  - `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` 同期済み
 - 技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
-- Topic 16 completed化: `まだ不可`
+- 現在状態: `topic_16_progress_records_synchronized / IN_PROGRESS`
+- Topic 16 completed化: `最終QA再判定前のためまだ不可`
 
 ## Topic 16 制作品質状態
 - 固定範囲: 同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本
@@ -158,4 +159,4 @@
 - 状態: `completed`
 
 ## 次工程
-Topic 16の進捗記録に残る旧「進捗記録整合完了後」文言3件だけを現状へ同期する。対象は `16_synchronous_machine_practice.md`、`16_synchronous_machine_explanation_pdf_qa.md`、`16_synchronous_machine_practice_pdf_qa.md`。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、Topic 16の最終QAを再判定する。
