@@ -8,11 +8,11 @@ Topic 01〜17は最終QAまで `PASS / completed`。
 
 完成数: `17 / 20`
 
-current_status: `topic_18_post_completion_validation_complete`
+current_status: `topic_18_final_qa_needs_revision`
 
 active_topic: `18 非線形方程式と反復計算`
 
-次工程: Topic 18の最終QAを実施する。
+次工程: Topic 18の進捗記録5ファイルを実成果物状態へ同期する。
 
 ## 上位仕様
 
@@ -368,6 +368,24 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 
 固定EXAM_ALIGNMENT変更0件。接続確認5問の件数水増し0件。第一種問題の件数加算0件。Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加0件。未確認実車値依存0件。
 
+## 初回最終QA
+
+記録:
+`topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_final_qa.md`
+
+判定: `NEEDS_REVISION / topic_18_final_qa_needs_revision / IN_PROGRESS`。
+
+技術内容、固定EXAM_ALIGNMENT、完成後独立検証、練習問題QA、PDF/PowerPoint表示QA、SPEC境界はすべてPASS。進捗記録6ファイルのうち、HANDOFFのみ現在状態と整合し、Topic 18配下の5ファイルが古い次工程・状態のままのため、進捗記録整合は `1 / 6 PASS` とした。
+
+未同期5ファイル:
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_explanation_qa.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_practice.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_practice_qa.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_powerpoint_qa.md`
+
+技術内容変更: `0件`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -387,9 +405,9 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - [x] 練習PDF＋QA
 - [x] 解説画像PowerPoint＋QA
 - [x] 完成後独立検証
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`（進捗記録整合 `1 / 6 PASS`）
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDF・練習問題source・練習PDF・PowerPoint・完成後独立検証を変更せず、Topic 18の最終QAを実施する。
+上記5ファイルだけを実成果物状態へ同期する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更しない。同期後にTopic 18の最終QAを再実施する。
