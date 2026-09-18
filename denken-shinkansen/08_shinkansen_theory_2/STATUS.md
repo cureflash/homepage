@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 18 / 21
-- current_status: `topic_19_blind_reanswer_complete`
+- current_status: `topic_19_explanation_source_complete`
 - last_completed_topic: `18 新幹線のセンサ信号をどう増幅する？`
 - active_topic: `19 25kV・大電流をどう安全に測る？`
-- next_start: Topic 19 解説本文＋3段階例題
+- next_start: Topic 19 解説PDF＋表示QA
 
 ## 完成済み
 
@@ -61,7 +61,7 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 制作前EXAM_ALIGNMENT: `PASS / 一次5問・25答案要素`
 - [x] 制作前blind独立再解答: `25 / 25 PASS`
 - [x] 公式標準解答照合: `25 / 25`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
@@ -71,18 +71,19 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 19の制作前blind独立再解答を完了した。
+Topic 19の解説本文＋3段階例題を完成させた。
 
-- blind記録: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_blind_reanswer.md`
-- 固定一次5問・25答案要素を公式標準解答・保存済み正答を見ずに独立導出
-- R5一次理論問8: `ハ / リ / ル / チ / ワ`
-- R1一次理論問4: `ヲ / ル / ロ / ヌ / カ`
-- H29一次理論問4: `ヘ / イ / ニ / ル / ヌ`
-- H25一次理論問8: `ヲ / ニ / ロ / ル / カ`
-- H21一次理論問6: `ト / ハ / カ / ロ / ル`
-- blind導出: `25 / 25 PASS`
-- 独立導出後の公式標準解答照合: `25 / 25`
-- 公式標準解答・保存済み正答の先見: `0件`
+- source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement.md`
+- SPEC固定範囲: `10 / 10収録`
+- 過去問から逆算した必須説明: `16 / 16収録`
+- 固定一次5問: `5 / 5接続`
+- 固定答案要素: `25 / 25接続`
+- 3段階例題: `3 / 3`
+- 例題数値再計算: `3 / 3 PASS`
+- 共通解法: `接続確認 → 内部抵抗・変成比確認 → 回路式 → 指示値 → 一次側量`
+- CT二次開放禁止・VT二次短絡禁止を固定範囲内で収録
+- 分流器・倍率器・エアトン分流器・容量分圧・静電電圧計・熱電形交流電力計・電力量を固定範囲内で収録
+- 一次・二次過去問対応方針変更: `0件`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
@@ -90,6 +91,6 @@ Topic 19の制作前blind独立再解答を完了した。
 
 ## 判定
 
-`PASS / topic_19_blind_reanswer_complete / IN_PROGRESS`。
+`PASS / topic_19_explanation_source_complete / IN_PROGRESS`。
 
-完成数は `18 / 21`。次工程はTopic 19の解説本文＋3段階例題。
+完成数は `18 / 21`。次工程はTopic 19の解説PDF＋表示QA。
