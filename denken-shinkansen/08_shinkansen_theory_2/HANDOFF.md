@@ -6,11 +6,11 @@
 
 Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
 
-current_status: `topic_18_progress_records_synced`
+current_status: `topic_18_final_qa_complete`
 
 active_topic: `18 新幹線のセンサ信号をどう増幅する？`
 
-Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAで技術品質ゲートは全件PASSし、唯一のblockerだった主source・練習sourceの進捗記録4箇所をGitHub正本の実態へ同期した。現在 `PASS / topic_18_progress_records_synced / IN_PROGRESS`。次工程はTopic 18最終QA再実施。
+Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、進捗記録同期、最終QA再実施まで完了。判定は `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`。次工程は `completed` 状態同期。
 
 ## Topic 18 成果物
 
@@ -26,7 +26,7 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 完成後独立再解答: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_reanswer.md`
 - 最終QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_final_qa.md`
 - completion: `in_progress`
-- stage: `PROGRESS_RECORDS_SYNCED`
+- stage: `FINAL_QA_COMPLETE`
 
 ## Topic 18 固定範囲
 
@@ -53,7 +53,7 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - H23 一次 理論 問8: 二入力、非反転側分圧、仮想短絡、反転側KCL、出力条件
 - H21 一次 理論 問8: 仮想接地、入力電流0、T形帰還抵抗網、反転増幅
 
-直近候補も確認し、R4一次理論問7は利得帯域幅積・周波数特性、R2一次理論問8は電圧安定化・トランジスタ・損失計算、H26一次理論問8は発振回路が固定範囲外体系として必要になるため品質ゲートへ採用しない。R8二次は2026-09-18時点で未実施。R7〜R1二次「機械・制御」「電力・管理」を確認したが、固定範囲だけで完答する直接対応記述問題は確認できなかった。
+直近候補も確認済み。R4一次理論問7は利得帯域幅積・周波数特性、R2一次理論問8は電圧安定化・トランジスタ・損失計算、H26一次理論問8は発振回路が固定範囲外体系として必要になるため非採用。R8二次は2026-09-18時点で未実施。R7〜R1二次「機械・制御」「電力・管理」には固定範囲だけで完答する直接対応記述問題を確認できなかった。
 
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
@@ -64,21 +64,16 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 ## Topic 18 制作前blind独立再解答
 
-記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_blind_reanswer.md`
-
-- R8 一次 理論 問8: `ニ / ヨ / ヌ / ホ / リ` → `5 / 5 PASS`
-- R1 一次 理論 問8: `ヨ / イ / ト / ロ / ヲ` → `5 / 5 PASS`
-- H29 一次 理論 問8: `カ / ハ / ロ / ホ / ヘ` → `5 / 5 PASS`
-- H23 一次 理論 問8: `ヌ / ト / ル / ニ / ヲ` → `5 / 5 PASS`
-- H21 一次 理論 問8: `ル / ニ / ホ / ハ / チ` → `5 / 5 PASS`
+- R8 一次 理論 問8: `5 / 5 PASS`
+- R1 一次 理論 問8: `5 / 5 PASS`
+- H29 一次 理論 問8: `5 / 5 PASS`
+- H23 一次 理論 問8: `5 / 5 PASS`
+- H21 一次 理論 問8: `5 / 5 PASS`
 - 固定一次合計: `25 / 25 PASS`
 - 公式標準解答との一致: `25 / 25`
 - 公式標準解答・保存済み正答の先見: `0件`
-- 二次採用方針変更: `0件`
 - 二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
-- Topic 19以降の先取り: `0件`
-- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
 
 判定: `PASS / BLIND_REANSWER_COMPLETE`
 
@@ -92,8 +87,6 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
-- Topic 19以降の先取り: `0件`
-- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
@@ -107,11 +100,6 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - EXAM_ALIGNMENT必須説明15項目: `15 / 15 covered`
 - 3段階例題: `3 / 3`
 - 例題数値再計算: `3 / 3 PASS`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
-- Topic 19・20の先取り: `0件`
-- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
@@ -127,17 +115,10 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 数値再計算・論理QA: `12 / 12 PASS`
 - 正答一意性: `12 / 12 PASS`
 - 固定一次5問・25答案要素への接続: `25 / 25`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
-- Topic 19・20の先取り: `0件`
-- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ## Topic 18 解説画像PowerPoint QA
-
-記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_powerpoint_qa.md`
 
 - 16:9 / 5枚
 - 200 dpi全スライド表示QA: `5 / 5 PASS`
@@ -149,41 +130,36 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - SPEC固定範囲8項目の可視化: `8 / 8`
 - 固定一次5問・25答案要素の可視化: `25 / 25`
 - 最終スライドに公式過去問出典: `PASS`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
-- Topic 19・20先取り: `0件`
-- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
 
 判定: `PASS / POWERPOINT_COMPLETE`
 
 ## Topic 18 完成後独立再解答
 
-記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_reanswer.md`
-
-- R8 一次 理論 問8: `ニ / ヨ / ヌ / ホ / リ` → `5 / 5 PASS`
-- R1 一次 理論 問8: `ヨ / イ / ト / ロ / ヲ` → `5 / 5 PASS`
-- H29 一次 理論 問8: `カ / ハ / ロ / ホ / ヘ` → `5 / 5 PASS`
-- H23 一次 理論 問8: `ヌ / ト / ル / ニ / ヲ` → `5 / 5 PASS`
-- H21 一次 理論 問8: `ル / ニ / ホ / ハ / チ` → `5 / 5 PASS`
+- R8 一次 理論 問8: `5 / 5 PASS`
+- R1 一次 理論 問8: `5 / 5 PASS`
+- H29 一次 理論 問8: `5 / 5 PASS`
+- H23 一次 理論 問8: `5 / 5 PASS`
+- H21 一次 理論 問8: `5 / 5 PASS`
 - 固定一次合計: `25 / 25 PASS`
 - 公式標準解答との一致: `25 / 25`
-- 完成教材内の理想条件・節点電位・KCL・反転／非反転・加算・差動・帰還抵抗網だけで再構成: `PASS`
 - 教材外知識補完: `0件`
-- 二次採用方針変更: `0件`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
-- Topic 19・20の先取り: `0件`
-- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
 
 判定: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
 
-## Topic 18 初回最終QA
+## Topic 18 初回最終QAと修正
+
+初回最終QAでは技術品質は全件PASSしたが、主source・練習sourceの進捗記録4件が旧工程のままで `NEEDS_REVISION / PROGRESS_RECORDS_OUT_OF_SYNC` とした。
+
+その後、該当4件だけをGitHub正本の実態へ同期した。技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・独立再解答結果は変更していない。
+
+判定: `PASS / topic_18_progress_records_synced / IN_PROGRESS`
+
+## Topic 18 最終QA再実施
 
 記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_final_qa.md`
-
-技術品質は全件PASSした。
 
 - 必須成果物: `PASS`
 - 固定一次5問・25答案要素: `25 / 25 PASS`
@@ -195,34 +171,12 @@ Topic 18は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 練習PDF表示QA: `3 / 3 PASS`
 - 練習12問QA: `12 / 12 PASS`
 - PowerPoint表示QA: `5 / 5 PASS`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXの修正blocker: `0件`
+- 初回進捗記録blocker: `4 / 4解消`
+- 技術成果物の修正blocker: `0件`
+- 仕様外追加: `0件`
 
-進捗記録のみ4件不整合。
-
-1. 主source冒頭: stage `EXPLANATION_PDF_COMPLETE`、次工程 `練習問題source＋練習PDF` のまま
-2. 主source末尾: 次工程 `練習問題source＋練習PDF` のまま
-3. 練習source冒頭: stage `PRACTICE_PDF_COMPLETE`、次工程 `解説画像PowerPoint＋表示QA` のまま
-4. 練習source末尾: 次工程 `解説画像PowerPoint＋表示QA` のまま
-
-判定: `NEEDS_REVISION / PROGRESS_RECORDS_OUT_OF_SYNC`
-
-## Topic 18 進捗記録同期
-
-初回最終QAで指摘された4箇所だけを同期した。
-
-- main source `## 状態`: `PROGRESS_RECORDS_SYNCED`、練習PDF・PowerPoint・完成後独立再解答済みへ同期
-- main source末尾 `## 9. 次工程`: Topic 18最終QA再実施へ同期
-- 練習source `## 状態`: `PROGRESS_RECORDS_SYNCED`、PowerPoint・完成後独立再解答済みへ同期
-- 練習source末尾 `# 次工程`: Topic 18最終QA再実施へ同期
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・独立再解答結果の変更: `0件`
-- 固定一次5問・25答案要素: 維持
-- 完成後独立再解答: `25 / 25 PASS` 維持
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
-
-判定: `PASS / topic_18_progress_records_synced / IN_PROGRESS`
+判定: `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
 
 ## 次工程
 
-Topic 18最終QAを再実施する。固定一次5問・25答案要素、完成後独立再解答 `25 / 25 PASS`、解説PDF・練習PDF・PowerPoint各QA、SPEC境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
+Topic 18を `completed` へ状態同期する。完成数を `18 / 21` に更新するのは、この状態同期が完了した時点とする。
