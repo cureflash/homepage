@@ -3,340 +3,56 @@
 更新日: 2026-09-18
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は完成済み。active themeはTopic 15。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は完成済み。active themeはTopic 15 `回生した電気はどこへ行く？`。
+
+詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 14 `駅やトンネルにはどう電気を配る？` の最終QAを再実施した。初回最終QAで唯一FAILだった旧工程5箇所（`14_distribution_explanation_qa.md`、`14_distribution_practice_source.md`、`14_distribution_practice_qa.md`、`14_distribution_powerpoint_qa.md`、`14_distribution_independent_reanswer.md`）が現在地へ同期済みであることを再確認し、技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を全件PASSと判定した。Topic 14を `PASS / completed` とし、main source・STATUS・HANDOFF・Webカタログを同期した。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更していない。
+Topic 15の制作前EXAM_ALIGNMENTを完了した。電気技術者試験センター公式過去問を直近年度から遡り、`SPEC.md` の固定範囲（回生電力、電力系統、電力融通、負荷、蓄電池、回生失効、電力貯蔵、需給バランス、省エネルギー）だけで解答要求を構成できる5出題回・8答案要素に固定した。
+
+source: `topics/15_regenerative_power/15_regenerative_power.md`
+
+固定品質ゲート:
+- R8上 電力 問5 — 蓄電池・二次電池・出力平滑化・電力貯蔵
+- R7上 法規 問13(a)(b) — 発電と負荷の時間変化、余剰送電、自家消費、自給率
+- R4下 電力 問11 — 需給バランス、負荷平準化、蓄電池・電力貯蔵
+- H29 法規 問13(a)(b) — 発電・負荷・系統との送受電、自家消費比率
+- H25 法規 問12(a)(b) — R7上法規問13の再出題元。同一解法の再現性確認
+
+集計:
+- 制作前EXAM_ALIGNMENT: 完了
+- 固定問題: `5出題回・8答案要素`
+- 実質問題パターン: `4`（R7上法規問13はH25法規問12の再出題）
+- 公式問題・公式解答正本確認: 完了
+- 電験学習資料2系統以上確認: 完了
+- e-sysnet: Topic 15直結の電力ページはサイト内検索で未確認。電池化学ページは固定範囲を広げないため補助参照に限定
+- SPEC固定範囲外の採用問題: `0件`
+- 件数合わせの仕様追加: `0件`
+- 未確認新幹線実設備値の使用: `0件`
+- 制作前独立検証: `未実施`
+
+主な除外候補:
+- H26 電力 問5 — 浮動充電・UPS・鉛蓄電池充電方式が必要
+- R4上 機械 問12 — NAS電池の電気化学詳細が必要
+- R2 電力 問5 — 太陽電池セル電圧・インバータ等が必要
+- R7上 電力 問7 / R5下 電力 問5 — 系統連系保護・電圧制御等が必要
+- R8上 電力 問15 / R6上 電力 問2 — 揚水発電の水力計算が中心
+- R4下 法規 問10 — 電気事業法上の広域運営・供給計画が主題
+- H20 法規 問13 — 内容は適合するが現行公式公開ページで問題・解答正本を確認できず品質ゲートから除外
+
+## 範囲境界
+- 回生電力が架線へ戻った後、他負荷・系統・蓄電設備へ流れる電力収支を扱う。
+- `P[kW]` と `W[kWh]`、`W=Pt`、時間変化時の面積計算、余剰・不足・送受電、自家消費を扱う。
+- 蓄電池は電力貯蔵・充放電の役割まで。電池化学・UPS・充電方式へ広げない。
+- 需給調整で固定過去問に現れる太陽光・揚水・運転予備力・火力は必要最小限の例に限定する。
+- 回生失効の具体的車両制御や新幹線実設備値は一次資料確認前に断定しない。
+- Topic 16の総合系統計算は先取りしない。
+
+## 次
+Topic 15の制作前独立検証を行う。固定5出題回・8答案要素を公式解答番号を参照せず独立再解答し、Topic 15固定範囲だけで全答案要素を根拠付きで解けることを確認する。PASS後に解説本文＋3段階例題へ進む。
+
+## 直前完了テーマ
+Topic 14 `駅やトンネルにはどう電気を配る？` は `PASS / completed`。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
 
 source: `topics/14_distribution/14_distribution.md`
-解説PDF: `topics/14_distribution/14_distribution_explanation.pdf`
-解説PDF QA: `topics/14_distribution/14_distribution_explanation_qa.md`
-練習問題source: `topics/14_distribution/14_distribution_practice_source.md`
-練習PDF: `topics/14_distribution/14_distribution_practice.pdf`
-練習PDF QA: `topics/14_distribution/14_distribution_practice_qa.md`
-解説画像PowerPoint: `topics/14_distribution/14_distribution_images.pptx`
-PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
-完成後独立再解答: `topics/14_distribution/14_distribution_independent_reanswer.md`
 最終QA: `topics/14_distribution/14_distribution_final_qa.md`
-Webカタログ: `../../qualifications/denken-shinkansen/catalog.json`
-
-現在の品質ゲート:
-- 制作前EXAM_ALIGNMENT: 完了
-- 固定問題: `5問・6答案要素`
-- R8上 電力 問13 — 単相三線式、配電変圧器、電圧降下 — `(2)` PASS
-- R7下 電力 問10 — 地中ケーブル布設方式、放熱、許容電流 — `(5)` PASS
-- R3 電力 問12 — 単相三線式の構成・特徴 — `(5)` PASS
-- H23 電力 問9 — 単相三線式、配電変圧器、電圧降下 — `(1)` PASS
-- H20 電力 問17(a)(b) — 三相三線式高圧配電、電圧降下、断面積逆算 — `(2),(3)` PASS
-- 制作前独立検証: `6 / 6 PASS`
-- 公式解答との一致: `6 / 6 PASS`
-- 公式解答との不一致: `0件`
-- 解説本文: §1〜§16 完成
-- 3段階例題: 基礎・本試験標準・複合 各1問完成
-- 3段階例題独立再計算: `3 / 3 PASS`
-- 固定5問・6答案要素の本文要求事項マッピング: `6 / 6 PASS`
-- 解説PDF: A4縦4ページ
-- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF数値・論理再検算: `3 / 3 PASS`
-- 固定5問・6答案要素のPDF対応: `6 / 6`
-- 練習問題source: 全12問・全問五肢択一
-- 練習難易度: 基礎3 / 本試験標準7 / 複合2
-- 練習source数値・論理独立再計算: `12 / 12 PASS`
-- 練習source正答一意性: `12 / 12 PASS`
-- 練習source固定5問・6答案要素への接続: `6 / 6 PASS`
-- 練習PDF: A4縦4ページ
-- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF数値・論理再検算: `12 / 12 PASS`
-- 練習PDF正答一意性: `12 / 12 PASS`
-- 解説画像PowerPoint: 16:9・4枚
-- PowerPoint固定5問・6答案要素の要求事項可視化: `6 / 6 PASS`
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPoint overflow: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- 完成後独立再解答: `6 / 6 PASS`
-- 完成後独立答案: R8上問13 `(2)`、R7下問10 `(5)`、R3問12 `(5)`、H23問9 `(1)`、H20問17(a)(b) `(2),(3)`
-- 公式解答一致: `6 / 6 PASS`
-- 教材外知識補完: `0件`
-- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案の練習source・PDF・PowerPoint転記 `0件`
-- SPEC固定範囲外の採用問題・本文・PDF・PowerPoint追加: `0件`
-- 既完了Topic固定過去問との重複採用: `0件`
-- Topic 15論点先取り: `0件`
-- 未確認新幹線実設備値への依存・真値化・再解答使用: `0件`
-- 件数合わせの仕様追加: `0件`
-- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・PDF/PPTX QA・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
-- 旧進捗記録5箇所同期: 完了
-- 最終QA再実施: `PASS / completed`
-- Webカタログ登録: 完了
-
-## 前回進捗（Topic 13）
-Topic 13 `新幹線の架線は何でできている？` の最終QAを再実施した。初回最終QAで唯一FAILだった進捗記録整合について、`13_electrical_materials_explanation_qa.md`、`13_electrical_materials_practice_source.md`、`13_electrical_materials_practice_qa.md`、`13_electrical_materials_powerpoint_qa.md`、`13_electrical_materials_independent_reanswer.md` の5箇所が現在地へ同期済みであることを再確認し、技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を全件PASSと判定した。Topic 13を `PASS / completed` とし、main source・STATUS・HANDOFFを同期した。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更していない。
-
-source: `topics/13_electrical_materials/13_electrical_materials.md`
-解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
-解説PDF QA: `topics/13_electrical_materials/13_electrical_materials_explanation_qa.md`
-練習問題source: `topics/13_electrical_materials/13_electrical_materials_practice_source.md`
-練習PDF: `topics/13_electrical_materials/13_electrical_materials_practice.pdf`
-練習PDF QA: `topics/13_electrical_materials/13_electrical_materials_practice_qa.md`
-解説画像PowerPoint: `topics/13_electrical_materials/13_electrical_materials_images.pptx`
-PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoint_qa.md`
-完成後独立再解答: `topics/13_electrical_materials/13_electrical_materials_independent_reanswer.md`
-最終QA: `topics/13_electrical_materials/13_electrical_materials_final_qa.md`
-
-固定問題:
-- R8上 電力 問14 — 絶縁材料
-- R7下 電力 問14 — 磁性材料・鉄損
-- R6下 電力 問14 — 銅・軟銅/硬銅・導電率
-- R5下 電力 問14 — 銅/アルミニウム・ACSR・強度
-- R5上 電力 問14 — アモルファス磁性材料
-
-現在の品質ゲート:
-- 制作前EXAM_ALIGNMENT: 完了
-- 固定問題: `5問・5答案要素`
-- 制作前独立検証: `5 / 5 PASS`
-- 公式解答との不一致: `0件`
-- 解説本文: §1〜§16 完成
-- 3段階例題: 基礎・本試験標準・複合 各1問完成
-- 固定5問・5答案要素の本文要求事項マッピング: `5 / 5 PASS`
-- 3段階例題独立再計算・正答一意性: `3 / 3 PASS`
-- 解説PDF: A4縦4ページ
-- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 練習問題source: 全12問・全問五肢択一
-- 練習難易度: 基礎3 / 本試験標準7 / 複合2
-- 練習source数値・論理独立再計算: `12 / 12 PASS`
-- 練習source正答一意性: `12 / 12 PASS`
-- 練習source固定5問・5答案要素への接続: `5 / 5 PASS`
-- 練習PDF: A4縦4ページ
-- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF数値・論理再検算: `12 / 12 PASS`
-- 練習PDF正答一意性: `12 / 12 PASS`
-- 練習PDF固定5問・5答案要素への接続: `5 / 5 PASS`
-- SPEC固定範囲外追加: `0件`
-- Topic 14以降の論点先取り: `0件`
-- 未確認新幹線実設備値の真値化: `0件`
-- 解説画像PowerPoint: 16:9・4枚
-- PowerPoint固定5問・5答案要素の要求事項可視化: `5 / 5 PASS`
-- PowerPoint表示QA: 1601×900 `4 / 4 PASS`
-- PowerPoint overflow: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint内数値・論理QA: `PASS`
-- 完成後ブラインド独立再解答: `5 / 5 PASS`
-- 公式解答一致: `5 / 5 PASS`
-- 教材外知識補完: `0件`
-- Topic 14以降の論点による補完: `0件`
-- SPEC固定範囲外追加（独立再解答時）: `0件`
-- 未確認新幹線実設備値の使用: `0件`
-- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
-- 旧進捗記録5箇所同期: 完了
-- 最終QA再実施: `PASS / completed`
-
-完成後独立答案:
-- R8上 電力 問14: `(2)`
-- R7下 電力 問14: `(3)`
-- R6下 電力 問14: `(4)`
-- R5下 電力 問14: `(5)`
-- R5上 電力 問14: `(2)`
-
-## さらに前の進捗（Topic 12）
-Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の最終QAを再実施した。初回最終QAで唯一FAILだった進捗記録整合について、`12_overhead_line_mechanics_explanation_qa.md`、`12_overhead_line_mechanics_practice_source.md`、`12_overhead_line_mechanics_powerpoint_qa.md`、`12_overhead_line_mechanics_independent_reanswer.md` の4箇所が現在地へ同期済みであることを再確認し、技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を全件PASSと判定した。Topic 12を `PASS / completed` とし、main source・STATUS・HANDOFFを同期した。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更していない。
-
-完成後独立答案:
-- R7上 電力 問12: `(4)`
-- R6下 電力 問13: `(3)`
-- R3 電力 問16(a)(b): `(4),(2)`
-- H29 電力 問8: `(2)`
-- H24 電力 問13: `(3)`
-
-source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
-解説PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation.pdf`
-解説PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation_qa.md`
-練習問題source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_practice_source.md`
-練習PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_practice.pdf`
-練習PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_practice_qa.md`
-解説画像PowerPoint: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_images.pptx`
-PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_powerpoint_qa.md`
-完成後独立再解答: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_independent_reanswer.md`
-最終QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_final_qa.md`
-
-固定問題:
-- R7上 電力 問12
-- R6下 電力 問13
-- R3 電力 問16 (a)(b)
-- H29 電力 問8
-- H24 電力 問13
-
-## Topic 12 固定範囲
-`SPEC.md` から追加しない。
-
-- 電線の自重
-- 弛度
-- 支持点
-- 径間
-- 張力
-- 温度
-- 風圧荷重
-- 着雪
-- 電線伸縮
-- 波動伝播の基本
-- 高速集電
-
-品質ゲートの中心は弛度・径間・水平張力・電線実長・温度伸縮。`D=wS^2/(8T)`、`L≈S+8D^2/(3S)`、`ΔL=αLΔθ` を本試験標準の逆算まで扱う。風圧荷重・着雪は単位長さ当たり荷重への影響、波動伝播は張力と線密度に依存する基本関係、高速集電はその物理的接続までとする。未確認の架線張力・波動速度・接触力・構成寸法、パンタグラフ制御・空力、Topic 13の材料論点、支持物・支線設計、法規上の風圧荷重区分は追加しない。
-
-H25 電力 問9は架線張力に関連するが、支線・支柱の幾何と支持物設計が中心で固定範囲外の独立論点を要するため品質ゲートから除外。H24 電力 問13はR6下 電力 問13と同型だが、温度上昇と弛度の継続出題確認として採用した。
-
-## Topic 12 現在の品質ゲート
-- 制作前EXAM_ALIGNMENT: 完了
-- 固定問題: `5問・6答案要素`
-- 制作前独立検証: `6 / 6 PASS`
-- 公式解答との不一致: `0件`
-- 解説本文: §1〜§14 完成
-- 3段階例題: 基礎・本試験標準・複合 各1問完成
-- 固定5問・6答案要素の本文要求事項マッピング: `6 / 6 PASS`
-- 3段階例題独立再計算: `3 / 3 PASS`
-- 解説PDF: A4縦4ページ
-- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF数値・論理再検算: `3 / 3 PASS`
-- 練習問題source: 全12問・全問五肢択一
-- 練習難易度: 基礎3 / 本試験標準7 / 複合2
-- 練習source数値・論理独立再計算: `12 / 12 PASS`
-- 練習source正答一意性: `12 / 12 PASS`
-- 練習source固定5問・6答案要素への接続: `6 / 6`
-- 練習PDF: A4縦4ページ
-- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF数値・論理再検算: `12 / 12 PASS`
-- 練習PDF正答一意性: `12 / 12 PASS`
-- 練習PDF固定5問・6答案要素への接続: `6 / 6`
-- 解説画像PowerPoint: 16:9・4枚
-- PowerPoint固定5問・6答案要素の要求事項可視化: `6 / 6`
-- PowerPoint表示QA: 1601×900 `4 / 4 PASS`
-- PowerPoint overflow: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint内数値・論理再検算: `PASS`
-- 完成後ブラインド独立再解答: `6 / 6 PASS`
-- 公式解答一致: `6 / 6 PASS`
-- 教材外知識補完: `0件`
-- Topic 13以降の論点による補完: `0件`
-- SPEC固定範囲外追加（独立再解答時）: `0件`
-- 未確認新幹線実設備値の使用: `0件`
-- main sourceへの完成後独立再解答結果同期: 完了
-- SPEC固定範囲外の採用問題・本文・PDF・PowerPoint追加: `0件`
-- 件数合わせの仕様追加: `0件`
-- 制作前の保存済み正答・選択肢番号の完成教材転記: `0件`
-- 前回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・必須成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程4箇所）
-- 旧進捗記録4箇所同期: 完了
-- 最終QA再実施: `PASS / completed`
-
-## 前テーマ記録
-Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / completed`。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、必須成果物、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASS確認済み。
-
-固定結果:
-- 品質ゲート対象: 公式過去問5問・7答案要素
-- R5下 電力 問16 (a)(b): `(2),(4)`
-- R5上 電力 問16 (a)(b): `(4),(2)`
-- R2 電力 問8: `(4)`
-- R2 電力 問9: `(2)`
-- H22 電力 問8: `(3)`
-- 制作前独立検証: `7 / 7 PASS`
-- 解説本文: §1〜§15 完成
-- 3段階例題: 基礎・本試験標準・複合 各1問完成
-- 固定5問・7答案要素の本文要求事項マッピング: `7 / 7`
-- 解説PDF: `topics/11_fault_protection/11_fault_protection_explanation.pdf`
-- 解説PDF QA: `topics/11_fault_protection/11_fault_protection_explanation_qa.md`
-- 練習問題source: `topics/11_fault_protection/11_fault_protection_practice_source.md`
-- 練習PDF: `topics/11_fault_protection/11_fault_protection_practice.pdf`
-- 練習PDF QA: `topics/11_fault_protection/11_fault_protection_practice_qa.md`
-- 解説画像PowerPoint: `topics/11_fault_protection/11_fault_protection_images.pptx`
-- PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
-- 完成後独立再解答: `topics/11_fault_protection/11_fault_protection_independent_reanswer.md`
-- 最終QA: `topics/11_fault_protection/11_fault_protection_final_qa.md`
-- 最終QA判定: `PASS / completed`
-
-## 現在状態
-- `current_status`: `topic_14_completed`
-- 完成数: `14 / 16`
-- last completed: Topic 14 `駅やトンネルにはどう電気を配る？`
-- active: Topic 15 `回生した電気はどこへ行く？`
-- Topic 14 source: `topics/14_distribution/14_distribution.md`
-- Topic 14 解説PDF: `topics/14_distribution/14_distribution_explanation.pdf`
-- Topic 14 解説PDF QA: `topics/14_distribution/14_distribution_explanation_qa.md`
-- Topic 14 練習問題source: `topics/14_distribution/14_distribution_practice_source.md`
-- Topic 14 練習PDF: `topics/14_distribution/14_distribution_practice.pdf`
-- Topic 14 練習PDF QA: `topics/14_distribution/14_distribution_practice_qa.md`
-- Topic 14 解説画像PowerPoint: `topics/14_distribution/14_distribution_images.pptx`
-- Topic 14 PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
-- Topic 14 完成後独立再解答: `topics/14_distribution/14_distribution_independent_reanswer.md`
-- Topic 14 最終QA: `topics/14_distribution/14_distribution_final_qa.md`
-- Topic 14 固定問題: `5問・6答案要素`
-- Topic 14 制作前EXAM_ALIGNMENT: 完了
-- Topic 14 制作前独立検証: `6 / 6 PASS`
-- Topic 14 公式解答一致: `6 / 6 PASS`
-- Topic 14 解説本文: §1〜§16 完成
-- Topic 14 3段階例題: `3 / 3 PASS`
-- Topic 14 本文要求事項マッピング: `6 / 6 PASS`
-- Topic 14 解説PDF: A4縦4ページ
-- Topic 14 解説PDF表示QA: 200 dpi `4 / 4 PASS`
-- Topic 14 解説PDF文字抽出QA: `PASS`
-- Topic 14 解説PDF数値・論理再検算: `3 / 3 PASS`
-- Topic 14 固定5問・6答案要素のPDF対応: `6 / 6`
-- Topic 14 練習source: 全12問・全問五肢択一
-- Topic 14 練習難易度: 基礎3 / 本試験標準7 / 複合2
-- Topic 14 練習source数値・論理独立再計算: `12 / 12 PASS`
-- Topic 14 練習source正答一意性: `12 / 12 PASS`
-- Topic 14 練習source固定5問・6答案要素への接続: `6 / 6 PASS`
-- Topic 14 練習PDF表示・文字QA: `PASS`
-- Topic 14 練習PDF再検算・正答一意性: `12 / 12 PASS`
-- Topic 14 PowerPoint可視化: `6 / 6 PASS`
-- Topic 14 PowerPoint表示QA: `4 / 4 PASS`
-- Topic 14 PowerPoint overflow: `0件`
-- Topic 14 PowerPoint ZIP整合性: `PASS`
-- Topic 14 完成後独立再解答: `6 / 6 PASS`
-- Topic 14 完成後公式解答一致: `6 / 6 PASS`
-- Topic 14 教材外知識補完: `0件`
-- Topic 14 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案の練習source・PDF・PowerPoint転記 `0件`
-- Topic 14 SPEC固定範囲外採用・本文・PDF・PowerPoint追加: `0件`
-- Topic 14 既完了Topic固定過去問との重複採用: `0件`
-- Topic 14 未確認新幹線実設備値への依存・真値化・再解答使用: `0件`
-- Topic 14 Topic 15論点先取り: `0件`
-- Topic 14 件数合わせの仕様追加: `0件`
-- Topic 14 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- Topic 14 初回最終QAで技術内容・必須成果物・固定EXAM_ALIGNMENT・独立再解答・PDF/PPTX QA・SPEC境界: PASS
-- Topic 14 初回最終QAで進捗記録整合: FAIL（旧工程5箇所）
-- Topic 14 旧進捗記録5箇所同期: 完了
-- Topic 14 最終QA再実施: `PASS / completed`
-- Topic 14 Webカタログ登録: 完了
-- Topic 13 source: `topics/13_electrical_materials/13_electrical_materials.md`
-- Topic 13 解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
-- Topic 13 練習問題source: `topics/13_electrical_materials/13_electrical_materials_practice_source.md`
-- Topic 13 練習PDF: `topics/13_electrical_materials/13_electrical_materials_practice.pdf`
-- Topic 13 練習PDF QA: `topics/13_electrical_materials/13_electrical_materials_practice_qa.md`
-- Topic 13 解説画像PowerPoint: `topics/13_electrical_materials/13_electrical_materials_images.pptx`
-- Topic 13 PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoint_qa.md`
-- Topic 13 完成後独立再解答: `topics/13_electrical_materials/13_electrical_materials_independent_reanswer.md`
-- Topic 13 最終QA: `topics/13_electrical_materials/13_electrical_materials_final_qa.md`
-- Topic 13 固定問題: `5問・5答案要素`
-- Topic 13 制作前EXAM_ALIGNMENT: 完了
-- Topic 13 制作前独立検証: `5 / 5 PASS`
-- Topic 13 解説本文: §1〜§16 完成
-- Topic 13 3段階例題: `3 / 3 PASS`
-- Topic 13 本文要求事項マッピング: `5 / 5 PASS`
-- Topic 13 解説PDF QA: `PASS`
-- Topic 13 練習source QA: `12 / 12 PASS`、固定5問・5答案要素接続 `5 / 5 PASS`
-- Topic 13 練習PDF QA: 表示 `4 / 4 PASS`、文字抽出 `PASS`、再検算・正答一意性 `12 / 12 PASS`、固定5問・5答案要素接続 `5 / 5 PASS`
-- Topic 13 PowerPoint QA: 固定5問・5答案要素可視化 `5 / 5 PASS`、表示 `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`
-- Topic 13 完成後ブラインド独立再解答: `5 / 5 PASS`
-- Topic 13 公式解答一致: `5 / 5 PASS`
-- Topic 13 教材外知識補完: `0件`
-- Topic 13 SPEC固定範囲外追加: `0件`
-- Topic 13 未確認新幹線実設備値の真値化: `0件`
-- Topic 13 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（進捗記録整合のみFAIL: 旧工程5箇所）
-- Topic 13 旧進捗記録5箇所同期: 完了
-- Topic 13 最終QA再実施: `PASS / completed`
-- Topic 12 最終QA: `PASS / completed`
-
-## 次の正確な開始点
-Topic 15 `回生した電気はどこへ行く？` の制作前EXAM_ALIGNMENTを行う。`SPEC.md` のTopic 15固定範囲だけで解ける公式過去問を直近年度から遡って調査し、件数合わせの仕様追加をしない。
