@@ -332,5 +332,13 @@ Cは正しい。同期発電機の遅れ力率0では減磁作用となる。D�
 - 突極機・円筒機の詳細理論追加: `0件`
 - 未確認L0系実車値追加: `0件`
 
+## 後続工程同期
+- 練習PDF: `16_synchronous_machine_practice.pdf` 完成（A4縦2ページ）
+- 練習PDF QA: `16_synchronous_machine_practice_pdf_qa.md` / `PASS`
+- 200 dpi表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- 正答一覧source一致: `12 / 12 PASS`
+- 固定6問・6答案要素への接続: `6 / 6 PASS`
+
 ## 次工程
-Topic 16の練習PDFを作成し、表示QA・文字抽出QA・正答一覧source一致・固定6問・6答案要素への接続を確認する。
+Topic 16の解説画像PowerPointを作成する。
