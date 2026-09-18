@@ -9,11 +9,13 @@ Topic 16は制作前EXAM_ALIGNMENT固定後、解説source・解説PDF・練習s
 
 改訂後blind独立再解答は、公式解答照合前に commit `a6d6452528cf03e9a055d9410aff8c33c3503dd6` で答案を固定し、その後公式解答と照合して `6 / 6 PASS`。教材内根拠 `6 / 6 PASS`、固定範囲外知識による答案補完0件、固定EXAM_ALIGNMENT変更0件。
 
-2026-09-19に最終QA再判定を実施。技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、固定範囲境界、改訂後blind独立再解答はすべてPASSしたが、複数のsource/QA記録に旧進捗文言が残っており、進捗記録整合のみFAIL。したがってTopic 16はまだcompletedにしない。
+2026-09-19の前回最終QA再判定では、技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、固定範囲境界、改訂後blind独立再解答はすべてPASSしたが、複数のsource/QA記録に旧進捗文言が残っていたため進捗記録整合のみFAILだった。
 
-状態: `topic_16_final_qa_needs_revision / IN_PROGRESS`
+今回、`16_synchronous_machine.md`、`16_synchronous_machine_practice.md`、`16_synchronous_machine_explanation_pdf_qa.md`、`16_synchronous_machine_practice_pdf_qa.md` の4ファイルを、再同期済みPDF/PPTXと改訂後blind `6 / 6 PASS` の現状へ同期した。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
 
-## 最終QAで確認したPASS項目
+状態: `topic_16_progress_records_synchronized / IN_PROGRESS`
+
+## 最終QAで確認済みのPASS項目
 - 必須成果物存在: `PASS`
   - `topics/16_synchronous_machine/16_synchronous_machine.md`
   - `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf`
@@ -29,22 +31,27 @@ Topic 16は制作前EXAM_ALIGNMENT固定後、解説source・解説PDF・練習s
 - 固定範囲外追加: `0件`
 - 固定範囲外知識による答案補完: `0件`
 
-## 最終QAで検出した未整合
+## 進捗記録整合の修正
+前回最終QAで検出した4件を同期済み。
+
 1. `topics/16_synchronous_machine/16_synchronous_machine.md`
-   - 冒頭状態が旧 `topic_16_vector_source_remediation_complete / IN_PROGRESS`
-   - 完成後blind節が旧 `5 / 6 PASS / NEEDS_REVISION`
-   - 次工程が旧「解説PDFへ反映」のまま
+   - 状態を現状へ同期
+   - 完成後blind節を改訂後 `6 / 6 PASS` へ同期
+   - 成果物・QA進捗を再同期済みPDF/PPTXへ同期
+   - 次工程を最終QA再判定へ更新
 2. `topics/16_synchronous_machine/16_synchronous_machine_practice.md`
-   - 練習PDFを `本source改訂未反映 / REGEN_REQUIRED` とする旧状態が残存
-   - 次工程が旧「練習PDFへ反映」のまま
+   - 練習PDFを本source改訂反映済み `PASS` へ同期
+   - PowerPoint・blind結果を現状へ同期
+   - 次工程を最終QA再判定へ更新
 3. `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md`
-   - 末尾のTopic 16全体判定が「練習PDF・PowerPoint未同期 / blind再実施前」の旧状態
+   - Topic 16全体の派生成果物同期・blind `6 / 6 PASS` を反映
 4. `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md`
-   - 次工程が旧「PowerPoint再同期」のまま
+   - PowerPoint再同期済み・blind `6 / 6 PASS` を反映
+   - 次工程を最終QA再判定へ更新
 
-最終QA判定: `NEEDS_REVISION / IN_PROGRESS`。
-
-修正対象は進捗記録文言のみ。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+進捗記録整合修正: `PASS`。
+前回最終QA判定: `NEEDS_REVISION / IN_PROGRESS`。
+現在は最終QA再判定待ちで、まだcompleted化しない。
 
 ## Topic 16 固定範囲
 - 同期機
@@ -112,4 +119,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。完成後blind独立再解答 `5 / 5 PASS`。
 
 ## 次工程
-Topic 16の進捗記録整合を1段階進める。`16_synchronous_machine.md`、`16_synchronous_machine_practice.md`、`16_synchronous_machine_explanation_pdf_qa.md`、`16_synchronous_machine_practice_pdf_qa.md` の古い進捗・次工程文言を、再同期済みPDF/PPTXと改訂後blind `6 / 6 PASS` の現状へ合わせる。技術内容・固定EXAM_ALIGNMENT・問題・正答・派生成果物は変更しない。
+Topic 16の最終QAを再判定する。進捗記録整合を含め、必須成果物、PDF/PPTX QA、固定EXAM_ALIGNMENT、固定範囲境界、改訂後blind独立再解答を再確認する。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・派生成果物は変更しない。
