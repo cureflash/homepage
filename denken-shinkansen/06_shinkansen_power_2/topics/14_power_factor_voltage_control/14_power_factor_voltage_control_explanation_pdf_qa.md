@@ -105,4 +105,8 @@ sourceの代表値を独立再計算した。
 
 `PASS`
 
-前回blocker 4件は全解消。次工程は、保存済み正答を先に見ず、固定5問・21答案要素の完成後blind独立再解答を再実施する。全21答案要素PASSまでは最終QAへ進めない。
+## 進捗同期（2026-09-19）
+
+完成後blind独立再解答は修正版learner-facing成果物に対して再実施済みで、固定5問・21答案要素は `21 / 21 PASS`。その後のTopic 14最終QAは `NEEDS_REVISION / IN_PROGRESS` となった。
+
+本PDFおよび本QA自体に新たな技術blockerはない。Topic全体の残作業は、旧進捗記録の同期、現行GitHub正本PowerPointの再QA、Webカタログ登録、最終QA再判定である。固定EXAM_ALIGNMENTと教材技術範囲は変更しない。
