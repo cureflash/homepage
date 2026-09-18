@@ -8,11 +8,11 @@ Topic 01〜15は `completed`。
 
 完成数: `15 / 20`
 
-current_status: `topic_16_explanation_source_complete`
+current_status: `topic_16_progress_records_synced`
 
 active_topic: `16 数値微分・数値積分`
 
-次工程: Topic 16の解説PDFを作成し、表示QA・文字抽出QAを行う。
+次工程: Topic 16の最終QAを再判定する。
 
 ## 上位仕様
 
@@ -1242,8 +1242,8 @@ source:
 - スプライン・有限要素法等の別算法追加: 0件
 - 未確認実車値依存: 0件
 
-current_status: `topic_16_explanation_source_complete`
+current_status: `topic_16_progress_records_synced`
 
 ## 次に行うこと
 
-Topic 16 `数値微分・数値積分` の解説PDFを作成し、表示QA・文字抽出QAを行う。固定4問・8答案要素への本文マッピング `8 / 8` を維持し、仕様外論点を追加しない。
+Topic 16の最終QAを再判定する。
