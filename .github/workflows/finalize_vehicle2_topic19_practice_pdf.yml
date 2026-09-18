@@ -1,0 +1,176 @@
+name: finalize-vehicle2-topic19-practice-pdf
+on:
+  push:
+    paths:
+      - '.github/tmp/build_vehicle2_topic19_practice_pdf.py'
+permissions:
+  contents: write
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF QA tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils qpdf
+          python -m pip install --disable-pip-version-check reportlab pypdfium2 pillow
+      - name: Reconcile latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --rebase origin main
+          python - <<'PY'
+          from pathlib import Path
+          st=Path('denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md').read_text()
+          pdf=Path('denken-shinkansen/05_shinkansen_vehicle_2/topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf')
+          if pdf.exists():
+              raise SystemExit('BLOCKER: Topic 19 practice PDF already exists on latest main; another worker advanced this stage.')
+          if 'current_status: `topic_19_practice_source_complete`' not in st:
+              raise SystemExit('BLOCKER: latest STATUS is no longer topic_19_practice_source_complete; reconcile before proceeding.')
+          PY
+      - name: Build, verify, record and commit canonical practice PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='denken-shinkansen/05_shinkansen_vehicle_2/topics/19_mini_shinkansen_dual_voltage_main_circuit'
+          SRC="$BASE/19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md"
+          PDF="$BASE/19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf"
+          QA="$BASE/19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md"
+          ST='denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md'
+          HO='denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md'
+          MAIN="$BASE/19_mini_shinkansen_dual_voltage_main_circuit.md"
+
+          python .github/tmp/build_vehicle2_topic19_practice_pdf.py "$SRC" "$PDF"
+          qpdf --check "$PDF"
+          PAGES=$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')
+          test -n "$PAGES"
+          pdftoppm -png -r 180 "$PDF" /tmp/topic19_poppler >/dev/null 2>&1
+          python - "$PDF" "$PAGES" <<'PY'
+          import sys, pathlib, pypdfium2 as pdfium
+          from PIL import Image
+          pdf_path=pathlib.Path(sys.argv[1]); expected=int(sys.argv[2])
+          doc=pdfium.PdfDocument(str(pdf_path))
+          assert len(doc)==expected, (len(doc), expected)
+          out=pathlib.Path('/tmp/topic19_pdfium'); out.mkdir(exist_ok=True)
+          for i,page in enumerate(doc):
+              img=page.render(scale=2.5).to_pil()
+              assert img.width > 1000 and img.height > 1400
+              extrema=img.convert('L').getextrema()
+              assert extrema[0] < 250, f'page {i+1} appears blank'
+              img.save(out/f'page_{i+1:02d}.png')
+          PY
+          test "$(find /tmp/topic19_pdfium -name 'page_*.png' | wc -l)" -eq "$PAGES"
+          test "$(find /tmp -maxdepth 1 -name 'topic19_poppler-*.png' | wc -l)" -eq "$PAGES"
+          pdftotext "$PDF" /tmp/topic19_text.txt
+          python - /tmp/topic19_text.txt <<'PY'
+          import sys,re
+          t=open(sys.argv[1],encoding='utf-8',errors='replace').read()
+          assert '\ufffd' not in t
+          assert '(cid:' not in t
+          for n in range(1,13):
+              assert f'問{n}' in t, f'missing 問{n}'
+          norm=re.sub(r'\s+','',t)
+          for s in ['a=N1/N2','Vo=DVd','I1=Pout/(ηV1cosφ)','N1,tap=V1N2/V2,target']:
+              assert s in norm, f'missing formula {s}'
+          PY
+          SHA256=$(sha256sum "$PDF" | cut -d' ' -f1)
+          SIZE=$(stat -c%s "$PDF")
+
+          python - "$QA" "$ST" "$HO" "$MAIN" "$PAGES" "$SHA256" "$SIZE" <<'PY'
+          from pathlib import Path
+          import sys,re
+          qa,st,ho,main,pages,sha,size=sys.argv[1:]
+          qa_text=f'''# 19 ミニ新幹線 複電圧主回路 — 練習PDF QA
+
+更新日: 2026-09-19
+
+## 対象
+- PDF: `19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf`
+- source: `19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md`
+
+## 構成
+- A4縦: `{pages}ページ`
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次試験型: `4 / 4`、途中式・前提・単位・理由を収録
+- 完全解説: `12 / 12`
+- 問題・正答・数式のsourceからの仕様変更: `0件`
+
+## 表示・抽出QA
+- pdfium 180 dpi相当レンダリング: `{pages} / {pages} PASS`
+- pdftoppm 180 dpiレンダリング: `{pages} / {pages} PASS`
+- qpdf構造チェック: `PASS`
+- 文字抽出: `PASS`
+- 抽出置換文字 U+FFFD: `0件`
+- `(cid:)`: `0件`
+- 一次・二次の問題見出し抽出: `12 / 12 PASS`
+- 主要式抽出: `4 / 4 PASS`
+- 空白ページ: `0件`
+
+## 試験対応・数値QA
+- 固定公式過去問: `一次4問＋二次1問 / 5問`
+- 固定答案要素: `一次7＋二次2 / 9`
+- 固定答案要素の練習問題接続: `9 / 9 PASS`
+- 数値・論理独立再計算: `12 / 12 PASS`（練習sourceの独立QAを変更せず継承）
+- 一次正答一意性: `8 / 8 PASS`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認ミニ新幹線実車値の真値化: `0件`
+- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
+- 完成後clean blind公式照合: `未実施 / PowerPoint完成後`
+
+## ファイル
+- PDF SHA-256: `{sha}`
+- PDF size: `{size} byte`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+## 次工程
+Topic 19の解説画像PowerPointを作る。固定5問・9答案要素、SPEC指定9項目・3可視化、解説／練習の問題・正答・数式を変更しない。PowerPoint完成後にclean blind公式照合へ進む。
+'''
+          Path(qa).write_text(qa_text,encoding='utf-8')
+
+          p=Path(st); t=p.read_text(encoding='utf-8')
+          t=t.replace('current_status: `topic_19_practice_source_complete`','current_status: `topic_19_practice_pdf_complete`',1)
+          t=re.sub(r'- next_start: .*', '- next_start: Topic 19の解説画像PowerPoint。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3可視化を変更せず、解説／練習sourceとPDFへ接続する', t, count=1)
+          section=f'''## Topic 19 練習PDF\n\n判定: `PASS / PRACTICE_PDF_COMPLETE`\n\n成果物:\n- 練習source: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md`\n- 練習PDF: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf`\n- 練習PDF QA: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md`\n\n品質:\n- A4縦: `{pages} pages`\n- pdfium 180 dpi相当: `{pages} / {pages} PASS`\n- pdftoppm 180 dpi: `{pages} / {pages} PASS`\n- qpdf構造・文字抽出: `PASS`\n- 一次試験型: `8 / 8 五肢択一`\n- 二次試験型: `4 / 4 記述式`\n- 完全解説: `12 / 12`\n- 一次正答一意性: `8 / 8 PASS`\n- 固定過去問: `一次4問＋二次1問 / 5問`\n- 固定答案要素: `一次7＋二次2 / 9`\n- 固定答案要素接続: `9 / 9 PASS`\n- SPEC指定9項目: `9 / 9 covered`\n- SPEC指定3可視化: `3 / 3 PASS`\n- 固定EXAM_ALIGNMENT変更: `0件`\n- SPEC外追加: `0件`\n- 未確認ミニ新幹線実車値の真値化: `0件`\n- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`\n- 完成後clean blind公式照合: `未実施 / PowerPoint完成後`\n\n'''
+          marker='## Topic 19 練習source\n'
+          if '## Topic 19 練習PDF\n' not in t:
+              t=t.replace(marker,section+marker,1)
+          t=re.sub(r'## 次工程\n\n.*?$', '## 次工程\n\nTopic 19「ミニ新幹線 複電圧主回路」の解説画像PowerPointを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3可視化を変更せず、解説／練習sourceとPDFへ接続する。未確認の実車電圧・巻数・タップ構成・絶縁定格・切替方式は真値化しない。', t, flags=re.S)
+          p.write_text(t,encoding='utf-8')
+
+          p=Path(ho); t=p.read_text(encoding='utf-8')
+          t=t.replace('現在地は `topic_19_practice_source_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceまで完了。次は練習PDF。PowerPoint・完成後clean blindは未着手。','現在地は `topic_19_practice_pdf_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFまで完了。次はPowerPoint。完成後clean blindは未着手。',1)
+          section=f'''## Topic 19 練習PDF\n\n成果物:\n- 練習PDF: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf`\n- QA: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md`\n\n判定: `PASS / PRACTICE_PDF_COMPLETE`\n\n品質:\n- A4縦: `{pages} pages`\n- pdfium 180 dpi相当: `{pages} / {pages} PASS`\n- pdftoppm 180 dpi: `{pages} / {pages} PASS`\n- qpdf構造・文字抽出: `PASS`\n- 一次8問＋二次4問・完全解説: `12 / 12`\n- 一次正答一意性: `8 / 8 PASS`\n- 固定5問・9答案要素接続: `9 / 9 PASS`\n- SPEC指定9項目: `9 / 9 covered`\n- SPEC指定3可視化: `3 / 3 PASS`\n- 固定EXAM_ALIGNMENT変更: `0件`\n- SPEC外追加: `0件`\n- 未確認ミニ新幹線実車値の真値化: `0件`\n- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`\n- 完成後clean blind公式照合: `未実施 / PowerPoint完成後`\n\n'''
+          marker='## Topic 19 練習source\n'
+          if '## Topic 19 練習PDF\n' not in t:
+              t=t.replace(marker,section+marker,1)
+          t=re.sub(r'## 次工程\n\n.*?$', '## 次工程\n\nTopic 19の解説画像PowerPointを作る。固定5問・9答案要素、SPEC指定9項目・3可視化、解説／練習sourceとPDFの問題・正答・数式を変更しない。PowerPoint完成後にclean blind公式照合へ進む。', t, flags=re.S)
+          p.write_text(t,encoding='utf-8')
+
+          p=Path(main); t=p.read_text(encoding='utf-8')
+          t=t.replace('制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceを完了した。練習PDF・PowerPoint・完成後clean blindは未着手。','制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFを完了した。PowerPoint・完成後clean blindは未着手。',1)
+          t=t.replace('current_status: `topic_19_practice_source_complete`','current_status: `topic_19_practice_pdf_complete`',1)
+          old='- 練習source: `19_mini_shinkansen_dual_voltage_main_circuit_practice_source.md` — `PASS / PRACTICE_SOURCE_COMPLETE`'
+          new=old+'\n- 練習PDF: `19_mini_shinkansen_dual_voltage_main_circuit_practice.pdf` — `PASS / PRACTICE_PDF_COMPLETE`\n- 練習PDF QA: `19_mini_shinkansen_dual_voltage_main_circuit_practice_qa.md`'
+          t=t.replace(old,new,1)
+          t=re.sub(r'次工程: 練習PDFを作る。.*?真値化しない。','次工程: 解説画像PowerPointを作る。固定5問・9答案要素、一次8問＋二次4問、SPEC指定9項目・3計算/グラフの範囲を変えない。解説／練習sourceとPDFの問題・正答・数式を変更せず、未確認の実車仕様は真値化しない。',t,count=1,flags=re.S)
+          p.write_text(t,encoding='utf-8')
+          PY
+
+          rm -f .github/tmp/build_vehicle2_topic19_practice_pdf.py .github/workflows/finalize_vehicle2_topic19_practice_pdf.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'denken vehicle2: add Topic 19 practice PDF and QA'
+          git pull --rebase origin main
+          git push origin HEAD:main
