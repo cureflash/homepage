@@ -6,20 +6,20 @@
 - Topic 01〜16: 最終QA `PASS / completed`
 - 完成数: `16 / 22`
 - active topic: `17 新幹線の速度をフィードバック制御する`
-- current status: `topic_17_powerpoint_complete`
-- 次工程: Topic 17 独立再解答前ゲート
+- current status: `topic_17_blind_reanswer_ready`
+- 次工程: Topic 17 完成後独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 17 source、解説PDF・QA、練習source・練習PDF・QAを再確認した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 17 source、解説PDF・QA、練習source・練習PDF・QA、PowerPoint・QAを再確認した。
 - Topic 16は最終QA `PASS / completed` のままとし、重複制作していない。
 - 最初の未完了テーマはTopic 17「新幹線の速度をフィードバック制御する」。
-- 既存枠で完了済みの制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDFを再利用し、重複制作していない。
+- 既存枠で完了済みの制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・PowerPointを正本としてreconcileし、重複制作していない。
 - 固定一次1問＋二次4問、計5問・6答案要素を変更していない。
-- Topic 17解説画像PowerPointを16:9・4枚で作成し、固定6答案要素を `6 / 6` 可視化した。
-- 120 dpi・1601×900で全4枚表示 `4 / 4 PASS`、PPTX ZIP整合性・PDF文字抽出・overflowをPASS。
-- Topic 18〜21先取り、二自由度制御の独立論点追加、未確認実車値追加、固定問題の正答記号・完成済み解答保存は `0件`。
+- Topic 17独立再解答前ゲートを実施し、公式正答記号・標準解答本文・完成済み個別解答の事前保存 `0件` を確認した。
+- 解説PDF表示 `6 / 6 PASS`、練習PDF表示 `5 / 5 PASS`、PowerPoint表示 `4 / 4 PASS` を維持。
+- Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加は `0件`。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -152,5 +152,14 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `PASS / topic_17_powerpoint_complete`
 
+## Topic 17 独立再解答前ゲート
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_blind_reanswer_gate.md`
+- 最新mainと必須spec、Topic 17全成果物を再監査
+- 固定一次1問＋二次4問、計5問・6答案要素を維持
+- 固定5過去問の公式正答記号・標準解答本文・完成済み個別解答の事前保存 `0件`
+- Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加 `0件`
+
+判定: `BLIND_REANSWER_READY / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 17独立再解答前ゲートを実施する。固定5問・6答案要素を変更せず、公式正答・標準解答・保存済み正答を事前参照しない状態を確認する。
+Topic 17完成後独立再解答を実施する。固定5問・6答案要素を変更せず、完成教材だけを使って答案を先に確定し、その後に公式解答・標準解答と照合する。
