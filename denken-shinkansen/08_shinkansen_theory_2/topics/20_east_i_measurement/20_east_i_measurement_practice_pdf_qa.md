@@ -8,6 +8,7 @@
 - source: `20_east_i_measurement_practice.md`
 - 用紙: A4縦
 - ページ数: 4
+- GitHub正本でPDF本体が欠落していたため、既存sourceから再生成して正本へ復元した。
 
 ## 表示QA
 
@@ -27,7 +28,7 @@
 ## 文字・PDF整合性QA
 
 - `pdftotext`: `PASS`
-- 抽出テキスト: `12,570 bytes`
+- 抽出テキスト: `10,753 bytes`
 - 問1〜問12・正答一覧・完全解説を抽出確認: `PASS`
 - 置換文字 `�`: `0件`
 - フォント参照QA: `PASS`
@@ -36,7 +37,7 @@
 - 暗号化: `なし`
 - scanned判定: `false`
 
-SHA-256: `974ebdac85e8e1ddfd0b603378f470a801f657bd7b6be77bdec9013fd8956c79`
+SHA-256: `1ec964bb8739f19735977d6f7a85a92892f5891544e6426a9d0d8d146be689c1`
 
 ## 内容QA
 

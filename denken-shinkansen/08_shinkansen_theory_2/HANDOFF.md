@@ -6,11 +6,11 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_20_explanation_pdf_complete`
+current_status: `topic_20_practice_pdf_complete`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QAまで完了。系列SPEC固定範囲12項目、品質ゲート一次5問・25答案要素を維持した。固定5問・25答案要素はPDFへ `25 / 25` 接続、必須説明は `20 / 20`、3段階例題は `3 / 3 PASS`。R8/R7/R6/H24は公式標準解答と `20 / 20一致`。H20は現行の電気技術者試験センター公式過去問一覧がH21以降のため、電験王の問題転記・解答で `5 / 5` を二次照合し、公式直接照合済みとは扱わない。二次採用0・数合わせ0。次工程は練習問題source＋練習PDF。
+Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。系列SPEC固定範囲12項目、品質ゲート一次5問・25答案要素を維持した。固定5問・25答案要素は教材へ `25 / 25` 接続、練習12問は `12 / 12` 数値・論理QAおよび正答一意性PASS。二次採用0・数合わせ0。次工程は解説画像PowerPoint＋表示QA。
 
 ## Topic 19 完了状態
 
@@ -36,45 +36,11 @@ Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 制作前blind独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_blind_reanswer.md`
 - 解説PDF: `topics/20_east_i_measurement/20_east_i_measurement_explanation.pdf`
 - 解説PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_explanation_pdf_qa.md`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- 練習source: `topics/20_east_i_measurement/20_east_i_measurement_practice.md`
+- 練習PDF: `topics/20_east_i_measurement/20_east_i_measurement_practice.pdf`
+- 練習PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_practice_pdf_qa.md`
+- stage: `PRACTICE_PDF_COMPLETE`
 - completion: `in_progress`
-
-## Topic 20 解説source
-
-判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-
-品質:
-- SPEC固定範囲: `12 / 12収録`
-- 過去問から逆算した必須説明: `20 / 20収録`
-- 固定一次過去問: `5 / 5接続`
-- 固定答案要素: `25 / 25接続`
-- 3段階例題: `3 / 3`
-- 例題数値独立再計算: `3 / 3 PASS`
-- A/D・サンプリング・エイリアシングを存在しない過去問へ接続: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路・未公開定数の推測追加: `0件`
-
-## Topic 20 解説PDF＋表示QA
-
-- A4縦8ページ
-- 200 dpi全ページ表示QA: `8 / 8 PASS`
-- 文字抽出QA: `PASS`
-- SHA-256: `4adf6ea4c23ff1745174bc90014661e7ffcc6949bfea8bd4dd08ccfae7c8c92d`
-- SPEC固定範囲: `12 / 12収録`
-- 必須説明: `20 / 20収録`
-- 固定一次5問・25答案要素: `25 / 25接続`
-- 3段階例題: `3 / 3収録`
-- 例題数値独立再計算: `3 / 3 PASS`
-- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
-- A/D・サンプリング・エイリアシングを存在しない過去問へ接続: `0件`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路・未公開定数の推測追加: `0件`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## Topic 20 固定範囲
 
@@ -104,8 +70,6 @@ East iが実際に測定する項目はJR東日本等の公開資料で確認す
 - R6 一次 理論 問6: 交流ブリッジ。平衡条件、寄生容量、寄生成分による誤差、補償・ガード、未知量算出。
 - H24 一次 理論 問7: オシロスコープ用プローブ。入力R/C、減衰比、プローブR/C、時定数一致、周波数補償。
 - H20 一次 理論 問6: 電圧計・電流計による電力測定誤差。内部抵抗、二接続法、指示値と真値、誤差率、接続選択。
-
-関連候補としてR4一次理論問8、R3一次理論問8、R2一次理論問6も確認したが、Topic 19との重複またはブリッジ論点の重複を避け、固定5問の範囲を広くするため採用しない。
 
 A/D変換、サンプリング、標本化、エイリアシングは系列SPEC必須。直接対応する二種一次「理論」の固定過去問を捏造せず、教材本文と練習問題で直接補う。
 
@@ -156,6 +120,47 @@ A/D変換、サンプリング、標本化、エイリアシングは系列SPEC�
 - East i内部測定回路の推測追加: `0件`
 - 判定: `PASS / BLIND_REANSWER_COMPLETE`
 
+## Topic 20 解説source
+
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- SPEC固定範囲: `12 / 12収録`
+- 必須説明: `20 / 20収録`
+- 固定一次5問・25答案要素: `25 / 25接続`
+- 3段階例題: `3 / 3 PASS`
+- A/D・サンプリング・エイリアシングを存在しない過去問へ接続: `0件`
+
+## Topic 20 解説PDF＋表示QA
+
+- A4縦8ページ
+- 200 dpi全ページ表示QA: `8 / 8 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `4adf6ea4c23ff1745174bc90014661e7ffcc6949bfea8bd4dd08ccfae7c8c92d`
+- 固定一次5問・25答案要素: `25 / 25接続`
+- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## Topic 20 練習問題source＋練習PDF
+
+既存source・QAは作成済みだったが、GitHub正本にPDF本体が欠落していたため、2026-09-19にsourceから再生成して復元した。
+
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `1ec964bb8739f19735977d6f7a85a92892f5891544e6426a9d0d8d146be689c1`
+- 問題数: `12問`
+- 形式: `全問五肢択一`
+- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- SPEC固定範囲: `12 / 12接続`
+- 固定一次5問・25答案要素: `25 / 25接続`
+- A/D・サンプリング・エイリアシングの存在しない過去問への接続: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 固定範囲外追加: `0件`
+- East i内部測定回路・未公開定数の推測追加: `0件`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## 次工程
 
-Topic 20の練習問題source＋練習PDF。固定一次5問・25答案要素、SPEC固定範囲12項目、解説本文の公式・成立条件・例題へ接続し、A/D・サンプリング・エイリアシングも系列SPEC必須分として練習で直接補う。固定範囲だけで完結する二次記述式を件数合わせで追加しない。
+Topic 20の解説画像PowerPoint＋表示QA。固定一次5問・25答案要素、SPEC固定範囲12項目、練習12問との接続を維持し、East i内部回路・未公開定数を推測で追加しない。
