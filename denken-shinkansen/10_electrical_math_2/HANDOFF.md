@@ -8,11 +8,11 @@ Topic 01〜19は最終QAまで `PASS / completed`。
 
 完成数: `19 / 20`
 
-current_status: `topic_20_exam_alignment_complete`
+current_status: `topic_20_preproduction_validation_complete`
 
 active_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 20の制作前独立検証。
+次工程: Topic 20の解説本文＋3段階例題。
 
 ## 上位仕様
 
@@ -115,6 +115,28 @@ PWM波形・FFT
 
 既完了内容を再講義せず、変数・単位・符号規約を一つの計算フローへ接続する。
 
+## 制作前独立検証
+
+記録:
+`topics/20_shinkansen_math_model/20_shinkansen_math_model_preproduction_validation.md`
+
+再現用スクリプト:
+`topics/20_shinkansen_math_model/20_shinkansen_math_model_preproduction_validation.py`
+
+教育用仮定値だけで固定範囲を独立検証した。
+
+- Case A: 牽引力→運動方程式→速度・位置→仕事・電力量 `PASS`
+- Case B: 回生側の符号規約 `PASS`
+- Case C: Euler刻み幅・解析解・一次伝達関数の整合 `PASS`
+- Case D: 周期成分・サンプリング条件・DFT周波数ビン `PASS`
+- 統合モデル直接要求の確認済み第二種過去問: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 第一種・第三種問題追加: `0件`
+- 仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / PREPRODUCTION_VALIDATION_COMPLETE`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -127,7 +149,7 @@ PWM波形・FFT
 - [x] 第一種・第三種による水増し0件を確認
 - [x] 電験学習資料を複数系統確認
 - [x] source MarkdownへEXAM_ALIGNMENT・必要説明・境界を固定
-- [ ] 制作前独立検証
+- [x] 制作前独立検証
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
@@ -139,4 +161,4 @@ PWM波形・FFT
 
 ## 次工程
 
-Topic 20の固定範囲に対する制作前独立検証。
+固定済みEXAM_ALIGNMENTと制作前独立検証結果を変更せず、Topic 20の解説本文＋3段階例題を作成する。
