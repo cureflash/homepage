@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 18 / 20
-- current_status: `topic_19_preproduction_validation_complete`
+- current_status: `topic_19_explanation_body_complete`
 - last_completed_topic: `18 非線形方程式と反復計算`
 - active_topic: `19 最適化入門`
-- next_start: Topic 19の解説本文＋3段階例題を作成する
+- next_start: Topic 19の解説PDF＋QAを作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -311,7 +311,7 @@
 - [x] 電験学習資料を2系統以上確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
 - [x] 制作前独立検証（一変数境界・二変数等式制約・ラグランジュ法入口 `PASS`）
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題（必要説明 `6 / 6 PASS`、例題 `3 / 3 PASS`、接続確認5問マッピング `5 / 5 PASS`）
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
 - [ ] 練習PDF＋QA
@@ -322,22 +322,25 @@
 
 ## 今回進めた内容
 
-Topic 19の制作前独立検証を完了した。
+Topic 19の解説本文＋3段階例題を主sourceへ追加した。
 
-- Case A: 一変数境界最適化 `x=2`, `f=2` → `PASS`
-- Case B: 二変数等式制約 `x=23/3`, `y=13/3`, `F=407/3` → `PASS`
-- 一変数消去による独立照合: `PASS`
-- Case C: 無次元の運行配分モデル `u=7.5`, `v=2.5`, `E=75` → `PASS`
+- 必要説明6項目: `6 / 6 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 接続確認5問の教材内マッピング: `5 / 5 PASS`
+- 例題1: 一変数制約・境界 `x=3`, `J=2` → `PASS`
+- 例題2: 二出力配分 `P1=8 MW`, `P2=4 MW`, `C=96`、一変数消去でも一致 → `PASS`
+- 例題3: 等式制約のみの候補 `20/3,10/3` は範囲外、境界解 `8 MW,2 MW`, `C=72` → `PASS`
 - 直接最適化・ラグランジュ法要求の確認済み第二種過去問: `0問`
 - 接続5問の固定品質ゲート件数への水増し: `0件`
 - H17問6の固定件数追加: `0件`
+- Topic 04の一変数極値一般の再制作: `0件`
 - KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_19_preproduction_validation_complete / IN_PROGRESS`
+`topic_19_explanation_body_complete / IN_PROGRESS`
 
 完成数は `18 / 20`。
 
-次はTopic 19「最適化入門」の解説本文＋3段階例題を作成する。
+次はTopic 19の解説PDF＋QAを作成する。
