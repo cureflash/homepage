@@ -2,13 +2,13 @@
 
 ## 状態
 
-`topic_20_explanation_body_complete / IN_PROGRESS`
+`topic_20_final_qa_needs_revision / IN_PROGRESS`
 
 2026-09-19、最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、および本Topicを構成する既完了Topic 05 / 10 / 13 / 14 / 16 / 17の固定EXAM_ALIGNMENTをreconcileし、Topic 19完了後の最初の未完了テーマがTopic 20であることを確認した。
 
 本Topicは新しい数学手法を追加する章ではなく、本系列で学んだ工学数学を一つの簡略新幹線モデルへ統合する総合章である。第二種公式過去問を2026-09-19時点の現行公式アーカイブで再確認し、構成要素へ接続する5問を選定した。確認した5問はいずれも「新幹線を数式モデルだけで走らせる」という統合モデル自体を要求する問題ではないため、直接対応問題として水増ししない。
 
-固定範囲に対する制作前独立検証を教育用仮定値だけで実施し、運動方程式・数値積分・仕事/電力量・回生符号・一次簡略制御モデル・周期成分/サンプリング/周波数スペクトルの接続を `PASS` とした。固定済みEXAM_ALIGNMENTと制作前独立検証結果を変更せず、解説本文と3段階例題まで完成した。次工程は解説PDF＋QAである。
+2026-09-19、解説PDF、練習問題source・練習PDF、解説画像PowerPoint、完成後独立検証、初回最終QAまで完了した。技術品質・第二種過去問接続・表示QA・完成後独立検証はPASSしたが、進捗記録5ファイルが実成果物より古いため初回最終QAは `NEEDS_REVISION` とした。固定EXAM_ALIGNMENT・技術本文・問題・正答・PDF/PowerPoint・完成後独立検証結果は変更せず、本ファイルを含む進捗記録を実成果物状態へ同期済みで、次工程はTopic 20最終QA再判定である。
 
 ## 固定範囲
 
@@ -665,4 +665,4 @@ x(t)=sin(2π*10t)+(1/4)sin(2π*30t)
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文を変更せず、Topic 20の解説PDF＋QAを作成する。
+固定済みEXAM_ALIGNMENT、技術本文・問題・正答・PDF・PowerPoint・完成後独立検証結果は変更せず、Topic 20の最終QAを再判定する。
