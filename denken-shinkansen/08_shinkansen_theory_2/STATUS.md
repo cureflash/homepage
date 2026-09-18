@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 19 / 21
-- current_status: `topic_20_powerpoint_complete`
+- current_status: `topic_20_reanswer_complete`
 - last_completed_topic: `19 25kV・大電流をどう安全に測る？`
 - active_topic: `20 East iは走りながら何をどう測る？`
-- next_start: Topic 20 完成後独立再解答
+- next_start: Topic 20 最終QA
 
 ## 完成済み
 
@@ -37,27 +37,25 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 解説PDF＋表示QA: `PASS / EXPLANATION_PDF_COMPLETE`
 - [x] 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
 - [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
 - [ ] 最終QA
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 20の解説画像PowerPoint＋表示QA工程を完了し、GitHub正本へ反映した。同一生成source・PptxGenJS 4.0.0で表示・構造QA済み。
+Topic 20の完成後独立再解答を実施し、GitHub正本へ反映した。
 
-- PowerPoint: `topics/20_east_i_measurement/20_east_i_measurement_images.pptx`
-- QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
-- 16:9 / 8枚
-- 200 dpi全スライド表示QA: `8 / 8 PASS`
-- レンダリング寸法: `2667 × 1500 px / slide`
-- shape geometry overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- PDF変換: `8ページ / PASS`
-- 文字抽出QA: `PASS`
-- SHA-256: `2a35298811f8a54f1aa3b9448235bbc829ac9031140aa40f45702da82d7fb179`
-- SPEC固定範囲: `12 / 12可視化`
-- 固定一次5問・25答案要素: `25 / 25可視化`
-- 共通解法8ステップ: `PASS`
+- 成果物: `topics/20_east_i_measurement/20_east_i_measurement_reanswer.md`
+- R8 一次 理論 問4: `5 / 5 PASS`
+- R7 一次 理論 問4: `5 / 5 PASS`
+- R6 一次 理論 問6: `5 / 5 PASS`
+- H24 一次 理論 問7: `5 / 5 PASS`
+- H20 一次 理論 問6: `5 / 5 PASS`
+- 一次合計: `25 / 25 PASS`
+- 公式標準解答直接一致: `20 / 20`
+- H20二次資料掲載解答一致: `5 / 5`
+- 完成教材内の固定範囲だけで再構成: `PASS`
+- 教材外知識補完: `0件`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
@@ -65,6 +63,6 @@ Topic 20の解説画像PowerPoint＋表示QA工程を完了し、GitHub正本へ
 
 ## 判定
 
-`PASS / topic_20_powerpoint_complete / IN_PROGRESS`。
+`PASS / topic_20_reanswer_complete / IN_PROGRESS`。
 
-完成数は `19 / 21`。次工程はTopic 20の完成後独立再解答。
+完成数は `19 / 21`。次工程はTopic 20の最終QA。
