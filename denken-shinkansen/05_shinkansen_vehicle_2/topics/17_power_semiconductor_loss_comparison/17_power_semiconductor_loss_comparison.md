@@ -4,11 +4,11 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT` を完了した。固定過去問は一次4問＋二次1問、計5問・26答案要素。公式問題の条件から独立に再導出し、公式解答／標準解答と照合して `26 / 26 PASS` を確認した。固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を `17_power_semiconductor_loss_comparison_explanation_source.md` に作成し、固定要求知識 `26 / 26 covered`、SPEC指定7項目 `7 / 7 covered`、指定3可視化の再生成条件 `3 / 3 fixed` を確認した。
+制作前 `EXAM_ALIGNMENT` を完了した。固定過去問は一次4問＋二次1問、計5問・26答案要素。公式問題の条件から独立に再導出し、公式解答／標準解答と照合して `26 / 26 PASS` を確認した。固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題、解説PDF、練習問題sourceまで作成した。練習sourceは一次8問＋二次4問、完全解説 `12 / 12`、数値・論理 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`、固定要求知識 `26 / 26 PASS`、SPEC指定7項目 `7 / 7 covered`、指定3可視化 `3 / 3 aligned` を確認した。
 
-current_status: `topic_17_explanation_source_complete`
+current_status: `topic_17_practice_source_complete`
 
-次工程: 固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定範囲を変更せず、解説PDFを作成する。
+次工程: 固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定範囲を変更せず、練習PDFを作成する。
 
 ## 固定範囲
 
@@ -188,6 +188,33 @@ current_status: `topic_17_explanation_source_complete`
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## 解説PDF
+
+- path: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_explanation.pdf`
+- QA: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_explanation_pdf_qa.md`
+- A4縦: `4ページ`
+- 180 dpi表示QA: `4 / 4 PASS`
+- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## 練習問題source
+
+- path: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_practice_source.md`
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次試験型: `4 / 4`、途中式・前提・単位・理由を収録
+- 完全解説: `12 / 12`
+- 数値・論理再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5過去問・26答案要素の実効接続: `26 / 26 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
 ## 次工程
 
-解説PDFを作成する。固定5問・26答案要素とSPEC指定7項目・3可視化は変更しない。
+練習PDFを作成する。固定5問・26答案要素とSPEC指定7項目・3可視化は変更しない。
