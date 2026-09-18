@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜16は最終QAまで `PASS / completed`。
+Topic 01〜17は最終QAまで `PASS / completed`。
 
-完成数: `16 / 20`
+完成数: `17 / 20`
 
-current_status: `topic_17_progress_sync_complete`
+current_status: `topic_17_completed`
 
-active_topic: `17 常微分方程式の数値解法`
+active_topic: `18 非線形方程式と反復計算`
 
-次工程: Topic 17の最終QAを再判定する。
+次工程: Topic 18の制作前EXAM_ALIGNMENTを実施する。
 
 ## 上位仕様
 
@@ -133,20 +133,9 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 記録:
 `topics/17_ode_numerical_methods/17_ode_numerical_methods_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+初回判定: `NEEDS_REVISION / IN_PROGRESS`。
 
-技術品質ゲートはPASSしたが、実成果物より古い次工程記録が4ファイル残っているため、GitHub正本の進捗記録整合でFAILとした。
-
-古い進捗記録:
-
-1. `17_ode_numerical_methods_explanation_qa.md`
-2. `17_ode_numerical_methods_practice.md`
-3. `17_ode_numerical_methods_practice_qa.md`
-4. `17_ode_numerical_methods_powerpoint_qa.md`
-
-進捗記録整合: `2 / 6 PASS`。
-
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立検証への修正要求: `0件`。
+技術品質ゲートはPASSしたが、実成果物より古い次工程記録が4ファイル残っていたため、GitHub正本の進捗記録整合でFAILとした。
 
 ## 進捗記録同期
 
@@ -159,7 +148,13 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 
 固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更していない。
 
-## 現在の品質ゲート
+## 最終QA再判定
+
+進捗記録6ファイルを再確認し、整合 `6 / 6 PASS`。必須成果物、固定EXAM_ALIGNMENT、完成後独立検証、練習問題QA、PDF/PowerPoint表示QA、SPEC境界もすべてPASSを維持した。
+
+判定: `PASS / completed`。
+
+## 完了時品質ゲート
 
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
@@ -179,9 +174,9 @@ R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2
 - [x] 完成後独立検証 `PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] 進捗記録4ファイルの同期
-- [ ] 最終QA再判定 → `PASS`
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 次工程
 
-Topic 17の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証は変更しない。
+Topic 18 `非線形方程式と反復計算` の制作前EXAM_ALIGNMENTを実施する。
