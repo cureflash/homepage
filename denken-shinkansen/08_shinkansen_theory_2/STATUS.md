@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 18 / 21
-- current_status: `topic_19_reanswer_complete`
+- current_status: `topic_19_final_qa_blocked`
 - last_completed_topic: `18 新幹線のセンサ信号をどう増幅する？`
 - active_topic: `19 25kV・大電流をどう安全に測る？`
-- next_start: Topic 19 最終QA
+- next_start: Topic 19 blocker解消後に最終QA再実施
 
 ## 完成済み
 
@@ -64,33 +64,36 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - [x] 解説PDF＋表示QA: `PASS / EXPLANATION_PDF_COMPLETE`
 - [x] 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
-- [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
+- [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`（QA記録あり、PowerPoint本体は最新mainで欠落）
 - [x] 完成後独立再解答: `25 / 25 PASS`
-- [ ] 最終QA
+- [x] 最終QA実施: `NEEDS_REVISION / FINAL_QA_BLOCKED`
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 19「25kV・大電流をどう安全に測る？」の完成後独立再解答を完了した。
+Topic 19の最終QAを実施し、GitHub正本・進捗記録・既存QAを再照合した。
 
-- 記録: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_reanswer.md`
-- R5 一次 理論 問8: `5 / 5 PASS`
-- R1 一次 理論 問4: `5 / 5 PASS`
-- H29 一次 理論 問4: `5 / 5 PASS`
-- H25 一次 理論 問8: `5 / 5 PASS`
-- H21 一次 理論 問6: `5 / 5 PASS`
-- 固定一次合計: `25 / 25 PASS`
-- 公式標準解答との一致: `25 / 25`
-- 完成教材だけで再構成: `PASS`
-- 教材外知識補完: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
+- 最終QA記録: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_final_qa.md`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- 完成後独立再解答: `25 / 25 PASS`
+- 練習PDF既存QA: `PASS`
+- 解説PDF既存QA: `PASS`
+- PowerPoint既存QA記録: `PASS`
+- PowerPoint本体: `FAIL / GitHub最新mainに存在しない`
+- 主source進捗記録: `FAIL / 現状と不一致`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
-- 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
+- 未確認実設備CT・VT値追加: `0件`
+
+## exact blocker
+
+`STATUS.md`、`HANDOFF.md`、`19_high_voltage_current_measurement_powerpoint_qa.md` は `19_high_voltage_current_measurement_images.pptx` の完成を前提としているが、最新mainのGitHub正本に同ファイルが存在しない。PowerPoint QA対象実体を正本から確認できないため、Topic 19最終QAを `PASS` に確定できない。
+
+併せて `19_high_voltage_current_measurement.md` 末尾が `EXPLANATION_SOURCE_COMPLETE` / 次工程「解説PDFを作成」のままで、現在の進捗と不一致。
 
 ## 判定
 
-`25 / 25 PASS / topic_19_reanswer_complete / IN_PROGRESS`。
+`NEEDS_REVISION / topic_19_final_qa_blocked`。
 
-完成数は `18 / 21` のまま。次工程はTopic 19の最終QA。
+完成数は `18 / 21` のまま。推測で欠落PowerPointを再生成・確定せず停止する。
