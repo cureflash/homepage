@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `16 / 39`
-- current_status: `topic_17_explanation_source_complete`
+- current_status: `topic_17_explanation_pdf_complete`
 - last_completed_topic: `16 700系 多レベル変換器とPWM`
 - active_topic: `17 パワー半導体の損失比較`
-- next_start: 新しいrunでTopic 17の解説PDFを作成する
+- next_start: 新しいrunでTopic 17の練習問題sourceを作成する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -260,8 +260,30 @@ SPEC指定可視化:
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## Topic 17 解説PDF
+- PDF: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_explanation.pdf`
+- QA: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_explanation_pdf_qa.md`
+- A4縦: `4ページ`
+- 180 dpi表示QA: `4 / 4 PASS`
+- PDF open: `PASS`
+- preflight: `PASS / 非埋込CIDフォント警告あり、180 dpi全頁表示・文字抽出で確認`
+- 文字抽出: `PASS`
+- Unicode置換文字 / `(cid:)`: `0件 / 0件`
+- 文字欠落・文字化け・重なり・クリップ: `0件`
+- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- 3段階例題: `3 / 3 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- source固定一般仮定値との整合: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- SHA-256: `8d5934da49b062049afb86c8b9ccd12b79e53ce4bdeda79936c54211148198a4`
+- Git blob SHA: `4cc6cbd05b5ce58c06d54bc91acc9d10a97eb764`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
 ## 過去Topic
 Topic 01〜16は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 17「パワー半導体の損失比較」の解説PDFを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定範囲は変更しない。
+Topic 17「パワー半導体の損失比較」の練習問題sourceを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
