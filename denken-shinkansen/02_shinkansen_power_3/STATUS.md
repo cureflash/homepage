@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 14 / 16
-- current_status: `topic_15_practice_pdf_complete`
+- current_status: `topic_15_powerpoint_complete`
 - last_completed_topic: `14 駅やトンネルにはどう電気を配る？`
 - active_topic: `15 回生した電気はどこへ行く？`
-- next_start: Topic 15の解説画像PowerPointを作成する。固定5出題回・8答案要素を可視化し、16:9表示QA、overflow、ZIP整合性、数値・論理、SPEC固定範囲を確認する
+- next_start: Topic 15の完成後ブラインド独立再解答を実施する。完成教材だけで固定5出題回・8答案要素を解き直し、公式解答一致・教材外知識補完0件・SPEC固定範囲外追加0件を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -25,7 +25,7 @@
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋QA・練習問題source・練習PDF＋QA完了。練習PDFは固定5出題回・8答案要素への接続 `8 / 8 PASS`、12問再検算・正答一意性 `12 / 12 PASS`。次は解説画像PowerPoint
+- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋QA・練習問題source・練習PDF＋QA・解説画像PowerPoint＋QA完了。PowerPointは16:9・4枚、固定5出題回・8答案要素への可視化 `8 / 8 PASS`、表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`。次は完成後ブラインド独立再解答
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
 ## Topic 07 完了記録
@@ -366,7 +366,7 @@ PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_pow
 - PowerPoint表示QA: 1601×900 `4 / 4 PASS`
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: PASS
-- PowerPoint内数値・論理再検算: PASS
+- PowerPoint内数値・論理QA: PASS
 - 完成後ブラインド独立再解答: `6 / 6 PASS`
 - 公式解答一致: `6 / 6 PASS`
 - 教材外知識補完: `0件`
@@ -538,6 +538,8 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 練習問題source: `topics/15_regenerative_power/15_regenerative_power_practice_source.md`
 練習PDF: `topics/15_regenerative_power/15_regenerative_power_practice.pdf`
 練習PDF QA: `topics/15_regenerative_power/15_regenerative_power_practice_qa.md`
+解説画像PowerPoint: `topics/15_regenerative_power/15_regenerative_power_images.pptx`
+PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md`
 
 固定5出題回・8答案要素:
 - R8上 電力 問5
@@ -580,6 +582,13 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 - 練習PDF数値・論理再検算: `12 / 12 PASS`
 - 練習PDF正答一意性: `12 / 12 PASS`
 - 練習PDF固定5出題回・8答案要素への接続: `8 / 8 PASS`
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint固定5出題回・8答案要素の要求事項可視化: `8 / 8 PASS`
+- PowerPoint表示QA: 1600×900相当 `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- PowerPoint内数値・論理QA: `PASS`
+- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPowerPoint転記 `0件`
 - `kW` / `kWh`、`W=Pt`、`W=∫Pdt`、グラフ面積: PASS
 - 余剰・不足・送電・受電の方向判定: PASS
 - 自家消費量・自家消費比率・自給率の分母区別: PASS
@@ -597,4 +606,4 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 - H25 法規 問12(a)(b): `(2),(3)`
 
 ## 次
-Topic 15の解説画像PowerPointを作成する。固定5出題回・8答案要素を可視化し、16:9表示QA、overflow、ZIP整合性、数値・論理、SPEC固定範囲を確認する。
+Topic 15の完成後ブラインド独立再解答を実施する。完成教材だけで固定5出題回・8答案要素を解き直し、公式解答一致・教材外知識補完0件・SPEC固定範囲外追加0件を確認する。
