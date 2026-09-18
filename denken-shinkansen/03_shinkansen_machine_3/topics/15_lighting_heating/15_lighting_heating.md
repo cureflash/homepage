@@ -2,9 +2,9 @@
 
 更新日: 2026-09-18
 
-状態: `topic_15_explanation_pdf_complete / IN_PROGRESS`
+状態: `topic_15_independent_reanswer_complete / IN_PROGRESS`
 
-制作前 `EXAM_ALIGNMENT` で固定した7問・12答案要素を変更せず、系列 `SPEC.md` の Topic 15 固定範囲だけで解説source本文を作成した。光束・光度・照度・輝度、逆二乗則、照明率・保守率・所要灯数、発光効率・LED、ジュール熱・電力量・熱量・効率、COPの基本を、本試験で再利用できる解法手順まで記載した。固定過去問要求事項の本文マッピングは `12 / 12 PASS`、基礎 / 本試験標準 / 複合・ひっかけの3段階例題もPASS。解説PDFはA4縦3ページで完成し、200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。次工程は練習問題source作成である。
+制作前 `EXAM_ALIGNMENT` で固定した7問・12答案要素を変更せず、系列 `SPEC.md` の Topic 15 固定範囲だけで教材を作成した。解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成し、固定過去問要求事項の本文マッピング、練習問題接続、PowerPoint接続はいずれも `12 / 12 PASS`。完成後blind独立再解答では12答案要素を公式解答参照前にcommit `e5dc7884e5500fe7b407f67c758b45e51c9501a3` で固定し、その後に公式解答を照合して `12 / 12 PASS`。教材外・固定範囲外知識による補完は0件。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。次工程はTopic 15の最終QAである。
 
 ## EXAM_ALIGNMENT
 
@@ -102,6 +102,23 @@
 固定範囲外知識による答案補完: `0件`。
 
 完成後blind独立再解答に備え、正答選択肢番号と独立計算の最終数値はこの制作前記録に保存しない。
+
+### 完成後blind独立再解答
+
+完成済み教材だけを使い、公式解答を参照する前に12答案要素を再計算・判断した。答案はcommit `e5dc7884e5500fe7b407f67c758b45e51c9501a3` で固定し、その後に電気技術者試験センター公式解答へ照合した。
+
+- R8上 機械 問17: `(a)5 / (b)2`
+- R7上 機械 問12: `(4)`
+- R7上 機械 問17: `(a)2 / (b)2`
+- R6下 機械 問17: `(a)2 / (b)3`
+- R6上 機械 問17: `(a)2 / (b)1`
+- R4上 機械 問17: `(a)5 / (b)5`
+- R2 機械 問12: `(3)`
+
+公式解答一致: `12 / 12 PASS`。
+教材外・固定範囲外知識による補完: `0件`。
+固定EXAM_ALIGNMENT変更: `0件`。
+記録: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`。
 
 ### 非選定・重複扱い
 
@@ -603,18 +620,20 @@ COP: COP = Q/W_in
 - N700S等の車内照明器具の型式・灯数・実消費電力、空調装置の実能力・実COP等を推測で補わない。
 - Topic 16「同期機」を先取りしない。
 
-## 解説PDF進捗
+## 成果物・QA進捗
 
-- 解説PDF: `topics/15_lighting_heating/15_lighting_heating_explanation.pdf`
+- 解説PDF: `topics/15_lighting_heating/15_lighting_heating_explanation.pdf` / A4縦3ページ / 表示QA `3 / 3 PASS` / 文字抽出QA `PASS`
 - 解説PDF QA: `topics/15_lighting_heating/15_lighting_heating_explanation_pdf_qa.md`
-- A4縦3ページ
-- 200 dpi表示QA: `3 / 3 PASS`
-- 文字抽出QA: `PASS`
-- 文字切れ・重なり・ページ外はみ出し: `0件`
-- 欠落・破損グリフ: `0件`
-- 固定EXAM_ALIGNMENT 7問・12答案要素マッピング: `12 / 12`
+- 練習問題source: `topics/15_lighting_heating/15_lighting_heating_practice.md` / 12問（基礎3 / 本試験標準7 / 複合・応用2） / 全問五肢択一 / 独立計算・論理QA `12 / 12 PASS` / 正答一意性 `12 / 12 PASS`
+- 練習PDF: `topics/15_lighting_heating/15_lighting_heating_practice.pdf` / A4縦3ページ / 表示QA `3 / 3 PASS` / 文字抽出QA `PASS`
+- 練習PDF QA: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md`
+- 解説画像PowerPoint: `topics/15_lighting_heating/15_lighting_heating_images.pptx` / 16:9・4枚 / 表示QA `4 / 4 PASS` / ZIP整合性 `PASS`
+- PowerPoint QA: `topics/15_lighting_heating/15_lighting_heating_powerpoint_qa.md`
+- 完成後blind独立再解答: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md` / `12 / 12 PASS`
+- 固定EXAM_ALIGNMENTへの接続: 解説本文 `12 / 12` / 練習問題 `12 / 12` / 解説PDF `12 / 12` / 練習PDF `12 / 12` / PowerPoint `12 / 12`
+- 文字切れ・重なり・ページ/スライド外はみ出し・欠落破損グリフ: `0件`
 - 固定範囲外追加: `0件`
 
 ## 次工程
 
-固定EXAM_ALIGNMENTを変更せず、Topic 15の練習問題sourceを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、固定7問・12答案要素へ接続させる。
+Topic 15の最終QAを実施する。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。Topic 16は先取りしない。
