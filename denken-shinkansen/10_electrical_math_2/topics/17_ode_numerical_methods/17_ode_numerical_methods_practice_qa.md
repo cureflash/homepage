@@ -36,4 +36,4 @@
 
 `PASS / PRACTICE_PDF_COMPLETE`
 
-次工程は解説画像PowerPointを作成し、PowerPoint表示QAを行う。
+次工程はTopic 17の最終QA再判定を行う。
