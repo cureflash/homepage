@@ -5,11 +5,13 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
 
-Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで完成したが、完成後blind独立再解答は `5 / 6 PASS`。R5下 機械 問5のみ、`V = E + jXsI` と `jXsI` が `I` より90°進む関係までは教材だけで判断できた一方、選択肢図で `jXsI` の始点・終点を逆に読み、blind答案(5)、公式解答(3)となった。MASTER SPEC / EXAM_ALIGNMENT SPECの品質ゲートにより未完了、判定は `NEEDS_REVISION` のまま。
+Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで作成したが、完成後blind独立再解答は `5 / 6 PASS`。R5下 機械 問5のみ、`V = E + jXsI` と `jXsI` が `I` より90°進む関係までは教材だけで判断できた一方、選択肢図で `jXsI` の始点・終点を逆に読み、blind答案(5)、公式解答(3)となった。MASTER SPEC / EXAM_ALIGNMENT SPECの品質ゲートにより未完了、判定は `NEEDS_REVISION` のまま。
 
-今回、固定範囲・固定EXAM_ALIGNMENTを変更せずsourceレベルの補強を実施した。解説sourceでは `V = E + jXsI` を尾→頭で読む手順を明記し、「Eの終点を `jXsI` の始点とし、その終点がVの終点に一致する」「Vの終点→Eの終点は逆向きで誤り」と固定した。練習sourceの問10も、同じ始点・終点判定を直接問う五肢択一へ改訂し、独立論理QA・正答一意性QAともPASS。仕様外論点追加0件、固定EXAM_ALIGNMENT変更0件。
+固定範囲・固定EXAM_ALIGNMENTを変更せずsourceレベルの補強を実施し、解説sourceでは `V = E + jXsI` を尾→頭で読む手順を明記した。練習sourceの問10も同じ始点・終点判定を直接問う五肢択一へ改訂済み。
 
-状態: `topic_16_vector_source_remediation_complete / IN_PROGRESS`
+今回、このsource改訂を解説PDFへ反映した。A4縦4ページを維持し、`E の終点 → V の終点` が `jXsI` であること、`V の終点 → E の終点` は逆向きで除外することを、本文・解法手順・標準例題・頻出ミス・過去問対応表へ反映した。200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、固定6問・6答案要素マッピング `6 / 6`、仕様外追加0件。
+
+状態: `topic_16_explanation_pdf_remediation_complete / IN_PROGRESS`
 
 ## Topic 16 固定範囲
 - 同期機
@@ -45,10 +47,10 @@ Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・�
 解説source QA: `PASS`。
 ベクトル尾→頭・始点終点判定source QA: `PASS`。
 練習問題source: 問10を尾→頭判定問題へ改訂 / `12 / 12 PASS` / 正答一意性 `12 / 12 PASS`。
-解説PDF: 既存版あり / source改訂未反映 / `REGEN_REQUIRED`。
+解説PDF: source改訂反映済み / A4縦4ページ / 200 dpi表示QA `4 / 4 PASS` / 文字抽出QA `PASS` / `PASS`。
 練習PDF: 既存版あり / practice source改訂未反映 / `REGEN_REQUIRED`。
 PowerPoint: 既存版あり / source改訂未反映 / `REGEN_REQUIRED`。
-完成後blind独立再解答: 旧版で `5 / 6 PASS / NEEDS_REVISION`。派生成果物同期後に再実施する。
+完成後blind独立再解答: 旧版で `5 / 6 PASS / NEEDS_REVISION`。練習PDF・PowerPoint同期後に再実施する。
 固定範囲外知識による答案補完: `0件`。
 固定EXAM_ALIGNMENT変更: `0件`。
 
@@ -61,12 +63,12 @@ PowerPoint: 既存版あり / source改訂未反映 / `REGEN_REQUIRED`。
 
 source: `topics/16_synchronous_machine/16_synchronous_machine.md`
 解説本文: ベクトル図の尾→頭判定を補強済み。
-解説PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` 既存版は改訂前sourceに対応。
-解説PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` は改訂前PDFに対する記録。
+解説PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` source改訂反映済み / `PASS`。
+解説PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` 再同期後QA / `PASS`。
 練習問題source: `topics/16_synchronous_machine/16_synchronous_machine_practice.md` 問10改訂済み（12問を維持）。
-練習PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` 既存版は改訂前sourceに対応。
+練習PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` 既存版は改訂前practice sourceに対応 / `REGEN_REQUIRED`。
 練習PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` は改訂前PDFに対する記録。
-解説画像PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` 既存版は改訂前sourceに対応。
+解説画像PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` 既存版は改訂前sourceに対応 / `REGEN_REQUIRED`。
 PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` は改訂前PowerPointに対する記録。
 完成後blind独立再解答: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md` / 旧版 `5 / 6 PASS / NEEDS_REVISION`。
 
@@ -91,4 +93,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-`topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` にsource改訂を反映する。固定範囲・固定EXAM_ALIGNMENTを変更せず、既存A4縦構成を維持して「Eの終点→Vの終点が `jXsI`」という尾→頭判定を入れ、表示QA・文字抽出QAを再実施する。練習PDF・PowerPointの同期とblind再解答はその後に行う。
+`topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` に改訂済みpractice sourceを反映する。固定範囲・固定EXAM_ALIGNMENTを変更せず、12問と既存A4縦構成を維持して問10の「E終点→V終点が jXsI」という尾→頭判定を入れ、表示QA・文字抽出QA・正答一覧一致QAを再実施する。PowerPoint同期とblind再解答はその後に行う。
