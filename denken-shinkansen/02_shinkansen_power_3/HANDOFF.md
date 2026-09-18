@@ -8,12 +8,14 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 15の練習問題sourceを作成した。全12問・全問五肢択一、基礎3／本試験標準7／複合2。数値・論理独立再計算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5出題回・8答案要素への接続 `8 / 8 PASS`。公式過去問本文・保存済み正答の転載0件、完成後ブラインド独立再解答を汚染する公式正答番号の教材転記0件、SPEC固定範囲外追加0件、Topic 16先取り0件、未確認新幹線実設備値の真値化0件。
+Topic 15の練習PDF＋QAを作成した。A4縦4ページ、全12問・全問五肢択一、基礎3／本試験標準7／複合2。200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、数値・論理再検算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5出題回・8答案要素への接続 `8 / 8 PASS`。SPEC固定範囲外追加0件、Topic 16先取り0件、未確認新幹線実設備値の真値化0件。
 
 source: `topics/15_regenerative_power/15_regenerative_power.md`
 解説PDF: `topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
 解説PDF QA: `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md`
 練習問題source: `topics/15_regenerative_power/15_regenerative_power_practice_source.md`
+練習PDF: `topics/15_regenerative_power/15_regenerative_power_practice.pdf`
+練習PDF QA: `topics/15_regenerative_power/15_regenerative_power_practice_qa.md`
 
 固定品質ゲート:
 - R8上 電力 問5 — 問3・問9で二次電池、Li-ion、NAS、電力貯蔵、出力平滑化へ接続
@@ -42,6 +44,12 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 - 練習source数値・論理独立再計算: `12 / 12 PASS`
 - 練習source正答一意性: `12 / 12 PASS`
 - 練習source固定5出題回・8答案要素への接続: `8 / 8 PASS`
+- 練習PDF: A4縦4ページ
+- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF数値・論理再検算: `12 / 12 PASS`
+- 練習PDF正答一意性: `12 / 12 PASS`
+- 練習PDF固定5出題回・8答案要素への接続: `8 / 8 PASS`
 - `kW` / `kWh`、`W=Pt`、`W=∫Pdt`、グラフ面積: PASS
 - 余剰・不足・送電・受電の方向判定: PASS
 - 自家消費量・自家消費比率・自給率の分母区別: PASS
@@ -61,7 +69,7 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 - Topic 16の総合系統計算は先取りしない。
 
 ## 次
-Topic 15の練習PDFを作成する。`15_regenerative_power_practice_source.md` の12問・選択肢・正答・完全解説を同期し、A4表示QA、文字抽出QA、12問の数値・論理再検算、正答一意性、固定5出題回・8答案要素への接続を再確認する。SPEC固定範囲外へ広げない。
+Topic 15の解説画像PowerPointを作成する。固定5出題回・8答案要素を可視化し、16:9表示QA、overflow、ZIP整合性、数値・論理、SPEC固定範囲を確認する。
 
 ## 直前完了テーマ
 Topic 14 `駅やトンネルにはどう電気を配る？` は `PASS / completed`。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
