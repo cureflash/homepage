@@ -6,21 +6,21 @@
 - Topic 01〜16: 最終QA `PASS / completed`
 - 完成数: `16 / 22`
 - active topic: `17 新幹線の速度をフィードバック制御する`
-- current status: `topic_17_independent_reanswer_complete`
-- 次工程: Topic 17 最終QA
+- current status: `topic_17_final_qa_needs_revision`
+- 次工程: Topic 17 進捗記録同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 17 source、解説PDF・QA、練習source・練習PDF・QA、PowerPoint・QAを再確認した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 17 source、解説PDF・QA、練習source・練習PDF・QA、PowerPoint・QA、独立再解答記録を再確認した。
 - Topic 16は最終QA `PASS / completed` のままとし、重複制作していない。
 - 最初の未完了テーマはTopic 17「新幹線の速度をフィードバック制御する」。
-- 既存枠で完了済みの制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・PowerPointを正本としてreconcileし、重複制作していない。
 - 固定一次1問＋二次4問、計5問・6答案要素を変更していない。
-- Topic 17独立再解答前ゲート後、公式正答・標準解答を参照する前に6答案要素をGitHubへ答案ロックした。
-- 完成教材だけで固定6答案要素を独立再解答し、答案ロック後に公式正答・標準解答と照合して `6 / 6 PASS` を確認した。
+- 完成教材だけで固定6答案要素を独立再解答し、公式照合 `6 / 6 PASS` を維持。
 - 解説PDF表示 `6 / 6 PASS`、練習PDF表示 `5 / 5 PASS`、PowerPoint表示 `4 / 4 PASS` を維持。
 - Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加、教材外知識による補完は `0件`。
+- 最終QAでは技術・試験対応品質ゲートはPASSしたが、main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所が旧工程のままなので進捗記録整合のみFAIL。
+- Topic 17は `NEEDS_REVISION / IN_PROGRESS` のまま completed にしていない。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -176,5 +176,19 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `PASS / topic_17_independent_reanswer_complete / IN_PROGRESS`
 
+## Topic 17 最終QA
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_final_qa.md`
+- 必須成果物: PASS
+- 固定一次1問＋二次4問・6答案要素: `6 / 6 PASS`
+- 完成後独立再解答: `6 / 6 PASS`
+- 練習一次正答一意性: `10 / 10 PASS`
+- 練習独立再計算・論理QA: `15 / 15 PASS`
+- 解説PDF・練習PDF・PowerPoint各QA: PASS
+- 仕様境界: PASS
+- 進捗記録整合: FAIL — main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所
+- 技術本文・問題・正答・固定EXAM_ALIGNMENT変更: `0件`
+
+判定: `NEEDS_REVISION / topic_17_final_qa_needs_revision / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 17最終QAを実施する。必須成果物、固定5問・6答案要素、完成後独立再解答、解説PDF・練習PDF・PowerPoint各QA、仕様境界、進捗記録整合を総合判定し、すべてPASSの場合のみ `completed` とする。
+Topic 17の進捗記録3箇所だけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更しない。同期後に最終QAを再実施する。
