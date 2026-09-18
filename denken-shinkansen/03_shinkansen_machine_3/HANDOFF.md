@@ -1,21 +1,17 @@
 # HANDOFF - 新幹線・電験三種「機械」
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
 
-Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで作成したが、完成後blind独立再解答は旧版で `5 / 6 PASS`。R5下 機械 問5のみ、`V = E + jXsI` と `jXsI` が `I` より90°進む関係までは教材だけで判断できた一方、選択肢図で `jXsI` の始点・終点を逆に読み、blind答案(5)、公式解答(3)となった。MASTER SPEC / EXAM_ALIGNMENT SPECの品質ゲートにより未完了、判定は `NEEDS_REVISION` のまま。
+Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで作成済み。旧版の完成後blind独立再解答は `5 / 6 PASS` で、R5下 機械 問5のみ `jXsI` の始点・終点を逆に読んだため `NEEDS_REVISION` となった。
 
-固定範囲・固定EXAM_ALIGNMENTを変更せずsourceレベルの補強を実施し、解説sourceでは `V = E + jXsI` を尾→頭で読む手順を明記した。練習sourceの問10も同じ始点・終点判定を直接問う五肢択一へ改訂済み。
+固定範囲・固定EXAM_ALIGNMENTを変更せず、解説source・練習source・解説PDF・練習PDF・PowerPointへ `V = E + jXsI` の尾→頭判定「`E` の終点 → `V` の終点 = `jXsI`」を補強済み。
 
-解説PDFにはsource補強を反映済み。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、固定6問・6答案要素マッピング `6 / 6`、仕様外追加0件。
+今回、改訂済み教材で固定EXAM_ALIGNMENT 6問を再解答した。公式解答との照合前に commit `a6d6452528cf03e9a055d9410aff8c33c3503dd6` で答案を固定し、その後に電気技術者試験センター公式解答と照合した結果、`6 / 6 PASS`。R5下 機械 問5も改訂した尾→頭判定で `(3)` を選び、公式解答 `(3)` と一致した。教材内根拠へ戻せること `6 / 6 PASS`、固定範囲外知識による答案補完0件、固定EXAM_ALIGNMENT変更0件。
 
-練習PDFにも改訂済みpractice sourceを再同期済み。A4縦2ページ・12問・全問五肢択一を維持し、問10の `jXsI` を「Eの終点 → Vの終点」と読む尾→頭判定を収録した。200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`、正答一覧source一致 `12 / 12 PASS`、固定6問・6答案要素接続 `6 / 6 PASS`、仕様外追加0件。
-
-今回、改訂済みsourceのベクトル図補強を解説画像PowerPointへ再同期した。16:9・4枚を維持し、Slide 3で `V = E + jXsI`、`jXsI` は `I` より90°進む、`Eの終点 → Vの終点 = jXsI`、`Vの終点 → Eの終点` の逆向き候補除外を図と文言の両方で明示した。表示QA `4 / 4 PASS`、`slides_test.py` はみ出し0件、ZIP整合性 `PASS`、固定6問・6答案要素接続 `6 / 6 PASS`、仕様外追加0件。
-
-状態: `topic_16_powerpoint_remediation_complete / IN_PROGRESS`
+状態: `topic_16_independent_reanswer_complete / IN_PROGRESS`
 
 ## Topic 16 固定範囲
 - 同期機
@@ -54,9 +50,17 @@ Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文・解説PDF・�
 解説PDF: source改訂反映済み / A4縦4ページ / 200 dpi表示QA `4 / 4 PASS` / 文字抽出QA `PASS` / `PASS`。
 練習PDF: source改訂反映済み / A4縦2ページ / 200 dpi表示QA `2 / 2 PASS` / 文字抽出QA `PASS` / 正答一覧 `12 / 12 PASS` / `PASS`。
 PowerPoint: source改訂反映済み / 16:9・4枚 / 表示QA `4 / 4 PASS` / はみ出し0件 / ZIP整合性 `PASS` / `PASS`。
-完成後blind独立再解答: 旧版で `5 / 6 PASS / NEEDS_REVISION`。全派生成果物の再同期完了後、次工程で再実施する。
+完成後blind独立再解答: 改訂後 `6 / 6 PASS` / 公式解答一致 `6 / 6 PASS` / 教材外補完0件。
 固定範囲外知識による答案補完: `0件`。
 固定EXAM_ALIGNMENT変更: `0件`。
+
+改訂後blind答案:
+- R7上 機械 問5: `(3)`
+- R5下 機械 問5: `(3)`
+- R5下 機械 問6: `(3)`
+- R4上 機械 問4: `(2)`
+- H28 機械 問5: `(2)`
+- H26 機械 問5: `(1)`
 
 非選定:
 - R7下 機械 問5 — 始動・制動巻線が固定範囲外。
@@ -74,7 +78,7 @@ source: `topics/16_synchronous_machine/16_synchronous_machine.md`
 練習PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` 再同期後QA / `PASS`。
 解説画像PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` source改訂反映済み / `PASS`。
 PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` 再同期後QA / `PASS`。
-完成後blind独立再解答: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md` / 旧版 `5 / 6 PASS / NEEDS_REVISION`。
+完成後blind独立再解答: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md` / 改訂後 `6 / 6 PASS`。
 
 ## Topic 15
 Topic 15「車内の照明・空調にはどれだけ電気が必要？」は最終QA再判定PASSで `completed`。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、進捗記録整合、固定範囲境界は全件PASS。Webカタログにも登録済み。
@@ -97,4 +101,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-改訂済み解説source・解説PDF・練習source・練習PDF・PowerPointだけを使い、保存済み正答を先に見ずに固定EXAM_ALIGNMENT 6問をblind独立再解答する。正答だけでなく、各答案の根拠を教材内の説明へ戻して確認する。
+Topic 16の最終QA再判定を実施する。解説source / 解説PDF / 練習source / 練習PDF / PowerPoint / 各QA記録 / 完成後blind独立再解答記録 / STATUS / HANDOFF の整合を確認し、固定範囲外追加0件・固定EXAM_ALIGNMENT変更0件を再確認する。最終QAがPASSした場合のみTopic 16をcompletedとする。
