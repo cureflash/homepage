@@ -6,8 +6,8 @@
 - Topic 01〜16: 最終QA `PASS / completed`
 - 完成数: `16 / 22`
 - active topic: `17 新幹線の速度をフィードバック制御する`
-- current status: `topic_17_final_qa_needs_revision`
-- 次工程: Topic 17 進捗記録同期
+- current status: `topic_17_progress_records_synced`
+- 次工程: Topic 17 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -19,8 +19,8 @@
 - 完成教材だけで固定6答案要素を独立再解答し、公式照合 `6 / 6 PASS` を維持。
 - 解説PDF表示 `6 / 6 PASS`、練習PDF表示 `5 / 5 PASS`、PowerPoint表示 `4 / 4 PASS` を維持。
 - Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加、教材外知識による補完は `0件`。
-- 最終QAでは技術・試験対応品質ゲートはPASSしたが、main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所が旧工程のままなので進捗記録整合のみFAIL。
-- Topic 17は `NEEDS_REVISION / IN_PROGRESS` のまま completed にしていない。
+- 前回最終QAでFAILだったmain source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所だけを実成果物状態へ同期した。
+- Topic 17は `PASS / topic_17_progress_records_synced / IN_PROGRESS`。最終QA再実施までは completed にしない。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -176,7 +176,7 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `PASS / topic_17_independent_reanswer_complete / IN_PROGRESS`
 
-## Topic 17 最終QA
+## Topic 17 最終QA（前回）
 - 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_final_qa.md`
 - 必須成果物: PASS
 - 固定一次1問＋二次4問・6答案要素: `6 / 6 PASS`
@@ -190,5 +190,13 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `NEEDS_REVISION / topic_17_final_qa_needs_revision / IN_PROGRESS`
 
+## Topic 17 進捗記録同期
+- main source `## 状態`: 実成果物・独立再解答完了後の状態へ同期済み
+- main source末尾 `# 次工程`: Topic 17最終QA再実施へ同期済み
+- 練習source末尾 `# 次工程`: Topic 17最終QA再実施へ同期済み
+- 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更: `0件`
+
+判定: `PASS / topic_17_progress_records_synced / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 17の進捗記録3箇所だけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更しない。同期後に最終QAを再実施する。
+Topic 17最終QAを再実施する。必須成果物、固定5問・6答案要素、完成後独立再解答、解説PDF・練習PDF・PowerPoint各QA、仕様境界、進捗記録整合を確認し、全項目PASSの場合のみ completed とする。
