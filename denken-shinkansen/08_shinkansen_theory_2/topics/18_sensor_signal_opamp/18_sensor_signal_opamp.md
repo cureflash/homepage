@@ -4,20 +4,21 @@
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 - completion: `in_progress`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: 一次5問・25答案要素
 - 制作前blind独立再解答: `25 / 25 PASS`
 - 公式標準解答照合: `25 / 25`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
 - 必須説明: `15 / 15`
 - 固定一次5問への接続: `25 / 25答案要素`
 - 3段階例題: `3 / 3`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 公式標準解答・保存済み正答の先見: `0件`
-- 次工程: 解説PDF＋表示QA
+- 次工程: 練習問題source＋練習PDF
 
 ## 1. SPEC固定範囲
 
@@ -565,6 +566,26 @@ H29・H21一次理論問8型では、帰還部分を一つの `Rf` に見立て�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
 
-## 8. 次工程
+## 8. 解説PDF QA
 
-このsourceを正本として解説PDFを生成し、表示QAを行う。
+- PDF: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_explanation.pdf`
+- QA: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_explanation_pdf_qa.md`
+- A4縦3ページ
+- 200 dpi全ページ表示QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `4ce0b422f055cf5f02786cb28e1b87baa2a11f8966cc6bfbc7a711605a5614c3`
+- 固定一次5問・25答案要素への教材内接続: `25 / 25`
+- EXAM_ALIGNMENT必須説明15項目: `15 / 15 covered`
+- 3段階例題: `3 / 3`
+- 例題数値再計算: `3 / 3 PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 19・20の先取り: `0件`
+- 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`。
+
+## 9. 次工程
+
+練習問題source＋練習PDFを作成し、問題・解答・完全解説、数値再計算・正答一意性、固定一次5問・25答案要素、SPEC境界を確認する。Topic 19・20を先取りせず、実車の特定センサ回路・回路定数・実装方式を未確認のまま追加しない。
