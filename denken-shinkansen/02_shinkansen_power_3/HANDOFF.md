@@ -6,11 +6,12 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は完成済み。active themeはTopic 14。
 
 ## 今回進捗
-Topic 14 `駅やトンネルにはどう電気を配る？` の解説PDFとPDF QAを完成させた。A4縦4ページへ解説本文・3段階例題を反映し、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、3段階例題の数値・論理再検算 `3 / 3 PASS`、固定5問・6答案要素のPDF対応 `6 / 6` を確認した。完成後ブラインド独立再解答を汚染しないため、公式正答番号・制作前最終答案はPDFへ転記していない。SPEC固定範囲外追加、Topic 15論点先取り、未確認新幹線実設備値の真値化はいずれも0件。
+Topic 14 `駅やトンネルにはどう電気を配る？` の練習問題sourceを完成させた。全12問・全問五肢択一、基礎3問／本試験標準7問／複合2問。数値・論理独立再計算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5問・6答案要素への接続 `6 / 6 PASS` を確認した。固定過去問の問題文・保存済み正答は転記せず、完成後ブラインド独立再解答を汚染する公式正答番号の教材転記は0件。SPEC固定範囲外追加、Topic 15論点先取り、未確認新幹線実設備値の真値化はいずれも0件。
 
 source: `topics/14_distribution/14_distribution.md`
 解説PDF: `topics/14_distribution/14_distribution_explanation.pdf`
 解説PDF QA: `topics/14_distribution/14_distribution_explanation_qa.md`
+練習問題source: `topics/14_distribution/14_distribution_practice_source.md`
 
 現在の品質ゲート:
 - 制作前EXAM_ALIGNMENT: 完了
@@ -32,7 +33,12 @@ source: `topics/14_distribution/14_distribution.md`
 - 解説PDF文字抽出QA: `PASS`
 - 解説PDF数値・論理再検算: `3 / 3 PASS`
 - 固定5問・6答案要素のPDF対応: `6 / 6`
-- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPDF転記 `0件`
+- 練習問題source: 全12問・全問五肢択一
+- 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5問・6答案要素への接続: `6 / 6 PASS`
+- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案の練習source転記 `0件`
 - SPEC固定範囲外の採用問題・本文・PDF追加: `0件`
 - 既完了Topic固定過去問との重複採用: `0件`
 - Topic 15論点先取り: `0件`
@@ -95,9 +101,9 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - 完成後ブラインド独立再解答: `5 / 5 PASS`
 - 公式解答一致: `5 / 5 PASS`
 - 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
 - Topic 14以降の論点による補完: `0件`
-- SPEC固定範囲外追加（独立再解答時）: `0件`
-- 未確認新幹線実設備値の使用: `0件`
+- 未確認新幹線実設備値の真値化: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
 - 旧進捗記録5箇所同期: 完了
 - 最終QA再実施: `PASS / completed`
@@ -226,13 +232,14 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_14_explanation_pdf_complete`
+- `current_status`: `topic_14_practice_source_complete`
 - 完成数: `13 / 16`
 - last completed: Topic 13 `新幹線の架線は何でできている？`
 - active: Topic 14 `駅やトンネルにはどう電気を配る？`
 - Topic 14 source: `topics/14_distribution/14_distribution.md`
 - Topic 14 解説PDF: `topics/14_distribution/14_distribution_explanation.pdf`
 - Topic 14 解説PDF QA: `topics/14_distribution/14_distribution_explanation_qa.md`
+- Topic 14 練習問題source: `topics/14_distribution/14_distribution_practice_source.md`
 - Topic 14 固定問題: `5問・6答案要素`
 - Topic 14 制作前EXAM_ALIGNMENT: 完了
 - Topic 14 制作前独立検証: `6 / 6 PASS`
@@ -245,7 +252,12 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 14 解説PDF文字抽出QA: `PASS`
 - Topic 14 解説PDF数値・論理再検算: `3 / 3 PASS`
 - Topic 14 固定5問・6答案要素のPDF対応: `6 / 6`
-- Topic 14 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPDF転記 `0件`
+- Topic 14 練習source: 全12問・全問五肢択一
+- Topic 14 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- Topic 14 練習source数値・論理独立再計算: `12 / 12 PASS`
+- Topic 14 練習source正答一意性: `12 / 12 PASS`
+- Topic 14 練習source固定5問・6答案要素への接続: `6 / 6 PASS`
+- Topic 14 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案の練習source転記 `0件`
 - Topic 14 SPEC固定範囲外採用・本文・PDF追加: `0件`
 - Topic 14 既完了Topic固定過去問との重複採用: `0件`
 - Topic 14 未確認新幹線実設備値への依存・真値化: `0件`
@@ -281,4 +293,4 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 12 最終QA: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 14の練習問題sourceを作成し、12問以上・本試験形式・正答一意性・固定5問6答案要素への接続・数値論理QAを確認する。
+Topic 14の練習PDFを作成し、表示QA・文字抽出QA・12問再検算・正答一意性・固定5問6答案要素への接続を確認する。
