@@ -1,6 +1,6 @@
 # 17 パワー半導体の損失比較 — 練習PDF QA
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 対象
 - PDF: `17_power_semiconductor_loss_comparison_practice.pdf`
@@ -22,7 +22,9 @@
 - preflight注意: `HeiseiKakuGo-W5非埋込 / 180 dpi表示・文字抽出はPASS`
 
 ## 試験対応・数値QA
-- 固定5過去問・26答案要素接続: `26 / 26 PASS`
+- 固定5過去問・23答案要素接続: `23 / 23 PASS`
+- clean blind公式照合: `23 / 23 PASS`
+- H24一次「機械」問6のゲート対象: `(2)(3)のみ / PASS`
 - 数値・論理整合: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
 - SPEC指定7項目: `7 / 7 covered`
@@ -32,6 +34,7 @@
 - 問題数・正答・式系変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
+- PDF本体変更: `0件`
 
 ## ファイル
 - PDF SHA-256: `f8c3b2b3abdfa050d02d53b6b71fe84b408b74103e814c085306496da89df866`
@@ -40,6 +43,6 @@
 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ## 現在地
-current_status: `topic_17_practice_pdf_complete`
+旧26答案要素前提の記録を是正後の固定5問・23答案要素へ同期した。PDF本体・問題・正答・数式は変更していない。
 
-次工程は Topic 17 の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
+次工程は Topic 17 の最終QA再実施。
