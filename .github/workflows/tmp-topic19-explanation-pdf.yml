@@ -1,5 +1,5 @@
 name: Temporary Topic 19 Explanation PDF Assembly
-# Trigger assembly after workflow exists on default branch.
+# Publish verified PDF and remove temporary assembly files.
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
           test "$(wc -c < /tmp/topic19.pdf)" -eq 19195
           test "$(sha256sum /tmp/topic19.pdf | awk '{print $1}')" = 'c5a13d36ebbdc37ba4fcc4d74be70af7e5aa63488c1de570c60751f7ee3a23c1'
           test "$(git hash-object /tmp/topic19.pdf)" = 'bbbe79949058c62725f644236b78f8c961365291'
-      - name: Commit PDF
+      - name: Commit PDF and clean temporary files
         shell: bash
         run: |
           set -euo pipefail
@@ -40,7 +40,7 @@ jobs:
           target='denken-shinkansen/07_shinkansen_machine_2/topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf'
           cp /tmp/topic19.pdf "$target"
           git add "$target"
-          if git diff --cached --quiet; then exit 0; fi
+          git rm -r .tmp_topic19_pdf .github/workflows/tmp-topic19-explanation-pdf.yml
           git commit -m 'denken machine2: add Topic 19 explanation PDF'
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then exit 0; fi
