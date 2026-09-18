@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `14 / 16`
-- current_status: `topic_15_powerpoint_complete`
+- current_status: `topic_15_independent_reanswer_complete`
 - last_completed_topic: `14 停電してもN700Sが走れるのはなぜ？`
 - active_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
-- next_start: Topic 15の完成後blind独立再解答を実施する
+- next_start: Topic 15の最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -79,8 +79,14 @@
 - PowerPoint固定過去問接続: `12 / 12 PASS`
 - PowerPoint: `topics/15_lighting_heating/15_lighting_heating_images.pptx`
 - PowerPoint QA: `topics/15_lighting_heating/15_lighting_heating_powerpoint_qa.md`
-- 状態: `topic_15_powerpoint_complete / IN_PROGRESS`
-- 次工程: 固定EXAM_ALIGNMENTと教材成果物を変更せず、保存済み正答選択肢番号を見ない完成後blind独立再解答を7問・12答案要素で実施する
+- 完成後blind独立再解答: `12 / 12 PASS`
+- blind解答: R8上 問17 `(a)5 / (b)2` / R7上 問12 `(4)` / R7上 問17 `(a)2 / (b)2` / R6下 問17 `(a)2 / (b)3` / R6上 問17 `(a)2 / (b)1` / R4上 問17 `(a)5 / (b)5` / R2 問12 `(3)`
+- 公式解答一致: `12 / 12`
+- blind答案固定commit: `e5dc7884e5500fe7b407f67c758b45e51c9501a3`
+- 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
+- 独立再解答記録: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`
+- 状態: `topic_15_independent_reanswer_complete / IN_PROGRESS`
+- 次工程: Topic 15の最終QA。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする
 
 ## Topic 14 最終品質状態
 - 固定範囲: 電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率
@@ -260,7 +266,6 @@
 - explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
 - explanation PDF QA: `topics/12_information_processing/12_information_processing_explanation_pdf_qa.md`
 - 練習問題source: `12問` 完成
-- practice source: `topics/12_information_processing/12_information_processing_practice.md`
 - 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
 - 練習問題形式: `12 / 12` 五肢択一
 - 練習問題独立論理QA: `12 / 12 PASS`
@@ -358,6 +363,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 15「車内の照明・空調にはどれだけ電気が必要？」の解説画像PowerPointを完成した。16:9・4枚。約180 dpi相当表示QA `4 / 4 PASS`、`slides_test.py` スライド外はみ出し `0件`、文字切れ・重なり・判読不能 `0件`、欠落・破損グリフ `0件`、ZIP整合性 `PASS`、固定EXAM_ALIGNMENT 7問・12答案要素への接続 `12 / 12 PASS`。固定範囲外論点、光束発散度・熱伝導・熱放射・工業電熱、未確認の新幹線車内設備実値、Topic 16先取りはいずれも `0件`。
+Topic 15「車内の照明・空調にはどれだけ電気が必要？」の完成後blind独立再解答を実施した。固定7問・12答案要素を、公式解答参照前にcommit `e5dc7884e5500fe7b407f67c758b45e51c9501a3` で答案固定し、教材内容だけで解答。その後の公式解答照合は `12 / 12 PASS`。教材外・固定範囲外知識による補完、固定EXAM_ALIGNMENT変更、光束発散度・熱伝導・熱放射・工業電熱の追加、未確認の新幹線車内設備実値、Topic 16先取りはいずれも `0件`。
 
-完成数は `14 / 16` のまま。次工程はTopic 15の完成後blind独立再解答。
+完成数は `14 / 16` のまま。次工程はTopic 15の最終QA。
