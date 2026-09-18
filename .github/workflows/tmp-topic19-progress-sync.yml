@@ -1,4 +1,5 @@
 name: Temporary Topic 19 Progress Sync
+# Trigger after workflow exists on default branch.
 
 on:
   push:
