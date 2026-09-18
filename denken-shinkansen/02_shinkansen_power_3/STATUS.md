@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 15 / 16
-- current_status: `topic_16_practice_pdf_complete`
+- current_status: `topic_16_independent_reanswer_complete`
 - last_completed_topic: `15 回生した電気はどこへ行く？`
 - active_topic: `16 発電所からN700Sまで全部つないでみる`
-- next_start: Topic 16の解説画像PowerPointを作成する
+- next_start: Topic 16 main sourceへ完成後独立再解答結果を同期する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 15 回生した電気はどこへ行く？ — completed。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録7箇所の整合を再確認し `PASS / completed`。Webカタログ登録済み
-- [ ] 16 発電所からN700Sまで全部つないでみる — 制作前EXAM_ALIGNMENT・制作前独立再解答、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QAまで完了。固定5出題回・7答案要素の練習PDF接続 `7 / 7 PASS`、練習PDF数値・論理再検算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。次は解説画像PowerPoint
+- [ ] 16 発電所からN700Sまで全部つないでみる — IN_PROGRESS。制作前EXAM_ALIGNMENT・制作前独立再解答、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QAまで完成。固定5出題回・7答案要素の完成後独立再解答 `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件。次はmain sourceへ結果同期
 
 ## Topic 07 完了記録
 source: `topics/07_phase_conversion/07_phase_conversion.md`
@@ -636,6 +636,9 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 練習問題source: `topics/16_power_system_integration/16_power_system_integration_practice_source.md`
 練習PDF: `topics/16_power_system_integration/16_power_system_integration_practice.pdf`
 練習PDF QA: `topics/16_power_system_integration/16_power_system_integration_practice_qa.md`
+解説画像PowerPoint: `topics/16_power_system_integration/16_power_system_integration_images.pptx`
+PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_powerpoint_qa.md`
+完成後独立再解答: `topics/16_power_system_integration/16_power_system_integration_independent_reanswer.md`
 
 固定5出題回・7答案要素:
 - R8上 電力 問2
@@ -678,8 +681,27 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 - 練習PDF数値・論理再検算: `12 / 12 PASS`
 - 練習PDF正答一意性: `12 / 12 PASS`
 - 練習PDF固定5出題回・7答案要素への接続: `7 / 7 PASS`
-- 解説画像PowerPoint: 未着手
-- 完成後ブラインド独立再解答: 未実施
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint固定5出題回・7答案要素の要求事項可視化: `7 / 7 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- PowerPoint内数式・論理QA: `PASS`
+- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPowerPoint転記 `0件`
+- 完成後独立再解答: `7 / 7 PASS`
+- 完成後公式標準解答一致: `7 / 7 PASS`
+- 完成後教材外知識補完: `0件`
+- 完成後SPEC固定範囲外追加: `0件`
+- 完成後件数合わせの仕様追加: `0件`
+- 完成後未確認新幹線実設備値の真値化: `0件`
+- main sourceへの完成後独立再解答結果同期: 未実施
+
+完成後独立答案:
+- R8上 電力 問2: `(5)`
+- H30 電力 問8: `(3)`
+- R7下 電力 問16(a)(b): `(4),(2)`
+- R7下 電力 問12: `(3)`
+- R7上 法規 問13(a)(b): `(2),(3)`
 
 ## 次
-Topic 16の解説画像PowerPointを作成する。
+Topic 16 main sourceへ完成後独立再解答結果を同期する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。最終QAにはまだ進まない。
