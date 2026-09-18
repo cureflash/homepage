@@ -68,4 +68,4 @@ source確定後のPDFについて主要計算を独立に再確認した。
 
 `PASS / PRACTICE_PDF_COMPLETE`
 
-次工程: 固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDFを変更せず、Topic 20の解説画像PowerPoint＋QAを作成する。
+解説画像PowerPoint、完成後独立検証、初回最終QAまで完了済み。次工程: Topic 20の最終QA再判定。
