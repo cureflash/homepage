@@ -8,7 +8,54 @@
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
 
-現在地は `topic_18_explanation_source_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+現在地は `topic_18_practice_source_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+
+## Topic 18 練習source
+
+source:
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_practice_source.md`
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
+構成:
+- 一次試験型: `8問`、全問五肢択一
+- 二次試験型: `4問`、途中式・前提・単位・理由を含む記述式
+- 合計: `12問`
+
+品質:
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定過去問: `一次3問＋二次2問 / 5問`
+- 固定答案要素の実効接続: `一次7＋二次8 / 15 / 15 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+- clean blind公式照合: `未実施 / 練習PDF・PowerPoint完成後`
+
+## Topic 18 解説PDF
+
+成果物:
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_explanation.pdf`
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_explanation_pdf_qa.md`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+品質:
+- A4縦6ページ
+- 180 dpi描画: `6 / 6 PASS`
+- pdfium / pdftoppm: `6 / 6 PASS / 6 / 6 PASS`
+- 文字抽出: `PASS`
+- 欠落文字・黒四角・クリップ・重なり: `0件`
+- 主要式抽出: `6 / 6 PASS`
+- 数値独立再計算: `8 / 8 PASS`
+- 固定5問・15答案要素のPDFマッピング: `15 / 15 PASS`
+- SPEC指定7項目: `7 / 7 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 二次試験用回転磁界相対速度: `7 / 7 covered`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
 
 ## Topic 18 解説source
 
@@ -38,7 +85,6 @@ source:
 - SPEC指定7項目: `7 / 7 covered`
 - SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
-- clean blind公式照合: `未実施 / 成果物完成後`
 
 ## Topic 18 制作前EXAM_ALIGNMENT
 
@@ -59,12 +105,12 @@ source:
 
 直近年度から公式問題を確認したうえで、固定SPECへ直接接続しないR8一次の鉄損・効率中心問題、R7一次、R4一次のトルク符号中心問題は件数合わせで採用していない。
 
-教材本文へ必ず接続する事項:
+教材本文・練習へ必ず接続する事項:
 - `E = 4.44 f N Φ_m`
 - 同一V・Nで `Φ_m ∝ 1/f`
 - `B_m = Φ_m/A` と周波数―磁束密度
 - V/f一定と磁束維持
-- `N_s = 120f/p`
+- `N_s = 120f/P`
 - `s = (N_s-N)/N_s`
 - `f_2 = sf`
 - 電源周波数50/60 Hzとインバータ出力周波数の区別
@@ -144,4 +190,4 @@ H24一次 問6は問題自体を固定5問の一つとして維持するが、To
 
 ## 次工程
 
-Topic 18の解説PDFを作る。`18_e2series_50hz_60hz_flux_explanation_source.md` を正本として、固定5問・15答案要素、SPEC指定7項目・3可視化を変更しない。生成後に表示QAと数式・数値QAを行い、PDF完成前に練習問題・PowerPointへ進まない。
+Topic 18の練習PDFを作る。`18_e2series_50hz_60hz_flux_practice_source.md` を正本として、固定5問・15答案要素、SPEC指定7項目・3可視化、一次8問・二次4問の問題・正答・数式を変更しない。PDF生成後に表示QA、文字抽出QA、数値・正答一意性QAを行い、練習PDF完成前にPowerPointへ進まない。
