@@ -4,13 +4,24 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTを確定した。本文・PDF・PowerPointは未着手。
+制作前EXAM_ALIGNMENTと解説source本文を確定した。PDF・練習問題・PowerPointは未着手。
 
 固定過去問は第二種の一次3問＋二次2問、計5問。Topic 18へ直接対応する答案要素だけをゲート対象とし、周辺論点で件数を水増ししない。
 
-current_status: `topic_18_exam_alignment_complete`
+current_status: `topic_18_explanation_source_complete`
 
-次工程: 下記15答案要素から逆算して解説source本文を作る。E2系の実車仕様値は一次資料で確認できたもの以外を真値化しない。
+解説source:
+- `18_e2series_50hz_60hz_flux_explanation_source.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 固定要求知識: `15 / 15 covered`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 fixed`
+- 3段階例題: `3 / 3`
+- 例題数値再計算: `3 / 3 PASS`
+- 仕様追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+
+次工程: 解説sourceから解説PDFを作り、表示QAと数式・数値QAを行う。固定5問・15答案要素、7項目、3可視化は変更しない。
 
 ## 固定範囲
 
