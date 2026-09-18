@@ -6,11 +6,13 @@
 
 ## 判定条件
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md`、GitHub正本の既存成果物を再照合した。固定EXAM_ALIGNMENT・技術本文・練習問題・正答・PDF/PPTXは変更しない。
+`denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md`、GitHub正本のTopic 18成果物を再照合した。
 
 `08 理論・二種` は一次理論中心であり、Topic 18は固定範囲だけで完答できる二次直接対応問題が確認できないため、固定一次5問・25答案要素を品質ゲート対象とする。二次数合わせは行わない。
 
-## 確認結果
+初回最終QA後にTopic 18配下へ入った変更は、主sourceと練習sourceの進捗記録同期のみである。技術本文、固定EXAM_ALIGNMENT、練習問題、正答、PDF、PowerPoint、完成後独立再解答結果は変更していない。
+
+## 再実施結果
 
 ### 1. 必須成果物
 
@@ -26,7 +28,7 @@ GitHub正本上で以下の実在を再確認した。
 - 解説画像PowerPoint
 - PowerPoint QA
 - 完成後独立再解答記録
-- 本最終QA記録
+- 最終QA記録
 
 判定: `PASS`
 
@@ -48,7 +50,7 @@ GitHub正本上で以下の実在を再確認した。
 
 ### 3. 二次試験
 
-R8二次は2026-09-18時点で未実施。R7〜R1二次「機械・制御」「電力・管理」を確認済みで、本Topicの固定範囲だけで完答できる直接対応記述問題は確認できないため、非採用を維持する。
+R8二次は2026-09-18時点で未実施。R7〜R1二次「機械・制御」「電力・管理」を確認済みで、本Topicの固定範囲だけで完答できる直接対応記述問題は確認できない。非採用を維持する。
 
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
@@ -71,40 +73,31 @@ R8二次は2026-09-18時点で未実施。R7〜R1二次「機械・制御」「�
 - 練習PDF: A4縦3ページ、200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`
 - 練習12問: 数値再計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`
 - 固定5問・25答案要素への練習接続: `25 / 25`
-- PowerPoint: 16:9・5スライド、表示QA `5 / 5 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`、PDF変換 `5 / 5 PASS`、PDF文字抽出QA `PASS`
+- PowerPoint: 16:9・5スライド、表示QA `5 / 5 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`、PDF変換 `5ページ / PASS`、PDF文字抽出QA `PASS`
 - 固定5問・25答案要素の可視化: `25 / 25`
 
 判定: `PASS`
 
-### 6. 進捗記録整合
+### 6. 初回blocker再確認
 
-技術成果物・QA・完成後独立再解答は最終QA直前まで完了している一方、主sourceと練習sourceの進捗記録が旧工程のまま残っている。
+初回最終QAで検出した進捗記録4件を再確認した。
 
-1. `18_sensor_signal_opamp.md` 冒頭状態
-   - 現在記録: stage `EXPLANATION_PDF_COMPLETE`
-   - 現在記録: 次工程 `練習問題source＋練習PDF`
-   - 実際: 練習PDF、PowerPoint、完成後独立再解答まで完了
-2. `18_sensor_signal_opamp.md` 末尾
-   - 現在記録: 次工程 `練習問題source＋練習PDF`
-   - 実際: 完成後独立再解答まで完了
-3. `18_sensor_signal_opamp_practice.md` 冒頭状態
-   - 現在記録: stage `PRACTICE_PDF_COMPLETE`
-   - 現在記録: 次工程 `解説画像PowerPoint＋表示QA`
-   - 実際: PowerPoint、完成後独立再解答まで完了
-4. `18_sensor_signal_opamp_practice.md` 末尾
-   - 現在記録: 次工程 `解説画像PowerPoint＋表示QA`
-   - 実際: 完成後独立再解答まで完了
+1. 主source冒頭 stage: `PROGRESS_RECORDS_SYNCED`
+2. 主source冒頭 次工程: `Topic 18最終QA再実施`
+3. 主source末尾 次工程: `Topic 18最終QA再実施`
+4. 練習source冒頭 stage: `PROGRESS_RECORDS_SYNCED`、次工程: `Topic 18最終QA再実施`
+5. 練習source末尾 次工程: `Topic 18最終QA再実施`
 
-進捗記録blocker: `4件`。
+初回blocker: `4 / 4解消`。
 
-技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXに修正を要するblockerは `0件`。
+技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXに修正を要するblocker: `0件`。
 
-判定: `NEEDS_REVISION / PROGRESS_RECORDS_OUT_OF_SYNC`
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
 
-固定一次5問・25答案要素の完成後独立再解答、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界は全件PASSした。ただし主source・練習sourceの進捗記録4箇所がGitHub正本の実態と不整合のため、`FINAL_QA_COMPLETE` にはしない。
+固定一次5問・25答案要素、完成後独立再解答、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界、初回blocker解消をすべて確認した。
 
-Topic 18の完成数は `17 / 21` のまま。次工程は主source・練習sourceの進捗記録同期。同期後に最終QAを再実施する。
+Topic 18の完成数は `17 / 21` のまま。次工程は `completed` 状態同期。状態同期が完了するまで完成数へ加算しない。
