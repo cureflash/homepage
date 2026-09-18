@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_final_qa_pass`
-- last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 completed状態同期
+- exam_aligned_completed_topics: `17 / 22`
+- current_status: `topic_17_completed`
+- last_completed_topic: `17 新幹線の速度をフィードバック制御する`
+- active_topic: `18 速度指令を変えたら何秒で追従する？`
+- next_start: Topic 18 制作前EXAM_ALIGNMENT
 
 ## 完了テーマ
-- [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 最終QA `PASS / FINAL_QA_COMPLETE` / 次はcompleted状態同期
+- [x] Topic 01〜17 最終QA `PASS / completed`
+- [ ] Topic 18 `NOT_STARTED` — 制作前EXAM_ALIGNMENTから開始
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -313,8 +313,16 @@
 - 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_final_qa.md`
 - 判定: `PASS / topic_17_final_qa_pass / FINAL_QA_COMPLETE`
 
+## Topic 17 completed状態同期
+- [x] main source `## 状態` を `topic_17_final_qa_pass / completed` へ同期
+- [x] main source末尾 `# 次工程` をTopic 18制作前EXAM_ALIGNMENTへ同期
+- [x] 練習source末尾 `# 次工程` をTopic 18制作前EXAM_ALIGNMENTへ同期
+- [x] 系列 `STATUS.md` / `HANDOFF.md` を完成数 `17 / 22`・active Topic 18へ同期
+- [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更 `0件`
+- 判定: `PASS / topic_17_completed / completed`
+
 ## 今回進めた内容
-Topic 17最終QAを再実施した。前回唯一FAILだった進捗記録3箇所の同期を再確認して `3 / 3 PASS`。固定5問・6答案要素、完成後独立再解答 `6 / 6 PASS`、練習QA、PDF/PPTX QA、仕様境界も全件PASS。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。
+Topic 17のcompleted状態同期を実施した。最終QA `PASS` と独立再解答 `6 / 6 PASS` を維持したまま、main source、練習source、系列進捗記録を完成状態へ同期した。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。
 
 ## 判定
-Topic 17は `PASS / topic_17_final_qa_pass / FINAL_QA_COMPLETE / IN_PROGRESS`。本runでは最終QA再実施までを1段階とし、完成数は `16 / 22` のまま。次工程はTopic 17 completed状態同期。
+Topic 17は `PASS / topic_17_completed / completed`。完成数は `17 / 22`。次工程はTopic 18「速度指令を変えたら何秒で追従する？」の制作前EXAM_ALIGNMENT。
