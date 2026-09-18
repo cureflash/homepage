@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `14 / 16`
-- current_status: `topic_15_final_qa_needs_revision`
+- current_status: `topic_15_progress_sync_complete`
 - last_completed_topic: `14 停電してもN700Sが走れるのはなぜ？`
 - active_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
-- next_start: Topic 15の旧進捗2ファイルを実成果物へ同期する
+- next_start: Topic 15の最終QAを再判定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -85,17 +85,18 @@
 - blind答案固定commit: `e5dc7884e5500fe7b407f67c758b45e51c9501a3`
 - 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
 - 独立再解答記録: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`
-- 最終QA判定: `NEEDS_REVISION`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 最終QA進捗記録整合: `FAIL`（旧進捗2ファイル）
-- 旧進捗1: `topics/15_lighting_heating/15_lighting_heating_practice.md` — 次工程が解説画像PowerPoint作成のまま
-- 旧進捗2: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` — 次工程が解説画像PowerPoint作成のまま
-- 最終QA固定範囲境界: `PASS`
-- 状態: `topic_15_final_qa_needs_revision / IN_PROGRESS`
-- 次工程: 旧進捗2ファイルだけを現状（PowerPoint完成、blind独立再解答完成、次工程は最終QA再判定）へ同期する。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更しない
+- 前回最終QA判定: `NEEDS_REVISION`
+- 前回最終QA技術内容: `PASS`
+- 前回最終QA必須成果物: `PASS`
+- 前回最終QA表示QA: `PASS`
+- 前回最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
+- 前回最終QA進捗記録整合: `FAIL`（旧進捗2ファイル）
+- 旧進捗1: `topics/15_lighting_heating/15_lighting_heating_practice.md` — 同期済み
+- 旧進捗2: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` — 同期済み
+- 進捗記録同期: `2 / 2 PASS`
+- 前回最終QA固定範囲境界: `PASS`
+- 状態: `topic_15_progress_sync_complete / IN_PROGRESS`
+- 次工程: Topic 15の最終QAを再判定する。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更しない
 
 ## Topic 14 最終品質状態
 - 固定範囲: 電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率
@@ -372,6 +373,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 15「車内の照明・空調にはどれだけ電気が必要？」の最終QAを実施した。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、固定範囲境界はいずれも `PASS`。ただし `15_lighting_heating_practice.md` と `15_lighting_heating_practice_pdf_qa.md` の次工程が「解説画像PowerPointを作成する」のままで、実成果物（PowerPoint完成、blind独立再解答完成）と不整合のため進捗記録整合のみ `FAIL`。最終判定は `NEEDS_REVISION` とし、completedにはしない。
+Topic 15「車内の照明・空調にはどれだけ電気が必要？」の旧進捗2ファイルを、実成果物（PowerPoint完成、blind独立再解答完成）へ同期した。`15_lighting_heating_practice.md` と `15_lighting_heating_practice_pdf_qa.md` はいずれも次工程を「最終QA再判定」へ更新し、進捗記録同期 `2 / 2 PASS`。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更していない。
 
-完成数は `14 / 16` のまま。次工程は旧進捗2ファイルだけを実成果物へ同期する。
+完成数は `14 / 16` のまま。次工程はTopic 15の最終QA再判定。
