@@ -8,7 +8,35 @@
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 
-現在地は `topic_19_exam_alignment_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENTは完了し、本文・PDF・PowerPointは未着手。
+現在地は `topic_19_explanation_source_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENTと解説source本文まで完了し、次は解説PDF。練習source・練習PDF・PowerPoint・完成後clean blindは未着手。
+
+## Topic 19 解説source
+
+成果物:
+- 主source: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit.md`
+- 解説source: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_explanation_source.md`
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+品質:
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問: `一次4問＋二次1問 / 5問`
+- 固定答案要素: `一次7＋二次2 / 9`
+- 固定要求知識の本文マッピング: `9 / 9 covered`
+- 3段階例題: `3 / 3`
+- 例題数値再計算: `3 / 3 PASS`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 fixed`
+- SPEC外追加: `0件`
+- 未確認ミニ新幹線実車値の真値化: `0件`
+- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
+- 完成後clean blind公式照合: `未実施 / 成果物完成後に実施`
+
+解説sourceで固定した教材用仮定値:
+- 例題・可視化の数値はすべて教材用仮定値。
+- `Pout=6.84 MW`、`η=0.95`、`cosφ=0.90` の比較モデルでは `10 kV→800 A`、`8 kV→1000 A` を再計算済み。
+- タップ例は `V1=10 kV`、`N2=200 turn` の一般モデルで、実車値ではない。
+- 主変換装置例は理想降圧モデル `Vo=DVd` の固定範囲だけ。
 
 ## Topic 19 制作前EXAM_ALIGNMENT
 
@@ -95,4 +123,4 @@ source:
 
 ## 次工程
 
-Topic 19の解説source本文を作る。固定5問・9答案要素から必要事項を逆算し、SPEC指定3計算・グラフまで固定範囲内で設計する。H25負荷時タップ切換装置は一般原理としてのみ扱い、ミニ新幹線実車への採用を推測しない。未確認実車値・実構成は一次資料確認前に真値化しない。
+Topic 19の解説PDFを作る。`19_mini_shinkansen_dual_voltage_main_circuit_explanation_source.md` を正本として、固定5問・9答案要素、SPEC指定9項目・3可視化を変更せずPDF化し、表示QAと数式・数値QAを行う。H25負荷時タップ切換装置は一般原理としてのみ扱い、ミニ新幹線実車への採用を推測しない。未確認実車値・実構成は一次資料確認前に真値化しない。
