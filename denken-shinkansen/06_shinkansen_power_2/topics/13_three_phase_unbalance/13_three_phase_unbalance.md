@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_13_progress_records_synced`
+`completed`
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source/PDF、練習source/PDF、PowerPoint、各QA、完成後blind独立再解答、初回最終QAまで完了した。初回最終QAで技術内容はPASSし、残った旧進捗記録3箇所とWebカタログ1件を本段階で同期する。固定2問8答案要素・技術内容・問題・正答は変更していない。Topic 13は最終QA再判定前のため `IN_PROGRESS` を維持する。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source/PDF、練習source/PDF、PowerPoint、各QA、完成後blind独立再解答、初回最終QA、進捗記録同期、最終QA再判定まで完了した。固定2問8答案要素は完成後blind独立再解答で `8 / 8 PASS`、制作前不足2要素は `2 / 2 改善確認`。初回最終QAで残った進捗記録3箇所とWebカタログ1件を同期後、技術内容・固定EXAM_ALIGNMENT・必須成果物・PDF/PPTX QA・練習QA・完成後blind・SPEC境界・進捗記録整合・Web公開を再確認し、全件PASSとして `completed` とした。技術内容、問題・正答、PDF/PPTX、固定EXAM_ALIGNMENTは変更していない。
 
 ## SPEC固定範囲
 
@@ -266,4 +266,4 @@ Topic 13での教材マッピング:
 
 ## 次工程
 
-進捗記録3箇所とWebカタログ1件の同期後、Topic 13の最終QAを再判定する。固定EXAM_ALIGNMENT、技術内容、問題・正答、PDF/PPTX、完成後blind独立再解答結果は変更しない。再判定PASSまでは `completed` とせず、Topic 14以降・Topic 16故障計算は先取りしない。
+Topic 13は最終QA再判定まで完了し `completed`。次はTopic 14「新幹線の力率と電圧をどう維持する？」の制作前EXAM_ALIGNMENTを行う。Topic 14の固定範囲を超えてTopic 15以降を先取りしない。
