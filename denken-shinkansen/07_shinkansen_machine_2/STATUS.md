@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_practice_pdf_complete`
+- current_status: `topic_17_powerpoint_complete`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 解説画像PowerPoint制作
+- next_start: Topic 17 独立再解答前ゲート
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF `PASS` / 次は解説画像PowerPoint
+- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint `PASS` / 次は独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -244,8 +244,22 @@
 - 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_practice_pdf_qa.md`
 - 判定: `PASS / topic_17_practice_pdf_complete`
 
+## Topic 17 解説画像PowerPoint
+- [x] `topics/17_speed_feedback_control/17_speed_feedback_control_images.pptx`
+- [x] 16:9・4枚
+- [x] 固定一次1問＋二次記述4問・計5問・6答案要素を `6 / 6` 可視化
+- [x] 120 dpi・1601×900で全4枚表示QA `4 / 4 PASS`
+- [x] 文字・数式・図の欠落、重なり、切れ、overflow `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] PPTX ZIP整合性 PASS
+- [x] Topic 18〜21先取り、二自由度制御の独立論点追加、未確認実車値、固定過去問正答保存 `0件`
+- [x] PPTX SHA-256 `7272f0d11d0272b104fdec5b4cb9aca692076dc4de0ffa81471bf4f786ce3106`
+- [x] Git blob SHA `d712faec67a64ff8b3c4157f8c4ae032802da626`
+- 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_powerpoint_qa.md`
+- 判定: `PASS / topic_17_powerpoint_complete`
+
 ## 今回進めた内容
-Topic 17を練習source完了状態から1段階進め、一次10問＋二次5問の練習PDFを完成した。固定5問・6答案要素を `6 / 6` 維持し、主要式 `14 / 14 PASS`、160 dpi全5ページ表示 `5 / 5 PASS`、文字抽出QA PASS。仕様境界を維持した。
+Topic 17を練習PDF完了状態から1段階進め、解説画像PowerPointを完成した。固定一次1問＋二次4問、計5問・6答案要素を `6 / 6` 維持し、120 dpi全4枚表示 `4 / 4 PASS`、ZIP整合性・文字抽出・overflowをPASS。仕様境界を維持した。
 
 ## 判定
-Topic 17は `PASS / topic_17_practice_pdf_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は解説画像PowerPoint制作。
+Topic 17は `PASS / topic_17_powerpoint_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は独立再解答前ゲート。
