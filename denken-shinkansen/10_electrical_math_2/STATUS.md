@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_17_powerpoint_complete`
+- current_status: `topic_17_post_completion_validation_complete`
 - last_completed_topic: `16 数値微分・数値積分`
 - active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の完成後独立検証を行う
+- next_start: Topic 17の最終QAを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -267,33 +267,32 @@
 - [x] 練習PDF（A4縦1ページ、200 dpi表示 `1 / 1 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [x] 解説画像PowerPoint（16:9・5枚、固定範囲 `5 / 5`）
 - [x] PowerPoint表示QA（再レンダリング `5 / 5 PASS`、overflow `0件`、`slides_test.py` `PASS`）
-- [ ] 完成後独立検証
+- [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、直接Euler/RK要求0問・水増し0件を維持）
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 17の解説画像PowerPointを作成し、表示・数値・仕様境界を確認した。
+Topic 17の完成後独立検証を実施した。
 
-- PowerPoint: `topics/17_ode_numerical_methods/17_ode_numerical_methods_images.pptx`
-- QA記録: `topics/17_ode_numerical_methods/17_ode_numerical_methods_powerpoint_qa.md`
-- 16:9・5枚
-- 固定範囲5項目: `5 / 5 covered`
-- 接続確認した第二種公式過去問: `5問`
+- 記録: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.md`
+- 再現用: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.py`
+- 保存済み例題と異なる新規数値条件で3ケースを独立計算
+- Case A: 一次減衰 `dy/dt=-2y`、刻み幅を `0.10 -> 0.05` とすると絶対誤差が `0.0368116 -> 0.0173706` に減少
+- Case B: 教育用RL過渡、刻み幅を `0.05 s -> 0.025 s` とすると絶対誤差が `0.514732 A -> 0.242705 A` に減少
+- Case C: 教育用列車モデルを始点値Euler法で速度・位置同時更新し、3ステップの数値整合を確認
+- Runge-Kutta法はSPECどおり概念説明のみを確認
 - 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
+- 接続確認した第二種公式過去問: `5問`
 - 非該当5問の固定品質ゲート件数への水増し: `0件`
-- 同一生成コードによる表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- `slides_test.py`: `PASS`
-- 数値整合: `PASS`
-- Runge-Kutta法: `SPEC.md` どおり概念説明に限定
+- 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 18以降の先取り: `0件`
 - 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_17_powerpoint_complete / IN_PROGRESS`
+`PASS / POST_COMPLETION_VALIDATION_COMPLETE`
 
 完成数は `16 / 20` のまま。
 
-次はTopic 17の完成後独立検証を行う。固定範囲と件数水増し0件を維持する。
+次はTopic 17の最終QAを実施する。
