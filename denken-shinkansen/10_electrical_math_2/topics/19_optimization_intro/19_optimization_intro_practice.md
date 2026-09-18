@@ -759,4 +759,4 @@ E_min=6^2+3*2^2
 
 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
-次工程: 固定済みEXAM_ALIGNMENT・解説本文・解説PDF・本練習sourceを変更せず、Topic 19の練習PDF＋QAを作成する。
+練習PDF、解説画像PowerPoint、完成後独立検証、初回最終QAまで完了済み。次工程: Topic 19の最終QA再判定。
