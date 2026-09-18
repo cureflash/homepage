@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_final_qa_needs_progress_sync`
+- current_status: `topic_16_progress_sync_complete`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: 新しいrunで、最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない
+- next_start: 新しいrunでTopic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — FINAL_QA_NEEDS_PROGRESS_SYNC / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — PROGRESS_SYNC_COMPLETE / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -190,6 +190,20 @@
 - SPEC外追加: `0件`
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 16 進捗記録同期
+- 最終QA指摘4箇所: `4 / 4 同期完了`
+- 主source冒頭 `## 状態`: `topic_16_progress_sync_complete`
+- 主source末尾 `## 次工程`: `最終QA再判定`
+- 練習source末尾 `## 次工程`: `topic_16_progress_sync_complete / 最終QA再判定`
+- 練習PDF QA末尾 `## 現在地`: `topic_16_progress_sync_complete / 最終QA再判定`
+- 技術成果物変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 問題・正答変更: `0件`
+- PDF/PPTX変更: `0件`
+- blind再解答結果変更: `0件`
+- SPEC外追加: `0件`
+- 判定: `PASS / PROGRESS_SYNC_COMPLETE`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -217,4 +231,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 16最終QAを再判定する。
+Topic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
