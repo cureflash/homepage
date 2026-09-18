@@ -8,11 +8,13 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_17_blind_reanswer_gate_complete`。Topic 17 `パワー半導体の損失比較` は、制作前EXAM_ALIGNMENTで固定した一次4問＋二次1問・26答案要素を変更せず、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成した。
+現在地は `topic_17_blind_reanswer_needs_revision`。Topic 17 `パワー半導体の損失比較` は、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成済みで、成果物自体のQAはPASSしている。
 
-完成後独立再解答前ゲート `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` を作成し、完成教材と品質記録を再監査した。固定5問・26答案要素への教材接続 `26 / 26 PASS`、SPEC指定7項目 `7 / 7 covered`、指定3可視化 `3 / 3 PASS`、固定EXAM_ALIGNMENT変更・SPEC外追加・未確認700系実車値の真値化はいずれも0件。候補答案の固定と公式解答／標準解答照合は未実施で、完成数は `16 / 39` のまま。
+完成後blind再解答を試行したところ、固定26答案要素のうち `23 / 26` はTopic 17教材だけで再導出できたが、H24一次「機械」問6の(1)(4)(5)は教材未収録だった。これらは電球形LEDランプの部品名、光への変換、自然空冷照明器具の具体的設計周囲温度という照明固有知識であり、Topic 17のSPEC固定範囲外である。教材へ追記すると仕様外追加になるため、現状をPASS扱いせずEXAM_ALIGNMENTの採用単位・マッピングを再監査する。
 
-次工程は、公式解答・標準解答を先に見ず、固定5問の公式問題文と完成教材だけを使って26答案要素を再解答し、候補答案を固定する。
+候補答案試行は `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` に保存した。公式解答・標準解答は開いていない。
+
+また本runでは工程形式確認のためTopic 16の候補答案記録を参照し、同一設問であるR7一次問4・R4一次問4の候補を事前に目にしている。Topic 17教材から再導出はしたが、strict blind provenanceのため、この10要素は次のclean runでTopic 16候補答案を参照せず再固定する。
 
 ## Topic 17 固定EXAM_ALIGNMENT
 
@@ -25,17 +27,18 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - H24 一次 機械 問6 (1)〜(5)
 - H24 二次 機械・制御 問1 (1)〜(6)
 
-品質ゲート:
+制作前固定時の記録:
 - 一次: `4問・20答案要素`
 - 二次: `1問・6答案要素`
 - 合計: `5問・26答案要素`
 - 制作前独立検証: `26 / 26 PASS`
-- 公式解答／標準解答との内容不一致: `0件`
 - 参考教材2系統以上: `PASS / e-sysnet.com + 電験王2`
 - SPEC指定7項目: `7 / 7 aligned`
 - SPEC指定3可視化: `3 / 3 aligned`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
+
+ただし完成後blind再解答でH24一次問6の3要素が教材外と判明したため、制作前の `26 / 26` 接続判定を最終品質ゲートには使用しない。
 
 ## Topic 17 必須成果物
 
@@ -45,40 +48,35 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - 練習PDF: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_practice.pdf` — `PASS / 6 pages`
 - PowerPoint: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_images.pptx` — `PASS / 4 slides`
 - PowerPoint QA: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_powerpoint_qa.md`
-- blind再解答前ゲート: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — `PASS / BLIND_REANSWER_READY`
+- blind再解答前ゲート: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — `事前PASS / BLIND_REANSWER_READY`
+- blind再解答候補試行: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` — `NEEDS_REVISION / 23_OF_26_DERIVABLE`
 
-PowerPoint QA:
-- 16:9: `4枚`
-- 1600×900表示: `4 / 4 PASS`
-- LibreOffice PDF変換: `PASS / 4ページ`
-- python-pptx open: `PASS / 4 slides`
-- PPTX ZIP整合性: `PASS`
-- Unicode置換文字 / `(cid:)`: `0件 / 0件`
-- 固定5問・26答案要素への可視化・接続: `26 / 26 PASS`
-- SPEC指定7項目: `7 / 7 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-- 共通一般仮定モデル変更: `0件`
+## Topic 17 blind再解答試行
+
+- R7一次: `5 / 5` 教材内再導出
+- R4一次: `5 / 5` 教材内再導出
+- R2一次: `5 / 5` 教材内再導出
+- H24一次: `2 / 5` 教材内再導出、`3 / 5` 教材未収録
+- H24二次: `6 / 6` 教材内再導出
+- 合計: `23 / 26` 教材内再導出
+- 教材未収録: H24一次 問6 (1)、(4)、(5)
+- 公式解答・標準解答参照: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC指定7項目・3可視化変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 判定: `PASS / POWERPOINT_COMPLETE`
+- completed化: `不可`
 
-## Topic 17 blind再解答前ゲート
-
-- 判定: `PASS / BLIND_REANSWER_READY`
-- 固定EXAM_ALIGNMENT: `変更なし`
-- 固定5問・26答案要素: `変更なし`
-- 完成教材への接続: `26 / 26 PASS`
-- 本ゲート作成runで公式解答・標準解答の内容参照: `0件`
-- 候補答案固定: `未実施`
-- 完成数: `16 / 39`
+H24一次 問6で教材内再導出できたのは、損失・放熱に関する(2)と接合温度に関する(3)。一方、(1)(4)(5)はTopic 17の7項目から外れるため、問題全体を5要素すべてゲート対象にした固定マッピングが適切だったかを再監査する必要がある。
 
 ## Topic 17 範囲境界
 
+- 扱う内容: 導通損失、スイッチング損失、スイッチング周波数、素子電流、接合温度、冷却、変換効率。
+- 指定可視化: 電流―導通損失、スイッチング周波数―損失、出力―変換効率。
 - Topic 16のPWM・スイッチング周波数は前提確認だけに使い、多レベル波形・高調波解析は再展開しない。
 - 後続TopicのSiC採用・機器小型化は先取りしない。
 - 接合温度・冷却は損失から温度上昇へ接続する最小限の熱抵抗モデルまで扱う。
-- 素子比較は一般モデル・教材内仮定値で行い、未確認700系実車の素子型式・定格・損失・温度・冷却条件・効率を真値化しない。
+- 未確認700系実車の素子型式・定格・損失・温度・冷却条件・効率を真値化しない。
 
 教材用一般モデル:
 - `P_cond≈V_onDI` または `I_rms,on^2R_on`
@@ -87,10 +85,6 @@ PowerPoint QA:
 - `η=P_out/(P_out+P_loss)`
 - `V_a=D V_state1+(1-D)V_state2`
 
-## 過去Topic
-
-Topic 01〜16の個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知注意事項は各Topic配下のsource・QAを正本とする。
-
 ## 次工程
 
-Topic 17の固定5問・26答案要素を、公式解答・標準解答を先に見ず、公式問題文＋完成教材だけで独立再解答して候補答案を固定する。その後の工程で公式解答・標準解答と照合する。固定EXAM_ALIGNMENT・SPEC指定7項目・3可視化は変更しない。
+公式解答・標準解答はまだ開かない。H24一次「機械」問6の採用単位とTopic 17のSPEC境界を再監査し、仕様追加なしでEXAM_ALIGNMENTの誤マッピングを是正できるか判定する。その後、R7/R4を含む候補答案をclean条件で再固定する。
