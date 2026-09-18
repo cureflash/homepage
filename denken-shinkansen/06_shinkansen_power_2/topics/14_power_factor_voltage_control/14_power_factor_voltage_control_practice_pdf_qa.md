@@ -1,8 +1,9 @@
 # Topic 14 練習PDF QA
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 対象: `14_power_factor_voltage_control_practice.pdf`
 正本source: `14_power_factor_voltage_control_practice.md`
+status: `PASS`
 
 ## 生成結果
 
@@ -64,6 +65,12 @@ sourceの期待値とは別に再計算した。
 
 この `21 / 21` は教材内カバレッジであり、完成後blind独立再解答のPASSではない。
 
-判定: `PASS`
+## 判定
 
-次工程: Topic 14の解説画像PowerPointを制作し、固定5問・21答案要素とSPEC固定10項目・3可視化の説明維持、全スライド表示、overflow、PPTX ZIP整合性をQAする。完成後blind独立再解答はまだ行わない。
+`PASS`
+
+## 進捗同期（2026-09-19）
+
+本QA後にPowerPoint制作・補強、修正版成果物に対する完成後blind独立再解答、Topic 14最終QAまで実施済み。完成後blindは固定5問・21答案要素 `21 / 21 PASS`、最終QAは `NEEDS_REVISION / IN_PROGRESS`。
+
+本練習PDFおよび本QA自体に新たな技術blockerはない。Topic全体の残作業は、旧進捗記録の同期、現行GitHub正本PowerPointの再QA、Webカタログ登録、最終QA再判定である。固定EXAM_ALIGNMENTと教材技術範囲は変更しない。
