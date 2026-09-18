@@ -8,11 +8,11 @@ Topic 01〜17は最終QAまで `PASS / completed`。
 
 完成数: `17 / 20`
 
-current_status: `topic_18_practice_pdf_complete`
+current_status: `topic_18_powerpoint_complete`
 
 active_topic: `18 非線形方程式と反復計算`
 
-次工程: Topic 18の解説画像PowerPointを作成し、表示QAを行う。
+次工程: Topic 18の完成後独立検証を行う。
 
 ## 上位仕様
 
@@ -317,6 +317,28 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - 仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
+## 解説画像PowerPoint＋QA
+
+成果物:
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_images.pptx`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_powerpoint_qa.md`
+
+判定: `PASS / POWERPOINT_COMPLETE`。
+
+- 16:9・5枚
+- SPEC固定範囲: `5 / 5 covered`
+- 接続確認した第二種二次「電力・管理」5問との対応: `5 / 5 PASS`
+- 二分法・Newton法そのものを直接要求する確認済み第二種過去問: `0問`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- 数値整合QA: `PASS`
+- 全5スライド再レンダリング: `5 / 5 PASS`
+- 文字切れ・重なり・文字化け: `0件`
+- overflow: `0件`
+- `slides_test.py`: `PASS`
+- PPTX ZIP/XML整合性: `PASS`
+- Topic 19最適化、多変数Newton-Raphson潮流、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -334,11 +356,11 @@ H20一次「理論」の非線形抵抗問題は候補として確認したが�
 - [x] 解説PDF＋QA
 - [x] 練習問題source
 - [x] 練習PDF＋QA
-- [ ] 解説画像PowerPoint＋QA
+- [x] 解説画像PowerPoint＋QA
 - [ ] 完成後独立検証
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDF・練習問題source・練習PDFを変更せず、Topic 18の解説画像PowerPointを作成し、表示QAを行う。
+固定済みEXAM_ALIGNMENT・制作前独立数値検証・解説本文・解説PDF・練習問題source・練習PDF・PowerPointを変更せず、Topic 18の完成後独立検証を行う。
