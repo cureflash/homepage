@@ -6,11 +6,11 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_20_exam_alignment_complete`
+current_status: `topic_20_blind_reanswer_complete`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 20は制作前EXAM_ALIGNMENTまで完了。系列SPEC固定範囲12項目を固定し、品質ゲートを一次5問・25答案要素に設定した。令和8年度二次は未実施で、系列08は一次理論中心のため二次問題を件数合わせで採用しない。次工程は保存済み正答を見ずに行う制作前blind独立再解答。
+Topic 20は制作前EXAM_ALIGNMENTと制作前blind独立再解答まで完了。系列SPEC固定範囲12項目、品質ゲート一次5問・25答案要素を維持した。独立導出は `25 / 25 PASS`。R8/R7/R6/H24は公式標準解答と `20 / 20一致`。H20は現行の電気技術者試験センター公式過去問一覧がH21以降のため、電験王の問題転記・解答で `5 / 5` を二次照合し、公式直接照合済みとは扱わない。二次採用0・数合わせ0。次工程は解説本文＋3段階例題。
 
 ## Topic 19 完了状態
 
@@ -33,7 +33,8 @@ Topic 20は制作前EXAM_ALIGNMENTまで完了。系列SPEC固定範囲12項目�
 ## Topic 20 成果物
 
 - source: `topics/20_east_i_measurement/20_east_i_measurement.md`
-- stage: `EXAM_ALIGNMENT_COMPLETE`
+- 制作前blind独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_blind_reanswer.md`
+- stage: `BLIND_REANSWER_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 20 固定範囲
@@ -100,6 +101,22 @@ A/D変換、サンプリング、標本化、エイリアシングは系列SPEC�
 - East i内部測定回路の推測追加: `0件`
 - 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
+## 制作前blind独立再解答
+
+- R8一次理論問4: `カ / ワ / リ / ホ / イ`
+- R7一次理論問4: `ル / チ / ヌ / ヲ / ヨ`
+- R6一次理論問6: `ヘ / ハ / ワ / チ / ヲ`
+- H24一次理論問7: `ニ / ヨ / ヌ / イ / ヲ`
+- H20一次理論問6: `ニ / カ / ヨ / リ / ワ`
+- 独立導出: `25 / 25 PASS`
+- 公式標準解答直接照合: `20 / 20一致`（R8/R7/R6/H24）
+- H20二次資料照合: `5 / 5一致`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 固定範囲外追加: `0件`
+- East i内部測定回路の推測追加: `0件`
+- 判定: `PASS / BLIND_REANSWER_COMPLETE`
+
 ## 次工程
 
-Topic 20の制作前blind独立再解答。固定一次5問・25答案要素を、公式標準解答・保存済み正答を先に見ず、問題文から独立導出する。
+Topic 20の解説本文＋3段階例題。固定一次5問・25答案要素とSPEC固定範囲12項目をすべて本文へ接続し、A/D・サンプリング・標本化・エイリアシングは存在しない過去問を捏造せず系列SPEC必須項目として補う。
