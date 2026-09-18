@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_practice_source_complete`
+current_status: `topic_14_practice_pdf_complete`
 completed_topics: `13 / 22`
 
 ## Topic 12 final result
@@ -122,7 +122,7 @@ source:
 
 ## Topic 14 progress
 
-Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説sourceまで完了。練習PDF・PowerPoint・完成後blind独立再解答は未着手。
+Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QAまで完了。PowerPoint・完成後blind独立再解答は未着手。
 
 正式固定問題:
 - 令和6年度 第二種一次「電力」問5 — `5答案要素`
@@ -170,6 +170,20 @@ Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXA
 - 制作前blind不足1答案要素: 問8・問12で再訓練
 - 数値・論理の期待値をsource内QA表へ固定
 
+練習PDF・QA:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice.pdf`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice_pdf_qa.md`
+- A4縦: `7ページ`
+- 200 dpi表示: `7 / 7 PASS`
+- 文字抽出: `PASS`、U+FFFD `0件`、ページ外逸脱 `0件`
+- 収録問題・完全解説: `15 / 15 PASS`
+- 数値・論理独立再計算: `15 / 15 PASS`
+- 一次型10問の正答一意性: `10 / 10 PASS`
+- 正答列: `2, 3, 2, 3, 2, 2, 3, 3, 3, 2`
+- 固定5問・21答案要素: `21 / 21 covered`
+- SPEC固定10項目: `10 / 10 covered`
+- 制作前blind不足1答案要素: 問8・問12で再訓練PASS
+
 不足1答案要素の補強:
 - R2二次問6の最小コンデンサ容量。容量制約を `S<=ST` の不等式として扱い、境界値が正しくても最終設備容量を不足側へ丸めない手順を明記した。正式問題の境界 `2690.52 kvar` に対して、公式標準解答の `2.70×10^3 kvar` へ接続する。
 - 練習問8・問12では `1.8769 Mvar` の境界に対し、`0.1 Mvar` 刻みなら `1.9 Mvar` を採用する同型処理を再訓練する。
@@ -194,6 +208,8 @@ source:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.pdf`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation_pdf_qa.md`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice.md`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice.pdf`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice_pdf_qa.md`
 
 ## Gate checklist
 
@@ -210,8 +226,8 @@ source:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — practice source complete; practice PDF + QA pending
+- [ ] Topic 14 — practice PDF + QA complete; PowerPoint pending
 
 ## next_start
 
-Topic 14の練習PDFを生成し、表示、文字抽出、全15問の数値・論理、一次型10問の正答一意性をQAする。PowerPoint・完成後blind独立再解答はまだ行わない。
+Topic 14の解説画像PowerPointを制作する。固定5問・21答案要素、SPEC固定10項目、固定3可視化の説明を維持し、全スライド表示、overflow、PPTX ZIP整合性をQAする。完成後blind独立再解答はまだ行わない。
