@@ -14,19 +14,34 @@
 - 固定EXAM_ALIGNMENT: R7上 機械 問5 / R5下 機械 問5 / R5下 機械 問6 / R4上 機械 問4 / H28 機械 問5 / H26 機械 問5
 - 練習問題→固定EXAM_ALIGNMENT: `6 / 6 PASS`
 
+## source改訂反映
+- 対象source: `16_synchronous_machine_practice.md`
+- 問10「同期電動機ベクトル図の尾→頭判定」反映: `PASS`
+- `V = E + jXsI`: `PASS`
+- `jXsI` は `I` より90°進む: `PASS`
+- `jXsI` の矢印を `Eの終点 -> Vの終点` と判定: `PASS`
+- 逆向き `Vの終点 -> Eの終点` を除外: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+
 ## 表示QA
 - 200 dpi表示: `2 / 2 PASS`
 - 文字切れ: `0件`
 - 文字重なり: `0件`
 - ページ外はみ出し: `0件`
 - 欠落・破損グリフ: `0件`
-- 正答一覧: `12 / 12` source一致
+- A4縦2ページ維持: `PASS`
 
 ## 文字抽出QA
 - `pdftotext -layout`: `PASS`
-- 問1〜12、正答一覧、固定6問への接続、主要式・主要数値を抽出確認
-- 主要式: `Ns = 120f/P` / `V = E + jXsI` / `E = V - jXsI`
-- 主要数値: `1200 min^-1` / `1500 min^-1` / `140 - j45 V` / `500 min^-1`
+- 問1〜12: `12 / 12` 抽出確認
+- 問10の尾→頭判定文: `PASS`
+- 主要式: `Ns = 120f/P` / `V = E + jXsI` / `E = V - jXsI` — `PASS`
+- 主要数値: `1200 min^-1` / `1500 min^-1` / `140 - j45 V` / `500 min^-1` — `PASS`
+
+## 正答一覧一致QA
+source正答: `3,2,5,4,3,4,1,5,2,4,1,5`
+PDF抽出正答: `3,2,5,4,3,4,1,5,2,4,1,5`
+一致: `12 / 12 PASS`
 
 ## EXAM_ALIGNMENT接続
 - R7上 機械 問5 → 問4・問8・問11
@@ -36,7 +51,6 @@
 - H28 機械 問5 → 問9・問12
 - H26 機械 問5 → 問7・問12
 - 固定6問・6答案要素: `6 / 6 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
 
 ## 範囲境界
 - 始動法・制動巻線追加: `0件`
@@ -49,9 +63,9 @@
 - 未確認L0系実車値追加: `0件`
 
 ## ファイル整合
-- SHA-256: `b4065cd7cd7899549e546d04a76f3d31d3e4c48aeeb3b5dda780baa303c9168c`
+- SHA-256: `cd10c75844770bdd0e98964c36916f9869a998fe27bffe05fe06a68294393934`
 - PDF preflight: openable / 2 pages / not scanned / no XFA
 - 非埋込CID日本語フォントを使用。200 dpi実表示で欠落・破損なし。
 
 ## 次工程
-Topic 16の解説画像PowerPointを作成する。
+Topic 16の解説画像PowerPointへsourceのベクトル図補強を反映し、表示QA・ZIP整合性QAを再実施する。
