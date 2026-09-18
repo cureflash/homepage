@@ -34,11 +34,11 @@
 
 ## 表示QA
 
-- 全5スライド再レンダリング: `5 / 5 PASS`
+- 同一生成コードによる全5スライド再レンダリング: `5 / 5 PASS`
 - クリッピング・重なり・文字化け: `0件`
 - overflow: `0件`
 - `slides_test.py`: `PASS`
-- PPTX ZIP/XML整合性: `PASS`
+- GitHub生成時のPPTX ZIP/XML整合性: `PASS`
 
 ## 仕様境界
 
@@ -51,8 +51,9 @@
 
 ## ファイル整合
 
-- SHA-256: `cd118a4a04b2fc8e8c4345adfd7da1ce341976d4d08e5a607220b0121e5a2207`
-- file size: `8675 bytes`
+- SHA-256: `cc64feee12bc2f09fa78a5435a18369a80113067c7ebb21e32a4087fde7e41f0`
+- Git blob SHA: `b015caa695de1543bbbe9255030924a8025361e4`
+- file size: `41242 bytes`
 
 ## 次工程
 

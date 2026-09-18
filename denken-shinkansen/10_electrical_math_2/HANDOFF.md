@@ -8,11 +8,11 @@ Topic 01〜16は最終QAまで `PASS / completed`。
 
 完成数: `16 / 20`
 
-current_status: `topic_17_practice_pdf_complete`
+current_status: `topic_17_powerpoint_complete`
 
 active_topic: `17 常微分方程式の数値解法`
 
-次工程: Topic 17の解説画像PowerPointを作成し、PowerPoint表示QAを行う。
+次工程: Topic 17の完成後独立検証を行う。
 
 ## 上位仕様
 
@@ -39,6 +39,7 @@ active_topic: `17 常微分方程式の数値解法`
 - Topic 17 解説PDF＋QA: 完了
 - Topic 17 練習問題source: 完了
 - Topic 17 練習PDF＋QA: 完了
+- Topic 17 解説画像PowerPoint＋表示QA: 完了
 
 Topic 01〜16の詳細な過去問対応・成果物・QA記録は、各Topic配下のsource・QA・`STATUS.md` を正本とする。
 
@@ -200,6 +201,30 @@ QA:
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## 解説画像PowerPoint
+
+PowerPoint:
+`topics/17_ode_numerical_methods/17_ode_numerical_methods_images.pptx`
+
+QA:
+`topics/17_ode_numerical_methods/17_ode_numerical_methods_powerpoint_qa.md`
+
+確認済み:
+
+- 16:9・5枚
+- 固定範囲5項目 `5 / 5 covered`
+- 同一生成コードによる表示QA `5 / 5 PASS`
+- overflow `0件`
+- `slides_test.py` `PASS`
+- PPTX ZIP/XML整合性 `PASS`
+- 数値整合 `PASS`
+- 直接Euler/RK要求の固定過去問 `0問`
+- 非該当5問の固定品質ゲート件数への水増し `0件`
+- Topic 18以降の先取り `0件`
+- 未確認実車値依存 `0件`
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
 ## 現在の品質ゲート
 
 - [x] 系列SPEC確認
@@ -215,12 +240,12 @@ QA:
 - [x] 解説PDF＋表示QA・文字抽出QA・数値整合QA
 - [x] 練習問題source
 - [x] 練習PDF＋表示QA・文字抽出QA・数値整合QA
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint
+- [x] PowerPoint表示QA
 - [ ] 完成後独立検証
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 次工程
 
-Topic 17の解説画像PowerPointを作成し、PowerPoint表示QAを行う。固定範囲、直接Euler/RK要求0問、非該当問題の件数水増し0件を維持する。
+Topic 17の完成後独立検証を行う。固定範囲、直接Euler/RK要求0問、非該当問題の件数水増し0件を維持する。
