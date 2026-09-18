@@ -8,7 +8,7 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_17_official_check_complete`。Topic 17 `パワー半導体の損失比較` は成果物自体のQAまでPASSし、是正後の固定5問・23答案要素についてclean blind候補答案を公式解答・標準解答と照合済み。`23 / 23 PASS`。候補答案変更0件、教材外知識補完0件。completed化はまだ行っていない。
+現在地は `topic_17_final_qa_needs_revision`。Topic 17 `パワー半導体の損失比較` は成果物自体のQAと、是正後の固定5問・23答案要素のclean blind公式照合までPASS。最終QAでは技術内容ではなく、旧26答案要素前提が残る進捗・QA記録6件の不整合を検出したためcompleted化していない。
 
 ## EXAM_ALIGNMENT是正
 
@@ -51,9 +51,9 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 
 ## Topic 17 必須成果物
 
-- 解説source: `17_power_semiconductor_loss_comparison_explanation_source.md` — `PASS`
+- 解説source: `17_power_semiconductor_loss_comparison_explanation_source.md` — 技術内容 `PASS`
 - 解説PDF: `17_power_semiconductor_loss_comparison_explanation.pdf` — `PASS / 4 pages`
-- 練習source: `17_power_semiconductor_loss_comparison_practice_source.md` — `PASS / 一次8＋二次4`
+- 練習source: `17_power_semiconductor_loss_comparison_practice_source.md` — 技術内容 `PASS / 一次8＋二次4`
 - 練習PDF: `17_power_semiconductor_loss_comparison_practice.pdf` — `PASS / 6 pages`
 - PowerPoint: `17_power_semiconductor_loss_comparison_images.pptx` — `PASS / 4 slides`
 - PowerPoint QA: `17_power_semiconductor_loss_comparison_powerpoint_qa.md`
@@ -61,8 +61,7 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - blind再解答候補試行: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` — 旧26要素前提の履歴
 - clean blind候補答案: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md` — `23 / 23 candidate fixed`
 - 公式照合記録: `17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md` — `23 / 23 PASS`
-
-旧成果物・旧QA内の `26 / 26` 表記は再マッピング前の履歴値として扱い、最終品質判定には使わない。
+- 最終QA: `17_power_semiconductor_loss_comparison_final_qa.md` — `NEEDS_REVISION / PROGRESS_ALIGNMENT_SYNC_REQUIRED`
 
 ## clean blind候補固定
 
@@ -93,7 +92,22 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
 
-公式照合工程は `PASS / OFFICIAL_CHECK_COMPLETE`。Topic 17のcompleted判定は次工程の最終QAで行う。
+## 最終QA結果
+
+技術成果物・固定EXAM_ALIGNMENT・clean blind再解答は品質ゲートを満たした。一方、次の6記録に再マッピング前の旧 `26答案要素` 前提が残る。
+
+1. `17_power_semiconductor_loss_comparison.md`
+2. `17_power_semiconductor_loss_comparison_explanation_source.md`
+3. `17_power_semiconductor_loss_comparison_practice_source.md`
+4. `17_power_semiconductor_loss_comparison_explanation_pdf_qa.md`
+5. `17_power_semiconductor_loss_comparison_practice_qa.md`
+6. `17_power_semiconductor_loss_comparison_powerpoint_qa.md`
+
+特にpractice sourceのH24一次問6マッピング表は `(1)〜(5)` 全体をTopic 17に対応付けており、正本の `(2)(3)のみ` と不一致。
+
+判定: `NEEDS_REVISION / PROGRESS_ALIGNMENT_SYNC_REQUIRED`。
+
+旧 `blind_reanswer_gate.md` と旧 `blind_reanswer_candidates.md` は再マッピング前の履歴として残し、同期対象にしない。
 
 ## Topic 17 範囲境界
 
@@ -106,4 +120,4 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 
 ## 次工程
 
-Topic 17の成果物・固定EXAM_ALIGNMENT・clean blind公式照合結果をまとめて最終QAし、completed可否を判定する。
+上記6記録だけを、是正後 `5問・23答案要素` とclean blind `23 / 23 PASS` へ同期する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない。その後、最終QAを再実施する。
