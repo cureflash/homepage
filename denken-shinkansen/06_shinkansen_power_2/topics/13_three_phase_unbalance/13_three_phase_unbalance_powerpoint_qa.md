@@ -108,4 +108,4 @@
 ## 判定
 `PASS / topic_13_powerpoint_complete`
 
-Topic 13はまだ `IN_PROGRESS`。次段階は、固定2問・8答案要素を教材だけで完成後blind独立再解答し、`8 / 8 PASS` を確認すること。固定EXAM_ALIGNMENTは変更しない。
+完成後blind独立再解答は固定2問・8答案要素 `8 / 8 PASS` で完了済み。制作前不足2答案要素も `2 / 2 改善確認`。次段階は進捗記録整合を含む最終QA再判定とする。固定EXAM_ALIGNMENT、PowerPoint実体、技術内容は変更しない。
