@@ -6,8 +6,8 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_explanation_pdf_complete / IN_PROGRESS`
-- 次工程: Topic 19 練習source
+- current status: `topic_19_practice_source_complete / IN_PROGRESS`
+- 次工程: Topic 19 練習PDF＋QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -34,37 +34,37 @@
 制作前EXAM_ALIGNMENTは `PASS / topic_19_exam_alignment_complete`。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。
 
 ## 今回完了した段階
-Topic 19解説PDF＋QAまで完成した。
+Topic 19練習sourceまで完成した。
 
 成果物:
 - `topics/19_pid_speed_control/19_pid_speed_control.md`
 - `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`
 - `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`
+- `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
 
-含めた内容:
-- P・I・D各動作の時間領域／ラプラス領域対応
-- PID並列形と時間定数表示の相互変換
-- P・PI・PD・PIDの判別
-- 単位負帰還の偏差伝達関数
-- 最終値の定理によるステップ・ランプ定常偏差
-- Topic 18の二次遅れ・減衰係数・応答指標への接続
-- 教材用仮定プラントでの `Kp`、`Ki`、`Kd` 一変数比較条件
-- 基礎・本試験標準・複合例題
-- 固定5問・12答案要素の教材節マッピング
+練習source構成:
+- 一次試験型10問（全問五肢択一）
+- 二次試験型5問（記述・式変形・検算付き）
+- 合計15問
 
-QA:
+練習source QA:
+- 一次正答一意性: `10 / 10 PASS`
+- 全15問の独立再計算・論理確認: `15 / 15 PASS`
 - 固定5問・12答案要素: `12 / 12 COVERED`
+- P・I・D、PI・PD・PID、係数変換、偏差伝達関数、ステップ／ランプ定常偏差、応答速度、オーバーシュート比較: `PASS`
+- `Kp`・`Ki`・`Kd` 一変数比較: `PASS`
 - Topic 20先取り: `0件`
 - Topic 21先取り: `0件`
 - 未確認実車PID値: `0件`
-- 固定問題の個別正答記号・最終数値保存: `0件`
-- 解説PDF: 表示6/6、文字抽出PASS、数値・論理15/15
-- 判定: `PASS / topic_19_explanation_pdf_complete`
+- 固定問題の個別正答記号・最終数値・完成済み個別解答保存: `0件`
+- 判定: `PASS / topic_19_practice_source_complete`
 
 ## GitHub反映
-- 解説source: GitHub正本反映済み
+- 解説source: 反映済み
 - 解説PDF: Git blob `bbbe79949058c62725f644236b78f8c961365291`
 - 解説PDF QA: `PASS / topic_19_explanation_pdf_complete`
+- 練習source: `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
+- STATUS/HANDOFF: `topic_19_practice_source_complete / IN_PROGRESS` へ同期
 
 ## 次に行うこと
-Topic 19練習sourceを作成し、固定一次1問＋二次4問・12答案要素への演習接続を維持してQAする。
+Topic 19練習PDF＋QAを作成し、一次10問＋二次5問、固定一次1問＋二次4問・12答案要素への演習接続を維持してQAする。
