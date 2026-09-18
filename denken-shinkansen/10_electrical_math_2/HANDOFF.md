@@ -1,18 +1,18 @@
 # HANDOFF - 電験二種「電気数学」
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 現在地
 
-Topic 01〜18は最終QAまで `PASS / completed`。
+Topic 01〜19は最終QAまで `PASS / completed`。
 
-完成数: `18 / 20`
+完成数: `19 / 20`
 
-current_status: `topic_19_final_qa_needs_revision`
+current_status: `topic_19_completed`
 
-active_topic: `19 最適化入門`
+active_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 19の最終QA再判定。
+次工程: Topic 20の制作前EXAM_ALIGNMENT。
 
 ## 上位仕様
 
@@ -648,6 +648,22 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 
 固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更していない。直接最適化・ラグランジュ未定乗数法要求0問、接続確認5問の件数水増し0件、H17問6固定件数追加0件、仕様外追加0件を維持した。
 
+## 最終QA再判定
+
+進捗記録6ファイルを再確認し、整合 `6 / 6 PASS`。必須成果物、固定EXAM_ALIGNMENT、完成後独立検証、練習問題QA、PDF/PowerPoint表示QA、SPEC境界もすべてPASSを維持した。
+
+- 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
+- 接続確認した第二種公式過去問: `5問`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- H17二次「電力・管理」問6の固定件数追加: `0件`
+- 完成後独立検証: `3 / 3 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 固定範囲外追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / completed`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -669,9 +685,9 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 - [x] 完成後独立検証
 - [x] 最終QA実施 → `NEEDS_REVISION`（進捗記録整合 `1 / 6 PASS`）
 - [x] 進捗記録5ファイルの同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 次工程
 
-Topic 19の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更しない。
+Topic 20 `新幹線を数式モデルだけで走らせる` の制作前EXAM_ALIGNMENTへ進む。Topic 20の仕様・過去問対応は次runで `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` とGitHub正本を再確認してから固定する。
