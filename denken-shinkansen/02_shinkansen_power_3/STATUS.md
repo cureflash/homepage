@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 15 / 16
-- current_status: `topic_15_completed`
+- current_status: `topic_16_exam_alignment_complete`
 - last_completed_topic: `15 回生した電気はどこへ行く？`
 - active_topic: `16 発電所からN700Sまで全部つないでみる`
-- next_start: Topic 16の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 16の固定5出題回・7答案要素を、保存済み正答を見ずに制作前独立再解答する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 15 回生した電気はどこへ行く？ — completed。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録7箇所の整合を再確認し `PASS / completed`。Webカタログ登録済み
-- [ ] 16 発電所からN700Sまで全部つないでみる
+- [ ] 16 発電所からN700Sまで全部つないでみる — 制作前EXAM_ALIGNMENT完了。固定5出題回・7答案要素。次は制作前独立再解答
 
 ## Topic 07 完了記録
 source: `topics/07_phase_conversion/07_phase_conversion.md`
@@ -630,4 +630,4 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - H25 法規 問12(a)(b): `(2),(3)`
 
 ## 次
-Topic 16 `発電所からN700Sまで全部つないでみる` の制作前EXAM_ALIGNMENTを実施する。
+Topic 16の固定5出題回・7答案要素を、保存済み正答を見ずに制作前独立再解答する。
