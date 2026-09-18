@@ -6,11 +6,11 @@
 
 Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_19_reanswer_complete`
+current_status: `topic_19_final_qa_blocked`
 
 active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。品質ゲートは一次5問・25答案要素で、完成教材だけから `25 / 25 PASS`、公式標準解答とも `25 / 25` 一致。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は最終QA。
+Topic 19は最終QAまで実施したが `NEEDS_REVISION`。固定一次5問・25答案要素、完成後独立再解答、既存PDF QAはPASS。既存PowerPoint QA記録もPASSだが、そのQA対象である `19_high_voltage_current_measurement_images.pptx` 本体が最新mainのGitHub正本に存在しないため、必須成果物ゲートをPASSに確定できない。主sourceの進捗記録も現状と不一致。推測で再生成・確定せず停止中。
 
 ## Topic 18 成果物
 
@@ -52,10 +52,11 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 練習source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.md`
 - 練習PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.pdf`
 - 練習PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice_pdf_qa.md`
-- PowerPoint: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_images.pptx`
+- PowerPoint: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_images.pptx` — `BLOCKED: 最新mainに実体なし`
 - PowerPoint QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_powerpoint_qa.md`
 - 完成後独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_reanswer.md`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- 最終QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_final_qa.md`
+- stage: `FINAL_QA_BLOCKED`
 - completion: `in_progress`
 
 ## Topic 19 固定範囲
@@ -160,6 +161,8 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 ## Topic 19 解説画像PowerPoint＋表示QA
 
+既存QA記録には以下が記載されている。
+
 - 16:9 / 6枚
 - 200 dpi全スライド表示QA: `6 / 6 PASS`
 - shape geometry overflow: `0件`
@@ -174,7 +177,8 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
 - 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
-- 判定: `PASS / POWERPOINT_COMPLETE`
+- QA記録上の判定: `PASS / POWERPOINT_COMPLETE`
+- GitHub正本上のPowerPoint実体: `FAIL / 最新mainに存在しない`
 
 ## Topic 19 完成後独立再解答
 
@@ -199,6 +203,29 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 判定: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
 
+## Topic 19 最終QA
+
+記録: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_final_qa.md`
+
+- 固定一次5問・25答案要素: `PASS`
+- 完成後独立再解答: `25 / 25 PASS`
+- 既存解説PDF QA: `PASS`
+- 既存練習PDF QA: `PASS`
+- 既存PowerPoint QA記録: `PASS`
+- 必須PowerPoint実体: `FAIL / GitHub最新mainに存在しない`
+- 主source進捗記録: `FAIL / 現状と不一致`
+- 判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+
+## exact blocker
+
+`STATUS.md`、本 `HANDOFF.md` の従前記録、`19_high_voltage_current_measurement_powerpoint_qa.md` は `19_high_voltage_current_measurement_images.pptx` の完成を前提としていたが、最新mainのGitHub正本に同ファイルが存在しない。PowerPoint QA対象実体を正本から確認できないため、Topic 19最終QAを `PASS` に確定できない。
+
+また、`19_high_voltage_current_measurement.md` 末尾は `EXPLANATION_SOURCE_COMPLETE` / 次工程「解説PDFを作成」のままで、現在工程と不一致。
+
 ## 次工程
 
-Topic 19の最終QAを実施し、必須成果物、固定一次5問・25答案要素、完成後独立再解答、PDF/PPTX QA、仕様境界、進捗記録整合を総合判定する。
+1. `19_high_voltage_current_measurement_images.pptx` のGitHub正本実体と既存PowerPoint QA記録の同一性を確認できる状態にする。
+2. 主sourceの進捗記録を実状態へ同期する。
+3. Topic 19最終QAを再実施する。
+
+上記を推測で補完しない。blocker解消までTopic 20へ進めない。
