@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `16 / 39`
-- current_status: `topic_17_official_check_complete`
+- current_status: `topic_17_final_qa_needs_revision`
 - last_completed_topic: `16 700系 多レベル変換器とPWM`
 - active_topic: `17 パワー半導体の損失比較`
-- next_start: Topic 17の成果物・固定EXAM_ALIGNMENT・clean blind公式照合結果をまとめて最終QAし、completed可否を判定する
+- next_start: Topic 17の旧26答案要素表記が残る6記録を、是正後5問・23答案要素とclean blind `23 / 23 PASS` へ同期する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない
 
 ## 完了済み
 
@@ -96,7 +96,28 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 照合記録:
 - `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md`
 
-公式照合工程: `PASS / OFFICIAL_CHECK_COMPLETE`。この段階ではcompleted化しない。
+公式照合工程: `PASS / OFFICIAL_CHECK_COMPLETE`。
+
+## Topic 17 最終QA
+
+最終QAで技術成果物・clean blind品質ゲートはPASSしたが、是正後EXAM_ALIGNMENTと現行記録の整合にFAILを検出した。
+
+旧 `26答案要素` 前提が残る修正対象:
+- `17_power_semiconductor_loss_comparison.md`
+- `17_power_semiconductor_loss_comparison_explanation_source.md`
+- `17_power_semiconductor_loss_comparison_practice_source.md`
+- `17_power_semiconductor_loss_comparison_explanation_pdf_qa.md`
+- `17_power_semiconductor_loss_comparison_practice_qa.md`
+- `17_power_semiconductor_loss_comparison_powerpoint_qa.md`
+
+特にpractice sourceはH24一次問6の `(1)〜(5)` 全体を対応付けた旧表が残り、是正後の `(2)(3)のみ` と不一致。
+
+判定: `NEEDS_REVISION / PROGRESS_ALIGNMENT_SYNC_REQUIRED`。
+
+最終QA記録:
+- `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_final_qa.md`
+
+Topic 17はcompleted化しない。完成数は `16 / 39` のまま維持する。
 
 ## Topic 17 SPEC固定範囲
 
@@ -106,4 +127,4 @@ Topic 16の多レベル波形・高調波解析は再展開せず、後続Topic�
 
 ## 次工程
 
-Topic 17の成果物・固定EXAM_ALIGNMENT・clean blind公式照合結果をまとめて最終QAし、completed可否を判定する。
+Topic 17の上記6記録だけを、是正後 `5問・23答案要素` とclean blind `23 / 23 PASS` へ同期する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない。その後、最終QAを再実施する。
