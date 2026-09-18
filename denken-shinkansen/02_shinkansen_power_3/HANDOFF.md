@@ -8,7 +8,7 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 16の解説画像PowerPoint＋QAを完成した。16:9・4枚。固定5出題回・7答案要素の要求事項可視化 `7 / 7 PASS`、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`、PowerPoint内数式・論理QA `PASS`。公式正答番号・制作前最終答案のPowerPoint転記は0件。SPEC外追加、件数合わせ、未確認新幹線実設備値の真値化はいずれも0件。完成後ブラインド独立再解答は未実施。
+Topic 16の完成後独立再解答を完了した。固定5出題回・7答案要素を完成教材の式・解法だけで問題文から再計算し `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件、SPEC固定範囲外追加0件、件数合わせ0件、未確認新幹線実設備値の真値化0件。Topic 16は最終QA未実施のため `in_progress`、完成数は `15 / 16` のまま。
 
 source: `topics/16_power_system_integration/16_power_system_integration.md`
 解説PDF: `topics/16_power_system_integration/16_power_system_integration_explanation.pdf`
@@ -18,6 +18,7 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 練習PDF QA: `topics/16_power_system_integration/16_power_system_integration_practice_qa.md`
 解説画像PowerPoint: `topics/16_power_system_integration/16_power_system_integration_images.pptx`
 PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_powerpoint_qa.md`
+完成後独立再解答: `topics/16_power_system_integration/16_power_system_integration_independent_reanswer.md`
 
 ## Topic 16 固定品質ゲート
 - R8上 電力 問2 — 発電電力・電力量・単位換算 — `(5)` PASS
@@ -61,7 +62,9 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - PowerPoint ZIP整合性: `PASS`
 - PowerPoint内数式・論理QA: `PASS`
 - 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPowerPoint転記 `0件`
-- 完成後ブラインド独立再解答: 未実施
+- 完成後独立再解答: `7 / 7 PASS`
+- 完成後公式標準解答一致: `7 / 7 PASS`
+- 完成後教材外知識補完: `0件`
 - SPEC固定範囲外追加: `0件`
 - 件数合わせの仕様追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
@@ -73,7 +76,7 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - 実設備値は一次資料確認済みのものだけを実値とする。
 
 ## 次
-Topic 16の完成後ブラインド独立再解答を実施する。
+Topic 16の最終QAを実施し、必須成果物、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合をまとめて判定する。
 
 ## 直前完了テーマ
 Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
