@@ -64,4 +64,4 @@
 
 `PASS / EXPLANATION_PDF_COMPLETE`
 
-次工程は練習問題sourceを作成する。
+次工程はTopic 17の最終QA再判定を行う。
