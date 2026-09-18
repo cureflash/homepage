@@ -594,6 +594,6 @@ P_loss,5k = 0.80+0.025 = 0.825 kW
 
 ## 次工程
 
-current_status: `topic_16_source_revision_complete`
+current_status: `topic_16_progress_sync_complete`
 
-次は今回の最小補正を練習PDFへ同期する。固定EXAM_ALIGNMENT、SPEC固定範囲、共通仮定モデル、問題数・正答・式系は変更しない。
+次はTopic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
