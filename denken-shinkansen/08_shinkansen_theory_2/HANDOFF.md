@@ -6,11 +6,11 @@
 
 Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_19_explanation_source_complete`
+current_status: `topic_19_explanation_pdf_complete`
 
 active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題まで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、公式標準解答照合 `25 / 25`、本文接続 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は解説PDF＋表示QA。
+Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QAまで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、公式標準解答照合 `25 / 25`、本文/PDF接続 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は練習問題source＋練習PDF。
 
 ## Topic 18 成果物
 
@@ -47,7 +47,9 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 - source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement.md`
 - 制作前blind独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_blind_reanswer.md`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_explanation.pdf`
+- 解説PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_explanation_pdf_qa.md`
+- stage: `EXPLANATION_PDF_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 19 固定範囲
@@ -113,6 +115,24 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 実設備CT・VTの未確認実値追加: `0件`
 - 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## Topic 19 解説PDF＋表示QA
+
+- A4縦5ページ
+- 200 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `7f7ce13925a532a4ca82768d171e83c7512aa2e9ec94bf98599cc81b8771322f`
+- SPEC固定範囲: `10 / 10収録`
+- 必須説明: `16 / 16収録`
+- 固定一次5問・25答案要素: `25 / 25接続`
+- 3段階例題: `3 / 3`
+- 例題数値再計算: `3 / 3 PASS`
+- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- Topic 20先取り: `0件`
+- 実設備CT・VTの未確認実値追加: `0件`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
 ## 次工程
 
-Topic 19の解説PDF＋表示QA。主sourceの5章・6章をPDF化し、全ページ表示QA・文字抽出QA・固定一次5問25答案要素への接続確認を行う。
+Topic 19の練習問題source＋練習PDF。固定一次5問・25答案要素とSPEC固定範囲10項目を維持し、Topic 20の誤差・ブリッジ・波形・サンプリングを混在させず、本試験形式へ接続する問題と完全解説を作成する。
