@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 17 / 21
-- current_status: `topic_18_blind_reanswer_complete`
+- current_status: `topic_18_explanation_source_complete`
 - last_completed_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 - active_topic: `18 新幹線のセンサ信号をどう増幅する？`
-- next_start: Topic 18 解説本文＋3段階例題
+- next_start: Topic 18 解説PDF＋表示QA
 
 ## 完成済み
 
@@ -37,7 +37,7 @@ Topic 01〜17は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・25答案要素
 - [x] 制作前blind独立再解答: `25 / 25 PASS`
 - [x] 公式標準解答照合: `25 / 25`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
@@ -47,24 +47,23 @@ Topic 01〜17は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 18の固定一次5問・25答案要素を、公式標準解答・保存済み正答を先に見ずに独立再解答した。
+Topic 18の解説本文と3段階例題を主sourceへ追加した。
 
-- R8 一次 理論 問8: `5 / 5 PASS`
-- R1 一次 理論 問8: `5 / 5 PASS`
-- H29 一次 理論 問8: `5 / 5 PASS`
-- H23 一次 理論 問8: `5 / 5 PASS`
-- H21 一次 理論 問8: `5 / 5 PASS`
-- 固定一次合計: `25 / 25 PASS`
-- 公式標準解答との一致: `25 / 25`
-- 公式標準解答・保存済み正答の先見: `0件`
+- SPEC固定範囲: `8 / 8収録`
+- 必須説明: `15 / 15収録`
+- 固定一次5問: `5 / 5接続`
+- 固定一次25答案要素: `25 / 25接続`
+- 3段階例題: `3 / 3`
+- 制作前blind独立再解答: `25 / 25 PASS` を維持
+- 公式標準解答照合: `25 / 25` を維持
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 19以降の先取り: `0件`
 - 実車の特定センサ回路・回路定数・実装方式の未確認追加: `0件`
 
-記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp_blind_reanswer.md`
+記録: `topics/18_sensor_signal_opamp/18_sensor_signal_opamp.md`
 
 ## 判定
 
-Topic 18は `PASS / BLIND_REANSWER_COMPLETE`。完成数は `17 / 21` のまま。次工程は解説本文＋3段階例題。
+Topic 18は `PASS / EXPLANATION_SOURCE_COMPLETE`。完成数は `17 / 21` のまま。次工程は解説PDF＋表示QA。
