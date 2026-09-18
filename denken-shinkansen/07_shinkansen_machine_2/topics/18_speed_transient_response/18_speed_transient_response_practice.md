@@ -727,8 +727,8 @@
 - [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値追加 `0件`
 - [x] 固定公式過去問の正答記号・完成済み個別解答保存 `0件`
 
-判定: `PASS / topic_18_practice_source_complete / IN_PROGRESS`
+判定: `PASS / topic_18_practice_source_complete`
 
 # 次工程
 
-固定5問・12答案要素、問題本文、正答、解説を変更せず、Topic 18最終QAを再実施する。
+Topic 18は最終QA `PASS / completed`。次はTopic 19「PIDで新幹線の速度を制御する」の制作前EXAM_ALIGNMENTを行う。
