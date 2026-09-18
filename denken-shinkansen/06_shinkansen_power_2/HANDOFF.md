@@ -3,52 +3,51 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
-current_status: `topic_14_completion_blind_rerun_pass`
+current_status: `topic_14_final_qa_needs_revision`
 
 ## 今回完了
 
-Topic 14「新幹線の力率と電圧をどう維持する？」を1段階進め、2026-09-19時点の修正版learner-facing成果物に対して完成後blind独立再解答を再実施した。
+Topic 14「新幹線の力率と電圧をどう維持する？」を1段階進め、最終QAを実施した。
 
-固定5問・21答案要素は変更せず、候補解を現行教材と公式問題文から再計算し、公式解答・標準解答は候補固定後に照合した。
+判定: `NEEDS_REVISION / IN_PROGRESS`
 
-結果:
-- R6一次「電力」問5: `5 / 5 PASS`
-- R4一次「法規」問4: `5 / 5 PASS`
-- R5二次「電力・管理」問4: `2 / 2 PASS`
-- R2二次「電力・管理」問6: `4 / 4 PASS`
-- H23二次「電力・管理」問3: `5 / 5 PASS`
-- 一次: `10 / 10 PASS`
-- 二次: `11 / 11 PASS`
-- 合計: `5 / 5問・21 / 21答案要素 PASS`
+技術内容・過去問対応品質ゲートはPASS:
+- 固定EXAM_ALIGNMENT: 一次2問＋二次3問、`5問・21答案要素`（変更なし）
+- 完成後blind: 一次 `10 / 10`、二次 `11 / 11`、合計 `21 / 21 PASS`
+- 解説PDF: `5 / 5` ページ表示PASS、3段階例題 `3 / 3`、固定21答案要素 `21 / 21`
+- 練習: 15問、一次型10＋二次型5、数値・論理 `15 / 15 PASS`
+- 練習PDF: `7 / 7` ページ表示PASS
+- SPEC境界: PASS
 
-改善確認:
-- R2二次問6「最低必要容量を不足側へ丸めない」: `PASS`
-- 前回blockerのH23二次問3 (2a) `66 kV側等価値 → 154 kV一次側` 復元: `PASS`
+最終QA記録:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
 
-記録:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_blind_reanswer_20260919.md`
+## 未完了blocker
+
+1. 解説sourceのstage・次工程が旧状態。
+2. 練習sourceが練習PDF・PowerPoint・blindを未実施としている。
+3. 解説PDF QAの次工程が完成後blind再実施のまま。
+4. 練習PDF QAの次工程がPowerPoint制作のまま。
+5. PowerPoint QAがTopic全体をblind再実施前としている。
+6. PowerPoint QA記録のファイルサイズ `39281 bytes` と現行GitHub正本 `15002 bytes`・blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8` が不一致。現行PPTXの再QAが必要。
+7. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
 
 ## 現在地
 
 Topic 01〜13: `completed`。
 完成数: `13 / 22`。
-Topic 14は完成後blind再実施まで `PASS`。Topic自体はまだ未完了。
+Topic 14は最終QA `NEEDS_REVISION`。Topic自体はまだ未完了。
 
 ## 次に行う
 
-Topic 14の最終QAを実施する。
+上記7 blockerを、固定5問・21答案要素と教材技術範囲を変更せず解消する。
 
-確認対象:
-- 上位仕様・系列SPEC
-- 固定EXAM_ALIGNMENT 5問・21答案要素
-- 必須成果物の実在
-- 解説PDF・練習PDF・PowerPointと各QA
-- 2026-09-19完成後blind `21 / 21 PASS`
-- 進捗記録整合
-- Web公開状態
-- SPEC境界
+- 旧進捗記録を現行工程へ同期
+- 現行GitHub正本PPTXを再QAし、現行blobに対応するQA記録へ更新
+- Topic 14をWebカタログへ登録
+- 最終QAを再判定
 
-最終QAで全件PASSするまではTopic 14を `completed` にせず、Topic 15へ進めない。
+全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
 
 ## 品質境界
 
