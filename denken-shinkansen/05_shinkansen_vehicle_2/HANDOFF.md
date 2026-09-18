@@ -8,7 +8,29 @@
 
 Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 
-現在地は `topic_19_powerpoint_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPointまで完了。次は完成後clean blind独立再解答。
+現在地は `topic_19_clean_blind_candidates_fixed`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPointまで完了し、完成後clean blindの固定5問・9答案要素を公式解答参照前に候補固定した。次は公式解答・標準解答との照合。
+
+## Topic 19 clean blind候補答案固定
+
+成果物:
+- 候補答案: `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_blind_reanswer_candidates_clean.md`
+
+判定前状態: `CANDIDATES_LOCKED / OFFICIAL_ANSWER_NOT_YET_CHECKED`
+
+品質:
+- 固定公式過去問: `一次4問＋二次1問 / 5問 / 変更なし`
+- 固定答案要素: `一次7＋二次2 / 9 / 9 候補固定済み`
+- R5一次機械問3 `(2)`: `（ヨ）定格電圧`
+- R5一次機械問4 `(4)(5)`: `（ル）一定である`, `（ニ）通流率`
+- R5一次電力問6 `(3)`: `（ヨ）絶縁協調`
+- H25一次電力問2 `(1)(2)(3)`: `（チ）タップ選択器`, `（ニ）循環電流`, `（ハ）限流インピーダンス`
+- R5二次機械・制御問2 `(1)(2)`: `100 V`, `120 A`
+- 候補固定前の公式解答・標準解答参照: `0件`
+- 候補固定前の個別過去問解説正答参照: `0件`
+- 教材外知識による補完: `0件`
+- 固定問題差替え / 固定EXAM_ALIGNMENT変更 / SPEC外追加: `0件`
+- 未確認ミニ新幹線実車仕様の真値化: `0件`
+- 公式解答・標準解答照合: `未実施 / 次工程`
 
 ## Topic 19 解説画像PowerPoint
 
@@ -25,7 +47,7 @@ Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 - SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
 - 数式・数値QA: `PASS`
 - 固定EXAM_ALIGNMENT変更 / 問題・正答・数式変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
-- 完成後clean blind公式照合: `未実施 / 次工程`
+- 完成後clean blind: `候補9 / 9固定済み / 公式照合未実施`
 
 ## Topic 19 練習PDF
 
@@ -44,7 +66,7 @@ Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 - 固定5問・9答案要素接続: `9 / 9 PASS`
 - SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
-- 完成後clean blind公式照合: `未実施 / PowerPoint完成後`
+- 完成後clean blind公式照合: `候補固定済み / 照合未実施`
 
 ## Topic 19 練習source
 
@@ -67,7 +89,7 @@ Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 - SPEC外追加: `0件`
 - 未確認ミニ新幹線実車値の真値化: `0件`
 - H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
-- 完成後clean blind公式照合: `未実施 / 成果物完成後に実施`
+- 完成後clean blind公式照合: `候補固定済み / 照合未実施`
 
 練習sourceで使用した数値はすべて一般教材用仮定値。解説sourceと同じ `Pout=6.84 MW`、`η=0.95`、`cosφ=0.90`、`10 kV→800 A`、`8 kV→1000 A`、タップ一般モデル、理想降圧モデル `Vo=DVd` を再利用し、実車値として扱っていない。
 
@@ -94,7 +116,7 @@ Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 - SPEC外追加: `0件`
 - 未確認ミニ新幹線実車値の真値化: `0件`
 - H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
-- 完成後clean blind公式照合: `未実施 / 成果物完成後に実施`
+- 完成後clean blind公式照合: `候補固定済み / 照合未実施`
 
 ## Topic 19 解説source
 
@@ -116,7 +138,7 @@ Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
 - SPEC外追加: `0件`
 - 未確認ミニ新幹線実車値の真値化: `0件`
 - H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
-- 完成後clean blind公式照合: `未実施 / 成果物完成後に実施`
+- 完成後clean blind公式照合: `候補固定済み / 照合未実施`
 
 解説sourceで固定した教材用仮定値:
 - 例題・可視化の数値はすべて教材用仮定値。
@@ -208,4 +230,4 @@ source:
 
 ## 次工程
 
-Topic 19の完成後clean blind独立再解答を行う。固定5問・9答案要素を教材だけで解き、公式解答・標準解答を先に見ず候補答案を固定してから照合する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。
+Topic 19の固定済みclean blind候補9答案要素を、一般財団法人 電気技術者試験センターの公式解答・標準解答と照合する。候補答案は照合前の状態を保持し、差異があれば教材側の不足・誤りとして判定する。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXの問題・正答・数式は変更しない。
