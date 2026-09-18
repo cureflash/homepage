@@ -4,11 +4,32 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説source本文を確定した。PDF・練習問題・PowerPointは未着手。
+制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceまで確定した。練習PDF・PowerPointは未着手。
 
 固定過去問は第二種の一次3問＋二次2問、計5問。Topic 18へ直接対応する答案要素だけをゲート対象とし、周辺論点で件数を水増ししない。
 
-current_status: `topic_18_explanation_source_complete`
+current_status: `topic_18_practice_source_complete`
+
+練習source:
+- `18_e2series_50hz_60hz_flux_practice_source.md`
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次試験型: `4 / 4`、記述式
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5問・15答案要素: `15 / 15 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 aligned`
+- 仕様追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+
+解説PDF:
+- `18_e2series_50hz_60hz_flux_explanation.pdf`
+- QA: `18_e2series_50hz_60hz_flux_explanation_pdf_qa.md`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- A4縦6ページ、180 dpi `6 / 6 PASS`
+- 固定5問・15答案要素: `15 / 15 PASS`
+- SPEC指定7項目・3可視化: `7 / 7 PASS`, `3 / 3 PASS`
 
 解説source:
 - `18_e2series_50hz_60hz_flux_explanation_source.md`
@@ -21,7 +42,7 @@ current_status: `topic_18_explanation_source_complete`
 - 仕様追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
 
-次工程: 解説sourceから解説PDFを作り、表示QAと数式・数値QAを行う。固定5問・15答案要素、7項目、3可視化は変更しない。
+次工程: 練習sourceから練習PDFを作り、表示QA・文字抽出QA・数値／正答一意性QAを行う。固定5問・15答案要素、7項目、3可視化、問題・正答・数式は変更しない。
 
 ## 固定範囲
 
