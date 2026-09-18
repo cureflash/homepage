@@ -52,5 +52,14 @@
 - PDF preflight: openable / 3 pages / not scanned / no XFA
 - 非埋込CID日本語フォントを使用。200 dpi実表示で欠落・破損なし。
 
+## 後続工程同期
+- 解説画像PowerPoint: 完成（16:9・4枚）
+- PowerPoint表示QA: `4 / 4 PASS`
+- 完成後blind独立再解答: `12 / 12 PASS`
+- 公式解答一致: `12 / 12 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 独立再解答記録: `15_lighting_heating_independent_reanswer.md`
+- 進捗記録同期: `PASS`
+
 ## 次工程
-固定EXAM_ALIGNMENTを変更せず、Topic 15の解説画像PowerPointを作成する。
+Topic 15の最終QAを再判定する。
