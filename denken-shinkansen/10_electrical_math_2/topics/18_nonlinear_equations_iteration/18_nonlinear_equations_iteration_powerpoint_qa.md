@@ -59,8 +59,8 @@
 
 ## 進捗整合
 
-直前のGitHub正本では `STATUS.md` / `HANDOFF.md` が `topic_18_powerpoint_complete` を示していた一方、Topic 18ディレクトリにPowerPoint本体とQAが存在していなかった。本工程で不足成果物を実体化し、進捗記録と成果物を一致させる。固定EXAM_ALIGNMENT、解説本文、練習問題、PDFは変更しない。
+PowerPoint本体・QA、完成後独立検証、初回最終QAまで実体化済み。固定EXAM_ALIGNMENT、解説本文、練習問題、PDF、PowerPointの技術内容は変更していない。
 
 ## 次工程
 
-Topic 18の完成後独立検証を行う。固定EXAM_ALIGNMENT、解説本文、練習問題、PDF、PowerPointの内容は変更しない。
+Topic 18の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証の技術内容は変更しない。
