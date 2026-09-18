@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_progress_records_synchronized`
-- last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
-- active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: 技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、Topic 16の最終QAを再判定する
+- exam_aligned_completed_topics: `16 / 16`
+- current_status: `series_completed`
+- last_completed_topic: `16 同期機って新幹線には使わないの？`
+- active_topic: `なし`
+- next_start: MASTER制作順に従い `04_shinkansen_theory_3` の最初の未完了テーマ
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 技術・成果物・blind独立再解答PASS / 進捗記録整合PASS / 最終QA再判定待ち
+- [x] 16 同期機って新幹線には使わないの？ — 最終QA再判定PASS / completed
 
 ## Topic 16 最終QA再判定
 - 実施日: `2026-09-19`
@@ -51,9 +51,13 @@
   - `topics/16_synchronous_machine/16_synchronous_machine_practice.md` 同期済み
   - `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` 同期済み
   - `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` 同期済み
-- 技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
-- 現在状態: `topic_16_progress_records_synchronized / IN_PROGRESS`
-- Topic 16 completed化: `最終QA再判定前のためまだ不可`
+- 最終QA後進捗記録同期: `PASS`
+  - 解説source: `completed / FINAL_QA_PASS`
+  - blind独立再解答記録: `FINAL_QA_PASS`
+  - 解説PDF QA: 最終QA PASSへ同期
+  - 練習PDF QA: 最終QA PASSへ同期
+- 技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX追加変更: `0件`
+- 最終判定: `PASS / completed`
 
 ## Topic 16 制作品質状態
 - 固定範囲: 同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本
@@ -159,4 +163,4 @@
 - 状態: `completed`
 
 ## 次工程
-技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、Topic 16の最終QAを再判定する。
+`03_shinkansen_machine_3` は `16 / 16 completed`。MASTER制作順では次は `04_shinkansen_theory_3`。
