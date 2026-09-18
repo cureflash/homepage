@@ -2,13 +2,13 @@
 
 対象: `20 新幹線を数式モデルだけで走らせる`
 
-実施日: 2026-09-19
+再判定日: 2026-09-19
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` と最新mainを再確認した。技術内容、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、仕様境界はPASSしたが、進捗記録が実成果物より古いため `completed` にはしない。
+初回 `NEEDS_REVISION` の原因だった進捗記録5ファイルと `STATUS.md` / `HANDOFF.md` は実成果物状態へ同期済み。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、必須成果物、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、SPEC境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -48,7 +48,7 @@ GitHub正本上で次を確認した。
 
 ## 完成後独立検証の再確認
 
-制作前検証・3段階例題・練習問題とは異なる教育用数値条件で実施済みの新規3ケースを最終QAでも独立再計算した。
+制作前検証・3段階例題・練習問題とは異なる教育用数値条件で実施済みの新規3ケースを再確認した。
 
 - Case A 牽引力→速度・位置→仕事・電力量: `PASS`
   - `a=3 m/s^2`
@@ -56,21 +56,21 @@ GitHub正本上で次を確認した。
   - `x=22.5 m`
   - `Wtraction=472.5 kJ`
   - `Wresistance=67.5 kJ`
-  - `Delta K=405 kJ`
-  - `F dx = integral(P dt) = Delta K + Wresistance`
+  - `ΔK=405 kJ`
+  - `F dx = ∫P dt = ΔK + Wresistance`
 - Case B 一次簡略制御モデル・解析解・Euler法: `PASS`
   - `G(s)=1/(5s+2)`
-  - `tau=2.5 s`, `v_ss=10 m/s`
+  - `τ=2.5 s`, `v_ss=10 m/s`
   - `v_exact(2.5)=6.321205588286 m/s`
-  - Euler `dt=0.50 s`: `6.7232 m/s`
-  - Euler `dt=0.25 s`: `6.513215599 m/s`
+  - Euler `Δt=0.50 s`: `6.7232 m/s`
+  - Euler `Δt=0.25 s`: `6.513215599 m/s`
   - 刻み幅縮小で誤差減少
 - Case C 回生符号→サンプリング→周波数スペクトル: `PASS`
   - `v=12,11,10,9,8 m/s`, `x=40 m`
-  - `E_signed=Delta K=-200 kJ`
+  - `E_signed=ΔK=-200 kJ`
   - 正表示する機械側回収量 `200 kJ`
-  - `fs=100 Hz > 2*37.5 Hz`
-  - `Delta f=12.5 Hz`
+  - `f_s=100 Hz > 2*37.5 Hz`
+  - `Δf=12.5 Hz`
   - DFT: `12.5 Hz -> 1.0`, `37.5 Hz -> 0.4`
 
 新規3ケース: `3 / 3 PASS`。
@@ -114,29 +114,33 @@ GitHub正本上で次を確認した。
 
 判定: `PASS`。
 
-## 進捗記録整合QA
+## 進捗記録整合QAの再判定
 
-進捗記録6ファイルをGitHub正本で確認した。
+初回FAILだった5ファイルを含む進捗記録6ファイルをGitHub正本で再確認した。
 
-1. `20_shinkansen_math_model.md`: FAIL
-   - 状態が `topic_20_explanation_body_complete / IN_PROGRESS` のまま。
-   - 本文冒頭の次工程が解説PDF＋QAのまま。
-   - 完成後独立検証・最終QA到達状態が未反映。
-2. `20_shinkansen_math_model_explanation_qa.md`: FAIL
-   - 次工程が練習問題source作成のまま。
-3. `20_shinkansen_math_model_practice.md`: FAIL
-   - 状態記録が `PASS / PRACTICE_SOURCE_COMPLETE` で止まり、練習PDF・PowerPoint・完成後独立検証・最終QA到達状態が未反映。
-4. `20_shinkansen_math_model_practice_qa.md`: FAIL
-   - 次工程がPowerPoint作成のまま。
-5. `20_shinkansen_math_model_powerpoint_qa.md`: FAIL
-   - 次工程が完成後独立検証のまま。
-6. `../../HANDOFF.md`: FAIL
-   - `current_status` が `topic_20_post_completion_validation_complete` のまま。
-   - 次工程がTopic 20最終QAのまま。
+1. `20_shinkansen_math_model.md`
+   - 状態: `topic_20_final_qa_needs_revision / IN_PROGRESS` — PASS
+   - 解説PDF・練習PDF・PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 20最終QA再判定 — PASS
+2. `20_shinkansen_math_model_explanation_qa.md`
+   - 練習PDF・PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 20最終QA再判定 — PASS
+3. `20_shinkansen_math_model_practice.md`
+   - 練習PDF・PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 20最終QA再判定 — PASS
+4. `20_shinkansen_math_model_practice_qa.md`
+   - PowerPoint・完成後独立検証・初回最終QAまで完了済み — PASS
+   - 次工程: Topic 20最終QA再判定 — PASS
+5. `20_shinkansen_math_model_powerpoint_qa.md`
+   - PowerPoint本体・QA、完成後独立検証、初回最終QAまで実体化済み — PASS
+   - 次工程: Topic 20最終QA再判定 — PASS
+6. `../../HANDOFF.md`
+   - `current_status`: `topic_20_final_qa_needs_revision` — PASS
+   - 次工程: Topic 20最終QA再判定 — PASS
 
-進捗記録整合: `0 / 6 PASS`。
+進捗記録整合: `6 / 6 PASS`。
 
-さらに系列 `STATUS.md` も `topic_20_post_completion_validation_complete` / 「Topic 20の最終QA」のままで、本QA結果が未反映である。
+系列 `STATUS.md` も `topic_20_final_qa_needs_revision`、完成数 `19 / 20`、次工程「Topic 20の最終QA再判定」で初回QA後の状態へ同期済みであることを確認した。
 
 技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF、PowerPoint、完成後独立検証の技術内容変更: `0件`。
 
@@ -152,8 +156,8 @@ GitHub正本上で次を確認した。
 - 固定範囲外追加0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- 進捗記録と実成果物の整合: `0 / 6 PASS` → FAIL
+- 進捗記録と実成果物の整合: `6 / 6 PASS`
 
-総合判定: `NEEDS_REVISION / topic_20_final_qa_needs_revision / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-次工程は上記5ファイルと `STATUS.md` / `HANDOFF.md` だけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PowerPoint・完成後独立検証結果は変更しない。同期後に最終QAを再実施する。
+Topic 20を完了とし、`10_electrical_math_2` は `20 / 20` 完了とする。
