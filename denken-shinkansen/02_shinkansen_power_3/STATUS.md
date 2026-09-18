@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 15 / 16
-- current_status: `topic_16_explanation_pdf_complete`
+- current_status: `topic_16_practice_source_complete`
 - last_completed_topic: `15 回生した電気はどこへ行く？`
 - active_topic: `16 発電所からN700Sまで全部つないでみる`
-- next_start: Topic 16の練習問題sourceを作成する
+- next_start: Topic 16の練習PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 15 回生した電気はどこへ行く？ — completed。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録7箇所の整合を再確認し `PASS / completed`。Webカタログ登録済み
-- [ ] 16 発電所からN700Sまで全部つないでみる — 制作前EXAM_ALIGNMENT・制作前独立再解答、解説本文＋3段階例題、解説PDF＋QAまで完了。固定5出題回・7答案要素のPDF対応 `7 / 7 PASS`、例題独立再計算 `3 / 3 PASS`、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。次は練習問題source
+- [ ] 16 発電所からN700Sまで全部つないでみる — 制作前EXAM_ALIGNMENT・制作前独立再解答、解説本文＋3段階例題、解説PDF＋QA、練習問題sourceまで完了。固定5出題回・7答案要素の練習source接続 `7 / 7 PASS`、練習source数値・論理独立再計算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`。次は練習PDF
 
 ## Topic 07 完了記録
 source: `topics/07_phase_conversion/07_phase_conversion.md`
@@ -199,7 +199,7 @@ PowerPoint QA: `topics/10_load_variation/10_load_variation_powerpoint_qa.md`
 - 公式解答との不一致: `0件`
 - SPEC固定範囲外の採用問題: `0件`
 - 既完了Topic固定過去問との重複: `0件`
-- 未確認実設備値への依存: `0件`
+- 未確認新幹線実設備値への依存: `0件`
 - 解説本文: §1〜§15 完成
 - 3段階例題: 基礎・本試験標準・複合 各1問完成
 - 固定5問・8小問の本文要求事項マッピング: `8 / 8`
@@ -633,6 +633,7 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 source: `topics/16_power_system_integration/16_power_system_integration.md`
 解説PDF: `topics/16_power_system_integration/16_power_system_integration_explanation.pdf`
 解説PDF QA: `topics/16_power_system_integration/16_power_system_integration_explanation_qa.md`
+練習問題source: `topics/16_power_system_integration/16_power_system_integration_practice_source.md`
 
 固定5出題回・7答案要素:
 - R8上 電力 問2
@@ -664,9 +665,14 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 - 解説PDF数値・論理再検算: `3 / 3 PASS`
 - 固定5出題回・7答案要素のPDF対応: `7 / 7 PASS`
 - 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPDF転記 `0件`
-- 練習問題source / PDF: 未着手
+- 練習問題source: 全12問・全問五肢択一
+- 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5出題回・7答案要素への接続: `7 / 7 PASS`
+- 練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後ブラインド独立再解答: 未実施
 
 ## 次
-Topic 16の練習問題sourceを作成する。
+Topic 16の練習PDFを作成する。
