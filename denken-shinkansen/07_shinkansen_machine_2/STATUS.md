@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `17 / 22`
-- current_status: `topic_17_completed`
+- current_status: `topic_18_exam_alignment_complete`
 - last_completed_topic: `17 新幹線の速度をフィードバック制御する`
 - active_topic: `18 速度指令を変えたら何秒で追従する？`
-- next_start: Topic 18 制作前EXAM_ALIGNMENT
+- next_start: Topic 18 解説source本文
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
-- [ ] Topic 18 `NOT_STARTED` — 制作前EXAM_ALIGNMENTから開始
+- [ ] Topic 18 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、次は解説source本文
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -321,8 +321,53 @@
 - [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更 `0件`
 - 判定: `PASS / topic_17_completed / completed`
 
+## Topic 18 固定範囲
+系列 `SPEC.md` の次だけを扱う。
+
+- 一次遅れ
+- 二次遅れ
+- 時定数
+- 減衰係数
+- 固有角周波数
+- オーバーシュート
+- 立上り時間
+- 整定時間
+- 定常偏差
+
+グラフ:
+- ステップ応答
+- 時定数変更比較
+- 減衰係数変更比較
+
+境界:
+- Topic 19のP・PI・PD・PID制御・ゲイン調整を独立論点として追加しない。
+- Topic 20の安定判別・周波数応答を独立論点として追加しない。
+- Topic 21の空転・再粘着制御を先取りしない。
+- Topic 17の伝達関数・ブロック線図は既習事項として必要最小限だけ再使用する。
+- 新幹線の実車時定数・制御ゲイン・整定時間等を一次資料未確認のまま実車値として置かない。
+
+## Topic 18 固定EXAM_ALIGNMENT
+一次1問＋二次記述4問、計5問・12答案要素を品質ゲート対象とする。
+
+- H23 一次 機械 問7 (2) — 1答案要素
+- R07 二次 機械・制御 問4 (2),(4),(5) — 4答案要素
+- R06 二次 機械・制御 問4 (2),(3),(4) — 3答案要素
+- R03 二次 機械・制御 問4 (3),(4) — 2答案要素
+- H29 二次 機械・制御 問4 (5) — 2答案要素
+
+## Topic 18 制作前EXAM_ALIGNMENT
+- [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列 `SPEC.md` と最新mainを確認
+- [x] R08一次「機械」まで直近年度から公式過去問を確認
+- [x] 一次1問＋二次記述4問、計5問・12答案要素を固定
+- [x] 時間応答、定常値・定常偏差、二次遅れの固有角周波数・減衰係数へ直接対応する小問を採用
+- [x] 参考教材2系統以上を確認
+- [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値追加 `0件`
+- [x] 固定問題の正答記号・最終数値保存 `0件`
+- source: `topics/18_speed_transient_response/18_speed_transient_response.md`
+- 判定: `PASS / topic_18_exam_alignment_complete / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 17のcompleted状態同期を実施した。最終QA `PASS` と独立再解答 `6 / 6 PASS` を維持したまま、main source、練習source、系列進捗記録を完成状態へ同期した。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。
+Topic 18の制作前EXAM_ALIGNMENTを完了した。公式二種一次・二次過去問を直近年度から確認し、一次1問＋二次4問、計5問・12答案要素を固定した。系列SPECの一次遅れ・二次遅れ・時定数・減衰係数・固有角周波数・オーバーシュート・立上り時間・整定時間・定常偏差だけを教材範囲とし、Topic 19〜21の先取りは行っていない。
 
 ## 判定
-Topic 17は `PASS / topic_17_completed / completed`。完成数は `17 / 22`。次工程はTopic 18「速度指令を変えたら何秒で追従する？」の制作前EXAM_ALIGNMENT。
+Topic 18は `PASS / topic_18_exam_alignment_complete / IN_PROGRESS`。完成数は `17 / 22` のまま。次工程はTopic 18解説source本文。
