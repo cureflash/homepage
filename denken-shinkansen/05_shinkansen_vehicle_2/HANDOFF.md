@@ -5,11 +5,11 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
+Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_16_progress_sync_complete`。Topic 16 `700系 多レベル変換器とPWM` は、固定一次4問＋二次1問・26答案要素、解説source/PDF、練習source/PDF、PowerPoint、完成後blind再解答まで品質ゲートを通過済み。前回最終QAでは技術内容・必須成果物・表示QA・試験対応・SPEC境界は全PASSで、主source等4箇所の進捗記録だけが `NEEDS_REVISION` だった。今回、その4箇所を `4 / 4` 同期した。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更していない。Topic 16は最終QA再判定前のためcompletedにはしない。
+現在地は `topic_16_completed`。Topic 16 `700系 多レベル変換器とPWM` は、固定一次4問＋二次1問・26答案要素、解説source/PDF、練習source/PDF、PowerPoint、完成後blind再解答、最終QAまで品質ゲートを通過した。初回最終QAで唯一FAILだった進捗記録4箇所は `4 / 4` 同期済みで、再判定により `PASS / completed` とした。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更していない。
 
-次工程はTopic 16最終QAの再判定のみ。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
+次工程はTopic 17 `パワー半導体の損失比較` の制作前EXAM_ALIGNMENT。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -182,12 +182,12 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4箇所要同期`
+- 進捗記録整合: `PASS`
 - SPEC外追加: `0件`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 判定: `PASS / completed`
 
 ## Topic 16 進捗記録同期
-- 最終QA指摘4箇所: `4 / 4 同期完了`
+- 初回最終QA指摘4箇所: `4 / 4 同期完了`
 - 主source冒頭 `## 状態`: `topic_16_progress_sync_complete`
 - 主source末尾 `## 次工程`: `最終QA再判定`
 - 練習source末尾 `## 次工程`: `topic_16_progress_sync_complete / 最終QA再判定`
@@ -234,7 +234,7 @@ SPEC指定可視化:
 - SPEC指定3可視化は `E_d=1.0 pu` の共通仮定条件から再生成する
 
 ## 過去Topic
-Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
+Topic 01〜16は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
+Topic 17「パワー半導体の損失比較」の制作前EXAM_ALIGNMENTを開始する。
