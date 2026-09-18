@@ -8,11 +8,11 @@ Topic 01〜18は最終QAまで `PASS / completed`。
 
 完成数: `18 / 20`
 
-current_status: `topic_19_exam_alignment_complete`
+current_status: `topic_19_preproduction_validation_complete`
 
 active_topic: `19 最適化入門`
 
-次工程: Topic 19の制作前独立検証を実施する。
+次工程: Topic 19の解説本文＋3段階例題を作成する。
 
 ## 上位仕様
 
@@ -474,6 +474,26 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 
 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`。
 
+## 制作前独立検証
+
+成果物:
+- `topics/19_optimization_intro/19_optimization_intro_preproduction_validation.md`
+- `topics/19_optimization_intro/19_optimization_intro_preproduction_validation.py`
+
+判定: `PASS / PREPRODUCTION_VALIDATION_COMPLETE`。
+
+- Case A: `f(x)=(x-3)^2+1`, `0<=x<=2`。停留点 `x=3` は制約外、境界比較から `x=2`, `f=2`。
+- Case B: `F=x^2+2y^2+4x+2y`, `x+y=12`。ラグランジュ法で `x=23/3`, `y=13/3`, `F=407/3`。
+- Case Bは `y=12-x` による一変数消去でも同じ解を得て独立照合 `PASS`。
+- 最適点で `partial F/partial x = partial F/partial y = 58/3` を確認。
+- Case C: 新幹線への概念接続用の無次元モデル `E=u^2+3v^2`, `u+v=10`。`u=7.5`, `v=2.5`, `E=75`。
+- 直接最適化・ラグランジュ法要求の確認済み第二種過去問: `0問` のまま。
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`。
+- H17問6の固定件数追加: `0件`。
+- Topic 04の一変数極値一般の再制作: `0件`。
+- KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`。
+- 未確認実車値依存: `0件`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -486,7 +506,7 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 - [x] H17二次「電力・管理」問6は公式一次資料未確認のため正式件数へ含めない
 - [x] 電験学習資料を2系統以上確認
 - [x] sourceへ制作前EXAM_ALIGNMENT・必要説明・境界を固定
-- [ ] 制作前独立検証
+- [x] 制作前独立検証
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF＋QA
 - [ ] 練習問題source
@@ -498,4 +518,4 @@ H17二次「電力・管理」問6は複数の二次資料で増分燃料費と�
 
 ## 次工程
 
-Topic 19「最適化入門」の制作前独立検証を実施する。
+固定済みEXAM_ALIGNMENTと制作前独立検証を変更せず、Topic 19「最適化入門」の解説本文＋3段階例題を作成する。
