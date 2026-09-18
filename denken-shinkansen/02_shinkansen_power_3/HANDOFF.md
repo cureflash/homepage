@@ -1,6 +1,6 @@
 # HANDOFF - 新幹線・電験三種「電力」
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 正本・active series
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。MASTER_SPEC順で `01_shinkansen_vehicle_3` は完了、`02_shinkansen_power_3` が最初の未完了系列。新品質基準の完成数は `14 / 16`。Topic 01〜14は完成済み。active themeはTopic 15 `回生した電気はどこへ行く？`。
@@ -8,8 +8,9 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 15の完成後ブラインド独立再解答を実施した。固定5出題回・8答案要素の候補答案を公式標準解答参照前に `2366cffd425cb781868a6e2144266bb38d7e7a87` で固定し、その後に電気技術者試験センター公式標準解答と照合。`8 / 8 PASS`、固定後の答案変更0件、教材外知識補完0件、SPEC固定範囲外追加0件、Topic 16先取り0件、未確認新幹線実設備値の真値化0件。
+Topic 15の初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。一方、旧工程を指す進捗記録7箇所が現在地と不一致のため、判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `14 / 16` のまま。
 
+最終QA: `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
 固定候補: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer_candidates.md`
 完成後独立再解答: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md`
 source: `topics/15_regenerative_power/15_regenerative_power.md`
@@ -44,6 +45,19 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - SPEC固定範囲外追加: `0件`
 - Topic 16先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 初回最終QAの唯一の未達カテゴリ: 進捗記録整合
+
+## 進捗記録の未同期7箇所
+1. `STATUS.md` — PowerPoint完了／次工程=完成後独立再解答のまま。
+2. `topics/15_regenerative_power/15_regenerative_power.md` — 状態・次工程が完成後独立再解答前のままで、完成後独立再解答 `8 / 8 PASS` が主sourceへ未同期。
+3. `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md` — 次工程が練習問題source作成のまま。
+4. `topics/15_regenerative_power/15_regenerative_power_practice_source.md` — 次工程が練習PDF作成のまま。
+5. `topics/15_regenerative_power/15_regenerative_power_practice_qa.md` — 次工程がPowerPoint作成のまま。
+6. `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md` — 次工程が完成後独立再解答のまま。
+7. `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md` — 次工程が最終QA実施のまま。
+
+`15_regenerative_power_independent_reanswer_candidates.md` はblind固定証跡なので更新しない。
 
 ## 範囲境界
 - 回生電力が架線へ戻った後、他負荷・系統・蓄電設備へ流れる電力収支を扱う。
@@ -54,7 +68,7 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - Topic 16の総合系統計算は先取りしない。
 
 ## 次
-Topic 15の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答 `8 / 8 PASS`、PDF/PPTX QA、SPEC境界、進捗記録整合を再確認し、PASSの場合のみ `completed` とする。
+上記7箇所の進捗記録を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、完成後独立再解答結果は変更しない。同期後にTopic 15の最終QAを再実施し、全件PASSの場合のみ `completed` とする。
 
 ## 直前完了テーマ
 Topic 14 `駅やトンネルにはどう電気を配る？` は `PASS / completed`。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
