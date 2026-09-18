@@ -2,7 +2,7 @@
 
 更新日: 2026-09-19
 
-状態: `blind_reanswer_passed / FINAL_QA_PENDING`
+状態: `blind_reanswer_passed / FINAL_QA_PASS`
 
 固定EXAM_ALIGNMENT 6問・6答案要素について、改訂済み教材と公式問題文から答案を再導出し、公式解答との照合前に commit `a6d6452528cf03e9a055d9410aff8c33c3503dd6` で答案を固定した。その後、電気技術者試験センターの公式解答と照合した。
 
@@ -46,8 +46,13 @@
 
 完成後blind独立再解答ゲート: `PASS`。
 
-Topic 16の最終completed判定は、必須成果物・表示QA・進捗記録整合・固定範囲境界をまとめて確認する最終QA再判定後に行う。
+Topic 16の最終QA再判定でも、必須成果物・表示QA・進捗記録整合・固定範囲境界を再確認し `PASS / completed` とした。
 
-## 次工程
+## 最終状態
 
-Topic 16の最終QA再判定を実施する。解説source / 解説PDF / 練習source / 練習PDF / PowerPoint / 各QA記録 / 本再解答記録 / STATUS / HANDOFF の整合と、固定範囲外追加0件を確認する。
+- 完成後blind独立再解答: `6 / 6 PASS`
+- 教材内根拠: `6 / 6 PASS`
+- 固定範囲外追加: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 最終QA再判定: `PASS`
+- Topic 16: `completed`
