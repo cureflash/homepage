@@ -106,7 +106,8 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- SHA-256: `8d9b05092f2aab33ab139bffb14d235076820b9ea06485875890011c50b636df`
+- SHA-256: `b1da3262e4a4194a4bae3ea65bf9b82e6105872b350fad580437bdddcd481ffb`
+- Git blob SHA: `127628da3cb3a4f863ff3e9d723165ac0e81fb86`
 - 判定: `PASS / PRACTICE_PDF_REVISION_SYNC_COMPLETE`
 
 ## Topic 16 解説画像PowerPoint
