@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `16 / 39`
-- current_status: `topic_16_completed`
+- current_status: `topic_17_exam_alignment_complete`
 - last_completed_topic: `16 700系 多レベル変換器とPWM`
 - active_topic: `17 パワー半導体の損失比較`
-- next_start: 新しいrunでTopic 17の制作前EXAM_ALIGNMENTを開始する
+- next_start: 新しいrunでTopic 17の解説本文＋3段階例題を開始する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -227,8 +227,28 @@ SPEC指定可視化:
 - `dv/dt`はSPEC指定項目として扱うが、固定公式過去問で直接問われたとは扱わない
 - 未確認700系実車回路・レベル数・電圧・素子定格・キャリア周波数・効率を真値化しない
 
+## Topic 17 固定EXAM_ALIGNMENT
+- source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison.md`
+- 固定過去問: 一次4問＋二次1問、計5問
+- 固定答案要素: 一次20＋二次6、計26
+- R7 一次 機械 問4 (1)〜(5)
+- R4 一次 機械 問4 (1)〜(5)
+- R2 一次 機械 問2 (1)〜(5)
+- H24 一次 機械 問6 (1)〜(5)
+- H24 二次 機械・制御 問1 (1)〜(6)
+- 制作前独立検証: 一次 `20 / 20 PASS`、二次 `6 / 6 PASS`、合計 `26 / 26 PASS`
+- 二次記述・計算問題: `1問`
+- 公式解答／標準解答との不一致: `0件`
+- 参考教材2系統以上: `PASS / e-sysnet.com + 電験王2`
+- R8一次「機械」直近年度確認: `PASS / Topic 17へ直接対応する問題は固定採用せず`
+- SPEC指定7項目: `7 / 7 aligned`
+- SPEC指定3可視化: `3 / 3 aligned`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
 ## 過去Topic
 Topic 01〜16は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 17「パワー半導体の損失比較」の制作前EXAM_ALIGNMENTを開始する。
+Topic 17「パワー半導体の損失比較」の解説本文＋3段階例題を作成する。
