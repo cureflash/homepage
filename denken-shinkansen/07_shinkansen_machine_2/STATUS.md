@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `19 / 22`
-- current_status: `topic_20_progress_metadata_synced / IN_PROGRESS`
-- last_completed_topic: `19 PIDで新幹線の速度を制御する`
-- active_topic: `20 制御系はなぜ発振する？`
-- next_start: Topic 20 最終QA再実施
+- exam_aligned_completed_topics: `20 / 22`
+- current_status: `topic_20_final_qa_pass / completed`
+- last_completed_topic: `20 制御系はなぜ発振する？`
+- active_topic: `21 空転した車輪を再粘着させる`
+- next_start: Topic 21 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,7 +16,7 @@
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / completed`
 - [x] Topic 19 最終QA `PASS / completed`
-- [ ] Topic 20 `IN_PROGRESS`
+- [x] Topic 20 最終QA `PASS / completed`
 - [ ] Topic 21
 - [ ] Topic 22
 
@@ -117,21 +117,21 @@
 - 判定: `PASS / topic_20_independent_reanswer_record_qa_pass`
 
 ## Topic 20 最終QA
-前回最終QAでは技術・試験対応品質ゲートは `PASS`。ただし進捗・メタデータ記録3件の未同期により `NEEDS_REVISION / topic_20_final_qa_progress_metadata_unsynced` とした。
+前回最終QAの未同期3件を現行mainへ同期後、最終QAを再実施した。
 
-今回、次の3件を現行mainへ同期した。
-1. main sourceの状態・次工程を現行成果物と独立再解答完了状態へ同期。
-2. 練習sourceの次工程をTopic 20最終QA再実施へ同期。
-3. 解説PDF QAのsize記録を `17333 bytes` → `17336 bytes` に訂正。Git blob `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f`、SHA-256は変更なし。
-
-- 技術本文の修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- PDF/PPTX再生成: `0件`
+- 上位仕様・系列SPEC照合: `PASS`
+- 固定一次2問＋二次3問・14答案要素: `14 / 14 COVERED`
+- 成果物存在・成果物QA: `PASS`
+- 独立再解答・記録QA: `PASS`
+- 訂正後公式整合: `14 / 14 PASS`
+- 教材の概念・解法不足: `0件`
 - 進捗・メタデータ同期: `3 / 3 PASS`
-- 現在判定: `IN_PROGRESS / topic_20_progress_metadata_synced`
+- Topic 21先取り・未確認実車制御値化・SPEC外高度制御理論追加: `各0件 / PASS`
+- 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの追加修正: `0件`
+- 判定: `PASS / topic_20_final_qa_pass / completed`
 
 ## 今回進めた内容
-Topic 20の前回最終QAで確認した進捗・メタデータ未同期3件をGitHub正本へ反映した。技術本文、練習問題、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答内容は変更していない。
+Topic 20最終QAを再実施し、全品質ゲートのPASSと正本整合を確認して `completed` とした。完成数を `20 / 22` へ更新した。
 
 ## 次工程
-Topic 20最終QAを再実施する。再QAで全ゲートがPASSした場合にのみ `completed` とする。
+Topic 21「空転した車輪を再粘着させる」の制作前EXAM_ALIGNMENT。
