@@ -6,7 +6,7 @@
 
 `topic_16_exam_alignment_complete`
 
-制作前EXAM_ALIGNMENTを完了した。正式品質ゲート対象は一次2問＋二次3問の固定5問・23答案要素。制作前blind独立再解答、解説source/PDF、練習source/PDF、PowerPointは未着手。次工程は、この固定5問・23答案要素を保存済み正答を見ずに制作前blind独立再解答する。
+制作前EXAM_ALIGNMENTを完了した。正式品質ゲート対象は一次2問＋二次3問の固定5問・23答案要素。制作前blind独立再解答は21 / 23答案要素がblind-validでPASS。平成21年度二次「電力・管理」問6の2答案要素は再計算結果自体は公式標準解答と一致したが、問題取得時に第三者解説ページの解答表示を先に見たためblind条件を満たさず、clean rerun待ち。解説source/PDF、練習source/PDF、PowerPointは未着手。
 
 ## SPEC固定範囲
 
@@ -287,6 +287,20 @@ https://www.shiken.or.jp/chief/upload/20091129_ch_second_a01.pdf
 
 ## 制作前blind独立再解答
 
-`未実施`
+記録:
+- `topics/16_short_circuit/16_short_circuit_preproduction_blind_20260919.md`
 
-次工程で固定5問・23答案要素について、保存済み正答を先に見ずに独立再解答する。一次・二次のどちらか1答案要素でも根拠付きで再現できなければ、本文制作へ進まない。
+現状:
+- 令和2年度一次「電力」問3: `5 / 5 PASS`
+- 平成25年度一次「電力」問4: `5 / 5 PASS`
+- 令和7年度二次「電力・管理」問2: `5 / 5 PASS`
+- 令和3年度二次「電力・管理」問3: `6 / 6 PASS`
+- 平成21年度二次「電力・管理」問6: `BLIND_NOT_VALID`（再計算は公式標準解答と `2 / 2一致`）
+- blind-valid: `21 / 23`
+- 公式標準解答照合: `23 / 23一致`
+- 判定: `NEEDS_RERUN / IN_PROGRESS`
+
+exact blocker:
+`平成21年度二次「電力・管理」問6の2答案要素だけ、解答未提示の問題データからclean blindで再解答する必要がある。`
+
+次工程では公式問題PDF `20091129_ch_second_q01.pdf` の問題図・表だけを入力とし、公式標準解答・第三者解説・今回のblind記録の数値結果を先に見ずに2答案要素を再解答する。`2 / 2 PASS` になるまで本文制作へ進まない。
