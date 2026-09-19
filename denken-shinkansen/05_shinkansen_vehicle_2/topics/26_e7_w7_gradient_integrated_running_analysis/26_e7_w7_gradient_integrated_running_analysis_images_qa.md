@@ -7,28 +7,31 @@
 ## 対象
 
 - `26_e7_w7_gradient_integrated_running_analysis_images.pptx`
-- canonical blob SHA: `4cec8a6ee9eef4272b5783762a4f0c1f8311e19d`
+- canonical blob SHA: `999988097102c9674967abc8152c04ebf7904819`
 - 16:9 / `6 slides`
-- file size: `55,817 bytes`
-- SHA-256: `91ee793f3472b4f1a26fd40360a7dd85a578c1f0fc64d9717ce43023f5cd2cb7`
+- file size: `225,537 bytes`
+- SHA-256: `67dadfdd3ef0a0a5f8b07018c9ee87a31ecd86571e1d16f74ca6b6f90e6ae4e9`
 
-## reconcile
+## reconcile / artifact identity
 
 最新main、系列 `STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、直近同系列worker成果を照合した。開始時に別workerがTopic 26練習PDF＋QAをmainへ反映したため、その成果を正本として採用し、練習PDFの重複作業を中止して次工程のPowerPoint生成＋QAだけを実施した。
 
-## 構造・表示QA
+初回のconnector経由binary uploadはGitHub正本上で `7,514 bytes` にtruncateされ、ローカルQA対象とcanonical artifactの同一性を満たさなかったため無効化した。原因は内容ではなくbinary転送経路。GitHub Actions内でPowerPointを再生成し、同じ正本ファイルに対して構造・表示変換・テキストQAを実行してからcommitした。再生成後のcanonical blobは上記 `999988...`、size/hashはworkflow計測値とGitHub contents metadataが一致している。
 
+## canonical構造・表示QA
+
+- GitHub Actions build/validation job: `PASS`
 - PPTX ZIP integrity: `PASS`
 - python-pptx open: `PASS`
 - slide count: `6 / 6`
 - 16:9 geometry: `PASS`
 - slide geometry bounds: `6 / 6 PASS`
-- LibreOffice headless render: `6 / 6 pages PASS`
-- Poppler render: `6 / 6 PASS`
-- `pdftotext -layout`: `PASS`（8,941 bytes）
+- LibreOffice headless PDF変換: `6 / 6 pages PASS`
+- `pdftotext -layout`: `PASS`（`8,858 bytes`）
+- 必須表示トークン: `PASS`
 - 置換文字 `�`: `0件`
-- contact-sheet視認: `6 / 6 PASS`
-- クリッピング・重なり・破損グリフ: `0件`
+
+レイアウトは同一設計のローカルレンダリングでも6枚を視認確認済み。canonical側では同じgeneratorをGitHub Actionsで再実行し、ZIP・python-pptx・geometry・LibreOffice変換を正本そのものに対して再検証した。
 
 ## 内容QA
 
