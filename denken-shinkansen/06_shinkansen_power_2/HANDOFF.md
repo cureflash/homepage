@@ -3,17 +3,17 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_explanation_pdf_current_blob_qa_fail_right_clipping`
+current_status: `topic_16_explanation_pdf_regenerated_exact_blob_qa_pass`
 
 ## 今回実施
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、Topic 16最終QAと現行artifactを再確認した。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、Topic 16の補正済みsourceと現行QAを再確認した。
 
-最終QAが指摘したidentity不一致のうち、現行解説PDF blob `a2fd385e832df7e628d6bd879d9ffcf26fca575b` を既存QAから独立して完全再QAした。
+現行解説PDFの右端クリッピングだけを修正して再生成し、新しいexact blobを既存QAから独立して再QAした。
 
 QA記録:
 - `topics/16_short_circuit/16_short_circuit_explanation_pdf_qa.md`
-- 判定: `FAIL / RIGHT_EDGE_CLIPPING_ON_CURRENT_BLOB`
+- 判定: `PASS / CURRENT_EXPLANATION_PDF_EXACT_BLOB_QA`
 
 固定5問・23答案要素、Topic 16固定範囲、補正済み5項目、後続Topic境界は変更していない。
 
@@ -33,29 +33,21 @@ QA記録:
 
 ## 解説PDF exact-blob再QA
 
-現行artifact:
-- blob: `a2fd385e832df7e628d6bd879d9ffcf26fca575b`
-- size: `11,232 bytes`
+再生成artifact:
+- blob: `626d9098ccf7453f2439b1ffc3df50c3bbdd3b5b`
+- size: `34,238 bytes`
 - pages: `7`
-- SHA-256: `e6ddb708e2d2002c33ac1af15091e756d1d25f021e5a7793ef6b4e25238cca92`
+- SHA-256: `0d305c1240f57a3efe7a279130f18821bb204a561de46429df596a1ae64c79fb`
 
 検査:
-- PDFium: 7ページrender完了
-- Poppler: 7ページrender完了
+- PDFium: `7 / 7 render completed`
+- Poppler: `7 / 7 render completed`
 - `pdftotext`: PASS
-- U+FFFD: 0件
-- 補正5項目: 5 / 5 present
-
-表示結果:
-- page 1: PASS
-- page 2: FAIL — 基準換算式・解法アルゴリズム右端切れ
-- page 3: PASS
-- page 4: FAIL — `250 MVA` の末尾 `0` が切れ、表示上 `25 MVA` に見える。逆算式も右端切れ
-- page 5: PASS
-- page 6: FAIL — 教材用仮定モデル式・説明文右端切れ
-- page 7: FAIL — 参照URL・末尾説明文右端切れ
-
-正常表示は `3 / 7 pages`。現行解説PDFは成果物品質ゲートを通さない。
+- U+FFFD: `0件`
+- 補正5項目: `5 / 5 present`
+- learner-facing display: `PASS`
+- right-edge overflow: `0件`
+- 旧表示不良の `250 MVA`、基準換算式、逆算式、25kV仮定モデル、参照URLはいずれもページ幅内に表示
 
 ## 他artifactの現在地
 
@@ -68,7 +60,7 @@ QA記録:
 
 ## exact blocker
 
-`Current explanation PDF blob a2fd385e832df7e628d6bd879d9ffcf26fca575b has been independently re-QAed and fails learner-facing display QA because pages 2, 4, 6, and 7 contain right-edge clipping. Page 4 changes the visible standard-example result from the correct 250 MVA to 25 MVA. Regenerate only the explanation PDF layout from the existing corrected source, keeping all fixed exam-alignment content unchanged, then rerun exact-blob PDF QA. Do not proceed to the PowerPoint re-QA until the explanation PDF passes.`
+`The explanation PDF blocker is cleared: the regenerated exact blob passes PDFium/Poppler/text/content/display QA with no right-edge clipping. The next unresolved gate is exact-blob QA for the current PowerPoint blob a4817d7cfb1a1733f5147f52efa3ec4e249999d5. Existing PowerPoint QA must not be reused because its artifact identity differs. After PowerPoint exact-blob QA, synchronize the stale progress state in 16_short_circuit.md before final QA.`
 
 ## 品質境界
 
@@ -82,11 +74,7 @@ QA記録:
 
 ## 次に行う
 
-固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済み解説source、練習PDF、clean blind結果、Webカタログを変更せず、次だけを行う。
-
-1. `16_short_circuit_explanation.pdf` を既存sourceから再生成し、長い式・URL・説明文をページ幅内で折り返す。
-2. 新しいexact blobに対してPDFium / Poppler / 文字抽出 / 内容QAを再実施する。
-3. 解説PDFがPASSした後にのみ、現行PowerPoint exact-blob QAへ進む。
+固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済みsource/PDF、練習PDF、clean blind結果、Webカタログを変更せず、現行 `16_short_circuit_images.pptx` blob `a4817d7cfb1a1733f5147f52efa3ec4e249999d5` に対してexact-blob PowerPoint QAを再実施する。
 
 まだ行わない:
 - 固定EXAM_ALIGNMENT変更
