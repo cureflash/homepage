@@ -85,8 +85,8 @@ jobs:
           pdftoppm -png -r 110 "$pdf" /tmp/topic24pdf/slide >/tmp/topic24_pdftoppm.txt 2>&1
           test "$(find /tmp/topic24pdf -name 'slide-*.png' | wc -l)" = '6'
           pdftotext "$pdf" /tmp/topic24pdf/text.txt
-          test "$(grep -o '�' /tmp/topic24pdf/text.txt | wc -l)" = '0'
-          test "$(grep -o '(cid:' /tmp/topic24pdf/text.txt | wc -l)" = '0'
+          ! grep -q '�' /tmp/topic24pdf/text.txt
+          ! grep -q '(cid:' /tmp/topic24pdf/text.txt
 
           echo "bytes=$(wc -c < "$p" | tr -d ' ')"
           sha256sum "$p"
