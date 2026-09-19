@@ -28,6 +28,7 @@ jobs:
           dir='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison'
           p="$dir/24_n700s_main_motor_design_comparison_images.pptx"
           gen='/tmp/topic24_build.js'
+          nodeprefix='/tmp/topic24_node'
           wf='.github/workflows/_tmp_vehicle2_topic24_repair.yml'
 
           git config user.name 'denken-vehicle2-bot'
@@ -48,8 +49,9 @@ jobs:
           fi
 
           git show efd7f365571e59d240576d35fe44deac3b4ae18f:denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison/_tmp_build_topic24.js > "$gen"
-          npm install --no-save pptxgenjs@4.0.0 >/dev/null 2>&1
-          TOPIC24_OUT="$p" node "$gen"
+          mkdir -p "$nodeprefix"
+          npm install --prefix "$nodeprefix" --no-save pptxgenjs@4.0.0 >/dev/null 2>&1
+          NODE_PATH="$nodeprefix/node_modules" TOPIC24_OUT="$p" node "$gen"
 
           unzip -t "$p" >/dev/null
           python -m pip install -q python-pptx
@@ -60,7 +62,7 @@ jobs:
           assert len(prs.slides)==6
           sw, sh = prs.slide_width, prs.slide_height
           texts=[]
-          for i, slide in enumerate(prs.slides, 1):
+          for slide in prs.slides:
               for shape in slide.shapes:
                   assert shape.left >= 0 and shape.top >= 0
                   assert shape.left + shape.width <= sw + 1
