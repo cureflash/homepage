@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 15 / 16
-- current_status: `topic_16_main_source_synced`
+- current_status: `topic_16_progress_records_synced`
 - last_completed_topic: `15 回生した電気はどこへ行く？`
 - active_topic: `16 発電所からN700Sまで全部つないでみる`
-- next_start: Topic 16最終QAを実施する
+- next_start: Topic 16最終QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 15 回生した電気はどこへ行く？ — completed。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録7箇所の整合を再確認し `PASS / completed`。Webカタログ登録済み
-- [ ] 16 発電所からN700Sまで全部つないでみる — IN_PROGRESS。制作前EXAM_ALIGNMENT・制作前独立再解答、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QAまで完成。固定5出題回・7答案要素の完成後独立再解答 `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件。main sourceへ結果同期済み。次は最終QA
+- [ ] 16 発電所からN700Sまで全部つないでみる — IN_PROGRESS。制作前EXAM_ALIGNMENT・制作前独立再解答、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答、main source同期、初回最終QAまで完了。固定5出題回・7答案要素の完成後独立再解答 `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件。初回最終QAは進捗記録整合のみFAILで、旧工程を指していた7箇所の進捗記録同期を完了。次は最終QA再実施
 
 ## Topic 07 完了記録
 source: `topics/07_phase_conversion/07_phase_conversion.md`
@@ -695,6 +695,15 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - 完成後件数合わせの仕様追加: `0件`
 - 完成後未確認新幹線実設備値の真値化: `0件`
 - main sourceへの完成後独立再解答結果同期: 完了
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 初回最終QAの唯一の未達カテゴリ: 進捗記録整合
+- 旧工程を指した進捗記録7箇所同期: 完了
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 数式・技術本文変更: `0件`
+- 練習問題・正答変更: `0件`
+- PDF/PPTX変更: `0件`
+- 完成後独立再解答結果変更: `0件`
+- 最終QA再実施: 未実施
 
 完成後独立答案:
 - R8上 電力 問2: `(5)`
@@ -704,4 +713,4 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - R7上 法規 問13(a)(b): `(2),(3)`
 
 ## 次
-Topic 16最終QAを実施する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。
+Topic 16最終QAを再実施する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。
