@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `25 / 39`
-- current_status: `topic_26_exam_alignment_complete`
+- current_status: `topic_26_explanation_source_complete`
 - last_completed_topic: `25 N700S バッテリー自走のエネルギー設計`
 - active_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
-- next_start: Topic 26 解説source。固定EXAM_ALIGNMENT 5問・16答案要素、SPEC必須7項目、指定3可視化だけを入力条件として作成する
+- next_start: Topic 26 解説PDF。本sourceを正本としてPDF生成し、表示・文字抽出・固定5問16答案要素・SPEC必須7項目・指定3可視化のQAを行う
 
 ## Topic 25 解説PDF
 
@@ -142,10 +142,27 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - 実車接続: JR東日本公式資料で北陸新幹線の30‰急勾配とE7系のブレーキ性能向上を確認。未公表の実車値は推定しない
 - exact blocker: `0件`
 
+## Topic 26 解説source
+
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_explanation_source.md`
+- 固定過去問: `5 / 5 mapped`
+- 一次答案要素: `10 / 10 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計答案要素: `16 / 16 covered`
+- SPEC必須7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 defined`
+- 3段階例題: `3 / 3`
+- 未確認E7・W7実車値の真値化: `0件`
+- 未確認実車走行抵抗係数の追加: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外主題追加: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は制作前EXAM_ALIGNMENT完了。次は解説source作成。
+Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は解説source完了。次は解説PDF作成・QA。
