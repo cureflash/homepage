@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 19 / 21
-- current_status: `topic_20_final_qa_complete`
-- last_completed_topic: `19 25kV・大電流をどう安全に測る？`
-- active_topic: `20 East iは走りながら何をどう測る？`
-- next_start: Topic 20 completed状態同期
+- exam_aligned_completed_topics: 20 / 21
+- current_status: `topic_20_completed`
+- last_completed_topic: `20 East iは走りながら何をどう測る？`
+- active_topic: `21 架線からEast iまで全部シミュレーションする`
+- next_start: Topic 21 制作前EXAM_ALIGNMENT
 
 ## 完成済み
 
-Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後独立再解答、最終QAを通過し `PASS / completed`。
+Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後独立再解答、最終QAを通過し `PASS / completed`。
 
 ## Topic 20 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -41,32 +41,29 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
 - [x] 主source進捗記録同期
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- [ ] completed状態同期
+- [x] completed状態同期
+- [x] 最終判定: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 20最終QAを再実施した。
+Topic 20の `completed` 状態同期を実施した。
 
-- 初回blocker「主source進捗記録不一致」: `解消済み / 1件中1件`
-- 必須成果物欠落: `0件`
-- 固定一次5問・25答案要素: `25 / 25 PASS`
-- R8/R7/R6/H24公式標準解答直接一致: `20 / 20`
-- H20二次資料掲載解答一致: `5 / 5`
-- SPEC固定範囲: `12 / 12`
-- 解説PDF表示QA: `8 / 8 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- 練習12問QA: `12 / 12 PASS`
-- PowerPoint表示QA: `8 / 8 PASS`
+- 主source: `completion: completed` / `stage: COMPLETED`
+- 練習source: `completion: completed` / `stage: COMPLETED`
+- STATUS: 完成数 `20 / 21`、Topic 21をactiveへ更新
+- HANDOFF: Topic 01〜20 `PASS / completed` へ更新
+- 固定一次5問・25答案要素: `25 / 25 PASS` 維持
+- R8/R7/R6/H24公式標準解答直接一致: `20 / 20` 維持
+- H20二次資料掲載解答一致: `5 / 5` 維持
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF・PowerPoint変更: `0件`
 - 固定範囲外追加: `0件`
 - East i内部測定回路・未公開定数の推測追加: `0件`
-- 判定: `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
-- 技術本文・固定EXAM_ALIGNMENT・過去問正答・教材成果物の変更: `0件`
 - 仕様追加: `0件`
 
 ## 判定
 
-`PASS / topic_20_final_qa_complete / IN_PROGRESS`。
+`PASS / completed`。
 
-完成数は `19 / 21`。次工程はTopic 20の `completed` 状態同期。
+完成数は `20 / 21`。次工程はTopic 21「架線からEast iまで全部シミュレーションする」の制作前EXAM_ALIGNMENT。
