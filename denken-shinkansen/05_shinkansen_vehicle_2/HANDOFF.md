@@ -8,64 +8,61 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_final_qa_blocked_powerpoint_artifact_identity`。active topic は Topic 23 `N700S SiC主変換装置`。Topic 24へは進めない。
+現在地は `topic_23_blocked_current_powerpoint_zip_corrupt`。active topic は Topic 23 `N700S SiC主変換装置`。Topic 24へは進めない。
 
 ## reconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23初回clean blind、source補強、3成果物再同期、修正後clean blind候補固定・公式照合、並行workerが作成した最終QAをreconcileした。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23初回clean blind、source補強、PDF再同期、PowerPoint再同期履歴、修正後clean blind、最終QAをreconcileした。
 
-固定過去問・教材内容側は合格している。
+教材内容側は合格している。
 
 - 固定過去問: 第二種一次4問＋二次1問 = `5問`
 - 一次答案要素: `17 / 17 PASS`
 - 二次答案要素: `6 / 6 PASS`
 - 合計: `23 / 23 PASS`
-- 修正後clean blind候補固定commit: `5d28e38e9151edc9d2ca3e309783aea2e6b9272f`
-- 修正後公式照合: `PASS / 23_OF_23`
+- 修正後clean blind: `23 / 23 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 一般式変更: `0件`
 - SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
 
-ただし最終QAでPowerPoint成果物識別情報の不整合を確認したため、並行workerの `PASS / COMPLETED` 判定は取り消し、`BLOCKED` にreconcileした。
-
 ## Topic 23 PowerPoint exact blocker
 
-PowerPoint QA `23_n700s_sic_main_converter_powerpoint_qa.md` の記録:
+現行mainの `23_n700s_sic_main_converter_images.pptx` をbyte単位で再取得して検査した。
 
-- 判定: `PASS / POWERPOINT_RESYNC_COMPLETE`
-- 16:9 `6 slides`
-- file size: `12,944 bytes`
-- SHA-256: `dc5babab362325cb00ca462660cd7f9b6c1cd1f6ef6f1e36c62ffe55395ae70c`
-- LibreOffice / pdftoppm: `6 / 6 PASS`
+識別情報:
 
-現行GitHub本体 `23_n700s_sic_main_converter_images.pptx`:
-
-- blob SHA: `ff2c73d872da4fc3605fb30e5f67c9dc97517f5c`
+- GitHub blob SHA: `ff2c73d872da4fc3605fb30e5f67c9dc97517f5c`
 - size: `12,326 bytes`
+- SHA-256: `8abfe66b9dbf6f05dba212af35405abe9981b9bd017980866c03186030dde5b8`
+- Git blob SHA-1再計算: `ff2c73d872da4fc3605fb30e5f67c9dc97517f5c` — GitHub blobと一致
 
-PowerPoint本体とQAの最新更新commitはいずれも `3d8608c3af48e9ea81e1534927fb8cdb09e065a5`。後続commitによる単純差替えとは確定できない。
+構造QA:
+
+- ZIP: `FAIL` — `missing 618 bytes in zipfile`, `invalid zip file with overlapped components`
+- python-pptx: `FAIL / open不可`
+- LibreOffice: `FAIL / source file could not be loaded`
+- PDF生成: `0 files`
+- pdftoppm / 6枚表示 / geometry overflow: `BLOCKED`
+
+以前のPowerPoint QA記録:
+
+- size: `12,944 bytes`
+- SHA-256: `dc5babab362325cb00ca462660cd7f9b6c1cd1f6ef6f1e36c62ffe55395ae70c`
+- 表示QA: `6 / 6 PASS`
+
+この以前のQA済みartifactは現行GitHub blobではない。サイズ誤記とは扱わず、以前のPASSを現行PPTXへ転用しない。
 
 exact blocker:
 
-`Current GitHub PPTX is 12,326 bytes, while the authoritative PowerPoint QA records 12,944 bytes. Recompute the current PPTX byte size and SHA-256, rerun PPTX open/ZIP/render/display QA against that exact artifact, and reconcile the QA record before completion.`
-
-サイズ記録の単純誤記とは推測しない。現行PPTXとQA済みPPTXの同一性を確認できるまでTopic 23は `completed` にしない。
+`The current GitHub PPTX blob ff2c73d872da4fc3605fb30e5f67c9dc97517f5c is exactly 12,326 bytes (SHA-256 8abfe66b9dbf6f05dba212af35405abe9981b9bd017980866c03186030dde5b8) and is a malformed ZIP. python-pptx and LibreOffice cannot open it. The previously QA-passed 12,944-byte artifact is not the current GitHub artifact. A valid Topic 23 PPTX must be recreated or restored from the already-fixed sources/6-slide specification, with no technical/spec changes, then full identity/open/ZIP/render/display QA must be rerun.`
 
 ## 成果物状態
 
 - 解説PDF: `PASS / RESYNCED`
-  - A4縦 `5 pages`
-  - PDFium / Poppler `5 / 5 PASS`
-  - 固定23答案要素 `23 / 23 covered`
 - 練習PDF: `PASS / RESYNCED`
-  - A4縦 `5 pages`
-  - 一次8問＋二次4問 `12 / 12`
-  - PDFium / pdftoppm `5 / 5 PASS`
-  - 固定23答案要素 `23 / 23 covered`
-- PowerPoint: `BLOCKED / ARTIFACT_IDENTITY_MISMATCH`
-  - 内容QA記録自体は固定23答案要素 `23 / 23`、SPEC固定8項目 `8 / 8`、指定3可視化 `3 / 3`
-  - ただし現行PPTXとの成果物同一性が未確定
+- PowerPoint: `FAIL / CORRUPT_CURRENT_ARTIFACT`
+- 最終QA: `BLOCKED`
 
 ## 実車値境界
 
@@ -76,15 +73,18 @@ exact blocker:
 - N700S未公表の `V_on`, `R_on`, `E_on`, `E_off`, `f_s`, `T_j`, `R_th` を真値化しない。
 - 比較計算値は教材用仮定値として扱う。
 
+Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当を使った過去問固有丸め差として解決済み。一般式は変更しない。
+
 ## 次の安全な工程
 
-現行 `23_n700s_sic_main_converter_images.pptx` そのものに対して次だけを再実施する。
+有効なTopic 23 PPTX artifactを再生成または復元できる状態を確定するまで停止する。復旧時は技術本文・固定EXAM_ALIGNMENT・問題・数式・SPECを変更せず、同一PPTXへ以下を再実施する。
 
-1. byte size / SHA-256再計算
-2. python-pptx open / PPTX ZIP整合性
-3. LibreOffice PDF変換
-4. pdftoppm表示QA
-5. 6枚の表示確認、geometry overflow確認
-6. 結果を `23_n700s_sic_main_converter_powerpoint_qa.md` にreconcile
+1. byte size / SHA-256
+2. Git blob identity
+3. python-pptx open / ZIP整合性
+4. LibreOffice PDF変換
+5. pdftoppm表示QA
+6. 6枚表示確認 / geometry overflow
+7. PowerPoint QAと最終QAの再判定
 
-すべてPASSし現行PPTXの同一性を確定できた場合だけ最終QAを再実施し、Topic 23を `completed` にする。技術本文・固定EXAM_ALIGNMENT・問題・数式・SPECは変更しない。
+Topic 23がPASSするまでTopic 24へ進めない。
