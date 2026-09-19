@@ -2,14 +2,31 @@
 
 テーマ: `21 架線からEast iまで全部シミュレーションする`
 
-実施日: 2026-09-19
-判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+再実施日: 2026-09-19
+判定: `PASS / FINAL_QA_COMPLETE`
 
 ## 再照合対象
 
 `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md`、GitHub正本のTopic 21成果物を再照合した。
 
 品質ゲートは固定一次4問・17答案要素＋二次1問・4答案要素＝`5問・21答案要素`。二次数合わせは行わない。
+
+## 初回blocker再確認
+
+初回最終QAのblockerは1件だった。
+
+1. 主source `21_integrated_simulation.md` の進捗記録がGitHub正本上の実進捗と不一致。
+
+再確認結果:
+
+- 主source stage: `INDEPENDENT_REANSWER_COMPLETE`
+- 主source completion: `in_progress`
+- 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
+- PowerPoint: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `21 / 21 PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 主sourceの次工程: `最終QA再実施`
+- 初回blocker解消: `1 / 1`
 
 ## 必須成果物
 
@@ -100,28 +117,21 @@
 - 固定一次4問・17答案要素: `17 / 17可視化`
 - 固定二次1問・4答案要素: `4 / 4可視化`
 
-## blocker
+## 範囲・正本QA
 
-内容・成果物・過去問対応品質ゲートはPASSだが、GitHub正本の主source `21_integrated_simulation.md` の進捗記録が実進捗と不一致である。
-
-GitHub正本の主source冒頭は現在:
-
-- stage: `EXPLANATION_SOURCE_COMPLETE`
-- completion: `in_progress`
-- 次工程: `解説PDF制作`
-
-一方、`STATUS.md` / `HANDOFF.md` と実在成果物は完成後独立再解答まで完了し、`PASS / INDEPENDENT_REANSWER_COMPLETE`、次工程は最終QAとなっている。
-
-`completion: in_progress` 自体は未完了状態として整合するが、主sourceの `stage` と `次工程` が実進捗へ同期されていない。HANDOFFで最終QA要件として固定された「source、STATUS、HANDOFFのstage・completion整合性」を満たさないため、このrunでは `completed` にしない。
-
-blocker: `1件`。
+- 必須成果物欠落: `0件`
+- 主source / STATUS / HANDOFF の最終QA前進捗整合: `PASS`
+- 初回blocker解消: `1 / 1`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 二次数合わせ: `0件`
+- 固定範囲外追加: `0件`
+- 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
+- 仕様追加: `0件`
 
 ## 最終判定
 
-`NEEDS_REVISION / FINAL_QA_BLOCKED`
+`PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
 
-品質ゲート・成果物品質・固定範囲はPASS。主source進捗記録の同期後に最終QAを再実施する。
+Topic 21は過去問対応品質ゲートと最終QAを通過した。`completed` への状態同期はまだ行わず、完成数は `20 / 21` のままとする。
 
-完成数は `20 / 21` のまま。
-
-次工程: Topic 21主sourceの進捗記録を実進捗へ同期する。
+次工程: Topic 21の `completed` 状態同期。
