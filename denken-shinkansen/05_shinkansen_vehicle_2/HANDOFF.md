@@ -12,41 +12,31 @@ Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
 ## reconcile
 
-最新mainと同系列workerの直近成果を確認し、Topic 21制作前EXAM_ALIGNMENT commit `969c0175b7516b3886dae3bb361e5a38f26f7492` を正本として引き継いだ。既存の固定5問・6答案要素を変更せず、重複調査は行っていない。
+最新mainと同系列workerの直近成果を確認し、Topic 21制作前EXAM_ALIGNMENT commit `969c0175b7516b3886dae3bb361e5a38f26f7492` と既存解説sourceを正本として引き継いだ。固定5問・6答案要素は変更していない。
 
 ## 今回実施
 
-Topic 21解説sourceを作成し、source内QAを完了した。
+解説PDF着手前に固定過去問対応ゲートを再監査した。
+
+H26 一次「機械」問5 `(4),(5)` は選択肢判別に `V`, `f`, `I_M`, `f_s` の状態が必要だが、既存解説sourceは電圧/電流制限を説明する一方、滑り周波数 `f_s` の状態を明記していなかった。このため、既存sourceが許容している「V/f・すべりの必要最小限参照」の範囲だけを補足し、過去問対応品質ゲートを再成立させた。
 
 成果物:
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control.md`
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source_gate_addendum.md`
 
-固定公式過去問:
-- H26 一次 機械 問5 `(4),(5)` — 2答案要素
-- H25 一次 機械 問3 `(1)` — 1答案要素
-- R7 二次 機械・制御 問2 `(1)のT1のみ` — 1答案要素
-- R1 二次 機械・制御 問1 `(4)` — 1答案要素
-- H26 二次 機械・制御 問1 `(4)` — 1答案要素
-
-解説source品質ゲート:
-- 一次2問＋二次3問、計5問: `変更なし`
-- 一次3＋二次3、計6答案要素: `6 / 6 covered`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 再生成条件固定`
-- 3段階例題: `3 / 3`
-- `P=Tω` と `P=Fv` を出力を介して接続済み
-- 定トルク→定出力、電圧制限・電流制限、高速側けん引力低下を説明済み
-- 主電動機出力→編成出力→走行抵抗→編成必要出力を問題条件だけで計算できる形に整理済み
-- 公式解答・標準解答の個別正答参照・保存: `0件`
-- 固定SPEC外追加: `0件`
+再監査結果:
+- 定加速域: `V/f = 一定`, `I_M = 一定`, `f_s = 可変`
+- 定出力域: `V = 一定`, `I_M = 一定`, `f_s = 可変`
+- H26 一次 機械 問5 `(4),(5)`: `2 / 2` 判別根拠を補完
+- 固定過去問: `一次2問＋二次3問 / 5問` のまま
+- 固定答案要素: `一次3＋二次3 / 6要素` のまま
+- SPEC固定8項目: 変更なし
+- SPEC指定3可視化: 変更なし
+- 3段階例題: 変更なし
+- SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
-
-数値QA:
-- 例題1: `300 kW`, `3000 min^-1` → `ω=314.159 rad/s`, `T=954.930 N·m`
-- 例題2: `4500 min^-1` → `T=636.620 N·m`; 学習用24台×300 kW → `7.2 MW`; `180 km/h` → `144.0 kN`
-- 例題3: `200 km/h` → `P_req=5.652 MW`; `240 km/h` → `P_req=8.593 MW`
-- 可視化数値は同一の学習用仮定値・式系から再計算済み
+- 公式標準解答の個別正答記号を教材本文へ保存: `0件`
 
 ## Topic 21 固定範囲
 
@@ -76,6 +66,7 @@ Topic 21解説PDFを作成する。
 
 要件:
 - 固定5問・6答案要素を変更しない。
-- 解説sourceの式・例題・3可視化条件をそのまま版面化する。
+- `21_high_speed_tractive_force_output_control_explanation_source.md` と `21_high_speed_tractive_force_output_control_explanation_source_gate_addendum.md` を併用する。
+- H26 一次「機械」問5用の `V/f`, `I_M`, `f_s` 条件をPDFから落とさない。
+- 解説sourceの式・3段階例題・3可視化条件を版面化する。
 - 学習用仮定値を実車値として表示しない。
-- PDF QA前に過去問公式解答の個別正答を先読みしない。
