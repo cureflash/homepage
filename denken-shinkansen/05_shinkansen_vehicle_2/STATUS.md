@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `26 / 39`
-- current_status: `topic_26_completed`
+- current_status: `topic_27_exam_alignment_complete`
 - last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
 - active_topic: `27 L0系① リニア同期モータ`
-- next_start: Topic 27の制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を先に確認し、系列SPECの範囲だけ固定する
+- next_start: Topic 27の解説source作成。固定5問・23答案要素を本文へ全件マッピングし、L0系未確認実車値を真値化しない
 
 ## Topic 25 最終状態
 
@@ -212,10 +212,29 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - SPEC外主題追加: `0件`
 - exact blocker: `0件`
 
+## Topic 27 制作前EXAM_ALIGNMENT
+
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+- path: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor.md`
+- commit: `6f6f7d4eecc9d97a5d3a29fb5c6b14a4d61500a4`
+- 固定過去問: `5問`
+- 一次: `4問・18答案要素`
+- 二次: `1問・5答案要素`
+- 合計: `23答案要素`
+- 固定問題: R7一次「機械」問1、R6一次「機械」問1、H29一次「機械」問1、H21一次「機械」問5、R6二次「機械・制御」問1
+- 独立解答検証: `23 / 23 PASS`
+- SPEC必須7項目: 同期機、移動磁界、極ピッチ、周波数、同期速度、電機子反作用、同期リアクタンス
+- SPEC指定可視化: `2件`（周波数―同期速度、極ピッチ―同期速度）
+- 一般式: 回転機 `N_s=120f/P`、リニア機 `v_s=2τf`
+- L0系実車接続: 一次資料で確認した「三相交流→ガイドウェイの移動磁界→車上超電導磁石との吸引・反発による推進」まで
+- 未確認のL0系極ピッチ、推進周波数、同期リアクタンス、推力等の真値化: `0件`
+- 負荷角・フェーザ・出力角特性の本格解析: Topic 28へ送る
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。次はTopic 27 `L0系① リニア同期モータ` の制作前EXAM_ALIGNMENT。
+Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27は制作前EXAM_ALIGNMENT完了、次は解説source。
