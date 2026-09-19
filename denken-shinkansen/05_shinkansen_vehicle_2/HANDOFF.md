@@ -12,14 +12,16 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## reconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23 clean blind候補・公式照合、source補強commitをreconcile済み。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23 clean blind候補・公式照合、source補強、成果物同期QAをreconcile済み。
 
 - 初回clean blind候補は commit `17837d40774f12e8348e9b55f250d5573b35f901` で公式照合前に固定。後編集しない
 - 初回公式照合は固定23答案要素中 `21 / 23 PASS`。不一致はR2一次「機械」問2 `(2),(4)` のみ
 - 解説source補強: commit `c778f6afcdc0132824bc4321099e1257b78c979c`
 - 練習source補強: commit `49758b6587fa8ce4bd2b6a8e27b0936d6c430871`
 - source補強進捗同期: commit `7b6cf706ca24ee55f81cb34f1ebcc4252cf2f753`
-- 同期要否QA: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_remediation_sync_qa.md`
+- 成果物同期QA正本: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_post_blind_artifact_sync_qa.md`
+- 成果物同期QA commit: `d2b9e2e38b784c266bdf1df074e23807e1990955`
+- 同工程で生成された重複QAは削除済みで、正本1件へ統合
 - Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は既存診断どおり過去問固有丸め差。一般式 `P=Tω`、`ω=2πN/60` は変更しない
 
 ## Topic 23 固定EXAM_ALIGNMENT
@@ -48,13 +50,13 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 3. 練習一次問4の `VI t_s/6` は当該相補的直線ランプ条件だけに限定
 4. 一般式 `E_sw=∫v(t)i(t)dt` は変更しない
 
-## clean blind補強 同期要否QA
+## clean blind補強 成果物同期QA
 
-判定: `SYNC_REQUIRED / 3 artifacts`
+判定: `SYNC_REQUIRED / 3 ARTIFACTS`
 
-- 解説PDF: `SYNC_REQUIRED`。補強後sourceの2読図手順を受講者向けPDFへ反映する
-- 練習PDF: `SYNC_REQUIRED`。R2読図補強と `VI t_s/6` の条件限定を反映する
-- PowerPoint: `SYNC_REQUIRED`。既存内容QAには固定R2向け2読図手順が明示されていないため、既存6枚構成の範囲で最小同期する
+- 解説PDF: `REGENERATE_REQUIRED`。補強後sourceの2読図手順を反映する
+- 練習PDF: `REGENERATE_REQUIRED`。R2読図補強と `VI t_s/6` の条件限定を反映する
+- PowerPoint: `REGENERATE_REQUIRED`。固定R2向け2読図手順を既存6枚構成の範囲で最小同期する
 
 維持事項:
 
