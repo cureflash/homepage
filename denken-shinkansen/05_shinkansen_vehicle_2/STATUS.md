@@ -6,14 +6,50 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `23 / 39`
-- current_status: `topic_24_practice_pdf_complete`
+- current_status: `topic_24_powerpoint_complete`
 - last_completed_topic: `23 N700S SiC主変換装置`
 - active_topic: `24 N700S 主電動機設計の比較`
-- next_start: Topic 24解説画像PowerPoint作成＋QA。固定5問・17答案要素、SPEC必須8項目、指定3可視化、N700S事実境界を変更しない。PowerPoint完成後にclean blind独立再解答へ進む
+- next_start: Topic 24 clean blind独立再解答。Topic 24教材だけを使って固定5問・17答案要素を再解答し、公式標準解答との一致を確認する
 
 ## 完了済み
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
+
+## Topic 24 解説画像PowerPoint
+
+- 判定: `PASS / POWERPOINT_COMPLETE`
+- 16:9: `6 slides`
+- ZIP integrity: `PASS`
+- python-pptx open: `6 / 6 PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- Poppler render: `6 / 6 PASS`
+- PDFium render: `6 / 6 PASS`
+- geometry overflow: `0件`
+- クリッピング・文字重なり・破損グリフ: `0件`
+- 固定過去問: 第二種一次3問＋二次2問 = `5 / 5 covered`
+- 一次答案要素: `11 / 11 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計答案要素: `17 / 17 covered`
+- SPEC必須8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- N700S実車接続: 確認済み6極化のみを実値として使用
+- 軽量化境界: 駆動システム全体約20%であり、主電動機単体・6極化単独の20%とは扱わない
+- 未確認N700S実運転周波数・回転速度・トルク・寸法・質量の真値化: `0件`
+- Topic 21 H26二次 問1(4)の丸め注記: `48.1 / 48.0 N·m` を過去問固有差として維持
+- Topic 21一般式変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外主題追加: `0件`
+- 完成後clean blind固定過去問再解答: `未実施`
+- 新たなexact blocker: `0件`
+- bytes: `27698`
+- SHA-256: `9d551c8110e7bd3081f7219d6d85e66f23f859d02ff4326ebf70ec51f3eca4f8`
+- Git blob SHA: `5aa5cd61b81bc1d941d9d628c7abbc7af2bf536d`
+
+成果物:
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx`
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_powerpoint_qa.md`
+
+この段階ではTopic 24全体を `completed` としない。
 
 ## Topic 24 練習PDF
 
@@ -166,4 +202,4 @@ Topic 24完成後はTopic 24教材だけで固定 `5問・17答案要素` をcle
 
 ## 次工程
 
-Topic 24解説画像PowerPoint作成＋QA。固定5問・17答案要素、SPEC必須8項目、指定3可視化、N700S事実境界、Topic 21一般式を変更しない。PowerPoint完成後に固定5問・17答案要素をTopic 24教材だけでclean blind独立再解答する。
+Topic 24 clean blind独立再解答。Topic 24教材だけを使って固定5問・17答案要素を再解答し、公式標準解答との一致を確認する。固定EXAM_ALIGNMENT、N700S事実境界、Topic 21一般式は変更しない。
