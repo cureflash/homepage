@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `25 / 39`
-- current_status: `topic_26_practice_source_complete`
+- current_status: `topic_26_practice_pdf_complete`
 - last_completed_topic: `25 N700S バッテリー自走のエネルギー設計`
 - active_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
-- next_start: Topic 26 練習PDF生成＋PDF QA。練習source 12問をA4縦PDF化し、表示・テキスト抽出・完全解説・固定16答案要素・数値再計算を確認する
+- next_start: Topic 26 PowerPoint生成＋QA。固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDFを正本として、SPEC指定3可視化と過去問接続を16:9スライドへ反映し表示・構造・内容QAを行う
 
 ## Topic 25 最終状態
 
@@ -114,10 +114,36 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
+## Topic 26 練習PDF
+
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+- path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_practice.pdf`
+- canonical blob SHA: `8905c072f60a0b584c8cd7f439713606588bb500`
+- QA: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_practice_pdf_qa.md`
+- file size: `11,005 bytes`
+- SHA-256: `6c54571db61e98f8251e7171291a5a5bc57afaf751ff7e194240021b2009441e`
+- A4縦: `4 pages`
+- PDFium / Poppler render: `4 / 4 PASS`
+- `pdftotext`: `PASS`（6,415 bytes）
+- 置換文字 `�`: `0件`
+- 一次8問＋正答・完全解説: `8 / 8`
+- 二次4問＋完全解説: `4 / 4`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `10 / 10 connected`
+- 二次答案要素: `6 / 6 connected`
+- 合計答案要素: `16 / 16 connected`
+- SPEC必須7項目: `7 / 7 covered`
+- SPEC指定3可視化の計算接続: `3 / 3 aligned`
+- 教材用仮定値と実車値の混同: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は練習source完了。次は練習PDF生成＋PDF QA。
+Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は練習PDFまで完了。次はPowerPoint生成＋QA。
