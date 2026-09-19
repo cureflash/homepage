@@ -43,7 +43,7 @@
 合計: `8 / 8 PASS`
 
 ## 6. GitHub正本同一性
-- size: `17333 bytes`
+- size: `17336 bytes`
 - SHA-256: `f8e84a5f92fc05e07845a551625b9abd01a6e6823cfb322a6aa465b0e9a4b648`
 - Git blob: `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f`
 
