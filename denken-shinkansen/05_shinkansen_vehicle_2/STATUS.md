@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `25 / 39`
-- current_status: `topic_26_clean_blind_official_match_complete`
-- last_completed_topic: `25 N700S バッテリー自走のエネルギー設計`
-- active_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
-- next_start: Topic 26の解説source/PDF、練習source/PDF、PowerPoint、clean blind公式照合を横断して最終QAを行う。全品質ゲートPASSの場合のみcompletedへ進め、完成数を26 / 39へ更新する
+- exam_aligned_completed_topics: `26 / 39`
+- current_status: `topic_26_completed`
+- last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
+- active_topic: `27 L0系① リニア同期モータ`
+- next_start: Topic 27の制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を先に確認し、系列SPECの範囲だけ固定する
 
 ## Topic 25 最終状態
 
@@ -58,6 +58,7 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 - 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_explanation_source.md`
+- blob SHA: `e962b822d5d6af80fa9adf694250a3202e5a10ea`
 - 固定過去問: `5 / 5 mapped`
 - 一次答案要素: `10 / 10 covered`
 - 二次答案要素: `6 / 6 covered`
@@ -80,8 +81,7 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - file size: `10,902 bytes`
 - SHA-256: `304095fecec8fe3d2e46eda8fb020c3e48a2164179eb204b5e318b93dc591b17`
 - A4縦: `3 pages`
-- PDFium render: `3 / 3 PASS`
-- Poppler render: `3 / 3 PASS`
+- PDFium / Poppler render: `3 / 3 PASS`
 - `pdftotext`: `PASS`
 - 置換文字 `�`: `0件`
 - 固定過去問: `5 / 5 covered`
@@ -98,6 +98,7 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 - 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 - path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_practice_source.md`
+- blob SHA: `4e1c26ddd981747b05a12d751bd83bfec8287888`
 - 一次試験型: `8問`
 - 二次試験型: `4問`
 - 合計: `12問`
@@ -170,6 +171,8 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 - 判定: `LOCKED / COMPARED_TO_OFFICIAL_ANSWERS_WITHOUT_EDIT`
 - path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_blind_candidates.md`
+- blob SHA: `8eec1ddb4285420828d134a2f28e6469ff33be5a`
+- lock commit: `c52f45f7b56817e2a76e9c872758e41bd21c4a8c`
 - 固定過去問: `5 / 5 candidate fixed`
 - 一次答案要素: `10 / 10 candidate fixed`
 - 二次答案要素: `6 / 6 candidate fixed`
@@ -192,10 +195,27 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - 不一致: `0件`
 - exact blocker: `0件`
 
+## Topic 26 最終QA
+
+- 判定: `PASS / COMPLETED`
+- QA: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_final_qa.md`
+- 必須成果物: `全件存在・既存QA PASS`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `10 / 10 PASS`
+- 二次答案要素: `6 / 6 PASS`
+- 合計答案要素: `16 / 16 PASS`
+- SPEC必須7項目: `7 / 7 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- candidate lock後の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認E7・W7実車値の真値化: `0件`
+- SPEC外主題追加: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26はclean blind公式照合 `16 / 16 PASS`。次は最終QAで、PASSするまではcompletedへ進めない。
+Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。次はTopic 27 `L0系① リニア同期モータ` の制作前EXAM_ALIGNMENT。
