@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
 theme: 25kV架線が短絡したら何kA流れる？
-current_status: `topic_16_explanation_pdf_complete`
+current_status: `topic_16_practice_source_complete`
 completed_topics: `15 / 22`
 
 ## Completed through Topic 15
@@ -17,7 +17,7 @@ Topic 01〜15は `completed`。Topic 15は制作前EXAM_ALIGNMENT、制作前bli
 
 ## Topic 16 current stage
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF生成、解説PDF QAまで完了した。Topic 16自体は未完了のため完成数は `15 / 22` のまま。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF生成・QA、練習問題source作成まで完了した。Topic 16自体は未完了のため完成数は `15 / 22` のまま。
 
 記録:
 - `topics/16_short_circuit/16_short_circuit.md`
@@ -26,6 +26,7 @@ Topic 01〜15は `completed`。Topic 15は制作前EXAM_ALIGNMENT、制作前bli
 - `topics/16_short_circuit/16_short_circuit_explanation.md`
 - `topics/16_short_circuit/16_short_circuit_explanation.pdf`
 - `topics/16_short_circuit/16_short_circuit_explanation_pdf_qa.md`
+- `topics/16_short_circuit/16_short_circuit_practice.md`
 
 ### 正式品質ゲート
 
@@ -73,6 +74,25 @@ Topic 01〜15は `completed`。Topic 15は制作前EXAM_ALIGNMENT、制作前bli
 
 組込みCIDフォントはFontDescriptor非保持の警告が出るが、PDFium / Popplerの両方で全6ページの日本語表示を確認し、`pdftotext`でも抽出可能。表示・収録QA上の欠損はない。
 
+### 練習問題source
+
+- 全15問
+- 基礎: `4問`
+- 本試験標準: `8問`
+- 複合・応用: `3問`
+- 二種一次型五肢択一: `10問`
+- 二種二次型記述: `5問`
+- 全問に途中式・理由・単位を含む完全解説: `PASS`
+- 固定5問・23答案要素への接続: `23 / 23`
+- 固定10説明項目への接続: `10 / 10`
+- 三相短絡 / 一線地絡 / 線間短絡 / 二線地絡: 収録
+- 短絡容量 / 単位法 / ％Z / 故障位置―短絡電流: 収録
+- 数値独立再計算: `PASS`
+- 未確認実設備値の真値化: `0件`
+- 公式過去問転載: `0件`
+- Topic 17以降先取り: `0件`
+- 判定: `PASS / topic_16_practice_source_complete`
+
 ## 固定範囲
 
 - 短絡容量
@@ -95,6 +115,7 @@ Topic 01〜15は `completed`。Topic 15は制作前EXAM_ALIGNMENT、制作前bli
 - 公式標準解答照合: `23 / 23一致`
 - 解説source固定答案要素: `23 / 23 covered`
 - 解説PDF固定答案要素: `23 / 23 covered`
+- 練習source固定答案要素: `23 / 23 covered`
 - 固定10説明項目: `10 / 10 PASS`
 - 周辺問題による件数水増し: `0件`
 - Topic 17保護リレー・遮断器定格・保護協調先取り: `0件`
@@ -122,8 +143,8 @@ Topic 01〜15は `completed`。Topic 15は制作前EXAM_ALIGNMENT、制作前bli
 - [x] Topic 13 completed
 - [x] Topic 14 completed
 - [x] Topic 15 completed
-- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `23 / 23 PASS` / 解説source完了 / 解説PDF＋QA `PASS` / 次は練習source
+- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `23 / 23 PASS` / 解説source完了 / 解説PDF＋QA `PASS` / 練習source `PASS` / 次は練習PDF
 
 ## next_start
 
-固定5問・23答案要素、固定10説明項目、仮定値/実値境界を変更せず、Topic 16の練習問題sourceを作成する。二種一次型に加え、固定範囲に対応する二次記述型を含め、途中式・前提・単位・理由説明まで採点可能な形にする。練習PDF、PowerPoint、完成後blind、Topic 17以降はまだ行わない。
+固定5問・23答案要素、固定10説明項目、仮定値/実値境界を変更せず、`16_short_circuit_practice.md` からTopic 16練習PDFを生成し、表示・内容・数値・固定23答案要素カバレッジをQAする。PowerPoint、完成後blind、Topic 17以降はまだ行わない。
