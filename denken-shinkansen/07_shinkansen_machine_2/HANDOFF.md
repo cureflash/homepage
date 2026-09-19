@@ -6,8 +6,8 @@
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_20_explanation_source_complete / IN_PROGRESS`
-- 次工程: Topic 20 解説PDF＋QA
+- current status: `topic_20_explanation_pdf_complete / IN_PROGRESS`
+- 次工程: Topic 20 練習source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -136,6 +136,8 @@ blocker修正:
 
 ## Topic 20 成果物
 - `topics/20_control_system_stability/20_control_system_stability.md`
+- `topics/20_control_system_stability/20_control_system_stability_explanation.pdf`
+- `topics/20_control_system_stability/20_control_system_stability_explanation_pdf_qa.md`
 
 ## Topic 20 解説source QA
 - 固定5問・14答案要素: `14 / 14 COVERED`
@@ -153,16 +155,30 @@ blocker修正:
 - 未確認実車制御値化: `0件 / PASS`
 - 判定: `PASS / topic_20_explanation_source_complete`
 
-## 今回完了した段階
-Topic 20の解説source本文を完成した。
+## Topic 20 解説PDF QA
+- A4縦5ページ: `PASS`
+- 固定5問・14答案要素: `14 / 14 COVERED`
+- 基礎・本試験標準・複合の3段階例題: `3 / 3 INCLUDED`
+- 200 dpi `pdftoppm`: `5 / 5 PASS`
+- `pdftocairo` 160 dpi: `5 / 5 PASS`
+- 文字切れ・本文重なり・ページ外はみ出し・欠落グリフ: `0件`
+- 文字抽出 replacement char / `(cid:)`: `0 / 0`
+- 教材用モデル数値・論理QA: `8 / 8 PASS`
+- Topic 21先取り: `0件 / PASS`
+- 未確認実車制御値化: `0件 / PASS`
+- 固定過去問の個別正答保存: `0件 / PASS`
+- 判定: `PASS / topic_20_explanation_pdf_complete`
 
-- 一次2問＋二次3問、計5問・14答案要素を本文へ割当
-- 特性方程式→極→ラウス・フルビッツ→振動条件→ボード線図→安定余裕を一連の解法として整理
-- 基礎・本試験標準・複合の3段階例題を追加
-- 同一教材用モデルで安定、安定限界、不安定を比較できるグラフ条件を固定
-- 固定過去問の個別正答は未保存
+## 今回完了した段階
+Topic 20の解説PDF＋QAを完成した。
+
+- A4縦5ページ
+- 一次2問＋二次3問、計5問・14答案要素を `14 / 14 COVERED`
+- SPEC指定のボード線図、ゲイン変更時の応答、安定・安定限界・不安定比較を同一教材用モデルで収載
+- 2 rendererで表示QA `5 / 5 PASS`
+- 数値・論理QA `8 / 8 PASS`
 - Topic 21先取り・未確認実車値化は各0件
 - 完成数は `19 / 22` のまま
 
 ## 次に行うこと
-Topic 20「制御系はなぜ発振する？」の解説PDF＋QA。
+Topic 20「制御系はなぜ発振する？」の練習source。

@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `19 / 22`
-- current_status: `topic_20_explanation_source_complete / IN_PROGRESS`
+- current_status: `topic_20_explanation_pdf_complete / IN_PROGRESS`
 - last_completed_topic: `19 PIDで新幹線の速度を制御する`
 - active_topic: `20 制御系はなぜ発振する？`
-- next_start: Topic 20 解説PDF＋QA
+- next_start: Topic 20 練習source
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
@@ -186,8 +186,27 @@ QA:
 - 固定過去問の個別正答保存: `0件 / PASS`
 - 判定: `PASS / topic_20_explanation_source_complete`
 
+## Topic 20 解説PDF
+成果物:
+- `topics/20_control_system_stability/20_control_system_stability_explanation.pdf`
+- `topics/20_control_system_stability/20_control_system_stability_explanation_pdf_qa.md`
+
+QA:
+- A4縦5ページ: `PASS`
+- 固定5問・14答案要素: `14 / 14 COVERED`
+- 基礎・本試験標準・複合の3段階例題: `3 / 3 INCLUDED`
+- 200 dpi `pdftoppm`: `5 / 5 PASS`
+- `pdftocairo` 160 dpi: `5 / 5 PASS`
+- 文字切れ・本文重なり・ページ外はみ出し・欠落グリフ: `0件`
+- 文字抽出 replacement char / `(cid:)`: `0 / 0`
+- 教材用モデル数値・論理QA: `8 / 8 PASS`
+- Topic 21先取り: `0件 / PASS`
+- 未確認実車制御値の実車値化: `0件 / PASS`
+- 固定過去問の個別正答保存: `0件 / PASS`
+- 判定: `PASS / topic_20_explanation_pdf_complete`
+
 ## 今回進めた内容
-Topic 20の解説source本文を完成させた。固定一次2問＋二次3問、計5問・14答案要素を本文へ割り当て、特性方程式→ラウス・フルビッツ→振動条件→ボード線図→安定余裕まで同一の解法系で接続した。完成数は `19 / 22` のまま。
+Topic 20の解説PDF＋QAを完成させた。固定一次2問＋二次3問、計5問・14答案要素を解説PDFへ接続し、SPEC指定のボード線図、ゲイン変更時の応答、安定・安定限界・不安定比較を同一教材用モデルで収載した。完成数は `19 / 22` のまま。
 
 ## 次工程
-Topic 20「制御系はなぜ発振する？」の解説PDF＋QA。
+Topic 20「制御系はなぜ発振する？」の練習source。
