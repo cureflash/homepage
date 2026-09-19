@@ -8,43 +8,42 @@
 
 Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
-現在地は `topic_21_practice_pdf_complete`。active topic は Topic 21 `高速域の速度・けん引力・出力制御`。
-
-## reconcile
-
-作業開始時の車両二種main `6698ec79df73f8338f0be65b280bd055c6a69193` で、既存workerがTopic 21練習sourceまで完了していることを確認した。作業中にmainは `598320450af0d20536e41273075a42b971877377` へ進んだが、変更は `08_shinkansen_theory_2` のPDF修正だけで本系列と競合しない。既存の固定EXAM_ALIGNMENT、解説source/PDF、練習sourceを正本として引き継ぎ、重複作業をせず次工程の練習PDFだけを実施した。
+現在地は `topic_21_powerpoint_complete`。active topic は Topic 21 `高速域の速度・けん引力・出力制御`。
 
 ## 今回実施
 
-Topic 21練習PDFを作成し、表示・抽出・数値・試験対応QAを完了した。
+Topic 21の解説画像PowerPointを作成し、表示・数値・試験対応QAを完了した。
 
 成果物:
-- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice.pdf`
-- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice_qa.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_images.pptx`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_powerpoint_qa.md`
 
 構成:
-- A4縦: 4ページ
-- 一次試験型: 8問（五肢択一）
-- 二次試験型: 4問（途中式・単位・理由説明を含む記述式）
-- 完全解説: 12問すべて収録
+- 16:9: 4枚
+- Slide 1: `P=Tω`、`P=Fv`、`P_train=n_mP_m`、定トルク/定出力、電流制限/電圧制限
+- Slide 2: SPEC指定「速度―けん引力」
+- Slide 3: SPEC指定「速度―主電動機出力」
+- Slide 4: SPEC指定「速度―編成必要出力」＋固定5問・6答案要素
 
-練習PDF品質ゲート:
-- 一次2問＋二次3問、計5問: `変更なし`
-- 一次3＋二次3、計6答案要素: `6 / 6 PASS`
+PowerPoint品質ゲート:
+- 固定過去問: `一次2問＋二次3問 / 計5問 / 変更なし`
+- 固定答案要素: `一次3＋二次3 / 6 / 変更なし`
+- 固定5問・6答案要素への可視化・接続: `6 / 6 PASS`
 - H26一次 問5 `(4),(5)` の必要最小条件: `2 / 2 covered`
 - SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化への式系接続: `3 / 3 PASS`
-- 一次試験型: `8 / 8 PASS`
-- 二次記述式: `4 / 4 PASS`
-- 独立再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- PDFium 180 dpi: `4 / 4 PASS`
-- pdftoppm 180 dpi: `4 / 4 PASS`
-- 文字抽出: `PASS`
-- 欠落グリフ・黒四角・重なり・クリップ: `0件`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 既存の一次8問＋二次4問、正答、数式、仮定値の変更: `0件`
+- python-pptx open: `PASS / 4 slides`
+- PPTX ZIP整合性: `PASS`
+- LibreOffice PDF変換: `PASS / 4ページ`
+- pdftoppm 1600×900: `4 / 4 PASS`
+- PDF文字抽出: `PASS`
+- Unicode置換文字 / `(cid:)`: `0件 / 0件`
+- 表示目視QA: `4 / 4 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
+- `P=Fv`・走行抵抗を固定過去問の直接出題とする記載: `0件`
 - 公式解答・標準解答の個別正答参照・保存: `0件`
 
 ## Topic 21 固定範囲
@@ -72,11 +71,11 @@ SPEC指定可視化:
 
 ## 次の安全な工程
 
-Topic 21の解説画像PowerPointを作成する。
+Topic 21のclean blind候補答案を固定する。
 
 要件:
-- 固定5問・6答案要素を変更しない。
+- 固定5問・6答案要素を教材だけで再解答する。
+- 候補答案を固定するまで公式解答・標準解答の個別正答を参照しない。
+- 固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTXを変更しない。
 - 練習source/PDFの一次8問＋二次4問、正答、数式、仮定値を変更しない。
-- SPEC固定8項目・3可視化を維持する。
-- 未確認実車値を真値化しない。
-- PowerPoint完成後にclean blind候補固定へ進む。
+- 候補固定後に公式照合へ進む。

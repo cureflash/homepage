@@ -6,18 +6,18 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `20 / 39`
-- current_status: `topic_21_practice_pdf_complete`
+- current_status: `topic_21_powerpoint_complete`
 - last_completed_topic: `20 N700系 フィードバック制御`
 - active_topic: `21 高速域の速度・けん引力・出力制御`
-- next_start: Topic 21 解説画像PowerPoint作成。固定5問・6答案要素、SPEC固定8項目・3可視化、一次8問＋二次4問の内容を変更しない
+- next_start: Topic 21 clean blind候補答案固定。固定5問・6答案要素を教材だけで再解答し、公式解答・標準解答を先に見ない
 
 ## 完了済み
 
 Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
-## Topic 21 練習PDF
+## Topic 21 解説画像PowerPoint
 
-判定: `PASS / PRACTICE_PDF_COMPLETE`
+判定: `PASS / POWERPOINT_COMPLETE`
 
 固定品質ゲート:
 - H26 一次 機械 問5 `(4),(5)` — 2答案要素
@@ -26,16 +26,16 @@ Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 - R1 二次 機械・制御 問1 `(4)` — 1答案要素
 - H26 二次 機械・制御 問1 `(4)` — 1答案要素
 - 合計: `一次2問＋二次3問 / 5問 / 一次3＋二次3 = 6答案要素`
-- 固定答案要素の練習問題接続: `6 / 6 PASS`
+- 固定答案要素のPowerPoint接続: `6 / 6 PASS`
 - H26一次 問5 `(4),(5)` 最小判別条件: `2 / 2 covered`
 - SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化への式系接続: `3 / 3 PASS`
-- 一次試験型: `8 / 8 PASS`
-- 二次記述式: `4 / 4 PASS`
-- 独立再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- PDF表示・抽出QA: `4 / 4 PASS / 2 renderer`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 一次試験型: `8 / 8 PASS`（既存練習source/PDFを変更なし）
+- 二次記述式: `4 / 4 PASS`（既存練習source/PDFを変更なし）
+- PowerPoint表示QA: `4 / 4 PASS / 1600×900`
+- PPTX ZIP / LibreOffice PDF変換 / PDF文字抽出: `PASS`
 - 公式解答・標準解答の個別正答参照・保存: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
 
@@ -48,7 +48,9 @@ Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice_source.md`
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice.pdf`
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice_qa.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_images.pptx`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_powerpoint_qa.md`
 
 ## 次工程
 
-Topic 21の解説画像PowerPointを作成する。固定5問・6答案要素、一次8問＋二次4問、問題・正答・数式・仮定値、SPEC固定8項目・3可視化を変更しない。clean blind公式照合はPowerPoint完成後に行う。
+Topic 21のclean blind候補答案を固定する。教材だけで固定5問・6答案要素を再解答し、候補固定前は公式解答・標準解答の個別正答を参照しない。固定EXAM_ALIGNMENT、SPEC範囲、既存PDF/PPTX、練習問題・正答・数式・学習用仮定値を変更しない。
