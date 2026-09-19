@@ -4,11 +4,11 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説sourceを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`の固定範囲から外さず、第二種の一次・二次を含む固定5問・19答案要素を解説本文へ接続した。
+制作前EXAM_ALIGNMENT、解説source、解説PDFを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`の固定範囲から外さず、第二種の一次・二次を含む固定5問・19答案要素をPDFまで接続した。
 
-current_status: `topic_20_explanation_source_complete`
+current_status: `topic_20_explanation_pdf_complete`
 
-次工程: 解説PDF。`20_n700_feedback_control_explanation_source.md` を正本としてPDF化し、数式・文字・可視化・固定19答案要素の接続をQAする。公式解答・標準解答の個別正答は完成後clean blind候補固定まで参照・保存しない。
+次工程: 練習source。固定5問・19答案要素とSPEC境界を変更せず、一次試験型と二次記述式を含む練習問題へ接続する。公式解答・標準解答の個別正答は完成後clean blind候補固定まで参照・保存しない。
 
 ## 固定範囲
 
@@ -197,4 +197,23 @@ current_status: `topic_20_explanation_source_complete`
 - SPEC外追加: `0件`
 - 未確認N700系実車制御値の真値化: `0件`
 
-次工程は解説PDF。
+## 解説PDF
+
+成果物:
+- `topics/20_n700_feedback_control/20_n700_feedback_control_explanation.pdf`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_explanation_pdf_qa.md`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+品質:
+- A4縦: `3 pages`
+- PDFium / pdftoppm 180 dpi: `3 / 3 PASS` / `3 / 3 PASS`
+- 文字抽出: `PASS`
+- 固定過去問: `一次1問＋二次4問 / 5問 / 変更なし`
+- 固定答案要素のPDF接続: `19 / 19 covered`
+- SPEC指定10項目 / 3可視化: `10 / 10`, `3 / 3 PASS`
+- 3段階例題・数式・数値再照合: `3 / 3 PASS`
+- 公式解答・標準解答の個別正答参照・保存: `0件`
+- 固定問題差替え / SPEC外追加 / 未確認N700系実車制御値の真値化: `0件`
+
+次工程は練習source。
