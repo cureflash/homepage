@@ -3,38 +3,46 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_completion_blind_clean_rerun_pass`
+current_status: `topic_16_web_catalog_complete`
 
 ## 今回完了
 
-最新main、上位仕様、本系列SPEC、STATUS/HANDOFF、Topic 16固定EXAM_ALIGNMENT、補正済みlearner-facing成果物をreconcileした。固定済み一次2問＋二次3問、計5問・23答案要素を変更せず、補正済みlearner-facing成果物だけを使って完成後blindをclean rerunした。
+最新main、MASTER SPEC、EXAM_ALIGNMENT SPEC、本系列SPEC、STATUS/HANDOFF、Topic 16固定EXAM_ALIGNMENT、補正済みlearner-facing成果物、完成後blind clean rerunをreconcileし、次の安全な工程であるWebカタログ登録を実施した。
 
-clean rerun結果:
-- 令和2年度 二種一次「電力」問3: `ト / ヌ / ハ / ヨ / ヘ`、`5 / 5 PASS`
-- 平成25年度 二種一次「電力」問4: `ホ / ロ / ヌ / ル / イ`、`5 / 5 PASS`
-- 令和7年度 二種二次「電力・管理」問2: `5 / 5 PASS`
-- 令和3年度 二種二次「電力・管理」問3: `6 / 6 PASS`
-- 平成21年度 二種二次「電力・管理」問6: `6.08 kA / 10.3 kA`、`2 / 2 PASS`
-- 一次: `10 / 10 PASS`
-- 二次: `13 / 13 PASS`
-- 合計: `23 / 23 PASS`
-- 公式標準解答照合: `23 / 23一致`
+更新:
+- `qualifications/denken-shinkansen/catalog.json`
+- `STATUS.md`
+- `HANDOFF.md`
 
-補正前blindで不足した `電磁誘導障害`、`遮断容量`、`BTB`、`電圧階級上昇 + 系統分割`、短絡容量式で使う故障前基準電圧の5項目は、補正済み教材内の説明だけで選択肢根拠を説明できることを確認した。
+登録内容:
+- id: `16_short_circuit`
+- seriesId: `06_shinkansen_power_2`
+- topicNo: `16`
+- title: `25kV架線が短絡したら何kA流れる？`
+- explanation: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_explanation.pdf`
+- practice: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_practice.pdf`
+- slides: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx`
+- source: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit.md`
 
-記録:
-- `topics/16_short_circuit/16_short_circuit_completion_blind_clean_rerun_20260919.md`
+固定5問・23答案要素、Topic 16固定範囲、補正済み5項目、後続Topic境界は変更していない。
 
-## 正式品質ゲート
+## 正式品質ゲート維持
 
 固定EXAM_ALIGNMENTは変更していない。
 
 - 一次: `2問 / 10答案要素`
 - 二次: `3問 / 13答案要素`
 - 合計: `5問 / 23答案要素`
+- 制作前blind: `23 / 23 PASS`
 - 完成後blind clean rerun: `23 / 23 PASS`
+- 公式標準解答照合: `23 / 23一致`
+- learner-facing根拠説明: `23 / 23 PASS`
+- 解説PDF QA: `PASS`
+- 練習PDF QA: `PASS`
+- PowerPoint QA: `PASS`
+- Webカタログ登録: `PASS`
 
-候補解が正しいだけでなく、learner-facing教材内の式・途中式・単位・知識根拠だけで再解答できることを確認した。
+補正前blindで不足した `電磁誘導障害`、`遮断容量`、`BTB`、`電圧階級上昇 + 系統分割`、短絡容量式で使う故障前基準電圧の5項目は、補正済み教材内の説明だけで選択肢根拠を説明できる状態を維持している。
 
 ## 固定範囲・境界
 
@@ -57,7 +65,7 @@ Topic 16だけを対象とした。
 - 練習PDF: 補正同期・再QA `PASS`
 - PowerPoint: 補正同期・再QA `PASS`
 - 完成後blind: 補正後 clean rerun `23 / 23 PASS`
-- Webカタログ: 未実施
+- Webカタログ: 登録済み `PASS`
 - 最終QA: 未実施
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 17以降先取り: `0件`
@@ -65,8 +73,8 @@ Topic 16だけを対象とした。
 
 ## 次に行う
 
-固定5問・23答案要素、Topic 16固定範囲、補正済み成果物を変更せず、Topic 16をWebカタログへ登録する。
+固定5問・23答案要素、Topic 16固定範囲、補正済み成果物、登録済みWebカタログを変更せず、Topic 16の最終QAを行う。
 
 まだ行わない:
-- Topic 16最終QA
+- Topic 16 `completed` 化（最終QA PASS前）
 - Topic 17以降
