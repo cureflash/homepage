@@ -44,7 +44,7 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_check.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_comparison.md`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_final_qa.md`
 
 ### clean blind reconcile
