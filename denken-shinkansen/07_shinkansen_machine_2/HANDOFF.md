@@ -6,8 +6,8 @@
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_20_exam_alignment_complete / IN_PROGRESS`
-- 次工程: Topic 20 解説source本文
+- current status: `topic_20_explanation_source_complete / IN_PROGRESS`
+- 次工程: Topic 20 解説PDF＋QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -137,14 +137,32 @@ blocker修正:
 ## Topic 20 成果物
 - `topics/20_control_system_stability/20_control_system_stability.md`
 
-## 今回完了した段階
-Topic 20の制作前EXAM_ALIGNMENTを完了した。
+## Topic 20 解説source QA
+- 固定5問・14答案要素: `14 / 14 COVERED`
+- 特性方程式・極・零点・指定極・主要極: `PASS`
+- 三次ラウス表・Hurwitz条件・安定ゲイン範囲: `PASS`
+- 二次複素極と振動条件: `PASS`
+- 根軌跡: ゲイン変化による極移動の概念まで: `PASS`
+- 周波数応答・基本ボード因子・PI補償器折れ線: `PASS`
+- `ω_gc`、`ω_pc`、ゲイン余裕、位相余裕: `PASS`
+- 指定交差周波数・位相余裕からのパラメータ逆算: `PASS`
+- 教材用モデル `L(s)=K/{s(s+1)(s+2)}` でラウス境界と周波数領域境界を対応付け: `PASS`
+- SPEC指定グラフの再現条件: `PASS`
+- 固定過去問の個別正答保存: `0件 / PASS`
+- Topic 21先取り: `0件 / PASS`
+- 未確認実車制御値化: `0件 / PASS`
+- 判定: `PASS / topic_20_explanation_source_complete`
 
-- 一次2問＋二次3問、計5問・14答案要素を固定
-- 特性方程式・極・ラウス・周波数応答・ボード線図・安定余裕・発振を教材節へマッピング
+## 今回完了した段階
+Topic 20の解説source本文を完成した。
+
+- 一次2問＋二次3問、計5問・14答案要素を本文へ割当
+- 特性方程式→極→ラウス・フルビッツ→振動条件→ボード線図→安定余裕を一連の解法として整理
+- 基礎・本試験標準・複合の3段階例題を追加
+- 同一教材用モデルで安定、安定限界、不安定を比較できるグラフ条件を固定
 - 固定過去問の個別正答は未保存
 - Topic 21先取り・未確認実車値化は各0件
 - 完成数は `19 / 22` のまま
 
 ## 次に行うこと
-Topic 20「制御系はなぜ発振する？」の解説source本文を作成する。
+Topic 20「制御系はなぜ発振する？」の解説PDF＋QA。
