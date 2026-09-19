@@ -5,65 +5,64 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 20 / 21
-- current_status: `topic_20_completed`
+- current_status: `topic_21_exam_alignment_complete`
 - last_completed_topic: `20 East iは走りながら何をどう測る？`
 - active_topic: `21 架線からEast iまで全部シミュレーションする`
-- next_start: Topic 21 制作前EXAM_ALIGNMENT
+- next_start: Topic 21 制作前blind独立再解答
 
 ## 完成済み
 
 Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後独立再解答、最終QAを通過し `PASS / completed`。
 
-## Topic 20 固定EXAM_ALIGNMENT
-- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
-- [x] 固定範囲12項目: 測定誤差、絶対誤差、相対誤差、精度、有効数字、ブリッジ回路、波形計測、オシロスコープ、A/D変換、サンプリング、標本化、エイリアシング
-- [x] 一次・二次を含む関連候補を直近年度から調査
-- [x] R8 一次 理論 問4を採用
-- [x] R7 一次 理論 問4を採用
-- [x] R6 一次 理論 問6を採用
-- [x] H24 一次 理論 問7を採用
-- [x] H20 一次 理論 問6を採用
-- [x] 品質ゲート対象を一次5問・25答案要素に固定
-- [x] 二次採用0問・二次数合わせ0件
-- [x] East i公開測定項目をJR東日本資料で確認
-- [x] East i内部測定回路の推測追加0件
-- [x] 公式標準解答・保存済み正答の事前保存0件
+## Topic 21 固定範囲
 
-## Topic 20 制作進捗
-- [x] 制作前EXAM_ALIGNMENT: `PASS / 一次5問・25答案要素`
-- [x] 制作前blind独立再解答: `25 / 25 PASS`
-- [x] 標準解答照合: `R8/R7/R6/H24 20 / 20公式一致 + H20 5 / 5二次資料一致`
-- [x] 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- [x] 解説PDF＋表示QA: `PASS / EXPLANATION_PDF_COMPLETE`
-- [x] 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
-- [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
-- [x] 完成後独立再解答: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
-- [x] 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
-- [x] 主source進捗記録同期
-- [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- [x] completed状態同期
-- [x] 最終判定: `PASS / completed`
+系列SPECの第21章だけを扱う。
+
+- 回路
+- 交流
+- 過渡
+- 高調波
+- 計測
+- 簡略モデル: `25kV電源 → 架線等価回路 → 主変圧器 → 整流・DCリンク → PWMインバータ → 簡略負荷 → 電流・電圧センサ → 測定`
+- 計算プログラムの代表点は手計算または別手法で独立再計算
+- 未公開の実車主回路・East i内部回路・定数を推測で真値化しない
+
+## Topic 21 固定EXAM_ALIGNMENT
+
+品質ゲート対象は `5問・21答案要素`。
+
+- R8 一次 理論 問3: 回路網、テブナン、相反定理 `5答案要素`
+- R8 一次 理論 問4: 校正、零位法、測定 `5答案要素`
+- R8 一次 理論 問6: RC・RL・RLC過渡 `5答案要素`
+- H24 一次 機械 問3 (4)(5): 基本波、高調波、位相差、合成 `2答案要素`
+- R2 二次 電力・管理 問6 (1)〜(3): P・Q・S、総合力率、P-Qベクトル、無効電力補償 `4答案要素`
+
+集計:
+- 一次: `4問・17答案要素`
+- 二次: `1問・4答案要素`
+- 二次数合わせ: `0件`
+- 関連候補調査: `9件`
+- 制作前blind独立再解答: `未実施`
+
+令和8年度二次試験は2026-11-15実施予定のため、2026-09-19時点では未実施。既実施年度から固定範囲に直接対応するR2二次「電力・管理」問6を採用した。
 
 ## 今回進めた内容
 
-Topic 20の `completed` 状態同期を実施した。
+Topic 21の制作前EXAM_ALIGNMENTを作成し、`PASS / EXAM_ALIGNMENT_COMPLETE` とした。
 
-- 主source: `completion: completed` / `stage: COMPLETED`
-- 練習source: `completion: completed` / `stage: COMPLETED`
-- STATUS: 完成数 `20 / 21`、Topic 21をactiveへ更新
-- HANDOFF: Topic 01〜20 `PASS / completed` へ更新
-- 固定一次5問・25答案要素: `25 / 25 PASS` 維持
-- R8/R7/R6/H24公式標準解答直接一致: `20 / 20` 維持
-- H20二次資料掲載解答一致: `5 / 5` 維持
-- 二次採用: `0問`
+- source新規作成: `topics/21_integrated_simulation/21_integrated_simulation.md`
+- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認: `PASS`
+- Topic 01〜20完成状態確認: `PASS / 20 / 21`
+- 一次・二次を含む関連候補調査: `9件`
+- 固定品質ゲート: `一次4問・17答案要素 + 二次1問・4答案要素`
+- 二次採用: `1問・4答案要素`
 - 二次数合わせ: `0件`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF・PowerPoint変更: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路・未公開定数の推測追加: `0件`
+- Topic 01〜20にない新論点追加: `0件`
+- 未確認の実車・East i内部定数追加: `0件`
 - 仕様追加: `0件`
 
 ## 判定
 
-`PASS / completed`。
+`PASS / EXAM_ALIGNMENT_COMPLETE`。
 
-完成数は `20 / 21`。次工程はTopic 21「架線からEast iまで全部シミュレーションする」の制作前EXAM_ALIGNMENT。
+完成数は `20 / 21`。次工程はTopic 21の制作前blind独立再解答。
