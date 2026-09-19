@@ -6,13 +6,38 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
+Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
-現在地は `topic_25_clean_blind_official_match_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
+現在地は `topic_25_completed`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 25全成果物と固定済みclean blind候補を照合した。固定候補を変更せず、次の未完了工程である公式解答・標準解答との照合だけを実施した。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 25全成果物、直近コミット、既存車両二種worker成果をreconcileした。並行workerが先に完成させたclean blind公式照合を正本として採用し、重複公式照合ファイルは削除した。そのうえで次の未完了工程だったTopic 25最終QAだけを実施した。
+
+## Topic 25 解説PDF
+
+- `PASS / EXPLANATION_PDF_CANONICAL_REPAIR_COMPLETE`
+- canonical blob SHA: `7588e85204db180eee2bd5e2494708df4810276e`
+- file size: `13,227 bytes`
+- SHA-256: `7a4acfc30141e48e0469ce271aaa357f367f27e8030e1ca7b6adc1bbefb6156e`
+- PDFium / Poppler: `3 / 3 PASS`
+- 固定5問: `5 / 5 covered`
+- 合計答案要素: `28 / 28 covered`
+- SPEC必須10項目: `10 / 10 covered`
+- 指定3可視化: `3 / 3 PASS`
+- canonical artifact identity blocker: `RESOLVED`
+
+## Topic 25 練習PDF
+
+- `PASS / PRACTICE_PDF_COMPLETE`
+- canonical blob SHA: `2dbb1439e2ee237065fce69e8ac11a9315c0335f`
+- file size: `14,089 bytes`
+- PDFium / Poppler: `5 / 5 PASS`
+- 一次8問＋完全解説: `8 / 8`
+- 二次4問＋完全解説: `4 / 4`
+- 一次正答一意性: `8 / 8 PASS`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 固定答案要素接続: `28 / 28`
 
 ## Topic 25 PowerPoint
 
@@ -27,19 +52,6 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 - 一次 `20 / 20`、二次 `8 / 8`、合計 `28 / 28 connected`
 - SPEC必須10項目: `10 / 10 PASS`
 - 指定3可視化: `3 / 3 PASS`
-
-## Topic 25 clean blind候補
-
-成果物:
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_blind_reanswer_candidates_clean.md`
-
-判定:
-- `CANDIDATES_FIXED`
-- 固定5問: `5 / 5 solved`
-- 一次答案要素: `20 / 20 candidate fixed`
-- 二次答案要素: `8 / 8 candidate fixed`
-- 合計: `28 / 28 candidate fixed`
-- 候補固定後編集: `0件`
 
 ## Topic 25 clean blind公式照合
 
@@ -57,7 +69,26 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 - 二次: `8 / 8 PASS`
 - 合計: `28 / 28 PASS`
 - 固定5問: `5 / 5 PASS`
+- 固定候補後編集: `0件`
 - 不一致: `0件`
+- exact blocker: `0件`
+
+## Topic 25 最終QA
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_final_qa.md`
+
+判定:
+- `PASS / COMPLETED`
+- 解説source/PDF: `PASS`
+- 練習source/PDF: `PASS`
+- PowerPoint: `PASS`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `20 / 20 PASS`
+- 二次答案要素: `8 / 8 PASS`
+- 合計答案要素: `28 / 28 PASS`
+- SPEC必須10項目: `10 / 10 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
 - exact blocker: `0件`
 
 ## 固定境界
@@ -71,4 +102,4 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
 ## 次の安全な工程
 
-Topic 25最終QA。解説source/PDF、練習source/PDF、PowerPoint、clean blind公式照合、固定EXAM_ALIGNMENT、SPEC境界を横断し、完成可否を判定する。最終QA PASSまでは完成数 `24 / 39` のまま。
+Topic 26 `E7・W7系 勾配条件を含む総合走行解析` の制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を先に固定し、既存worker成果と重複しない範囲だけ新規調査する。仕様不整合または確定不能事項があればexact blockerを記録して停止する。
