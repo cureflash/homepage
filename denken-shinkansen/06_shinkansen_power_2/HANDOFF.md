@@ -3,29 +3,33 @@
 updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
-current_status: `topic_17_clean_blind_rerun_mismatch`
+current_status: `topic_17_clean_blind_rerun2_mismatch`
 
 ## 今回実施
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、直近power2コミットをreconcileした。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFFを確認し、Topic 17の制作前clean blindをもう一度実施した。
 
-既存の電力二種workerがTopic 17 clean blind再実施を完了し、次をGitHub正本へ保存済みであることを確認した。
+候補答案を公式標準解答照合前にGitHubへ固定:
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_rerun2_20260920.md`
 
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_rerun_20260920.md`
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_rerun_20260920.md`
+固定後に公式標準解答と照合し、結果を保存:
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_rerun2_20260920.md`
 
-最新rerun判定:
-- 一次: `15 / 15 PASS`
-- 二次: `8 / 11 PASS`
-- 合計: `23 / 26 PASS`
+最新rerun2判定:
+- 一次: `14 / 15 PASS`
+- 二次: `11 / 11 PASS`
+- 合計: `25 / 26 PASS`
 - 制作品質ゲート: `未通過`
 
 exact blocker:
-1. R2二次 問2(2)「信頼性」: 点検・自動監視、低故障率、冗長化を欠く。
-2. R2二次 問2(3)「定格遮断時間」: `5サイクル及び3サイクル` のうち5サイクルを欠く。
-3. H25二次 問3(2): 同期発電機短絡電流の小ささとOCR感度整定上の問題を欠く。
+1. H25一次「電力」問4(1): 正答は `基準電圧（相電圧）`。候補は `√3 × 線間電圧 × 三相短絡電流` の同値式へ読み替え、問題文 `3 × [1] × 三相短絡電流` の空欄を線間電圧と誤答した。
 
-この補助runではreconcile時に最新rerun resultを確認したため、公式標準解答内容に接触済みである。同run内で答案を書き換えたり新たなclean blindを実施してPASS扱いにはしていない。教材本文・PDF・PowerPointにも進んでいない。
+前回不足していた二次3要素は解消:
+- R2二次 問2(2) 信頼性: 点検・自動監視、低故障率、冗長化を明示してPASS。
+- R2二次 問2(3) 定格遮断時間: `5サイクル及び3サイクル` を明示してPASS。
+- H25二次 問3(2): 同期発電機短絡電流の小ささ、OCR感度整定上の問題、方向判別を明示してPASS。
+
+このrunでは候補固定後に公式標準解答へ接触済みのため、同run内で誤答を修正してclean blind PASSとは扱わない。教材本文・PDF・PowerPointには進んでいない。
 
 ## Topic 16維持
 
