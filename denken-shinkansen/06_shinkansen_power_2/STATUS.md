@@ -4,7 +4,7 @@ updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
 theme: 事故区間だけをどう一瞬で切る？
-current_status: `topic_17_preproduction_blind_mismatch`
+current_status: `topic_17_clean_blind_input_prepared`
 completed_topics: `16 / 22`
 
 ## Completed through Topic 16
@@ -24,26 +24,24 @@ Topic 16最終品質ゲート:
 
 ## Topic 17 current stage
 
-制作前EXAM_ALIGNMENTは固定済み。制作前blind独立再解答を実施したが `24 / 26 PASS` で品質ゲート未通過。
+制作前EXAM_ALIGNMENTは固定済み。初回制作前blind独立再解答は `24 / 26 PASS` で品質ゲート未通過。
 
 固定公式過去問:
 - 一次: 令和4年度「電力」問3、平成29年度「電力」問3、平成25年度「電力」問4
 - 二次: 令和2年度「電力・管理」問2、平成25年度「電力・管理」問3
 
 固定品質ゲート:
-- 一次: `3問 / 15答案要素` -> `15 / 15 PASS`
-- 二次: `2問 / 11答案要素` -> `9 / 11 PASS`
-- 合計: `5問 / 26答案要素` -> `24 / 26 PASS`
+- 一次: `3問 / 15答案要素`
+- 二次: `2問 / 11答案要素`
+- 合計: `5問 / 26答案要素`
 - SPEC固定11項目マッピング: `11 / 11`
 
-blind記録:
-- `topics/17_protection_coordination/17_protection_coordination_preproduction_blind_20260920.md`
+初回blind記録は保存済みだが、正答情報を含むためclean blind候補答案を固定する前には参照しない。
 
-exact blocker:
-1. R2二次「電力・管理」問2の保護リレー信頼性条件で、公式標準解答が明示する「故障率が低いこと」をblind候補が欠いた。
-2. 同問の77/66 kV系統用遮断器の定格遮断時間をblind候補が `3サイクル` のみとし、公式標準解答の `5サイクル及び3サイクル` を満たさなかった。
+clean blind専用入力:
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_input_20260920.md`
 
-公式標準解答を既に照合したrunで同一答案をclean blind扱いにはしない。教材本文、PDF、PowerPointは未着手のまま止める。
+このrunでは公式標準解答と既存blind記録を既に参照したため、同一runでの再解答をclean blindとは扱わない。教材本文、PDF、PowerPointは未着手のまま維持する。
 
 ## 品質境界
 
@@ -56,4 +54,4 @@ exact blocker:
 
 ## next_start
 
-Topic 17固定5問・26答案要素について、公式標準解答・保存済み候補答案を入力から除外したclean blind独立再解答を行う。`26 / 26 PASS` を確認するまで教材本文・解説PDF・練習PDF・PowerPointへ進まない。
+`17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、保存済み候補答案・公式標準解答を候補答案固定前に見ず、固定5問・26答案要素をclean blind独立再解答する。候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` を確認するまで教材本文・解説PDF・練習PDF・PowerPointへ進まない。
