@@ -43,7 +43,7 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、�
 
 有効clean blind正本:
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_check.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_comparison.md`
 
 ## Topic 22境界
 
