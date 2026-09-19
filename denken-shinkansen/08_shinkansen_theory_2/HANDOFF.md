@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
+Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_20_final_qa_complete`
+current_status: `topic_20_completed`
 
-active_topic: `20 East iは走りながら何をどう測る？`
+active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施まで完了。初回最終QAの唯一のblockerだった主source進捗記録不整合は解消済みで、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。次工程は `completed` 状態同期。
+Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施を通過し、`completed` 状態同期まで完了。初回最終QAの唯一のblockerだった主source進捗記録不整合は解消済み。次工程はTopic 21の制作前EXAM_ALIGNMENT。
 
 ## Topic 20 固定範囲
 
@@ -61,8 +61,8 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - PowerPoint QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
 - 完成後独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_reanswer.md`
 - 最終QA: `topics/20_east_i_measurement/20_east_i_measurement_final_qa.md`
-- stage: `FINAL_QA_COMPLETE`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 
 ## 完成後独立再解答
 
@@ -79,24 +79,19 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - East i内部測定回路・未公開定数の推測追加: `0件`
 - 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
-## 最終QA再実施
+## completed状態同期
 
-- 初回blocker解消: `1 / 1`
-- 必須成果物欠落: `0件`
-- 固定一次5問・25答案要素: `25 / 25 PASS`
-- R8/R7/R6/H24公式標準解答直接一致: `20 / 20`
-- H20二次資料掲載解答一致: `5 / 5`
-- SPEC固定範囲: `12 / 12`
-- 解説PDF表示QA: `8 / 8 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- 練習12問QA: `12 / 12 PASS`
-- PowerPoint表示QA: `8 / 8 PASS`
+- 主source: `completion: completed` / `stage: COMPLETED`
+- 練習source: `completion: completed` / `stage: COMPLETED`
+- 固定一次5問・25答案要素: `25 / 25 PASS` 維持
+- R8/R7/R6/H24公式標準解答直接一致: `20 / 20` 維持
+- H20二次資料掲載解答一致: `5 / 5` 維持
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF・PowerPoint変更: `0件`
 - 固定範囲外追加: `0件`
 - East i内部測定回路・未公開定数の推測追加: `0件`
-- 主source / STATUS / HANDOFF の最終QA前進捗整合: `PASS`
-- 判定: `PASS / FINAL_QA_COMPLETE`
+- 判定: `PASS / completed`
 
 ## East i一次資料
 
@@ -110,4 +105,4 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 
 ## 次工程
 
-Topic 20の `completed` 状態同期。完成数を `20 / 21` へ更新し、次の未完了テーマTopic 21へ移るのは、その同期が完了した後。
+Topic 21「架線からEast iまで全部シミュレーションする」の制作前EXAM_ALIGNMENT。
