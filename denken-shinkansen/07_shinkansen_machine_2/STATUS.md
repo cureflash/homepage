@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_independent_reanswer_record_qa_pass / IN_PROGRESS`
+- current_status: `topic_19_final_qa_progress_records_unsynced / NEEDS_REVISION`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 最終QA
+- next_start: Topic 19 main source・練習sourceの進捗記録同期
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`、完成後独立再解答ロック時公式一致 `11 / 12`、解答群記号訂正後の記録QA `12 / 12 PASS`
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`、完成後独立再解答ロック時公式一致 `11 / 12`、解答群記号訂正後の記録QA `12 / 12 PASS`、最終QAは進捗記録不整合のみで `NEEDS_REVISION`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -61,6 +61,7 @@
 - `topics/19_pid_speed_control/19_pid_speed_control_powerpoint_qa.md`
 - `topics/19_pid_speed_control/19_pid_speed_control_blind_reanswer_gate.md`
 - `topics/19_pid_speed_control/19_pid_speed_control_independent_reanswer.md`
+- `topics/19_pid_speed_control/19_pid_speed_control_final_qa.md`
 
 QA:
 - 解説PDF表示: `6 / 6 PASS`
@@ -95,8 +96,18 @@ QA:
 - 教材の式・解法不足: `0件`
 - 判定: `PASS / topic_19_independent_reanswer_record_qa_pass`
 
+## Topic 19 最終QA
+- 必須成果物: `PASS`
+- 固定5問・12答案要素: `12 / 12 PASS`
+- 独立再解答記録QA: `6 / 6 PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- 仕様境界: `PASS`
+- 進捗記録整合: `2 / 4 PASS`
+- blocker: main source `## 状態` が `topic_19_explanation_pdf_complete` のまま、練習source `# 次工程` が「練習PDF＋QA」のまま
+- 最終判定: `NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`
+
 ## 今回進めた内容
-H25 一次 機械 問6 (2) の解答群記号転記ミスを「ヲ」→「ワ」へ訂正し、ロック commit、公式問題PDF、公式標準解答を使って独立再解答記録QAを再実施した。数式・導出・教材・固定EXAM_ALIGNMENTは変更していない。完成数は `18 / 22` のまま。
+Topic 19 最終QAを実施した。技術・試験対応ゲートはPASSしたが、main sourceと練習sourceの進捗記録2箇所が現状へ未同期のためcompletedにはしない。完成数は `18 / 22` のまま。
 
 ## 次工程
-Topic 19 の最終QAを実施する。
+Topic 19 main source・練習sourceの進捗記録を同期し、その後に最終QAを再実施する。
