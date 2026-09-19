@@ -55,8 +55,9 @@ Topic 01〜15は `completed`。Topic 15は制作前EXAM_ALIGNMENT、制作前bli
 ### 解説PDF / QA
 
 - A4縦: `6ページ`
-- ファイルサイズ: `21994 bytes`
-- SHA-256: `b8b52186c351ead123b489eb9e1148d1ec09c7e8ca1cc410f4f5561b2e99bda1`
+- ファイルサイズ: `10463 bytes`
+- Git blob SHA-1: `cc7fa719275a8b74fed7f370583eadd96f9977fb`
+- SHA-256: `a7af60c8169ad998f38221bb026cfd00be95a9b94f809e5a229c9ba4bbbdc42d`
 - PDFium 200 dpi: `6 / 6 PASS`
 - Poppler表示: `6 / 6 PASS`
 - ページ外逸脱 / 文字重なり / 本文切れ: `0件`
@@ -70,7 +71,7 @@ Topic 01〜15は `completed`。Topic 15は制作前EXAM_ALIGNMENT、制作前bli
 - 数値独立再計算: `PASS`
 - 判定: `PASS / topic_16_explanation_pdf_complete`
 
-CIDフォントの非埋込み警告はあるが、PDFiumとPopplerの両方で全6ページの日本語表示を確認済み。表示QA上の欠損はない。
+組込みCIDフォントはFontDescriptor非保持の警告が出るが、PDFium / Popplerの両方で全6ページの日本語表示を確認し、`pdftotext`でも抽出可能。表示・収録QA上の欠損はない。
 
 ## 固定範囲
 
