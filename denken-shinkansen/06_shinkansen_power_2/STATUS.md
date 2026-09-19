@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
 theme: 25kV架線が短絡したら何kA流れる？
-current_status: `topic_16_explanation_pdf_current_blob_qa_fail_right_clipping`
+current_status: `topic_16_explanation_pdf_regenerated_exact_blob_qa_pass`
 completed_topics: `15 / 22`
 
 ## Completed through Topic 15
@@ -43,18 +43,18 @@ Webカタログ:
 
 ### 解説PDF
 
-現行blob `a2fd385e832df7e628d6bd879d9ffcf26fca575b` / `11,232 bytes` / `7 pages` を既存QAから独立して再検査した。
+右端切れをレイアウトだけで修正し、再生成した現行exact blobを独立再QAした。
 
-- PDFium: 7ページrender完了
-- Poppler: 7ページrender完了
-- 文字抽出: PASS / U+FFFD 0件
-- 補正5項目: 5 / 5 present
-- 表示: `FAIL`
-  - page 2: 基準換算式・解法アルゴリズム右端切れ
-  - page 4: `S_sc = 100 / 0.40 = 250 MVA` の末尾 `0` が切れ、表示上 `25 MVA` に見える。逆算式も右端切れ
-  - page 6: 教材用仮定モデル式・説明文右端切れ
-  - page 7: 参照URL・末尾説明文右端切れ
-- 正常表示: `3 / 7 pages`
+- blob: `626d9098ccf7453f2439b1ffc3df50c3bbdd3b5b`
+- size: `34,238 bytes`
+- SHA-256: `0d305c1240f57a3efe7a279130f18821bb204a561de46429df596a1ae64c79fb`
+- pages: `7`
+- PDFium: `7 / 7 render completed`
+- Poppler: `7 / 7 render completed`
+- text extraction: `PASS / U+FFFD 0件`
+- 補正5項目: `5 / 5 present`
+- learner-facing display: `PASS / right-edge overflow 0件`
+- `250 MVA`: 欠落なく表示
 
 QA記録:
 - `topics/16_short_circuit/16_short_circuit_explanation_pdf_qa.md`
@@ -101,15 +101,15 @@ QA記録:
 
 ## exact blocker
 
-`The current explanation PDF has now been QAed against exact blob a2fd385e832df7e628d6bd879d9ffcf26fca575b and FAILS learner-facing display QA because right-edge clipping occurs on pages 2, 4, 6, and 7. Page 4 is especially blocking because the correct 250 MVA result is visually truncated to 25 MVA. Regenerate the explanation PDF from the existing corrected source with wrapping/layout fixes only, then rerun full PDF QA against the new exact blob. The current PowerPoint still requires exact-blob QA afterward, and the stale progress state in 16_short_circuit.md still requires synchronization before final QA.`
+`The regenerated current explanation PDF passes exact-blob QA. The next unresolved artifact gate is the current PowerPoint blob a4817d7cfb1a1733f5147f52efa3ec4e249999d5, whose existing QA record targets a different identity. Rerun PowerPoint QA against that exact current blob. Do not mark Topic 16 completed until PowerPoint exact-blob QA and the stale 16_short_circuit.md progress-state synchronization/final QA are complete.`
 
 ## Gate checklist
 
 - [x] Topic 01〜15 completed
-- [ ] Topic 16 — 固定5問・23答案要素 `23 / 23 PASS` / Webカタログ登録済み / 解説PDF current-artifact QA `FAIL`
+- [ ] Topic 16 — 固定5問・23答案要素 `23 / 23 PASS` / Webカタログ登録済み / 解説PDF current-artifact QA `PASS` / PowerPoint current-artifact QA未再実施
 
 Topic 16は `completed` にしない。完成数は `15 / 22`。Topic 17へ進まない。
 
 ## next_start
 
-固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済み解説source、練習PDF、clean blind結果、Webカタログを変更せず、`16_short_circuit_explanation.pdf` を横方向の折返し・改行だけ修正して再生成する。再生成後、新しいexact blobに対してPDFium / Poppler / 文字抽出 / 内容QAを再実施する。解説PDFがPASSするまでPowerPoint再QAへ進まない。
+固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済みsource/PDF、練習PDF、clean blind結果、Webカタログを変更せず、現行 `16_short_circuit_images.pptx` blob `a4817d7cfb1a1733f5147f52efa3ec4e249999d5` に対してexact-blob PowerPoint QAを再実施する。既存QAはidentity不一致のため転用しない。
