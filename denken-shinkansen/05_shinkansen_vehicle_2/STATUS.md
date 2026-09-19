@@ -9,7 +9,7 @@
 - current_status: `topic_22_powerpoint_complete`
 - last_completed_topic: `21 高速域の速度・けん引力・出力制御`
 - active_topic: `22 E5系 再粘着制御`
-- next_start: Topic 22 完成後clean blind独立再解答。固定5問・11答案要素を変更せず、教材だけで候補を先に固定してから公式解答・標準解答と照合する
+- next_start: Topic 22 完成後clean blind独立再解答を、当該個別解答を未閲覧のfresh independent workerで実施する。固定5問・11答案要素を変更せず、教材だけで候補を先に固定してから公式解答・標準解答と照合する
 
 ## 完了済み
 
@@ -110,6 +110,14 @@ Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
 
+## Topic 22 clean blind 実行blocker
+
+- 状態: `BLOCKED_FOR_THIS_WORKER`。Topic 22自体は `topic_22_powerpoint_complete` のまま。
+- 原因: H21二次「機械・制御」問4の問題図を回収する過程で、このworkerが候補解答固定前に個別解答を含む第三者ページを開いた。
+- 品質ゲート判定: `candidate lock -> official-answer comparison` のclean blind独立性を満たせないため、このworkerによる完成後独立再解答は無効。
+- 反映: clean blind候補ファイルは作成・コミットしていない。固定EXAM_ALIGNMENT、一般式、教材本文、PowerPoint、練習問題は変更していない。
+- 次工程: 当該個別解答を未閲覧のfresh independent workerが、固定5問・11答案要素でclean blindを最初から実施する。
+
 ## 次工程
 
-Topic 22 完成後clean blind独立再解答。固定5問・11答案要素を教材だけで解き、候補を先に固定してから公式解答・標準解答と照合する。
+Topic 22 完成後clean blind独立再解答をfresh independent workerで実施する。固定5問・11答案要素を教材だけで解き、候補を先に固定してから公式解答・標準解答と照合する。
