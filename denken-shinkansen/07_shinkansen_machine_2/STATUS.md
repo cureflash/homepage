@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `19 / 22`
-- current_status: `topic_20_final_qa_progress_metadata_unsynced / NEEDS_REVISION`
+- current_status: `topic_20_progress_metadata_synced / IN_PROGRESS`
 - last_completed_topic: `19 PIDで新幹線の速度を制御する`
 - active_topic: `20 制御系はなぜ発振する？`
-- next_start: Topic 20 進捗・メタデータ記録3件の同期
+- next_start: Topic 20 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,7 +16,7 @@
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / completed`
 - [x] Topic 19 最終QA `PASS / completed`
-- [ ] Topic 20 `NEEDS_REVISION`
+- [ ] Topic 20 `IN_PROGRESS`
 - [ ] Topic 21
 - [ ] Topic 22
 
@@ -117,20 +117,21 @@
 - 判定: `PASS / topic_20_independent_reanswer_record_qa_pass`
 
 ## Topic 20 最終QA
-技術・試験対応品質ゲートは `PASS`。ただし最終整合QAで進捗・メタデータ記録3件の未同期を確認したため、まだ `completed` にしない。
+前回最終QAでは技術・試験対応品質ゲートは `PASS`。ただし進捗・メタデータ記録3件の未同期により `NEEDS_REVISION / topic_20_final_qa_progress_metadata_unsynced` とした。
 
-未同期:
-1. main source冒頭が `topic_20_explanation_source_complete / IN_PROGRESS` のままで、PDF・練習・PowerPointを未作成と記録している。
-2. 練習source末尾の次工程が「練習PDF＋QA」のまま。
-3. 解説PDF QAのsize記録が `17333 bytes` だが、現行mainの同一Git blob `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f` は `17336 bytes`。
+今回、次の3件を現行mainへ同期した。
+1. main sourceの状態・次工程を現行成果物と独立再解答完了状態へ同期。
+2. 練習sourceの次工程をTopic 20最終QA再実施へ同期。
+3. 解説PDF QAのsize記録を `17333 bytes` → `17336 bytes` に訂正。Git blob `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f`、SHA-256は変更なし。
 
-- 技術本文の修正要否: `0件`
-- 固定EXAM_ALIGNMENT変更要否: `0件`
-- PDF/PPTX再生成要否: `0件`
-- 判定: `NEEDS_REVISION / topic_20_final_qa_progress_metadata_unsynced`
+- 技術本文の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- PDF/PPTX再生成: `0件`
+- 進捗・メタデータ同期: `3 / 3 PASS`
+- 現在判定: `IN_PROGRESS / topic_20_progress_metadata_synced`
 
 ## 今回進めた内容
-Topic 20最終QAを実施し、過去問対応・成果物・独立再解答の技術ゲートは全てPASSと確認した。一方、進捗・正本メタデータ3件が現行mainと不一致のため `NEEDS_REVISION` とし、完成数は `19 / 22` のまま維持した。
+Topic 20の前回最終QAで確認した進捗・メタデータ未同期3件をGitHub正本へ反映した。技術本文、練習問題、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答内容は変更していない。
 
 ## 次工程
-Topic 20の進捗・メタデータ記録3件を現行mainへ同期する。技術本文、練習問題、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答内容は変更しない。
+Topic 20最終QAを再実施する。再QAで全ゲートがPASSした場合にのみ `completed` とする。
