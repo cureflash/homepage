@@ -4,8 +4,8 @@
 
 ## 状態
 
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: `一次4問・17答案要素 + 二次1問・4答案要素 = 5問・21答案要素`
 - 制作前blind独立再解答: `21 / 21 PASS`
@@ -17,10 +17,11 @@
 - 解説画像PowerPoint: `PASS / POWERPOINT_COMPLETE`
 - 完成後独立再解答: `21 / 21 PASS / INDEPENDENT_REANSWER_COMPLETE`
 - 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`（進捗記録不一致のみ）
+- 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - 二次採用: `1問・4答案要素`
 - 二次数合わせ: `0件`
 - 仕様追加: `0件`
-- 次工程: 最終QA再実施
+- 次工程: 系列08完了
 
 ## 1. SPEC固定範囲
 
@@ -632,4 +633,4 @@ C. 校正: R8型の教育用直角相ブリッジで `n=4, Rs=100 kΩ`、零位�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
 
-解説PDF・練習PDF・PowerPoint・完成後独立再解答は完了済み。初回最終QAで指摘された主sourceの進捗記録不一致をこの更新で同期した。次工程は最終QA再実施。
+解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QA再実施まで完了済み。Topic 21は `PASS / completed` に状態同期した。系列08は `21 / 21` 完了。
