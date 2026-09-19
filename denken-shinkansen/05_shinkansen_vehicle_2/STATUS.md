@@ -144,14 +144,15 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 - 判定: `PASS / POWERPOINT_COMPLETE`
 - path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images.pptx`
-- canonical blob SHA: `4cec8a6ee9eef4272b5783762a4f0c1f8311e19d`
+- canonical blob SHA: `999988097102c9674967abc8152c04ebf7904819`
 - QA: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images_qa.md`
-- file size: `55,817 bytes`
-- SHA-256: `91ee793f3472b4f1a26fd40360a7dd85a578c1f0fc64d9717ce43023f5cd2cb7`
+- file size: `225,537 bytes`
+- SHA-256: `67dadfdd3ef0a0a5f8b07018c9ee87a31ecd86571e1d16f74ca6b6f90e6ae4e9`
 - 16:9: `6 slides`
-- PPTX ZIP / python-pptx: `PASS`
-- LibreOffice / Poppler render: `6 / 6 PASS`
-- `pdftotext -layout`: `PASS`（8,941 bytes）
+- GitHub Actions canonical rebuild/validation: `PASS`
+- PPTX ZIP / python-pptx / geometry: `PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`（8,858 bytes）
 - 置換文字 `�`: `0件`
 - 固定過去問: `5 / 5 connected`
 - 一次答案要素: `10 / 10 connected`
@@ -162,6 +163,7 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - 教材用仮定値と実車値の混同: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 21一般式変更: `0件`
+- 初回binary uploadのtruncate: `検出・無効化・GitHub Actions再生成で解消`
 - exact blocker: `0件`
 
 ## Topic 21 H26二次 問1(4)
