@@ -6,8 +6,8 @@
 - Topic 01〜20: 最終QA `PASS / completed`
 - 完成数: `20 / 22`
 - active topic: `21 空転した車輪を再粘着させる`
-- current status: `topic_21_explanation_source_complete / IN_PROGRESS`
-- 次工程: Topic 21 解説PDF
+- current status: `topic_21_explanation_pdf_complete / IN_PROGRESS`
+- 次工程: Topic 21 練習source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -114,5 +114,18 @@ Topic 20成果物QA:
 - 固定過去問個別正答保存: `0件 / PASS`
 - Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 
+## Topic 21 解説PDF
+- `topics/21_readhesion_control/21_readhesion_control_explanation.pdf`
+- `topics/21_readhesion_control/21_readhesion_control_explanation_pdf_qa.md`
+- 状態: `PASS / topic_21_explanation_pdf_complete`
+- A4縦4ページ、200 dpi表示 `4 / 4 PASS`、`pdftocairo` 160 dpi表示 `4 / 4 PASS`
+- 固定5問・14答案要素: `14 / 14 COVERED`
+- 基礎・本試験標準・複合例題: `3 / 3 INCLUDED`
+- 数値・論理QA: `6 / 6 PASS`
+- 文字抽出異常: `replacement char 0 / (cid:) 0`
+- 固定過去問個別正答保存: `0件 / PASS`
+- STAR21公開値の現行新幹線一般化: `0件 / PASS`
+- Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の解説PDF。
+Topic 21「空転した車輪を再粘着させる」の練習source。

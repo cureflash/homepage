@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_explanation_source_complete / IN_PROGRESS`
+- current_status: `topic_21_explanation_pdf_complete / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 解説PDF
+- next_start: Topic 21 練習source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -186,11 +186,27 @@
 - Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 - 判定: `PASS / topic_21_explanation_source_complete`
 
+## Topic 21 解説PDF品質ゲート
+- 固定一次4問＋二次1問・14答案要素: `14 / 14 COVERED`
+- A4縦4ページ: `PASS`
+- 200 dpi表示: `4 / 4 PASS`
+- `pdftocairo` 160 dpi表示: `4 / 4 PASS`
+- 文字切れ・重なり・ページ外はみ出し・欠落グリフ: `0件 / PASS`
+- `pdftotext` 抽出、replacement char、`(cid:)`: `PASS / 0 / 0`
+- 基礎・本試験標準・複合例題: `3 / 3 INCLUDED`
+- 数値・論理QA: `6 / 6 PASS`
+- 固定過去問個別正答の保存: `0件 / PASS`
+- STAR21公開値の現行新幹線一般化: `0件 / PASS`
+- Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 判定: `PASS / topic_21_explanation_pdf_complete`
+
 ## Topic 21 成果物
 - `topics/21_readhesion_control/21_readhesion_control.md` — 制作前EXAM_ALIGNMENT＋解説source本文完了
+- `topics/21_readhesion_control/21_readhesion_control_explanation.pdf` — 解説PDF完了
+- `topics/21_readhesion_control/21_readhesion_control_explanation_pdf_qa.md` — 解説PDF QA完了
 
 ## 今回進めた内容
-Topic 21の解説source本文を完了した。固定一次4問＋二次1問・14答案要素を教材節へ `14 / 14 COVERED` とし、車輪速度検出、加速度推定、空転・滑走、粘着、再粘着フィードバック、非線形性、飽和、応答速度、センサ・アクチュエータ、二次型閉ループ応答を収録した。実車接続は公開論文で確認できるSTAR21 953形の試験結果に限定し、現行新幹線へ一般化していない。
+Topic 21の解説PDFを完了した。固定一次4問＋二次1問・14答案要素は `14 / 14 COVERED` を維持し、A4縦4ページを2系統で表示確認した。実車記述は公開論文で確認できるSTAR21 953形の範囲に限定し、未確認の現行新幹線仕様化、Topic 22先取り、SPEC外A-D変換器方式追加は行っていない。
 
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の解説PDF。
+Topic 21「空転した車輪を再粘着させる」の練習source。
