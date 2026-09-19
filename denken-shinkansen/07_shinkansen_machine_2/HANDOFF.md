@@ -6,8 +6,8 @@
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_20_practice_pdf_complete / IN_PROGRESS`
-- 次工程: Topic 20 解説画像PowerPoint source
+- current status: `topic_20_powerpoint_complete / IN_PROGRESS`
+- 次工程: Topic 20 独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -141,6 +141,8 @@ blocker修正:
 - `topics/20_control_system_stability/20_control_system_stability_practice.md`
 - `topics/20_control_system_stability/20_control_system_stability_practice.pdf`
 - `topics/20_control_system_stability/20_control_system_stability_practice_pdf_qa.md`
+- `topics/20_control_system_stability/20_control_system_stability_images.pptx`
+- `topics/20_control_system_stability/20_control_system_stability_powerpoint_qa.md`
 
 ## Topic 20 解説source QA
 - 固定5問・14答案要素: `14 / 14 COVERED`
@@ -188,9 +190,9 @@ blocker修正:
 - 判定: `PASS / topic_20_practice_source_complete`
 
 ## Topic 20 練習PDF QA
-- A4縦15ページ: `PASS`
-- 200 dpi `pdftoppm`: `15 / 15 PASS`
-- `pdftocairo` 160 dpi: `15 / 15 PASS`
+- A4縦3ページ・2段組: `PASS`
+- 200 dpi `pdftoppm`: `3 / 3 PASS`
+- `pdftocairo` 160 dpi: `3 / 3 PASS`
 - ページ外はみ出し・欠落グリフ: `0件`
 - Unicode replacement char / `(cid:)`: `0 / 0`
 - 一次正答一意性: `10 / 10 PASS`
@@ -199,16 +201,23 @@ blocker修正:
 - Topic 21先取り・未確認実車制御値化・固定過去問個別正答保存: `各0件 / PASS`
 - 判定: `PASS / topic_20_practice_pdf_complete`
 
-## 今回完了した段階
-Topic 20の練習PDF＋QAを完成した。
+## Topic 20 解説画像PowerPoint QA
+- 16:9・4枚: `PASS`
+- 表示確認: `4 / 4 PASS`
+- 固定一次2問＋二次3問・14答案要素: `14 / 14 COVERED`
+- ラウス安定限界と周波数領域安定限界の一致: `PASS`
+- `K=1,5,6,8` の応答・極分類: `PASS`
+- PI折れ線、`ω_gc`、`ω_pc`、GM、PM: `PASS`
+- Topic 21先取り・未確認実車制御値化・固定過去問個別正答保存: `各0件 / PASS`
+- 判定: `PASS / topic_20_powerpoint_complete / IN_PROGRESS`
 
-- A4縦15ページ
-- 200 dpi / 160 dpiの二系統レンダリング: `15 / 15 PASS`
-- 一次10問の正答一意性 `10 / 10 PASS`
-- 全15問独立再計算・論理確認 `15 / 15 PASS`
+## 今回完了した段階
+Topic 20の解説画像PowerPoint＋QAを完成した。
+
+- 16:9・4枚、表示 `4 / 4 PASS`
 - 固定一次2問＋二次3問・14答案要素を `14 / 14 COVERED`
 - Topic 21先取り・未確認実車値化・固定過去問個別正答保存は各0件
 - 完成数は `19 / 22` のまま
 
 ## 次に行うこと
-Topic 20「制御系はなぜ発振する？」の解説画像PowerPoint source。
+Topic 20「制御系はなぜ発振する？」の独立再解答前ゲート。
