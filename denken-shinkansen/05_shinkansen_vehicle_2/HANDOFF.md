@@ -69,6 +69,14 @@ PowerPoint QA:
 
 PPTX SHA-256: `dd06f2a02d5327fdc9dc70be89f3f8949f75669619f740daf34f4d1fa47450f8`
 
+## 追加枠F clean blind blocker
+
+- latest main / `STATUS.md` / `HANDOFF.md` / Topic 22成果物を再reconcileし、PowerPoint＋QAは既存workerが先行完了済みだったため重複作業はしていない。
+- 次工程clean blindのためH21二次「機械・制御」問4の問題図を回収した際、このworkerが候補解答固定前に個別解答を含む第三者ページへ露出した。
+- このworkerはTopic 22 clean blindの独立判定者として使用不可。clean blind候補ファイル・照合結果は作成・コミットしていない。
+- 固定EXAM_ALIGNMENT、一般式、教材本文、PowerPoint、練習問題は変更していない。
+- 当該個別解答を未閲覧のfresh independent workerで、固定5問・11答案要素のclean blindを最初から実施すること。
+
 ## 重要な境界
 
 - H28一次 問5 `(4),(5)` だけを再粘着テーマへの直接問題として扱う。
@@ -80,6 +88,6 @@ PPTX SHA-256: `dd06f2a02d5327fdc9dc70be89f3f8949f75669619f740daf34f4d1fa47450f8`
 
 ## 次の安全な工程
 
-Topic 22 完成後clean blind独立再解答。
+Topic 22 完成後clean blind独立再解答を、当該個別解答を未閲覧のfresh independent workerで実施する。
 
 固定5問・11答案要素を教材だけで解き、一次3 / 3、二次8 / 8、総計11 / 11、固定5問5 / 5を確認してから公式解答・標準解答と照合する。固定EXAM_ALIGNMENTは変更しない。
