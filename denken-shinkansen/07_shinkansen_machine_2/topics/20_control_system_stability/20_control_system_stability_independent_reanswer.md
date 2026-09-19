@@ -2,13 +2,13 @@
 
 更新日: 2026-09-19
 
-状態: `ANSWERS_LOCKED_BEFORE_OFFICIAL_COMPARISON`
+状態: `NEEDS_REVISION / OFFICIAL_COMPARISON_COMPLETE`
 
 ## 実施条件
 - `20_control_system_stability_blind_reanswer_gate.md` が `BLIND_REANSWER_READY` であることを確認した。
 - 固定過去問の公式正答・標準解答は開かず、公式問題PDFと完成教材だけで再解答した。
 - 対象は固定一次2問＋二次3問、計5問・14答案要素。Topic 21は扱わない。
-- 本ファイルのこの版をGitHubへ固定した後にだけ公式解答・標準解答と照合する。
+- 本ファイルの答案を commit `001dbd5f8ee1c0e8a1ea4cd4ca3cef47a2167f15` でGitHubへ固定した後に公式解答・標準解答と照合した。
 
 ## 1. H23 一次 機械 問7 (1)〜(5)
 
@@ -200,5 +200,41 @@ PID補償器は
 - Topic 21先取り: `0件`
 - 未確認実車制御値の実車値化: `0件`
 
+# 公式照合
+
+照合先:
+- H23 一次 正答: https://www.shiken.or.jp/chief/upload/20110903_ch_second_a01.pdf
+- H25 一次 正答: https://www.shiken.or.jp/chief/upload/20130831_ch_second_a01.pdf
+- H30 二次 標準解答: https://www.shiken.or.jp/chief/upload/20181118_ch_second_a01.pdf
+- R03 二次 標準解答: https://www.shiken.or.jp/chief/upload/20211114_ch_second_a01.pdf
+- R04 二次 標準解答: https://www.shiken.or.jp/chief/upload/20221113_ch_second_a01.pdf
+
+## 照合結果
+- H23 一次 問7: `4 / 5` 公式一致。固定答案(1)は概念「安定性」自体は正しいが、解答群記号を `ヲ` と転記した。公式は `ワ`。教材の概念・式不足ではなく解答群記号の転記ミス。
+- H25 一次 問6 (1),(3),(4),(5): `4 / 4 PASS`。公式 `ニ / ル / ヲ / ロ` と一致。
+- H30 二次 問4 (2): `0 / 1`。問題文の `Ti=0.1 s` を固定再解答時に `0.01 s` と転記したため、折点を `100 rad/s` とした。公式標準解答は折点 `10 rad/s`、低周波側 `-20 dB/dec`、高周波側 `20 dB`。PI折れ線の解法自体は一致するが、与条件転記ミスにより固定答案は不一致。
+- R03 二次 問4 (3),(5): `2 / 2 PASS`。`K>1/2`、`0<K<3` と公式標準解答に一致。
+- R04 二次 問4 (1),(2): `2 / 2 PASS`。`s^3+41s^2+40s+100K=0`、`0<K<16.4` と公式標準解答に一致。
+
+集計:
+- 固定答案の公式一致: `12 / 14`
+- 不一致: `2 / 14`
+- 教材外知識補完: `0件`
+- Topic 21先取り: `0件`
+- 未確認実車制御値の実車値化: `0件`
+- 教材の概念・解法不足が原因と確認された不一致: `0件`
+- 転記ミス: `2件`
+
+## 訂正対象
+1. H23 一次 問7 (1): `安定性 = ヲ` → `安定性 = ワ`
+2. H30 二次 問4 (2): `Ti=0.01 s` → `Ti=0.1 s`、折点 `100 rad/s` → `10 rad/s`。折れ線は `ω<10` で `-20 dB/dec`、`ω>10` で `20 dB`。
+
+## 判定
+固定答案が `12 / 14` であり、`EXAM_ALIGNMENT_SPEC.md` の完成後独立試験ゲートをまだ満たさない。
+
+判定: `NEEDS_REVISION / topic_20_independent_reanswer_needs_revision`
+
+完成数は `19 / 22` のまま。
+
 ## 次工程
-このGitHub固定版を保持したまま、電気技術者試験センター公式正答・標準解答と照合する。
+上記2件を「固定時点の誤り」として履歴を保持したまま訂正し、独立再解答記録QAを実施する。
