@@ -8,11 +8,11 @@
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
-現在地は `topic_24_practice_source_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。
+現在地は `topic_24_practice_pdf_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。
 
 ## 今回のreconcile
 
-開始時main `3ee9af639ebd1f27b17336388a470136d4a56a05`、最新 `STATUS.md` / `HANDOFF.md`、Topic 24ディレクトリ、直近車両二種コミットを確認した。Topic 24は解説PDFまで完了し、練習sourceは未作成だったため、既存workerと重複せず次工程へ進めた。
+開始時main `883e98d656f6f7bb65e0d214bbffc6855b952545` を確認後、同系列workerの `285e99e576d48d49a022f7d8ce7fb272abe4e8d5`（Topic 24 practice source進捗同期）まで取り込んだ。最新 `STATUS.md` / `HANDOFF.md`、Topic 24ディレクトリ、直近車両二種コミットを再確認し、Topic 24は練習sourceまで完了、練習PDFは未作成だったため重複せず次工程のみ実施した。
 
 既存品質ゲートを再利用し、同じ過去問の再調査・再解答は行っていない。
 
@@ -24,29 +24,35 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
 既存13答案要素の再調査・再解答: `0件`。
 
-## 今回実施 — Topic 24 練習source
+## 今回実施 — Topic 24 練習PDF
 
 作成:
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_practice_source.md`
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_practice.pdf`
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_practice_pdf_qa.md`
 
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 構成・QA:
-- 一次試験型: `8問`、全問五肢択一
-- 二次試験型: `4問`、途中式・前提・単位・理由説明付き
-- 合計: `12問`
-- 固定5問・17答案要素: 一次 `11 / 11`、二次 `6 / 6`、合計 `17 / 17 connected`
+- A4縦: `5 pages`
+- PDFium 180 dpi: `5 / 5 PASS`
+- Poppler 180 dpi: `5 / 5 PASS`
+- ページ欠落・文字クリッピング・文字重なり・日本語欠落グリフ・破損グリフ: `0件`
+- `pdftotext`: `PASS`
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次記述式: `4 / 4`
+- 合計: `12 / 12`、完全解説付き
+- sourceから問題条件・正答・計算値の変更: `0件`
+- 固定5問・17答案要素: 一次 `11 / 11`、二次 `6 / 6`、合計 `17 / 17 covered`
 - SPEC必須8項目: `8 / 8 covered`
 - SPEC指定3可視化の計算系: `3 / 3 aligned`
-- 数値・論理独立再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 21一般式変更: `0件`
 - SPEC外主題追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
 - 新たなexact blocker: `0件`
+- PDF SHA-256: `6905e73122ac1904ec0d4dd47561aba0875fe3687ba9b8c9dd7d08d867775b5b`
 
-一次では同期速度、すべり、電気角、出力―トルク、運転領域、最大トルク・二次抵抗、V/f、条件変更時速度比較を扱う。二次ではR7二次型の「同期速度→すべり→トルク→半トルク時回転速度→出力」、R3二次型の `ω_s=2πf/p` と `T=P_m/[(1-s)ω_s]`、L形近似トルク式・最大トルク時滑り、極数・周波数変更と電気角を記述式で扱う。
+source中の近似記号 `≈` はPDFのCIDフォント表示で欠落を生じたため、PDF表示のみ「（近似）」「約」へ正規化した。式の意味、条件、数値、正答は変更していない。
 
 この段階ではTopic 24全体を `completed` としない。固定5問・17答案要素のclean blind再解答もまだ実施しない。
 
@@ -74,7 +80,7 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 - 二次: `2問 / 6答案要素`
 - 合計: `5問 / 17答案要素`
 
-練習sourceでは `17 / 17 connected` を確認したが、これは完成後clean blindのPASSではない。完成後はTopic 24教材だけを使って固定5問・17答案要素を改めて再解答する。
+練習PDFでは `17 / 17 covered` を確認したが、これは完成後clean blindのPASSではない。PowerPoint完成後、Topic 24教材だけを使って固定5問・17答案要素を改めて再解答する。
 
 ## Topic 24 境界
 
@@ -85,8 +91,8 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 
 ## Topic 21 H26二次 問1(4)
 
-`48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。練習sourceでも一般式はそのまま維持した。
+`48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。練習PDFでも一般式はそのまま維持した。
 
 ## 次の安全な工程
 
-Topic 24練習sourceから練習PDFを生成し、数式・単位・一次五肢択一・二次記述解説・固定17答案要素coverage・表示破綻をQAする。固定EXAM_ALIGNMENT、N700S事実境界、Topic 21一般式は変更しない。完成数は `23 / 39` のまま。
+Topic 24解説画像PowerPoint作成＋QA。固定5問・17答案要素、SPEC必須8項目、指定3可視化、N700S事実境界、Topic 21一般式を変更しない。PowerPoint完成後に固定5問・17答案要素をTopic 24教材だけでclean blind独立再解答する。完成数は `23 / 39` のまま。
