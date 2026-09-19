@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-19
+更新日: 2026-09-20
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `19 / 22`
-- current_status: `topic_20_independent_reanswer_record_qa_pass / IN_PROGRESS`
+- current_status: `topic_20_final_qa_progress_metadata_unsynced / NEEDS_REVISION`
 - last_completed_topic: `19 PIDで新幹線の速度を制御する`
 - active_topic: `20 制御系はなぜ発振する？`
-- next_start: Topic 20 最終QA
+- next_start: Topic 20 進捗・メタデータ記録3件の同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,7 +16,7 @@
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / completed`
 - [x] Topic 19 最終QA `PASS / completed`
-- [ ] Topic 20 `IN_PROGRESS`
+- [ ] Topic 20 `NEEDS_REVISION`
 - [ ] Topic 21
 - [ ] Topic 22
 
@@ -68,6 +68,7 @@
 - `topics/20_control_system_stability/20_control_system_stability_powerpoint_qa.md`
 - `topics/20_control_system_stability/20_control_system_stability_blind_reanswer_gate.md`
 - `topics/20_control_system_stability/20_control_system_stability_independent_reanswer.md`
+- `topics/20_control_system_stability/20_control_system_stability_final_qa.md`
 
 ## Topic 20 成果物QA
 - 解説source固定5問・14答案要素: `14 / 14 COVERED`
@@ -115,8 +116,21 @@
 - 教材の概念・解法不足: `0件`
 - 判定: `PASS / topic_20_independent_reanswer_record_qa_pass`
 
+## Topic 20 最終QA
+技術・試験対応品質ゲートは `PASS`。ただし最終整合QAで進捗・メタデータ記録3件の未同期を確認したため、まだ `completed` にしない。
+
+未同期:
+1. main source冒頭が `topic_20_explanation_source_complete / IN_PROGRESS` のままで、PDF・練習・PowerPointを未作成と記録している。
+2. 練習source末尾の次工程が「練習PDF＋QA」のまま。
+3. 解説PDF QAのsize記録が `17333 bytes` だが、現行mainの同一Git blob `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f` は `17336 bytes`。
+
+- 技術本文の修正要否: `0件`
+- 固定EXAM_ALIGNMENT変更要否: `0件`
+- PDF/PPTX再生成要否: `0件`
+- 判定: `NEEDS_REVISION / topic_20_final_qa_progress_metadata_unsynced`
+
 ## 今回進めた内容
-Topic 20の独立再解答で確認された転記2件を、固定時点の誤りとして履歴を保持したまま訂正した。電気技術者試験センター公式問題・正答・標準解答で訂正内容を再確認し、独立再解答記録QA `8 / 8 PASS`。Topic 20はまだ完了扱いにせず、完成数は `19 / 22` のまま。
+Topic 20最終QAを実施し、過去問対応・成果物・独立再解答の技術ゲートは全てPASSと確認した。一方、進捗・正本メタデータ3件が現行mainと不一致のため `NEEDS_REVISION` とし、完成数は `19 / 22` のまま維持した。
 
 ## 次工程
-Topic 20の最終QAを実施する。
+Topic 20の進捗・メタデータ記録3件を現行mainへ同期する。技術本文、練習問題、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答内容は変更しない。
