@@ -6,9 +6,9 @@
 
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 20のSPEC固定範囲12項目だけから練習問題12問を作成した。系列08は一次理論中心であり、固定範囲だけで完結する二次記述式を件数合わせで追加しない。East iの未公開内部回路・サンプリング周波数・ADC分解能等は使用しない。
 
-- completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
-- 次工程: 解説画像PowerPoint＋表示QA
+- completion: `completed`
+- stage: `COMPLETED`
+- 次工程: Topic 21 制作前EXAM_ALIGNMENT
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
