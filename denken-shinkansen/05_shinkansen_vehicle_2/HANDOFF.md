@@ -8,7 +8,34 @@
 
 Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
 
-現在地は `topic_20_explanation_source_complete`。last completed は Topic 19 `ミニ新幹線 複電圧主回路`。active topic は Topic 20 `N700系 フィードバック制御`。制作前EXAM_ALIGNMENTの固定5問・19答案要素を変更せず、解説sourceへ全要素とSPEC指定10項目・3可視化を接続した。次は解説PDF。
+現在地は `topic_20_explanation_pdf_complete`。last completed は Topic 19 `ミニ新幹線 複電圧主回路`。active topic は Topic 20 `N700系 フィードバック制御`。制作前EXAM_ALIGNMENTの固定5問・19答案要素を変更せず、SPEC指定10項目・3可視化を解説PDFまで接続・QAした。次は練習source。
+
+## Topic 20 解説PDF
+
+成果物:
+- PDF: `topics/20_n700_feedback_control/20_n700_feedback_control_explanation.pdf`
+- QA: `topics/20_n700_feedback_control/20_n700_feedback_control_explanation_pdf_qa.md`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+品質:
+- A4縦: `3 pages`
+- PDFium / pdftoppm 180 dpi: `3 / 3 PASS` / `3 / 3 PASS`
+- 文字抽出: `PASS`
+- 欠落グリフ・黒四角・重なり・クリップ: `0件`
+- 固定公式過去問: `一次1問＋二次4問 / 5問 / 変更なし`
+- 固定答案要素のPDF接続: `一次1＋二次18 / 19 / 19 covered`
+- SPEC指定10項目: `10 / 10 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題・数式・数値再照合: `3 / 3 PASS`
+- 公式解答・標準解答の個別正答参照・保存: `0件`
+- 固定問題差替え / 固定EXAM_ALIGNMENT変更 / SPEC外追加: `0件`
+- 未確認N700系実車制御値の真値化: `0件`
+
+worker reconcile:
+- Topic 20解説source完成状態と他workerの直近mainを確認し、解説source作成やTopic 19 clean blindを重複実施していない。
+- 解説PDF追加 commit `64a65053c90318327c799ea53e298e27b3318279`、PDF QA commit `d396bdd25bee7a1c6eec996446b1de52e25a6fc2`、主source進捗同期 commit `8a205570d4ad820dabafe16d34ee170bc61cc85a`、STATUS同期 commit `e43d6ba8a08b73353ec5e2a5e9a45c648b2cf864` を反映済み。
+- 本工程途中に入った別系列commit `950d2337841764a0b9396b87a0b45b5c28836717` を確認し、本系列成果を包含していることを確認して継続した。
 
 ## Topic 20 解説source
 
@@ -350,4 +377,4 @@ source:
 
 ## 次工程
 
-Topic 20「N700系 フィードバック制御」の解説PDF。`20_n700_feedback_control_explanation_source.md` を正本としてPDF化し、固定5問・19答案要素、SPEC指定10項目・3可視化、数式・文字・レイアウトをQAする。
+Topic 20「N700系 フィードバック制御」の練習source。固定5問・19答案要素とSPEC境界を変更せず、一次試験型と二次記述式を含む練習問題へ接続し、数値・論理を独立再計算する。
