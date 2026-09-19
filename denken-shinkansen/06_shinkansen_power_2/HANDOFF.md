@@ -3,81 +3,97 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_15_completed`
+current_status: `topic_16_exam_alignment_complete`
 
 ## 今回完了
 
-最新main、MASTER SPEC、EXAM_ALIGNMENT SPEC、本系列SPEC、STATUS/HANDOFF、直近同系列コミット、Topic 15現行成果物・各QA・完成後blind・Webカタログをreconcileし、重複作業なしでTopic 15の最終QAを実施した。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、GitHub上の現行成果物をreconcileし、最初の未完了であるTopic 16「25kV架線が短絡したら何kA流れる？」を制作前EXAM_ALIGNMENTまで進めた。
 
-最終QA:
-- `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
-- 判定: `PASS / COMPLETED`
+新規正本:
+- `topics/16_short_circuit/16_short_circuit.md`
 
-Topic 15を `completed` とし、完成数を `15 / 22` へ更新した。
+正式品質ゲートを一次2問＋二次3問、計5問・23答案要素で固定した。
 
-## 品質ゲート維持
+- 令和2年度一次「電力」問3: `5答案要素`
+- 平成25年度一次「電力」問4: `5答案要素`
+- 令和7年度二次「電力・管理」問2: `5答案要素`
+- 令和3年度二次「電力・管理」問3: `6答案要素`
+- 平成21年度二次「電力・管理」問6: `2答案要素`
+- 一次: `2問 / 10答案要素`
+- 二次: `3問 / 13答案要素`
+- 合計: `5問 / 23答案要素`
 
-- R2一次「電力」問6: `5 / 5 PASS`
-- H28一次「電力」問5: `5 / 5 PASS`
-- H26一次「電力」問1: `5 / 5 PASS`
-- H25二次「電力・管理」問6: `3 / 3答案群 PASS`
-- H21二次「電力・管理」問4: `6 / 6 PASS`
-- 一次: `15 / 15 PASS`
-- 二次: `9 / 9 PASS`
-- 合計: `5 / 5問・24 / 24答案要素 PASS`
-- 解説PDF QA: `PASS`
-- 練習PDF QA: `PASS`
-- PowerPoint QA: `PASS`
-- 完成後blind: `24 / 24 PASS`
-- Webカタログ登録: `PASS`
-- 最終QA: `PASS / COMPLETED`
+Topic 16はまだ未完了で、完成数は `15 / 22` のまま。
 
-## artifact整合
+## 固定範囲
 
-- 解説PDF blob: `5665087d40f7c7c9817f4ea0db433972070796ca` — 解説PDF QA記録と一致
-- 練習PDF blob: `d0fbf8d065155af70e64c06f58b279e608b16e4f` — QA後の差替えなし
-- PowerPoint blob: `740457627d8c112a75b171985fc1ec205032352f` — 修復とQAを同期済み
-- PowerPoint SHA-256: `6f64016cb118012d02ab080a6292a31dda279d9c856ddad4ba75eea557b37116`
-- 完成後blindは現行PowerPoint修復後に実施済み
+系列SPECのTopic 16だけを対象とする。
 
-## reconcile結果
+- 短絡容量
+- ％インピーダンス
+- 単位法
+- 正相インピーダンス
+- 逆相インピーダンス
+- 零相インピーダンス
+- 三相短絡
+- 一線地絡
+- 線間短絡
+- 二線地絡
+- 対称座標法
+- 故障種別―短絡電流
+- 故障位置を変えた短絡電流の可視化
 
-- Topic 01〜15: `completed`
-- 完成数: `15 / 22`
-- 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問
-- 固定答案要素: 一次15＋二次9、計24
-- Topic 14固定問題の重複採用: `0件`
-- 新規正式過去問追加: `0件`
-- Topic 16/17/18/20/21先取り: `0件`
-- 未確認実設備値の真値化: `0件`
-- 仕様追加: `0件`
+基本モデル:
+
+```text
+電源系統
+↓
+受電変圧器
+↓
+き電用変圧器
+↓
+き電回路
+↓
+故障点
+```
+
+## 過去問調査上の境界
+
+- 令和8年度一次「電力」はTopic 16固定範囲だけで完結する直接問題なしとして正式採用しない。
+- 令和7年度二次「電力・管理」問3は短絡容量を含むが通常時電力潮流との複合問題のため正式採用しない。
+- 令和6年度二次「電力・管理」問3は一線地絡を含むが通信線誘導まで要求するため正式採用しない。
+- 線間短絡・二線地絡は系列SPECの必須事項として教材へ入れるが、確認していない公式過去問を件数へ加えない。
+- Topic 17の保護リレー、遮断器定格、保護協調、選択遮断は先取りしない。
+- Topic 18の雷サージ、Topic 20の安定度、Topic 21の系統運用は先取りしない。
+- 未確認の新幹線実設備値を真値化しない。
+- 公式過去問本文・図は転載しない。
+- 仕様追加はしない。
 
 ## 次に行う
 
-Topic 16「25kV架線が短絡したら何kA流れる？」の制作前EXAM_ALIGNMENTを行う。
+固定5問・23答案要素について制作前blind独立再解答を行う。
 
-固定範囲:
-- 短絡計算
-- 対称座標法
-- 故障種別―短絡電流
+条件:
+- 保存済み正答を先に見ない。
+- 一次10答案要素、二次13答案要素をすべて根拠付きで再現する。
+- 1答案要素でも教材化に必要な中間知識が不足する場合は、その不足を記録して本文制作へ進まない。
 
 まだ行わない:
-- Topic 16本文・PDF・PowerPoint制作（EXAM_ALIGNMENT固定前）
-- Topic 17以降の先取り
+- Topic 16解説source/PDF
+- Topic 16練習source/PDF
+- Topic 16 PowerPoint
+- Topic 17以降
 
 ## 品質境界
 
-- Topic 15固定問題: `5問`（一次3・二次2）
-- 固定答案要素: `24`
-- 制作前blind: `24 / 24 PASS`
-- 完成後blind: `24 / 24 PASS`
+- Topic 01〜15: `completed`
+- Topic 16: `topic_16_exam_alignment_complete`
+- 完成数: `15 / 22`
+- 固定EXAM_ALIGNMENT: `5問`（一次2・二次3）
+- 固定答案要素: `23`（一次10・二次13）
+- 制作前blind: `未実施`
 - 周辺問題による件数水増し: `0件`
-- Topic 14固定問題の重複採用: `0件`
-- Topic 16故障計算先取り: `0件`（本runでは未着手）
-- Topic 17保護・FRT設計先取り: `0件`
-- Topic 18雷サージ先取り: `0件`
-- Topic 20安定度先取り: `0件`
-- Topic 21需給制御一般の新規展開: `0件`
+- Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
