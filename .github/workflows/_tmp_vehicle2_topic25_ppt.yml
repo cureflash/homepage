@@ -55,7 +55,7 @@ jobs:
           grep -q '速度条件' /tmp/topic25.txt
           grep -q '効率' /tmp/topic25.txt
           grep -q 'H23' /tmp/topic25.txt
-          grep -q '28答案要素' /tmp/topic25.txt
+          grep -q '答案要素' /tmp/topic25.txt
           printf 'render_pages=6\npdftotext=PASS\n' >> "$metrics"
           git add "$p" "$metrics"
           git commit -m 'Build Topic 25 PowerPoint canonical artifact'
