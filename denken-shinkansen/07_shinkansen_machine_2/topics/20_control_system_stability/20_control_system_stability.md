@@ -1,10 +1,10 @@
 # 20 制御系はなぜ発振する？
 
-更新日: 2026-09-19
+更新日: 2026-09-20
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説source本文を完了した。現在 `topic_20_explanation_source_complete / IN_PROGRESS`。PDF・練習プリント・PowerPointは未作成。次工程は解説PDF＋QA。
+解説source、解説PDF、練習source、練習PDF、PowerPoint、独立再解答・記録QAを完了した。現在 `topic_20_progress_metadata_synced / IN_PROGRESS`。固定一次2問＋二次3問・14答案要素は訂正後 `14 / 14 PASS`。進捗・メタデータ記録を現行mainへ同期済み。次工程はTopic 20最終QA再実施。
 
 ## 固定範囲
 
@@ -767,6 +767,8 @@ SPEC指定の「ボード線図」「ゲイン変更時の応答」「安定・�
 
 判定: `PASS / topic_20_explanation_source_complete`
 
+進捗記録: `PASS / topic_20_progress_metadata_synced`
+
 ## 次工程
 
-Topic 20の解説PDFを作成し、数式・表・グラフの表示崩れ、固定5問・14答案要素の説明欠落、仕様境界をQAする。
+Topic 20最終QAを再実施する。
