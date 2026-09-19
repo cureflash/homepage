@@ -3,7 +3,7 @@
 updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
-current_status: `topic_17_clean_blind_pending_fresh_run`
+current_status: `topic_17_clean_blind_blocked_by_context_contamination`
 
 ## 今回実施
 
@@ -13,20 +13,22 @@ reconcile結果:
 - Topic 01〜16は `completed`
 - Topic 17が最初の未完了テーマ
 - Topic 17固定EXAM_ALIGNMENTは一次3問＋二次2問、計5問・26答案要素のまま
-- 既存workerの直近成果はclean blind rerun記録であり、教材本文・PDF・PowerPointは未着手
+- 既存workerの直近成果はclean blind rerunとそのサニタイズであり、教材本文・PDF・PowerPointは未着手
 - Topic 18以降へ進む条件は未成立
 
 ## exact blocker
 
-今回の必須reconcileで旧 `STATUS.md` / `HANDOFF.md` に記載されていた前回blindの具体的不一致内容へ、候補答案固定前に接触した。
+候補答案固定前に、この補助枠の既存会話履歴から過去clean blindの具体的結果へ接触済みである。
 
-このため、このrunで再解答しても `clean blind` としては無効であり、教材制作へ進めない。
+さらに必須の直近コミット確認として `c5b5b0e29200ef36834cdf284ab57a76990b3d86` の差分を確認したところ、STATUS/HANDOFFから削除されたサニタイズ前の具体的なblind不一致内容がcommit patch内に残っていた。
+
+よって、この補助枠で再解答を行っても `clean blind` / 独立再解答とは認定できない。これは同一履歴を保持した補助枠では再発する工程上の競合であり、教材制作へ進めない。
 
 対処:
-- `STATUS.md` / `HANDOFF.md` から候補答案を汚染する具体的な旧不一致内容を除去した。
-- 過去のcandidate/resultファイルは記録としてそのまま保持した。
 - 固定EXAM_ALIGNMENT、固定5問・26答案要素、系列SPECは変更していない。
+- 既存candidate/resultファイルは変更していない。
 - 教材本文、解説PDF、練習PDF、PowerPointには着手していない。
+- blockerをSTATUS/HANDOFFへ記録した。
 
 ## Topic 17固定品質ゲート
 
@@ -54,15 +56,17 @@ Topic 16の短絡電流・短絡容量等は既習事項として再利用する
 
 ## 次に行う
 
-次のfresh runでは、最新mainとサニタイズ済み `STATUS.md` / `HANDOFF.md`、上位仕様、系列SPECを確認後、clean blind専用入力とそこに列挙した公式問題PDFだけを使って固定5問・26答案要素を独立再解答する。
+Topic 17 clean blindは、過去candidate/result・旧blind詳細・この補助枠の過去blind要約へ未接触の独立コンテキストで実施する。
 
-候補答案を保存するまで開かない:
-- `17_protection_coordination_preproduction_blind_20260920.md`
-- 既存の全clean blind candidate/resultファイル
-- 公式標準解答
-- 第三者解説
+候補答案固定前に使用してよい入力:
+- サニタイズ済み `STATUS.md` / `HANDOFF.md`
+- `MASTER_SPEC.md`
+- `EXAM_ALIGNMENT_SPEC.md`
+- 系列 `SPEC.md`
+- `17_protection_coordination_clean_blind_input_20260920.md`
+- そこに列挙された公式問題PDF
 
-候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` の場合だけ教材本文へ進む。
+候補答案保存後にのみ公式標準解答へ進み、`26 / 26 PASS` の場合だけ教材本文へ進む。
 
 まだ行わない:
 - 教材本文作成
