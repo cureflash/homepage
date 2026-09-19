@@ -1,56 +1,72 @@
 # Topic 20 最終QA
 
-更新日: 2026-09-19
+テーマ: `20 East iは走りながら何をどう測る？`
 
-対象: `20 East iは走りながら何をどう測る？`
+再実施日: 2026-09-19
+判定: `PASS / FINAL_QA_COMPLETE`
 
-## 結論
+## 再照合対象
 
-判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+`denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md`、GitHub正本のTopic 20成果物を再照合した。
 
-教材本体・表示QA・過去問対応品質ゲートはPASSしているが、主source `20_east_i_measurement.md` の進捗記録が `EXPLANATION_SOURCE_COMPLETE` のままで、GitHub正本上の実進捗 `INDEPENDENT_REANSWER_COMPLETE` と不一致である。完了判定はGitHub正本と実在成果物で行うため、この不一致を残したまま `completed` にはしない。
+品質ゲートは固定一次5問・25答案要素。系列08は一次理論中心であり、Topic 20固定範囲だけで完答する二次直接対応問題は採用していないため、二次採用0問・二次数合わせ0件を維持する。
 
-## 1. 必須成果物の存在確認
+## 初回blocker再確認
 
-- source Markdown: `20_east_i_measurement.md` → `PASS`
-- 制作前blind独立再解答: `20_east_i_measurement_blind_reanswer.md` → `PASS`
-- 解説PDF: `20_east_i_measurement_explanation.pdf` → `PASS`
-- 解説PDF QA: `20_east_i_measurement_explanation_pdf_qa.md` → `PASS`
-- 練習source: `20_east_i_measurement_practice.md` → `PASS`
-- 練習PDF: `20_east_i_measurement_practice.pdf` → `PASS`
-- 練習PDF QA: `20_east_i_measurement_practice_pdf_qa.md` → `PASS`
-- PowerPoint: `20_east_i_measurement_images.pptx` → `PASS`
-- PowerPoint QA: `20_east_i_measurement_powerpoint_qa.md` → `PASS`
-- 完成後独立再解答: `20_east_i_measurement_reanswer.md` → `PASS`
+初回最終QAのblockerは1件だった。
 
-必須成果物欠落: `0件`。
+1. 主source `20_east_i_measurement.md` の進捗記録がGitHub正本上の実進捗と不一致。
 
-## 2. EXAM_ALIGNMENT・過去問対応品質ゲート
+再確認結果:
 
-固定EXAM_ALIGNMENTは一次5問・25答案要素。
+- 主source stage: `INDEPENDENT_REANSWER_COMPLETE`
+- 主source completion: `in_progress`
+- 解説PDF＋表示QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習PDF＋表示QA: `PASS / PRACTICE_PDF_COMPLETE`
+- PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 主sourceの次工程: `最終QA再実施`
+- 初回blocker解消: `1 / 1`
+
+## 必須成果物
+
+- source Markdown: `PASS`
+- 制作前blind独立再解答: `25 / 25 PASS`
+- 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
+- 解説PDF QA: `8 / 8 PASS`
+- 練習source: `PASS`
+- 練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
+- 練習PDF QA: `4 / 4 PASS`
+- 解説画像PowerPoint: `PASS / POWERPOINT_COMPLETE`
+- PowerPoint QA: `8 / 8 PASS`
+- 完成後独立再解答: `25 / 25 PASS`
+
+必須成果物の欠落: `0件`。
+
+## 過去問対応品質ゲート
 
 - R8 一次 理論 問4: `5 / 5 PASS`
 - R7 一次 理論 問4: `5 / 5 PASS`
 - R6 一次 理論 問6: `5 / 5 PASS`
 - H24 一次 理論 問7: `5 / 5 PASS`
 - H20 一次 理論 問6: `5 / 5 PASS`
-- 合計: `25 / 25 PASS`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
 - R8/R7/R6/H24 公式標準解答直接一致: `20 / 20`
 - H20二次資料掲載解答一致: `5 / 5`
 - 完成教材内の固定範囲だけで再構成: `PASS`
 - 教材外知識補完: `0件`
 
-H20は現行の電気技術者試験センター公式アーカイブ外であり、公式標準解答を直接確認済みとは扱わず、電験王の問題転記・掲載解答による二次照合として記録されている。この出典境界は維持されている。
+H20は現行の電気技術者試験センター公式アーカイブ外であり、公式標準解答を直接確認済みとは扱わず、電験王の問題転記・掲載解答による二次照合という出典境界を維持する。
 
-## 3. 二次試験の扱い
+## 二次試験の扱い
 
-- 系列08は一次「理論」中心: `PASS`
-- Topic 20固定範囲だけで完答する直接対応二次問題の無理な採用: `0件`
+令和8年度二次試験は2026-09-19時点で未実施。系列08は一次理論中心であり、固定EXAM_ALIGNMENTで確認済みの既実施二次試験には、Topic 20固定範囲だけで完答できる直接対応記述問題を採用していない。
+
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 二次採用方針変更: `0件`
 
-## 4. SPEC固定範囲
+## SPEC固定範囲
 
 固定12項目:
 
@@ -73,7 +89,7 @@ H20は現行の電気技術者試験センター公式アーカイブ外であ�
 - 固定範囲外追加: `0件`
 - A/D・サンプリング・エイリアシングを存在しない公式過去問へ接続: `0件`
 
-## 5. 成果物QA
+## 成果物QA
 
 ### 解説PDF
 
@@ -107,32 +123,27 @@ H20は現行の電気技術者試験センター公式アーカイブ外であ�
 - 文字化け / クリッピング / 重なり / 欠落: `0件`
 - 固定一次5問・25答案要素可視化: `25 / 25`
 
-## 6. East i出典境界
+## East i出典境界
 
 - JR東日本/JREメディア公開範囲の検査・検測項目を導入例に限定: `PASS`
 - 2025-10-23 JR東日本資料のトロリ線摩耗・高さ・偏位、カメラ画像等の取得を使用: `PASS`
 - E926内部測定回路の推測: `0件`
 - 未公開ADC bit数・サンプリング周波数・センサ方式の実値化: `0件`
 
-## 7. blocker
+## 範囲・正本QA
 
-`20_east_i_measurement.md` 冒頭の状態欄が実進捗と不一致。
+- 必須成果物欠落: `0件`
+- 主source / STATUS / HANDOFF の最終QA前進捗整合: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 二次数合わせ: `0件`
+- East i未公開内部値の追加: `0件`
+- 初回blocker解消: `1 / 1`
 
-現在の主source記録:
+## 最終判定
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
-- 次工程: `解説PDF＋表示QA`
+`PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
 
-GitHub上の実進捗:
+Topic 20は過去問対応品質ゲートと最終QAを通過した。`completed` への状態同期はまだ行わず、完成数は `19 / 21` のままとする。
 
-- 解説PDF: 完了
-- 練習PDF: 完了
-- PowerPoint: 完了
-- 完成後独立再解答: `25 / 25 PASS`
-- 現在工程: 最終QA
-
-blocker数: `1件`。
-
-## 次工程
-
-主source `20_east_i_measurement.md` の状態欄を実進捗へ同期する。同期後に最終QAを再実施し、PASSした場合のみ `completed` 状態同期へ進む。
+次工程: Topic 20の `completed` 状態同期。
