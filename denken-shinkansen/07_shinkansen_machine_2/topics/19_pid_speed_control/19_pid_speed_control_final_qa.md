@@ -6,37 +6,41 @@
 
 ## 判定
 
-`NEEDS_REVISION / FINAL_QA_BLOCKED_BY_PROGRESS_RECORDS`。
+`PASS / topic_19_final_qa_pass`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` と最新mainを再確認した。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、仕様境界はPASSしたが、main source と練習sourceの進捗記録が現在地へ同期されていないため、Topic 19を `completed` にはしない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md`、最新main、当該系列の `STATUS.md` / `HANDOFF.md`、直近のTopic 19変更を再確認した。前回blockerだったmain sourceと練習sourceの進捗記録不整合が解消され、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、仕様境界、進捗記録整合をすべてPASSした。
 
-本runでは最終QA実施までを1段階とする。技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果は変更していない。
+本runでは最終QA再実施までを1段階とする。技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果は変更していない。Topic 19を `completed` へ確定する進捗記録同期は次工程とする。
 
 ## reconcile
 
-- 最終QA開始時点の最初の未完了テーマは Topic 19。
-- 系列SPECのTopic 19固定範囲は、P・PI・PD・PID、比例・積分・微分、定常偏差、オーバーシュート、応答速度、`Kp`・`Ki`・`Kd` を変えた速度応答比較で変更なし。
-- 固定EXAM_ALIGNMENTは一次1問＋二次4問、計5問・12答案要素のまま変更なし。
-- source Markdown、解説PDF、練習source/PDF、PowerPoint、各QA、独立再解答前ゲート、完成後独立再解答記録の実在を確認。
-- 技術本文・練習問題・正答・PDF/PPTX・固定EXAM_ALIGNMENTの内容変更 `0件`。
+- 最終QA再実施時点の最初の未完了テーマは Topic 19。
+- 開始時main: `49ef631c2ca3d6aca01622275a2ee8fb0d5cc224`。
+- 直近のTopic 19変更を確認し、前回blocker修正以外の技術内容変更がないことを確認した。
+- main source進捗同期 commit: `31d82c6cb2f3f1a69ab0664624ae36faa691f28f`。
+- 練習source進捗同期 commit: `927a61727266ea5e9f21da43050e55ad4d3e6f05`。
+- STATUS/HANDOFFも `topic_19_progress_records_synced / IN_PROGRESS`、次工程「Topic 19 最終QA再実施」へ同期済みだった。
+- 系列SPECのTopic 19固定範囲、固定EXAM_ALIGNMENT一次1問＋二次4問・計5問・12答案要素は変更なし。
 
 ## 必須成果物
 
-- source Markdown: PASS (`3a2d0332418bef3b71cb082c73a328aef65a8175`)
-- 解説PDF: PASS (`bbbe79949058c62725f644236b78f8c961365291`)
-- 解説PDF QA: PASS (`f1841546bc38d1b252c4cd451334ec4957a8e559`)
-- 練習source: PASS (`f1015f13e5deefcbd7e67fbd8d0891249d684333`)
-- 練習PDF: PASS (`5983354776827cfb38889a944d1cbb4c6c269fbe`)
-- 練習PDF QA: PASS (`5f6983a260a8f9dc794ad2f6129896429507bb7b`)
-- 解説画像PowerPoint: PASS (`8d863217eee028e3b14b2ddda9c1dcb9e32cf804`)
-- PowerPoint QA: PASS (`e361be067e78c22bc40dc92936faa765abd97e77`)
-- 独立再解答前ゲート: PASS (`0301f0ea48777c23288e5a6abd23df845ae310ba`)
-- 完成後独立再解答記録: PASS (`d7ccaa49d514e9f41d2ab9b67dc533e3beed562f`)
+- source Markdown: PASS
+- 解説PDF: PASS
+- 解説PDF QA: PASS
+- 練習source: PASS
+- 練習PDF: PASS
+- 練習PDF QA: PASS
+- 解説画像PowerPoint: PASS
+- PowerPoint QA: PASS
+- 独立再解答前ゲート: PASS
+- 完成後独立再解答記録: PASS
 - 公式照合前答案ロック: commit `f6c4c162d94c1c38176be61dc958f069abddea99`
+
+必須成果物の技術内容は前回最終QAから変更なし。
 
 ## EXAM_ALIGNMENT・独立再解答
 
-- H25 一次 機械 問6 (2): 導出 `Ti=K1/K2` は正しい。解答群記号の転記だけ「ヲ」→「ワ」へ訂正済み: `1 / 1 PASS`
+- H25 一次 機械 問6 (2): 導出 `Ti=K1/K2`、公式解答群記号「ワ」への訂正済み記録: `1 / 1 PASS`
 - R07 二次 機械・制御 問4 (1),(2),(3): `3 / 3 PASS`
 - H30 二次 機械・制御 問4 (1): `2 / 2 PASS`
 - H23 二次 機械・制御 問4 (4): `4 / 4 PASS`
@@ -45,7 +49,7 @@
 - 独立再解答記録QA: `6 / 6 PASS`
 - 教材外知識による補完: `0件`
 
-二種の一次・二次を合わせて5問を固定し、二次記述4問を含む。教材の式・解法不足は `0件`。
+二種一次・二次を合わせて5問を固定し、二次記述4問を含む。教材の式・解法不足は `0件`。
 
 ## 練習・表示QA
 
@@ -53,9 +57,10 @@
 - 一次正答一意性: `10 / 10 PASS`
 - 独立再計算・論理QA: `15 / 15 PASS`
 - 固定12答案要素への接続: `12 / 12 COVERED`
-- 解説PDF: A4縦6ページ、表示QA `6 / 6 PASS`、数値・論理 `15 / 15 PASS`
-- 練習PDF: A4縦15ページ、表示QA `15 / 15 PASS`、文字抽出QA PASS
-- PowerPoint: 16:9・4スライド、表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS
+- 解説PDF表示QA: `6 / 6 PASS`
+- 練習PDF表示QA: `15 / 15 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
 
 ## 仕様境界
 
@@ -68,17 +73,15 @@
 
 ## 進捗記録整合
 
-1. `STATUS.md`: `topic_19_independent_reanswer_record_qa_pass / IN_PROGRESS`、次工程「Topic 19 最終QA」で最終QA開始時点の状態を示す — `PASS`。
-2. `HANDOFF.md`: 同じく最終QA開始時点の状態を示す — `PASS`。
-3. main source `19_pid_speed_control.md` の `## 状態`: `topic_19_explanation_pdf_complete / IN_PROGRESS`、次工程「練習source」のままで、独立再解答完了後の現在地へ未同期 — `FAIL`。
-4. 練習source `19_pid_speed_control_practice.md` の `# 次工程`: 「Topic 19練習PDF＋QAを作成する」のままで、独立再解答完了後の現在地へ未同期 — `FAIL`。
+1. `STATUS.md`: `topic_19_progress_records_synced / IN_PROGRESS`、次工程「Topic 19 最終QA再実施」 — `PASS`。
+2. `HANDOFF.md`: 同一状態 — `PASS`。
+3. main source `19_pid_speed_control.md`: `topic_19_progress_records_synced / IN_PROGRESS`、次工程「Topic 19最終QA再実施」 — `PASS`。
+4. 練習source `19_pid_speed_control_practice.md`: 次工程「Topic 19最終QAを再実施する」 — `PASS`。
 
-進捗記録整合: `2 / 4 PASS`。
+進捗記録整合: `4 / 4 PASS`。
 
 ## 最終判定
 
-`NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`。
+`PASS / topic_19_final_qa_pass`。
 
-固定5問・12答案要素、独立再解答、練習QA、PDF/PPTX QA、仕様境界はPASSしている。未完了理由は進捗記録不整合のみ。
-
-次工程は main source と練習sourceの進捗記録を、Topic 19最終QA実施済み・進捗記録同期待ちの状態へ同期する。同期後に最終QAを再実施する。
+固定5問・12答案要素、独立再解答、練習QA、PDF/PPTX QA、仕様境界、進捗記録整合をすべて満たした。次工程はTopic 19のcompleted確定と、STATUS/HANDOFF・主source・練習sourceの完了記録同期。
