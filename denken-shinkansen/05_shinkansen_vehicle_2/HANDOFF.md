@@ -8,13 +8,13 @@
 
 Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
 
-現在地は `topic_27_explanation_pdf_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_practice_source_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、直近コミット、Topic 26最終成果、既存車両二種worker成果をreconcileした。Topic 27は別workerが解説source＋source QAまで完了していたため、その成果を正本として採用し重複制作しなかった。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27固定EXAM_ALIGNMENT、解説source、解説PDFをreconcileした。実行中に別workerがTopic 27解説PDF＋PDF QAを正本へ反映したため、その成果を採用して重複制作を避け、次工程へ進んだ。
 
-次工程のTopic 27解説PDFとPDF QAを作成。A4縦3ページ、PDFium / Poppler `3 / 3 PASS`、`pdftotext -layout PASS`、固定5問・23答案要素 `23 / 23 covered`、SPEC必須7項目 `7 / 7 covered`、固定教材必要説明8項目 `8 / 8 covered`、指定2可視化 `2 / 2 PASS`、3段階例題 `3 / 3 PASS`。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取りはいずれも0件。exact blocker `0件`。
+Topic 27練習sourceとsource QAを作成。一次8問＋二次4問の計12問、固定5問・23答案要素 `23 / 23 connected`、SPEC必須7項目 `7 / 7 covered`、指定2可視化の計算系 `2 / 2 aligned`、数値・論理独立再計算 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取りはいずれも0件。exact blocker `0件`。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -201,6 +201,29 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
+## Topic 27 練習source
+
+成果物:
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_practice_source.md`
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_practice_source_qa.md`
+
+判定:
+- `PASS / PRACTICE_SOURCE_COMPLETE`
+- source blob SHA: `986b72ef8e509eff37bcad8132eff52b3086ffcb`
+- 一次8問、二次4問、合計12問
+- 一次正答一意性: `8 / 8 PASS`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `18 / 18 connected`
+- 二次答案要素: `5 / 5 connected`
+- 合計答案要素: `23 / 23 connected`
+- SPEC必須7項目: `7 / 7 covered`
+- 指定2可視化の計算系: `2 / 2 aligned`
+- L0系未確認実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -213,4 +236,4 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## 次の安全な工程
 
-Topic 27 `L0系① リニア同期モータ` の練習sourceを作成する。固定EXAM_ALIGNMENTと解説PDFを入力として、一次試験型＋二次記述式の問題・完全解説を作り、数値・論理を独立再計算する。L0系未確認実車値を真値化せず、Topic 28範囲を先取りしない。
+Topic 27 `L0系① リニア同期モータ` の練習PDFを生成し、一次8問＋二次4問の問題・正答・完全解説、文字抽出、PDFium/Popplerレンダリング、固定23答案要素への接続をPDF QAする。
