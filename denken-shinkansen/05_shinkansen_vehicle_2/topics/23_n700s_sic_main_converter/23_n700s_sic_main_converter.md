@@ -8,15 +8,17 @@
 
 Topic 17「パワー半導体の損失比較」で既に公式問題・SPEC境界・clean blindまで検証済みの損失／熱設計問題を再利用し、同じ過去問の再調査・再解答を重複実施しない。Topic 23ではSiCとN700Sへの接続、小型軽量化までを追加の教材責務として扱う。
 
-固定5問・23答案要素を変更せず、解説sourceまで作成した。sourceではSPEC固定8項目、指定3可視化、3段階例題を実装し、未確認N700S実車定数は真値化していない。
+固定5問・23答案要素を変更せず、解説sourceと解説PDFまで作成した。PDF QAではA4縦5ページをPDFium / Popplerの両方で確認し、SPEC固定8項目、指定3可視化、3段階例題、実車値境界を維持している。
 
-current_status: `topic_23_explanation_source_complete`
+current_status: `topic_23_explanation_pdf_complete`
 
 現行成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
 
-次工程: Topic 23解説PDF作成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化を変更しない。
+次工程: Topic 23練習source作成。固定5問・23答案要素、SPEC固定8項目、指定3可視化、実車値境界を変更しない。
 
 ## 固定範囲
 
@@ -146,7 +148,7 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 7. SPEC指定3可視化は同一の比較モデルから再生成できるよう計算条件をsourceへ固定する。
 8. N700Sでは確認済み資料の範囲でSiC採用→発熱・冷却・小型軽量化へ接続するが、未確認の実デバイス値を置かない。
 
-## 制作前品質ゲート
+## 制作品質ゲート
 
 - 固定過去問: `5問`
 - 一次: `4問・17答案要素`
@@ -157,4 +159,5 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 - 固定SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
 - 解説source: `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 3段階例題 `3 / 3`
-- 状態: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: A4縦 `5 pages`, PDFium / Poppler `5 / 5 PASS`, 固定23答案要素・SPEC8項目・3可視化 `PASS`
+- 状態: `PASS / EXPLANATION_PDF_COMPLETE`
