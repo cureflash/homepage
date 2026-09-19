@@ -4,9 +4,9 @@
 実施日: 2026-09-19
 
 ## 判定
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、SPEC境界はPASS。一方、旧工程を指す進捗記録がGitHub正本に残っており、進捗記録整合がFAILのため `completed` にはしない。仕様追加は行っていない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。初回最終QAで唯一FAILだった進捗記録整合は7箇所すべて同期済み。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、SPEC境界、進捗記録整合を再確認し、全件PASSとした。仕様追加は行っていない。
 
 ## 必須成果物
 GitHub正本上で以下の実在を確認した。
@@ -78,17 +78,17 @@ GitHub正本上で以下の実在を確認した。
 SPEC境界: PASS。
 
 ## 進捗記録整合
-技術成果物は完成後独立再解答とmain source同期まで進んでいるが、以下7箇所が現在地と不一致。
+初回最終QAでFAILだった7箇所を再確認した。
 
-1. `STATUS.md` — `current_status` が `topic_16_main_source_synced`、`next_start` が最終QA実施のまま。
-2. `16_power_system_integration.md` — 状態、§19、次工程が最終QA未実施／最終QA実施のまま。
-3. `16_power_system_integration_explanation_qa.md` — 次工程が練習問題source作成のまま。
-4. `16_power_system_integration_practice_source.md` — 状態が `practice_source_complete`、次工程が練習PDF作成のまま。
-5. `16_power_system_integration_practice_qa.md` — 次工程がPowerPoint作成のまま。
-6. `16_power_system_integration_powerpoint_qa.md` — 次工程が完成後独立再解答のまま。
-7. `16_power_system_integration_independent_reanswer.md` — 結論が最終QA未実施、次工程がmain source同期のまま。
+1. `STATUS.md` — 最終QA再実施へ同期済み。
+2. `16_power_system_integration.md` — 初回最終QA後の現在地へ同期済み。
+3. `16_power_system_integration_explanation_qa.md` — 最終QA再実施へ同期済み。
+4. `16_power_system_integration_practice_source.md` — 最終QA再実施待ちへ同期済み。
+5. `16_power_system_integration_practice_qa.md` — 最終QA再実施へ同期済み。
+6. `16_power_system_integration_powerpoint_qa.md` — 最終QA再実施へ同期済み。
+7. `16_power_system_integration_independent_reanswer.md` — 最終QA再実施へ同期済み。
 
-進捗記録整合: FAIL。
+進捗記録整合: `7 / 7 PASS`。
 
 ## 最終判定
 - 必須成果物: PASS
@@ -98,8 +98,6 @@ SPEC境界: PASS。
 - 教材外知識補完: `0件`
 - PDF/PPTX QA: PASS
 - SPEC境界: PASS
-- 進捗記録整合: FAIL
+- 進捗記録整合: `7 / 7 PASS`
 
-Topic 16は `NEEDS_REVISION / IN_PROGRESS`。新品質基準の完成数は `15 / 16` のまま。
-
-次工程は上記7箇所の進捗記録を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、完成後独立再解答結果は変更しない。同期後に最終QAを再実施し、全件PASSの場合のみ `completed` とする。
+Topic 16は `PASS / completed`。新品質基準の完成数は `16 / 16`。`02_shinkansen_power_3` は系列完了。次は `MASTER_SPEC.md` の全系列制作順に従い `03_shinkansen_machine_3` を確認する。
