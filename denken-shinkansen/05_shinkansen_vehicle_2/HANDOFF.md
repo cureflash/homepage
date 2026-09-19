@@ -6,52 +6,49 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
+Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
-現在地は `topic_23_powerpoint_recovery_complete`。active topic は Topic 23 `N700S SiC主変換装置`。Topic 24へは進めない。
+現在地は `topic_23_completed`。次のactive topic は Topic 24 `N700S 主電動機設計の比較`。
 
 ## reconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23初回clean blind、source補強、解説PDF・練習PDF再同期、修正後clean blind `23 / 23 PASS`、旧PPTX破損blockerまでreconcile済み。同一工程の重複はしていない。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23の初回clean blind、source補強、解説PDF・練習PDF再同期、修正後clean blind `23 / 23 PASS`、PowerPoint破損blocker、復旧artifactとその表示QAまでreconcileした。同一工程の重複はしていない。
 
-教材内容側の固定ゲート:
+Topic 23最終ゲート:
 
-- 固定過去問: 第二種一次4問＋二次1問 = `5問`
+- 固定過去問: 第二種一次4問＋二次1問 = `5 / 5 PASS`
 - 一次答案要素: `17 / 17 PASS`
 - 二次答案要素: `6 / 6 PASS`
 - 合計: `23 / 23 PASS`
 - 修正後clean blind: `23 / 23 PASS`
+- 解説PDF: `PASS`
+- 練習PDF: `PASS`
+- PowerPoint: `PASS`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 一般式変更: `0件`
 - SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
 
-## 今回完了: PowerPoint復旧
+## Topic 23 PowerPoint復旧・最終QA
 
-旧現行blob `ff2c73d872da4fc3605fb30e5f67c9dc97517f5c` はZIP破損しており、python-pptx / LibreOfficeで開けなかった。補強済みTopic 23 sourceと固定6枚構成から、技術内容・固定EXAM_ALIGNMENT・問題・一般式・SPEC境界を変えずにPPTXを再生成した。
-
-復旧artifact:
+旧破損blob `ff2c73d872da4fc3605fb30e5f67c9dc97517f5c` は現行成果物ではない。復旧後の現行artifactは次。
 
 - file: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_images.pptx`
 - Git blob SHA: `4ac7e4c493e8c24e8ea98d40db2494a7218f14b2`
 - byte size: `8,587 bytes`
 - SHA-256: `b7c1e6af945c9e1c36e01175db365a8c4f119800e0ae655894fdae2ee0b02062`
 - 16:9 / `6 slides`
-
-PowerPoint QA:
-
 - ZIP整合性: `PASS`
-- python-pptx open: `6 / 6 PASS`
+- python-pptx: `6 / 6 PASS`
 - LibreOffice PDF変換: `6 / 6 PASS`
-- PDF page size: `960.009 × 540 pt`
 - pdftoppm/contact sheet: `6 / 6 PASS`
 - geometry overflow: `0`
 - 文字切れ・重なり・欠落グリフ: `0`
-- 固定5問・23答案要素: `23 / 23 covered`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-- clean blind補強2点: `2 / 2 PASS`
-- 新たなexact blocker: `0件`
+
+最終QA `23_n700s_sic_main_converter_final_qa.md` は `PASS / COMPLETED`。Topic 23をcompletedへ移行した。
 
 ## 実車値境界
 
@@ -66,4 +63,4 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、�
 
 ## 次の安全な工程
 
-Topic 23最終QAを再実施する。復旧した現行GitHub PPTXのidentity/表示QA、PASS済みPDF、修正後clean blind `23 / 23`、固定SPEC境界を一括reconcileし、全ゲートPASS時のみTopic 23を `completed` にする。PASS確定前にTopic 24へ進めない。
+Topic 24「N700S 主電動機設計の比較」の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲は極数、同期速度、すべり、周波数、回転速度、トルク、電気角、小型軽量化、および指定3計算・グラフ。まず第二種一次・二次の公式過去問を直近年度から確認し、固定問題・答案要素・教材責務を確定する。確定不能事項は推測せずexact blockerとして記録する。
