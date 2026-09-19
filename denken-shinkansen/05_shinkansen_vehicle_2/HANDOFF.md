@@ -8,19 +8,23 @@
 
 Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
-現在地は `topic_21_explanation_pdf_complete`。active topic は Topic 21 `高速域の速度・けん引力・出力制御`。
+現在地は `topic_21_practice_source_complete`。active topic は Topic 21 `高速域の速度・けん引力・出力制御`。
 
 ## reconcile
 
-最新mainのTopic 21固定EXAM_ALIGNMENT、解説source、source過去問対応ゲート補足を正本として引き継いだ。固定5問・6答案要素、SPEC固定8項目・3可視化を変更していない。
+最新mainのTopic 21固定EXAM_ALIGNMENT、解説source、過去問対応ゲート補足、解説PDFを正本として引き継いだ。直近の同系列worker成果 `fa88a6dc0d7bc088840ff61e75584841c410c148` まで確認し、解説PDF完成後の次工程だけを進めた。固定5問・6答案要素、SPEC固定8項目・3可視化を変更していない。
 
 ## 今回実施
 
-Topic 21解説PDFを作成し、表示・数式・過去問接続QAを完了した。
+Topic 21練習問題・完全解説sourceを作成し、source内で独立再計算と一次正答一意性QAを完了した。
 
 成果物:
-- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation.pdf`
-- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_pdf_qa.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice_source.md`
+
+構成:
+- 一次試験型: 8問（五肢択一）
+- 二次試験型: 4問（途中式・単位・理由説明を含む記述式）
+- 合計: 12問
 
 固定公式過去問:
 - H26 一次 機械 問5 `(4),(5)` — 2答案要素
@@ -29,28 +33,19 @@ Topic 21解説PDFを作成し、表示・数式・過去問接続QAを完了し�
 - R1 二次 機械・制御 問1 `(4)` — 1答案要素
 - H26 二次 機械・制御 問1 `(4)` — 1答案要素
 
-解説PDF品質ゲート:
+練習source品質ゲート:
 - 一次2問＋二次3問、計5問: `変更なし`
-- 一次3＋二次3、計6答案要素: `6 / 6 covered`
+- 一次3＋二次3、計6答案要素: `6 / 6 mapped`
 - H26一次 問5 `(4),(5)` の必要最小条件: `2 / 2 covered`
 - SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-- 3段階例題: `3 / 3 PASS`
+- SPEC指定3可視化への式系接続: `3 / 3 PASS`
+- 一次試験型: `8 / 8 PASS`
+- 二次記述式: `4 / 4 PASS`
+- 独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
 - 公式解答・標準解答の個別正答参照・保存: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
-
-PDF QA:
-- A4縦 `3 pages`
-- PDFium 180 dpi: `3 / 3 PASS`
-- Poppler 180 dpi: `3 / 3 PASS`
-- 文字抽出: `PASS`
-- 欠落グリフ・黒四角・重なり・クリップ: `0件`
-- PDF構造・開封: `PASS`
-- 数式・数値のsource再照合: `PASS`
-- 例題1: `ω=314.159 rad/s`, `T=954.930 N·m`
-- 例題2: `T(4500 min^-1)=636.620 N·m`, `P_train=7.2 MW`, `F(180 km/h)=144.0 kN`
-- 例題3: `200 km/h`で`P_req=5.652 MW`; `240 km/h`で`P_req=8.593 MW`
 
 ## Topic 21 固定範囲
 
@@ -77,11 +72,10 @@ SPEC指定可視化:
 
 ## 次の安全な工程
 
-Topic 21練習sourceを作成する。
+Topic 21練習PDFを作成する。
 
 要件:
-- 固定5問・6答案要素を変更しない。
-- 一次試験型と二次記述式を含め、途中式・単位・理由説明まで採点可能にする。
-- 新幹線固有知識を知らなくても解ける一般問題にする。
+- 練習sourceの一次8問＋二次4問、正答、途中式、単位、仮定値を変更しない。
+- 固定5問・6答案要素、SPEC固定8項目・3可視化を維持する。
 - 学習用仮定値を実車値として表示しない。
-- clean blind再解答は練習PDF・PowerPoint完成後に行う。
+- clean blind公式照合はPowerPoint完成後に行う。
