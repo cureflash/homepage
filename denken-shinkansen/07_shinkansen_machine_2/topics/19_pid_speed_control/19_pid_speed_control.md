@@ -4,9 +4,9 @@
 
 ## 状態
 
-Topic 19の制作前EXAM_ALIGNMENT、解説source、解説PDF＋QAを完了した。
+Topic 19の制作前EXAM_ALIGNMENT、解説source、解説PDF＋QA、練習source、練習PDF＋QA、解説画像PowerPoint＋QA、独立再解答前ゲート、完成後独立再解答・記録QA、最終QA初回を完了した。最終QA初回は技術・試験対応ゲートをPASSし、進捗記録不整合だけで `NEEDS_REVISION` となった。
 
-現在 `topic_19_explanation_pdf_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・12答案要素は変更していない。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。解説PDF QAは表示6/6、数値・論理15/15、固定12答案要素12/12でPASS。次工程はTopic 19練習source。
+現在 `topic_19_progress_records_synced / IN_PROGRESS`。固定一次1問＋二次4問、計5問・12答案要素、技術本文、練習問題、PDF/PPTX、独立再解答結果は変更していない。次工程はTopic 19最終QA再実施。
 
 ## 固定範囲
 
