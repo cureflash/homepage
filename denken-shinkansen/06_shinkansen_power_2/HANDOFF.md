@@ -3,32 +3,36 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_exam_alignment_complete`
+current_status: `topic_16_preproduction_blind_complete`
 
 ## 今回完了
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、直近同系列コミットをreconcileし、Topic 16の固定5問・23答案要素について制作前blind独立再解答を開始した。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFFを確認し、Topic 16の制作前blind品質ゲートを完了した。
+
+初回runでblind不成立だった平成21年度二次「電力・管理」問6の2答案要素について、公式問題PDF `20091129_ch_second_q01.pdf` の問題文・系統図・インピーダンス表だけを入力としてclean blind独立再解答を実施した。独立計算確定後に公式標準解答と照合した。
 
 記録:
 - `topics/16_short_circuit/16_short_circuit_preproduction_blind_20260919.md`
+- `topics/16_short_circuit/16_short_circuit_preproduction_blind_clean_rerun_20260919.md`
 
-結果:
+clean rerun:
+- CB3開放: `6.08 kA`
+- CB3投入: `10.3 kA`
+- 公式標準解答照合: `2 / 2一致`
+- 判定: `2 / 2 PASS`
+
+正式品質ゲート:
 - 令和2年度一次「電力」問3: `5 / 5 PASS`
 - 平成25年度一次「電力」問4: `5 / 5 PASS`
 - 令和7年度二次「電力・管理」問2: `5 / 5 PASS`
 - 令和3年度二次「電力・管理」問3: `6 / 6 PASS`
-- 平成21年度二次「電力・管理」問6: 再計算は公式標準解答と `2 / 2一致` したが、問題取得時に第三者解説ページの解答表示を先に見たため `BLIND_NOT_VALID`
-- blind-valid: `21 / 23`
+- 平成21年度二次「電力・管理」問6: `2 / 2 PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `13 / 13 PASS`
+- 合計: `23 / 23 PASS`
 - 公式標準解答との照合: `23 / 23一致`
-- 判定: `NEEDS_RERUN / IN_PROGRESS`
 
-固定5問・23答案要素、教材範囲、完成数 `15 / 22` は変更していない。本文制作へは進んでいない。
-
-## exact blocker
-
-`平成21年度二次「電力・管理」問6の2答案要素だけ、解答未提示の問題データからclean blindで再解答する必要がある。`
-
-この2答案要素は計算自体の誤りではなく、blind条件の手続き上の不成立である。品質ゲートを緩和してPASS扱いにはしない。
+固定5問・23答案要素、教材範囲、完成数 `15 / 22` は変更していない。
 
 ## 固定範囲
 
@@ -76,16 +80,18 @@ current_status: `topic_16_exam_alignment_complete`
 
 ## 次に行う
 
-平成21年度二次「電力・管理」問6の2答案要素だけ、clean blind独立再解答を再実施する。
+固定済み教材マッピングに従ってTopic 16解説sourceを作成する。
 
 条件:
-- 公式問題PDF `20091129_ch_second_q01.pdf` の問題図・表だけを入力として使う。
-- 公式標準解答、第三者解説、今回のblind記録に保存した数値結果を先に見ない。
-- 2答案要素を根拠・途中式・単位付きで再現する。
-- `2 / 2 PASS` になるまで本文制作へ進まない。
+- MASTER SPECの解説プリント最低構成に接続する。
+- 3段階例題を含める。
+- 固定5問・23答案要素を本文節へ対応付ける。
+- 三相短絡、一線地絡、線間短絡、二線地絡を固定範囲どおり扱う。
+- 故障位置―短絡電流の可視化へ接続する。
+- Topic 17以降を先取りしない。
 
 まだ行わない:
-- Topic 16解説source/PDF
+- Topic 16解説PDF
 - Topic 16練習source/PDF
 - Topic 16 PowerPoint
 - Topic 17以降
@@ -93,11 +99,11 @@ current_status: `topic_16_exam_alignment_complete`
 ## 品質境界
 
 - Topic 01〜15: `completed`
-- Topic 16: `topic_16_exam_alignment_complete`
+- Topic 16: `topic_16_preproduction_blind_complete`
 - 完成数: `15 / 22`
 - 固定EXAM_ALIGNMENT: `5問`（一次2・二次3）
 - 固定答案要素: `23`（一次10・二次13）
-- 制作前blind: `21 / 23 blind-valid / NEEDS_RERUN`
+- 制作前blind: `23 / 23 PASS`
 - 公式標準解答照合: `23 / 23一致`
 - 周辺問題による件数水増し: `0件`
 - Topic 17以降先取り: `0件`
