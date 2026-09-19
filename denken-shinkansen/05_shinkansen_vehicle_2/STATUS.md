@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `26 / 39`
-- current_status: `topic_27_exam_alignment_complete`
+- current_status: `topic_27_explanation_source_complete`
 - last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
 - active_topic: `27 L0系① リニア同期モータ`
-- next_start: Topic 27の解説source作成。固定5問・23答案要素を本文へ全件マッピングし、L0系未確認実車値を真値化しない
+- next_start: Topic 27の解説PDF生成＋PDF QA。固定5問・23答案要素、SPEC必須7項目、指定2可視化、3段階例題、L0系実車値境界を維持する
 
 ## Topic 25 最終状態
 
@@ -231,10 +231,30 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - 負荷角・フェーザ・出力角特性の本格解析: Topic 28へ送る
 - exact blocker: `0件`
 
+## Topic 27 解説source
+
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- path: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_explanation_source.md`
+- QA: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_explanation_source_qa.md`
+- 固定過去問: `5 / 5 mapped`
+- 一次答案要素: `18 / 18 covered`
+- 二次答案要素: `5 / 5 covered`
+- 合計答案要素: `23 / 23 covered`
+- SPEC必須7項目: `7 / 7 covered`
+- 固定教材必要説明8項目: `8 / 8 covered`
+- SPEC指定2可視化: `2 / 2 defined`
+- 3段階例題: `3 / 3 PASS`
+- 例題数値独立再計算: `3 / 3 PASS`
+- 未確認L0系実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27は制作前EXAM_ALIGNMENT完了、次は解説source。
+Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27は解説source完了、次は解説PDF生成＋PDF QA。
