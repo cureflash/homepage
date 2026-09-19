@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_23_remediation_sync_qa_complete`
+- current_status: `topic_23_explanation_pdf_resync_complete`
 - last_completed_topic: `22 E5系 再粘着制御`
 - active_topic: `23 N700S SiC主変換装置`
-- next_start: Topic 23解説PDFを補強後sourceから再生成し、表示・数式・固定23答案要素・clean blind補強2点をQAする
+- next_start: Topic 23練習PDFを補強後practice sourceから再生成し、R2読図補強2点・一次問4の `VI t_s/6` 条件限定・既存12問の正答/数値不変をQAする
 
 ## 完了済み
 
@@ -81,7 +81,7 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - QA commit: `d2b9e2e38b784c266bdf1df074e23807e1990955`
 
 同期判定:
-- 解説PDF: `REGENERATE_REQUIRED`。補強後sourceの「矢印極性→状態表→平均値」と固定R2図3の三角波 `1/2` 判定を反映する
+- 解説PDF: `PASS / RESYNCED`。補強後sourceの「矢印極性→状態表→平均値」と固定R2図3の三角波 `1/2` 判定を反映済み
 - 練習PDF: `REGENERATE_REQUIRED`。R2読図補強と `VI t_s/6` の条件限定を反映する
 - PowerPoint: `REGENERATE_REQUIRED`。既存内容QAには固定R2向け2読図手順が明示されていないため、既存6枚構成の範囲で最小同期する
 
@@ -96,10 +96,31 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - JR東海7%値・富士電機20%値の誤拡張: `0件`
 - 新たなexact blocker: `0件`
 
+## Topic 23 解説PDF clean blind後再同期
+
+判定: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
+
+- A4縦: `5 pages`
+- SHA-256: `13ea5c2773466a40f1053ea850051b5b2740682244495d7c8b482f86a83e6e27`
+- PDFium render: `5 / 5 PASS`
+- Poppler render: `5 / 5 PASS`
+- clean blind補強2点: `2 / 2 PASS`
+- 固定過去問: `5 / 5 covered`
+- 一次答案要素: `17 / 17 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計答案要素: `23 / 23 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 一般式変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。Topic 21は `PASS / completed` のまま。
 
 ## 次工程
 
-Topic 23解説PDFを補強後sourceから再生成し、表示・数式・固定23答案要素・clean blind補強2点をQAする。その後、練習PDF、PowerPointを順に必要最小限同期する。3成果物同期後に、初回候補とは別ファイルでclean blind再試験を行う。
+Topic 23練習PDFを補強後practice sourceから再生成し、R2読図補強2点と一次問4の `VI t_s/6` 条件限定を同期する。既存12問の問題数・正答・数値は変更せず、表示・内容QA後にPowerPointを必要最小限同期する。3成果物同期後に、初回候補とは別ファイルでclean blind再試験を行う。

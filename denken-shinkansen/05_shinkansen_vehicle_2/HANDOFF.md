@@ -8,11 +8,11 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_remediation_sync_qa_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_explanation_pdf_resync_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## reconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23 clean blind候補・公式照合、source補強、成果物同期QAをreconcile済み。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23 clean blind候補・公式照合、source補強、成果物同期QA、解説PDF再同期をreconcile済み。
 
 - 初回clean blind候補は commit `17837d40774f12e8348e9b55f250d5573b35f901` で公式照合前に固定。後編集しない
 - 初回公式照合は固定23答案要素中 `21 / 23 PASS`。不一致はR2一次「機械」問2 `(2),(4)` のみ
@@ -22,6 +22,7 @@ latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果
 - 成果物同期QA正本: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_post_blind_artifact_sync_qa.md`
 - 成果物同期QA commit: `d2b9e2e38b784c266bdf1df074e23807e1990955`
 - 同工程で生成された重複QAは削除済みで、正本1件へ統合
+- 解説PDFは補強後sourceから再生成し、clean blind補強2点・固定23答案要素・表示QAを `PASS`
 - Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は既存診断どおり過去問固有丸め差。一般式 `P=Tω`、`ω=2πN/60` は変更しない
 
 ## Topic 23 固定EXAM_ALIGNMENT
@@ -54,7 +55,7 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 
 判定: `SYNC_REQUIRED / 3 ARTIFACTS`
 
-- 解説PDF: `REGENERATE_REQUIRED`。補強後sourceの2読図手順を反映する
+- 解説PDF: `PASS / RESYNCED`。補強後sourceの2読図手順を反映し、表示・内容QA済み
 - 練習PDF: `REGENERATE_REQUIRED`。R2読図補強と `VI t_s/6` の条件限定を反映する
 - PowerPoint: `REGENERATE_REQUIRED`。固定R2向け2読図手順を既存6枚構成の範囲で最小同期する
 
@@ -70,8 +71,28 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 - 初回clean blind候補の後編集: `0件`
 - 新たなexact blocker: `0件`
 
+## 解説PDF clean blind後再同期
+
+判定: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
+
+- `23_n700s_sic_main_converter_explanation.pdf`
+- `23_n700s_sic_main_converter_explanation_pdf_qa.md`
+- A4縦 `5 pages`
+- SHA-256 `13ea5c2773466a40f1053ea850051b5b2740682244495d7c8b482f86a83e6e27`
+- PDFium `5 / 5 PASS`
+- Poppler `5 / 5 PASS`
+- clean blind補強2点 `2 / 2 PASS`
+- 固定5問・23答案要素 `23 / 23 covered`
+- SPEC固定8項目 `8 / 8 covered`
+- SPEC指定3可視化 `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 一般式変更 `0件`
+- SPEC外追加 `0件`
+- 未確認N700S実車値の真値化 `0件`
+- 新たなexact blocker `0件`
+
 Topic 23はまだ `completed` にしない。
 
 ## 次の安全な工程
 
-Topic 23解説PDFを補強後sourceから再生成し、表示・数式・固定23答案要素・clean blind補強2点をQAする。その後、練習PDF、PowerPointを順に必要最小限同期する。3成果物同期後に、初回候補とは別ファイルでclean blind再試験を行う。
+Topic 23練習PDFを補強後practice sourceから再生成する。R2読図補強2点と一次問4 `VI t_s/6` の条件限定を同期し、既存12問の問題数・正答・数値は変更しない。表示・内容QA後にPowerPointを必要最小限同期し、3成果物同期後に初回候補とは別ファイルで修正後clean blindを実施する。
