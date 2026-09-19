@@ -9,7 +9,7 @@ current_status: `topic_16_explanation_pdf_complete`
 
 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、直近コミットをreconcileし、既存workerのTopic 16制作前blind・clean rerun・解説source成果を正本として重複作業を避けた。
 
-そのうえで、既存解説sourceからTopic 16解説PDFを生成し、表示・文字抽出・内容・数値・試験対応QAを実施した。
+既存解説sourceに基づくTopic 16解説PDFを生成し、表示・文字抽出・内容・数値・試験対応QAを実施した。
 
 成果物:
 - `topics/16_short_circuit/16_short_circuit_explanation.pdf`
@@ -17,12 +17,14 @@ current_status: `topic_16_explanation_pdf_complete`
 
 QA結果:
 - A4縦: `6ページ`
-- SHA-256: `b8b52186c351ead123b489eb9e1148d1ec09c7e8ca1cc410f4f5561b2e99bda1`
+- ファイルサイズ: `10463 bytes`
+- Git blob SHA-1: `cc7fa719275a8b74fed7f370583eadd96f9977fb`
+- SHA-256: `a7af60c8169ad998f38221bb026cfd00be95a9b94f809e5a229c9ba4bbbdc42d`
 - PDFium 200 dpi: `6 / 6 PASS`
 - Poppler: `6 / 6 PASS`
 - ページ外逸脱 / 文字重なり / 本文切れ: `0件`
 - 黒四角 / 欠損グリフ: `0件`
-- 文字抽出: `PASS`
+- `pdftotext -layout`: `PASS`
 - 数式 / 表 / 単位 / 対称分回路: `PASS`
 - 故障位置―短絡電流グラフ: `PASS`
 - MASTER SPEC最低構成: `PASS`
@@ -32,7 +34,7 @@ QA結果:
 - 数値独立再計算: `PASS`
 - 判定: `PASS / topic_16_explanation_pdf_complete`
 
-CIDフォントの非埋込み警告はあるが、PDFium / Popplerの両レンダラで全6ページの日本語表示を確認済みで、欠損・表示崩れはない。
+組込みCIDフォントはFontDescriptor非保持の警告が出るが、PDFium / Popplerで全6ページの日本語表示を確認し、文字抽出も可能。表示・収録QA上の欠損はない。
 
 ## 正式品質ゲート
 
