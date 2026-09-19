@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_23_powerpoint_complete`
+- current_status: `topic_23_blind_reanswer_needs_revision`
 - last_completed_topic: `22 E5系 再粘着制御`
 - active_topic: `23 N700S SiC主変換装置`
-- next_start: Topic 23教材だけで固定5問・23答案要素をclean blind独立再解答し、候補固定後に公式解答・標準解答と照合する
+- next_start: Topic 23解説source・練習sourceへR2一次問2で露呈した2点だけを最小修正し、対応成果物の同期要否をQAする
 
 ## 完了済み
 
@@ -69,95 +69,45 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## Topic 23 解説source
 
-判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`（clean blind後に2点の補強必要）
 
 - 固定5問: `5 / 5 unchanged`
-- 一次答案要素: `17 / 17 covered`
+- 一次答案要素: 当初 `17 / 17 covered` 判定だったが、clean blindでR2一次問2 `(2),(4)` の説明不足を検出
 - 二次答案要素: `6 / 6 covered`
-- 合計: `23 / 23 covered`
 - SPEC固定8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 regeneration-ready`
-- 3段階例題: `3 / 3 complete`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
-- 新たなexact blocker: `0件`
 
 ## Topic 23 解説PDF
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / EXPLANATION_PDF_COMPLETE`（source補強後に同期要否QA）
 
 - A4縦: `5 pages`
 - PDFium render: `5 / 5 PASS`
 - Poppler render: `5 / 5 PASS`
 - 文字抽出・破損グリフ: `PASS`
-- 固定5問・23答案要素: `23 / 23 covered`
 - SPEC固定8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC外追加: `0件`
-- 未確認N700S実車値の真値化: `0件`
-- JR東海7%値のSiC単独効果化: `0件`
-- 富士電機20%軽量化の車両全体への誤拡張: `0件`
+- 仮定値／実車値境界: `PASS`
 
-成果物:
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
+## Topic 23 練習source / 練習PDF
 
-## Topic 23 練習source
+判定: `PASS / PRACTICE_PDF_COMPLETE`（clean blind後に2点の補強・同期要否QA）
 
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`
-
-- 一次試験型: `8問`（五肢択一）
-- 二次試験型: `4問`（途中式・前提・単位・理由を含む記述式）
+- 一次試験型: `8問`
+- 二次試験型: `4問`
 - 合計: `12問`
-- 固定5問・23答案要素: `23 / 23 connected`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化の式系・条件: `3 / 3 aligned`
 - 数値・論理独立再計算: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
-- JR東海7%値のSiC単独効果化: `0件`
-- 富士電機20%軽量化の車両全体への誤拡張: `0件`
-- 新たなexact blocker: `0件`
-
-成果物追加:
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
-
-## Topic 23 練習PDF
-
-判定: `PASS / PRACTICE_PDF_COMPLETE`
-
-- A4縦: `5 pages`
-- PDFium 180 dpi: `5 / 5 PASS`
-- Poppler 180 dpi: `5 / 5 PASS`
-- 文字抽出・破損グリフ: `PASS`
-- 一次試験型: `8 / 8`
-- 二次記述式: `4 / 4`
-- 全問題・完全解説: `12 / 12`
-- sourceから問題条件・正答・計算値の変更: `0件`
-- 固定5問・23答案要素: `23 / 23 covered`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化への接続: `3 / 3 aligned`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC外追加: `0件`
-- 未確認N700S実車値の真値化: `0件`
-- JR東海7%値のSiC単独効果化: `0件`
-- 富士電機20%軽量化の車両全体への誤拡張: `0件`
-- 新たなexact blocker: `0件`
-
-成果物追加:
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice.pdf`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_pdf_qa.md`
 
 ## Topic 23 解説画像PowerPoint
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `PASS / POWERPOINT_COMPLETE`（source補強後に同期要否QA）
 
 - 16:9: `6 slides`
 - python-pptx再オープン: `6 / 6 PASS`
@@ -166,19 +116,33 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - pdftoppm 150 dpi: `6 / 6 PASS`
 - geometry overflow: `0`
 - クリッピング・文字重なり・欠落グリフ: `0`
-- 固定5問・23答案要素: `23 / 23 covered`
 - SPEC固定8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 covered`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
-- JR東海7%値のSiC単独効果化: `0件`
-- 富士電機20%軽量化の車両全体への誤拡張: `0件`
+
+## Topic 23 clean blind独立再解答
+
+判定: `FAIL / NEEDS_REVISION`
+
+- 候補固定commit: `17837d40774f12e8348e9b55f250d5573b35f901`
+- 固定5問: `4問完全一致 + R2一次問2で2要素不一致`
+- 一次答案要素: `15 / 17 PASS`
+- 二次答案要素: `6 / 6 PASS`
+- 合計答案要素: `21 / 23 PASS`
+- 候補固定後の答案変更: `0件`
+- R2一次問2 `(2)`: 候補 `(1-D)V_dc`、公式 `D V_dc`。原因はSオン／オフ時のダイオード電圧状態の取り違え
+- R2一次問2 `(4)`: 候補 `(1/6)V_dc I_dc T_2`、公式 `(1/2)V_dc I_dc T_2`。原因は公式図3の `i_s v_s` 三角波を別の同時直線ランプモデルへ置換したこと
+- H24二次6要素: `6 / 6 PASS`。未丸め値と公式3桁値の差のみ
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 一般式変更: `0件`
+- SPEC外追加: `0件`
 - 新たなexact blocker: `0件`
 
 成果物追加:
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_images.pptx`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_powerpoint_qa.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_clean.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_official_check.md`
 
 ## Topic 21 H26二次 問1(4)
 
@@ -186,4 +150,4 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## 次工程
 
-Topic 23教材だけで固定5問・23答案要素をclean blind独立再解答し、候補固定後に公式解答・標準解答と照合する。固定EXAM_ALIGNMENT、SPEC、仮定値／実車値境界を変更しない。
+Topic 23の固定R2一次問2に必要な2点だけを解説source・練習sourceへ最小修正する。降圧チョッパの状態表で `V=D V_dc` を明示し、スイッチングエネルギーは問題で与えられた `p(t)=v(t)i(t)` 波形をそのまま積分する読図手順を追加する。SPEC・一般式・固定EXAM_ALIGNMENTは変更しない。対応する解説PDF・練習PDF・PowerPointの同期要否をQAし、修正後に新しいclean blind再試験を別記録で行う。
