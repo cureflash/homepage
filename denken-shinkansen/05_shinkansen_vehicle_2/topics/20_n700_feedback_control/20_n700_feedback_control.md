@@ -4,11 +4,24 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説source、解説PDFを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`の固定範囲から外さず、第二種の一次・二次を含む固定5問・19答案要素をPDFまで接続した。
+制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、clean blind候補固定・公式照合まで完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`の固定範囲から外さず、第二種の一次・二次を含む固定5問・19答案要素は `19 / 19 PASS`。最終QAでは技術品質ゲートはすべてPASSし、主sourceの進捗表記だけが旧状態だったため完成判定を保留した。本ファイルの進捗表記を実成果物へ同期した。
 
-current_status: `topic_20_explanation_pdf_complete`
+current_status: `topic_20_progress_sync_complete`
 
-次工程: 練習source。固定5問・19答案要素とSPEC境界を変更せず、一次試験型と二次記述式を含む練習問題へ接続する。公式解答・標準解答の個別正答は完成後clean blind候補固定まで参照・保存しない。
+現行成果物:
+- `topics/20_n700_feedback_control/20_n700_feedback_control_explanation_source.md`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_explanation.pdf`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_explanation_pdf_qa.md`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_practice_source.md`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_practice.pdf`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_practice_qa.md`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_images.pptx`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_powerpoint_qa.md`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_blind_reanswer_candidates_clean.md`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_blind_reanswer_official_check.md`
+- `topics/20_n700_feedback_control/20_n700_feedback_control_final_qa.md`（前回判定は `NEEDS_REVISION / PROGRESS_SYNC_REQUIRED`。再実施対象）
+
+次工程: Topic 20最終QAを再実施する。技術本文、問題、正答、数式、PDF/PPTX、固定5問・19答案要素、固定EXAM_ALIGNMENT、SPEC境界は変更せず、進捗整合を再確認する。全品質ゲートPASSの場合のみ `completed` とし、完成数を `20 / 39` へ更新する。
 
 ## 固定範囲
 
@@ -216,4 +229,4 @@ current_status: `topic_20_explanation_pdf_complete`
 - 公式解答・標準解答の個別正答参照・保存: `0件`
 - 固定問題差替え / SPEC外追加 / 未確認N700系実車制御値の真値化: `0件`
 
-次工程は練習source。
+この節の作成時点では次工程は練習source。現行の次工程は冒頭「状態」の最終QA再実施。
