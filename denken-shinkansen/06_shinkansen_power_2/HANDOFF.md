@@ -3,38 +3,52 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_explanation_source_complete`
+current_status: `topic_16_explanation_pdf_complete`
 
 ## 今回完了
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、直近Topic 16コミットをreconcileし、他workerのclean blind完了を正本として重複作業を避けた。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、直近コミットをreconcileし、既存workerのTopic 16制作前blind・clean rerun・解説source成果を正本として重複作業を避けた。
 
-そのうえで、固定済み教材マッピングだけを使ってTopic 16解説sourceを作成した。
+そのうえで、既存解説sourceからTopic 16解説PDFを生成し、表示・文字抽出・内容・数値・試験対応QAを実施した。
 
 成果物:
-- `topics/16_short_circuit/16_short_circuit_explanation.md`
+- `topics/16_short_circuit/16_short_circuit_explanation.pdf`
+- `topics/16_short_circuit/16_short_circuit_explanation_pdf_qa.md`
 
-収録内容:
-- 短絡現象、短絡容量
-- 単位法、％インピーダンス、基準量変換
-- 系統図から故障点等価インピーダンスを作る手順
-- 正相・逆相・零相インピーダンス
-- 三相短絡、一線地絡、線間短絡、二線地絡
-- 対称分回路と相電流への復元
-- 短絡電流上限からの逆算
-- 新幹線25kVき電側の単相等価モデルとの区別
-- 故障位置―短絡電流の教材用仮定データ
-- 3段階例題
-- 頻出ミス
-- 公式・解法まとめ
+QA結果:
+- A4縦: `6ページ`
+- SHA-256: `b8b52186c351ead123b489eb9e1148d1ec09c7e8ca1cc410f4f5561b2e99bda1`
+- PDFium 200 dpi: `6 / 6 PASS`
+- Poppler: `6 / 6 PASS`
+- ページ外逸脱 / 文字重なり / 本文切れ: `0件`
+- 黒四角 / 欠損グリフ: `0件`
+- 文字抽出: `PASS`
+- 数式 / 表 / 単位 / 対称分回路: `PASS`
+- 故障位置―短絡電流グラフ: `PASS`
+- MASTER SPEC最低構成: `PASS`
+- 3段階例題: `3 / 3 PASS`
+- 固定10説明項目: `10 / 10 PASS`
+- 固定5問・23答案要素: `23 / 23 covered`
+- 数値独立再計算: `PASS`
+- 判定: `PASS / topic_16_explanation_pdf_complete`
 
-固定マッピング:
-- 正式5問・23答案要素: `23 / 23 covered`
-- 過去問逆算の固定10説明項目: `10 / 10`
-- 制作前blind: `23 / 23 PASS`
+CIDフォントの非埋込み警告はあるが、PDFium / Popplerの両レンダラで全6ページの日本語表示を確認済みで、欠損・表示崩れはない。
+
+## 正式品質ゲート
+
+固定済みの一次2問＋二次3問、計5問・23答案要素から変更しない。
+
+- 令和2年度一次「電力」問3: `5 / 5 PASS`
+- 平成25年度一次「電力」問4: `5 / 5 PASS`
+- 令和7年度二次「電力・管理」問2: `5 / 5 PASS`
+- 令和3年度二次「電力・管理」問3: `6 / 6 PASS`
+- 平成21年度二次「電力・管理」問6: `2 / 2 PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `13 / 13 PASS`
+- 合計: `23 / 23 PASS`
 - 公式標準解答照合: `23 / 23一致`
 
-解説sourceの `23 / 23 covered` は説明箇所の存在確認であり、完成後blind PASSを意味しない。
+平成21年度二次問6の初回blind汚染はclean rerunで解消済み。公式問題だけからCB3開放 `6.08 kA`、CB3投入 `10.3 kA` を独立再計算後に公式標準解答と照合し、`2 / 2 PASS`。
 
 ## 固定範囲
 
@@ -73,7 +87,7 @@ current_status: `topic_16_explanation_source_complete`
 - 令和8年度一次「電力」はTopic 16固定範囲だけで完結する直接問題なしとして正式採用しない。
 - 令和7年度二次「電力・管理」問3は短絡容量を含むが通常時電力潮流との複合問題のため正式採用しない。
 - 令和6年度二次「電力・管理」問3は一線地絡を含むが通信線誘導まで要求するため正式採用しない。
-- 線間短絡・二線地絡は系列SPECの必須事項として教材へ入れるが、確認していない公式過去問を件数へ加えない。
+- 線間短絡・二線地絡は系列SPEC必須事項として教材へ入れるが、確認していない公式過去問を件数へ加えない。
 - Topic 17の保護リレー、遮断器定格、保護協調、選択遮断は先取りしない。
 - Topic 18の雷サージ、Topic 20の安定度、Topic 21の系統運用は先取りしない。
 - 未確認の新幹線実設備値を真値化しない。
@@ -82,20 +96,19 @@ current_status: `topic_16_explanation_source_complete`
 
 ## 次に行う
 
-`topics/16_short_circuit/16_short_circuit_explanation.md` から解説PDFを生成し、PDF QAを行う。
+Topic 16の練習問題sourceを作成する。
 
 条件:
-- MASTER SPECの解説プリント最低構成を欠落させない。
-- 固定5問・23答案要素を `23 / 23` 保持する。
-- 固定10説明項目を `10 / 10` 保持する。
-- 3段階例題を含める。
-- 三相短絡、一線地絡、線間短絡、二線地絡を固定範囲どおり扱う。
-- 故障位置―短絡電流の可視化を含める。
-- 数式、表、単位、対称分回路の表示崩れをPDF QAで確認する。
+- 固定5問・23答案要素を変更しない。
+- 固定10説明項目との接続を保つ。
+- MASTER / EXAM_ALIGNMENTの二種仕様に従い、一次試験型に加え、対応する二次記述型を含める。
+- 記述式は途中式、前提、単位、理由説明まで採点可能な形にする。
+- 三相短絡、一線地絡、線間短絡、二線地絡、単位法・％Z、短絡容量、故障位置―短絡電流を固定範囲どおり扱う。
+- 未確認実設備値は使わず、必要な数値は教材用仮定値と明記する。
 - Topic 17以降を先取りしない。
 
 まだ行わない:
-- Topic 16練習source/PDF
+- Topic 16練習PDF
 - Topic 16 PowerPoint
 - Topic 16完成後blind
 - Topic 17以降
@@ -103,7 +116,7 @@ current_status: `topic_16_explanation_source_complete`
 ## 品質境界
 
 - Topic 01〜15: `completed`
-- Topic 16: `topic_16_explanation_source_complete`
+- Topic 16: `topic_16_explanation_pdf_complete`
 - 完成数: `15 / 22`
 - 固定EXAM_ALIGNMENT: `5問`（一次2・二次3）
 - 固定答案要素: `23`（一次10・二次13）
@@ -111,6 +124,8 @@ current_status: `topic_16_explanation_source_complete`
 - 公式標準解答照合: `23 / 23一致`
 - 解説source答案要素: `23 / 23 covered`
 - 解説source固定説明項目: `10 / 10`
+- 解説PDF QA: `PASS`
+- 解説PDF答案要素: `23 / 23 covered`
 - 周辺問題による件数水増し: `0件`
 - Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
