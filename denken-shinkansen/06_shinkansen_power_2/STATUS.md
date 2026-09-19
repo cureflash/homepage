@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
 theme: 25kV架線が短絡したら何kA流れる？
-current_status: `topic_16_exam_alignment_complete`
+current_status: `topic_16_preproduction_blind_complete`
 completed_topics: `15 / 22`
 
 ## Completed through Topic 15
@@ -13,22 +13,30 @@ Topic 01〜15は `completed`。
 
 ## Topic 16 current stage
 
-制作前EXAM_ALIGNMENTを完了済み。固定5問・23答案要素の制作前blind独立再解答を開始し、21答案要素はblind-validでPASSした。平成21年度二次「電力・管理」問6の2答案要素は再計算結果自体は公式標準解答と一致したが、問題取得時に第三者解説ページの解答表示を先に見たためblind条件を満たさず、品質ゲートへ算入しない。
+制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了した。正式品質ゲートは固定5問・23答案要素のまま変更なし。
+
+初回blindでは平成21年度二次「電力・管理」問6の2答案要素だけ、問題取得時に第三者解説ページの解答表示を先に見たためblind-validへ算入しなかった。2026-09-19のclean rerunでは公式問題PDF `20091129_ch_second_q01.pdf` の問6問題文・系統図・インピーダンス表だけを入力として独立再計算し、計算確定後に公式標準解答と照合した。
 
 記録:
 - `topics/16_short_circuit/16_short_circuit.md`
 - `topics/16_short_circuit/16_short_circuit_preproduction_blind_20260919.md`
+- `topics/16_short_circuit/16_short_circuit_preproduction_blind_clean_rerun_20260919.md`
 
 正式品質ゲート:
-- 令和2年度一次「電力」問3: `5答案要素 / 5 PASS`
-- 平成25年度一次「電力」問4: `5答案要素 / 5 PASS`
-- 令和7年度二次「電力・管理」問2: `5答案要素 / 5 PASS`
-- 令和3年度二次「電力・管理」問3: `6答案要素 / 6 PASS`
-- 平成21年度二次「電力・管理」問6: `2答案要素 / BLIND_NOT_VALID`
-- 一次: `10 / 10 blind-valid PASS`
-- 二次: `11 / 13 blind-valid`
-- 合計: `21 / 23 blind-valid / NEEDS_RERUN`
+- 令和2年度一次「電力」問3: `5 / 5 PASS`
+- 平成25年度一次「電力」問4: `5 / 5 PASS`
+- 令和7年度二次「電力・管理」問2: `5 / 5 PASS`
+- 令和3年度二次「電力・管理」問3: `6 / 6 PASS`
+- 平成21年度二次「電力・管理」問6: `2 / 2 PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `13 / 13 PASS`
+- 合計: `23 / 23 PASS`
 - 公式標準解答との照合: `23 / 23一致`
+
+H21問6 clean rerun:
+- CB3開放: `6.08 kA`
+- CB3投入: `10.3 kA`
+- 判定: `2 / 2 PASS`
 
 固定範囲:
 - 短絡容量
@@ -42,10 +50,7 @@ Topic 01〜15は `completed`。
 - 対称座標法
 - 故障種別―短絡電流
 
-exact blocker:
-- `平成21年度二次「電力・管理」問6の2答案要素だけ、解答未提示の問題データからclean blindで再解答する必要がある。`
-
-Topic 16は未完了のため、完成数は `15 / 22` のまま。本文制作へは進まない。
+Topic 16は未完了のため、完成数は `15 / 22` のまま。次工程は固定済み教材マッピングに従う解説source作成。
 
 ## Topic 15 completion
 
@@ -134,7 +139,7 @@ PowerPoint:
 Topic 16:
 - 固定EXAM_ALIGNMENT: `5問`（一次2・二次3）
 - 固定答案要素: `23`（一次10・二次13）
-- 制作前blind: `21 / 23 blind-valid / NEEDS_RERUN`
+- 制作前blind: `23 / 23 PASS`
 - 公式標準解答照合: `23 / 23一致`
 - Topic 17保護・遮断・保護協調先取り: `0件`
 - Topic 18雷サージ先取り: `0件`
@@ -181,8 +186,8 @@ Topic 15:
 - [x] Topic 13 completed
 - [x] Topic 14 completed
 - [x] Topic 15 completed
-- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `21 / 23` / H21問6 clean rerun待ち
+- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `23 / 23 PASS` / 次は解説source
 
 ## next_start
 
-平成21年度二次「電力・管理」問6の2答案要素だけを、公式問題PDF `20091129_ch_second_q01.pdf` の問題図・表だけを入力としてclean blind独立再解答する。公式標準解答、第三者解説、今回のblind記録の数値結果を先に見ない。`2 / 2 PASS` になるまで本文制作へ進まず、Topic 17以降も先取りしない。
+固定済みの教材マッピングとSPEC固定範囲だけを使い、Topic 16解説sourceを作成する。MASTER SPECの最低構成、3段階例題、一次・二次の固定5問・23答案要素への対応を欠落させない。Topic 17以降は先取りしない。
