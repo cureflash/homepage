@@ -8,9 +8,15 @@
 
 Topic 17「パワー半導体の損失比較」で既に公式問題・SPEC境界・clean blindまで検証済みの損失／熱設計問題を再利用し、同じ過去問の再調査・再解答を重複実施しない。Topic 23ではSiCとN700Sへの接続、小型軽量化までを追加の教材責務として扱う。
 
-current_status: `topic_23_exam_alignment_complete`
+固定5問・23答案要素を変更せず、解説sourceまで作成した。sourceではSPEC固定8項目、指定3可視化、3段階例題を実装し、未確認N700S実車定数は真値化していない。
 
-次工程: 固定5問・23答案要素を変えず、Topic 23解説sourceを作成する。Topic 17の一般損失理論を必要最小限だけ前提参照し、SiC・N700S固有の説明へ接続する。
+current_status: `topic_23_explanation_source_complete`
+
+現行成果物:
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
+
+次工程: Topic 23解説PDF作成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化を変更しない。
 
 ## 固定範囲
 
@@ -150,4 +156,5 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 - Topic 23固有のSiC/N700S直接公式過去問を捏造: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
-- 状態: `PASS / EXAM_ALIGNMENT_COMPLETE`
+- 解説source: `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 3段階例題 `3 / 3`
+- 状態: `PASS / EXPLANATION_SOURCE_COMPLETE`
