@@ -1,6 +1,6 @@
 # 24 N700S 主電動機設計の比較
 
-更新日: 2026-09-19
+更新日: 2026-09-20
 
 ## 状態
 
@@ -10,15 +10,18 @@ Topic 10「誘導電動機等価回路」とTopic 12「VVVFインバータと誘
 
 R7二次「機械・制御」問2のうち、本テーマに直接対応する `(1),(3)` を新規に制作前独立検証し、公式標準解答と `4 / 4 PASS` で一致した。
 
-解説sourceを作成し、固定5問・17答案要素の説明責務、SPEC必須8項目、指定3可視化、3段階例題を収録した。富士電機一次資料でN700S主電動機の6極化を確認し、駆動システム全体約20%軽量化を主電動機単体・6極化単独へ誤帰属しない境界を固定した。
+解説source、解説PDF、練習sourceまで完成した。練習sourceは一次8問＋二次4問の計12問で、固定5問・17答案要素へ `17 / 17` 接続し、数値・論理独立再計算 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS` を確認した。固定EXAM_ALIGNMENT、N700S実車事実境界、Topic 21一般式は変更していない。
 
-current_status: `explanation_source_complete`
+current_status: `practice_source_complete`
 
 現行成果物:
 - `24_n700s_main_motor_design_comparison.md`
 - `24_n700s_main_motor_design_comparison_explanation_source.md`
+- `24_n700s_main_motor_design_comparison_explanation.pdf`
+- `24_n700s_main_motor_design_comparison_explanation_pdf_qa.md`
+- `24_n700s_main_motor_design_comparison_practice_source.md`
 
-次工程: Topic 24解説sourceから解説PDFを生成し、表示・数式・可視化・固定17答案要素coverageをQAする。
+次工程: Topic 24練習sourceから練習PDFを生成し、数式・単位・一次五肢択一・二次記述解説・固定17答案要素coverage・表示破綻をQAする。
 
 ## 固定範囲
 
@@ -197,6 +200,28 @@ Topic 10・12で既に比較済みの参考教材はその検証結果を再利�
 
 source段階の `17 / 17 covered` は説明責務確認であり、完成後clean blindのPASSを意味しない。
 
+## 練習source完成QA
+
+- 成果物: `24_n700s_main_motor_design_comparison_practice_source.md`
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 一次試験型: `8問`、全問五肢択一
+- 二次試験型: `4問`、途中式・前提・単位・理由説明付き
+- 合計: `12問`
+- 固定一次答案要素: `11 / 11 connected`
+- 固定二次答案要素: `6 / 6 connected`
+- 固定合計答案要素: `17 / 17 connected`
+- SPEC必須8項目: `8 / 8 covered`
+- SPEC指定3可視化の計算系: `3 / 3 aligned`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- SPEC外主題追加: `0件`
+- 新たなexact blocker: `0件`
+
+`17 / 17 connected` は練習問題への接続確認であり、完成後clean blindのPASSを意味しない。
+
 ## 後工程品質ゲート
 
 Topic 24の解説PDF、練習source/PDF、PowerPointを完成させた後、固定5問・17答案要素をTopic 24教材だけでclean blind独立再解答する。
@@ -212,5 +237,7 @@ PASS条件:
 
 制作前EXAM_ALIGNMENT判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 解説source判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+解説PDF判定: `PASS / EXPLANATION_PDF_COMPLETE`
+練習source判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
 exact blocker: `0件`
