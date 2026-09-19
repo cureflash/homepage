@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_16_preproduction_blind_complete`
+`topic_16_completed`
 
-制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了した。正式品質ゲート対象は一次2問＋二次3問の固定5問・23答案要素。平成21年度二次「電力・管理」問6はclean rerunで2 / 2 PASSとなり、制作前blindは23 / 23答案要素すべてPASS。解説source/PDF、練習source/PDF、PowerPointは未着手。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source/PDF、練習source/PDF、PowerPoint、learner-facing補正、補正後完成後blind clean rerun、Webカタログ登録、現行exact artifact QA、最終QAまで完了した。正式品質ゲート対象は一次2問＋二次3問の固定5問・23答案要素で、制作前blind・完成後clean blind・公式標準解答照合はいずれも23 / 23 PASS。固定EXAM_ALIGNMENTとTopic 16範囲は変更していない。
 
 ## SPEC固定範囲
 
