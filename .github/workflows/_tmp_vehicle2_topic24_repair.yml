@@ -1,0 +1,101 @@
+name: Temporary vehicle2 Topic 24 canonical PPTX repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/_tmp_vehicle2_topic24_repair.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Regenerate canonical PPTX, verify package, commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+
+          status='denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md'
+          dir='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison'
+          p="$dir/24_n700s_main_motor_design_comparison_images.pptx"
+          gen='/tmp/topic24_build.js'
+          wf='.github/workflows/_tmp_vehicle2_topic24_repair.yml'
+
+          git config user.name 'denken-vehicle2-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+
+          cleanup_only() {
+            git rm -f "$wf"
+            git commit -m 'Remove obsolete temporary Topic 24 repair workflow'
+            for attempt in 1 2 3 4 5; do
+              if git push origin HEAD:main; then exit 0; fi
+              git pull --rebase origin main
+            done
+            exit 1
+          }
+
+          if ! grep -Eq 'current_status: `topic_24_powerpoint_blocked_(artifact_identity|canonical_zip_integrity)`' "$status"; then
+            cleanup_only
+          fi
+
+          git show efd7f365571e59d240576d35fe44deac3b4ae18f:denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison/_tmp_build_topic24.js > "$gen"
+
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libreoffice-impress poppler-utils fonts-noto-cjk >/dev/null
+          npm install --no-save pptxgenjs@4.0.0 >/dev/null 2>&1
+          python -m pip install -q python-pptx
+
+          TOPIC24_OUT="$p" node "$gen"
+
+          unzip -t "$p" >/tmp/topic24_unzip.txt
+          python - <<'PY'
+          from pptx import Presentation
+          p='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx'
+          prs=Presentation(p)
+          assert len(prs.slides)==6
+          sw,sh=prs.slide_width,prs.slide_height
+          texts=[]
+          for n,sl in enumerate(prs.slides,1):
+              for shape in sl.shapes:
+                  assert shape.left >= 0 and shape.top >= 0, (n,shape.name,'negative')
+                  assert shape.left + shape.width <= sw, (n,shape.name,'right overflow')
+                  assert shape.top + shape.height <= sh, (n,shape.name,'bottom overflow')
+                  if hasattr(shape,'text') and shape.text:
+                      texts.append(shape.text)
+          t='\n'.join(texts)
+          required=['nₛ = 120f / P','n=(1−s)nₛ','Pₘ=ωT','θₑ=pθₘ=(P/2)θₘ','T ∝ s','Φ ∝ V/f','48.1 N·m / 48.0 N·m','主電動機は6極化','駆動システム全体で約20%軽量化','合計 17/17']
+          for x in required:
+              assert x in t, x
+          print('python-pptx=PASS slides=6 bounds=PASS required=PASS')
+          PY
+
+          mkdir -p /tmp/topic24pdf
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic24pdf "$p" >/tmp/topic24_lo.txt 2>&1
+          pdf='/tmp/topic24pdf/24_n700s_main_motor_design_comparison_images.pdf'
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = '6'
+          pdftoppm -png -r 110 "$pdf" /tmp/topic24pdf/slide >/tmp/topic24_pdftoppm.txt 2>&1
+          test "$(find /tmp/topic24pdf -name 'slide-*.png' | wc -l)" = '6'
+          pdftotext "$pdf" /tmp/topic24pdf/text.txt
+          test "$(grep -o '�' /tmp/topic24pdf/text.txt | wc -l)" = '0'
+          test "$(grep -o '(cid:' /tmp/topic24pdf/text.txt | wc -l)" = '0'
+
+          echo "bytes=$(wc -c < "$p" | tr -d ' ')"
+          sha256sum "$p"
+          git add "$p"
+          git rm -f "$wf"
+          git commit -m 'Repair Topic 24 PowerPoint canonical artifact'
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1
