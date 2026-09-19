@@ -6,8 +6,8 @@
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_19_final_qa_pass / completed`
-- 次工程: Topic 20 制作前EXAM_ALIGNMENT
+- current status: `topic_20_exam_alignment_complete / IN_PROGRESS`
+- 次工程: Topic 20 解説source本文
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -99,13 +99,52 @@ blocker修正:
 - 技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果の変更なし
 - 判定: `PASS / completed`
 
-## 今回完了した段階
-Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期した。
+## Topic 20 固定範囲
+- 特性方程式、極、零点
+- ラウス・フルビッツ
+- 根軌跡の概念
+- 周波数応答、ボード線図
+- ゲイン余裕、位相余裕
+- 発振
+- ボード線図、ゲイン変更時の応答、安定・不安定応答比較
 
-- 最終QA `PASS / topic_19_final_qa_pass` を維持
-- 固定一次1問＋二次4問・12答案要素 `12 / 12 PASS` を維持
-- 技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更なし
-- 完成数は `19 / 22`
+境界:
+- Topic 17〜19は必要な前提だけ再使用する
+- Topic 21の空転・滑走・再粘着制御を先取りしない
+- 未確認の新幹線実車ゲイン、安定余裕、制御周期、極配置等を実車値化しない
+- 系列SPECにない高度な制御理論へ範囲を拡張しない
+
+## Topic 20 固定EXAM_ALIGNMENT
+一次2問＋二次3問、計5問・14答案要素。
+
+- H23 一次 機械 問7 (1)〜(5) — 5答案要素
+- H25 一次 機械 問6 (1),(3),(4),(5) — 4答案要素
+- H30 二次 機械・制御 問4 (2) — 1答案要素
+- R03 二次 機械・制御 問4 (3),(5) — 2答案要素
+- R04 二次 機械・制御 問4 (1),(2) — 2答案要素
+
+制作前品質ゲート:
+- 公式過去問5問: `PASS`
+- 一次・二次を含む: `PASS`
+- 二次記述式を含む: `PASS`
+- 固定14答案要素を教材節へ割当: `PASS`
+- 参考教材2系統: `PASS`
+- 制作前sourceへの個別正答保存: `0件 / PASS`
+- Topic 21先取り: `0件 / PASS`
+- 未確認実車制御値の実車値化: `0件 / PASS`
+- 判定: `PASS / topic_20_exam_alignment_complete`
+
+## Topic 20 成果物
+- `topics/20_control_system_stability/20_control_system_stability.md`
+
+## 今回完了した段階
+Topic 20の制作前EXAM_ALIGNMENTを完了した。
+
+- 一次2問＋二次3問、計5問・14答案要素を固定
+- 特性方程式・極・ラウス・周波数応答・ボード線図・安定余裕・発振を教材節へマッピング
+- 固定過去問の個別正答は未保存
+- Topic 21先取り・未確認実車値化は各0件
+- 完成数は `19 / 22` のまま
 
 ## 次に行うこと
-Topic 20「制御系はなぜ発振する？」の制作前EXAM_ALIGNMENTを行う。
+Topic 20「制御系はなぜ発振する？」の解説source本文を作成する。
