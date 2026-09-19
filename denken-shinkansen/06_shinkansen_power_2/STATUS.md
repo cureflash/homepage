@@ -4,7 +4,7 @@ updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
 theme: 事故区間だけをどう一瞬で切る？
-current_status: `topic_17_clean_blind_rerun_mismatch`
+current_status: `topic_17_clean_blind_rerun2_mismatch`
 completed_topics: `16 / 22`
 
 ## Completed through Topic 16
@@ -44,19 +44,21 @@ clean blind専用入力:
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_20260920.md`
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_rerun_20260920.md`
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_rerun_20260920.md`
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_rerun2_20260920.md`
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_rerun2_20260920.md`
 
-最新rerun判定:
-- 一次: `15 / 15 PASS`
-- 二次: `8 / 11 PASS`
-- 合計: `23 / 26 PASS`
+最新rerun2判定:
+- 一次: `14 / 15 PASS`
+- 二次: `11 / 11 PASS`
+- 合計: `25 / 26 PASS`
 - 制作品質ゲート: `未通過`
 
 exact blocker:
-1. R2二次 問2(2)「信頼性」: 点検・自動監視、低故障率、冗長化を欠く。
-2. R2二次 問2(3)「定格遮断時間」: `5サイクル及び3サイクル` のうち5サイクルを欠く。
-3. H25二次 問3(2): 同期発電機短絡電流の小ささとOCR感度整定上の問題を欠く。
+1. H25一次「電力」問4(1): 問題文は `3 × [1] × 三相短絡電流` なので正答は `基準電圧（相電圧）`。候補は同値な `√3 × 線間電圧 × 三相短絡電流` へ読み替え、空欄を線間電圧と誤答した。
 
-この補助runでは既存worker成果をreconcileするため最新rerun resultを確認しており、公式標準解答内容に接触済みである。そのため同run内で新たなclean blindを実施してPASS扱いにはしない。教材本文、PDF、PowerPointは未着手のまま維持する。
+R2二次 問2の前回不足3点（信頼性、5/3サイクル、DSR採用理由）はrerun2で全て解消し、二次 `11 / 11 PASS`。
+
+このrunでは候補答案固定後に公式標準解答へ接触済みであるため、同run内で答案を書き換えてPASS扱いにはしない。教材本文、PDF、PowerPointは未着手のまま維持する。
 
 ## 品質境界
 
