@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
 theme: 25kV架線が短絡したら何kA流れる？
-current_status: `topic_16_completion_blind_clean_rerun_pass`
+current_status: `topic_16_web_catalog_complete`
 completed_topics: `15 / 22`
 
 ## Completed through Topic 15
@@ -13,11 +13,22 @@ Topic 01〜15は `completed`。
 
 ## Topic 16 current stage
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source/PDF、練習source/PDF、PowerPoint、補正前完成後blind、learner-facing成果物への補正同期まで実施済み。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source/PDF、練習source/PDF、PowerPoint、補正前完成後blind、learner-facing成果物への補正同期、補正後完成後blind clean rerun、Webカタログ登録まで実施済み。
 
 補正前完成後blindでは固定5問・23答案要素の候補解自体は公式解答と `23 / 23` 一致し、二次は `13 / 13 PASS` だったが、一次固定2問の選択肢判定に必要なlearner-facing説明不足があり総合 `NEEDS_REVISION` となった。
 
 補正済みlearner-facing成果物だけを使って完成後blindをclean rerunし、一次 `10 / 10`、二次 `13 / 13`、合計 `23 / 23 PASS`。公式標準解答とも `23 / 23一致` し、式選択・途中式・単位・選択肢根拠を教材内説明で説明できることを確認した。
+
+Webカタログ登録:
+- `qualifications/denken-shinkansen/catalog.json`
+- id: `16_short_circuit`
+- seriesId: `06_shinkansen_power_2`
+- topicNo: `16`
+- title: `25kV架線が短絡したら何kA流れる？`
+- explanation: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_explanation.pdf`
+- practice: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_practice.pdf`
+- slides: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx`
+- source: `../../denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit.md`
 
 clean rerun記録:
 - `topics/16_short_circuit/16_short_circuit_completion_blind_clean_rerun_20260919.md`
@@ -74,19 +85,20 @@ clean rerun記録:
 - 練習PDF: 補正同期・再QA `PASS`
 - PowerPoint: 補正同期・再QA `PASS`
 - 完成後blind: 補正後 clean rerun `23 / 23 PASS`
+- Webカタログ: 登録済み `PASS`
 - 周辺問題による件数水増し: `0件`
 - Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
 
-Topic 16は試験対応品質ゲートを通過したが、Webカタログ登録と最終QAが未実施のため `IN_PROGRESS`、完成数は `15 / 22` のまま。
+Topic 16は試験対応品質ゲートを通過し、Webカタログ登録まで完了したが、最終QAが未実施のため `IN_PROGRESS`、完成数は `15 / 22` のまま。
 
 ## Gate checklist
 
 - [x] Topic 01〜15 completed
-- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `23 / 23 PASS` / learner-facing全成果物補正済み / 完成後blind clean rerun `23 / 23 PASS` / Webカタログ・最終QA待ち
+- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `23 / 23 PASS` / learner-facing全成果物補正済み / 完成後blind clean rerun `23 / 23 PASS` / Webカタログ登録済み / 最終QA待ち
 
 ## next_start
 
-固定5問・23答案要素、Topic 16固定範囲、補正済み成果物を変更せず、Topic 16をWebカタログへ登録する。最終QA、Topic 17以降はまだ行わない。
+固定5問・23答案要素、Topic 16固定範囲、補正済み成果物、登録済みWebカタログを変更せず、Topic 16の最終QAを行う。最終QA PASS前に `completed` 化せず、Topic 17へ進まない。
