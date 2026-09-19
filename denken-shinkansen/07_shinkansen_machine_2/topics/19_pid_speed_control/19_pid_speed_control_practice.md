@@ -743,4 +743,4 @@ PI制御でも、ステップとランプでは定常偏差が異なる。入力
 
 # 次工程
 
-Topic 19最終QAを再実施する。
+Topic 19は最終QA `PASS / completed`。次はTopic 20「制御系はなぜ発振する？」の制作前EXAM_ALIGNMENTを行う。
