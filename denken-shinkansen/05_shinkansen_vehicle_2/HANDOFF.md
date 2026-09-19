@@ -8,13 +8,40 @@
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
-現在地は `topic_25_explanation_source_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
+現在地は `topic_25_explanation_pdf_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
 
 ## 今回のreconcile
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 25既存EXAM_ALIGNMENT、直近の同系列commitを確認した。Topic 25にはEXAM_ALIGNMENT以外の成果物がなく、他workerとの重複はないため、指定されていた次工程の解説sourceだけを1段階進めた。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 25固定EXAM_ALIGNMENT・解説source、直近commitを再確認した。Topic 25は解説source完成まで進行済みで、解説PDF・PDF QAは未作成だったため、重複せず次の安全な工程だけを1段階進めた。
 
-固定5問・28答案要素は変更せず、一次20答案要素・二次8答案要素、SPEC必須10項目、指定3計算／可視化をすべてsourceへ接続した。
+反映直前の追加commitは `06_shinkansen_power_2` 系列であり、車両二種Topic 25との競合はなかった。固定5問・28答案要素、SPEC必須10項目、指定3可視化を変更せずPDFへ反映した。
+
+## Topic 25 解説PDF
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation.pdf`
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation_pdf_qa.md`
+
+判定:
+- `PASS / EXPLANATION_PDF_COMPLETE`
+- A4縦: `3 pages`
+- file size: `13,744 bytes`
+- SHA-256: `991b93eddf35c4676ebb6e25f5676d1749bae78133f2d162db67262d543d1a74`
+- PDFium render: `3 / 3 PASS`
+- Poppler render: `3 / 3 PASS`
+- 固定過去問: `5 / 5 covered`
+- 一次答案要素: `20 / 20 covered`
+- 二次答案要素: `8 / 8 covered`
+- 合計答案要素: `28 / 28 covered`
+- SPEC必須10項目: `10 / 10 covered`
+- SPEC指定3計算・可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 未確認N700S電池値の真値化: `0件`
+- 未指定走行抵抗モデル追加: `0件`
+- Topic 21一般式変更: `0件`
+- SPEC外追加: `0件`
+- 完成後clean blind: `PENDING`
+- 新たなexact blocker: `0件`
 
 ## Topic 25 解説source
 
@@ -126,4 +153,4 @@ Topic 25では東芝インフラシステムズ2018-03-10公表資料でN700S確
 
 ## 次の安全な工程
 
-Topic 25の固定EXAM_ALIGNMENTと完成済み解説sourceを変更せず、解説PDFを生成する。PDF表示、数式・単位、指定3可視化、固定28答案要素coverageをQAする。完成数は `24 / 39`。
+Topic 25練習sourceを作成し、一次試験型・二次記述計算型の練習問題と完全解説を固定28答案要素へ接続する。完成数は `24 / 39`。
