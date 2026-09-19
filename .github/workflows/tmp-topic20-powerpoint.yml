@@ -1,0 +1,83 @@
+name: tmp-topic20-powerpoint
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp-topic20-powerpoint.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile current state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          STATUS='denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md'
+          HANDOFF='denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md'
+          TARGET='denken-shinkansen/05_shinkansen_vehicle_2/topics/20_n700_feedback_control/20_n700_feedback_control_images.pptx'
+          grep -Fq 'current_status: `topic_20_practice_pdf_complete`' "$STATUS" || { echo 'BLOCKER: Topic 20 state already advanced by another worker'; exit 21; }
+          test ! -e "$TARGET" || { echo 'BLOCKER: Topic 20 PowerPoint already exists'; exit 22; }
+          test "$(git rev-parse HEAD:$STATUS)" = '3fd9cf6ade8d81ff3fdc7464d8800e5bec091b46' || { echo 'BLOCKER: STATUS.md changed after reconcile baseline'; exit 23; }
+          test "$(git rev-parse HEAD:$HANDOFF)" = 'a571237b14e6a388d19ae5d1860da02699134c40' || { echo 'BLOCKER: HANDOFF.md changed after reconcile baseline'; exit 24; }
+      - name: Build PowerPoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet python-pptx
+          python .github/tmp/build_vehicle2_topic20_pptx.py
+      - name: Structural and render QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET='denken-shinkansen/05_shinkansen_vehicle_2/topics/20_n700_feedback_control/20_n700_feedback_control_images.pptx'
+          unzip -t "$TARGET" >/dev/null
+          python - <<'PY'
+          from pptx import Presentation
+          p='denken-shinkansen/05_shinkansen_vehicle_2/topics/20_n700_feedback_control/20_n700_feedback_control_images.pptx'
+          r=Presentation(p)
+          assert len(r.slides)==4
+          assert abs((r.slide_width/r.slide_height)-(16/9)) < 1e-4
+          for slide in r.slides:
+              for sh in slide.shapes:
+                  assert sh.left >= 0 and sh.top >= 0
+                  assert sh.left + sh.width <= r.slide_width + 2
+                  assert sh.top + sh.height <= r.slide_height + 2
+          PY
+          if ! command -v libreoffice >/dev/null || ! command -v pdftoppm >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq libreoffice-impress poppler-utils >/dev/null
+          fi
+          mkdir -p /tmp/topic20_render
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic20_render "$TARGET" >/tmp/topic20_lo.txt 2>&1
+          PDF='/tmp/topic20_render/20_n700_feedback_control_images.pdf'
+          test "$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')" = '4'
+          pdftoppm -png -scale-to-x 1600 -scale-to-y 900 "$PDF" /tmp/topic20_render/slide >/dev/null 2>&1
+          test "$(find /tmp/topic20_render -maxdepth 1 -name 'slide-*.png' | wc -l)" = '4'
+          pdftotext "$PDF" /tmp/topic20_render/text.txt
+          ! grep -Fq '�' /tmp/topic20_render/text.txt
+          ! grep -Fq '(cid:' /tmp/topic20_render/text.txt
+      - name: Finalize QA and progress
+        shell: bash
+        run: |
+          set -euo pipefail
+          python .github/tmp/finalize_vehicle2_topic20_pptx.py
+      - name: Commit canonical outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'HIkaru Furuta'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git add \
+            denken-shinkansen/05_shinkansen_vehicle_2/topics/20_n700_feedback_control/20_n700_feedback_control_images.pptx \
+            denken-shinkansen/05_shinkansen_vehicle_2/topics/20_n700_feedback_control/20_n700_feedback_control_powerpoint_qa.md \
+            denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md \
+            denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md
+          git commit -m 'denken vehicle2: add Topic 20 PowerPoint and QA'
+          git pull --rebase origin main
+          git push origin HEAD:main
