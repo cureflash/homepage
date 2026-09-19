@@ -6,11 +6,11 @@
 
 Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_21_independent_reanswer_complete`
+current_status: `topic_21_final_qa_complete`
 
 active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了している。初回最終QAで指摘された主sourceの進捗記録不一致を同期し、`stage: INDEPENDENT_REANSWER_COMPLETE`、`completion: in_progress`、次工程 `最終QA再実施` で正本をそろえた。
+Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施まで完了した。初回最終QAの唯一のblockerだった主source進捗記録不整合は解消済みで、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。次工程は `completed` 状態同期。
 
 ## Topic 21 成果物
 
@@ -24,7 +24,7 @@ Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照�
 - PowerPoint QA: `topics/21_integrated_simulation/21_integrated_simulation_powerpoint_qa.md`
 - 完成後独立再解答: `topics/21_integrated_simulation/21_integrated_simulation_independent_reanswer.md`
 - 最終QA: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `FINAL_QA_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 21 SPEC固定範囲
@@ -92,73 +92,18 @@ PWMインバータ
 - 合計: `21 / 21 PASS`
 - 候補答案変更: `0件`
 
-## 解説sourceで固定した接続
+## 解説・成果物QA
 
-- 架線等価回路: KCL/KVL、テブナン等価、相反定理から負荷側電圧・電流へ接続
-- 交流: フェーザ、`S=VI*`、有効電力・無効電力・力率、複数負荷のP-Q合算
-- 過渡: `t=0- / 0+ / ∞`、RL・RC・RLC初期条件、微分方程式、蓄積エネルギー
-- 高調波: PWMを非正弦周期波として扱い、基本波・高調波・n次位相差・同一次数合成へ接続
-- 計測: 理想値と測定値を分け、零位法・校正・測定誤差へ接続
-- 数値シミュレーション: 入力条件・単位・初期条件・代表点を明記し、代表点を独立再計算
-
-3段階例題:
-- 基礎: 架線テブナン等価 → 負荷電流・端子電圧 → P・Q・力率
-- 本試験標準: 複数負荷のP-Q合算 → 容量制約 → 力率改善
-- 複合: RL過渡、高調波合成、直角相ブリッジ校正を別々に独立検算
-
-## 解説PDF＋表示/収録QA
-
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 固定5問・21答案要素: `21 / 21接続`
-- 3段階例題: `3 / 3収録`
-- 例題数値独立再計算: `3 / 3 PASS`
-- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-
-## 練習問題source＋練習PDF QA
-
-- 問題数: `12問`
-- 形式: `五肢択一11問 + 二次記述型1問（4小問）`
-- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
-- 固定一次4問・17答案要素: `17 / 17接続`
-- 固定二次1問・4答案要素: `4 / 4接続`
-- 合計: `5問・21 / 21答案要素`
-- SPEC固定範囲: `5 / 5接続`
+- 解説PDF: A4縦4ページ / 200 dpi表示QA `4 / 4 PASS`
+- 練習PDF: A4縦4ページ / 200 dpi表示QA `4 / 4 PASS`
+- 練習問題: `12問`（五肢択一11＋二次記述型1問4小問）
 - 数値計算独立再計算: `11 / 11 PASS`
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 問1〜問12本文・解答抽出: `12 / 12`
-- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
-- 二次数合わせ: `0件`
-- Topic 01〜20にない新論点追加: `0件`
-- 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
-- 仕様追加: `0件`
-- 判定: `PASS / PRACTICE_PDF_COMPLETE`
-
-## 解説画像PowerPoint＋表示QA
-
-- 16:9 / `8枚`
-- 200 dpi全スライド表示QA: `8 / 8 PASS`
-- レンダリング寸法: `2667 × 1500 px / slide`
-- shape geometry overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- PDF変換: `8ページ / PASS`
-- PDF・PowerPoint XML文字抽出: `PASS`
-- replacement character: `0件`
-- クリッピング/文字重なり/ページ欠落: `0件`
-- SPEC固定範囲5領域: `5 / 5可視化`
-- 簡略モデル8ブロック: `8 / 8可視化`
-- 固定一次4問・17答案要素: `17 / 17可視化`
-- 固定二次1問・4答案要素: `4 / 4可視化`
-- 合計: `5問・21 / 21答案要素`
-- 二次数合わせ: `0件`
-- Topic 01〜20にない新論点追加: `0件`
-- 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
-- 仕様追加: `0件`
-- 判定: `PASS / POWERPOINT_COMPLETE`
+- PowerPoint: 16:9 / `8枚` / 200 dpi表示QA `8 / 8 PASS`
+- 固定一次4問・17答案要素: `17 / 17接続・可視化`
+- 固定二次1問・4答案要素: `4 / 4接続・可視化`
+- 簡略モデル8ブロック: `8 / 8収録・可視化`
+- 3段階例題: `3 / 3収録`
+- クリッピング/文字重なり/文字化け/欠落: `0件`
 
 ## 完成後独立再解答
 
@@ -180,25 +125,25 @@ PWMインバータ
 - 仕様追加: `0件`
 - 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
-## 初回最終QA
+## 最終QA再実施
 
-- 記録: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
+- 初回blocker解消: `1 / 1`
 - 必須成果物欠落: `0件`
 - 固定一次4問・17答案要素: `17 / 17 PASS`
 - 固定二次1問・4答案要素: `4 / 4 PASS`
 - 合計: `21 / 21 PASS`
+- 公式標準解答照合: `21 / 21一致`
+- SPEC固定範囲: `5 / 5領域`
+- 簡略モデル: `8 / 8ブロック`
 - 解説PDF表示QA: `4 / 4 PASS`
 - 練習PDF表示QA: `4 / 4 PASS`
 - PowerPoint表示QA: `8 / 8 PASS`
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
 - 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
+- 主source / STATUS / HANDOFF の最終QA前進捗整合: `PASS`
 - 仕様追加: `0件`
-- blocker: `1件`
-  - 主sourceが `stage: EXPLANATION_SOURCE_COMPLETE` / `次工程: 解説PDF制作` のままで実進捗と不一致
-- 判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
-
-このblockerは主source進捗記録同期で解消済み。最終QAの判定更新は次工程で行う。
+- 判定: `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
 
 ## 公式正本・参考
 
@@ -220,11 +165,4 @@ PWMインバータ
 
 ## 次工程
 
-Topic 21最終QA再実施。
-
-- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` を再確認する。
-- 主source、STATUS、HANDOFFの `stage` / `completion` / `次工程` の整合性を確認する。
-- 必須成果物欠落0件を再確認する。
-- 固定一次4問・17答案要素＋二次1問・4答案要素＝`21 / 21 PASS` を維持していることを確認する。
-- 二次数合わせ、固定範囲外追加、未公開実車定数の推測、仕様追加が0件であることを確認する。
-- PASSならTopic 21を `completed` へ同期する。
+Topic 21の `completed` 状態同期。完成数を `21 / 21` へ更新し、系列08を完了状態へ同期するのは、その同期工程で行う。
