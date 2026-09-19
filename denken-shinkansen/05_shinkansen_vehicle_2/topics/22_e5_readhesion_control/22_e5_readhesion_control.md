@@ -4,17 +4,34 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説source作成まで完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 22固定範囲だけを対象とし、第二種一次2問＋二次3問、計5問・11答案要素を完成後品質ゲートとして固定したまま、固定8項目・指定3可視化・3段階例題を解説sourceへ実装した。
+Topic 22は必須成果物、各QA、固定過去問5問・11答案要素のclean blind独立再解答、最終QAまで完了した。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` の固定範囲・品質ゲートは変更していない。
 
-current_status: `topic_22_explanation_source_complete`
+current_status: `topic_22_completed`
 
 現行成果物:
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control.md`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation_source.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation.pdf`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation_pdf_qa.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice_source.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice.pdf`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice_pdf_qa.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_check.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_final_qa.md`
 
-次工程: Topic 22 解説PDF作成＋PDF QA。
+完成後品質ゲート:
+- 固定5問: `5 / 5 PASS`
+- 一次答案要素: `3 / 3 PASS`
+- 二次答案要素: `8 / 8 PASS`
+- 合計: `11 / 11 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認E5系実車値の真値化: `0件`
 
-制作前段階では公式解答・標準解答の個別正答記号・最終数値を保存しない。完成後、教材だけでclean blind独立再解答した候補を先に固定してから公式解答・標準解答と照合する。
+次工程: Topic 23「N700S SiC主変換装置」の制作前EXAM_ALIGNMENT。
 
 ## 固定範囲
 
