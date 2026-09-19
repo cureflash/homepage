@@ -8,13 +8,13 @@
 
 Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
-現在地は `topic_26_practice_pdf_complete`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
+現在地は `topic_26_powerpoint_complete`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT・解説source/PDF・練習source、直近の同系列worker成果をreconcileした。開始時の同系列最新HEADは `dda1162507f8099443c068bcb53791269c5291d7`。その後 `06_shinkansen_power_2` のworkerがmainを進めたため最新HEAD `c5b5b0e29200ef36834cdf284ab57a76990b3d86` を親としてrebase相当で取り込み、同系列の重複変更がないことを確認した。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT・解説source/PDF・練習source/PDF、直近の同系列worker成果をreconcileした。本run開始後に別workerが `0645396fb165697295edcb1e61fb5efbf204359d` でTopic 26練習PDF＋QAをmainへ反映したため、その成果を正本として採用し、自分の練習PDF作業は破棄して重複を避けた。
 
-Topic 26で固定済みの第二種一次4問・10答案要素＋二次1問・6答案要素、合計5問・16答案要素は変更していない。今回、既存の練習sourceから練習PDFを生成し、PDFium/Poppler、テキスト抽出、12問の完全解説、数値・論理再計算、固定16答案要素接続を確認した。
+その後、次の安全な工程であるTopic 26 PowerPoint生成＋QAを実施した。固定済みの第二種一次4問・10答案要素＋二次1問・6答案要素、合計5問・16答案要素は変更していない。SPEC必須7項目・指定3可視化を16:9スライド6枚へ反映し、構造・表示・内容・数値を再確認した。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -101,6 +101,33 @@ Topic 26で固定済みの第二種一次4問・10答案要素＋二次1問・6�
 - 指定3可視化の計算接続: `3 / 3 aligned`
 - exact blocker: `0件`
 
+## Topic 26 PowerPoint
+
+成果物:
+- `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images.pptx`
+- canonical blob SHA: `4cec8a6ee9eef4272b5783762a4f0c1f8311e19d`
+- `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images_qa.md`
+
+判定:
+- `PASS / POWERPOINT_COMPLETE`
+- 16:9: `6 slides`
+- file size: `55,817 bytes`
+- SHA-256: `91ee793f3472b4f1a26fd40360a7dd85a578c1f0fc64d9717ce43023f5cd2cb7`
+- PPTX ZIP / python-pptx: `PASS`
+- slide geometry bounds: `6 / 6 PASS`
+- LibreOffice / Poppler: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`（8,941 bytes）
+- 置換文字: `0件`
+- contact-sheet視認: `6 / 6 PASS`
+- 固定5問: `5 / 5 connected`
+- 一次答案要素: `10 / 10 connected`
+- 二次答案要素: `6 / 6 connected`
+- 合計: `16 / 16 connected`
+- SPEC必須7項目: `7 / 7 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- 数値再確認: `PASS`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -113,4 +140,4 @@ Topic 26で固定済みの第二種一次4問・10答案要素＋二次1問・6�
 
 ## 次の安全な工程
 
-Topic 26 PowerPoint生成＋QA。固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDFを入力とし、SPEC指定3可視化と二種一次・二次の接続を16:9スライドへ反映する。固定EXAM_ALIGNMENT、実車値境界、Topic 21一般式は変更しない。
+Topic 26完成後clean blind独立再解答。固定5問・一次10答案要素・二次6答案要素を、保存済み正答を先に見ず教材だけで再解答し、正答だけでなく根拠説明まで確認する。PASS時のみTopic 26を `completed` として完成数を `26 / 39` へ進める。固定EXAM_ALIGNMENT、実車値境界、Topic 21一般式は変更しない。
