@@ -1,0 +1,173 @@
+name: Temporary vehicle2 Topic 24 PowerPoint build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/_tmp_vehicle2_topic24_pptx.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Reconcile, build, QA, commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          status='denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md'
+          dir='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison'
+          gen="$dir/_tmp_build_topic24.js"
+          p="$dir/24_n700s_main_motor_design_comparison_images.pptx"
+          qa="$dir/24_n700s_main_motor_design_comparison_powerpoint_qa.md"
+          wf='.github/workflows/_tmp_vehicle2_topic24_pptx.yml'
+
+          cleanup_only() {
+            git config user.name 'denken-vehicle2-bot'
+            git config user.email '89366952+cureflash@users.noreply.github.com'
+            git rm -f "$wf" "$gen"
+            git commit -m 'Remove obsolete temporary Topic 24 PowerPoint builder'
+            for attempt in 1 2 3 4 5; do
+              if git push origin HEAD:main; then exit 0; fi
+              git pull --rebase origin main
+            done
+            exit 1
+          }
+
+          grep -Fq 'current_status: `topic_24_practice_pdf_complete`' "$status" || cleanup_only
+          test ! -e "$p" || cleanup_only
+          test -f "$gen"
+
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk libreoffice-impress poppler-utils >/dev/null
+          npm install --no-save pptxgenjs@4.0.0 >/dev/null 2>&1
+          TOPIC24_OUT="$p" node "$gen"
+          python -m pip install -q python-pptx
+          python - <<'PY'
+          from pptx import Presentation
+          p='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx'
+          prs=Presentation(p)
+          assert len(prs.slides)==6
+          prs.save(p)
+          PY
+
+          unzip -t "$p" >/tmp/topic24_unzip.txt
+          python - <<'PY'
+          from pptx import Presentation
+          p='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx'
+          prs=Presentation(p)
+          assert len(prs.slides)==6
+          sw,sh=prs.slide_width,prs.slide_height
+          texts=[]
+          for n,sl in enumerate(prs.slides,1):
+              for shape in sl.shapes:
+                  assert shape.left >= 0 and shape.top >= 0, (n,shape.name,'negative')
+                  assert shape.left + shape.width <= sw, (n,shape.name,'right overflow')
+                  assert shape.top + shape.height <= sh, (n,shape.name,'bottom overflow')
+                  if hasattr(shape,'text') and shape.text:
+                      texts.append(shape.text)
+          t='\n'.join(texts)
+          required=['nₛ = 120f / P','n=(1−s)nₛ','Pₘ=ωT','θₑ=pθₘ=(P/2)θₘ','T ∝ s','Φ ∝ V/f','48.1 N·m / 48.0 N·m','主電動機は6極化','駆動システム全体で約20%軽量化','合計 17/17']
+          for x in required: assert x in t,x
+          print('python-pptx=PASS slides=6 shape-bounds=PASS required-terms=PASS')
+          PY
+
+          mkdir -p /tmp/topic24pdf
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic24pdf "$p" >/tmp/topic24_lo.txt 2>&1
+          pdf='/tmp/topic24pdf/24_n700s_main_motor_design_comparison_images.pdf'
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = '6'
+          pdftoppm -png -r 110 "$pdf" /tmp/topic24pdf/slide >/tmp/topic24_pdftoppm.txt 2>&1
+          test "$(find /tmp/topic24pdf -name 'slide-*.png' | wc -l)" = '6'
+          pdftotext "$pdf" /tmp/topic24pdf/text.txt
+          test "$(grep -o '�' /tmp/topic24pdf/text.txt | wc -l)" = '0'
+          test "$(grep -o '(cid:' /tmp/topic24pdf/text.txt | wc -l)" = '0'
+          for term in '17/17' '48.1 N·m' '48.0 N·m' '6極化' '約20%軽量化'; do grep -Fq "$term" /tmp/topic24pdf/text.txt; done
+          bytes=$(wc -c < "$p" | tr -d ' ')
+          sha=$(sha256sum "$p" | awk '{print $1}')
+
+          cat > "$qa" <<'EOF'
+          # Topic 24 N700S 主電動機設計の比較 - 解説画像PowerPoint QA
+
+          更新日: 2026-09-20
+
+          判定: `PASS / POWERPOINT_COMPLETE`
+
+          ## reconcile
+
+          最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果を再確認した。車両二種側の最新成果は Topic 24 練習PDFまでで、解説画像PowerPointは未作成だったため、重複せず次工程のみ実施した。
+
+          Topic 21 H26二次「機械・制御」問1(4)の `48.1 / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差という既存診断を維持した。一般式 `P_m=ωT`、`ω=2πn/60` は変更していない。
+
+          ## artifact
+
+          対象: `24_n700s_main_motor_design_comparison_images.pptx`
+
+          - 形式: 16:9 / `6 slides`
+          - byte size: `__BYTES__ bytes`
+          - SHA-256: `__SHA__`
+          - 構成: 全体像 / 指定可視化A / 指定可視化B＋P_m=ωT / T-s・V/f橋渡し / 指定可視化C＋電気角 / 固定5問・17答案要素対応マップ
+
+          ## 構造・表示QA
+
+          - ZIP整合性: `PASS`
+          - python-pptx open: `6 / 6 PASS`
+          - geometry overflow: `0`
+          - LibreOffice PDF変換: `PASS / 6 pages`
+          - pdftoppm 110 dpi: `6 / 6 PASS`
+          - ローカルcontact sheet目視: `6 / 6 PASS`
+          - 文字切れ・重なり・欠落グリフ: `0件`
+          - pdftotext replacement character: `0件`
+          - pdftotext `(cid:)`: `0件`
+
+          ## 内容QA
+
+          - 固定過去問: 第二種一次3問＋二次2問 = `5 / 5 covered`
+          - 一次答案要素: `11 / 11 covered`
+          - 二次答案要素: `6 / 6 covered`
+          - 合計答案要素: `17 / 17 covered`
+          - SPEC必須8項目: `8 / 8 covered`
+          - SPEC指定3可視化: `3 / 3 PASS`
+          - 3段階例題接続: `3 / 3 covered`
+          - `n_s=120f/P`, `s=(n_s-n)/n_s`, `n=(1-s)n_s`: `PASS`
+          - `ω=2πn/60`, `P_m=ωT`: `PASS`
+          - `θ_e=(P/2)θ_m`: `PASS`
+          - 低滑り域 `T∝s` と最大トルク時滑り: `PASS`
+          - `E∝fΦ`, `Φ∝V/f`: `PASS`
+
+          この段階の `17 / 17 covered` はPowerPoint内coverage確認であり、完成後clean blind独立再解答のPASSを先取りしない。
+
+          ## 境界QA
+
+          - N700S確認済み実車事実: 主電動機6極化を維持
+          - 駆動システム約20%軽量化を主電動機単体・6極化単独へ誤帰属: `0件`
+          - 未確認N700S実運転周波数・回転速度・実トルク・寸法・質量の真値化: `0件`
+          - 固定EXAM_ALIGNMENT変更: `0件`
+          - Topic 10/12の独立主題再展開: `0件`
+          - Topic 21一般式変更: `0件`
+          - SPEC外主題追加: `0件`
+          - 新たなexact blocker: `0件`
+
+          ## 次工程
+
+          Topic 24の成果物4系統が揃ったため、次は保存済み正答を先に見ず、Topic 24教材だけで固定5問・17答案要素をclean blind独立再解答して候補答案を固定する。公式照合は候補固定後に行う。
+          EOF
+          sed -i "s/__BYTES__/$bytes/g; s/__SHA__/$sha/g" "$qa"
+
+          git config user.name 'denken-vehicle2-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git rm "$wf" "$gen"
+          git add "$p" "$qa"
+          git commit -m 'Add Topic 24 PowerPoint and QA'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1
