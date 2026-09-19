@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 20 / 21
-- current_status: `topic_21_exam_alignment_complete`
+- current_status: `topic_21_blind_official_check_complete`
 - last_completed_topic: `20 East iは走りながら何をどう測る？`
 - active_topic: `21 架線からEast iまで全部シミュレーションする`
-- next_start: Topic 21 制作前blind独立再解答
+- next_start: Topic 21 解説source本文＋3段階例題制作
 
 ## 完成済み
 
@@ -42,19 +42,23 @@ Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - 二次: `1問・4答案要素`
 - 二次数合わせ: `0件`
 - 関連候補調査: `9件`
-- 制作前blind独立再解答: `未実施`
+- 制作前blind独立再解答: `21 / 21 PASS`
+- 公式標準解答照合: `21 / 21一致`
+- 候補答案変更: `0件`
 
 令和8年度二次試験は2026-11-15実施予定のため、2026-09-19時点では未実施。既実施年度から固定範囲に直接対応するR2二次「電力・管理」問6を採用した。
 
 ## 今回進めた内容
 
-Topic 21の制作前EXAM_ALIGNMENTを作成し、`PASS / EXAM_ALIGNMENT_COMPLETE` とした。
+Topic 21の制作前blind独立再解答と公式標準解答照合を完了し、`PASS / BLIND_REANSWER_OFFICIAL_CHECK_COMPLETE` とした。
 
-- source新規作成: `topics/21_integrated_simulation/21_integrated_simulation.md`
+- source: `topics/21_integrated_simulation/21_integrated_simulation.md`
 - MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認: `PASS`
 - Topic 01〜20完成状態確認: `PASS / 20 / 21`
-- 一次・二次を含む関連候補調査: `9件`
 - 固定品質ゲート: `一次4問・17答案要素 + 二次1問・4答案要素`
+- blind独立導出: `21 / 21答案要素`
+- 公式標準解答照合: `21 / 21一致`
+- 候補答案変更: `0件`
 - 二次採用: `1問・4答案要素`
 - 二次数合わせ: `0件`
 - Topic 01〜20にない新論点追加: `0件`
@@ -63,6 +67,6 @@ Topic 21の制作前EXAM_ALIGNMENTを作成し、`PASS / EXAM_ALIGNMENT_COMPLETE
 
 ## 判定
 
-`PASS / EXAM_ALIGNMENT_COMPLETE`。
+`PASS / BLIND_REANSWER_OFFICIAL_CHECK_COMPLETE`。
 
-完成数は `20 / 21`。次工程はTopic 21の制作前blind独立再解答。
+完成数は `20 / 21`。次工程はTopic 21の解説source本文＋基礎・本試験標準・複合の3段階例題制作。
