@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `24 / 39`
-- current_status: `topic_25_blind_reanswer_candidates_fixed`
+- current_status: `topic_25_clean_blind_official_match_complete`
 - last_completed_topic: `24 N700S 主電動機設計の比較`
 - active_topic: `25 N700S バッテリー自走のエネルギー設計`
-- next_start: Topic 25 clean blind固定候補を変更せず、公式解答・標準解答と固定5問・28答案要素を照合する
+- next_start: Topic 25最終QAを行い、全成果物・固定5問28答案要素・SPEC境界を横断確認する
 
 ## Topic 25 解説PDF
 
@@ -76,15 +76,30 @@
 
 ## Topic 25 clean blind独立再解答候補
 
-- 判定: `CANDIDATES_FIXED / OFFICIAL_NOT_CHECKED`
+- 判定: `CANDIDATES_FIXED`
 - path: `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_blind_reanswer_candidates_clean.md`
 - 固定過去問: `5 / 5 solved`
 - 一次答案要素: `20 / 20 candidate fixed`
 - 二次答案要素: `8 / 8 candidate fixed`
 - 合計答案要素: `28 / 28 candidate fixed`
-- 問題PDF以外の公式解答・標準解答参照: `0件`
 - 候補固定後編集: `0件`
-- 新たなexact blocker: `0件`
+
+## Topic 25 clean blind公式照合
+
+- 判定: `PASS / CLEAN_BLIND_OFFICIAL_MATCH_COMPLETE`
+- path: `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_clean_blind_official_match_qa.md`
+- R8 一次「機械」問5: `5 / 5 PASS`
+- R4 一次「機械」問6: `5 / 5 PASS`
+- R2 一次「機械」問4: `5 / 5 PASS`
+- R1 一次「機械」問4: `5 / 5 PASS`
+- H23 二次「機械・制御」問3: `8 / 8 PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `8 / 8 PASS`
+- 合計: `28 / 28 PASS`
+- 固定過去問: `5 / 5 PASS`
+- 固定候補の後編集: `0件`
+- 不一致: `0件`
+- exact blocker: `0件`
 
 ## Topic 25 固定EXAM_ALIGNMENT
 
@@ -106,4 +121,4 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 ## 完成数
 
-Topic 01〜24: `PASS / completed`。完成数 `24 / 39`。Topic 25は解説source/PDF、練習source/PDF、PowerPoint、clean blind候補固定まで完了。公式照合と最終QAが未完了。
+Topic 01〜24: `PASS / completed`。完成数 `24 / 39`。Topic 25は解説source/PDF、練習source/PDF、PowerPoint、clean blind公式照合まで完了。最終QAが未完了。

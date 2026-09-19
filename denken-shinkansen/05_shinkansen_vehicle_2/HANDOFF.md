@@ -8,11 +8,11 @@
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
-現在地は `topic_25_blind_reanswer_candidates_fixed`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
+現在地は `topic_25_clean_blind_official_match_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 25全成果物、直近コミットを照合した。別workerがPowerPoint正本・QA・進捗同期・staging削除まで完了していたため、その成果を採用して重複作業を避けた。次の未完了工程であるclean blind独立再解答候補だけを固定した。固定教材・固定EXAM_ALIGNMENT・一般式は変更していない。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 25全成果物と固定済みclean blind候補を照合した。固定候補を変更せず、次の未完了工程である公式解答・標準解答との照合だけを実施した。
 
 ## Topic 25 PowerPoint
 
@@ -34,15 +34,31 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 - `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_blind_reanswer_candidates_clean.md`
 
 判定:
-- `CANDIDATES_FIXED / OFFICIAL_NOT_CHECKED`
+- `CANDIDATES_FIXED`
 - 固定5問: `5 / 5 solved`
 - 一次答案要素: `20 / 20 candidate fixed`
 - 二次答案要素: `8 / 8 candidate fixed`
 - 合計: `28 / 28 candidate fixed`
-- 参照した公式資料: 問題PDFのみ
-- 公式解答・標準解答参照: `0件`
 - 候補固定後編集: `0件`
-- 新たなexact blocker: `0件`
+
+## Topic 25 clean blind公式照合
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_clean_blind_official_match_qa.md`
+
+判定:
+- `PASS / CLEAN_BLIND_OFFICIAL_MATCH_COMPLETE`
+- R8一次 問5: `5 / 5 PASS`
+- R4一次 問6: `5 / 5 PASS`
+- R2一次 問4: `5 / 5 PASS`
+- R1一次 問4: `5 / 5 PASS`
+- H23二次 問3: `8 / 8 PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `8 / 8 PASS`
+- 合計: `28 / 28 PASS`
+- 固定5問: `5 / 5 PASS`
+- 不一致: `0件`
+- exact blocker: `0件`
 
 ## 固定境界
 
@@ -55,4 +71,4 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
 ## 次の安全な工程
 
-固定済みclean blind候補を変更せず、R8/R4/R2/R1一次とH23二次の公式解答・標準解答に対して `28 / 28` を照合する。不一致があれば候補を後編集せず、別の公式照合記録へexactに残す。完成数は `24 / 39` のまま。
+Topic 25最終QA。解説source/PDF、練習source/PDF、PowerPoint、clean blind公式照合、固定EXAM_ALIGNMENT、SPEC境界を横断し、完成可否を判定する。最終QA PASSまでは完成数 `24 / 39` のまま。
