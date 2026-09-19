@@ -6,8 +6,8 @@
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_20_independent_reanswer_needs_revision / NEEDS_REVISION`
-- 次工程: 独立再解答の転記2件を訂正し、独立再解答記録QA
+- current status: `topic_20_independent_reanswer_record_qa_pass / IN_PROGRESS`
+- 次工程: Topic 20 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -59,29 +59,34 @@
 - Topic 21先取り・未確認実車制御値化・SPEC外高度制御理論追加: `各0件 / PASS`
 - 独立再解答前ゲート: `BLIND_REANSWER_READY`
 
-## 完成後独立再解答
+## 完成後独立再解答・記録QA
 公式照合前に固定5問・14答案要素を完成教材だけで解き、commit `001dbd5f8ee1c0e8a1ea4cd4ca3cef47a2167f15` で答案を固定。その後に公式正答・標準解答を照合した。
 
-結果:
+ロック時点:
 - H23 一次 問7: `4 / 5`。設問(1)は「安定性」という内容は正しいが、選択肢記号を `ヲ` と転記。公式は `ワ`。
 - H25 一次 問6 (1),(3),(4),(5): `4 / 4 PASS`
-- H30 二次 問4 (2): `0 / 1`。問題文 `Ti=0.1 s` を `0.01 s` と転記し、折点を `100 rad/s` とした。公式は `10 rad/s`。PI折れ線の考え方は正しい。
+- H30 二次 問4 (2): `0 / 1`。問題文 `Ti=0.1 s` を `0.01 s` と転記し、折点を `100 rad/s` とした。公式は `10 rad/s`。
 - R03 二次 問4 (3),(5): `2 / 2 PASS`
 - R04 二次 問4 (1),(2): `2 / 2 PASS`
+- ロック時点の公式一致: `12 / 14`
 
-集計:
-- 固定答案の公式一致: `12 / 14`
-- 不一致: `2 / 14`
-- 教材外補完: `0件`
-- 教材の概念・解法不足が原因の不一致: `0件`
-- 転記ミス: `2件`
-- 判定: `NEEDS_REVISION / topic_20_independent_reanswer_needs_revision`
-
-訂正対象:
+訂正:
 1. H23 一次 問7 (1): `安定性 = ヲ` → `安定性 = ワ`
 2. H30 二次 問4 (2): `Ti=0.01 s` → `Ti=0.1 s`、折点 `100 rad/s` → `10 rad/s`
 
-Topic 20はまだ `completed` にしない。完成数は `19 / 22` のまま。
+独立再解答記録QA:
+- ロックcommitの履歴保持: `PASS`
+- H23公式問題・公式正答再確認: `PASS`
+- H30公式問題・標準解答再確認: `PASS`
+- 訂正後の公式整合: `14 / 14 PASS`
+- 記録QA: `8 / 8 PASS`
+- 教材外補完: `0件`
+- 教材の概念・解法不足: `0件`
+- Topic 21先取り: `0件`
+- 未確認実車制御値化: `0件`
+- 判定: `PASS / topic_20_independent_reanswer_record_qa_pass`
+
+技術本文・練習問題・固定EXAM_ALIGNMENT・PDF/PPTXは変更していない。Topic 20はまだ `completed` にしない。完成数は `19 / 22` のまま。
 
 ## 次工程
-上記2件を固定時点の誤りとして履歴を残したまま訂正し、独立再解答記録QAを実施する。技術本文・練習問題・固定EXAM_ALIGNMENT・PDF/PPTXは変更しない。
+Topic 20の最終QAを実施する。解説source、PDF、練習、PowerPoint、独立再解答記録、STATUS/HANDOFFの整合を確認し、品質ゲートを全て満たす場合のみ `completed` とする。
