@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
 theme: 25kV架線が短絡したら何kA流れる？
-current_status: `topic_16_explanation_pdf_regenerated_exact_blob_qa_pass`
+current_status: `topic_16_powerpoint_exact_blob_qa_fail`
 completed_topics: `15 / 22`
 
 ## Completed through Topic 15
@@ -43,7 +43,7 @@ Webカタログ:
 
 ### 解説PDF
 
-右端切れをレイアウトだけで修正し、再生成した現行exact blobを独立再QAした。
+右端切れをレイアウトだけで修正し、再生成した現行exact blobを独立再QA済み。
 
 - blob: `626d9098ccf7453f2439b1ffc3df50c3bbdd3b5b`
 - size: `34,238 bytes`
@@ -66,16 +66,29 @@ QA記録:
 
 ### PowerPoint
 
-現行blob `a4817d7cfb1a1733f5147f52efa3ec4e249999d5` / `26,007 bytes` は既存PowerPoint QAの検査対象とidentity不一致のまま。
+現行exact blobを再QAした。
 
-- current-artifact QA: `NOT YET RERUN`
-- 既存QAを転用しない。
+- blob: `a4817d7cfb1a1733f5147f52efa3ec4e249999d5`
+- size: `26,007 bytes`
+- SHA-256: `e9c723e66a95ce4cf71de6f32155ed835bdce345bdd9c158e9d8af5eb927406a`
+- local/GitHub artifact identity: `PASS`
+- ZIP package integrity: `FAIL`
+- `slide1.xml`: `invalid compressed data to inflate`
+- `python-pptx`: `FAIL / BadZipFile`
+- `slides_test.py`: `FAIL / BadZipFile`
+- `render_slides.py`: `FAIL / BadZipFile`
+- LibreOffice: `source file could not be loaded`
+- current-artifact display QA: `NOT EXECUTABLE`
+
+既存PowerPoint QAは `25,986 bytes` の別artifactを対象としており転用不可。QA記録:
+- `topics/16_short_circuit/16_short_circuit_powerpoint_qa.md`
+- 判定: `FAIL / CURRENT_PPTX_EXACT_BLOB_PACKAGE_CORRUPT`
 
 ## 進捗記録整合
 
 主source `topics/16_short_circuit/16_short_circuit.md` の状態欄は `topic_16_preproduction_blind_complete` のままで現状と不一致。
 
-進捗記録整合: `FAIL`。後続の主source同期工程で修正する。
+進捗記録整合: `FAIL`。PowerPoint artifact gate解消後の主source同期工程で修正する。
 
 ## 固定範囲・品質境界
 
@@ -101,15 +114,15 @@ QA記録:
 
 ## exact blocker
 
-`The regenerated current explanation PDF passes exact-blob QA. The next unresolved artifact gate is the current PowerPoint blob a4817d7cfb1a1733f5147f52efa3ec4e249999d5, whose existing QA record targets a different identity. Rerun PowerPoint QA against that exact current blob. Do not mark Topic 16 completed until PowerPoint exact-blob QA and the stale 16_short_circuit.md progress-state synchronization/final QA are complete.`
+`The current PowerPoint exact blob a4817d7cfb1a1733f5147f52efa3ec4e249999d5 is byte-identical to the GitHub canonical artifact but fails OOXML/ZIP package integrity and cannot be opened by python-pptx, slides_test, render_slides, or LibreOffice. Regenerate/replace the PPTX from the already-fixed source/content without changing scope or EXAM_ALIGNMENT, then rerun exact-blob PowerPoint QA. Do not byte-patch the corrupt package. After a PowerPoint PASS, synchronize the stale 16_short_circuit.md progress state and run final QA.`
 
 ## Gate checklist
 
 - [x] Topic 01〜15 completed
-- [ ] Topic 16 — 固定5問・23答案要素 `23 / 23 PASS` / Webカタログ登録済み / 解説PDF current-artifact QA `PASS` / PowerPoint current-artifact QA未再実施
+- [ ] Topic 16 — 固定5問・23答案要素 `23 / 23 PASS` / Webカタログ登録済み / 解説PDF current-artifact QA `PASS` / PowerPoint current-artifact QA `FAIL`
 
 Topic 16は `completed` にしない。完成数は `15 / 22`。Topic 17へ進まない。
 
 ## next_start
 
-固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済みsource/PDF、練習PDF、clean blind結果、Webカタログを変更せず、現行 `16_short_circuit_images.pptx` blob `a4817d7cfb1a1733f5147f52efa3ec4e249999d5` に対してexact-blob PowerPoint QAを再実施する。既存QAはidentity不一致のため転用しない。
+固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済みsource/PDF、練習PDF、clean blind結果、Webカタログを変更せず、既存sourceから `16_short_circuit_images.pptx` を正常なPPTXとして再生成・置換する。その新しいexact blobに対してPowerPoint QAを再実施する。破損bytesの直接パッチはしない。
