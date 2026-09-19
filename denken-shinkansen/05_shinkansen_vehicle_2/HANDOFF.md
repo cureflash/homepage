@@ -8,59 +8,63 @@
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
-現在地は `topic_23_completed`。次のactive topic は Topic 24 `N700S 主電動機設計の比較`。
+現在地は `topic_24_exam_alignment_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。
 
-## reconcile
+## 今回のreconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23の初回clean blind、source補強、解説PDF・練習PDF再同期、修正後clean blind `23 / 23 PASS`、PowerPoint破損blocker、復旧artifactとその表示QAまでreconcileした。同一工程の重複はしていない。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、直近コミット、Topic 23完了状態、Topic 10・12の既存誘導機/VVVF過去問検証成果をreconcileした。直近の車両二種更新はTopic 23完了系で、Topic 24成果物は未着手だったため競合工程はない。
 
-Topic 23最終ゲート:
+重複回避:
+- R7一次「機械」問2はTopic 10の `5 / 5 PASS` を再利用。
+- R4一次「機械」問2 `(3)〜(5)` はTopic 12の `3 / 3 PASS` を再利用。
+- R2一次「機械」問3 `(1),(4),(5)` はTopic 12の `3 / 3 PASS` を再利用。
+- R3二次「機械・制御」問1 `(3),(4)` はTopic 10の `2 / 2 PASS` を再利用。
+- 上記13答案要素は制作前に重複再解答していない。
 
-- 固定過去問: 第二種一次4問＋二次1問 = `5 / 5 PASS`
-- 一次答案要素: `17 / 17 PASS`
-- 二次答案要素: `6 / 6 PASS`
-- 合計: `23 / 23 PASS`
-- 修正後clean blind: `23 / 23 PASS`
-- 解説PDF: `PASS`
-- 練習PDF: `PASS`
-- PowerPoint: `PASS`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 一般式変更: `0件`
-- SPEC外追加: `0件`
-- 未確認N700S実車値の真値化: `0件`
-- 新たなexact blocker: `0件`
+今回新規に、直近二次のR7「機械・制御」問2 `(1),(3)` を公式問題から独立再解答し、その後公式標準解答へ照合した。
 
-## Topic 23 PowerPoint復旧・最終QA
+- 同期速度: `1200 min^-1`
+- 定格すべり: `3.5 %`
+- 定格トルク: `181 N·m`
+- 50%トルク時回転速度: `1180 min^-1`
+- 同出力: `11200 W`
+- 固定答案要素としての照合結果: `4 / 4 PASS`
 
-旧破損blob `ff2c73d872da4fc3605fb30e5f67c9dc97517f5c` は現行成果物ではない。復旧後の現行artifactは次。
+## Topic 24 固定EXAM_ALIGNMENT
 
-- file: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_images.pptx`
-- Git blob SHA: `4ac7e4c493e8c24e8ea98d40db2494a7218f14b2`
-- byte size: `8,587 bytes`
-- SHA-256: `b7c1e6af945c9e1c36e01175db365a8c4f119800e0ae655894fdae2ee0b02062`
-- 16:9 / `6 slides`
-- ZIP整合性: `PASS`
-- python-pptx: `6 / 6 PASS`
-- LibreOffice PDF変換: `6 / 6 PASS`
-- pdftoppm/contact sheet: `6 / 6 PASS`
-- geometry overflow: `0`
-- 文字切れ・重なり・欠落グリフ: `0`
+固定過去問:
+1. R7 一次「機械」問2 `(1)〜(5)` — 5答案要素
+2. R4 一次「機械」問2 `(3)〜(5)` — 3答案要素
+3. R2 一次「機械」問3 `(1),(4),(5)` — 3答案要素
+4. R3 二次「機械・制御」問1 `(3),(4)` — 2答案要素
+5. R7 二次「機械・制御」問2 `(1),(3)` — 4答案要素
 
-最終QA `23_n700s_sic_main_converter_final_qa.md` は `PASS / COMPLETED`。Topic 23をcompletedへ移行した。
+集計:
+- 一次: `3問 / 11答案要素`
+- 二次: `2問 / 6答案要素`
+- 合計: `5問 / 17答案要素`
+- 既存検証再利用: `13答案要素`
+- 今回新規公式照合: `4 / 4 PASS`
+- exact blocker: `0件`
 
-## 実車値境界
+Topic 24 source:
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison.md`
+
+## Topic 24 境界
+
+系列SPEC固定範囲は極数、同期速度、すべり、周波数、回転速度、トルク、電気角、小型軽量化、および指定3計算・グラフ。
 
 維持事項:
+- 電気角は `θ_e=(P/2)θ_m` を一般関係として説明するが、直接対応する第二種固定過去問答案要素があるとは主張しない。
+- N700Sの主電動機極数・運転周波数・回転速度・トルク・寸法・質量等は、一次資料またはメーカー資料で確認できたものだけを実値として扱う。
+- 小型軽量化は公表事実と一般理論を分離し、極数・周波数の変更だけからN700S固有の軽量化率や因果を推測しない。
+- Topic 10の等価回路・損失、Topic 12のVVVF制御、Topic 13の回生を独立主題として再展開しない。
+- Topic 24完成後はTopic 24教材だけを使って固定5問・17答案要素をclean blind再解答する。既存PASSをそのまま完成判定へ流用しない。
 
-- JR東海公表のN700A比7%消費電力量低減をSiC単独効果へ読み替えない。
-- 富士電機公表の20%軽量化をN700S車両全体の重量低減率へ拡張しない。
-- N700S未公表の `V_on`, `R_on`, `E_on`, `E_off`, `f_s`, `T_j`, `R_th` を真値化しない。
-- 比較計算値は教材用仮定値として扱う。
+## Topic 21 H26二次 問1(4)
 
-Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当を使った過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
+`48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 次の安全な工程
 
-Topic 24「N700S 主電動機設計の比較」の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲は極数、同期速度、すべり、周波数、回転速度、トルク、電気角、小型軽量化、および指定3計算・グラフ。まず第二種一次・二次の公式過去問を直近年度から確認し、固定問題・答案要素・教材責務を確定する。確定不能事項は推測せずexact blockerとして記録する。
+Topic 24の解説sourceを作成する。固定5問・17答案要素から逆算して、`n_s=120f/P`、`s=(n_s-n)/n_s`、`P_m=ωT`、電気角、SPEC指定3可視化を欠落なく説明し、N700S実車接続は確認済み一次資料の範囲だけで行う。確定不能事項があれば推測せずexact blockerとして記録する。
