@@ -6,14 +6,44 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `23 / 39`
-- current_status: `topic_24_explanation_source_complete`
+- current_status: `topic_24_explanation_pdf_complete`
 - last_completed_topic: `23 N700S SiC主変換装置`
 - active_topic: `24 N700S 主電動機設計の比較`
-- next_start: Topic 24解説sourceから解説PDFを生成し、表示・数式・可視化・固定17答案要素coverageをQAする
+- next_start: Topic 24練習sourceを作成し、一次型・二次記述型の練習問題と完全解説を固定17答案要素へ接続する
 
 ## 完了済み
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
+
+## Topic 24 解説PDF
+
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- A4縦: `6 pages`
+- PDFium render: `6 / 6 PASS`
+- Poppler render: `6 / 6 PASS`
+- 置換文字 `�`: `0件`
+- クリッピング・文字重なり・破損グリフ: `0件`
+- 固定過去問: 第二種一次3問＋二次2問 = `5 / 5 covered`
+- 一次答案要素: `11 / 11 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計答案要素: `17 / 17 covered`
+- SPEC必須8項目: `8 / 8 covered`
+- SPEC指定可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- N700S実車接続: 富士電機一次資料で主電動機6極化を確認
+- 軽量化境界: 駆動システム全体約20%であり、主電動機単体・6極化単独の20%とは扱わない
+- 未確認N700S実運転周波数・回転速度・トルク・寸法・質量の真値化: `0件`
+- Topic 21 H26二次 問1(4)の丸め注記: `48.1 / 48.0 N·m` を過去問固有差として維持
+- Topic 21一般式変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 新たなexact blocker: `0件`
+- SHA-256: `c8cb9bd229f871e96667c5f845bcad8dfbdd7ecee2ceef7a01bd1bd95fe1aef8`
+
+成果物:
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation.pdf`
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation_pdf_qa.md`
+
+この段階は解説PDFまでの完成であり、Topic 24全体はまだ `completed` としない。clean blind独立再解答も未実施。
 
 ## Topic 24 解説source
 
@@ -36,8 +66,6 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 成果物:
 - `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison.md`
 - `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation_source.md`
-
-source段階のcoverage確認であり、完成後clean blind `17 / 17` はまだ実施しない。
 
 ## Topic 24 制作前EXAM_ALIGNMENT
 
@@ -78,4 +106,4 @@ Topic 24完成後はTopic 24教材だけで固定 `5問・17答案要素` をcle
 
 ## 次工程
 
-Topic 24解説sourceから解説PDFを生成する。固定5問・17答案要素、同期速度・すべり・回転速度・トルク・電気角、SPEC指定3可視化、N700Sの6極化と軽量化の事実境界を維持する。PDF生成後に表示・数式・可視化・coverageをQAし、未確認実車値は追加しない。
+Topic 24練習sourceを作成する。一次型と二次記述型を含め、固定5問・17答案要素へ接続し、数値問題は公式選択理由・単位・中間計算・検算まで、記述式は前提・途中式・理由説明まで採点可能な形にする。未確認実車値は追加しない。
