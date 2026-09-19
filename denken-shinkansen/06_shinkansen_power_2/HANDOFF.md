@@ -3,38 +3,33 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_explanation_pdf_complete`
+current_status: `topic_16_practice_source_complete`
 
 ## 今回完了
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、直近コミットをreconcileし、既存workerのTopic 16制作前blind・clean rerun・解説source成果を正本として重複作業を避けた。
-
-既存解説sourceに基づくTopic 16解説PDFを生成し、表示・文字抽出・内容・数値・試験対応QAを実施した。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、Topic 16のEXAM_ALIGNMENT・解説source/PDFをreconcileし、最初の未完了工程である練習問題sourceを作成した。
 
 成果物:
-- `topics/16_short_circuit/16_short_circuit_explanation.pdf`
-- `topics/16_short_circuit/16_short_circuit_explanation_pdf_qa.md`
+- `topics/16_short_circuit/16_short_circuit_practice.md`
 
-QA結果:
-- A4縦: `6ページ`
-- ファイルサイズ: `10463 bytes`
-- Git blob SHA-1: `cc7fa719275a8b74fed7f370583eadd96f9977fb`
-- SHA-256: `a7af60c8169ad998f38221bb026cfd00be95a9b94f809e5a229c9ba4bbbdc42d`
-- PDFium 200 dpi: `6 / 6 PASS`
-- Poppler: `6 / 6 PASS`
-- ページ外逸脱 / 文字重なり / 本文切れ: `0件`
-- 黒四角 / 欠損グリフ: `0件`
-- `pdftotext -layout`: `PASS`
-- 数式 / 表 / 単位 / 対称分回路: `PASS`
-- 故障位置―短絡電流グラフ: `PASS`
-- MASTER SPEC最低構成: `PASS`
-- 3段階例題: `3 / 3 PASS`
-- 固定10説明項目: `10 / 10 PASS`
-- 固定5問・23答案要素: `23 / 23 covered`
+練習source:
+- 全15問
+- 基礎: `4問`
+- 本試験標準: `8問`
+- 複合・応用: `3問`
+- 二種一次型五肢択一: `10問`
+- 二種二次型記述: `5問`
+- 全問に途中式・理由・単位を含む完全解説
+- 固定5問・23答案要素への接続: `23 / 23`
+- 固定10説明項目への接続: `10 / 10`
+- 三相短絡 / 一線地絡 / 線間短絡 / 二線地絡: 収録
+- 短絡容量 / 単位法 / ％Z / 故障位置―短絡電流: 収録
 - 数値独立再計算: `PASS`
-- 判定: `PASS / topic_16_explanation_pdf_complete`
-
-組込みCIDフォントはFontDescriptor非保持の警告が出るが、PDFium / Popplerで全6ページの日本語表示を確認し、文字抽出も可能。表示・収録QA上の欠損はない。
+- 未確認実設備値の真値化: `0件`
+- 公式過去問転載: `0件`
+- Topic 17以降先取り: `0件`
+- 仕様追加: `0件`
+- 判定: `PASS / topic_16_practice_source_complete`
 
 ## 正式品質ゲート
 
@@ -98,27 +93,27 @@ QA結果:
 
 ## 次に行う
 
-Topic 16の練習問題sourceを作成する。
+`topics/16_short_circuit/16_short_circuit_practice.md` からTopic 16練習PDFを生成し、PDF QAを行う。
 
 条件:
 - 固定5問・23答案要素を変更しない。
 - 固定10説明項目との接続を保つ。
-- MASTER / EXAM_ALIGNMENTの二種仕様に従い、一次試験型に加え、対応する二次記述型を含める。
-- 記述式は途中式、前提、単位、理由説明まで採点可能な形にする。
+- 一次型10問・二次記述型5問の構成を保持する。
+- 二次記述は途中式、前提、単位、理由説明が採点可能な状態を保持する。
 - 三相短絡、一線地絡、線間短絡、二線地絡、単位法・％Z、短絡容量、故障位置―短絡電流を固定範囲どおり扱う。
-- 未確認実設備値は使わず、必要な数値は教材用仮定値と明記する。
+- 未確認実設備値は真値化しない。
 - Topic 17以降を先取りしない。
 
 まだ行わない:
-- Topic 16練習PDF
 - Topic 16 PowerPoint
 - Topic 16完成後blind
+- Topic 16 Webカタログ・最終QA
 - Topic 17以降
 
 ## 品質境界
 
 - Topic 01〜15: `completed`
-- Topic 16: `topic_16_explanation_pdf_complete`
+- Topic 16: `topic_16_practice_source_complete`
 - 完成数: `15 / 22`
 - 固定EXAM_ALIGNMENT: `5問`（一次2・二次3）
 - 固定答案要素: `23`（一次10・二次13）
@@ -128,6 +123,8 @@ Topic 16の練習問題sourceを作成する。
 - 解説source固定説明項目: `10 / 10`
 - 解説PDF QA: `PASS`
 - 解説PDF答案要素: `23 / 23 covered`
+- 練習source答案要素: `23 / 23 covered`
+- 練習source固定説明項目: `10 / 10`
 - 周辺問題による件数水増し: `0件`
 - Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
