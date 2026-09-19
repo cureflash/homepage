@@ -4,15 +4,21 @@
 
 ## 状態
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、最新 `STATUS.md` / `HANDOFF.md`、直近の車両二種worker成果をreconcileした。Topic 23完了後の最初の未完了テーマとして、Topic 24の制作前EXAM_ALIGNMENTを固定する。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、最新 `STATUS.md` / `HANDOFF.md`、直近の車両二種worker成果をreconcileした。Topic 23完了後の最初の未完了テーマとして、Topic 24の制作前EXAM_ALIGNMENTを固定した。
 
 Topic 10「誘導電動機等価回路」とTopic 12「VVVFインバータと誘導機制御」で既に公式問題・独立再解答まで検証済みの同期速度・すべり・トルク関連問題は再利用し、同じ過去問の再調査・再解答を重複実施しない。Topic 24では極数・周波数・同期速度・回転速度・トルク・電気角を一つの設計比較へまとめ、N700Sの小型軽量化との接続は確認可能な実車一次資料だけで行う。
 
 R7二次「機械・制御」問2のうち、本テーマに直接対応する `(1),(3)` を新規に制作前独立検証し、公式標準解答と `4 / 4 PASS` で一致した。
 
-current_status: `exam_alignment_complete`
+解説sourceを作成し、固定5問・17答案要素の説明責務、SPEC必須8項目、指定3可視化、3段階例題を収録した。富士電機一次資料でN700S主電動機の6極化を確認し、駆動システム全体約20%軽量化を主電動機単体・6極化単独へ誤帰属しない境界を固定した。
 
-次工程: Topic 24解説sourceを作成する。
+current_status: `explanation_source_complete`
+
+現行成果物:
+- `24_n700s_main_motor_design_comparison.md`
+- `24_n700s_main_motor_design_comparison_explanation_source.md`
+
+次工程: Topic 24解説sourceから解説PDFを生成し、表示・数式・可視化・固定17答案要素coverageをQAする。
 
 ## 固定範囲
 
@@ -116,7 +122,7 @@ Topic 10・12の既存13答案要素は既に完成後独立再解答までPASS�
 - R7一次 問2の等価回路導出全体をTopic 24で再展開しない。必要なのはすべり・トルク特性の接続である。
 - R2一次 問3のV/f制御詳細はTopic 12の責務であり、Topic 24では周波数と速度の関係に必要な範囲だけ参照する。
 - 電気角を直接問う固定第二種過去問があると推測しない。`θ_e=(P/2)θ_m` はSPEC必須の一般関係として説明する。
-- N700S固有の小型軽量化率、主電動機極数、実運転周波数、実回転速度、実トルクを未確認値で埋めない。
+- N700S固有の実運転周波数、実回転速度、実トルク、寸法、質量を未確認値で埋めない。
 
 ## 公式問題・解答
 
@@ -152,8 +158,12 @@ Topic 10・12の既存13答案要素は既に完成後独立再解答までPASS�
   - https://e-sysnet.com/%E9%9B%BB%E5%8B%95%E6%A9%9F%E3%81%AE%E9%80%9F%E5%BA%A6%E5%88%B6%E5%BE%A1%E3%81%AE%E6%96%B9%E6%B3%95%E3%81%A8%E7%89%B9%E5%BE%B4/
 - 基礎からわかる電気技術者の知識と資格「三相誘導電動機の特性」
   - https://e-sysnet.com/%E4%B8%89%E7%9B%B8%E8%AA%98%E5%B0%8E%E9%9B%BB%E5%8B%95%E6%A9%9F%E3%81%AE%E7%89%B9%E6%80%A7/
+- 富士電機技報 2020 vol.93 no.2 p.95（5）
+  - https://www.fujielectric.co.jp/about/company/gihou_2020/pdf/93-02/FEJ93-02-000-2020.pdf
+- JR東海「地球環境保全への貢献」
+  - https://company.jr-central.co.jp/sustainability/environment/contribution/
 
-Topic 10・12で既に比較済みの参考教材はその検証結果を再利用し、今回新規問題については公式問題・標準解答と電験王2を照合した。
+Topic 10・12で既に比較済みの参考教材はその検証結果を再利用し、今回新規問題については公式問題・標準解答と電験王2を照合した。N700S実車接続はメーカー・事業者一次資料を使用した。
 
 ## 教材で欠落不可の説明
 
@@ -164,13 +174,32 @@ Topic 10・12で既に比較済みの参考教材はその検証結果を再利�
 5. 条件変更時は、まず `P,f→n_s`、次に `s→n` の順に計算し、SPEC指定「条件変更時の速度比較」へ接続する。
 6. `ω=2πn/60`、`P_m=ωT` を示し、速度・出力・トルクを相互に逆算できるようにする。R7二次問2型では同期速度→すべり→トルク→条件変更後速度→出力の順で解く。
 7. 極対数 `p=P/2` を定義し、機械角 `θ_m` と電気角 `θ_e` の一般関係 `θ_e=pθ_m=(P/2)θ_m` を説明する。記号 `P` を機械出力と混同しないよう、本文では極数と出力の記号を明確に分ける。
-8. N700Sへの接続では一次資料・メーカー資料で確認できた主電動機仕様・小型軽量化の記述だけを実値・実事実として扱う。確認できない極数、運転周波数、回転速度、トルク、寸法、質量は推測しない。
+8. N700Sへの接続では一次資料・メーカー資料で確認できた主電動機仕様・小型軽量化の記述だけを実値・実事実として扱う。確認できない運転周波数、回転速度、トルク、寸法、質量は推測しない。
 9. 小型軽量化は「何が公表事実か」「一般式から何が比較できるか」を分けて説明し、極数・高周波化だけを原因として断定しない。
 10. Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` は、公式標準解答が `π=3.14` 相当を使う過去問固有丸め差として扱う。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
+## 解説source完成QA
+
+- 成果物: `24_n700s_main_motor_design_comparison_explanation_source.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 一次説明責務: `11 / 11 covered`
+- 二次説明責務: `6 / 6 covered`
+- 合計: `17 / 17 covered`
+- SPEC必須8項目: `8 / 8 covered`
+- SPEC指定可視化: `3 / 3 defined`
+- 3段階例題: `3 / 3`
+- 富士電機一次資料でN700S主電動機6極化を確認
+- 駆動システム全体約20%軽量化を主電動機単独・6極化単独へ誤帰属: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- 新たなexact blocker: `0件`
+
+source段階の `17 / 17 covered` は説明責務確認であり、完成後clean blindのPASSを意味しない。
+
 ## 後工程品質ゲート
 
-Topic 24の解説source、解説PDF、練習source/PDF、PowerPointを完成させた後、固定5問・17答案要素をTopic 24教材だけでclean blind独立再解答する。
+Topic 24の解説PDF、練習source/PDF、PowerPointを完成させた後、固定5問・17答案要素をTopic 24教材だけでclean blind独立再解答する。
 
 PASS条件:
 - 一次 `11 / 11`
@@ -182,5 +211,6 @@ PASS条件:
 - SPEC外主題追加 `0件`
 
 制作前EXAM_ALIGNMENT判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+解説source判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 exact blocker: `0件`
