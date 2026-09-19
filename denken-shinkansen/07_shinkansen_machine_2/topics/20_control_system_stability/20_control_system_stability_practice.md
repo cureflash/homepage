@@ -751,4 +751,4 @@ dB値は
 
 # 次工程
 
-Topic 20最終QAを再実施する。
+Topic 20最終QA `PASS / completed`。次工程はTopic 21制作前EXAM_ALIGNMENT。
