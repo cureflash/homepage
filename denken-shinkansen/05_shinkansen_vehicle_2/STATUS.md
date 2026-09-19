@@ -6,14 +6,39 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `24 / 39`
-- current_status: `topic_25_explanation_pdf_complete`
+- current_status: `topic_25_practice_source_complete`
 - last_completed_topic: `24 N700S 主電動機設計の比較`
 - active_topic: `25 N700S バッテリー自走のエネルギー設計`
-- next_start: Topic 25練習sourceを作成し、一次試験型・二次記述計算型の練習問題と完全解説を固定28答案要素へ接続する
+- next_start: Topic 25練習PDFを生成し、表示・数式・単位・一次正答一意性・二次記述解答・固定28答案要素coverageをQAする
 
 ## 完了済み
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
+
+## Topic 25 練習source
+
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 一次試験型: `8問`
+- 二次試験型: `4問`
+- 合計: `12問`
+- 固定過去問: 第二種一次4問＋二次1問 = `5 / 5 connected`
+- 一次答案要素: `20 / 20 connected`
+- 二次答案要素: `8 / 8 connected`
+- 合計答案要素: `28 / 28 connected`
+- SPEC必須10項目: `10 / 10 covered`
+- SPEC指定3計算・可視化: `3 / 3 aligned`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認N700S電池値の真値化: `0件`
+- 未指定走行抵抗モデル追加: `0件`
+- Topic 21 H26二次 問1(4)一般式変更: `0件`
+- SPEC外主題追加: `0件`
+- 完成後clean blind: `PENDING`
+- 新たなexact blocker: `0件`
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_practice_source.md`
 
 ## Topic 25 解説PDF
 
@@ -163,4 +188,4 @@ clean blind公式照合:
 
 ## 次工程
 
-Topic 25練習sourceを作成し、一次試験型・二次記述計算型の練習問題と完全解説を固定28答案要素へ接続する。完成数は `24 / 39`。
+Topic 25練習PDFを生成し、表示・数式・単位・一次正答一意性・二次記述解答・固定28答案要素coverageをQAする。完成数は `24 / 39`。
