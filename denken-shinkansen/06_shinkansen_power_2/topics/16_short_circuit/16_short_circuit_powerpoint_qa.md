@@ -9,8 +9,8 @@ status: `PASS / topic_16_powerpoint_complete`
 
 既存の `16_short_circuit_explanation.md`、固定EXAM_ALIGNMENT、系列 `SPEC.md` のTopic 16範囲だけでPowerPointを構成した。正式過去問、固定答案要素、教材技術範囲は追加・差替えしていない。
 
-- ファイルサイズ: `46451 bytes`
-- SHA-256: `c5e8f0c3f239d0d4243a16c907802522e5d6edb0e83998cbd4957789c7e6d0b1`
+- ファイルサイズ: `14953 bytes`
+- SHA-256: `3f5f9ba252d1142b68e00cfc48c740d9a91726b533afc604ce59944468b53e44`
 - 16:9
 - スライド数: `6`
 

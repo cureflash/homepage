@@ -15,8 +15,8 @@ current_status: `topic_16_powerpoint_complete`
 
 PowerPoint:
 - 16:9、`6スライド`
-- `46451 bytes`
-- SHA-256 `c5e8f0c3f239d0d4243a16c907802522e5d6edb0e83998cbd4957789c7e6d0b1`
+- `14953 bytes`
+- SHA-256 `3f5f9ba252d1142b68e00cfc48c740d9a91726b533afc604ce59944468b53e44`
 - PPTX ZIP整合性 `PASS`
 - `slides_test.py`: `PASS / No overflow detected`
 - LibreOffice PDF変換 `6ページ PASS`
