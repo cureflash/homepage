@@ -10,9 +10,9 @@ Topic 17「パワー半導体の損失比較」で既に公式問題・SPEC境�
 
 完成後clean blind初回は固定23答案要素中 `21/23 PASS`。R2一次「機械」問2 `(2),(4)` の2点だけ説明不足が露呈したため、固定EXAM_ALIGNMENT・一般式・SPECを変更せず教材側を最小補強した。解説PDF・練習PDF・PowerPointを再同期後、初回候補とは別の修正後候補を公式照合前に固定し、固定5問・23答案要素 `23/23 PASS` を確認した。
 
-最終QAで現行PowerPoint本体のGitHub size `12,326 bytes` とPowerPoint QA記録 `12,944 bytes` の不一致を検出した。PowerPoint本体とQAは同一commitで最新更新されているため、単純な後続差替えとは確定できない。サイズ記録の誤記とも推測せず、現行PPTXに対する識別情報・表示QAを再実施するまで完了扱いしない。
+旧PowerPoint artifactの破損blockerは、現行blob `4ac7e4c493e8c24e8ea98d40db2494a7218f14b2`（8,587 bytes / SHA-256 `b7c1e6af945c9e1c36e01175db365a8c4f119800e0ae655894fdae2ee0b02062`）への復旧で解消した。現行artifactに対するZIP、python-pptx、LibreOffice、pdftoppm/contact sheet QAはすべてPASSし、最終QAで解説PDF・練習PDF・修正後clean blindと一括reconcileした。
 
-current_status: `topic_23_final_qa_blocked_powerpoint_artifact_identity`
+current_status: `completed`
 
 現行成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
@@ -31,7 +31,7 @@ current_status: `topic_23_final_qa_blocked_powerpoint_artifact_identity`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_remediated_official_check.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_final_qa.md`
 
-次工程: 現行 `23_n700s_sic_main_converter_images.pptx` そのものへ byte size / SHA-256 / PPTX open・ZIP / LibreOffice変換 / pdftoppm表示QAを再実施し、PowerPoint QAをreconcileする。Topic 24へは進めない。
+次工程: Topic 24「N700S 主電動機設計の比較」の制作前EXAM_ALIGNMENT。Topic 23は `PASS / completed`。
 
 ## 固定範囲
 
@@ -177,11 +177,10 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 - 解説PDF: A4縦 `5 pages`, PDFium / Poppler `5 / 5 PASS`, 補強後再同期済み
 - 練習source: 一次8問＋二次4問、固定23答案要素 `23 / 23 connected`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 数値・論理 `12 / 12 PASS`, 一次正答一意性 `8 / 8 PASS`, 固定R2読図補強 `2 / 2 PASS`
 - 練習PDF: A4縦 `5 pages`, PDFium / pdftoppm `5 / 5 PASS`, 補強後再同期済み
-- PowerPoint QA記録: 16:9 `6 slides`, 表示QA `6 / 6 PASS`, 固定23答案要素 `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3 PASS`
-- PowerPoint artifact identity: `BLOCKED` — 現行GitHub size `12,326 bytes` とQA記録 `12,944 bytes` が不一致
+- PowerPoint: 16:9 `6 slides`, 現行blob `4ac7e4c493e8c24e8ea98d40db2494a7218f14b2`, ZIP/python-pptx/LibreOffice/pdftoppm `PASS`, 固定23答案要素 `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3 PASS`
 - 初回clean blind: `21 / 23 PASS / NEEDS_REVISION`
 - 初回候補の後編集: `0件`
 - 修正後clean blind: `23 / 23 PASS`
 - 修正後候補の後編集: `0件`
-- 最終QA: `BLOCKED / POWERPOINT_ARTIFACT_IDENTITY_MISMATCH`
-- 状態: `topic_23_final_qa_blocked_powerpoint_artifact_identity`
+- 最終QA: `PASS / COMPLETED`
+- 状態: `completed`
