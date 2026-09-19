@@ -58,8 +58,32 @@ jobs:
           p='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx'
           prs=Presentation(p)
           assert len(prs.slides)==6
-          print('package/open PASS, slides=6')
+          sw, sh = prs.slide_width, prs.slide_height
+          texts=[]
+          for i, slide in enumerate(prs.slides, 1):
+              for shape in slide.shapes:
+                  assert shape.left >= 0 and shape.top >= 0
+                  assert shape.left + shape.width <= sw + 1
+                  assert shape.top + shape.height <= sh + 1
+                  if hasattr(shape, 'text'):
+                      texts.append(shape.text)
+          all_text='\n'.join(texts)
+          for token in ['N700S','6極','同期速度','すべり','トルク','電気角','小型軽量化','固定品質ゲート']:
+              assert token in all_text, token
+          print('package/open/geometry/content PASS, slides=6')
           PY
+
+          if ! command -v libreoffice >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq libreoffice-impress poppler-utils >/dev/null
+          fi
+          mkdir -p /tmp/topic24_render
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic24_render "$p" >/tmp/topic24_lo.txt 2>&1
+          pdf='/tmp/topic24_render/24_n700s_main_motor_design_comparison_images.pdf'
+          test -s "$pdf"
+          pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+          test "$pages" = '6'
+          echo "LibreOffice render PASS, pages=$pages"
 
           git add "$p"
           git rm -f "$wf"
