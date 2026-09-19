@@ -6,186 +6,64 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `24 / 39`
-- current_status: `topic_25_practice_source_complete`
+- current_status: `topic_25_blocked_canonical_explanation_pdf_identity`
 - last_completed_topic: `24 N700S 主電動機設計の比較`
 - active_topic: `25 N700S バッテリー自走のエネルギー設計`
-- next_start: Topic 25練習PDFを生成し、表示・数式・単位・一次正答一意性・二次記述解答・固定28答案要素coverageをQAする
-
-## 完了済み
-
-Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
+- next_start: GitHub main正本のTopic 25解説PDF artifact identityを修復し、正本そのものを再QAする。修復完了まで後続工程へ進まない
 
 ## Topic 25 練習source
+
+既存worker成果をreconcile済み。重複作業なし。
 
 - 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 - 一次試験型: `8問`
 - 二次試験型: `4問`
 - 合計: `12問`
-- 固定過去問: 第二種一次4問＋二次1問 = `5 / 5 connected`
+- 固定過去問: `5 / 5 connected`
 - 一次答案要素: `20 / 20 connected`
 - 二次答案要素: `8 / 8 connected`
 - 合計答案要素: `28 / 28 connected`
 - SPEC必須10項目: `10 / 10 covered`
-- SPEC指定3計算・可視化: `3 / 3 aligned`
 - 数値・論理独立再計算: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 未確認N700S電池値の真値化: `0件`
 - 未指定走行抵抗モデル追加: `0件`
-- Topic 21 H26二次 問1(4)一般式変更: `0件`
-- SPEC外主題追加: `0件`
-- 完成後clean blind: `PENDING`
-- 新たなexact blocker: `0件`
+- Topic 21一般式変更: `0件`
 
 成果物:
 - `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_practice_source.md`
 
-## Topic 25 解説PDF
+## Topic 25 exact blocker
 
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-- A4縦: `3 pages`
-- file size: `13,744 bytes`
-- SHA-256: `991b93eddf35c4676ebb6e25f5676d1749bae78133f2d162db67262d543d1a74`
-- PDFium render: `3 / 3 PASS`
-- Poppler render: `3 / 3 PASS`
-- 固定過去問: 第二種一次4問＋二次1問 = `5 / 5 covered`
-- 一次答案要素: `20 / 20 covered`
-- 二次答案要素: `8 / 8 covered`
-- 合計答案要素: `28 / 28 covered`
-- SPEC必須10項目: `10 / 10 covered`
-- SPEC指定3計算・可視化: `3 / 3 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 未確認N700S電池値の真値化: `0件`
-- 未指定走行抵抗モデル追加: `0件`
-- Topic 21 H26二次 問1(4)一般式変更: `0件`
-- SPEC外主題追加: `0件`
-- 完成後clean blind: `PENDING`
-- 新たなexact blocker: `0件`
+解説PDFのGitHub main正本と直前QAのartifact identityが不一致。
 
-成果物:
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation.pdf`
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation_pdf_qa.md`
+- 正本blob SHA: `aeec135e3fcecd5002623c8ab8de7d5bf76bd5ea`
+- GitHub Contents API size: `9,982 bytes`
+- 直前QA記録: `13,744 bytes`, SHA-256 `991b93eddf35c4676ebb6e25f5676d1749bae78133f2d162db67262d543d1a74`
+- 正本PDF末尾 `startxref`: `13270`
+- `13270 > 9982` のため正本PDFを直前QA済みartifactとして扱えない
 
-## Topic 25 解説source
+判定: `BLOCKED / CANONICAL_ARTIFACT_IDENTITY_MISMATCH`。
 
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 固定過去問: 第二種一次4問＋二次1問 = `5問`
-- 一次説明責務: `20 / 20 covered`
-- 二次説明責務: `8 / 8 covered`
-- 合計説明責務: `28 / 28 covered`
-- SPEC必須10項目: `10 / 10 covered`
-- SPEC指定3計算・可視化: `3 / 3 defined`
-- 3段階例題: `3 / 3`
-- N700S実車接続: 東芝一次メーカー資料でSCiB採用・バッテリー自走共同開発の境界を確認
-- 未確認N700S電池値の真値化: `0件`
-- 未指定走行抵抗モデル追加: `0件`
-- SPEC外主題追加: `0件`
-- Topic 21 H26二次 問1(4)一般式変更: `0件`
-- 完成後clean blind: `PENDING`
-- 新たなexact blocker: `0件`
+直前の `PDFium 3/3 PASS` / `Poppler 3/3 PASS` はGitHub main正本に対する再検証結果として無効化。Topic 25解説PDFの品質ゲートを再OPENする。
 
-成果物:
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation_source.md`
+解消条件: 正常なPDFへ正本を置換し、その正本についてページ数・size・SHA-256・PDFium/Poppler・文字抽出・固定5問28答案要素・SPEC必須10項目・指定3可視化を再QAしてidentityを一致させる。
 
-## Topic 25 制作前EXAM_ALIGNMENT
+## Topic 25 固定EXAM_ALIGNMENT
 
-- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
-- 固定過去問: 第二種一次4問＋二次1問 = `5問`
-- 一次答案要素: `20`
-- 二次答案要素: `8`
-- 合計答案要素: `28`
-- 二次記述・計算問題: H23「機械・制御」問3
-- SPEC必須10項目の収録責務: `10 / 10 fixed`
-- SPEC指定3計算・グラフの収録責務: `3 / 3 fixed`
-- 未確認N700S電池値の真値化: `0件`
-- SPEC外主題追加: `0件`
-- 完成後clean blind: `PENDING`
-
-固定公式過去問:
 1. R8 一次「機械」問5 `(1)〜(5)` — 5答案要素
 2. R4 一次「機械」問6 `(1)〜(5)` — 5答案要素
 3. R2 一次「機械」問4 `(1)〜(5)` — 5答案要素
 4. R1 一次「機械」問4 `(1)〜(5)` — 5答案要素
 5. H23 二次「機械・制御」問3 `(1)〜(4)` — 8答案要素
 
-成果物:
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design.md`
-
-## Topic 24 最終品質ゲート
-
-- 制作前EXAM_ALIGNMENT: `PASS / EXAM_ALIGNMENT_COMPLETE`
-- 解説source: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
-- 練習source: `PASS / PRACTICE_SOURCE_COMPLETE`
-- 練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
-- 解説画像PowerPoint: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
-- 完成後clean blind: `PASS / CLEAN_BLIND_COMPLETE`
-- 最終判定: `PASS / COMPLETED`
-
-clean blind公式照合:
-- 固定過去問: 第二種一次3問＋二次2問 = `5 / 5 PASS`
-- 一次答案要素: `11 / 11 PASS`
-- 二次答案要素: `6 / 6 PASS`
-- 合計答案要素: `17 / 17 PASS`
-- 固定候補の公式照合後編集: `0件`
-- 教材外知識による補完: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 21一般式変更: `0件`
-- SPEC外主題追加: `0件`
-- 未確認N700S実車値の真値化: `0件`
-- 新たなexact blocker: `0件`
-
-成果物:
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_blind_reanswer_candidates_clean.md`
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_blind_reanswer_official_check.md`
-
-## Topic 24 解説画像PowerPoint
-
-- GitHub main正本: 16:9 / `6 slides` / `264,329 bytes`
-- GitHub blob SHA: `6ae38920238198426df92ecf6bd99e74ca7214cf`
-- 修復コミット: `22f4bed3aa88ea00e99274c7b59d08198ef1a84b`
-- ZIP integrity (`unzip -t`): `PASS`
-- python-pptx open: `PASS`
-- geometry overflow: `0`
-- LibreOffice PDF変換: `PASS / 6 pages`
-- 固定過去問: 第二種一次3問＋二次2問 = `5 / 5 covered`
-- 一次答案要素: `11 / 11 covered`
-- 二次答案要素: `6 / 6 covered`
-- 合計答案要素: `17 / 17 covered`
-- SPEC必須8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-
-旧GitHub正本のZIP integrity / artifact identity blockerは解消済み。
-
-## Topic 24 固定EXAM_ALIGNMENT
-
-1. R7 一次「機械」問2 `(1)〜(5)` — 5答案要素
-2. R4 一次「機械」問2 `(3)〜(5)` — 3答案要素
-3. R2 一次「機械」問3 `(1),(4),(5)` — 3答案要素
-4. R3 二次「機械・制御」問1 `(3),(4)` — 2答案要素
-5. R7 二次「機械・制御」問2 `(1),(3)` — 4答案要素
-
-集計: 一次 `3問 / 11答案要素`、二次 `2問 / 6答案要素`、合計 `5問 / 17答案要素`。固定EXAM_ALIGNMENT変更 `0件`。
-
-## Topic 24 実車接続・境界
-
-- N700S向け主電動機6極化: 富士電機技報 2020 vol.93 no.2 p.95（5）で確認済み
-- 約20%軽量化: SiC素子搭載、主電動機6極化、主変圧器冷却方式見直しを合わせた駆動システム全体の値。主電動機単体・6極化単独の値とは扱わない
-- 未確認N700S実運転周波数・実回転速度・実トルク・寸法・質量の真値化: `0件`
-- 電気角 `θ_e=(P/2)θ_m`: SPEC必須一般関係として扱い、固定第二種過去問の直接答案要素とは主張しない
-
-## Topic 23 最終品質ゲート
-
-- 固定過去問: 第二種一次4問＋二次1問 = `5 / 5 PASS`
-- 合計答案要素: `23 / 23 PASS`
-- 修正後clean blind: `23 / 23 PASS`
-- 最終QA: `PASS / COMPLETED`
+集計: 一次 `20`、二次 `8`、合計 `28`。固定EXAM_ALIGNMENT変更 `0件`。
 
 ## Topic 21 H26二次 問1(4)
 
-`48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。Topic 21は `PASS / completed` のまま。
+`48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
-## 次工程
+## 完成数
 
-Topic 25練習PDFを生成し、表示・数式・単位・一次正答一意性・二次記述解答・固定28答案要素coverageをQAする。完成数は `24 / 39`。
+Topic 01〜24: `PASS / completed`。完成数 `24 / 39`。Topic 25はblocker解消まで完成扱いにしない。
