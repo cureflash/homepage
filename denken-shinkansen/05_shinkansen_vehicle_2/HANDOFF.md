@@ -8,11 +8,11 @@
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
-現在地は `topic_24_powerpoint_canonical_repair_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。Topic 24全体は未完了。
+現在地は `topic_24_blind_candidates_fixed`。active topic は Topic 24 `N700S 主電動機設計の比較`。Topic 24全体は未完了。
 
 ## 今回のreconcile
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 24ディレクトリ、直近コミット、既存車両二種worker成果を確認した。固定品質ゲートは再利用し、過去問の差替え・追加・重複再調査はしていない。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 24ディレクトリ、直近コミット、既存車両二種worker成果を確認した。PowerPoint正本修復済み成果を再利用し、重複生成・重複QAはしていない。固定品質ゲートも再利用し、過去問の差替え・追加・重複再調査はしていない。
 
 - R7一次「機械」問2: Topic 10 `5 / 5 PASS`
 - R4一次「機械」問2 `(3)〜(5)`: Topic 12 `3 / 3 PASS`
@@ -20,9 +20,31 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 - R3二次「機械・制御」問1 `(3),(4)`: Topic 10 `2 / 2 PASS`
 - R7二次「機械・制御」問2 `(1),(3)`: Topic 24制作前照合 `4 / 4 PASS`
 
+## Topic 24 clean blind独立再解答候補
+
+Topic 24教材と公式問題本文・図だけから固定5問を再解答し、公式解答・標準解答を参照する前に候補を固定した。
+
+- 固定5問: `5 / 5 solved`
+- 一次答案要素: `11 / 11 candidate fixed`
+- 二次答案要素: `6 / 6 candidate fixed`
+- 合計: `17 / 17 candidate fixed`
+- 公式解答・標準解答参照: `0件`
+- Topic 10/12・他worker保存済み正答候補参照: `0件`
+- 候補固定後の後編集: `禁止`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
+
+成果物:
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_blind_reanswer_candidates_clean.md`
+
+判定: `CANDIDATES_FIXED / OFFICIAL_NOT_CHECKED`
+
 ## Topic 24 解説画像PowerPoint
 
-GitHub main正本を既存のTopic 24生成sourceから再生成し、正本そのものをQAした。
+GitHub main正本を既存のTopic 24生成sourceから再生成し、正本そのものをQA済み。
 
 - `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx`
 - Git blob SHA: `6ae38920238198426df92ecf6bd99e74ca7214cf`
@@ -39,7 +61,7 @@ GitHub main正本を既存のTopic 24生成sourceから再生成し、正本そ�
 
 判定: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
 
-旧GitHub正本のZIP integrity / artifact identity blockerは解消した。固定EXAM_ALIGNMENT、一般式、SPEC、未確認実車値境界は変更していない。clean blindへはまだ進めていない。
+旧GitHub正本のZIP integrity / artifact identity blockerは解消済み。固定EXAM_ALIGNMENT、一般式、SPEC、未確認実車値境界は変更していない。
 
 ## Topic 24 既存成果
 
@@ -49,7 +71,7 @@ GitHub main正本を既存のTopic 24生成sourceから再生成し、正本そ�
 - 練習source: `PASS / PRACTICE_SOURCE_COMPLETE`
 - 練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
 - 解説画像PowerPoint: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
-- 完成後clean blind固定過去問再解答: `未実施`
+- 完成後clean blind固定過去問再解答: `CANDIDATES_FIXED / OFFICIAL_NOT_CHECKED`
 
 ## Topic 24 固定EXAM_ALIGNMENT
 
@@ -73,4 +95,4 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 
 ## 次の安全な工程
 
-Topic 24教材だけで固定第二種一次3問＋二次2問、合計5問・17答案要素をclean blind独立再解答する。完成数は `23 / 39` のまま。
+固定済みclean blind候補を変更せず、公式解答・標準解答と固定5問・17答案要素を照合する。完成数は `23 / 39` のまま。
