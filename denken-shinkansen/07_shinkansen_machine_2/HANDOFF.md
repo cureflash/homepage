@@ -6,8 +6,8 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_progress_records_synced / IN_PROGRESS`
-- 次工程: Topic 19 最終QA再実施
+- current status: `topic_19_final_qa_pass / IN_PROGRESS`
+- 次工程: Topic 19 completed確定・完了記録同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -72,36 +72,33 @@
 - 教材の式・解法不足: `0件`
 - 判定: `PASS / topic_19_independent_reanswer_record_qa_pass`
 
-## 最終QA初回
-Topic 19 最終QA初回を実施済み。
+## 最終QA
+初回は技術・試験対応をPASSしたが、進捗記録整合 `2 / 4 PASS` で `NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`。
 
-確認:
-1. 必須成果物実在 — `PASS`
+blocker修正:
+- main source進捗同期 commit `31d82c6cb2f3f1a69ab0664624ae36faa691f28f`
+- 練習source進捗同期 commit `927a61727266ea5e9f21da43050e55ad4d3e6f05`
+- STATUS/HANDOFFも `topic_19_progress_records_synced / IN_PROGRESS` へ同期済み
+- 技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果の変更なし
+
+再実施結果:
+1. 必須成果物 — `PASS`
 2. 固定一次1問＋二次4問・12答案要素 — `12 / 12 PASS`
 3. 完成後独立再解答・公式照合 — `PASS`
 4. 解説PDF・練習PDF・PowerPoint QA — `PASS`
 5. Topic 20/21先取り、未確認実車PID値 — `0件 / PASS`
-6. 進捗記録整合 — `2 / 4 PASS`
+6. 進捗記録整合 — `4 / 4 PASS`
 
-初回blocker:
-- main source `19_pid_speed_control.md` の `## 状態` が `topic_19_explanation_pdf_complete / IN_PROGRESS` のまま
-- 練習source `19_pid_speed_control_practice.md` の `# 次工程` が「Topic 19練習PDF＋QAを作成する」のまま
-
-初回最終判定: `NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`。
+最終判定: `PASS / topic_19_final_qa_pass`。
 
 ## 今回完了した段階
-Topic 19の進捗記録同期を実施した。
+Topic 19最終QAを再実施し、前回blockerの解消を確認した。
 
-- main source `## 状態` を `topic_19_progress_records_synced / IN_PROGRESS` へ更新
-- 練習source `# 次工程` を「Topic 19最終QAを再実施する」へ更新
+- 最終QA記録を `PASS / topic_19_final_qa_pass` へ更新
 - STATUS/HANDOFFを同状態へ同期
 - 技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果は変更なし
+- completed確定・主source/練習sourceの完了記録同期は次工程
 - 完成数は `18 / 22` のまま
 
-## GitHub反映
-- main source: `topics/19_pid_speed_control/19_pid_speed_control.md`
-- 練習source: `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
-- STATUS/HANDOFF: `topic_19_progress_records_synced / IN_PROGRESS` へ同期
-
 ## 次に行うこと
-Topic 19 最終QAを再実施する。
+Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期する。
