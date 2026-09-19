@@ -62,6 +62,6 @@
 
 ## 完成判定
 
-練習PDF工程は `PASS / PRACTICE_PDF_COMPLETE`。Topic 25全体はPowerPoint、完成後clean blind、最終QAが未完了のため `completed` ではない。完成数は `24 / 39` のまま。
+練習PDF工程は `PASS / PRACTICE_PDF_COMPLETE`。Topic 25全体は解説source/PDF、練習source/PDF、PowerPointまで完了。完成後clean blindと最終QAが未完了のため `completed` ではない。完成数は `24 / 39` のまま。
 
-次工程: 解説source / 解説PDF / 練習source / 練習PDFを正本入力として解説画像PowerPointを作成し、内容・表示・固定28答案要素への接続をQAする。
+次工程: Topic 25完成後clean blind独立再解答を行い、固定5問・28答案要素を教材だけで再確認する。
