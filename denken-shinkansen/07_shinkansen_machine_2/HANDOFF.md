@@ -6,8 +6,8 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_final_qa_progress_records_unsynced / NEEDS_REVISION`
-- 次工程: Topic 19 main source・練習sourceの進捗記録同期
+- current status: `topic_19_progress_records_synced / IN_PROGRESS`
+- 次工程: Topic 19 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -72,8 +72,8 @@
 - 教材の式・解法不足: `0件`
 - 判定: `PASS / topic_19_independent_reanswer_record_qa_pass`
 
-## 今回完了した段階
-Topic 19 最終QAを実施した。
+## 最終QA初回
+Topic 19 最終QA初回を実施済み。
 
 確認:
 1. 必須成果物実在 — `PASS`
@@ -83,17 +83,25 @@ Topic 19 最終QAを実施した。
 5. Topic 20/21先取り、未確認実車PID値 — `0件 / PASS`
 6. 進捗記録整合 — `2 / 4 PASS`
 
-blocker:
+初回blocker:
 - main source `19_pid_speed_control.md` の `## 状態` が `topic_19_explanation_pdf_complete / IN_PROGRESS` のまま
 - 練習source `19_pid_speed_control_practice.md` の `# 次工程` が「Topic 19練習PDF＋QAを作成する」のまま
 
-最終判定: `NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`。
+初回最終判定: `NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`。
 
-技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果は変更していない。完成数は `18 / 22` のまま。
+## 今回完了した段階
+Topic 19の進捗記録同期を実施した。
+
+- main source `## 状態` を `topic_19_progress_records_synced / IN_PROGRESS` へ更新
+- 練習source `# 次工程` を「Topic 19最終QAを再実施する」へ更新
+- STATUS/HANDOFFを同状態へ同期
+- 技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果は変更なし
+- 完成数は `18 / 22` のまま
 
 ## GitHub反映
-- 最終QA記録: `topics/19_pid_speed_control/19_pid_speed_control_final_qa.md`
-- STATUS/HANDOFF: `topic_19_final_qa_progress_records_unsynced / NEEDS_REVISION` へ同期
+- main source: `topics/19_pid_speed_control/19_pid_speed_control.md`
+- 練習source: `topics/19_pid_speed_control/19_pid_speed_control_practice.md`
+- STATUS/HANDOFF: `topic_19_progress_records_synced / IN_PROGRESS` へ同期
 
 ## 次に行うこと
-Topic 19 main source・練習sourceの進捗記録を現在地へ同期し、その後に最終QAを再実施する。
+Topic 19 最終QAを再実施する。
