@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_independent_reanswer_checked / NEEDS_REVISION`
+- current_status: `topic_19_independent_reanswer_record_qa_pass / IN_PROGRESS`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: H25 一次 機械 問6 (2) の解答群記号転記ミスを修正し、独立再解答記録QAを再実施
+- next_start: Topic 19 最終QA
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`、完成後独立再解答公式照合 `11 / 12 PASS / NEEDS_REVISION`
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`、完成後独立再解答ロック時公式一致 `11 / 12`、解答群記号訂正後の記録QA `12 / 12 PASS`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -60,6 +60,7 @@
 - `topics/19_pid_speed_control/19_pid_speed_control_images.pptx`
 - `topics/19_pid_speed_control/19_pid_speed_control_powerpoint_qa.md`
 - `topics/19_pid_speed_control/19_pid_speed_control_blind_reanswer_gate.md`
+- `topics/19_pid_speed_control/19_pid_speed_control_independent_reanswer.md`
 
 QA:
 - 解説PDF表示: `6 / 6 PASS`
@@ -72,30 +73,30 @@ QA:
 - 未確認実車PID値の実車値化: `0件`
 
 ## Topic 19 完成後独立再解答
-成果物:
-- `topics/19_pid_speed_control/19_pid_speed_control_independent_reanswer.md`
-
 手順:
 1. 完成教材だけで固定5問・12答案要素を再解答
 2. 公式正答・標準解答を開く前に答案をGitHubへ固定: commit `f6c4c162d94c1c38176be61dc958f069abddea99`
 3. 固定後に電気技術者試験センター公式正答・標準解答と照合
+4. H25 一次 機械 問6 (2) の解答群記号転記ミスだけを訂正し、記録QAを再実施
 
-照合結果:
+結果:
 - R07 二次 問4 (1),(2),(3): `3 / 3 PASS`
 - H30 二次 問4 (1): `2 / 2 PASS`
 - H23 二次 問4 (4): `4 / 4 PASS`
 - R02 二次 問4 (1),(2): `2 / 2 PASS`
-- H25 一次 問6 (2): 式 `Ti=K1/K2` は公式と一致したが、解答群記号を「ヲ」と誤転記。公式正答は「ワ」: `FAIL`
+- H25 一次 問6 (2): ロック時点で式 `Ti=K1/K2` を正しく導出。公式問題PDFでは `K1/K2` の解答群記号は「ワ」、公式標準解答も「ワ」。記録上の「ヲ」を「ワ」へ訂正: `PASS`
 
 集計:
-- 公式一致: `11 / 12 PASS`
+- ロック時点の公式一致: `11 / 12`（解答群記号誤転記1件）
+- 訂正後の公式整合: `12 / 12 PASS`
+- 独立再解答記録QA: `6 / 6 PASS`
 - 教材外補完: `0件`
-- 教材の式・解法不足によるFAIL: `0件`
-- FAIL原因: 解答群記号転記ミス1件
-- 判定: `NEEDS_REVISION / topic_19_independent_reanswer_checked`
+- Topic 20/21先取り: `0件`
+- 教材の式・解法不足: `0件`
+- 判定: `PASS / topic_19_independent_reanswer_record_qa_pass`
 
 ## 今回進めた内容
-Topic 19の完成後独立再解答を実施した。答案を公式照合前にGitHubへ固定した後、公式正答・標準解答と照合。12答案要素中11要素は一致し、H25一次機械問6(2)だけ、導出した `Ti=K1/K2` は正しかったが解答群記号を誤転記したためFAILとした。完成数は `18 / 22` のまま。
+H25 一次 機械 問6 (2) の解答群記号転記ミスを「ヲ」→「ワ」へ訂正し、ロック commit、公式問題PDF、公式標準解答を使って独立再解答記録QAを再実施した。数式・導出・教材・固定EXAM_ALIGNMENTは変更していない。完成数は `18 / 22` のまま。
 
 ## 次工程
-H25 一次 機械 問6 (2) の解答群記号転記ミスを修正し、独立再解答記録QAを再実施する。
+Topic 19 の最終QAを実施する。
