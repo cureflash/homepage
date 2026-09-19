@@ -1,88 +1,87 @@
 # Topic 16 解説PDF QA
 
 updated: 2026-09-19
-status: `PASS / topic_16_explanation_pdf_resynced_after_completion_blind`
+status: `FAIL / topic_16_explanation_pdf_current_blob_reqa_right_clipping`
 
 対象: `16_short_circuit_explanation.pdf`
-source: `16_short_circuit_explanation.md` (`EXPLANATION_SOURCE_CORRECTED / IN_PROGRESS`)
+source: `16_short_circuit_explanation.md`
 
-## 再同期理由
+## 今回の目的
 
-完成後blindで一次固定2問の候補解は公式解答と一致したが、learner-facing成果物に必要な説明が不足して `NEEDS_REVISION` となった。固定5問・23答案要素を変更せず、補正済み解説sourceから解説PDFだけを再生成した。
+最終QAで既存QA記録と現行GitHub artifactのidentity不一致が判明したため、既存QAを転用せず、現行blobそのものを再QAした。
 
-今回PDFへ同期した不足項目:
-- `電磁誘導障害` と電磁力・熱的ストレスの区別
-- `遮断容量` と短絡容量の最小限の大小関係
-- `BTB (Back to Back)` が直流リンクを介し、交流短絡電流を直接通過させない意味
-- `電圧階級上昇 + 系統分割` を短絡容量抑制策として読む説明
-- `S_sc = √3 V I_sc` の `V` は短絡点の基準線間電圧・故障前電圧であり、ボルト短絡後の故障点電圧ではないこと
+正式品質ゲートの固定5問・23答案要素、固定10説明項目、補正済み5項目は変更していない。
 
-## 現行成果物
+## 現行成果物 identity
 
-- ファイルサイズ: `12972 bytes`
-- Git blob SHA-1: `a4c750968898c0035395c71ba1ce79b7f7a838dd`
-- SHA-256: `9873e679fdc829158fdd77ee5eee3b5cc36086013f19f64c9399d67ca9fa1d12`
+- Git blob SHA-1: `a2fd385e832df7e628d6bd879d9ffcf26fca575b`
+- ファイルサイズ: `11232 bytes`
+- SHA-256: `e6ddb708e2d2002c33ac1af15091e756d1d25f021e5a7793ef6b4e25238cca92`
 - 用紙: A4縦
-- ページ数: `5`
+- ページ数: `7`
 - 正式品質ゲート: 一次2問＋二次3問、固定 `5問・23答案要素`（変更なし）
 
-## 表示・文字抽出QA
+## 構造・文字抽出QA
 
-- PDFium 200 dpi: `1654 x 2339`, `5 / 5 PASS`
-- Poppler: `5 / 5 PASS`
-- 2 rendererでページ数・表示整合: `PASS`
-- ページ外逸脱 / 文字重なり / 本文切れ: `0件`
-- 最小余白: 左 `34.8 pt` / 上 `35.1 pt` / 右 `37.2 pt` / 下 `43.8 pt`
-- 黒四角 / 欠損グリフ: `0件`
-- `pdftotext -layout`: `PASS`
+- page tree: `7 pages`
+- encrypted: `False`
+- PDFium: `7 / 7 render completed`
+- Poppler: `7 / 7 render completed`
+- `pdftotext`: 抽出可能
 - U+FFFD: `0件`
-- 補正5項目の文字抽出: `5 / 5 PASS`
+- 補正5項目の文字抽出: `5 / 5 present`
+  - 電磁誘導障害
+  - 遮断容量
+  - BTB
+  - 電圧階級
+  - `S_sc` の電圧は故障前の基準線間電圧
+
+## 表示QA
+
+判定: `FAIL`
+
+PDFium / Popplerの両方で同じ右端クリッピングを確認した。
+
+- page 1: `PASS`
+- page 2: `FAIL`
+  - 基準換算式・解法アルゴリズムの右端がページ外へ切れる。
+  - `Z_pu,common` 周辺の式が学習者表示上で欠落する。
+- page 3: `PASS`
+- page 4: `FAIL`
+  - 本試験標準例題の `S_sc = 100 / 0.40 = 250 MVA` の末尾 `0` が右端で切れ、表示上 `25 MVA` に見える。
+  - 逆算問題の式も右端で切れる。
+- page 5: `PASS`
+- page 6: `FAIL`
+  - 25kV架線の教材用仮定モデル式・説明文が右端で切れる。
+- page 7: `FAIL`
+  - 参照URLと末尾説明文が右端で切れる。
+
+表示正常: `3 / 7 pages`
+表示異常: `4 / 7 pages`
+
+黒四角・欠損グリフによる失敗は確認していない。失敗原因は横方向のレイアウト超過。
 
 ## 内容QA
 
-固定10説明項目は維持:
-1. 短絡現象・短絡容量
-2. 三相短絡・短絡容量
-3. 基準量・p.u.・％Z
-4. 系統インピーダンス合成
-5. 正相・逆相・零相
-6. 一線地絡
-7. 線間短絡
-8. 二線地絡
-9. 故障位置―短絡電流
-10. 解法アルゴリズム
+抽出テキスト上では固定10説明項目と補正5項目が存在する。ただしlearner-facing PDFの表示が欠落しているため、現行artifactを `covered / PASS` と認定しない。
 
-`10 / 10 covered`。
+固定5問・23答案要素についても、元sourceおよび完成後blind clean rerunの `23 / 23 PASS` は変更しないが、現行解説PDF単体は表示欠落があるため品質ゲートの成果物要件を満たさない。
 
-固定5問・23答案要素の教材マッピング:
-- R2一次「電力」問3: `5 / 5 covered`
-- H25一次「電力」問4: `5 / 5 covered`
-- R7二次「電力・管理」問2: `5 / 5 covered`
-- R3二次「電力・管理」問3: `6 / 6 covered`
-- H21二次「電力・管理」問6: `2 / 2 covered`
-- 一次: `10 / 10 covered`
-- 二次: `13 / 13 covered`
-- 合計: `23 / 23 covered`
-
-3段階例題:
-- 基礎: `S_sc=1000 MVA`, `V_LL=66 kV` → `I_sc=8.75 kA`
-- 本試験標準: 共通100 MVA基準、`Z1th=0.40 p.u.` → `I_sc=2.19 kA`, `S_sc=250 MVA`
-- 複合・ひっかけ: `Z1=0.20`, `Z2=0.20`, `Z0=0.10 p.u.` → 一線地絡 `5.25 kA`, 三相短絡 `4.37 kA`
-
-独立再計算: `3 / 3 PASS`。教材用仮定モデル `x=0,5,10,20,30 km` の短絡電流 `16.67, 13.16, 10.87, 8.06, 6.41 kA` も再計算一致。
+特にpage 4では正しい `250 MVA` が表示上 `25 MVA` に見えるため、数値教材として許容不可。
 
 ## 仕様境界
 
 - 固定5問・23答案要素変更: `0件`
 - 新規正式過去問追加: `0件`
-- Topic 17の遮断器定格選定・保護協調先取り: `0件`
-- Topic 18以降先取り: `0件`
+- Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
-- 公式過去問転載: `0件`
+- 公式過去問転載追加: `0件`
 - 仕様追加: `0件`
 
 ## 判定
 
-`PASS / topic_16_explanation_pdf_resynced_after_completion_blind`
+`FAIL / RIGHT_EDGE_CLIPPING_ON_CURRENT_BLOB`
 
-このPASSは補正済み解説PDF単体のQA判定であり、Topic 16完成後blindのPASSではない。練習source/PDFとPowerPointは補正未同期のため、Topic 16全体は `NEEDS_REVISION / IN_PROGRESS` のまま。次工程は練習source/PDFへの必要最小限の補正同期とQA。
+現行blob `a2fd385e...` は解説PDF QAを通過しない。
+
+次工程は、補正済み `16_short_circuit_explanation.md` の内容・固定品質ゲートを変えず、横方向の改行・折返しだけを修正して解説PDFを再生成し、新しい現行blobに対してPDFium / Poppler / 文字抽出 / 内容QAを再実施する。PowerPoint再QAへはまだ進まない。
