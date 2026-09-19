@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `24 / 39`
-- current_status: `topic_25_clean_blind_official_match_complete`
-- last_completed_topic: `24 N700S 主電動機設計の比較`
-- active_topic: `25 N700S バッテリー自走のエネルギー設計`
-- next_start: Topic 25最終QAを行い、全成果物・固定5問28答案要素・SPEC境界を横断確認する
+- exam_aligned_completed_topics: `25 / 39`
+- current_status: `topic_25_completed`
+- last_completed_topic: `25 N700S バッテリー自走のエネルギー設計`
+- active_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
+- next_start: Topic 26 制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を先に固定し、既存worker成果と重複しない範囲だけ新規調査する
 
 ## Topic 25 解説PDF
 
@@ -101,6 +101,18 @@
 - 不一致: `0件`
 - exact blocker: `0件`
 
+## Topic 25 最終QA
+
+- 判定: `PASS / COMPLETED`
+- path: `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_final_qa.md`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `20 / 20 PASS`
+- 二次答案要素: `8 / 8 PASS`
+- 合計答案要素: `28 / 28 PASS`
+- SPEC必須10項目: `10 / 10 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- exact blocker: `0件`
+
 ## Topic 25 固定EXAM_ALIGNMENT
 
 1. R8 一次「機械」問5 `(1)〜(5)` — 5答案要素
@@ -121,4 +133,4 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 ## 完成数
 
-Topic 01〜24: `PASS / completed`。完成数 `24 / 39`。Topic 25は解説source/PDF、練習source/PDF、PowerPoint、clean blind公式照合まで完了。最終QAが未完了。
+Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。次は Topic 26 `E7・W7系 勾配条件を含む総合走行解析` の制作前EXAM_ALIGNMENT。
