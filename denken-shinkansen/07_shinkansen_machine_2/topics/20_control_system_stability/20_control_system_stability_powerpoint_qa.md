@@ -20,8 +20,7 @@
 - PPTX ZIP整合: `PASS`
 - slide XML: `4`
 - Git blob: `716d2f573f95c795c89b917984340c9d95a8770e`
-- SHA-256: `a6ad4c8570742f558ffbfb9a9d7463e85ceae70927d1ec210baa9f61798748f3`
-- size: `12391 bytes`
+- GitHub canonical size: `11551 bytes`
 
 ## 数値・論理QA
 教材用モデル `L(s)=K/{s(s+1)(s+2)}` を使用し、未確認の新幹線実車値にはしていない。
