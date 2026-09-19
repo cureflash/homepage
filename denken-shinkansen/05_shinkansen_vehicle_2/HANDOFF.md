@@ -8,7 +8,7 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_practice_source_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_practice_pdf_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## 今回のreconcile
 
@@ -18,7 +18,7 @@ Topic 22は最終QA `PASS / COMPLETED`。先行 `10 / 11` 診断はTopic 20の�
 
 Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。直近のTopic 21最終QA同期後も `PASS / completed` のままで、Topic 23工程との競合はない。
 
-同時進行workerがTopic 23制作前EXAM_ALIGNMENT、解説source、解説PDFまで完了済みだったため重複調査・再生成をせず、その固定5問・23答案要素とSPEC境界をreconcileして練習sourceへ進めた。
+Topic 23は制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceまで完了済みだったため、固定5問・23答案要素とSPEC境界を変更せず練習PDFを生成し、二系統レンダリングと内容QAを完了した。
 
 ## Topic 23 制作前EXAM_ALIGNMENT
 
@@ -100,13 +100,37 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、�
 - 未確認N700S実車値の真値化: `0件`
 - 新たなexact blocker: `0件`
 
+## Topic 23 練習PDF
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+- A4縦: `5 pages`
+- PDFium 180 dpi: `5 / 5 PASS`
+- Poppler 180 dpi: `5 / 5 PASS`
+- 文字抽出・破損グリフ: `PASS`
+- 一次試験型: `8 / 8`
+- 二次記述式: `4 / 4`
+- 全問題・完全解説: `12 / 12`
+- sourceから問題条件・正答・計算値の変更: `0件`
+- 固定5問・23答案要素: `23 / 23 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化への接続: `3 / 3 aligned`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- JR東海7%値のSiC単独効果化: `0件`
+- 富士電機20%軽量化の車両全体への誤拡張: `0件`
+- 新たなexact blocker: `0件`
+
 成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice.pdf`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_pdf_qa.md`
 
 ## 次の安全な工程
 
-Topic 23練習PDF生成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。完成後clean blind公式照合はPowerPoint完成後に実施する。
+Topic 23解説画像PowerPoint作成＋QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。PowerPoint完成後にclean blind独立再解答へ進む。
