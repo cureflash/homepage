@@ -6,14 +6,38 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `24 / 39`
-- current_status: `topic_24_completed`
+- current_status: `topic_25_exam_alignment_complete`
 - last_completed_topic: `24 N700S 主電動機設計の比較`
 - active_topic: `25 N700S バッテリー自走のエネルギー設計`
-- next_start: Topic 25の制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を先に固定し、既存workerの検証済み成果と重複しない範囲だけ新規調査する
+- next_start: Topic 25の固定EXAM_ALIGNMENTを使って解説sourceを作成する。固定5問・28答案要素、SPEC必須10項目、指定3計算・グラフを変更しない
 
 ## 完了済み
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
+
+## Topic 25 制作前EXAM_ALIGNMENT
+
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+- 固定過去問: 第二種一次4問＋二次1問 = `5問`
+- 一次答案要素: `20`
+- 二次答案要素: `8`
+- 合計答案要素: `28`
+- 二次記述・計算問題: H23「機械・制御」問3
+- SPEC必須10項目の収録責務: `10 / 10 fixed`
+- SPEC指定3計算・グラフの収録責務: `3 / 3 fixed`
+- 未確認N700S電池値の真値化: `0件`
+- SPEC外主題追加: `0件`
+- 完成後clean blind: `PENDING`
+
+固定公式過去問:
+1. R8 一次「機械」問5 `(1)〜(5)` — 5答案要素
+2. R4 一次「機械」問6 `(1)〜(5)` — 5答案要素
+3. R2 一次「機械」問4 `(1)〜(5)` — 5答案要素
+4. R1 一次「機械」問4 `(1)〜(5)` — 5答案要素
+5. H23 二次「機械・制御」問3 `(1)〜(4)` — 8答案要素
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design.md`
 
 ## Topic 24 最終品質ゲート
 
@@ -91,4 +115,4 @@ clean blind公式照合:
 
 ## 次工程
 
-Topic 25 `N700S バッテリー自走のエネルギー設計` の制作前EXAM_ALIGNMENT。完成数は `24 / 39`。
+Topic 25 `N700S バッテリー自走のエネルギー設計` の解説source作成。完成数は `24 / 39`。
