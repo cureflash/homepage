@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_23_explanation_pdf_complete`
+- current_status: `topic_23_practice_source_complete`
 - last_completed_topic: `22 E5系 再粘着制御`
 - active_topic: `23 N700S SiC主変換装置`
-- next_start: Topic 23練習source作成。固定5問・23答案要素、SPEC固定8項目、指定3可視化、実車値境界を変更しない
+- next_start: Topic 23練習PDF生成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない
 
 ## 完了済み
 
@@ -107,10 +107,32 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
 
+## Topic 23 練習source
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
+- 一次試験型: `8問`（五肢択一）
+- 二次試験型: `4問`（途中式・前提・単位・理由を含む記述式）
+- 合計: `12問`
+- 固定5問・23答案要素: `23 / 23 connected`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化の式系・条件: `3 / 3 aligned`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- JR東海7%値のSiC単独効果化: `0件`
+- 富士電機20%軽量化の車両全体への誤拡張: `0件`
+- 新たなexact blocker: `0件`
+
+成果物追加:
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。Topic 21は `PASS / completed` のまま。
 
 ## 次工程
 
-Topic 23練習source作成。固定5問・23答案要素、SPEC固定8項目、指定3可視化、実車値境界を変更しない。
+Topic 23練習PDF生成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。

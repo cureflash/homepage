@@ -8,17 +8,18 @@
 
 Topic 17「パワー半導体の損失比較」で既に公式問題・SPEC境界・clean blindまで検証済みの損失／熱設計問題を再利用し、同じ過去問の再調査・再解答を重複実施しない。Topic 23ではSiCとN700Sへの接続、小型軽量化までを追加の教材責務として扱う。
 
-固定5問・23答案要素を変更せず、解説sourceと解説PDFまで作成した。PDF QAではA4縦5ページをPDFium / Popplerの両方で確認し、SPEC固定8項目、指定3可視化、3段階例題、実車値境界を維持している。
+固定5問・23答案要素を変更せず、解説source、解説PDF、練習sourceまで作成した。練習sourceは一次8問＋二次4問、固定23答案要素 `23/23` 接続、数値・論理再計算 `12/12 PASS`、一次正答一意性 `8/8 PASS`。実車値境界も維持している。
 
-current_status: `topic_23_explanation_pdf_complete`
+current_status: `topic_23_practice_source_complete`
 
 現行成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
 
-次工程: Topic 23練習source作成。固定5問・23答案要素、SPEC固定8項目、指定3可視化、実車値境界を変更しない。
+次工程: Topic 23練習PDF生成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。
 
 ## 固定範囲
 
@@ -160,4 +161,5 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 - 未確認N700S実車値の真値化: `0件`
 - 解説source: `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 3段階例題 `3 / 3`
 - 解説PDF: A4縦 `5 pages`, PDFium / Poppler `5 / 5 PASS`, 固定23答案要素・SPEC8項目・3可視化 `PASS`
-- 状態: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習source: 一次8問＋二次4問、固定23答案要素 `23 / 23 connected`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 数値・論理 `12 / 12 PASS`, 一次正答一意性 `8 / 8 PASS`
+- 状態: `PASS / PRACTICE_SOURCE_COMPLETE`
