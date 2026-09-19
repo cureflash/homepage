@@ -1,16 +1,29 @@
 # Topic 16 PowerPoint QA
 
 更新日: 2026-09-19
-status: `PASS / topic_16_powerpoint_complete`
+status: `PASS / topic_16_powerpoint_resynced_after_completion_blind`
 
 対象: `16_short_circuit_images.pptx`
 
+## 今回の目的
+
+完成後blindで露呈し、解説source/PDF・練習source/PDFへ補正済みの一次説明不足5項目だけをPowerPointへ同期した。固定EXAM_ALIGNMENT、正式5問・23答案要素、Topic 16固定範囲は変更していない。
+
+同期した5項目:
+- `電磁誘導障害` と電磁力・熱的ストレスの区別
+- `遮断容量` と想定短絡容量の最小限の大小関係
+- `BTB (Back to Back)` の直流リンクと交流短絡電流非直接通過
+- `電圧階級上昇 + 系統分割` と短絡容量抑制
+- `S_sc = √3 V_LL I_sc` の `V_LL` は短絡点の基準線間電圧・故障前電圧であり、ボルト短絡後の故障点0 Vではないこと
+
+遮断器定格選定・保護協調、BTB制御、Topic 17以降へは拡張していない。
+
 ## 正本境界
 
-既存の `16_short_circuit_explanation.md`、固定EXAM_ALIGNMENT、系列 `SPEC.md` のTopic 16範囲だけでPowerPointを構成した。正式過去問、固定答案要素、教材技術範囲は追加・差替えしていない。
+補正済み `16_short_circuit_explanation.md`、固定EXAM_ALIGNMENT、系列 `SPEC.md` のTopic 16範囲だけでPowerPointを再同期した。正式過去問、固定答案要素、教材技術範囲は追加・差替えしていない。
 
-- ファイルサイズ: `14953 bytes`
-- SHA-256: `3f5f9ba252d1142b68e00cfc48c740d9a91726b533afc604ce59944468b53e44`
+- ファイルサイズ: `25986 bytes`
+- SHA-256: `4b33e9e0333e86a8803e5b331cf22c2c1bf5a0718fad6171f0d08f269b84bf32`
 - 16:9
 - スライド数: `6`
 
@@ -18,19 +31,21 @@ status: `PASS / topic_16_powerpoint_complete`
 
 - PPTX ZIP整合性: `PASS`
 - `slides_test.py`: `PASS / No overflow detected`
-- LibreOffice PDF変換: `6ページ PASS`
-- 200 dpiレンダリング: `2667 x 1500`, `6 / 6 PASS`
+- LibreOffice PDF変換: `6 pages PASS`
+- PowerPoint renderer: `1601 x 900`, `6 / 6 PASS`
+- Poppler 200 dpi: `2667 x 1500`, `6 / 6 PASS`
+- Poppler 150 dpi: `2001 x 1125`, `6 / 6 PASS`
 - 目視: 文字切れ `0件`、重なり `0件`、図形はみ出し `0件`
 - PDF文字抽出: `PASS / U+FFFD 0件 / 黒四角0件 / □ 0件`
 
 ## 固定6スライド
 
-1. 故障点、等価インピーダンス、三相短絡、短絡容量、電磁力・熱、短絡電流抑制の因果
-2. 基準容量・基準電圧・基準電流・基準インピーダンス、p.u.、％Z、共通基準換算、実電流復元
+1. 故障点、等価インピーダンス、三相短絡、電磁力・熱・電磁誘導障害、短絡電流抑制、BTB・系統分割
+2. 基準容量・基準電圧・基準電流・基準インピーダンス、p.u.、％Z、共通基準換算、短絡容量、遮断容量、実電流復元
 3. 正相・逆相・零相と三相短絡／一線地絡／線間短絡／二線地絡の対称分回路
 4. 一線地絡の二次答案手順、`Z0/Z1/Z2`、地絡電流[p.u.]、地絡電流[A]
 5. 直列・並列構成と故障電流、H21問6 clean blind値、故障位置―短絡電流の傾向図
-6. 固定5問・23答案要素のPowerPoint接続表と後続Topic境界
+6. 固定5問・23答案要素のPowerPoint接続表、短絡電流上限からの逆算手順、補正5項目、後続Topic境界
 
 ## SPEC固定範囲
 
@@ -57,7 +72,7 @@ status: `PASS / topic_16_powerpoint_complete`
 ## 正式過去問品質ゲート接続
 
 - 令和2年度 第二種一次「電力」問3: `5 / 5答案要素` — Slide 1
-- 平成25年度 第二種一次「電力」問4: `5 / 5答案要素` — Slide 1
+- 平成25年度 第二種一次「電力」問4: `5 / 5答案要素` — Slides 1, 2
 - 令和7年度 第二種二次「電力・管理」問2: `5 / 5答案要素` — Slides 3, 4
 - 令和3年度 第二種二次「電力・管理」問3: `6 / 6答案要素` — Slides 2, 6
 - 平成21年度 第二種二次「電力・管理」問6: `2 / 2答案要素` — Slide 5
@@ -66,12 +81,13 @@ PowerPoint説明接続:
 - 一次: `10 / 10 PASS`
 - 二次: `13 / 13 PASS`
 - 合計: `5 / 5問・23 / 23答案要素 PASS`
+- 完成後blind補正5項目: `5 / 5 covered`
 
 H21問6は既存clean blindの確定値だけを表示し、問題本文・図は転載していない。
 - CB3開放: `6.08 kA`
 - CB3投入: `10.3 kA`
 
-これはPowerPoint内の説明接続QAであり、完成後blind独立再解答そのものではない。完成後blindは次工程とする。
+これはPowerPoint内の説明接続QAであり、補正後の完成後blind独立再解答そのものではない。
 
 ## 品質境界
 
@@ -88,6 +104,6 @@ H21問6は既存clean blindの確定値だけを表示し、問題本文・図�
 
 ## 判定
 
-`PASS / topic_16_powerpoint_complete`
+`PASS / topic_16_powerpoint_resynced_after_completion_blind`
 
-次工程は、固定5問・23答案要素を変更せず、完成済みlearner-facing成果物だけを使った完成後blind独立再解答。Webカタログ登録・最終QAはその後とする。
+次工程は、固定5問・23答案要素を変更せず、補正済みlearner-facing成果物だけを使って完成後blindをclean rerunする。Webカタログ登録・最終QA・Topic 17以降はまだ行わない。
