@@ -8,13 +8,34 @@
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
-現在地は `topic_25_exam_alignment_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
+現在地は `topic_25_explanation_source_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
 
 ## 今回のreconcile
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md` を確認した。Topic 24は完了済みのため、最初の未完了テーマTopic 25へ移行した。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 25既存EXAM_ALIGNMENT、直近の同系列commitを確認した。Topic 25にはEXAM_ALIGNMENT以外の成果物がなく、他workerとの重複はないため、指定されていた次工程の解説sourceだけを1段階進めた。
 
-Topic 25では本文作成前に公式第二種過去問を直近年度側から確認し、一次4問＋二次1問を固定した。N700S固有値を推測せず、固定SPECの10項目・指定3計算／グラフだけを教材責務とした。
+固定5問・28答案要素は変更せず、一次20答案要素・二次8答案要素、SPEC必須10項目、指定3計算／可視化をすべてsourceへ接続した。
+
+## Topic 25 解説source
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation_source.md`
+
+判定:
+- `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 一次説明責務: `20 / 20 covered`
+- 二次説明責務: `8 / 8 covered`
+- 合計説明責務: `28 / 28 covered`
+- SPEC必須10項目: `10 / 10 covered`
+- SPEC指定3計算・可視化: `3 / 3 defined`
+- 3段階例題: `3 / 3`
+- 完成後clean blind: `PENDING`
+
+H23二次「機械・制御」問3について、充電時の降圧チョッパ、放電時の昇圧チョッパ、Cレート、内部抵抗を含む端子電圧、充放電時間、`I^2R` 損失と充電効率理由を教材内で再現できる形にした。
+
+N700S実車接続は東芝インフラシステムズの一次メーカー資料で、N700S確認試験車へのSCiB採用とJR東海とのバッテリー自走システム共同開発までを確認した。電池電圧、Ah、Wh、セル数、直並列数、Cレート、実放電電流、各効率は確認できないため実値化していない。設計計算の数値はすべて教材用仮定値と明記した。
+
+速度条件―必要電力はSPECの指定可視化として、速度と必要機械出力を「与件の仮定入力」として比較するだけに限定した。未指定の走行抵抗モデルは追加していない。
 
 ## Topic 25 制作前EXAM_ALIGNMENT
 
@@ -32,16 +53,13 @@ Topic 25では本文作成前に公式第二種過去問を直近年度側から
 - 二次記述・計算問題: `1問`
 - SPEC必須10項目: `10 / 10 fixed`
 - SPEC指定3計算・グラフ: `3 / 3 fixed`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - 未確認N700S電池値の真値化: `0件`
 - SPEC外追加: `0件`
 - 完成後clean blind: `PENDING`
 
-H23二次 問3は、可逆チョッパによる二次電池の充放電、Cレート、内部抵抗、端子電圧、充放電時間、エネルギー効率を途中式付きで要求するため、二次記述ゲートとして固定した。
-
-成果物:
+制作前成果物:
 - `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design.md`
-
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`。
 
 ## Topic 25 固定境界
 
@@ -98,9 +116,9 @@ PowerPoint正本:
 
 ## N700S実車接続・境界
 
-富士電機技報 2020 vol.93 no.2 p.95（5）でN700S向け主電動機の6極化を一次メーカー資料として確認済み。同資料の「駆動システム全体で約20%軽量化」はSiC素子搭載、主電動機6極化、主変圧器冷却方式見直しを合わせた結果として扱い、主電動機単体・6極化単独の20%軽量化とは扱わない。
+Topic 24では富士電機技報 2020 vol.93 no.2 p.95（5）でN700S向け主電動機の6極化を一次メーカー資料として確認済み。同資料の「駆動システム全体で約20%軽量化」はSiC素子搭載、主電動機6極化、主変圧器冷却方式見直しを合わせた結果として扱い、主電動機単体・6極化単独の20%軽量化とは扱わない。
 
-N700S主電動機の実運転周波数、実回転速度、実トルク、寸法、質量は確認不能のため真値化しない。電気角は `θ_e=(P/2)θ_m` をSPEC必須の一般関係として扱い、固定第二種過去問の直接答案要素とは主張しない。
+Topic 25では東芝インフラシステムズ2018-03-10公表資料でN700S確認試験車へのSCiB採用とバッテリー自走システム共同開発までを一次メーカー資料で確認した。未確認の電池数値は真値化しない。
 
 ## Topic 21 H26二次 問1(4)
 
@@ -108,4 +126,4 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 
 ## 次の安全な工程
 
-Topic 25の固定EXAM_ALIGNMENTを変更せず、解説sourceを作成する。固定5問・28答案要素、SPEC必須10項目、指定3計算・グラフをすべて接続する。完成数は `24 / 39`。
+Topic 25の固定EXAM_ALIGNMENTと完成済み解説sourceを変更せず、解説PDFを生成する。PDF表示、数式・単位、指定3可視化、固定28答案要素coverageをQAする。完成数は `24 / 39`。
