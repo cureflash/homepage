@@ -1,14 +1,14 @@
-# STATUS - 新幹線・電験二種「理論」
+# STATUS - 新幹線・電験二種「理論"
 
 更新日: 2026-09-19
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 20 / 21
-- current_status: `topic_21_practice_pdf_complete`
+- current_status: `topic_21_powerpoint_complete`
 - last_completed_topic: `20 East iは走りながら何をどう測る？`
 - active_topic: `21 架線からEast iまで全部シミュレーションする`
-- next_start: Topic 21 解説画像PowerPoint＋表示QA
+- next_start: Topic 21 完成後独立再解答
 
 ## 完成済み
 
@@ -50,24 +50,24 @@ Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 21の練習問題source＋練習PDFを制作し、計算・表示・文字抽出・収録QAを実施して `PASS / PRACTICE_PDF_COMPLETE` とした。
+Topic 21の解説画像PowerPointを制作し、表示・ファイル・試験対応QAを実施して `PASS / POWERPOINT_COMPLETE` とした。
 
-- source: `topics/21_integrated_simulation/21_integrated_simulation_practice.md`
-- PDF: `topics/21_integrated_simulation/21_integrated_simulation_practice.pdf`
-- QA: `topics/21_integrated_simulation/21_integrated_simulation_practice_pdf_qa.md`
-- 問題数: `12問`
-- 形式: `五肢択一11問 + 二次記述型1問（4小問）`
-- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
-- 固定一次4問・17答案要素: `17 / 17接続`
-- 固定二次1問・4答案要素: `4 / 4接続`
+- PowerPoint: `topics/21_integrated_simulation/21_integrated_simulation_images.pptx`
+- QA: `topics/21_integrated_simulation/21_integrated_simulation_powerpoint_qa.md`
+- 16:9 / `8枚`
+- 200 dpi全スライド表示QA: `8 / 8 PASS`
+- レンダリング寸法: `2667 × 1500 px / slide`
+- shape geometry overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `8ページ / PASS`
+- PDF・PowerPoint XML文字抽出: `PASS`
+- replacement character: `0件`
+- クリッピング・文字重なり・ページ欠落: `0件`
+- SPEC固定範囲5領域: `5 / 5可視化`
+- 簡略モデル8ブロック: `8 / 8可視化`
+- 固定一次4問・17答案要素: `17 / 17可視化`
+- 固定二次1問・4答案要素: `4 / 4可視化`
 - 合計: `5問・21 / 21答案要素`
-- SPEC固定範囲: `5 / 5接続`
-- 数値計算独立再計算: `11 / 11 PASS`
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 問1〜問12本文・解答抽出: `12 / 12`
-- クリッピング・文字重なり・文字化け・ページ欠落: `0件`
 - 二次数合わせ: `0件`
 - 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
 - Topic 01〜20にない新論点追加: `0件`
@@ -75,6 +75,6 @@ Topic 21の練習問題source＋練習PDFを制作し、計算・表示・文字
 
 ## 判定
 
-`PASS / PRACTICE_PDF_COMPLETE`。
+`PASS / POWERPOINT_COMPLETE`。
 
-完成数は `20 / 21`。次工程はTopic 21の解説画像PowerPoint＋表示QA。
+完成数は `20 / 21`。次工程はTopic 21の完成後独立再解答。
