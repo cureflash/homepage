@@ -8,7 +8,7 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_practice_pdf_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_powerpoint_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## 今回のreconcile
 
@@ -16,9 +16,9 @@ latest main、最新 `STATUS.md` / `HANDOFF.md`、Topic 23既存成果物、直�
 
 Topic 22は最終QA `PASS / COMPLETED`。先行 `10 / 11` 診断はTopic 20の許可済み前提参照を外したworkerの結果で、有効clean blind候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定、その後の公式照合で `11 / 11 PASS`。重複公式照合ファイルは整理し、`22_e5_readhesion_control_blind_reanswer_official_check.md` を残した。
 
-Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。直近のTopic 21最終QA同期後も `PASS / completed` のままで、Topic 23工程との競合はない。
+Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。Topic 21は `PASS / completed` のまま。
 
-Topic 23は制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceまで完了済みだったため、固定5問・23答案要素とSPEC境界を変更せず練習PDFを生成し、二系統レンダリングと内容QAを完了した。
+作業中に別workerが commit `1be4d1fdbe49215316c2b9f706f5d5731d79f73b` でTopic 23練習PDF＋QAを完成していたため、重複生成せずreconcileした。その次の安全な工程として解説画像PowerPoint＋QAを完了した。
 
 ## Topic 23 制作前EXAM_ALIGNMENT
 
@@ -122,6 +122,27 @@ Topic 23は制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceま�
 - 富士電機20%軽量化の車両全体への誤拡張: `0件`
 - 新たなexact blocker: `0件`
 
+## Topic 23 解説画像PowerPoint
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+- 16:9: `6 slides`
+- python-pptx再オープン: `6 / 6 PASS`
+- PPTX ZIP整合性: `PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- pdftoppm 150 dpi: `6 / 6 PASS`
+- geometry overflow: `0件`
+- クリッピング・文字重なり・欠落グリフ: `0件`
+- 固定5問・23答案要素: `23 / 23 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 covered`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- JR東海7%値のSiC単独効果化: `0件`
+- 富士電機20%軽量化の車両全体への誤拡張: `0件`
+- 新たなexact blocker: `0件`
+
 成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
@@ -130,7 +151,9 @@ Topic 23は制作前EXAM_ALIGNMENT、解説source、解説PDF、練習sourceま�
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice.pdf`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_pdf_qa.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_images.pptx`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_powerpoint_qa.md`
 
 ## 次の安全な工程
 
-Topic 23解説画像PowerPoint作成＋QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。PowerPoint完成後にclean blind独立再解答へ進む。
+Topic 23教材だけで固定5問・23答案要素をclean blind独立再解答し、候補固定後に公式解答・標準解答と照合する。固定EXAM_ALIGNMENT、SPEC、仮定値／実車値境界を変更しない。
