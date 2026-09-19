@@ -8,7 +8,7 @@
 
 Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
-現在地は `topic_26_explanation_source_complete`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
+現在地は `topic_26_explanation_pdf_complete`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
 
 ## 今回のreconcileと進行
 
@@ -17,6 +17,8 @@ Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 Topic 26で固定済みの第二種一次4問・10答案要素＋二次1問・6答案要素、合計5問・16答案要素を変更せず、SPEC必須7項目・指定3可視化だけを入力条件として解説sourceを作成した。H26一次問5の定加速域・定出力域はTopic 21でQA済みの最小条件表を再利用し、R7二次問2に必要な滑り・トルク・二次銅損・固定損・負荷変化時速度/出力までを途中式付きで接続した。
 
 E7・W7系の実車接続はJR東日本公式資料で確認済みの北陸新幹線30‰急勾配とE7系ブレーキ性能向上だけに限定した。数値例・3可視化に使う質量、走行抵抗式、効率、利用可能出力はすべて教材用仮定値と明記し、実車値として扱っていない。
+
+今回、同sourceからA4縦3ページの解説PDFを生成し、PDFium/Poppler両方で3/3ページの表示を確認した。`pdftotext`、固定5問・16答案要素、SPEC必須7項目、指定3可視化、3段階例題も全件PASS。固定EXAM_ALIGNMENTと実車値境界は変更していない。
 
 ## Topic 25 解説PDF
 
@@ -125,6 +127,31 @@ E7・W7系の実車接続はJR東日本公式資料で確認済みの北陸新�
 - clean blind用個別正答の先取り保存: `0件`
 - exact blocker: `0件`
 
+## Topic 26 解説PDF
+
+成果物:
+- `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_explanation.pdf`
+- canonical blob SHA: `0d6c373ca4dc1edcc004be32666ac40f8607b6b4`
+- `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_explanation_pdf_qa.md`
+
+判定:
+- `PASS / EXPLANATION_PDF_COMPLETE`
+- A4縦: `3 pages`
+- file size: `10,902 bytes`
+- SHA-256: `304095fecec8fe3d2e46eda8fb020c3e48a2164179eb204b5e318b93dc591b17`
+- PDFium / Poppler: `3 / 3 PASS`
+- `pdftotext`: `PASS`
+- 固定5問: `5 / 5 covered`
+- 一次答案要素: `10 / 10 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計: `16 / 16 covered`
+- SPEC必須7項目: `7 / 7 covered`
+- 指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 実車値境界違反: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -137,4 +164,4 @@ E7・W7系の実車接続はJR東日本公式資料で確認済みの北陸新�
 
 ## 次の安全な工程
 
-Topic 26解説PDF。本sourceを正本としてPDFを生成し、表示・文字抽出・固定5問16答案要素・SPEC必須7項目・指定3可視化をQAする。実車値境界と固定EXAM_ALIGNMENTは変更しない。
+Topic 26練習source。固定EXAM_ALIGNMENTと解説PDFを入力として、一次試験型＋二次記述式の練習問題を作成し、数値・論理を独立再計算する。実車値境界と固定EXAM_ALIGNMENTは変更しない。

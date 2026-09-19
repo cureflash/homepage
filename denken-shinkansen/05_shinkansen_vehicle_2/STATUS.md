@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `25 / 39`
-- current_status: `topic_26_explanation_source_complete`
+- current_status: `topic_26_explanation_pdf_complete`
 - last_completed_topic: `25 N700S バッテリー自走のエネルギー設計`
 - active_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
-- next_start: Topic 26 解説PDF。本sourceを正本としてPDF生成し、表示・文字抽出・固定5問16答案要素・SPEC必須7項目・指定3可視化のQAを行う
+- next_start: Topic 26 練習source。固定EXAM_ALIGNMENTと解説PDFを入力として、一次試験型＋二次記述式の練習問題を作成し、数値・論理を独立再計算する
 
 ## Topic 25 解説PDF
 
@@ -159,10 +159,33 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - SPEC外主題追加: `0件`
 - exact blocker: `0件`
 
+## Topic 26 解説PDF
+
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_explanation.pdf`
+- canonical blob SHA: `0d6c373ca4dc1edcc004be32666ac40f8607b6b4`
+- QA: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_explanation_pdf_qa.md`
+- file size: `10,902 bytes`
+- SHA-256: `304095fecec8fe3d2e46eda8fb020c3e48a2164179eb204b5e318b93dc591b17`
+- A4縦: `3 pages`
+- PDFium render: `3 / 3 PASS`
+- Poppler render: `3 / 3 PASS`
+- `pdftotext`: `PASS`
+- 置換文字 `�`: `0件`
+- 固定過去問: `5 / 5 covered`
+- 一次答案要素: `10 / 10 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計答案要素: `16 / 16 covered`
+- SPEC必須7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 教材用仮定値と実車値の混同: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は解説source完了。次は解説PDF作成・QA。
+Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は解説PDF完了。次は練習source作成・独立再計算。
