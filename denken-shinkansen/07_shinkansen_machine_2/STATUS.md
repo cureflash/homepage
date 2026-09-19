@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `19 / 22`
-- current_status: `topic_19_final_qa_pass / completed`
+- current_status: `topic_20_exam_alignment_complete / IN_PROGRESS`
 - last_completed_topic: `19 PIDで新幹線の速度を制御する`
 - active_topic: `20 制御系はなぜ発振する？`
-- next_start: Topic 20 制作前EXAM_ALIGNMENT
+- next_start: Topic 20 解説source本文
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
@@ -129,8 +129,48 @@ blocker修正:
 - 技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果: 変更なし
 - 判定: `PASS / completed`
 
+## Topic 20 固定範囲
+系列 `SPEC.md` の次だけを扱う。
+
+- 特性方程式、極、零点
+- ラウス・フルビッツ
+- 根軌跡の概念
+- 周波数応答、ボード線図
+- ゲイン余裕、位相余裕
+- 発振
+- ボード線図、ゲイン変更時の応答、安定・不安定応答比較
+
+境界:
+- Topic 17〜19は必要な前提だけ再使用する
+- Topic 21の空転・滑走・再粘着制御を先取りしない
+- 未確認の新幹線実車ゲイン、安定余裕、制御周期、極配置等を実車値化しない
+- 系列SPECにない高度な制御理論へ範囲を拡張しない
+
+## Topic 20 固定EXAM_ALIGNMENT
+一次2問＋二次3問、計5問・14答案要素。
+
+- H23 一次 機械 問7 (1)〜(5) — 5答案要素
+- H25 一次 機械 問6 (1),(3),(4),(5) — 4答案要素
+- H30 二次 機械・制御 問4 (2) — 1答案要素
+- R03 二次 機械・制御 問4 (3),(5) — 2答案要素
+- R04 二次 機械・制御 問4 (1),(2) — 2答案要素
+
+制作前品質ゲート:
+- 公式過去問5問: `PASS`
+- 一次・二次を含む: `PASS`
+- 二次記述式を含む: `PASS`
+- 固定14答案要素を教材節へ割当: `PASS`
+- 参考教材2系統: `PASS`
+- 制作前sourceへの個別正答保存: `0件 / PASS`
+- Topic 21先取り: `0件 / PASS`
+- 未確認実車制御値の実車値化: `0件 / PASS`
+- 判定: `PASS / topic_20_exam_alignment_complete`
+
+成果物:
+- `topics/20_control_system_stability/20_control_system_stability.md`
+
 ## 今回進めた内容
-Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期した。技術・試験対応内容は変更していない。完成数は `19 / 22`。
+Topic 20の制作前EXAM_ALIGNMENTを完了した。固定一次2問＋二次3問、計5問・14答案要素を確定し、教材で欠落不可の説明と教材節予定へマッピングした。完成数は `19 / 22` のまま。
 
 ## 次工程
-Topic 20「制御系はなぜ発振する？」の制作前EXAM_ALIGNMENTを行う。
+Topic 20「制御系はなぜ発振する？」の解説source本文を作成する。
