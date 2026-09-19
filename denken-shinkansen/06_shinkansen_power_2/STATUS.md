@@ -4,7 +4,7 @@ updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
 theme: 事故区間だけをどう一瞬で切る？
-current_status: `topic_17_clean_blind_pending_fresh_run`
+current_status: `topic_17_clean_blind_blocked_by_context_contamination`
 completed_topics: `16 / 22`
 
 ## Completed through Topic 16
@@ -39,15 +39,17 @@ Topic 16最終品質ゲート:
 clean blind専用入力:
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_input_20260920.md`
 
-既存blind記録は保存済みだが、fresh clean blind候補固定前には開かない。
+既存blind記録は保存済み。
 
 ## exact blocker
 
-このrunは、必須の最新 `STATUS.md` / `HANDOFF.md` 確認時点で旧記録に前回blindの具体的な不一致内容が記載されており、候補答案固定前に既知情報へ接触した。したがって、このrunでclean blindを実施しても独立再解答とは認定できない。
+この補助枠では、候補答案固定前にclean blindの過去結果を含む既存会話履歴へ接触済みである。さらに、必須の「直近コミット確認」で `c5b5b0e29200ef36834cdf284ab57a76990b3d86` の差分を確認すると、サニタイズ前の具体的なblind不一致内容がpatch内に含まれていた。
 
-対処として、`STATUS.md` / `HANDOFF.md` から候補答案を汚染する具体的な旧不一致内容を除去した。詳細な過去結果は既存のcandidate/resultファイルに保持し、削除・改変していない。
+したがって、この補助枠で固定5問・26答案要素を解き直しても、`EXAM_ALIGNMENT_SPEC.md` が要求する独立再解答 / clean blindとして認定できない。
 
-教材本文、解説PDF、練習PDF、PowerPointは未着手のまま維持する。
+これは一時的な問題ではなく、この補助枠の履歴を保持したまま「直近変更の詳細確認」と「過去blind結果を見ないclean blind」を同時に満たせない工程上の競合である。
+
+教材本文、解説PDF、練習PDF、PowerPointには着手しない。
 
 ## 品質境界
 
@@ -61,14 +63,8 @@ clean blind専用入力:
 
 ## next_start
 
-次のfresh runでは、最初に最新mainとこのサニタイズ済み `STATUS.md` / `HANDOFF.md`、上位仕様、系列SPECを確認する。
+Topic 17 clean blindは、過去candidate/result・旧blind詳細・この補助枠の過去blind要約へ未接触の独立コンテキストで実施する必要がある。
 
-その後、`17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、固定5問・26答案要素をclean blind独立再解答する。
-
-候補答案を保存するまで開かない:
-- `17_protection_coordination_preproduction_blind_20260920.md`
-- 既存の全clean blind candidate/resultファイル
-- 公式標準解答
-- 第三者解説
+その独立コンテキストでは、サニタイズ済み `STATUS.md` / `HANDOFF.md`、上位仕様、系列SPEC、`17_protection_coordination_clean_blind_input_20260920.md`、そこに列挙した公式問題PDFだけを候補答案固定前の入力とする。
 
 候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` を確認するまで教材本文・解説PDF・練習PDF・PowerPointへ進まない。
