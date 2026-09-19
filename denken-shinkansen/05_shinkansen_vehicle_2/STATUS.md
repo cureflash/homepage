@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `21 / 39`
-- current_status: `topic_22_practice_pdf_complete`
+- current_status: `topic_22_powerpoint_complete`
 - last_completed_topic: `21 高速域の速度・けん引力・出力制御`
 - active_topic: `22 E5系 再粘着制御`
-- next_start: Topic 22 解説画像PowerPoint作成＋QA。固定5問・11答案要素、SPEC固定8項目・3可視化を変更しない
+- next_start: Topic 22 完成後clean blind独立再解答。固定5問・11答案要素を変更せず、教材だけで候補を先に固定してから公式解答・標準解答と照合する
 
 ## 完了済み
 
@@ -84,6 +84,32 @@ Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice.pdf`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice_pdf_qa.md`
 
+## Topic 22 解説画像PowerPoint
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+- 16:9: `5 slides`
+- python-pptx open / PPTX ZIP: `PASS / PASS`
+- LibreOffice PDF変換: `5 / 5 PASS`
+- pdftoppm `1601×900`: `5 / 5 PASS`
+- shape geometry overflow: `0件`
+- 表示目視QA: `5 / 5 PASS`
+- 固定5問: `5 / 5 unchanged`
+- 一次答案要素: `3 / 3 covered`
+- 二次答案要素: `8 / 8 covered`
+- 合計答案要素: `11 / 11 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 公式過去問本文の複製: `0件`
+- 公式解答・標準解答の個別正答保存: `0件`
+- 固定SPEC外追加: `0件`
+- 未確認E5系実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
+
+記録:
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
+
 ## 次工程
 
-Topic 22 解説画像PowerPoint作成＋QA。clean blind独立再解答は練習PDF・PowerPoint完成後に行う。
+Topic 22 完成後clean blind独立再解答。固定5問・11答案要素を教材だけで解き、候補を先に固定してから公式解答・標準解答と照合する。

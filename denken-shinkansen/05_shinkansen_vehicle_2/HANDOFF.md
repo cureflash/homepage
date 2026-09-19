@@ -8,11 +8,13 @@
 
 Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 
-現在地は `topic_22_practice_pdf_complete`。active topic は Topic 22 `E5系 再粘着制御`。
+現在地は `topic_22_powerpoint_complete`。active topic は Topic 22 `E5系 再粘着制御`。
 
 ## reconcile
 
-この追加枠では開始時mainからTopic 22解説PDF作成を準備したが、他の車両二種workerが先に `1877633ba6f7b781c41aa1b17f32e7092254137b` で解説PDF＋QAを、続いて `30fa3ade598b87b49eb90cbfadec8bd6e45eb9f8` で練習sourceを反映したことを検出した。重複成果は正本へ入れず、最新mainへreconcileして次の未完了工程である練習PDF作成＋PDF QAだけを進めた。
+今回の追加枠では、開始時main `cb3c0e20d1c2bbfc6ccab986d34304543475381e`、系列 `STATUS.md` / `HANDOFF.md`、直近車両二種commit、Topic 22成果物を再照合した。
+
+直近の車両二種成果は `c7e807c200225d752fdf38f23f2c2d56f7f02c0e` のTopic 22練習PDF＋QA。それ以降のmain更新は他系列であり、Topic 22の次工程との競合はなかったため、未完了だった解説画像PowerPoint作成＋QAだけを進めた。
 
 Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は既に `π=3.14` 相当の過去問固有丸め差として解決済み。一般式・Topic 21成果物は変更していない。
 
@@ -32,29 +34,31 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は既�
 
 ## 今回実施
 
-Topic 22練習sourceをA4 PDF化し、二系統rendererと文字抽出でQAした。
+Topic 22解説画像PowerPointを作成し、ファイル構造・PDF変換・表示・数値・試験対応QAを実施した。
 
-判定: `PASS / PRACTICE_PDF_COMPLETE`
+判定: `PASS / POWERPOINT_COMPLETE`
 
 成果物:
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice.pdf`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice_pdf_qa.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
 
-PDF QA:
-- A4縦: `7 pages`
-- PDFium 180 dpi: `7 / 7 PASS`
-- pdftoppm 180 dpi: `7 / 7 PASS`
-- 文字・表のクリップ/重なり/欠落: `0件`
-- 文字抽出: `PASS`
-- 一次五肢択一: `8 / 8`
-- 二次記述式: `4 / 4`
-- 全問題・完全解説: `12 / 12`
+PowerPoint QA:
+- 16:9: `5 slides`
+- python-pptx open: `PASS / 5 slides`
+- PPTX ZIP整合性: `PASS`
+- shape geometry overflow: `0件`
+- LibreOffice PDF変換: `PASS / 5 pages`
+- pdftoppm `1601×900`: `5 / 5 PASS`
+- PDF文字抽出: `PASS`
+- Unicode replacement char / `(cid:)`: `0 / 0`
+- 表示目視QA: `5 / 5 PASS`
+- スライド外周クリップ・欠落・文字重なり: `0件`
 - 固定5問: `5 / 5 unchanged`
 - 一次答案要素: `3 / 3 covered`
 - 二次答案要素: `8 / 8 covered`
 - 合計答案要素: `11 / 11 covered`
 - SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化への接続: `3 / 3 aligned`
+- SPEC指定3可視化: `3 / 3 PASS`
 - 固定問題差替え: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 公式過去問本文の複製: `0件`
@@ -63,7 +67,7 @@ PDF QA:
 - 未確認E5系実車値の真値化: `0件`
 - 新たなexact blocker: `0件`
 
-PDF SHA-256: `86f325b51ac1e0e9fa1e509fbcca56115c6858ee5a82d32cb7888d8589df0530`
+PPTX SHA-256: `dd06f2a02d5327fdc9dc70be89f3f8949f75669619f740daf34f4d1fa47450f8`
 
 ## 重要な境界
 
@@ -72,10 +76,10 @@ PDF SHA-256: `86f325b51ac1e0e9fa1e509fbcca56115c6858ee5a82d32cb7888d8589df0530`
 - 車輪側速度差と誘導電動機すべりを同一視しない。
 - `T∝s` は小すべり域等の成立条件が問題で明示された場合だけ使用する。
 - E5系実車の粘着係数、検出閾値、トルク低減率、復帰時定数、制御ゲインを真値化しない。
-- clean blind独立再解答はPowerPoint完成後に行う。
+- clean blind独立再解答では公式解答・標準解答を先に見ず、候補を先に固定する。
 
 ## 次の安全な工程
 
-Topic 22 解説画像PowerPoint作成＋QA。
+Topic 22 完成後clean blind独立再解答。
 
-固定5問・11答案要素、SPEC固定8項目・指定3可視化を変更せず、PowerPoint成果物と表示QAを作成する。
+固定5問・11答案要素を教材だけで解き、一次3 / 3、二次8 / 8、総計11 / 11、固定5問5 / 5を確認してから公式解答・標準解答と照合する。固定EXAM_ALIGNMENTは変更しない。
