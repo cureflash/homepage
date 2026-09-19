@@ -1,13 +1,13 @@
 # HANDOFF - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-19
+更新日: 2026-09-20
 
 ## 現在地
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_20_independent_reanswer_record_qa_pass / IN_PROGRESS`
-- 次工程: Topic 20 最終QA
+- current status: `topic_20_final_qa_progress_metadata_unsynced / NEEDS_REVISION`
+- 次工程: Topic 20 進捗・メタデータ記録3件の同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -48,6 +48,7 @@
 - `topics/20_control_system_stability/20_control_system_stability_powerpoint_qa.md`
 - `topics/20_control_system_stability/20_control_system_stability_blind_reanswer_gate.md`
 - `topics/20_control_system_stability/20_control_system_stability_independent_reanswer.md`
+- `topics/20_control_system_stability/20_control_system_stability_final_qa.md`
 
 成果物QA:
 - 固定5問・14答案要素: `14 / 14 COVERED`
@@ -64,7 +65,7 @@
 
 ロック時点:
 - H23 一次 問7: `4 / 5`。設問(1)は「安定性」という内容は正しいが、選択肢記号を `ヲ` と転記。公式は `ワ`。
-- H25 一次 問6 (1),(3),(4),(5): `4 / 4 PASS`
+- H25 一次 機械 問6 (1),(3),(4),(5): `4 / 4 PASS`
 - H30 二次 問4 (2): `0 / 1`。問題文 `Ti=0.1 s` を `0.01 s` と転記し、折点を `100 rad/s` とした。公式は `10 rad/s`。
 - R03 二次 問4 (3),(5): `2 / 2 PASS`
 - R04 二次 問4 (1),(2): `2 / 2 PASS`
@@ -86,7 +87,20 @@
 - 未確認実車制御値化: `0件`
 - 判定: `PASS / topic_20_independent_reanswer_record_qa_pass`
 
-技術本文・練習問題・固定EXAM_ALIGNMENT・PDF/PPTXは変更していない。Topic 20はまだ `completed` にしない。完成数は `19 / 22` のまま。
+技術本文・練習問題・固定EXAM_ALIGNMENT・PDF/PPTXは変更していない。
+
+## Topic 20 最終QA
+過去問対応・成果物・独立再解答の技術ゲートは全てPASS。ただし最終整合QAで次の3件を確認した。
+
+1. main source冒頭の状態・次工程が解説source完成時点のまま。
+2. 練習source末尾の次工程が練習PDF作成前のまま。
+3. 解説PDF QAはGit blob `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f` を正しく記録しているが、size欄 `17333 bytes` が現行main Contents APIの `17336 bytes` と不一致。
+
+- 技術本文の修正要否: `0件`
+- 固定EXAM_ALIGNMENT変更要否: `0件`
+- PDF/PPTX再生成要否: `0件`
+- 最終QA判定: `NEEDS_REVISION / topic_20_final_qa_progress_metadata_unsynced`
+- 完成数: `19 / 22`
 
 ## 次工程
-Topic 20の最終QAを実施する。解説source、PDF、練習、PowerPoint、独立再解答記録、STATUS/HANDOFFの整合を確認し、品質ゲートを全て満たす場合のみ `completed` とする。
+上記3件の進捗・メタデータ記録だけを現行mainへ同期する。技術本文、練習問題、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答内容は変更しない。
