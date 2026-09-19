@@ -3,36 +3,38 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_preproduction_blind_complete`
+current_status: `topic_16_explanation_source_complete`
 
 ## 今回完了
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFFを確認し、Topic 16の制作前blind品質ゲートを完了した。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、STATUS/HANDOFF、直近Topic 16コミットをreconcileし、他workerのclean blind完了を正本として重複作業を避けた。
 
-初回runでblind不成立だった平成21年度二次「電力・管理」問6の2答案要素について、公式問題PDF `20091129_ch_second_q01.pdf` の問題文・系統図・インピーダンス表だけを入力としてclean blind独立再解答を実施した。独立計算確定後に公式標準解答と照合した。
+そのうえで、固定済み教材マッピングだけを使ってTopic 16解説sourceを作成した。
 
-記録:
-- `topics/16_short_circuit/16_short_circuit_preproduction_blind_20260919.md`
-- `topics/16_short_circuit/16_short_circuit_preproduction_blind_clean_rerun_20260919.md`
+成果物:
+- `topics/16_short_circuit/16_short_circuit_explanation.md`
 
-clean rerun:
-- CB3開放: `6.08 kA`
-- CB3投入: `10.3 kA`
-- 公式標準解答照合: `2 / 2一致`
-- 判定: `2 / 2 PASS`
+収録内容:
+- 短絡現象、短絡容量
+- 単位法、％インピーダンス、基準量変換
+- 系統図から故障点等価インピーダンスを作る手順
+- 正相・逆相・零相インピーダンス
+- 三相短絡、一線地絡、線間短絡、二線地絡
+- 対称分回路と相電流への復元
+- 短絡電流上限からの逆算
+- 新幹線25kVき電側の単相等価モデルとの区別
+- 故障位置―短絡電流の教材用仮定データ
+- 3段階例題
+- 頻出ミス
+- 公式・解法まとめ
 
-正式品質ゲート:
-- 令和2年度一次「電力」問3: `5 / 5 PASS`
-- 平成25年度一次「電力」問4: `5 / 5 PASS`
-- 令和7年度二次「電力・管理」問2: `5 / 5 PASS`
-- 令和3年度二次「電力・管理」問3: `6 / 6 PASS`
-- 平成21年度二次「電力・管理」問6: `2 / 2 PASS`
-- 一次: `10 / 10 PASS`
-- 二次: `13 / 13 PASS`
-- 合計: `23 / 23 PASS`
-- 公式標準解答との照合: `23 / 23一致`
+固定マッピング:
+- 正式5問・23答案要素: `23 / 23 covered`
+- 過去問逆算の固定10説明項目: `10 / 10`
+- 制作前blind: `23 / 23 PASS`
+- 公式標準解答照合: `23 / 23一致`
 
-固定5問・23答案要素、教材範囲、完成数 `15 / 22` は変更していない。
+解説sourceの `23 / 23 covered` は説明箇所の存在確認であり、完成後blind PASSを意味しない。
 
 ## 固定範囲
 
@@ -80,31 +82,35 @@ clean rerun:
 
 ## 次に行う
 
-固定済み教材マッピングに従ってTopic 16解説sourceを作成する。
+`topics/16_short_circuit/16_short_circuit_explanation.md` から解説PDFを生成し、PDF QAを行う。
 
 条件:
-- MASTER SPECの解説プリント最低構成に接続する。
+- MASTER SPECの解説プリント最低構成を欠落させない。
+- 固定5問・23答案要素を `23 / 23` 保持する。
+- 固定10説明項目を `10 / 10` 保持する。
 - 3段階例題を含める。
-- 固定5問・23答案要素を本文節へ対応付ける。
 - 三相短絡、一線地絡、線間短絡、二線地絡を固定範囲どおり扱う。
-- 故障位置―短絡電流の可視化へ接続する。
+- 故障位置―短絡電流の可視化を含める。
+- 数式、表、単位、対称分回路の表示崩れをPDF QAで確認する。
 - Topic 17以降を先取りしない。
 
 まだ行わない:
-- Topic 16解説PDF
 - Topic 16練習source/PDF
 - Topic 16 PowerPoint
+- Topic 16完成後blind
 - Topic 17以降
 
 ## 品質境界
 
 - Topic 01〜15: `completed`
-- Topic 16: `topic_16_preproduction_blind_complete`
+- Topic 16: `topic_16_explanation_source_complete`
 - 完成数: `15 / 22`
 - 固定EXAM_ALIGNMENT: `5問`（一次2・二次3）
 - 固定答案要素: `23`（一次10・二次13）
 - 制作前blind: `23 / 23 PASS`
 - 公式標準解答照合: `23 / 23一致`
+- 解説source答案要素: `23 / 23 covered`
+- 解説source固定説明項目: `10 / 10`
 - 周辺問題による件数水増し: `0件`
 - Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
