@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_15_completion_blind_complete`
+current_status: `topic_15_web_catalog_complete`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
@@ -13,7 +13,7 @@ Topic 01〜14は `completed`。
 
 ## Topic 15 current progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋QA、練習source、練習PDF＋QA、PowerPoint＋QA、完成後blind独立再解答まで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋QA、練習source、練習PDF＋QA、PowerPoint＋QA、完成後blind独立再解答、Webカタログ登録まで完了。
 
 正式品質ゲート対象は一次3問＋二次2問、計5問・24答案要素で固定したまま変更なし。
 
@@ -79,7 +79,17 @@ PowerPoint:
 - 合計: `5 / 5問・24 / 24答案要素 PASS`
 - 判定: `PASS / topic_15_completion_blind_complete`
 
-Webカタログ登録・最終QA・Topic 15 completed化は未実施。
+### Webカタログ
+
+`qualifications/denken-shinkansen/catalog.json` に既存Topic形式で登録済み。
+
+- id: `15_regenerative_power`
+- seriesId: `06_shinkansen_power_2`
+- topicNo: `15`
+- title: `回生した電力が大量に戻ったら？`
+- explanation / practice / slides / source: Topic 15正本への相対パス
+
+最終QA・Topic 15 completed化は未実施。
 
 ## 品質境界
 
@@ -91,6 +101,7 @@ Topic 15:
 - 解説PDF QA: `PASS`
 - 練習PDF QA: `PASS`
 - PowerPoint QA: `PASS`
+- Webカタログ登録: `PASS`
 - 周辺問題による件数水増し: `0件`
 - Topic 14問題の重複採用: `0件`
 - Topic 16故障計算先取り: `0件`
@@ -118,8 +129,8 @@ Topic 15:
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — IN_PROGRESS / 完成後blind `PASS`
+- [ ] Topic 15 — IN_PROGRESS / Webカタログ登録済み / 完成後blind `PASS`
 
 ## next_start
 
-Topic 15の固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、Webカタログ登録を行う。最終QA・completed化はまだ行わない。
+Topic 15の固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、最終QAを行う。Topic 16着手はまだ行わない。
