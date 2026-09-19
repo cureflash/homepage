@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 20 / 21
-- current_status: `topic_21_final_qa_complete`
-- last_completed_topic: `20 East iは走りながら何をどう測る？`
-- active_topic: `21 架線からEast iまで全部シミュレーションする`
-- next_start: Topic 21 completed状態同期
+- exam_aligned_completed_topics: 21 / 21
+- current_status: `completed`
+- last_completed_topic: `21 架線からEast iまで全部シミュレーションする`
+- active_topic: `none`
+- next_start: `09_electrical_math_3`
 
 ## 完成済み
 
-Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後独立再解答、最終QAを通過し `PASS / completed`。
+Topic 01〜21は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後独立再解答、最終QAを通過し `PASS / completed`。
 
 ## Topic 21 固定範囲
 
@@ -62,32 +62,28 @@ Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
 - [x] 主source進捗記録同期
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- [ ] completed状態同期
+- [x] completed状態同期
 
 ## 今回進めた内容
 
-Topic 21最終QAを再実施した。
+Topic 21の `completed` 状態同期を実施した。
 
-- 初回blocker「主source進捗記録不一致」: `解消済み / 1件中1件`
-- 必須成果物欠落: `0件`
+- 主source stage: `COMPLETED`
+- 主source completion: `completed`
 - 固定一次4問・17答案要素: `17 / 17 PASS`
 - 固定二次1問・4答案要素: `4 / 4 PASS`
 - 合計: `21 / 21 PASS`
 - 公式標準解答照合: `21 / 21一致`
-- SPEC固定範囲: `5 / 5領域`
-- 簡略モデル: `8 / 8ブロック`
-- 解説PDF表示QA: `4 / 4 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- PowerPoint表示QA: `8 / 8 PASS`
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
 - 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
 - 技術本文・固定EXAM_ALIGNMENT・過去問正答・教材成果物の変更: `0件`
 - 仕様追加: `0件`
-- 判定: `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
+- 系列08完成数: `21 / 21`
+- 判定: `PASS / completed`
 
 ## 判定
 
-`PASS / topic_21_final_qa_complete / IN_PROGRESS`。
+`PASS / completed`。
 
-完成数は `20 / 21`。次工程はTopic 21の `completed` 状態同期。
+系列08は `21 / 21` の全テーマが完了。次系列は `MASTER_SPEC.md` の順序に従い `09_electrical_math_3`。
