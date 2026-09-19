@@ -8,11 +8,11 @@
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
-現在地は `topic_25_practice_pdf_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
+現在地は `topic_25_powerpoint_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
 
 ## 今回の進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 25固定EXAM_ALIGNMENT、解説source/PDF、練習sourceをreconcileした。解説PDFは既存QA済み正本blob `7588e85204db180eee2bd5e2494708df4810276e` を維持し、次の未完了工程である練習PDF生成・QAだけを1段階進めた。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 25固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、直近Topic 25コミットをreconcileした。既存成果物を重複修正せず、次の未完了工程だった解説画像PowerPoint生成・QAだけを1段階進めた。
 
 ## Topic 25 解説PDF
 
@@ -43,7 +43,7 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 判定:
 - `PASS / PRACTICE_PDF_COMPLETE`
 - blob SHA: `2dbb1439e2ee237065fce69e8ac11a9315c0335f`
-- file size: `14,077 bytes`
+- file size: `14,089 bytes`
 - SHA-256: `ab6df0853fe14f2ec8daeb4a43329bab7fcc9a3eeb68f260aadb05531f4d343c`
 - A4縦: `5 pages`
 - PDFium 180 dpi: `5 / 5 PASS`
@@ -62,6 +62,28 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 - SPEC必須10項目: `10 / 10 covered`
 - SPEC指定3計算・可視化への計算接続: `3 / 3 aligned`
 
+## Topic 25 解説画像PowerPoint
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_images.pptx`
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_images_qa.md`
+
+判定:
+- `PASS / POWERPOINT_COMPLETE`
+- canonical blob SHA: `726da748b8ceb7c0d6cdee770daca7738fc1c202`
+- 16:9 / `6 slides`
+- file size: `258,876 bytes`
+- SHA-256: `0d0998d38ab8e5075c86b9c6f8c993390d43f7d053c81b784373942c9419fbd7`
+- ZIP integrity / python-pptx open / geometry: `PASS`
+- LibreOffice render: `6 / 6 PASS`
+- `pdftotext`: `PASS`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `20 / 20 connected`
+- 二次答案要素: `8 / 8 connected`
+- 合計答案要素: `28 / 28 connected`
+- SPEC必須10項目: `10 / 10 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+
 ## 固定境界
 
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -74,4 +96,4 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
 ## 次の安全な工程
 
-Topic 25解説source / 解説PDF / 練習source / 練習PDFを正本入力として解説画像PowerPointを作成し、内容・表示・固定28答案要素への接続をQAする。完成数は `24 / 39` のまま。
+Topic 25完成後clean blind独立再解答。保存済み正答を先に見ず、固定5問・28答案要素を教材だけで再解答し、PASS後に最終QAへ進む。完成数は `24 / 39` のまま。
