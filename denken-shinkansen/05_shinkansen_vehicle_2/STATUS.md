@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_23_explanation_source_complete`
+- current_status: `topic_23_explanation_pdf_complete`
 - last_completed_topic: `22 E5系 再粘着制御`
 - active_topic: `23 N700S SiC主変換装置`
-- next_start: Topic 23解説PDF作成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化を変更しない
+- next_start: Topic 23練習source作成。固定5問・23答案要素、SPEC固定8項目、指定3可視化、実車値境界を変更しない
 
 ## 完了済み
 
@@ -83,9 +83,29 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - 未確認N700S実車値の真値化: `0件`
 - 新たなexact blocker: `0件`
 
+## Topic 23 解説PDF
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+- A4縦: `5 pages`
+- PDFium render: `5 / 5 PASS`
+- Poppler render: `5 / 5 PASS`
+- 文字抽出・破損グリフ: `PASS`
+- 固定5問・23答案要素: `23 / 23 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- JR東海7%値のSiC単独効果化: `0件`
+- 富士電機20%軽量化の車両全体への誤拡張: `0件`
+
 成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
 
 ## Topic 21 H26二次 問1(4)
 
@@ -93,4 +113,4 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## 次工程
 
-Topic 23解説PDF作成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化を変更しない。
+Topic 23練習source作成。固定5問・23答案要素、SPEC固定8項目、指定3可視化、実車値境界を変更しない。
