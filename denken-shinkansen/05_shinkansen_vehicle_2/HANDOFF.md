@@ -8,15 +8,15 @@
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
-現在地は `topic_24_explanation_source_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。
+現在地は `topic_24_explanation_pdf_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。
 
 ## 今回のreconcile
 
-latest main `43a6762be4f446d9fd67f994b9c08a50ea5433f0`、最新 `STATUS.md` / `HANDOFF.md`、直近コミット、Topic 24制作前EXAM_ALIGNMENT、Topic 10・12の既存誘導機/VVVF成果をreconcileした。
+開始時main `122f922d9af650dcc884fcd4d808a60e6ed227ec` から、作業中に他系列Topic 16の更新がmainへ入ったため再取得し、`f189fdcb076d54e276b8b1b38f9a0f9e1bb61991` を親としてTopic 24成果を反映した。Topic 24ディレクトリ、最新 `STATUS.md` / `HANDOFF.md`、直近コミットを反映直前に再確認し、既存のTopic 24解説PDF・PDF QAがないことを確認した。
 
-車両二種の直近更新は `6054013d72b4ec8dc00febf1303e9c5130a69e5f` のTopic 24 EXAM_ALIGNMENTで、その後のmain更新は他系列だった。Topic 24解説sourceの競合作業は確認されず、重複工程なし。
+同時進行の更新は他系列であり、車両二種Topic 24の競合作業・重複工程は確認されなかった。
 
-再利用:
+再利用済み品質ゲート:
 - R7一次「機械」問2: Topic 10 `5 / 5 PASS`
 - R4一次「機械」問2 `(3)〜(5)`: Topic 12 `3 / 3 PASS`
 - R2一次「機械」問3 `(1),(4),(5)`: Topic 12 `3 / 3 PASS`
@@ -25,28 +25,37 @@ latest main `43a6762be4f446d9fd67f994b9c08a50ea5433f0`、最新 `STATUS.md` / `H
 
 既存13答案要素の再調査・再解答は行っていない。
 
-## 今回実施 — Topic 24 解説source
+## 今回実施 — Topic 24 解説PDF
 
 作成:
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation_source.md`
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation.pdf`
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation_pdf_qa.md`
 
-判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 QA:
-- 固定5問・17答案要素の説明責務: 一次 `11 / 11`、二次 `6 / 6`、合計 `17 / 17 covered`
+- A4縦: `6 pages`
+- PDFium render: `6 / 6 PASS`
+- Poppler render: `6 / 6 PASS`
+- 文字抽出: `PASS`
+- 置換文字 `�`: `0件`
+- クリッピング・文字重なり・黒四角・破損グリフ: `0件`
+- 固定5問・17答案要素: 一次 `11 / 11`、二次 `6 / 6`、合計 `17 / 17 covered`
 - SPEC必須8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 defined`
-- 3段階例題: `3 / 3`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 未確認N700S実車値の真値化: `0件`
-- SPEC外主題追加: `0件`
 - 新たなexact blocker: `0件`
+- PDF SHA-256: `c8cb9bd229f871e96667c5f845bcad8dfbdd7ecee2ceef7a01bd1bd95fe1aef8`
 
-Topic 10/12の内容は固定過去問に必要な最小橋渡しだけを収録した。Topic 10の等価回路・損失、Topic 12のVVVF制御を独立主題として再展開していない。
+初回PDF QAで右端クリッピング1箇所を検出したため、行分割して根本修正し、全6頁をPDFium/Popplerで再レンダリングしてPASS後に正本へ反映した。
+
+この段階ではTopic 24全体を `completed` としない。clean blind独立再解答も未実施。
 
 ## N700S実車接続
 
-富士電機技報 2020 vol.93 no.2 p.95（5）で、N700S向け主電動機の6極化を一次メーカー資料として確認した。
+富士電機技報 2020 vol.93 no.2 p.95（5）で、N700S向け主電動機の6極化を一次メーカー資料として確認済み。
 
 - https://www.fujielectric.co.jp/about/company/gihou_2020/pdf/93-02/FEJ93-02-000-2020.pdf
 
@@ -68,7 +77,7 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 - 二次: `2問 / 6答案要素`
 - 合計: `5問 / 17答案要素`
 
-完成後はTopic 24教材だけを使って固定5問・17答案要素をclean blind再解答する。source段階のcoverage `17 / 17` を完成判定へ流用しない。
+完成後はTopic 24教材だけを使って固定5問・17答案要素をclean blind再解答する。PDF coverage `17 / 17` を完成判定へ流用しない。
 
 ## Topic 24 境界
 
@@ -79,8 +88,8 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 
 ## Topic 21 H26二次 問1(4)
 
-`48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。解説sourceにもこの過去問固有注記を収録済み。
+`48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。Topic 24解説PDFにも過去問固有注記を収録した。
 
 ## 次の安全な工程
 
-Topic 24解説sourceから解説PDFを生成する。固定5問・17答案要素、SPEC指定3可視化、3段階例題、N700S実車事実境界を変更しない。生成後、表示・数式・可視化・coverageのPDF QAを行う。完成数は `23 / 39` のまま。
+Topic 24練習sourceを作成する。一次型と二次記述型を含む練習問題・完全解説を固定17答案要素へ接続し、数値問題は途中計算・単位・検算、記述式は前提・式・理由説明まで採点可能な形にする。固定EXAM_ALIGNMENT、N700S事実境界、Topic 21一般式は変更しない。完成数は `23 / 39` のまま。
