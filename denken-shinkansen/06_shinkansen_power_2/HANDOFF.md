@@ -3,33 +3,36 @@
 updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
-current_status: `topic_17_preproduction_exam_alignment_complete`
+current_status: `topic_17_preproduction_blind_mismatch`
 
 ## 今回実施
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、Topic 16完了状態を確認し、最初の未完了テーマであるTopic 17「事故区間だけをどう一瞬で切る？」を制作前EXAM_ALIGNMENTまで進めた。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、直近の系列変更を確認し、既存の電力二種枠がTopic 16完了後にTopic 17制作前EXAM_ALIGNMENTまで進めていた成果をreconcileした。
 
-新規source:
-- `topics/17_protection_coordination/17_protection_coordination.md`
+重複してEXAM_ALIGNMENTを作り直さず、固定済み一次3問＋二次2問、計5問・26答案要素について制作前blind独立再解答を実施した。
 
-正式品質ゲート対象を一次3問＋二次2問、計5問・26答案要素に固定した。
+blind記録:
+- `topics/17_protection_coordination/17_protection_coordination_preproduction_blind_20260920.md`
 
-一次:
-- 令和4年度「電力」問3 — 距離リレー、後備保護、時限遮断、測距インピーダンス
-- 平成29年度「電力」問3 — 比率差動、母線差動、内部事故・外部事故の選別
-- 平成25年度「電力」問4 — 短絡容量と遮断容量
+結果:
+- 一次: `15 / 15 PASS`
+- 二次: `9 / 11 PASS`
+- 合計: `24 / 26 PASS`
+- 判定: `NEEDS_REVISION / topic_17_preproduction_blind_mismatch`
 
-二次:
-- 令和2年度「電力・管理」問2 — 計器用変成器、CT・VT、保護リレー、遮断器、遮断時間
-- 平成25年度「電力・管理」問3 — OCR、地絡保護、方向要素、時限協調
+## exact blocker
 
-固定品質ゲート:
-- 一次: `3問 / 15答案要素`
-- 二次: `2問 / 11答案要素`
-- 合計: `5問 / 26答案要素`
-- SPEC固定11項目マッピング: `11 / 11`
+令和2年度二次「電力・管理」問2で2答案要素が公式標準解答に不足した。
 
-公式過去問・公式標準解答を正本とし、e-sysnetと電験王2を説明粒度・論点整理の比較用に確認した。仕様追加、Topic 18以降の先取り、未確認実設備値の真値化は行っていない。
+1. 保護リレー信頼性:
+   - blind候補は保護区間内の正動作、区間外の正不動作、自動監視、冗長化を挙げた。
+   - 公式標準解答が明示する「故障率が低いこと」を欠いた。
+2. 遮断器の定格遮断時間:
+   - blind候補: `3サイクル`
+   - 公式標準解答: `5サイクル及び3サイクル`
+   - `5サイクル` を欠いた。
+
+このrunでは候補答案固定後に公式標準解答を照合済みのため、同一runの再解答をclean blindとして扱わない。
 
 ## Topic 16維持
 
@@ -39,6 +42,8 @@ current_status: `topic_17_preproduction_exam_alignment_complete`
 - 完成数: `16 / 22`
 
 ## Topic 17境界
+
+固定EXAM_ALIGNMENT変更: `0件`
 
 系列SPECの固定範囲だけを扱う:
 - CT
@@ -58,7 +63,7 @@ Topic 16の短絡電流・短絡容量等は既習事項として再利用する
 
 ## 次に行う
 
-固定した一次3問・二次2問、計5問・26答案要素について制作前blind独立再解答を行う。公式解答・保存済み正答を先に見ずに解き、解答後に公式標準解答と照合する。
+公式標準解答・保存済み候補答案を入力から除外した状態で、固定5問・26答案要素のclean blind独立再解答を行う。`26 / 26 PASS` を確認後にのみ教材本文へ進む。
 
 まだ行わない:
 - 教材本文作成
