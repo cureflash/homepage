@@ -3,30 +3,29 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_practice_pdf_complete`
+current_status: `topic_16_powerpoint_complete`
 
 ## 今回完了
 
-最新main、上位仕様、本系列SPEC、STATUS/HANDOFF、直近のTopic 16変更をreconcileし、既存の「電力二種を進行」枠が練習sourceまで完了していることを確認した。重複作業を避け、その次工程だけを実施した。
+最新main、上位仕様、本系列SPEC、STATUS/HANDOFF、直近のTopic 16変更をreconcileし、既存workerが練習PDFまで完了していることを確認した。重複作業を避け、その次工程だけを実施した。
 
 成果物:
-- `topics/16_short_circuit/16_short_circuit_practice.pdf`
-- `topics/16_short_circuit/16_short_circuit_practice_pdf_qa.md`
+- `topics/16_short_circuit/16_short_circuit_images.pptx`
+- `topics/16_short_circuit/16_short_circuit_powerpoint_qa.md`
 
-練習PDF:
-- A4縦 `5ページ`
-- `17182 bytes`
-- Git blob SHA-1 `575ed662bc4093d17116bfdbcd973f96b712231c`
-- SHA-256 `ba274bce2d4e281b66859a72a9dec21d6983223b1bb7d3711db557a1483cd587`
-- 15問すべて収録、一次型10問・二次型5問、完全解説 `15 / 15`
-- PDFium 200 dpi `5 / 5 PASS`
-- Poppler 150 dpi `5 / 5 PASS`
-- ページ外逸脱 / 文字切れ / 重なり / 欠損グリフ `0件`
-- 数値独立再計算 `PASS`
-- 一次型正答一意性 `10 / 10 PASS`
+PowerPoint:
+- 16:9、`6スライド`
+- `46451 bytes`
+- SHA-256 `c5e8f0c3f239d0d4243a16c907802522e5d6edb0e83998cbd4957789c7e6d0b1`
+- PPTX ZIP整合性 `PASS`
+- `slides_test.py`: `PASS / No overflow detected`
+- LibreOffice PDF変換 `6ページ PASS`
+- 200 dpi `2667 x 1500`, `6 / 6 PASS`
+- 目視: 文字切れ / 重なり / 図形はみ出し `0件`
+- PDF文字抽出 `PASS / U+FFFD 0件 / 黒四角0件 / □ 0件`
+- 固定10到達項目 `10 / 10 covered`
 - 固定5問・23答案要素 `23 / 23 covered`
-- 固定10説明項目 `10 / 10 covered`
-- 判定: `PASS / topic_16_practice_pdf_complete`
+- 判定: `PASS / topic_16_powerpoint_complete`
 
 ## 正式品質ゲート
 
@@ -42,7 +41,7 @@ current_status: `topic_16_practice_pdf_complete`
 - 合計: `23 / 23 PASS`
 - 公式標準解答照合: `23 / 23一致`
 
-H21問6の初回blind汚染はclean rerunで解消済み。公式問題だけからCB3開放 `6.08 kA`、CB3投入 `10.3 kA` を独立再計算後に公式標準解答と照合した。
+H21問6のclean rerun確定値CB3開放 `6.08 kA`、CB3投入 `10.3 kA` はSlide 5へ説明接続した。公式問題本文・図は転載していない。
 
 ## 固定範囲・境界
 
@@ -57,24 +56,24 @@ Topic 16だけを対象とし、短絡容量、％Z、単位法、正相・逆�
 
 ## 次に行う
 
-Topic 16の解説画像PowerPointを制作し、PowerPoint QAを行う。
+Topic 16の完成後blind独立再解答を行う。
 
 条件:
 - 固定5問・23答案要素を変更しない。
-- 固定10説明項目との接続を保つ。
-- 三相短絡、一線地絡、線間短絡、二線地絡、単位法・％Z、短絡容量、故障位置―短絡電流を固定範囲どおり扱う。
+- 完成済みlearner-facing成果物だけを参照して独立再解答する。
+- 公式標準解答は再解答完了後の照合まで見ない。
 - 未確認実設備値は真値化しない。
 - Topic 17以降を先取りしない。
 
 まだ行わない:
-- Topic 16完成後blind
-- Topic 16 Webカタログ・最終QA
+- Webカタログ登録
+- Topic 16最終QA
 - Topic 17以降
 
 ## 品質境界
 
 - Topic 01〜15: `completed`
-- Topic 16: `topic_16_practice_pdf_complete`
+- Topic 16: `topic_16_powerpoint_complete`
 - 完成数: `15 / 22`
 - 固定EXAM_ALIGNMENT: `5問`（一次2・二次3）
 - 固定答案要素: `23`（一次10・二次13）
@@ -82,7 +81,8 @@ Topic 16の解説画像PowerPointを制作し、PowerPoint QAを行う。
 - 公式標準解答照合: `23 / 23一致`
 - 解説source/PDF: `23 / 23 covered`
 - 練習source/PDF: `23 / 23 covered`
-- 固定10説明項目: `10 / 10 covered`
+- PowerPoint: `23 / 23 covered`
+- 固定10到達項目: `10 / 10 covered`
 - 周辺問題による件数水増し: `0件`
 - Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
