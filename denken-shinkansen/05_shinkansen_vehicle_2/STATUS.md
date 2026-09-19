@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `25 / 39`
-- current_status: `topic_26_practice_pdf_complete`
+- current_status: `topic_26_powerpoint_complete`
 - last_completed_topic: `25 N700S バッテリー自走のエネルギー設計`
 - active_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
-- next_start: Topic 26 PowerPoint生成＋QA。固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDFを正本として、SPEC指定3可視化と過去問接続を16:9スライドへ反映し表示・構造・内容QAを行う
+- next_start: Topic 26完成後clean blind独立再解答。固定5問・一次10答案要素・二次6答案要素を保存済み正答を見ず教材だけで再解答し、PASS時のみTopic 26をcompletedへ進める
 
 ## Topic 25 最終状態
 
@@ -140,10 +140,34 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
+## Topic 26 PowerPoint
+
+- 判定: `PASS / POWERPOINT_COMPLETE`
+- path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images.pptx`
+- canonical blob SHA: `4cec8a6ee9eef4272b5783762a4f0c1f8311e19d`
+- QA: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images_qa.md`
+- file size: `55,817 bytes`
+- SHA-256: `91ee793f3472b4f1a26fd40360a7dd85a578c1f0fc64d9717ce43023f5cd2cb7`
+- 16:9: `6 slides`
+- PPTX ZIP / python-pptx: `PASS`
+- LibreOffice / Poppler render: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`（8,941 bytes）
+- 置換文字 `�`: `0件`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `10 / 10 connected`
+- 二次答案要素: `6 / 6 connected`
+- 合計答案要素: `16 / 16 connected`
+- SPEC必須7項目: `7 / 7 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 教材用仮定値と実車値の混同: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は練習PDFまで完了。次はPowerPoint生成＋QA。
+Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26はPowerPointまで完了。次はclean blind独立再解答。
