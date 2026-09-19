@@ -9,8 +9,8 @@ status: `PASS / topic_15_powerpoint_complete`
 
 既存の `15_regenerative_power_explanation.md`、固定EXAM_ALIGNMENT、系列 `SPEC.md` のTopic 15範囲だけでPowerPointを構成した。正式過去問、固定答案要素、教材技術範囲は追加・差替えしていない。
 
-- ファイルサイズ: `41310 bytes`
-- SHA-256: `607e662db92b8461f4a4111571102bbcdcd5e29fcbdfe48ba3fb38a2727a33d9`
+- ファイルサイズ: `7558 bytes`
+- SHA-256: `6f64016cb118012d02ab080a6292a31dda279d9c856ddad4ba75eea557b37116`
 - 16:9
 - スライド数: `5`
 
@@ -50,7 +50,7 @@ status: `PASS / topic_15_powerpoint_complete`
 - 変電所から見た正味電力: Slide 2
 - 蓄電あり／なし比較: Slide 2
 
-結果: `3 / 3 PASS`。数値は既存sourceの教材用仮定値だけを使用し、実設備値として扱っていない。
+結果: `3 / 3 PASS`。Slide 2は同一時刻軸上の表で3項目を対比し、数値は既存sourceの教材用仮定値だけを使用している。実設備値として扱っていない。
 
 ## 正式過去問品質ゲート接続
 
