@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `19 / 22`
-- current_status: `topic_20_practice_source_complete / IN_PROGRESS`
+- current_status: `topic_20_practice_pdf_complete / IN_PROGRESS`
 - last_completed_topic: `19 PIDで新幹線の速度を制御する`
 - active_topic: `20 制御系はなぜ発振する？`
-- next_start: Topic 20 練習PDF＋QA
+- next_start: Topic 20 解説画像PowerPoint source
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
@@ -223,8 +223,25 @@ QA:
 - 固定過去問の個別正答保存: `0件 / PASS`
 - 判定: `PASS / topic_20_practice_source_complete`
 
+## Topic 20 練習PDF
+成果物:
+- `topics/20_control_system_stability/20_control_system_stability_practice.pdf`
+- `topics/20_control_system_stability/20_control_system_stability_practice_pdf_qa.md`
+
+QA:
+- A4縦15ページ: `PASS`
+- 200 dpi `pdftoppm`: `15 / 15 PASS`
+- `pdftocairo` 160 dpi: `15 / 15 PASS`
+- ページ外はみ出し・欠落グリフ: `0件`
+- Unicode replacement char / `(cid:)`: `0 / 0`
+- 一次正答一意性: `10 / 10 PASS`
+- 全15問独立再計算・論理確認: `15 / 15 PASS`
+- 固定一次2問＋二次3問・14答案要素: `14 / 14 COVERED`
+- Topic 21先取り・未確認実車制御値化・固定過去問個別正答保存: `各0件 / PASS`
+- 判定: `PASS / topic_20_practice_pdf_complete`
+
 ## 今回進めた内容
-Topic 20の練習sourceを完成させた。一次10問＋二次5問の計15問を作成し、固定一次2問＋二次3問・14答案要素へ `14 / 14 COVERED`。完成数は `19 / 22` のまま。
+Topic 20の練習PDF＋QAを完成させた。一次10問＋二次5問の全15問をA4縦15ページへ収録し、固定一次2問＋二次3問・14答案要素への対応を維持した。完成数は `19 / 22` のまま。
 
 ## 次工程
-Topic 20「制御系はなぜ発振する？」の練習PDF＋QA。
+Topic 20「制御系はなぜ発振する？」の解説画像PowerPoint source。
