@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
 theme: 25kV架線が短絡したら何kA流れる？
-current_status: `topic_16_preproduction_blind_complete`
+current_status: `topic_16_explanation_source_complete`
 completed_topics: `15 / 22`
 
 ## Completed through Topic 15
@@ -13,7 +13,7 @@ Topic 01〜15は `completed`。
 
 ## Topic 16 current stage
 
-制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了した。正式品質ゲートは固定5問・23答案要素のまま変更なし。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成を完了した。正式品質ゲートは固定5問・23答案要素のまま変更なし。
 
 初回blindでは平成21年度二次「電力・管理」問6の2答案要素だけ、問題取得時に第三者解説ページの解答表示を先に見たためblind-validへ算入しなかった。2026-09-19のclean rerunでは公式問題PDF `20091129_ch_second_q01.pdf` の問6問題文・系統図・インピーダンス表だけを入力として独立再計算し、計算確定後に公式標準解答と照合した。
 
@@ -21,6 +21,7 @@ Topic 01〜15は `completed`。
 - `topics/16_short_circuit/16_short_circuit.md`
 - `topics/16_short_circuit/16_short_circuit_preproduction_blind_20260919.md`
 - `topics/16_short_circuit/16_short_circuit_preproduction_blind_clean_rerun_20260919.md`
+- `topics/16_short_circuit/16_short_circuit_explanation.md`
 
 正式品質ゲート:
 - 令和2年度一次「電力」問3: `5 / 5 PASS`
@@ -50,7 +51,18 @@ H21問6 clean rerun:
 - 対称座標法
 - 故障種別―短絡電流
 
-Topic 16は未完了のため、完成数は `15 / 22` のまま。次工程は固定済み教材マッピングに従う解説source作成。
+解説source:
+- MASTER SPEC最低構成へ接続
+- 3段階例題を収録
+- 固定5問・23答案要素: `23 / 23 covered`
+- 過去問逆算の固定10説明項目: `10 / 10`
+- 三相短絡 / 一線地絡 / 線間短絡 / 二線地絡の故障別回路を収録
+- 故障位置―短絡電流の教材用仮定データを収録
+- Topic 17以降先取り: `0件`
+- 未確認実設備値の真値化: `0件`
+- 仕様追加: `0件`
+
+Topic 16は未完了のため、完成数は `15 / 22` のまま。次工程は解説PDF生成＋PDF QA。
 
 ## Topic 15 completion
 
@@ -141,6 +153,8 @@ Topic 16:
 - 固定答案要素: `23`（一次10・二次13）
 - 制作前blind: `23 / 23 PASS`
 - 公式標準解答照合: `23 / 23一致`
+- 解説source固定答案要素: `23 / 23 covered`
+- 解説source固定説明項目: `10 / 10`
 - Topic 17保護・遮断・保護協調先取り: `0件`
 - Topic 18雷サージ先取り: `0件`
 - Topic 20安定度先取り: `0件`
@@ -186,8 +200,8 @@ Topic 15:
 - [x] Topic 13 completed
 - [x] Topic 14 completed
 - [x] Topic 15 completed
-- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `23 / 23 PASS` / 次は解説source
+- [ ] Topic 16 — 制作前EXAM_ALIGNMENT完了 / 制作前blind `23 / 23 PASS` / 解説source完了 / 次は解説PDF＋QA
 
 ## next_start
 
-固定済みの教材マッピングとSPEC固定範囲だけを使い、Topic 16解説sourceを作成する。MASTER SPECの最低構成、3段階例題、一次・二次の固定5問・23答案要素への対応を欠落させない。Topic 17以降は先取りしない。
+`topics/16_short_circuit/16_short_circuit_explanation.md` からTopic 16解説PDFを生成し、PDF QAを行う。固定5問・23答案要素、固定10説明項目、3段階例題、故障種別の対称分回路、故障位置―短絡電流の可視化を欠落させない。練習source/PDF、PowerPoint、完成後blind、Topic 17以降はまだ行わない。
