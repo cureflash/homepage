@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `21 / 39`
-- current_status: `topic_22_independent_reanswer_needs_revision`
+- current_status: `topic_22_independent_reanswer_complete`
 - last_completed_topic: `21 高速域の速度・けん引力・出力制御`
 - active_topic: `22 E5系 再粘着制御`
-- next_start: H21二次「機械・制御」問4 `(5a)` に必要な過去問固有の最小注記をTopic 22教材へ追加し、派生成果物を同期・QAする。固定5問・11答案要素、一般式、SPEC固定範囲は変更しない
+- next_start: Topic 22 最終QA。固定5問・11答案要素、必須成果物、SPEC境界、実車値境界、各既存QA、clean blind `11 / 11 PASS` を統合確認する
 
 ## 完了済み
 
@@ -115,26 +115,35 @@ Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 - 状態: `BLOCKED_FOR_THIS_WORKER`。
 - 原因: H21二次「機械・制御」問4の問題図を回収する過程で、先行workerが候補解答固定前に個別解答を含む第三者ページを開いた。
 - 品質ゲート判定: 先行workerによる独立再解答は無効。候補ファイル・照合結果は作成していない。
-- 固定EXAM_ALIGNMENT、一般式、教材本文、PowerPoint、練習問題は変更していない。
 
 ## Topic 22 clean blind独立再解答
 
-判定: `NEEDS_REVISION / INDEPENDENT_REANSWER_FAILED`
+判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
-fresh independent workerが教材だけで候補を先に固定し、その後に公式解答・標準解答と照合した。
+有効候補固定正本:
+- commit `f8aa715525de8747459c27cb02254575eaeca868`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
 
+公式照合:
 - 一次: `3 / 3 PASS`
-- 二次: `7 / 8 PASS`
-- 合計: `10 / 11 PASS`
-- 固定5問を全答案要素まで正答: `4 / 5`
-- 不一致: H21二次「機械・制御」問4 `(5a)` の1要素
-- 原因: H21固有モデルについて `K2↑ → G(s)ゲイン↓ → K1G(s)ゲイン↓ → 速応性低下` を教材だけで一意に判定する説明が不足
-- 新規仕様追加の必要: `0件`
+- 二次: `8 / 8 PASS`
+- 合計: `11 / 11 PASS`
+- 固定5問: `5 / 5 PASS`
+- 候補固定後の答案変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 一般式変更: `0件`
+- SPEC外追加: `0件`
 - 未確認E5系実車値の真値化: `0件`
 
 記録:
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_independent_reanswer.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_comparison.md`
+
+### 先行10/11診断のreconcile
+
+`22_e5_readhesion_control_independent_reanswer.md` の `10 / 11` は、Topic 22が前提参照を許可しているTopic 20フィードバック制御教材を使用せず、参照範囲をTopic 22単体へ狭めたworkerの診断だった。
+
+候補固定commit `f8aa7155...` は許可されたTopic 20既習制御論を用いてH21問4 `(5a)` を公式照合前に正しく導出し、公式標準解答と一致した。このため `10 / 11` は教材欠落の確定証拠として採用せず、`11 / 11 PASS` を有効なclean blind品質ゲート結果とする。
 
 ## 次工程
 
-H21二次「機械・制御」問4 `(5a)` の既存橋渡し技能だけを最小補強する。固定EXAM_ALIGNMENT、一般式、SPEC固定8項目、指定3可視化は変更しない。補強後に派生成果物を同期・QAし、その後clean blind独立再解答を再実施する。
+Topic 22 最終QA。固定5問・11答案要素、必須成果物、SPEC境界、実車値境界、各既存QA、clean blind `11 / 11 PASS` を統合確認する。
