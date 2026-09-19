@@ -8,13 +8,13 @@
 
 Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
 
-現在地は `topic_27_exam_alignment_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_explanation_source_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、直近コミット、Topic 26最終成果、既存車両二種worker成果をreconcileした。Topic 26は既存workerが最終QAまで完了済みのため重複作業を行わず、Topic 27に同系列の既存成果物がないことを確認して制作前EXAM_ALIGNMENTへ進んだ。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、直近コミット、Topic 26最終成果、既存車両二種worker成果をreconcileした。Topic 26は最終QAまで完了済み、Topic 27は制作前EXAM_ALIGNMENTまで完了済みであり、同系列workerによる解説sourceは存在しなかったため重複せず次工程へ進んだ。
 
-Topic 27は公式第二種一次・二次過去問から5問・23答案要素を固定し、制作前独立解答 `23 / 23 PASS`。一次 `4問・18答案要素`、二次 `1問・5答案要素`。exact blocker `0件`。
+Topic 27の解説sourceとsource QAを作成。固定5問・23答案要素 `23 / 23 covered`、SPEC必須7項目 `7 / 7 covered`、固定教材必要説明8項目 `8 / 8 covered`、指定2可視化 `2 / 2 defined`、3段階例題 `3 / 3 PASS`。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取りはいずれも0件。exact blocker `0件`。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -154,6 +154,28 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 負荷角`δ`、フェーザ、内部誘導起電力から出力・推力へ進む本格解析はTopic 28の範囲とし、Topic 27へ追加しない。
 
+## Topic 27 解説source
+
+成果物:
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_explanation_source.md`
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_explanation_source_qa.md`
+
+判定:
+- `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 固定過去問: `5 / 5 mapped`
+- 一次答案要素: `18 / 18 covered`
+- 二次答案要素: `5 / 5 covered`
+- 合計答案要素: `23 / 23 covered`
+- SPEC必須7項目: `7 / 7 covered`
+- 固定教材必要説明8項目: `8 / 8 covered`
+- 指定2可視化: `2 / 2 defined`
+- 3段階例題: `3 / 3 PASS`
+- 例題数値独立再計算: `3 / 3 PASS`
+- L0系未確認実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -166,4 +188,4 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## 次の安全な工程
 
-Topic 27 `L0系① リニア同期モータ` の解説sourceを作成する。固定5問・23答案要素、SPEC必須7項目、指定2可視化、3段階例題を全件マッピングする。L0系実車事実は一次資料確認済み範囲までとし、`v_s=2τf` の数値例は仮定値であることを明示する。
+Topic 27 `L0系① リニア同期モータ` の解説PDFを生成し、A4縦・固定5問23答案要素・SPEC必須7項目・指定2可視化・3段階例題・実車値境界をPDF QAする。
