@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `24 / 39`
-- current_status: `topic_25_practice_pdf_complete`
+- current_status: `topic_25_powerpoint_complete`
 - last_completed_topic: `24 N700S 主電動機設計の比較`
 - active_topic: `25 N700S バッテリー自走のエネルギー設計`
-- next_start: Topic 25解説画像PowerPointを作成し、内容・表示・固定28答案要素への接続をQAする
+- next_start: Topic 25完成後clean blind独立再解答を行い、固定5問・28答案要素を教材だけで再確認する
 
 ## Topic 25 解説PDF
 
@@ -43,7 +43,7 @@
 - 判定: `PASS / PRACTICE_PDF_COMPLETE`
 - path: `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_practice.pdf`
 - blob SHA: `2dbb1439e2ee237065fce69e8ac11a9315c0335f`
-- file size: `14,077 bytes`
+- file size: `14,089 bytes`
 - SHA-256: `ab6df0853fe14f2ec8daeb4a43329bab7fcc9a3eeb68f260aadb05531f4d343c`
 - A4縦: `5 pages`
 - PDFium render: `5 / 5 PASS`
@@ -69,6 +69,30 @@
 - `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_practice.pdf`
 - `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_practice_pdf_qa.md`
 
+## Topic 25 解説画像PowerPoint
+
+- 判定: `PASS / POWERPOINT_COMPLETE`
+- path: `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_images.pptx`
+- QA: `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_images_qa.md`
+- canonical blob SHA: `726da748b8ceb7c0d6cdee770daca7738fc1c202`
+- 16:9: `6 slides`
+- file size: `258,876 bytes`
+- SHA-256: `0d0998d38ab8e5075c86b9c6f8c993390d43f7d053c81b784373942c9419fbd7`
+- ZIP integrity / python-pptx open / geometry: `PASS`
+- LibreOffice render: `6 / 6 PASS`
+- `pdftotext`: `PASS`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `20 / 20 connected`
+- 二次答案要素: `8 / 8 connected`
+- 合計答案要素: `28 / 28 connected`
+- SPEC必須10項目: `10 / 10 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認N700S電池値の真値化: `0件`
+- 未指定走行抵抗モデル追加: `0件`
+- Topic 21一般式変更: `0件`
+- 完成後clean blind: `PENDING`
+
 ## Topic 25 固定EXAM_ALIGNMENT
 
 1. R8 一次「機械」問5 `(1)〜(5)` — 5答案要素
@@ -89,4 +113,4 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 ## 完成数
 
-Topic 01〜24: `PASS / completed`。完成数 `24 / 39`。Topic 25はPowerPoint、完成後clean blind、最終QAが未完了。
+Topic 01〜24: `PASS / completed`。完成数 `24 / 39`。Topic 25は解説source/PDF、練習source/PDF、PowerPointまで完了。完成後clean blind、最終QAが未完了。
