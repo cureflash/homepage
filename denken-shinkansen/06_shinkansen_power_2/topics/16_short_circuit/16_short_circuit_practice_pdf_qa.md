@@ -3,15 +3,26 @@
 更新日: 2026-09-19
 対象: `16_short_circuit_practice.pdf`
 正本source: `16_short_circuit_practice.md`
-status: `PASS`
+status: `PASS / topic_16_practice_pdf_resynced_after_completion_blind`
+
+## 今回の目的
+
+完成後blindで露呈し、解説source/PDFと練習sourceへ補正済みの一次説明不足5項目を、練習PDFへ同期した。固定EXAM_ALIGNMENT、正式5問・23答案要素、Topic 16固定範囲は変更していない。
+
+同期した5項目:
+- `電磁誘導障害` と電磁力・熱的ストレスの区別
+- `遮断容量` と想定短絡容量の最小限の大小関係
+- `BTB (Back to Back)` の直流リンクと交流短絡電流非直接通過
+- `電圧階級上昇 + 系統分割` と短絡容量抑制
+- `S_sc = √3 V_LL I_sc` の `V_LL` は短絡点の基準線間電圧・故障前電圧であり、ボルト短絡後の0 Vではないこと
 
 ## 生成結果
 
 - 用紙: A4縦
 - ページ数: `5`
-- ファイルサイズ: `17182 bytes`
-- Git blob SHA-1: `575ed662bc4093d17116bfdbcd973f96b712231c`
-- SHA-256: `ba274bce2d4e281b66859a72a9dec21d6983223b1bb7d3711db557a1483cd587`
+- ファイルサイズ: `17526 bytes`
+- Git blob SHA-1: `626a7015e60d7c968128277e5ff18e9039df74fc`
+- SHA-256: `913d654be3a8aa00f83041bd659f8832a57e532260fd24f554c9e75b1892ddc8`
 - 収録問題: `15 / 15`
 - 基礎: `4 / 4`
 - 本試験標準: `8 / 8`
@@ -27,8 +38,7 @@ status: `PASS`
 - 全ページ非空: `5 / 5 PASS`
 - 全ページ目視: 文字切れ・重なり・黒塗り・破損グリフ `0件`
 - 抽出テキストブロックのページ外逸脱: `0件`
-- 問1〜問15の問題見出し: `15 / 15 PASS`
-- 問1〜問15の解説見出し: `15 / 15 PASS`
+- 問1〜問15: `15 / 15 PASS`
 - `解答・完全解説`: `PASS`
 - U+FFFD: `0件`
 - 黒四角文字: `0件`
@@ -67,21 +77,27 @@ sourceの期待値とは別に主要計算を再計算した。
 - 一次: `10 / 10答案要素 covered`
 - 二次: `13 / 13答案要素 covered`
 - 固定10説明項目: `10 / 10 covered`
+- 完成後blind補正5項目: `5 / 5 covered`
+  - 電磁誘導障害と電磁力の区別: covered
+  - 遮断容量と短絡容量の大小関係: covered
+  - BTBの直流リンクと交流短絡電流非直接通過: covered
+  - 電圧階級上昇 + 系統分割: covered
+  - 短絡容量式の電圧 = 短絡点の基準線間電圧・故障前電圧: covered
 - 三相短絡 / 一線地絡 / 線間短絡 / 二線地絡: 収録
 - 短絡容量 / 単位法 / ％Z / 故障位置―短絡電流: 収録
 - 公式過去問転載追加: `0件`
 - 新規正式過去問追加: `0件`
-- Topic 17保護リレー・遮断器定格・保護協調先取り: `0件`
+- Topic 17保護リレー・遮断器定格選定・保護協調先取り: `0件`
 - Topic 18雷サージ先取り: `0件`
 - Topic 20安定度先取り: `0件`
 - Topic 21系統運用先取り: `0件`
 - 未確認実設備値の真値化: `0件`
 - 仕様追加: `0件`
 
-この `23 / 23` は練習教材内カバレッジであり、完成後blind独立再解答のPASSではない。
+この `23 / 23` は練習教材内カバレッジであり、補正後完成後blind独立再解答のPASSではない。
 
 ## 判定
 
-`PASS / topic_16_practice_pdf_complete`
+`PASS / topic_16_practice_pdf_resynced_after_completion_blind`
 
-次工程はTopic 16の解説画像PowerPoint制作＋PowerPoint QA。完成後blindはまだ行わない。
+次工程は、補正5項目だけを既存PowerPointへ同期してPowerPoint QAを再実施する。固定5問・23答案要素は変更しない。完成後blind clean rerun、Webカタログ、最終QA、Topic 17以降はまだ行わない。

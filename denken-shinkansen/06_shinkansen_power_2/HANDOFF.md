@@ -3,13 +3,13 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_practice_source_resynced_after_completion_blind`
+current_status: `topic_16_practice_pdf_resynced_after_completion_blind`
 
 ## 今回完了
 
-最新main、上位仕様、本系列SPEC、STATUS/HANDOFF、Topic 16固定EXAM_ALIGNMENTをreconcileした。前工程で解説source/PDFへ補正済みだった完成後blindの一次説明不足について、重複blindや仕様変更をせず次工程だけを実施した。
+最新main、上位仕様、本系列SPEC、STATUS/HANDOFF、Topic 16固定EXAM_ALIGNMENTをreconcileした。前工程で解説source/PDFと練習sourceへ補正済みだった完成後blindの一次説明不足について、重複blindや仕様変更をせず、次工程の練習PDF同期だけを実施した。
 
-`16_short_circuit_practice.md` へ、一次固定2問の選択肢判定に必要な不足5項目だけを同期した。
+補正済み `16_short_circuit_practice.md` を正本として `16_short_circuit_practice.pdf` を再生成し、一次固定2問の選択肢判定に必要な不足5項目をlearner-facing PDFへ同期した。
 
 同期した内容:
 - `電磁誘導障害` と電磁力・熱的ストレスの区別
@@ -20,8 +20,16 @@ current_status: `topic_16_practice_source_resynced_after_completion_blind`
 
 固定EXAM_ALIGNMENT、正式5問・23答案要素、二次数値計算、Topic 16固定範囲は変更していない。遮断器定格選定・保護協調、BTB制御へは拡張していない。
 
-## 練習source QA
+## 練習PDF QA
 
+- A4縦: `5 pages`
+- PDF size: `17526 bytes`
+- SHA-256: `913d654be3a8aa00f83041bd659f8832a57e532260fd24f554c9e75b1892ddc8`
+- PDFium 200 dpi: `5 / 5 PASS`
+- Poppler 150 dpi: `5 / 5 PASS`
+- 全ページ非空: `5 / 5 PASS`
+- 文字切れ・重なり・破損グリフ: `0件`
+- テキストブロックページ外逸脱: `0件`
 - 全15問: `PASS`
 - 基礎4 / 本試験標準8 / 複合・応用3: 変更なし
 - 一次型10 / 二次型5: 変更なし
@@ -30,12 +38,12 @@ current_status: `topic_16_practice_source_resynced_after_completion_blind`
 - 完成後blind補正5項目: `5 / 5 covered`
 - 一次型正答列: `4, 2, 2, 4, 3, 3, 5, 2, 4, 2`
 - 一次型正答一意性: `10 / 10 PASS`
-- 全数値の独立再計算: `PASS`
+- 全主要数値の独立再計算: `PASS`
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - Topic 17以降先取り: `0件`
 - 仕様追加: `0件`
-- 判定: `PASS / topic_16_practice_source_resynced_after_completion_blind`
+- 判定: `PASS / topic_16_practice_pdf_resynced_after_completion_blind`
 
 ## 正式品質ゲート
 
@@ -52,7 +60,7 @@ current_status: `topic_16_practice_source_resynced_after_completion_blind`
 - 公式解答との候補一致: `23 / 23`
 - 総合: `NEEDS_REVISION`
 
-練習sourceが補正された時点では完成後blindを再実施しない。練習PDFとPowerPointまでlearner-facing成果物を同期した後にclean rerunする。
+練習PDFまで補正された時点では完成後blindを再実施しない。PowerPointまでlearner-facing成果物を同期した後にclean rerunする。
 
 ## 固定範囲・境界
 
@@ -66,10 +74,9 @@ Topic 16だけを対象とする。
 
 ## 次に行う
 
-補正済み `16_short_circuit_practice.md` を正本として練習PDFを再生成し、PDF表示・文字抽出・内容・数値・固定5問23答案要素・補正5項目カバレッジをQAする。
+完成後blindで露呈した同じ不足5項目だけを既存 `16_short_circuit_images.pptx` へ同期し、PowerPoint表示・内容・固定5問23答案要素・補正5項目カバレッジを再QAする。
 
 まだ行わない:
-- PowerPoint補正同期
 - 完成後blind clean rerun
 - Webカタログ登録
 - Topic 16最終QA
@@ -83,7 +90,7 @@ Topic 16だけを対象とする。
 - 解説source: 補正済み
 - 解説PDF: 補正同期・再QA `PASS`
 - 練習source: 補正同期・source QA `PASS`
-- 練習PDF: 補正未同期
+- 練習PDF: 補正同期・再QA `PASS`
 - PowerPoint: 補正未同期
 - 完成後blind: 補正前 `NEEDS_REVISION`
 - 固定EXAM_ALIGNMENT変更: `0件`
