@@ -1,7 +1,7 @@
 # 16 発電所からN700Sまで全部つないでみる
 
 ## 状態
-`in_progress`。制作前 `EXAM_ALIGNMENT` と制作前独立検証、解説本文、3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完了し、完成後独立再解答結果をmain sourceへ同期した。固定5出題回・7答案要素は完成教材だけで `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件。最終QAは未実施で、次工程はTopic 16の最終QA。
+`in_progress`。制作前 `EXAM_ALIGNMENT` と制作前独立検証、解説本文、3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答、main source同期、初回最終QAまで完了。初回最終QAは進捗記録整合のみFAILで `NEEDS_REVISION / IN_PROGRESS` となり、指摘された7箇所の進捗記録同期を完了した。固定5出題回・7答案要素は完成教材だけで `7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、教材外知識補完0件。次工程はTopic 16の最終QA再実施。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 16から範囲を追加しない。
@@ -506,7 +506,9 @@ JとWhの換算は
 - 件数合わせの仕様追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 - main sourceへの完成後独立再解答結果同期: `完了`
-- 最終QA: `未実施`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・PDF/PPTX QA・SPEC境界はPASS、進捗記録整合のみFAIL）
+- 初回最終QAで指摘された進捗記録7箇所同期: `完了`
+- 最終QA再実施: `未実施`
 
 ## 次工程
-Topic 16の最終QAを実施する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。
+Topic 16の最終QAを再実施する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。
