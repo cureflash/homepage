@@ -5,15 +5,15 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `23 / 39`
-- current_status: `topic_23_completed`
-- last_completed_topic: `23 N700S SiC主変換装置`
-- active_topic: `24 N700S 主電動機設計の比較`
-- next_start: Topic 24の制作前EXAM_ALIGNMENTを実施し、二種一次・二次を含む固定過去問・答案要素を確定する
+- exam_aligned_completed_topics: `22 / 39`
+- current_status: `topic_23_final_qa_blocked_powerpoint_artifact_identity`
+- last_completed_topic: `22 E5系 再粘着制御`
+- active_topic: `23 N700S SiC主変換装置`
+- next_start: 現行Topic 23 PowerPoint本体に対してbyte size・SHA-256・PPTX open/ZIP・LibreOffice変換・pdftoppm表示QAを再実施し、PowerPoint QAの成果物識別情報をreconcileする
 
 ## 完了済み
 
-Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
+Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## Topic 23 固定品質ゲート
 
@@ -60,44 +60,27 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
   - clean blind補強2点 `2 / 2 PASS`
   - 一次8問＋二次4問 `12 / 12`
   - 固定5問・23答案要素 `23 / 23 covered`
-- PowerPoint: `PASS / POWERPOINT_RESYNC_COMPLETE`
+- PowerPoint QA記録:
+  - `PASS / POWERPOINT_RESYNC_COMPLETE`
   - 16:9 `6 slides`
-  - SHA-256 `dc5babab362325cb00ca462660cd7f9b6c1cd1f6ef6f1e36c62ffe55395ae70c`
+  - 記録ファイルサイズ `12,944 bytes`
+  - 記録SHA-256 `dc5babab362325cb00ca462660cd7f9b6c1cd1f6ef6f1e36c62ffe55395ae70c`
   - R2読図補強2点 `2 / 2 PASS`
   - 固定5問・23答案要素 `23 / 23 covered`
   - SPEC固定8項目 `8 / 8 covered`
   - SPEC指定3可視化 `3 / 3 PASS`
   - LibreOffice / pdftoppm表示QA `6 / 6 PASS`
-  - geometry overflow `0`
-  - 新たなexact blocker `0件`
 
-## Topic 23 修正後clean blind候補固定
-
-判定: `PASS / CANDIDATES_LOCKED`
-
-- 候補ファイル: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_remediated_clean.md`
-- 候補固定commit: `5d28e38e9151edc9d2ca3e309783aea2e6b9272f`
-- 候補固定QA: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_remediated_lock_qa.md`
-- R7一次 問4: `5 / 5 candidate fixed`
-- R4一次 問4: `5 / 5 candidate fixed`
-- R2一次 問2: `5 / 5 candidate fixed`
-- H24一次 問6 `(2),(3)`: `2 / 2 candidate fixed`
-- H24二次 問1: `6 / 6 candidate fixed`
-- 一次合計: `17 / 17 candidate fixed`
-- 二次合計: `6 / 6 candidate fixed`
-- 総合: `23 / 23 candidate fixed`
-- 既存初回候補・既存公式照合ファイルの後編集: `0件`
-
-## Topic 23 修正後clean blind公式照合
+## Topic 23 修正後clean blind
 
 判定: `PASS / 23_OF_23`
 
-- 公式照合記録: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_remediated_official_check.md`
-- R7一次 問4: `5 / 5 PASS`
-- R4一次 問4: `5 / 5 PASS`
-- R2一次 問2: `5 / 5 PASS`
-- H24一次 問6 `(2),(3)`: `2 / 2 PASS`
-- H24二次 問1: `6 / 6 PASS`
+- 候補固定commit: `5d28e38e9151edc9d2ca3e309783aea2e6b9272f`
+- R7一次: `5 / 5 PASS`
+- R4一次: `5 / 5 PASS`
+- R2一次: `5 / 5 PASS`
+- H24一次: `2 / 2 PASS`
+- H24二次: `6 / 6 PASS`
 - 一次合計: `17 / 17 PASS`
 - 二次合計: `6 / 6 PASS`
 - 総合: `23 / 23 PASS`
@@ -105,20 +88,27 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 一般式変更: `0件`
 - SPEC外追加: `0件`
-- 新たなexact blocker: `0件`
 
 ## Topic 23 最終QA
 
-判定: `PASS / COMPLETED`
+判定: `BLOCKED / POWERPOINT_ARTIFACT_IDENTITY_MISMATCH`
 
 - 最終QA: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_final_qa.md`
+- 現行GitHub PPTX blob: `ff2c73d872da4fc3605fb30e5f67c9dc97517f5c`
+- 現行GitHub PPTX size: `12,326 bytes`
+- PowerPoint QA記録size: `12,944 bytes`
+- PowerPoint本体とQAの最新更新commit: `3d8608c3af48e9ea81e1534927fb8cdb09e065a5`
 - 固定5問・23答案要素: `23 / 23 PASS`
-- 解説PDF / 練習PDF / PowerPoint: `PASS / synced`
+- 解説PDF / 練習PDF: `PASS / synced`
+- PowerPoint artifact identity: `BLOCKED`
 - SPEC固定8項目: `8 / 8 PASS`
 - SPEC指定3可視化: `3 / 3 PASS`
 - 仮定値／実車値境界: `PASS`
-- 仕様外追加: `0件`
-- Topic 23: `completed`
+- 新規exact blocker: `1件`
+
+exact blocker:
+
+`Current GitHub PPTX is 12,326 bytes, while the authoritative PowerPoint QA records 12,944 bytes. Recompute the current PPTX byte size and SHA-256, rerun PPTX open/ZIP/render/display QA against that exact artifact, and reconcile the QA record before completion.`
 
 ## Topic 21 H26二次 問1(4)
 
@@ -126,4 +116,4 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
 ## 次工程
 
-次の未完了テーマは Topic 24「N700S 主電動機設計の比較」。系列SPECの固定8項目・指定3可視化を前提に、まず制作前EXAM_ALIGNMENTで第二種一次・二次の公式過去問を固定する。教材本文・PDF・PowerPointはその後に進める。
+Topic 23はまだ `completed` にしない。現行 `23_n700s_sic_main_converter_images.pptx` そのものへ識別情報・表示QAを再実施し、PowerPoint QAをreconcileする。技術本文・固定EXAM_ALIGNMENT・問題・数式・SPECは変更しない。Topic 24へは進めない。
