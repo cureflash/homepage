@@ -6,8 +6,8 @@
 - Topic 01〜18: 最終QA `PASS / completed`
 - 完成数: `18 / 22`
 - active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_independent_reanswer_checked / NEEDS_REVISION`
-- 次工程: H25 一次 機械 問6 (2) の解答群記号転記ミスを修正し、独立再解答記録QAを再実施
+- current status: `topic_19_independent_reanswer_record_qa_pass / IN_PROGRESS`
+- 次工程: Topic 19 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -55,35 +55,28 @@
 - Topic 20/21先取り、未確認実車PID値: `各0件`
 
 ## 今回完了した段階
-Topic 19の完成後独立再解答を実施した。
+H25 一次 機械 問6 (2) の解答群記号転記ミスを訂正し、独立再解答記録QAを再実施した。
 
-手順:
-1. 完成教材だけで固定5問・12答案要素を解答
-2. 公式正答・標準解答を確認する前に答案をGitHubへ固定
-   - commit: `f6c4c162d94c1c38176be61dc958f069abddea99`
-3. 固定後に電気技術者試験センター公式正答・標準解答と照合
-
-結果:
-- R07 二次 問4 (1),(2),(3): `3 / 3 PASS`
-- H30 二次 問4 (1): `2 / 2 PASS`
-- H23 二次 問4 (4): `4 / 4 PASS`
-- R02 二次 問4 (1),(2): `2 / 2 PASS`
-- H25 一次 問6 (2): `FAIL`
-  - 導出した `Ti=K1/K2` 自体は公式と一致
-  - 固定答案で解答群記号を「ヲ」と誤転記
-  - 公式正答の選択肢記号は「ワ」
+確認:
+1. 公式照合前ロック commit `f6c4c162d94c1c38176be61dc958f069abddea99` に `Ti=K1/K2` の導出が存在する — `PASS`
+2. 公式問題PDFで `K1/K2` の解答群記号が「ワ」である — `PASS`
+3. 公式標準解答で H25 一次 機械 問6 (2) が「ワ」である — `PASS`
+4. 訂正は解答群記号「ヲ」→「ワ」だけで、数式・導出・教材・固定EXAM_ALIGNMENT変更なし — `PASS`
+5. 残り11答案要素の公式一致は変更なし — `PASS`
+6. 教材外補完、Topic 20/21先取りなし — `PASS`
 
 集計:
-- 公式一致: `11 / 12 PASS`
+- ロック時点の公式一致: `11 / 12`（解答群記号誤転記1件）
+- 訂正後の公式整合: `12 / 12 PASS`
+- 独立再解答記録QA: `6 / 6 PASS`
 - 教材外補完: `0件`
-- 教材の式・解法不足によるFAIL: `0件`
-- FAIL原因: 解答群記号転記ミス1件
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 教材の式・解法不足: `0件`
+- 判定: `PASS / topic_19_independent_reanswer_record_qa_pass`
 
 ## GitHub反映
 - 独立再解答答案ロック: `f6c4c162d94c1c38176be61dc958f069abddea99`
-- 公式照合結果: `topics/19_pid_speed_control/19_pid_speed_control_independent_reanswer.md`
-- STATUS/HANDOFF: `topic_19_independent_reanswer_checked / NEEDS_REVISION` へ同期
+- 訂正・記録QA: `topics/19_pid_speed_control/19_pid_speed_control_independent_reanswer.md`
+- STATUS/HANDOFF: `topic_19_independent_reanswer_record_qa_pass / IN_PROGRESS` へ同期
 
 ## 次に行うこと
-H25 一次 機械 問6 (2) の解答群記号転記ミスを修正し、独立再解答記録QAを再実施する。
+Topic 19 の最終QAを実施する。
