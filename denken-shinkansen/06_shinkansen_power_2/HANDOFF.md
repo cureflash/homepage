@@ -3,24 +3,30 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
-current_status: `topic_15_completion_blind_complete`
+current_status: `topic_15_web_catalog_complete`
 
 ## 今回完了
 
-最新main、MASTER SPEC、EXAM_ALIGNMENT SPEC、本系列SPEC、STATUS/HANDOFF、直近の同系列worker成果をreconcileした。
-
-直近同系列ではTopic 15 PowerPoint QA完了後、現行PPTX artifactが修復され、QA記録も現行SHA-256 `6f64016cb118012d02ab080a6292a31dda279d9c856ddad4ba75eea557b37116` へ同期済みだった。PowerPoint工程は重複せず、次の安全な工程である完成後blind独立再解答を実施した。
-
-追加:
-- `topics/15_regenerative_power/15_regenerative_power_completion_blind_20260919.md`
+最新main、MASTER SPEC、EXAM_ALIGNMENT SPEC、本系列SPEC、STATUS/HANDOFF、Topic 15現行成果物をreconcileし、次の安全な工程であるWebカタログ登録を実施した。
 
 更新:
+- `qualifications/denken-shinkansen/catalog.json`
 - `STATUS.md`
 - `HANDOFF.md`
 
+登録内容:
+- id: `15_regenerative_power`
+- seriesId: `06_shinkansen_power_2`
+- topicNo: `15`
+- title: `回生した電力が大量に戻ったら？`
+- explanation: `../../denken-shinkansen/06_shinkansen_power_2/topics/15_regenerative_power/15_regenerative_power_explanation.pdf`
+- practice: `../../denken-shinkansen/06_shinkansen_power_2/topics/15_regenerative_power/15_regenerative_power_practice.pdf`
+- slides: `../../denken-shinkansen/06_shinkansen_power_2/topics/15_regenerative_power/15_regenerative_power_images.pptx`
+- source: `../../denken-shinkansen/06_shinkansen_power_2/topics/15_regenerative_power/15_regenerative_power.md`
+
 固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界は変更していない。
 
-## 完成後blind結果
+## 品質ゲート維持
 
 - R2一次「電力」問6: `5 / 5 PASS`
 - H28一次「電力」問5: `5 / 5 PASS`
@@ -30,22 +36,19 @@ current_status: `topic_15_completion_blind_complete`
 - 一次: `15 / 15 PASS`
 - 二次: `9 / 9 PASS`
 - 合計: `5 / 5問・24 / 24答案要素 PASS`
-- 判定: `PASS / topic_15_completion_blind_complete`
-
-完成済みlearner-facing成果物に必要公式・用語・計算手順・論説要素が存在し、公式解答・標準解答との不一致は0件。新規正式過去問、周辺問題による件数水増し、仕様追加は行っていない。
+- 解説PDF QA: `PASS`
+- 練習PDF QA: `PASS`
+- PowerPoint QA: `PASS`
+- 完成後blind: `24 / 24 PASS`
+- Webカタログ登録: `PASS`
 
 ## reconcile結果
 
 - Topic 01〜14: `completed`
-- Topic 15: `IN_PROGRESS / 解説PDF PASS / 練習PDF PASS / PowerPoint PASS / 完成後blind PASS`
+- Topic 15: `IN_PROGRESS / Webカタログ登録済み / 完成後blind PASS`
 - 完成数: `14 / 22`
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問
 - 固定答案要素: 一次15＋二次9、計24
-- 制作前blind: `24 / 24 PASS`
-- 完成後blind: `24 / 24 PASS`
-- 解説PDF QA: `PASS`
-- 練習PDF QA: `PASS`
-- PowerPoint QA: `PASS`
 - Topic 14固定問題の重複採用: `0件`
 - 新規正式過去問追加: `0件`
 - 後続Topic先取り: `0件`
@@ -54,11 +57,10 @@ current_status: `topic_15_completion_blind_complete`
 
 ## 次に行う
 
-Topic 15をWebカタログへ登録する。
+Topic 15の最終QAを行う。
 
 まだ行わない:
-- 最終QA
-- Topic 15 `completed` 化
+- Topic 15 `completed` 化（最終QA PASS前）
 - Topic 16着手
 
 ## 品質境界
