@@ -17,30 +17,123 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Assemble exact Topic 16 PowerPoint
+      - name: Regenerate Topic 16 PowerPoint
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
           git reset --hard origin/main
+          python -m pip install -q python-pptx
           target='denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx'
-          cat .github/tmp/topic16-pptx.part* | base64 -d > "$target"
-          test "$(wc -c < "$target")" = "16924"
-          test "$(sha256sum "$target" | awk '{print $1}')" = "37ff64541fca3a374ca192d8cc1a4f3a22d3d118fa1b2f8d27185afc47a43af2"
           python - <<'PY'
-          import zipfile
+          from pptx import Presentation
+          from pptx.util import Inches, Pt
+          from pptx.enum.text import PP_ALIGN
+          from pptx.enum.shapes import MSO_SHAPE
+          from pptx.dml.color import RGBColor
+          from pathlib import Path
+
+          target=Path('denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx')
+          prs=Presentation()
+          prs.slide_width=Inches(13.333333)
+          prs.slide_height=Inches(7.5)
+          blank=prs.slide_layouts[6]
+          navy=RGBColor(31,58,92)
+          blue=RGBColor(91,155,213)
+          gray=RGBColor(242,244,247)
+
+          slides=[
+            ('短絡故障の全体像',[
+              '故障点までの等価インピーダンスが小さいほど短絡電流は大きい。三相短絡を基準に故障電流を追う。',
+              '大電流の影響は電磁力・熱だけでなく、近接回路への電磁誘導障害も区別する。',
+              '抑制策はインピーダンス付加、系統分割、電圧階級上昇。BTBの直流リンクは交流短絡電流の直接経路にならない。',
+              'R2一次 問3 5/5、H25一次 問4 5/5に接続。']),
+            ('p.u.・％Z・短絡容量',[
+              '基準容量S_Bと基準線間電圧V_Bから I_B=S_B/(√3 V_B)、Z_B=V_B²/S_B。',
+              'p.u.値と％Zは同じ基準へ換算して合成する。％Z_new=％Z_old×(S_B,new/S_B,old)×(V_B,old/V_B,new)²。',
+              'S_sc=√3 V_LL I_sc。ここでV_LLは故障前・基準の線間電圧で、ボルト短絡後の故障点電圧0 Vではない。',
+              '遮断容量は遮断器が遮断できる容量、短絡容量は系統が故障点へ供給し得る容量。選定では遮断容量が想定短絡容量を下回らない。',
+              'R3二次 問3 6/6のうちp.u.計算・短絡容量・実電流復元に接続。']),
+            ('対称分と故障種別',[
+              '正相・逆相・零相の三つの対称分に分解し、故障種別ごとの接続条件で回路を組む。',
+              '三相短絡：正相のみ。 一線地絡：正相・逆相・零相を直列。',
+              '線間短絡：正相と逆相。 二線地絡：正相に対し逆相・零相が地絡条件で結合。',
+              'R7二次 問2 5/5に接続。']),
+            ('一線地絡の二次答案手順',[
+              '1. 共通基準へZ1・Z2・Z0をそろえる。 2. 一線地絡の対称分回路を接続する。',
+              '3. I1=I2=I0を求め、地絡電流は If=3I0。 4. p.u.値を基準電流で[A]へ戻す。',
+              '零相インピーダンスは接地方式・変圧器結線の影響を受けるため、正相値の流用をしない。',
+              'R7二次 問2の計算手順を答案として再現できる形にする。']),
+            ('系統構成・故障位置と短絡電流',[
+              '電源・変圧器・線路のインピーダンスは直列なら加算、並列供給なら等価インピーダンスが低下し短絡電流が増える。',
+              'H21二次 問6 clean blind：CB3開放 6.08 kA、CB3投入 10.3 kA。',
+              '一般に電源から故障点までの距離・直列インピーダンスが増えるほど故障電流は低下する。']),
+            ('過去問接続とTopic 16境界',[
+              '固定5問・23答案要素：R2一次5/5、H25一次5/5、R7二次5/5、R3二次6/6、H21二次2/2＝23/23。',
+              '逆算：許容短絡電流から必要な等価インピーダンス・％Zを戻し、基準量と単位を最後に確認する。',
+              '完成後blind補正5項目：電磁誘導障害／遮断容量／BTB／電圧階級上昇＋系統分割／S_sc式のV_LLの意味。',
+              'Topic 16は短絡計算・短絡容量・％Z・p.u.・対称分・3φ/1LG/LL/2LGまで。保護リレー・遮断協調はTopic 17で扱う。'])
+          ]
+
+          def add_text(slide,left,top,width,height,text,size=22,bold=False,color=RGBColor(25,25,25),align=PP_ALIGN.LEFT):
+              box=slide.shapes.add_textbox(Inches(left),Inches(top),Inches(width),Inches(height))
+              tf=box.text_frame; tf.clear(); tf.word_wrap=True
+              p=tf.paragraphs[0]; p.text=text; p.alignment=align
+              r=p.runs[0]; r.font.name='Noto Sans CJK JP'; r.font.size=Pt(size); r.font.bold=bold; r.font.color.rgb=color
+              return box
+
+          for idx,(title,bullets) in enumerate(slides,1):
+              s=prs.slides.add_slide(blank)
+              band=s.shapes.add_shape(MSO_SHAPE.RECTANGLE,0,0,prs.slide_width,Inches(0.72))
+              band.fill.solid(); band.fill.fore_color.rgb=navy; band.line.fill.background()
+              add_text(s,0.55,0.12,11.9,0.45,title,26,True,RGBColor(255,255,255))
+              add_text(s,12.15,0.16,0.55,0.35,str(idx),15,True,RGBColor(255,255,255),PP_ALIGN.RIGHT)
+              y=1.05
+              for b in bullets:
+                  card=s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE,Inches(0.65),Inches(y),Inches(12.0),Inches(0.95 if len(b)<95 else 1.15))
+                  card.fill.solid(); card.fill.fore_color.rgb=gray; card.line.color.rgb=RGBColor(218,224,231)
+                  add_text(s,0.92,y+0.14,11.45,0.72 if len(b)<95 else 0.92,'• '+b,18 if len(b)<120 else 16)
+                  y += 1.08 if len(b)<95 else 1.28
+              if idx==5:
+                  add_text(s,1.1,5.2,2.0,0.4,'電源側',16,True,navy)
+                  add_text(s,10.1,5.2,2.0,0.4,'遠方故障',16,True,navy,PP_ALIGN.RIGHT)
+                  line=s.shapes.add_shape(MSO_SHAPE.RIGHT_ARROW,Inches(2.4),Inches(5.23),Inches(7.8),Inches(0.42))
+                  line.fill.solid(); line.fill.fore_color.rgb=blue; line.line.fill.background()
+                  add_text(s,3.4,5.75,5.9,0.5,'距離・直列Z ↑  →  故障電流 ↓',20,True,navy,PP_ALIGN.CENTER)
+          prs.save(target)
+          PY
+          python - <<'PY'
+          import hashlib, zipfile
+          from pptx import Presentation
           p='denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx'
           with zipfile.ZipFile(p) as z:
-              bad=z.testzip()
-              assert bad is None, bad
-          print('zip-pass')
+              assert z.testzip() is None
+          prs=Presentation(p)
+          assert len(prs.slides)==6
+          text='\n'.join(sh.text for sl in prs.slides for sh in sl.shapes if hasattr(sh,'text_frame'))
+          for term in ['電磁誘導障害','遮断容量','BTB','電圧階級上昇','故障前','6.08 kA','10.3 kA','23/23']:
+              assert term in text, term
+          print('pptx-qa=PASS slides=6')
+          print('bytes=',__import__('os').path.getsize(p))
+          print('sha256=',hashlib.sha256(open(p,'rb').read()).hexdigest())
           PY
+          if ! command -v libreoffice >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends libreoffice-impress poppler-utils >/dev/null
+          fi
+          mkdir -p /tmp/topic16-pdf
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic16-pdf "$target" >/tmp/topic16-lo.txt 2>&1
+          test "$(pdfinfo /tmp/topic16-pdf/16_short_circuit_images.pdf | awk '/^Pages:/ {print $2}')" = "6"
+          pdftotext /tmp/topic16-pdf/16_short_circuit_images.pdf /tmp/topic16.txt
+          grep -q '23/23' /tmp/topic16.txt
+          grep -q '6.08 kA' /tmp/topic16.txt
+          echo 'libreoffice-pdf-qa=PASS pages=6'
           git config user.name 'denken-power2-bot'
           git config user.email '89366952+cureflash@users.noreply.github.com'
           git add "$target"
-          git rm .github/tmp/topic16-pptx.part*
+          git rm -f .github/tmp/topic16-pptx.part* || true
           git rm .github/workflows/_tmp_topic16_pptx_repair.yml
-          git commit -m 'Regenerate power2 Topic 16 PowerPoint exact artifact'
+          git commit -m 'Regenerate power2 Topic 16 PowerPoint artifact'
           for attempt in 1 2 3 4 5; do
             if git push origin HEAD:main; then exit 0; fi
             git pull --rebase origin main
