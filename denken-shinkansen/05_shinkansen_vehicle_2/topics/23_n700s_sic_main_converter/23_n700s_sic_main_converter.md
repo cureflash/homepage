@@ -8,9 +8,9 @@
 
 Topic 17「パワー半導体の損失比較」で既に公式問題・SPEC境界・clean blindまで検証済みの損失／熱設計問題を再利用し、同じ過去問の再調査・再解答を重複実施しない。Topic 23ではSiCとN700Sへの接続、小型軽量化までを追加の教材責務として扱う。
 
-固定5問・23答案要素を変更せず、解説source、解説PDF、練習sourceまで作成した。練習sourceは一次8問＋二次4問、固定23答案要素 `23/23` 接続、数値・論理再計算 `12/12 PASS`、一次正答一意性 `8/8 PASS`。実車値境界も維持している。
+解説PDF・練習PDF・PowerPointまで作成済みだが、完成後clean blind初回は固定23答案要素中 `21/23 PASS`。R2一次「機械」問2 `(2),(4)` の2点だけ説明不足が露呈したため、固定EXAM_ALIGNMENT・一般式・SPECを変更せず、解説sourceと練習sourceへ読図手順を最小補強した。既存候補ファイルは後編集していない。
 
-current_status: `topic_23_practice_source_complete`
+current_status: `topic_23_source_blind_remediation_complete`
 
 現行成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
@@ -18,8 +18,14 @@ current_status: `topic_23_practice_source_complete`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice.pdf`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_pdf_qa.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_images.pptx`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_powerpoint_qa.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_clean.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_official_check.md`
 
-次工程: Topic 23練習PDF生成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。
+次工程: sourceで補強した2点について、既存の解説PDF・練習PDF・PowerPointへの同期要否をQAし、必要な成果物だけ更新する。その後、修正後clean blindを別記録で実施する。
 
 ## 固定範囲
 
@@ -75,7 +81,7 @@ Topic 17で第二種公式過去問を直近年度側から監査済みで、R8�
 |---|---:|---:|---|---|---|
 | R7 一次 機械 問4 | `(1)〜(5)` | 5 | 橋渡し | 電圧形インバータ、IGBT/MOSFET、逆並列ダイオード、PWM、スイッチング周波数 | 素子電流経路とスイッチング頻度を損失式の前提として整理する |
 | R4 一次 機械 問4 | `(1)〜(5)` | 5 | 直接 | オン損失、漏れ電流、スイッチング損失、繰返し周期、ソフトスイッチング | 導通損失とスイッチング損失を区別し、周波数との関係を説明する |
-| R2 一次 機械 問2 | `(1)〜(5)` | 5 | 直接 | 降圧チョッパ、ターンオン／オフ波形、`∫vi dt`、周期と損失 | 1回当たりスイッチングエネルギーから平均スイッチング損失へ変換する |
+| R2 一次 機械 問2 | `(1)〜(5)` | 5 | 直接 | 降圧チョッパ、ターンオン／オフ波形、`∫vi dt`、周期と損失 | 図の極性・状態から平均電圧を求め、実波形から1回当たりスイッチングエネルギーを積分して平均損失へ変換する |
 | H24 一次 機械 問6 | `(2),(3)` | 2 | 直接 | 放熱設計、半導体接合部温度 | 損失→発熱→接合温度→冷却の一般原理を説明する |
 | H24 二次 機械・制御 問1 | `(1)〜(6)` | 6 | 橋渡し | 可逆チョッパ、IGBT/ダイオード電圧降下、電機子電流、通流率、途中式 | 導通時の電圧降下・電流・通流率から平均導通損失へ接続できるようにする |
 
@@ -148,6 +154,8 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 6. SiC系とSi系を比較するときは電圧・電流・通流率・周波数等の条件をそろえる。
 7. SPEC指定3可視化は同一の比較モデルから再生成できるよう計算条件をsourceへ固定する。
 8. N700Sでは確認済み資料の範囲でSiC採用→発熱・冷却・小型軽量化へ接続するが、未確認の実デバイス値を置かない。
+9. チョッパの素子電圧は問題図の矢印極性とスイッチ状態を先に確定してから時間平均する。
+10. スイッチングエネルギーは係数を暗記せず、問題で与えられた `p(t)=v(t)i(t)` の実波形を積分する。
 
 ## 制作品質ゲート
 
@@ -159,7 +167,10 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 - Topic 23固有のSiC/N700S直接公式過去問を捏造: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
-- 解説source: `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 3段階例題 `3 / 3`
-- 解説PDF: A4縦 `5 pages`, PDFium / Poppler `5 / 5 PASS`, 固定23答案要素・SPEC8項目・3可視化 `PASS`
-- 練習source: 一次8問＋二次4問、固定23答案要素 `23 / 23 connected`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 数値・論理 `12 / 12 PASS`, 一次正答一意性 `8 / 8 PASS`
-- 状態: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 解説source: `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 3段階例題 `3 / 3`, blind補強 `2 / 2`
+- 解説PDF: A4縦 `5 pages`, PDFium / Poppler `5 / 5 PASS`（source補強後の同期要否QA待ち）
+- 練習source: 一次8問＋二次4問、固定23答案要素 `23 / 23 connected`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 数値・論理 `12 / 12 PASS`, 一次正答一意性 `8 / 8 PASS`, 固定R2読図補強 `2 / 2 PASS`
+- 練習PDF / PowerPoint: 既存表示QAはPASS、source補強後の同期要否QA待ち
+- 初回clean blind: `21 / 23 PASS / NEEDS_REVISION`
+- 初回候補の後編集: `0件`
+- 状態: `PASS / SOURCE_REMEDIATION_COMPLETE`
