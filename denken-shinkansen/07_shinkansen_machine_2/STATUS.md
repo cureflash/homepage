@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_20_final_qa_pass / completed`
+- current_status: `topic_21_exam_alignment_complete / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 制作前EXAM_ALIGNMENT
+- next_start: Topic 21 解説source本文
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -130,8 +130,51 @@
 - 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの追加修正: `0件`
 - 判定: `PASS / topic_20_final_qa_pass / completed`
 
+## Topic 21 固定範囲
+系列 `SPEC.md` の次だけを扱う。
+
+- 車輪速度検出、加速度推定
+- 空転・滑走、粘着
+- フィードバック、トルク抑制、再粘着
+- 非線形性、飽和、応答速度
+- センサ、アクチュエータ
+
+境界:
+- Topic 17〜20は必要な前提だけ再使用する
+- Topic 22の総合走行シミュレーションを先取りしない
+- 実車のセンサ方式、検知しきい値、制御周期、トルク抑制量・回復量、判定ロジック等は公開一次資料未確認のまま実車仕様化しない
+- 教材用値・制御則は教材用モデルと明記する
+- 実車アルゴリズムは公開資料で確認できる範囲のみ使用する
+
+## Topic 21 固定EXAM_ALIGNMENT
+一次4問＋二次1問、計5問・14答案要素。
+
+- R08 一次 機械 問8 (1)〜(5) — 5答案要素
+- R06 一次 機械 問8 (5) — 1答案要素
+- R04 一次 機械 問7 (3) — 1答案要素
+- H27 一次 機械 問8 (3),(5) — 4答案要素（各小問で物理量＋センサ例）
+- R07 二次 機械・制御 問4 (4),(5) — 3答案要素（閉ループ伝達関数＋インパルス応答＋指定時刻出力）
+
+制作前品質ゲート:
+- 公式過去問5問: `PASS`
+- 一次・二次を含む: `PASS`
+- 2026年度最新一次問題を含む: `PASS`
+- 2026-09-20時点の最新公表二次問題を含む: `PASS`
+- 二次記述式を含む: `PASS`
+- 固定14答案要素を教材節へ割当: `PASS`
+- 参考教材2系統（e-sysnet＋電験王）: `PASS`
+- 制作前sourceへの固定過去問個別正答保存: `0件 / PASS`
+- 未確認実車再粘着アルゴリズムの仕様化: `0件 / PASS`
+- Topic 22先取り: `0件 / PASS`
+- SPEC外A-D変換器方式等の追加: `0件 / PASS`
+- 独立再解答: `NOT_RUN`（完成教材後）
+- 判定: `PASS / topic_21_exam_alignment_complete`
+
+## Topic 21 成果物
+- `topics/21_readhesion_control/21_readhesion_control.md` — 制作前EXAM_ALIGNMENT完了
+
 ## 今回進めた内容
-Topic 20最終QAを再実施し、全品質ゲートのPASSと正本整合を確認して `completed` とした。完成数を `20 / 22` へ更新した。
+Topic 21の制作前EXAM_ALIGNMENTを完了した。最新のR08一次を含む一次4問＋最新公表R07二次1問、計5問・14答案要素を固定し、実車固有の再粘着アルゴリズムや未確認値を追加しない境界を明示した。
 
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の制作前EXAM_ALIGNMENT。
+Topic 21「空転した車輪を再粘着させる」の解説source本文。
