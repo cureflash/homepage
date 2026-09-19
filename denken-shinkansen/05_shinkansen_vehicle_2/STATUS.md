@@ -5,15 +5,15 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_23_remediated_blind_official_check_pass`
-- last_completed_topic: `22 E5系 再粘着制御`
-- active_topic: `23 N700S SiC主変換装置`
-- next_start: Topic 23の最終QAを実施し、固定過去問5問・23答案要素、成果物同期、SPEC固定8項目・指定3可視化、仮定値／実車値境界、進捗記録整合を再確認する
+- exam_aligned_completed_topics: `23 / 39`
+- current_status: `topic_23_completed`
+- last_completed_topic: `23 N700S SiC主変換装置`
+- active_topic: `24 N700S 主電動機設計の比較`
+- next_start: Topic 24の制作前EXAM_ALIGNMENTを実施し、二種一次・二次を含む固定過去問・答案要素を確定する
 
 ## 完了済み
 
-Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
+Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
 ## Topic 23 固定品質ゲート
 
@@ -107,10 +107,23 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - SPEC外追加: `0件`
 - 新たなexact blocker: `0件`
 
+## Topic 23 最終QA
+
+判定: `PASS / COMPLETED`
+
+- 最終QA: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_final_qa.md`
+- 固定5問・23答案要素: `23 / 23 PASS`
+- 解説PDF / 練習PDF / PowerPoint: `PASS / synced`
+- SPEC固定8項目: `8 / 8 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 仮定値／実車値境界: `PASS`
+- 仕様外追加: `0件`
+- Topic 23: `completed`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。Topic 21は `PASS / completed` のまま。
 
 ## 次工程
 
-Topic 23はまだ `completed` にしない。修正後clean blindは固定23答案要素 `23 / 23 PASS`。次は最終QAで成果物・品質ゲート・進捗記録の整合を再確認し、全項目PASSの場合のみTopic 23を `completed` にする。
+次の未完了テーマは Topic 24「N700S 主電動機設計の比較」。系列SPECの固定8項目・指定3可視化を前提に、まず制作前EXAM_ALIGNMENTで第二種一次・二次の公式過去問を固定する。教材本文・PDF・PowerPointはその後に進める。
