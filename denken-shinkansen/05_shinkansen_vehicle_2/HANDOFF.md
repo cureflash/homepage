@@ -14,7 +14,9 @@ Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
 最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT・解説source/PDF・練習source/PDF、直近の同系列worker成果をreconcileした。本run開始後に別workerが `0645396fb165697295edcb1e61fb5efbf204359d` でTopic 26練習PDF＋QAをmainへ反映したため、その成果を正本として採用し、自分の練習PDF作業は破棄して重複を避けた。
 
-その後、次の安全な工程であるTopic 26 PowerPoint生成＋QAを実施した。固定済みの第二種一次4問・10答案要素＋二次1問・6答案要素、合計5問・16答案要素は変更していない。SPEC必須7項目・指定3可視化を16:9スライド6枚へ反映し、構造・表示・内容・数値を再確認した。
+その後、次の安全な工程であるTopic 26 PowerPoint生成＋QAを実施した。初回connector経由binary uploadはGitHub正本上で `7,514 bytes` にtruncateされ、ローカルQA対象とのartifact identityが成立しないことを検出したため無効化。原因をbinary転送経路に限定し、PowerPoint自体をGitHub Actions内で再生成してcanonical artifactそのものをZIP・python-pptx・geometry・LibreOffice・pdftotextで再QAした。現在の正本blobは `999988097102c9674967abc8152c04ebf7904819`。
+
+固定済みの第二種一次4問・10答案要素＋二次1問・6答案要素、合計5問・16答案要素は変更していない。SPEC必須7項目・指定3可視化を16:9スライド6枚へ反映し、数値も再確認した。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -105,20 +107,19 @@ Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
 成果物:
 - `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images.pptx`
-- canonical blob SHA: `4cec8a6ee9eef4272b5783762a4f0c1f8311e19d`
+- canonical blob SHA: `999988097102c9674967abc8152c04ebf7904819`
 - `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_images_qa.md`
 
 判定:
 - `PASS / POWERPOINT_COMPLETE`
 - 16:9: `6 slides`
-- file size: `55,817 bytes`
-- SHA-256: `91ee793f3472b4f1a26fd40360a7dd85a578c1f0fc64d9717ce43023f5cd2cb7`
-- PPTX ZIP / python-pptx: `PASS`
-- slide geometry bounds: `6 / 6 PASS`
-- LibreOffice / Poppler: `6 / 6 PASS`
-- `pdftotext -layout`: `PASS`（8,941 bytes）
+- file size: `225,537 bytes`
+- SHA-256: `67dadfdd3ef0a0a5f8b07018c9ee87a31ecd86571e1d16f74ca6b6f90e6ae4e9`
+- GitHub Actions canonical rebuild/validation: `PASS`
+- PPTX ZIP / python-pptx / geometry: `PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`（8,858 bytes）
 - 置換文字: `0件`
-- contact-sheet視認: `6 / 6 PASS`
 - 固定5問: `5 / 5 connected`
 - 一次答案要素: `10 / 10 connected`
 - 二次答案要素: `6 / 6 connected`
@@ -126,6 +127,7 @@ Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 - SPEC必須7項目: `7 / 7 PASS`
 - 指定3可視化: `3 / 3 PASS`
 - 数値再確認: `PASS`
+- 初回binary upload truncate: `検出・無効化・再生成済み`
 - exact blocker: `0件`
 
 ## 固定境界
