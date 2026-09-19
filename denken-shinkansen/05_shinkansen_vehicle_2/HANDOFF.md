@@ -14,7 +14,7 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 latest main、最新 `STATUS.md` / `HANDOFF.md`、Topic 22全成果物、直近車両二種workerのclean blind候補固定・公式照合を再確認した。
 
-Topic 22では先行 `10 / 11` 診断が残っていたが、これはTopic 22が前提参照を許可するTopic 20フィードバック制御教材を参照範囲から外したworkerの診断だった。有効候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定され、許可されたTopic 20既習内容を用いてH21二次 問4 `(5a)` を正しく導出。その後の公式照合で固定5問・11答案要素が全件一致したため、こちらを品質ゲート正本とする。
+Topic 22では先行 `10 / 11` 診断が残っていたが、これはTopic 22が前提参照を許可するTopic 20フィードバック制御教材を参照範囲から外したworkerの診断だった。有効候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定され、許可されたTopic 20既習内容を用いてH21二次 問4 `(5a)` を正しく導出。その後の公式照合で固定5問・11答案要素が全件一致したため、こちらを品質ゲート正本とする。公式照合結果は最終QAへ統合済みで、重複照合ファイルは削除済み。
 
 Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
@@ -41,9 +41,8 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、�
 最終QA正本:
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_final_qa.md`
 
-有効clean blind正本:
+有効clean blind候補固定記録:
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_comparison.md`
 
 ## Topic 22境界
 
