@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `25 / 39`
-- current_status: `topic_25_completed`
+- current_status: `topic_26_exam_alignment_complete`
 - last_completed_topic: `25 N700S バッテリー自走のエネルギー設計`
 - active_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
-- next_start: Topic 26 制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を先に固定し、既存worker成果と重複しない範囲だけ新規調査する
+- next_start: Topic 26 解説source。固定EXAM_ALIGNMENT 5問・16答案要素、SPEC必須7項目、指定3可視化だけを入力条件として作成する
 
 ## Topic 25 解説PDF
 
@@ -127,10 +127,25 @@
 
 N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用・バッテリー自走共同開発まで。未確認の電池電圧、Ah、Wh、セル数、直並列数、Cレート、実放電電流、各効率を真値化しない。速度条件―必要電力は与件の仮定入力比較に限定し、未指定走行抵抗モデルを追加しない。
 
+## Topic 26 制作前EXAM_ALIGNMENT
+
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+- path: `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis.md`
+- 固定過去問: `5問`
+- 一次: `4問・10答案要素`
+- 二次: `1問・6答案要素`
+- 合計: `16答案要素`
+- SPEC必須: `7項目`
+- SPEC指定可視化: `3件`
+- 固定問題: R7二次「機械・制御」問2、H26一次「機械」問5、H25一次「機械」問3、R5一次「機械」問2、H27一次「機械」問3
+- 列車の勾配抵抗式・走行抵抗式を直接問う第二種公式問題: 固定対象として確認できず。Topic 14で確定済みの列車側力学からSPEC必須として接続し、直接出題とは記載しない
+- 実車接続: JR東日本公式資料で北陸新幹線の30‰急勾配とE7系のブレーキ性能向上を確認。未公表の実車値は推定しない
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。次は Topic 26 `E7・W7系 勾配条件を含む総合走行解析` の制作前EXAM_ALIGNMENT。
+Topic 01〜25: `PASS / completed`。完成数 `25 / 39`。Topic 26は制作前EXAM_ALIGNMENT完了。次は解説source作成。
