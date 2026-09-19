@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `26 / 39`
-- current_status: `topic_27_explanation_source_complete`
+- current_status: `topic_27_explanation_pdf_complete`
 - last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
 - active_topic: `27 L0系① リニア同期モータ`
-- next_start: Topic 27の解説PDF生成＋PDF QA。固定5問・23答案要素、SPEC必須7項目、指定2可視化、3段階例題、L0系実車値境界を維持する
+- next_start: Topic 27の練習source作成。固定5問・23答案要素と解説PDFを入力として一次試験型＋二次記述式を作成し、数値・論理を独立再計算する。L0系未確認実車値を真値化しない
 
 ## Topic 25 最終状態
 
@@ -251,10 +251,36 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+## Topic 27 解説PDF
+
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- path: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_explanation.pdf`
+- canonical blob SHA: `10f17547d41a12d59ad76dcb33bc7a3a398f86a8`
+- QA: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_explanation_pdf_qa.md`
+- file size: `10,082 bytes`
+- SHA-256: `6e5dad1b40d7f8de0e233f11ef6ba070ee6698a4e8454f2f6553201b8072fb24`
+- A4縦: `3 pages`
+- PDFium / Poppler render: `3 / 3 PASS`
+- `pdftotext -layout`: `PASS`（7,313 bytes）
+- 置換文字 `�`: `0件`
+- 固定過去問: `5 / 5 covered`
+- 一次答案要素: `18 / 18 covered`
+- 二次答案要素: `5 / 5 covered`
+- 合計答案要素: `23 / 23 covered`
+- SPEC必須7項目: `7 / 7 covered`
+- 固定教材必要説明8項目: `8 / 8 covered`
+- SPEC指定2可視化: `2 / 2 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 未確認L0系実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27は解説source完了、次は解説PDF生成＋PDF QA。
+Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27は解説PDF完了、次は練習source作成・独立再計算。
