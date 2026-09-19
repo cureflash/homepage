@@ -8,7 +8,41 @@
 
 Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
 
-現在地は `topic_20_exam_alignment_complete`。last completed は Topic 19 `ミニ新幹線 複電圧主回路`。active topic は Topic 20 `N700系 フィードバック制御`。制作前EXAM_ALIGNMENTを完了し、一次1問＋二次4問の固定5問・19答案要素をSPEC範囲内で固定した。次は解説source。
+現在地は `topic_20_explanation_source_complete`。last completed は Topic 19 `ミニ新幹線 複電圧主回路`。active topic は Topic 20 `N700系 フィードバック制御`。制作前EXAM_ALIGNMENTの固定5問・19答案要素を変更せず、解説sourceへ全要素とSPEC指定10項目・3可視化を接続した。次は解説PDF。
+
+## Topic 20 解説source
+
+成果物:
+- 主source: `topics/20_n700_feedback_control/20_n700_feedback_control.md`
+- 解説source: `topics/20_n700_feedback_control/20_n700_feedback_control_explanation_source.md`
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+品質:
+- 固定公式過去問: `一次1問＋二次4問 / 5問 / 変更なし`
+- 固定答案要素: `一次1＋二次18 / 19`
+- 固定要求知識の本文マッピング: `19 / 19 covered`
+- SPEC指定10項目: `10 / 10 covered`
+- SPEC指定3可視化: `3 / 3 fixed`
+- 3段階例題: `3 / 3`
+- 例題数値・式の独立再計算: `3 / 3 PASS`
+- 可視化数値: `PASS / 式から再計算済み`
+- 公式解答・標準解答の個別正答参照・保存: `0件`
+- 固定問題差替え / 固定EXAM_ALIGNMENT変更 / SPEC外追加: `0件`
+- 未確認N700系実車制御値の真値化: `0件`
+
+固定した教材用一般モデル:
+- 一次遅れ `K/(Ts+1)` とステップ・インパルス応答。
+- 単位負帰還 `G/(1+G)`、偏差 `1/(1+G)`。
+- 二次遅れの極と減衰条件。
+- 三次特性方程式のRouth安定条件。
+- ステップ、ランプ、インパルス、指数入力のラプラス変換。
+- 一般教材用仮定値によるステップ応答、ゲイン変更、時定数変更の3可視化。
+
+worker reconcile:
+- Topic 19完了コミット群を確認し、再解答・最終QAを重複実施していない。
+- Topic 20制作前EXAM_ALIGNMENTの commit `7e3b45b4428b19d677ed426f99af95863c9b5a64`、STATUS更新 `052a3b091c38df55692eb8feb7ee32dd6c60da7b`、HANDOFF同期 `92fa56e607cd2f7ee32dd6c60da7b` を引き継いだ。
+- 本工程開始時のmain HEADは `d50e7e92b32e4e04d3b34e62ad66510ab7c8db89` で、Topic 20ディレクトリには制作前sourceのみ存在することを確認してから解説sourceを新規作成した。
 
 ## Topic 20 制作前EXAM_ALIGNMENT
 
@@ -316,4 +350,4 @@ source:
 
 ## 次工程
 
-Topic 20「N700系 フィードバック制御」の解説source。固定5問・19答案要素、SPEC指定10項目・3可視化を教材内へ接続する。
+Topic 20「N700系 フィードバック制御」の解説PDF。`20_n700_feedback_control_explanation_source.md` を正本としてPDF化し、固定5問・19答案要素、SPEC指定10項目・3可視化、数式・文字・レイアウトをQAする。
