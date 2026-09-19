@@ -8,15 +8,15 @@
 
 Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
-現在地は `topic_26_blind_candidates_locked`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
+現在地は `topic_26_clean_blind_official_match_complete`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT・解説source/PDF・練習source/PDF・PowerPoint、直近の同系列worker成果をreconcileした。直近workerが完成させたTopic 26 PowerPoint正本 `999988097102c9674967abc8152c04ebf7904819` とQAを採用し、重複制作はしていない。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT・解説source/PDF・練習source/PDF・PowerPoint・LOCK済みclean blind候補をreconcileした。
 
-次の安全な工程として、保存済み正答・公式解答を先に見ず、公式「問題」PDFと現行教材だけを使って固定5問・16答案要素を独立再解答した。R7二次は途中式を含む数値候補6要素、一次4問は選択肢候補10要素を固定し、`26_e7_w7_gradient_integrated_running_analysis_blind_candidates.md` へLOCKした。公式解答との照合はまだ実施していない。
+次の安全な工程として、LOCK済み候補を一切編集せず、電気技術者試験センター公式解答・標準解答と照合した。固定5問・16答案要素は一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。不一致は0件。R7二次の科学表記候補 `1.55×10^3 W`、`1.18×10^3 min^-1`、`1.12×10^4 W` は公式標準解答 `1550 W`、`1180 min^-1`、`11200 W` と同値である。
 
-固定EXAM_ALIGNMENT、SPEC必須7項目、指定3可視化、実車値境界、Topic 21一般式は変更していない。
+固定EXAM_ALIGNMENT、SPEC必須7項目、指定3可視化、実車値境界、Topic 21一般式は変更していない。Topic 26は最終QA前のため、まだ `completed` と数えない。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -136,14 +136,14 @@ Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 - `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_blind_candidates.md`
 
 判定:
-- `LOCKED / NOT_YET_COMPARED_TO_OFFICIAL_ANSWERS`
+- `LOCKED / COMPARED_TO_OFFICIAL_ANSWERS_WITHOUT_EDIT`
 - 固定過去問: `5 / 5 candidate fixed`
 - 一次答案要素: `10 / 10 candidate fixed`
 - 二次答案要素: `6 / 6 candidate fixed`
 - 合計答案要素: `16 / 16 candidate fixed`
-- 公式解答参照: `0件`
+- 候補固定時点の公式解答参照: `0件`
 - 教材外知識での補完: `0件`
-- candidate lock後の修正: `禁止`
+- candidate lock後の修正: `0件`
 - exact blocker: `0件`
 
 R7二次固定候補:
@@ -157,6 +157,22 @@ R7二次固定候補:
 - R5問2 `(2)=(ホ)`, `(3)=(チ)`, `(5)=(ル)`
 - H27問3 `(1)=(ヘ)`, `(2)=(ヌ)`, `(3)=(ト)`
 
+## Topic 26 clean blind公式照合
+
+成果物:
+- `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_clean_blind_official_match_qa.md`
+
+判定:
+- `PASS / CLEAN_BLIND_OFFICIAL_MATCH_COMPLETE`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `10 / 10 PASS`
+- 二次答案要素: `6 / 6 PASS`
+- 合計答案要素: `16 / 16 PASS`
+- 固定候補の後編集: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 不一致: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -169,4 +185,4 @@ R7二次固定候補:
 
 ## 次の安全な工程
 
-LOCK済みのTopic 26 clean blind候補を編集せず、電気技術者試験センターの公式解答・標準解答と照合する。`16 / 16` が正答かつ根拠説明まで教材内で完結する場合のみ Topic 26 を `completed` として完成数を `26 / 39` へ進める。不一致が1要素でもあれば `NEEDS_REVISION` とし、その要素だけをexactに記録する。固定EXAM_ALIGNMENT、実車値境界、Topic 21一般式は変更しない。
+Topic 26最終QA。解説source/PDF、練習source/PDF、PowerPoint、clean blind公式照合を横断し、固定5問・16答案要素、SPEC必須7項目、指定3可視化、実車値境界を再確認する。すべてPASSの場合のみ Topic 26 を `PASS / COMPLETED` とし、完成数を `26 / 39` へ進める。固定EXAM_ALIGNMENT、実車値境界、Topic 21一般式は変更しない。
