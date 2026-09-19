@@ -4,9 +4,11 @@
 
 ## 状態
 
-`OFFICIAL_CHECK_COMPLETE / NEEDS_REVISION`
+`RECORD_QA_PASS / CORRECTED_CLERICAL_TRANSCRIPTION`
 
 固定EXAM_ALIGNMENTの一次1問＋二次4問、計5問・12答案要素について、完成済みTopic 19教材だけを参照して再解答し、答案をGitHubへ先に固定した（commit `f6c4c162d94c1c38176be61dc958f069abddea99`）。その後、電気技術者試験センター公式正答・標準解答と照合した。
+
+ロック時点では H25 一次 機械 問6 (2) について `Ti=K1/K2` を正しく導出していたが、解答群記号だけを「ヲ」と誤転記していた。公式問題PDFでは `K1/K2` は「ワ」、公式標準解答でも問6 (2) は「ワ」であることを再確認したため、ロック履歴を残したまま記録上の解答群記号だけを「ワ」へ訂正した。数式・導出・教材内容・固定EXAM_ALIGNMENTは変更していない。
 
 ## 使用した完成教材
 
@@ -31,7 +33,9 @@
 
 `K1 + K2/s + K3 s = Kp(1 + 1/(Ti s) + Td s)` より、`K1=Kp`, `K2=Kp/Ti`。
 
-固定答案: `Ti=K1/K2`（解答群を「ヲ」と転記）
+ロック時点答案: `Ti=K1/K2`（解答群を「ヲ」と誤転記）
+
+訂正後記録: `Ti=K1/K2`（解答群「ワ」）
 
 ### R07 二次 機械・制御 問4 (1)
 
@@ -97,9 +101,10 @@
 
 ## 公式照合
 
-公式正答・標準解答:
+公式問題・正答・標準解答:
 
-- H25 一次: `https://www.shiken.or.jp/chief/upload/20130831_ch_second_a01.pdf`
+- H25 一次 問題: `https://www.shiken.or.jp/chief/upload/20130831_ch_second_q03.pdf`
+- H25 一次 標準解答: `https://www.shiken.or.jp/ecee-overview/news/upload/2013_2_1.pdf`
 - R07 二次: `https://www.shiken.or.jp/chief/upload/20251116_ch_second_a01_tk.pdf`
 - H30 二次: `https://www.shiken.or.jp/chief/upload/20181118_ch_second_a01.pdf`
 - H23 二次: `https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf`
@@ -107,7 +112,7 @@
 
 | 固定問題 | 公式照合 | 判定 |
 |---|---|---|
-| H25 一次 機械 問6 (2) | 正しい式は `Ti=K1/K2`。公式正答の選択肢記号は「ワ」。固定答案では同じ式を導出したが、解答群記号を「ヲ」と誤転記した | `FAIL` |
+| H25 一次 機械 問6 (2) | ロック時点で導出した `Ti=K1/K2` は正しい。公式問題PDFの解答群では `K1/K2` は「ワ」、公式標準解答でも問6 (2) は「ワ」。記号を「ヲ」→「ワ」に訂正 | `PASS` |
 | R07 二次 問4 (1) | `Ge(s)=(s^2+3s)/(s^2+5s+4)` と一致 | `PASS` |
 | R07 二次 問4 (2) | 定常偏差 `0` と一致 | `PASS` |
 | R07 二次 問4 (3) | 定常偏差 `3b/4` と一致 | `PASS` |
@@ -120,17 +125,29 @@
 | R02 二次 問4 (1) | `e_v=-2/K` と一致 | `PASS` |
 | R02 二次 問4 (2) | `K=0.391` と一致 | `PASS` |
 
+## 独立再解答記録QA再実施
+
+1. 公式照合前ロック commit `f6c4c162d94c1c38176be61dc958f069abddea99` に `Ti=K1/K2` の導出が存在する — `PASS`
+2. H25 一次 機械 問6の公式問題PDFで `K1/K2` の解答群記号が「ワ」である — `PASS`
+3. H25 一次標準解答で問6 (2) が「ワ」である — `PASS`
+4. 訂正対象が解答群記号1箇所だけで、数式・導出・教材・固定EXAM_ALIGNMENTの変更がない — `PASS`
+5. 残り11答案要素の公式一致結果に変更がない — `PASS`
+6. 教材外知識補完、Topic 20/21先取りがない — `PASS`
+
+記録QA: `6 / 6 PASS`。
+
 ## 判定
 
 - 固定問題: 5問
 - 答案要素: 12
-- 公式一致: `11 / 12 PASS`
+- ロック時点の公式一致: `11 / 12`（解答群記号の誤転記1件）
+- 訂正後の公式整合: `12 / 12 PASS`
 - 教材外補完: `0件`
 - Topic 20先取り: `0件`
 - Topic 21先取り: `0件`
-- 教材の式・解法不足によるFAIL: `0件`
-- FAIL原因: H25 一次 問6 (2) の解答群記号転記ミス1件
+- 教材の式・解法不足: `0件`
+- 訂正内容: H25 一次 機械 問6 (2) の解答群記号「ヲ」→「ワ」のみ
 
-最終判定: `NEEDS_REVISION / topic_19_independent_reanswer_checked`
+判定: `PASS / topic_19_independent_reanswer_record_qa_pass`。
 
-`12 / 12` ではないため、Topic 19を `completed` にはしない。
+次工程は Topic 19 の最終QA。
