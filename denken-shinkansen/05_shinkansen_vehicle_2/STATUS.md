@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_22_completed`
+- current_status: `topic_23_exam_alignment_complete`
 - last_completed_topic: `22 E5系 再粘着制御`
 - active_topic: `23 N700S SiC主変換装置`
-- next_start: Topic 23 制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を直近年度優先で調査し、SPEC固定範囲へ直接問題と橋渡し問題を区分して品質ゲートを固定する
+- next_start: 固定5問・23答案要素を変えずTopic 23解説sourceを作成する。Topic 17の一般損失理論は必要最小限だけ前提参照し、SiC・N700S固有の説明へ接続する
 
 ## 完了済み
 
@@ -44,11 +44,31 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_check.md`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_final_qa.md`
 
 ### clean blind reconcile
 
-先行 `10 / 11` 記録は、Topic 22が前提参照を許可するTopic 20フィードバック制御教材を参照範囲から外したworkerの診断だった。有効候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定され、許可されたTopic 20既習内容を用いてH21二次 問4 `(5a)` を正しく導出。その後の公式照合で `11 / 11 PASS`。公式照合結果は最終QA正本へ統合済みで、重複照合ファイルは削除済み。Topic 22本文・一般式・PDF/PPTXへの追加修正は不要。
+先行 `10 / 11` 記録は、Topic 22が前提参照を許可するTopic 20フィードバック制御教材を参照範囲から外したworkerの診断だった。有効候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定され、許可されたTopic 20既習内容を用いてH21二次 問4 `(5a)` を正しく導出。その後の公式照合で `11 / 11 PASS`。重複照合ファイルは削除し、`22_e5_readhesion_control_blind_reanswer_official_check.md` を公式照合記録として残す。Topic 22本文・一般式・PDF/PPTXへの追加修正は不要。
+
+## Topic 23 制作前EXAM_ALIGNMENT
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+- 固定過去問: 第二種一次4問＋二次1問 = `5問`
+- 一次答案要素: `17`
+- 二次答案要素: `6`
+- 合計答案要素: `23`
+- 二次記述・計算問題: `1問`
+- Topic 17で検証済みの同一5問・23答案要素を再利用し、過去問再調査・再解答の重複実施はしない
+- Topic 23追加責務: SiC、N700S接続、損失低減→発熱低減→冷却簡素化→小型軽量化の因果
+- SPEC固定8項目: 変更なし
+- SPEC指定3可視化: 変更なし
+- 未確認N700S実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
+
+記録:
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
 
 ## Topic 21 H26二次 問1(4)
 
@@ -56,4 +76,4 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## 次工程
 
-Topic 23「N700S SiC主変換装置」の制作前EXAM_ALIGNMENTから開始する。
+Topic 23解説source作成。固定5問・23答案要素、SPEC固定範囲、指定3可視化を変更しない。
