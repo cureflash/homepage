@@ -6,11 +6,11 @@
 
 Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_21_final_qa_blocked`
+current_status: `topic_21_independent_reanswer_complete`
 
 active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了している。最終QAでは内容・成果物・品質ゲートはPASSしたが、主sourceの進捗記録が実進捗と不一致のため `NEEDS_REVISION / FINAL_QA_BLOCKED`。次工程は主source進捗記録同期。
+Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了している。初回最終QAで指摘された主sourceの進捗記録不一致を同期し、`stage: INDEPENDENT_REANSWER_COMPLETE`、`completion: in_progress`、次工程 `最終QA再実施` で正本をそろえた。
 
 ## Topic 21 成果物
 
@@ -24,7 +24,7 @@ Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照�
 - PowerPoint QA: `topics/21_integrated_simulation/21_integrated_simulation_powerpoint_qa.md`
 - 完成後独立再解答: `topics/21_integrated_simulation/21_integrated_simulation_independent_reanswer.md`
 - 最終QA: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
-- stage: `FINAL_QA_BLOCKED`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 21 SPEC固定範囲
@@ -180,7 +180,7 @@ PWMインバータ
 - 仕様追加: `0件`
 - 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
-## 最終QA
+## 初回最終QA
 
 - 記録: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
 - 必須成果物欠落: `0件`
@@ -197,6 +197,8 @@ PWMインバータ
 - blocker: `1件`
   - 主sourceが `stage: EXPLANATION_SOURCE_COMPLETE` / `次工程: 解説PDF制作` のままで実進捗と不一致
 - 判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+
+このblockerは主source進捗記録同期で解消済み。最終QAの判定更新は次工程で行う。
 
 ## 公式正本・参考
 
@@ -218,11 +220,11 @@ PWMインバータ
 
 ## 次工程
 
-Topic 21主sourceの進捗記録同期。
+Topic 21最終QA再実施。
 
-- `21_integrated_simulation.md` の `stage` を実進捗 `INDEPENDENT_REANSWER_COMPLETE` へ同期する。
-- 解説PDF、練習PDF、PowerPoint、完成後独立再解答の完了状態を主sourceへ反映する。
-- 初回最終QA `NEEDS_REVISION / FINAL_QA_BLOCKED` を記録する。
-- `completion` はまだ `in_progress` のままとする。
-- 次工程を `最終QA再実施` とする。
-- 固定EXAM_ALIGNMENT、品質ゲート `5問・21答案要素`、二次採用、固定範囲は変更しない。
+- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` を再確認する。
+- 主source、STATUS、HANDOFFの `stage` / `completion` / `次工程` の整合性を確認する。
+- 必須成果物欠落0件を再確認する。
+- 固定一次4問・17答案要素＋二次1問・4答案要素＝`21 / 21 PASS` を維持していることを確認する。
+- 二次数合わせ、固定範囲外追加、未公開実車定数の推測、仕様追加が0件であることを確認する。
+- PASSならTopic 21を `completed` へ同期する。
