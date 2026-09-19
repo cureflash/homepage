@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
+Topic 01〜21は `PASS / completed`。完成数は `21 / 21`。
 
-current_status: `topic_21_final_qa_complete`
+current_status: `completed`
 
-active_topic: `21 架線からEast iまで全部シミュレーションする`
+active_topic: `none`
 
-Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施まで完了した。初回最終QAの唯一のblockerだった主source進捗記録不整合は解消済みで、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。次工程は `completed` 状態同期。
+Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施、`completed` 状態同期まで完了した。初回最終QAの唯一のblockerだった主source進捗記録不整合は解消済みで、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。系列08は `21 / 21` 完了。
 
 ## Topic 21 成果物
 
@@ -24,8 +24,8 @@ Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照�
 - PowerPoint QA: `topics/21_integrated_simulation/21_integrated_simulation_powerpoint_qa.md`
 - 完成後独立再解答: `topics/21_integrated_simulation/21_integrated_simulation_independent_reanswer.md`
 - 最終QA: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
-- stage: `FINAL_QA_COMPLETE`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 
 ## Topic 21 SPEC固定範囲
 
@@ -143,7 +143,17 @@ PWMインバータ
 - 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
 - 主source / STATUS / HANDOFF の最終QA前進捗整合: `PASS`
 - 仕様追加: `0件`
-- 判定: `PASS / FINAL_QA_COMPLETE / IN_PROGRESS`
+- 判定: `PASS / FINAL_QA_COMPLETE`
+
+## 完了状態同期
+
+- main source stage: `COMPLETED`
+- main source completion: `completed`
+- STATUS完成数: `21 / 21`
+- HANDOFF完成数: `21 / 21`
+- 技術本文・固定EXAM_ALIGNMENT・過去問正答・教材成果物の変更: `0件`
+- 仕様追加: `0件`
+- 判定: `PASS / completed`
 
 ## 公式正本・参考
 
@@ -165,4 +175,4 @@ PWMインバータ
 
 ## 次工程
 
-Topic 21の `completed` 状態同期。完成数を `21 / 21` へ更新し、系列08を完了状態へ同期するのは、その同期工程で行う。
+系列08 `08_shinkansen_theory_2` は `21 / 21 PASS / completed`。次系列は `MASTER_SPEC.md` の順序に従い `09_electrical_math_3`。
