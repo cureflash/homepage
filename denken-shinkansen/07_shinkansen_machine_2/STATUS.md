@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_progress_records_synced / IN_PROGRESS`
+- current_status: `topic_19_final_qa_pass / IN_PROGRESS`
 - last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
 - active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 最終QA再実施
+- next_start: Topic 19 completed確定・完了記録同期
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`、完成後独立再解答ロック時公式一致 `11 / 12`、解答群記号訂正後の記録QA `12 / 12 PASS`、最終QA初回は進捗記録不整合のみで `NEEDS_REVISION`、main source・練習source進捗記録同期済み
+- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`、完成後独立再解答ロック時公式一致 `11 / 12`、解答群記号訂正後の記録QA `12 / 12 PASS`、最終QA再実施 `PASS / topic_19_final_qa_pass`。completed確定・完了記録同期のみ未実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -97,24 +97,32 @@ QA:
 - 判定: `PASS / topic_19_independent_reanswer_record_qa_pass`
 
 ## Topic 19 最終QA
-最終QA初回:
+初回:
 - 必須成果物: `PASS`
 - 固定5問・12答案要素: `12 / 12 PASS`
 - 独立再解答記録QA: `6 / 6 PASS`
 - 解説PDF・練習PDF・PowerPoint QA: `PASS`
 - 仕様境界: `PASS`
 - 進捗記録整合: `2 / 4 PASS`
-- blocker: main source `## 状態` が `topic_19_explanation_pdf_complete` のまま、練習source `# 次工程` が「練習PDF＋QA」のまま
-- 最終判定: `NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`
+- blocker: main source `## 状態` と練習source `# 次工程` の進捗記録不整合
+- 判定: `NEEDS_REVISION / topic_19_final_qa_progress_records_unsynced`
 
-同期後:
-- main source `## 状態`: `topic_19_progress_records_synced / IN_PROGRESS` へ更新
-- 練習source `# 次工程`: 「Topic 19最終QAを再実施する」へ更新
+blocker修正:
+- main source進捗同期 commit `31d82c6cb2f3f1a69ab0664624ae36faa691f28f`
+- 練習source進捗同期 commit `927a61727266ea5e9f21da43050e55ad4d3e6f05`
 - 技術本文、練習問題、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果: 変更なし
-- 最終QA再実施: 未実施
+
+再実施:
+- 必須成果物: `PASS`
+- 固定5問・12答案要素: `12 / 12 PASS`
+- 独立再解答記録QA: `6 / 6 PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- 仕様境界: `PASS`
+- 進捗記録整合: `4 / 4 PASS`
+- 最終判定: `PASS / topic_19_final_qa_pass`
 
 ## 今回進めた内容
-Topic 19 最終QA初回で指摘されたmain source・練習sourceの進捗記録2箇所を同期した。技術・試験対応内容は変更していない。完成数は `18 / 22` のまま。
+Topic 19の最終QAを再実施し、前回blocker解消を確認して `PASS / topic_19_final_qa_pass` とした。技術・試験対応内容は変更していない。完成数はcompleted確定・完了記録同期前のため `18 / 22` のまま。
 
 ## 次工程
-Topic 19 最終QAを再実施する。
+Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期する。
