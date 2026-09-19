@@ -6,44 +6,42 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `20 / 39`
-- current_status: `topic_21_blind_candidates_locked`
+- current_status: `topic_21_blind_official_check_needs_revision`
 - last_completed_topic: `20 N700系 フィードバック制御`
 - active_topic: `21 高速域の速度・けん引力・出力制御`
-- next_start: Topic 21 clean blind公式照合。固定済み6答案要素を変更せず、電気技術者試験センターの公式解答・標準解答と照合する
+- next_start: H26二次「機械・制御」問1 `(4)` の候補 `48.0 N·m` と公式 `48.1 N·m` の不一致原因だけを診断し、固定SPEC内で教材側修正要否を判定する
 
 ## 完了済み
 
 Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
-## Topic 21 clean blind候補答案
+## Topic 21 clean blind公式照合
 
-判定前状態: `CANDIDATES_LOCKED / OFFICIAL_ANSWER_NOT_YET_CHECKED`
+判定: `NEEDS_REVISION / BLIND_REANSWER_OFFICIAL_CHECK_COMPLETE`
 
 固定品質ゲート:
-- H26 一次 機械 問5 `(4),(5)` — `2 / 2 候補固定`
-- H25 一次 機械 問3 `(1)` — `1 / 1 候補固定`
-- R7 二次 機械・制御 問2 `(1)のT1のみ` — `1 / 1 候補固定`
-- R1 二次 機械・制御 問1 `(4)` — `1 / 1 候補固定`
-- H26 二次 機械・制御 問1 `(4)` — `1 / 1 候補固定`
-- 合計: `一次3＋二次3 / 6 / 6候補固定`
-- 候補固定前の公式解答・標準解答参照: `0件`
-- 候補固定前の個別過去問解説正答参照: `0件`
+- H26 一次 機械 問5 `(4),(5)` — `2 / 2 PASS`
+- H25 一次 機械 問3 `(1)` — `1 / 1 PASS`
+- R7 二次 機械・制御 問2 `(1)のT1のみ` — `1 / 1 PASS`
+- R1 二次 機械・制御 問1 `(4)` — `1 / 1 PASS`
+- H26 二次 機械・制御 問1 `(4)` — `0 / 1 FAIL`
+- 合計: `一次3 / 3 PASS、二次2 / 3 PASS、総計5 / 6 PASS`
+- 固定5問: `4 / 5 PASS`
+- 候補答案変更: `0件`
 - 教材外知識補完: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
 
-候補答案:
-- H26一次 問5 `(4)`: `V/f一定・I_M一定・f_s可変`（`ヲ`候補）
-- H26一次 問5 `(5)`: `V一定・I_M一定・f_s可変`（`ニ`候補）
-- H25一次 問3 `(1)`: `回転角速度`（`ヨ`候補）
-- R7二次 問2 `(1) T1`: `181 N·m`
-- R1二次 問1 `(4)`: `33.2 N·m`
-- H26二次 問1 `(4)`: `48.0 N·m`
+exact blocker:
+- H26二次 問1 `(4)` の固定候補 `48.0 N·m` に対し、公式標準解答は `48.1 N·m`。
+- 候補固定ファイルは変更しない。
+- この1要素が未通過のためTopic 21は `completed` にしない。
 
 成果物:
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_blind_reanswer_candidates_clean.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_blind_reanswer_official_check.md`
 
 ## 次工程
 
-固定済み6答案要素を公式解答・標準解答と照合する。候補答案ファイルは照合前の状態を保持し、差異があれば推測で補正せずexact blockerとして記録する。既存PDF/PPTX、練習問題、固定EXAM_ALIGNMENT、SPEC範囲は変更しない。
+H26二次「機械・制御」問1 `(4)` の不一致原因だけを診断する。固定済み他5答案要素、固定EXAM_ALIGNMENT、SPEC範囲は変更しない。原因診断前に候補や教材数値を公式値へ後付け変更しない。
