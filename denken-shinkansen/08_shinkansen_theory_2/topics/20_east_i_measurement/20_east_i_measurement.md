@@ -4,8 +4,8 @@
 
 ## 状態
 
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: 一次5問・25答案要素
 - 制作前blind独立再解答: `25 / 25 PASS`
@@ -17,12 +17,13 @@
 - 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`
 - 完成後独立再解答: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
 - 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+- 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - 公式標準解答・保存済み正答の事前保存: `0件`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
 - East i内部測定回路の推測追加: `0件`
-- 次工程: 最終QA再実施
+- 次工程: Topic 21 制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -575,4 +576,4 @@ JR東日本の公開資料で確認できるのは、新幹線用East iが走行
 
 ## 11. 次工程
 
-Topic 20の最終QAを再実施する。固定一次5問・25答案要素、SPEC固定範囲12項目、完成後独立再解答 `25 / 25 PASS`、解説PDF・練習PDF・PowerPoint各QA、East i出典境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` 状態同期へ進む。
+Topic 21「架線からEast iまで全部シミュレーションする」の制作前EXAM_ALIGNMENTへ進む。
