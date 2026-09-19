@@ -3,19 +3,25 @@
 updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
-current_status: `topic_17_clean_blind_input_prepared`
+current_status: `topic_17_clean_blind_mismatch`
 
 ## 今回実施
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、Topic 17既存成果物を確認した。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、直近power2コミットをreconcileした。
 
-Topic 17は固定EXAM_ALIGNMENTの一次3問＋二次2問、計5問・26答案要素に対する初回制作前blindが `24 / 26 PASS` で未通過。今回のrunでは公式標準解答と既存blind記録を既に参照しているため、同一runの再解答をclean blindとして扱わない。
+Topic 17のclean blindを、専用入力と公式問題PDFだけで実施。候補答案を先にGitHubへ固定してから公式標準解答を照合した。
 
-次runで正答情報を先に見ずに再試験できるよう、問題だけを固定したclean blind専用入力を作成した。
+保存物:
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_20260920.md`
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_20260920.md`
 
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_input_20260920.md`
+判定:
+- 一次: `15 / 15 PASS`
+- 二次: `8 / 11 PASS`
+- 合計: `23 / 26 PASS`
+- 制作品質ゲート: `未通過`
 
-専用入力には候補答案、正答、前回不一致箇所を含めない。
+また、既存 `17_protection_coordination_preproduction_blind_20260920.md` に公式解答マッピングの誤記が1件あることを公式正本で確認し、今回resultでreconcileした。旧blindファイル自体は履歴として保持する。
 
 ## Topic 16維持
 
@@ -50,7 +56,16 @@ Topic 16の短絡電流・短絡容量等は既習事項として再利用する
 
 ## 次に行う
 
-clean blind専用入力とそこに列挙した公式問題PDFだけを使って、固定5問・26答案要素を独立再解答する。候補答案を保存するまで、過去blind記録、公式標準解答、第三者解説を開かない。候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` の場合だけ教材本文へ進む。
+次runではclean blind専用入力とそこに列挙した公式問題PDFだけを使って、固定5問・26答案要素を再度独立再解答する。
+
+候補答案を保存するまで開かない:
+- `17_protection_coordination_preproduction_blind_20260920.md`
+- `17_protection_coordination_clean_blind_candidate_20260920.md`
+- `17_protection_coordination_clean_blind_result_20260920.md`
+- 公式標準解答
+- 第三者解説
+
+候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` の場合だけ教材本文へ進む。
 
 まだ行わない:
 - 教材本文作成
