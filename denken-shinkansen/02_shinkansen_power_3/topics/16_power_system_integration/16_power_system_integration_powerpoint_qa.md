@@ -74,4 +74,4 @@
 
 PASS
 
-初回最終QAで指摘された進捗記録同期を完了。次はTopic 16の最終QAを再実施する。
+Topic 16の最終QA再実施は `PASS / completed`。本QAの内容変更はなく、固定EXAM_ALIGNMENT・技術内容・問題・正答・PDF/PPTX・完成後独立再解答結果も変更していない。`02_shinkansen_power_3` は `16 / 16` 完了。
