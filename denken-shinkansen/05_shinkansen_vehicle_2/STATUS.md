@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `20 / 39`
-- current_status: `topic_21_official_discrepancy_diagnosed_blocked`
+- current_status: `topic_21_h26_torque_discrepancy_diagnosed`
 - last_completed_topic: `20 N700系 フィードバック制御`
 - active_topic: `21 高速域の速度・けん引力・出力制御`
-- next_start: `BLOCKED` — H26二次「機械・制御」問1 `(4)` は公式標準解答 `48.1 N·m` と、公式問題・公式掲載式から再現される `48.0 N·m` が矛盾するため、現行仕様のまま次工程へ進めない
+- next_start: H26二次「機械・制御」問1 `(4)` の過去問固有数値処理注記だけをTopic 21解説sourceへ追加し、派生成果物へ再同期すべき範囲を判定する
 
 ## 完了済み
 
@@ -30,20 +30,23 @@ Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
 ## H26二次 問1(4) 不一致診断
 
-判定: `BLOCKED / OFFICIAL_STANDARD_ANSWER_ARITHMETIC_INCONSISTENCY`
+判定: `ROOT_CAUSE_IDENTIFIED / MATERIAL_REVISION_REQUIRED`
 
 独立再計算:
 - `I2'=22.4308861637 A`
-- `TL=(3p/(2πf1))I2'^2(r2'/s)=48.0467752730 N·m`
-- 有効数字3けた: `48.0 N·m`
+- 高精度 `π` では `TL=48.0467752730 N·m → 48.0 N·m`
+- 公式標準解答は `I2'=22.430 A` と同じトルク式を掲載し、`48.067 → 48.1 N·m`
+- 公式掲載値 `I2'=22.430 A` と `π=3.14` を用いると `48.067347... N·m` となり、公式掲載中間値 `48.067` を再現する
 
-公式標準解答は同じ式と `I2'=22.430 A` を掲載しながら、`48.067 → 48.1 N·m` としている。この `48.067` は掲載値・掲載式から再現できない。
+原因:
+- 式・単位・極数/極対数・すべり処理の誤りではない
+- 公式標準解答が当該計算で `π=3.14` 相当の数値処理を採用したことによる丸め差
+- 問題冊子の確認範囲では `π=3.14` の明示指定はない
 
-exact blocker:
-- `EXAM_ALIGNMENT_SPEC.md` は公式標準解答との一致を完成ゲートとする。
-- 一方、公式問題・公式掲載式・有効数字指定に従う再計算は `48.0 N·m`。
-- 公式値へ後付けで合わせる教材修正は再現可能性を壊すため実施しない。
-- 現行仕様では当該1要素をPASSにも教材修正にも確定できないため、Topic 21は `completed` にしない。
+教材側対応:
+- 一般式 `P=Tω`、`ω=2πN/60` は変更しない
+- H26二次 問1(4) 固有の数値処理差だけを解説sourceへ最小注記する
+- 過去問照合では公式標準解答 `48.1 N·m` を正本として扱う
 
 成果物:
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_blind_reanswer_candidates_clean.md`
@@ -52,13 +55,14 @@ exact blocker:
 
 不変条件:
 - 候補答案変更: `0件`
-- 教材本文・式・例題変更: `0件`
-- PDF/PPTX変更: `0件`
+- 他5答案要素変更: `0件`
 - 固定問題差替え: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定SPEC外追加: `0件`
+- 練習問題・正答変更: `0件`
+- PDF/PPTX変更: `0件`
 - 未確認実車値の真値化: `0件`
 
 ## 次工程
 
-`BLOCKED`。現行の正本優先規則と、公式標準解答内部の数値不整合を同時に満たす安全な工程がないため停止する。
+H26二次「機械・制御」問1 `(4)` の過去問固有注記だけをTopic 21解説sourceへ追加する。候補固定ファイル、固定済み他5答案要素、固定EXAM_ALIGNMENT、SPEC範囲は変更しない。注記後に派生成果物へ再同期すべき範囲を判定する。
