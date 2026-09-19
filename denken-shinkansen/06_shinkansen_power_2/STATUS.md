@@ -4,7 +4,7 @@ updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
 theme: 事故区間だけをどう一瞬で切る？
-current_status: `topic_17_clean_blind_mismatch`
+current_status: `topic_17_clean_blind_rerun_mismatch`
 completed_topics: `16 / 22`
 
 ## Completed through Topic 16
@@ -39,19 +39,24 @@ Topic 16最終品質ゲート:
 clean blind専用入力:
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_input_20260920.md`
 
-今回のclean blind候補答案と公式照合結果は保存済み:
+保存済みblind記録:
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_20260920.md`
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_20260920.md`
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_rerun_20260920.md`
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_rerun_20260920.md`
 
-今回判定:
+最新rerun判定:
 - 一次: `15 / 15 PASS`
 - 二次: `8 / 11 PASS`
 - 合計: `23 / 26 PASS`
 - 制作品質ゲート: `未通過`
 
-既存の初回blind記録には公式解答マッピングの誤記が1件あり、今回の公式正本再照合でreconcile済み。詳細はclean blind resultに記録した。次回clean blindの候補答案固定前には、旧blind記録・clean blind candidate・clean blind result・公式標準解答を参照しない。
+exact blocker:
+1. R2二次 問2(2)「信頼性」: 点検・自動監視、低故障率、冗長化を欠く。
+2. R2二次 問2(3)「定格遮断時間」: `5サイクル及び3サイクル` のうち5サイクルを欠く。
+3. H25二次 問3(2): 同期発電機短絡電流の小ささとOCR感度整定上の問題を欠く。
 
-教材本文、PDF、PowerPointは未着手のまま維持する。
+この補助runでは既存worker成果をreconcileするため最新rerun resultを確認しており、公式標準解答内容に接触済みである。そのため同run内で新たなclean blindを実施してPASS扱いにはしない。教材本文、PDF、PowerPointは未着手のまま維持する。
 
 ## 品質境界
 
@@ -64,4 +69,12 @@ clean blind専用入力:
 
 ## next_start
 
-`17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、保存済み候補答案・過去blind記録・clean blind result・公式標準解答を候補答案固定前に見ず、固定5問・26答案要素を再度clean blind独立再解答する。候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` を確認するまで教材本文・解説PDF・練習PDF・PowerPointへ進まない。
+次のfresh runでは `17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、固定5問・26答案要素を再度clean blind独立再解答する。
+
+候補答案を保存するまで開かない:
+- `17_protection_coordination_preproduction_blind_20260920.md`
+- 既存の全clean blind candidate/resultファイル
+- 公式標準解答
+- 第三者解説
+
+候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` を確認するまで教材本文・解説PDF・練習PDF・PowerPointへ進まない。
