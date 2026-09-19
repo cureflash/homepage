@@ -8,7 +8,7 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_powerpoint_resync_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_remediated_blind_candidates_locked`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## reconcile
 
@@ -21,6 +21,8 @@ latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果
 - 成果物同期QA正本: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_post_blind_artifact_sync_qa.md`
 - 解説PDF・練習PDFは補強後sourceから再生成・QA済み
 - PowerPointは既存6枚構成の範囲で再生成し、R2読図補強2点を同期・表示QA済み
+- 修正後clean blind候補は別ファイル `23_n700s_sic_main_converter_blind_reanswer_candidates_remediated_clean.md` として commit `5d28e38e9151edc9d2ca3e309783aea2e6b9272f` で固定
+- 修正後候補は固定5問・23答案要素すべてについて候補を保存済み。公式照合はまだ実施していない
 - Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は過去問固有丸め差。一般式 `P=Tω`、`ω=2πN/60` は変更しない
 
 ## Topic 23 固定EXAM_ALIGNMENT
@@ -65,6 +67,20 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
   - LibreOffice / pdftoppm `6 / 6 PASS`
   - geometry overflow `0`
 
+## 修正後clean blind候補
+
+判定: `LOCKED / NOT_YET_OFFICIAL_CHECKED`
+
+- 候補固定commit: `5d28e38e9151edc9d2ca3e309783aea2e6b9272f`
+- 候補ファイル: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_remediated_clean.md`
+- R7一次 `5 / 5 candidate fixed`
+- R4一次 `5 / 5 candidate fixed`
+- R2一次 `5 / 5 candidate fixed`
+- H24一次 `2 / 2 candidate fixed`
+- H24二次 `6 / 6 candidate fixed`
+- 合計 `23 / 23 candidate fixed`
+- 既存初回候補・既存公式照合記録は後編集していない
+
 維持事項:
 
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -73,10 +89,11 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 - 未確認N700S実車値の真値化: `0件`
 - JR東海7%値・富士電機20%値の誤拡張: `0件`
 - 初回clean blind候補の後編集: `0件`
+- 修正後clean blind候補の公式照合前後編集: `0件`
 - 新たなexact blocker: `0件`
 
 Topic 23はまだ `completed` にしない。
 
 ## 次の安全な工程
 
-初回clean blind候補とは別ファイルを作り、補強後のTopic 23教材だけで固定5問・23答案要素を保存済み正答を見ずに独立再解答する。候補を固定した後で公式解答・標準解答と照合する。固定EXAM_ALIGNMENT、一般式、SPEC固定8項目・指定3可視化、仮定値／実車値境界は変更しない。
+固定済み修正後clean blind候補 `5d28e38...` を後編集せず、電気技術者試験センター公式解答・標準解答と固定5問・23答案要素を照合する。`23 / 23 PASS` の場合のみ最終QAへ進む。不一致があれば候補を書き換えず、exact blockerまたは教材不足として原因を記録して止める。固定EXAM_ALIGNMENT、一般式、SPEC固定8項目・指定3可視化、仮定値／実車値境界は変更しない。
