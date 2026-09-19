@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_23_source_blind_remediation_complete`
+- current_status: `topic_23_remediation_sync_qa_complete`
 - last_completed_topic: `22 E5系 再粘着制御`
 - active_topic: `23 N700S SiC主変換装置`
-- next_start: Topic 23既存の解説PDF・練習PDF・PowerPointへ、clean blindで補強した2点の同期要否をQAし、必要な成果物だけ更新する
+- next_start: Topic 23解説PDFを補強後sourceから再生成し、表示・数式・固定23答案要素・clean blind補強2点をQAする
 
 ## 完了済み
 
@@ -23,33 +23,10 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - 一次答案要素: `3 / 3 PASS`
 - 二次答案要素: `8 / 8 PASS`
 - 合計答案要素: `11 / 11 PASS`
-- 固定5問: `5 / 5 PASS`
-- clean blind候補固定後の答案変更: `0件`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
+- clean blind: `11 / 11 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 一般式変更: `0件`
 - SPEC外追加: `0件`
-- 未確認E5系実車値の真値化: `0件`
-- 新たなexact blocker: `0件`
-
-成果物:
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation_source.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation.pdf`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation_pdf_qa.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice_source.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice.pdf`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_practice_pdf_qa.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_check.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_final_qa.md`
-
-### clean blind reconcile
-
-先行 `10 / 11` 記録は、Topic 22が前提参照を許可するTopic 20フィードバック制御教材を参照範囲から外したworkerの診断だった。有効候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定され、許可されたTopic 20既習内容を用いてH21二次 問4 `(5a)` を正しく導出。その後の公式照合で `11 / 11 PASS`。重複照合ファイルは削除し、`22_e5_readhesion_control_blind_reanswer_official_check.md` を公式照合記録として残す。Topic 22本文・一般式・PDF/PPTXへの追加修正は不要。
 
 ## Topic 23 制作前EXAM_ALIGNMENT
 
@@ -62,105 +39,61 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - 二次記述・計算問題: `1問`
 - Topic 17で検証済みの同一5問・23答案要素を再利用し、過去問再調査・再解答の重複実施はしない
 - Topic 23追加責務: SiC、N700S接続、損失低減→発熱低減→冷却簡素化→小型軽量化の因果
-- SPEC固定8項目: 変更なし
-- SPEC指定3可視化: 変更なし
-- 未確認N700S実車値の真値化: `0件`
-- 新たなexact blocker: `0件`
-
-## Topic 23 解説source
-
-判定: `PASS / EXPLANATION_SOURCE_COMPLETE`（clean blind不一致2点を補強済み）
-
-- 固定5問: `5 / 5 unchanged`
-- 一次答案要素: `17 / 17 covered`
-- 二次答案要素: `6 / 6 covered`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 regeneration-ready`
-- clean blind補強点: `2 / 2 source反映`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC外追加: `0件`
+- SPEC固定8項目・指定3可視化: 変更なし
 - 未確認N700S実車値の真値化: `0件`
 
-## Topic 23 解説PDF
-
-判定: `PASS / EXPLANATION_PDF_COMPLETE`（source補強後の同期要否QA待ち）
-
-- A4縦: `5 pages`
-- PDFium render: `5 / 5 PASS`
-- Poppler render: `5 / 5 PASS`
-- 文字抽出・破損グリフ: `PASS`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-- 仮定値／実車値境界: `PASS`
-
-## Topic 23 練習source / 練習PDF
-
-判定: `PASS / PRACTICE_SOURCE_REMEDIATED`（練習PDFの同期要否QA待ち）
-
-- 一次試験型: `8問`
-- 二次試験型: `4問`
-- 合計: `12問`
-- 数値・論理独立再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- 固定R2読図補強: `2 / 2 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC外追加: `0件`
-- 未確認N700S実車値の真値化: `0件`
-
-## Topic 23 解説画像PowerPoint
-
-判定: `PASS / POWERPOINT_COMPLETE`（source補強後の同期要否QA待ち）
-
-- 16:9: `6 slides`
-- python-pptx再オープン: `6 / 6 PASS`
-- ZIP整合性: `PASS`
-- LibreOffice PDF変換: `6 / 6 PASS`
-- pdftoppm 150 dpi: `6 / 6 PASS`
-- geometry overflow: `0`
-- クリッピング・文字重なり・欠落グリフ: `0`
-- SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 covered`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC外追加: `0件`
-- 未確認N700S実車値の真値化: `0件`
-
-## Topic 23 clean blind独立再解答
-
-判定: `FAIL / NEEDS_REVISION`（初回。候補ファイルは変更しない）
-
-- 候補固定commit: `17837d40774f12e8348e9b55f250d5573b35f901`
-- 固定5問: `4問完全一致 + R2一次問2で2要素不一致`
-- 一次答案要素: `15 / 17 PASS`
-- 二次答案要素: `6 / 6 PASS`
-- 合計答案要素: `21 / 23 PASS`
-- 候補固定後の答案変更: `0件`
-- R2一次問2 `(2)`: 候補 `(1-D)V_dc`、公式 `D V_dc`。原因はSオン／オフ時のダイオード電圧状態の取り違え
-- R2一次問2 `(4)`: 候補 `(1/6)V_dc I_dc T_2`、公式 `(1/2)V_dc I_dc T_2`。原因は公式図3の `i_s v_s` 三角波を別の同時直線ランプモデルへ置換したこと
-- H24二次6要素: `6 / 6 PASS`。未丸め値と公式3桁値の差のみ
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 一般式変更: `0件`
-- SPEC外追加: `0件`
-- 新たなexact blocker: `0件`
-
-成果物:
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_clean.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_official_check.md`
-
-## Topic 23 clean blind後 source補強
+## Topic 23 source
 
 判定: `PASS / SOURCE_REMEDIATION_COMPLETE`
 
-- 解説source: 「矢印極性→状態表→平均値」を追加し、固定R2一次問2 `(2)` の `V=D V_dc` を明示
-- 解説source: スイッチングエネルギーの係数は波形依存と明示し、固定R2一次問2 `(4)` の `W_off=(1/2)V_dc I_dc T_2` を追加
-- 練習source: 同じ2点の読図補強を追加
-- 一次問4の `VI t_s/6` は当該仮定波形に限ることを明記
-- 固定R2読図補強の独立確認: `2 / 2 PASS`
+- 解説source: `23 / 23 covered`、clean blind不一致2点を補強済み
+- 練習source: 一次8問＋二次4問、固定23答案要素 `23 / 23 connected`
+- 固定R2一次問2 `(2)`: 「矢印極性→状態表→平均値」を追加し `V=D V_dc` を明示
+- 固定R2一次問2 `(4)`: `p(t)` 三角波をそのまま積分し `W_off=(1/2)V_dc I_dc T_2` を明示
+- 練習一次問4の `VI t_s/6`: 当該相補的直線ランプ条件だけに限定
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 一般式変更: `0件`
+- 一般式 `E_sw=∫v(t)i(t)dt` 変更: `0件`
 - SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
-- 初回clean blind候補の後編集: `0件`
-- PDF/PPTX同期・修正後clean blind再試験: `未実施`
+
+## Topic 23 clean blind初回
+
+判定: `FAIL / NEEDS_REVISION`（候補ファイルは変更しない）
+
+- 候補固定commit: `17837d40774f12e8348e9b55f250d5573b35f901`
+- R7一次 問4: `5 / 5 PASS`
+- R4一次 問4: `5 / 5 PASS`
+- R2一次 問2: `3 / 5 PASS`
+- H24一次 問6 `(2),(3)`: `2 / 2 PASS`
+- H24二次 問1: `6 / 6 PASS`
+- 一次合計: `15 / 17 PASS`
+- 二次合計: `6 / 6 PASS`
+- 総合: `21 / 23 PASS`
+- 候補固定後の答案変更: `0件`
+- 不一致はR2一次問2 `(2),(4)` の2点だけで、source補強済み
+
+## Topic 23 clean blind補強 同期要否QA
+
+判定: `SYNC_REQUIRED / 3 artifacts`
+
+成果物:
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_remediation_sync_qa.md`
+
+同期判定:
+- 解説PDF: `SYNC_REQUIRED`。補強前sourceから生成されており、「矢印極性→状態表→平均値」と固定R2図3の三角波 `1/2` 判定を反映する必要がある
+- 練習PDF: `SYNC_REQUIRED`。補強後のR2読図対応と `VI t_s/6` の条件限定を反映する必要がある
+- PowerPoint: `SYNC_REQUIRED`。既存内容QAには上記2読図手順が明示されていないため、既存6枚構成の範囲で最小同期する
+
+品質ゲート:
+- 固定5問・23答案要素: `unchanged`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 一般式変更: `0件`
+- SPEC固定8項目変更: `0件`
+- SPEC指定3可視化変更: `0件`
+- 新規問題追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- JR東海7%値・富士電機20%値の誤拡張: `0件`
+- 新たなexact blocker: `0件`
 
 ## Topic 21 H26二次 問1(4)
 
@@ -168,4 +101,4 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## 次工程
 
-Topic 23既存の解説PDF・練習PDF・PowerPointへ、sourceで補強した2点の同期要否をQAする。必要な成果物だけを更新し、表示QA後に修正後clean blind再試験を別記録で実施する。固定EXAM_ALIGNMENT、SPEC、一般式、仮定値／実車値境界は変更しない。
+Topic 23解説PDFを補強後sourceから再生成し、表示・数式・固定23答案要素・clean blind補強2点をQAする。その後、練習PDF、PowerPointを順に必要最小限同期する。3成果物同期後に、初回候補とは別ファイルでclean blind再試験を行う。
