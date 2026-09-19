@@ -4,7 +4,7 @@
 
 ## 状態
 
-解説source、解説PDF、練習source、練習PDF、PowerPoint、独立再解答・記録QAを完了した。現在 `topic_20_progress_metadata_synced / IN_PROGRESS`。固定一次2問＋二次3問・14答案要素は訂正後 `14 / 14 PASS`。進捗・メタデータ記録を現行mainへ同期済み。次工程はTopic 20最終QA再実施。
+解説source、解説PDF、練習source、練習PDF、PowerPoint、独立再解答・記録QA、最終QAを完了した。現在 `topic_20_final_qa_pass / completed`。固定一次2問＋二次3問・14答案要素は訂正後 `14 / 14 PASS`。次工程はTopic 21制作前EXAM_ALIGNMENT。
 
 ## 固定範囲
 
@@ -767,8 +767,8 @@ SPEC指定の「ボード線図」「ゲイン変更時の応答」「安定・�
 
 判定: `PASS / topic_20_explanation_source_complete`
 
-進捗記録: `PASS / topic_20_progress_metadata_synced`
+進捗記録: `PASS / topic_20_final_qa_pass / completed`
 
 ## 次工程
 
-Topic 20最終QAを再実施する。
+Topic 21制作前EXAM_ALIGNMENT。
