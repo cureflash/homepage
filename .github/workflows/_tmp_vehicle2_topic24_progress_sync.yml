@@ -1,0 +1,117 @@
+name: Temporary vehicle2 Topic 24 progress sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/_tmp_vehicle2_topic24_progress_sync.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Sync canonical progress and clean transfer fragments
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          git config user.name 'denken-vehicle2-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          status_path = Path('denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md')
+          handoff_path = Path('denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md')
+
+          s = status_path.read_text(encoding='utf-8')
+          s, n = re.subn(r'- current_status: `topic_24_powerpoint_blocked_[^`]+`', '- current_status: `topic_24_powerpoint_canonical_repair_complete`', s, count=1)
+          assert n == 1
+          s, n = re.subn(r'- next_start: Topic 24 PowerPoint.*', '- next_start: Topic 24完成後clean blind。Topic 24教材だけで固定第二種一次3問＋二次2問、合計5問・17答案要素を独立再解答する', s, count=1)
+          assert n == 1
+          new_status_block = '''## Topic 24 解説画像PowerPoint
+
+- 判定: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
+- GitHub main正本: 16:9 / `6 slides` / `264,329 bytes`
+- GitHub blob SHA: `6ae38920238198426df92ecf6bd99e74ca7214cf`
+- 修復コミット: `22f4bed3aa88ea00e99274c7b59d08198ef1a84b`
+- ZIP integrity (`unzip -t`): `PASS`
+- python-pptx open: `PASS`
+- geometry overflow: `0`
+- LibreOffice PDF変換: `PASS / 6 pages`
+- 固定過去問: 第二種一次3問＋二次2問 = `5 / 5 covered`
+- 一次答案要素: `11 / 11 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計答案要素: `17 / 17 covered`
+- SPEC必須8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- Topic 21 H26二次 問1(4)の丸め注記: `48.1 / 48.0 N·m` を過去問固有差として維持
+- Topic 21一般式変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外主題追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- 完成後clean blind固定過去問再解答: `未実施`
+
+旧正本のZIP integrity blockerは解消。Topic 24全体は `completed` としない。
+
+成果物:
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx`
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_powerpoint_qa.md`
+
+'''
+          s, n = re.subn(r'## Topic 24 解説画像PowerPoint\n.*?(?=## Topic 24 練習PDF)', new_status_block, s, count=1, flags=re.S)
+          assert n == 1
+          status_path.write_text(s, encoding='utf-8')
+
+          h = handoff_path.read_text(encoding='utf-8')
+          h, n = re.subn(r'現在地は `topic_24_powerpoint_blocked_[^`]+`。active topic は Topic 24 `N700S 主電動機設計の比較`。Topic 24全体は未完了。', '現在地は `topic_24_powerpoint_canonical_repair_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。Topic 24全体は未完了。', h, count=1)
+          assert n == 1
+          new_handoff_block = '''## Topic 24 解説画像PowerPoint
+
+GitHub main正本を既存のTopic 24生成sourceから再生成し、正本そのものをQAした。
+
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx`
+- Git blob SHA: `6ae38920238198426df92ecf6bd99e74ca7214cf`
+- `264,329 bytes`
+- 16:9 / `6 slides`
+- ZIP integrity: `PASS`
+- python-pptx open: `PASS`
+- geometry overflow: `0`
+- LibreOffice PDF変換: `PASS / 6 pages`
+- 固定5問・17答案要素: `17 / 17 covered`
+- SPEC必須8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+
+判定: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
+
+旧GitHub正本のZIP integrity / artifact identity blockerは解消した。固定EXAM_ALIGNMENT、一般式、SPEC、未確認実車値境界は変更していない。clean blindへはまだ進めていない。
+
+'''
+          h, n = re.subn(r'## Topic 24 解説画像PowerPoint\n.*?(?=## Topic 24 既存成果)', new_handoff_block, h, count=1, flags=re.S)
+          assert n == 1
+          h, n = re.subn(r'- 解説画像PowerPoint: `BLOCKED / [^`]+`', '- 解説画像PowerPoint: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`', h, count=1)
+          assert n == 1
+          h, n = re.subn(r'## 次の安全な工程\n\n.*\Z', '## 次の安全な工程\n\nTopic 24教材だけで固定第二種一次3問＋二次2問、合計5問・17答案要素をclean blind独立再解答する。完成数は `23 / 39` のまま。\n', h, count=1, flags=re.S)
+          assert n == 1
+          handoff_path.write_text(h, encoding='utf-8')
+          PY
+
+          dir='denken-shinkansen/05_shinkansen_vehicle_2/topics/24_n700s_main_motor_design_comparison'
+          rm -f "$dir"/_tmp_pptx_b64_00.txt "$dir"/_tmp_pptx_b64_01.txt "$dir"/_tmp_pptx_b64_02.txt "$dir"/_tmp_pptx_b64_03.txt "$dir"/_tmp_pptx_b64_04.txt
+          rm -f .github/workflows/_tmp_vehicle2_topic24_progress_sync.yml
+
+          git add denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md "$dir" .github/workflows
+          git commit -m 'Advance Topic 24 after canonical PowerPoint repair'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1
