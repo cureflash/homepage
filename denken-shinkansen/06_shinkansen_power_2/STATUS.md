@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_15_practice_source_complete`
+current_status: `topic_15_practice_pdf_complete`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
@@ -13,7 +13,7 @@ Topic 01〜14は `completed`。
 
 ## Topic 15 current progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QA、練習問題source作成まで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QA、練習問題source作成、練習PDF生成＋PDF QAまで完了。
 
 正式品質ゲート対象は一次3問＋二次2問、計5問・24答案要素で固定したまま変更なし。
 
@@ -49,13 +49,7 @@ Topic 01〜14は `completed`。
 - SPEC固定可視化: `3 / 3 PASS`
 - 固定5問・24答案要素の説明接続: `24 / 24 covered`
 - 数値整合: `PASS`
-- 前回blocker再QA: `3 / 3 PASS`
 - PDF QA総合判定: `PASS`
-
-前回blocker:
-- `系統受容性` の明示的定義 — `RESOLVED`
-- 逆潮流時の `電圧上昇` の最小限の説明 — `RESOLVED`
-- `回生失効の概念` — `RESOLVED`
 
 練習問題source:
 - `topics/15_regenerative_power/15_regenerative_power_practice.md`
@@ -67,7 +61,22 @@ Topic 01〜14は `completed`。
 - SPEC固定項目・時系列電力収支・蓄電あり/なし比較を収録
 - 公式過去問転載、新規正式過去問追加、後続Topic先取り: `0件`
 
-練習PDF、PowerPoint、完成後blindは未着手。
+練習PDF:
+- `topics/15_regenerative_power/15_regenerative_power_practice.pdf`
+- `topics/15_regenerative_power/15_regenerative_power_practice_pdf_qa.md`
+- A4縦 `3ページ`
+- 収録問題 `15 / 15`
+- 一次型 `10 / 10` / 二次型 `5 / 5`
+- 完全解説 `15 / 15`
+- PDFium 200 dpi表示 `3 / 3 PASS`
+- Poppler / PDFium両レンダラ表示 `3 / 3 PASS`
+- ページ外逸脱 `0件` / U+FFFD `0件` / 黒四角 `0件`
+- 一次型正答一意性 `10 / 10 PASS`
+- 独立数値・論理QA `15 / 15 PASS`
+- 固定5問・24答案要素の練習接続 `24 / 24`
+- QA総合判定 `PASS`
+
+PowerPoint、完成後blindは未着手。
 
 ## Topic 14 completion
 
@@ -96,6 +105,7 @@ Topic 15:
 - 解説source固定本文節: `8 / 8` 接続
 - 解説PDF QA: `PASS`
 - 練習source固定答案要素接続: `24 / 24`
+- 練習PDF QA: `PASS`
 - 練習source問題構成: `15問 / 一次型10 / 二次型5`
 - 周辺問題による件数水増し: `0件`
 - Topic 14問題の重複採用: `0件`
@@ -124,8 +134,8 @@ Topic 15:
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — IN_PROGRESS / 解説PDF `PASS` / 練習source complete
+- [ ] Topic 15 — IN_PROGRESS / 解説PDF `PASS` / 練習PDF `PASS`
 
 ## next_start
 
-固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、`15_regenerative_power_practice.md` から練習PDFを生成しPDF QAを行う。PowerPoint、完成後blindはまだ行わない。
+固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、Topic 15のPowerPointを制作しPowerPoint QAを行う。完成後blindはまだ行わない。
