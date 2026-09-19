@@ -8,15 +8,15 @@
 
 Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
-現在地は `topic_26_powerpoint_complete`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
+現在地は `topic_26_blind_candidates_locked`。active topicは Topic 26 `E7・W7系 勾配条件を含む総合走行解析`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT・解説source/PDF・練習source/PDF、直近の同系列worker成果をreconcileした。本run開始後に別workerが `0645396fb165697295edcb1e61fb5efbf204359d` でTopic 26練習PDF＋QAをmainへ反映したため、その成果を正本として採用し、自分の練習PDF作業は破棄して重複を避けた。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 26制作前EXAM_ALIGNMENT・解説source/PDF・練習source/PDF・PowerPoint、直近の同系列worker成果をreconcileした。直近workerが完成させたTopic 26 PowerPoint正本 `999988097102c9674967abc8152c04ebf7904819` とQAを採用し、重複制作はしていない。
 
-その後、次の安全な工程であるTopic 26 PowerPoint生成＋QAを実施した。初回connector経由binary uploadはGitHub正本上で `7,514 bytes` にtruncateされ、ローカルQA対象とのartifact identityが成立しないことを検出したため無効化。原因をbinary転送経路に限定し、PowerPoint自体をGitHub Actions内で再生成してcanonical artifactそのものをZIP・python-pptx・geometry・LibreOffice・pdftotextで再QAした。現在の正本blobは `999988097102c9674967abc8152c04ebf7904819`。
+次の安全な工程として、保存済み正答・公式解答を先に見ず、公式「問題」PDFと現行教材だけを使って固定5問・16答案要素を独立再解答した。R7二次は途中式を含む数値候補6要素、一次4問は選択肢候補10要素を固定し、`26_e7_w7_gradient_integrated_running_analysis_blind_candidates.md` へLOCKした。公式解答との照合はまだ実施していない。
 
-固定済みの第二種一次4問・10答案要素＋二次1問・6答案要素、合計5問・16答案要素は変更していない。SPEC必須7項目・指定3可視化を16:9スライド6枚へ反映し、数値も再確認した。
+固定EXAM_ALIGNMENT、SPEC必須7項目、指定3可視化、実車値境界、Topic 21一般式は変更していない。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -130,6 +130,33 @@ Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 - 初回binary upload truncate: `検出・無効化・再生成済み`
 - exact blocker: `0件`
 
+## Topic 26 clean blind候補固定
+
+成果物:
+- `topics/26_e7_w7_gradient_integrated_running_analysis/26_e7_w7_gradient_integrated_running_analysis_blind_candidates.md`
+
+判定:
+- `LOCKED / NOT_YET_COMPARED_TO_OFFICIAL_ANSWERS`
+- 固定過去問: `5 / 5 candidate fixed`
+- 一次答案要素: `10 / 10 candidate fixed`
+- 二次答案要素: `6 / 6 candidate fixed`
+- 合計答案要素: `16 / 16 candidate fixed`
+- 公式解答参照: `0件`
+- 教材外知識での補完: `0件`
+- candidate lock後の修正: `禁止`
+- exact blocker: `0件`
+
+R7二次固定候補:
+- `(1)` `s1=3.50 %`, `T1=181 N·m`
+- `(2)` `P_c2=798 W`, `P_f=1.55×10^3 W`
+- `(3)` `N2=1.18×10^3 min^-1`, `P2=1.12×10^4 W`
+
+一次固定候補:
+- H26問5 `(1)=(ロ)`, `(4)=(ヲ)`, `(5)=(ニ)`
+- H25問3 `(1)=(ヨ)`
+- R5問2 `(2)=(ホ)`, `(3)=(チ)`, `(5)=(ル)`
+- H27問3 `(1)=(ヘ)`, `(2)=(ヌ)`, `(3)=(ト)`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -142,4 +169,4 @@ Topic 01〜25は最終QAまで `PASS / completed`。完成数は `25 / 39`。
 
 ## 次の安全な工程
 
-Topic 26完成後clean blind独立再解答。固定5問・一次10答案要素・二次6答案要素を、保存済み正答を先に見ず教材だけで再解答し、正答だけでなく根拠説明まで確認する。PASS時のみTopic 26を `completed` として完成数を `26 / 39` へ進める。固定EXAM_ALIGNMENT、実車値境界、Topic 21一般式は変更しない。
+LOCK済みのTopic 26 clean blind候補を編集せず、電気技術者試験センターの公式解答・標準解答と照合する。`16 / 16` が正答かつ根拠説明まで教材内で完結する場合のみ Topic 26 を `completed` として完成数を `26 / 39` へ進める。不一致が1要素でもあれば `NEEDS_REVISION` とし、その要素だけをexactに記録する。固定EXAM_ALIGNMENT、実車値境界、Topic 21一般式は変更しない。
