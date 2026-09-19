@@ -8,13 +8,34 @@
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
-現在地は `topic_25_practice_source_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
+現在地は `topic_25_blocked_canonical_explanation_pdf_identity`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
 
 ## 今回のreconcile
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 25固定EXAM_ALIGNMENT・解説source・解説PDF・PDF QA、直近commitを再確認した。既存workerが解説PDF工程を完了していたため重複作業せず、その次の安全な工程である練習sourceだけを1段階進めた。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 25固定EXAM_ALIGNMENT、解説source、解説PDF/PDF QA、練習source、直近commitを再確認した。
 
-固定5問・28答案要素、SPEC必須10項目、指定3計算・可視化を変更せず、一次8問＋二次4問へ接続した。数値・論理独立再計算 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`。未確認N700S実車値の真値化、未指定走行抵抗モデル追加、Topic 21一般式変更、SPEC外追加はいずれも0件。
+既存workerがこのrun中にTopic 25練習sourceまで進めたため、同工程は重複せずreconcileした。練習sourceは一次8問＋二次4問、固定5問・28答案要素へ接続済み。
+
+その後、GitHub main正本の解説PDFについてartifact identity不整合を検出したため、後続工程を停止した。
+
+## Topic 25 exact blocker
+
+正本:
+- path: `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation.pdf`
+- GitHub blob SHA: `aeec135e3fcecd5002623c8ab8de7d5bf76bd5ea`
+- GitHub Contents API size: `9,982 bytes`
+- PDF末尾 `startxref`: `13270`
+
+直前QA記録:
+- file size: `13,744 bytes`
+- SHA-256: `991b93eddf35c4676ebb6e25f5676d1749bae78133f2d162db67262d543d1a74`
+- PDFium/Poppler: `3 / 3 PASS`
+
+`startxref=13270` がGitHub正本長 `9982` を超えており、正本は直前QA済みartifactと同一ではない。したがって直前のrender PASSをGitHub正本の品質証拠として採用しない。
+
+判定: `BLOCKED / CANONICAL_ARTIFACT_IDENTITY_MISMATCH`。
+
+解消条件: GitHub main正本を正常なPDFへ置換し、その正本そのものについてページ数・file size・SHA-256・PDFium/Poppler render・文字抽出・固定5問28答案要素・SPEC必須10項目・指定3可視化を再QAし、artifact identityを一致させる。
 
 ## Topic 25 練習source
 
@@ -31,147 +52,26 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 - 二次答案要素: `8 / 8 connected`
 - 合計答案要素: `28 / 28 connected`
 - SPEC必須10項目: `10 / 10 covered`
-- SPEC指定3計算・可視化: `3 / 3 aligned`
 - 数値・論理独立再計算: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 未確認N700S電池値の真値化: `0件`
 - 未指定走行抵抗モデル追加: `0件`
 - Topic 21一般式変更: `0件`
-- SPEC外追加: `0件`
-- 完成後clean blind: `PENDING`
-- 新たなexact blocker: `0件`
 
-## Topic 25 解説PDF
+## Topic 25 固定EXAM_ALIGNMENT
 
-成果物:
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation.pdf`
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation_pdf_qa.md`
-
-判定:
-- `PASS / EXPLANATION_PDF_COMPLETE`
-- A4縦: `3 pages`
-- file size: `13,744 bytes`
-- SHA-256: `991b93eddf35c4676ebb6e25f5676d1749bae78133f2d162db67262d543d1a74`
-- PDFium render: `3 / 3 PASS`
-- Poppler render: `3 / 3 PASS`
-- 固定過去問: `5 / 5 covered`
-- 一次答案要素: `20 / 20 covered`
-- 二次答案要素: `8 / 8 covered`
-- 合計答案要素: `28 / 28 covered`
-- SPEC必須10項目: `10 / 10 covered`
-- SPEC指定3計算・可視化: `3 / 3 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 未確認N700S電池値の真値化: `0件`
-- 未指定走行抵抗モデル追加: `0件`
-- Topic 21一般式変更: `0件`
-- SPEC外追加: `0件`
-- 完成後clean blind: `PENDING`
-- 新たなexact blocker: `0件`
-
-## Topic 25 解説source
-
-成果物:
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design_explanation_source.md`
-
-判定:
-- `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 一次説明責務: `20 / 20 covered`
-- 二次説明責務: `8 / 8 covered`
-- 合計説明責務: `28 / 28 covered`
-- SPEC必須10項目: `10 / 10 covered`
-- SPEC指定3計算・可視化: `3 / 3 defined`
-- 3段階例題: `3 / 3`
-- 完成後clean blind: `PENDING`
-
-H23二次「機械・制御」問3について、充電時の降圧チョッパ、放電時の昇圧チョッパ、Cレート、内部抵抗を含む端子電圧、充放電時間、`I^2R` 損失と充電効率理由を教材内で再現できる形にした。
-
-N700S実車接続は東芝インフラシステムズの一次メーカー資料で、N700S確認試験車へのSCiB採用とJR東海とのバッテリー自走システム共同開発までを確認した。電池電圧、Ah、Wh、セル数、直並列数、Cレート、実放電電流、各効率は確認できないため実値化していない。設計計算の数値はすべて教材用仮定値と明記した。
-
-速度条件―必要電力はSPECの指定可視化として、速度と必要機械出力を「与件の仮定入力」として比較するだけに限定した。未指定の走行抵抗モデルは追加していない。
-
-## Topic 25 制作前EXAM_ALIGNMENT
-
-固定公式過去問:
 1. R8 一次「機械」問5 `(1)〜(5)` — 5答案要素
 2. R4 一次「機械」問6 `(1)〜(5)` — 5答案要素
 3. R2 一次「機械」問4 `(1)〜(5)` — 5答案要素
 4. R1 一次「機械」問4 `(1)〜(5)` — 5答案要素
 5. H23 二次「機械・制御」問3 `(1)〜(4)` — 8答案要素
 
-集計:
-- 一次: `4問 / 20答案要素`
-- 二次: `1問 / 8答案要素`
-- 合計: `5問 / 28答案要素`
-- 二次記述・計算問題: `1問`
-- SPEC必須10項目: `10 / 10 fixed`
-- SPEC指定3計算・グラフ: `3 / 3 fixed`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 未確認N700S電池値の真値化: `0件`
-- SPEC外追加: `0件`
-- 完成後clean blind: `PENDING`
-
-制作前成果物:
-- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design.md`
+一次 `20`、二次 `8`、合計 `28`。固定EXAM_ALIGNMENT変更 `0件`。
 
 ## Topic 25 固定境界
 
-扱うのは系列SPECの次だけ:
-- 電池電圧、Ah、Wh、直列・並列、Cレート、放電電流、電池効率、インバータ効率、モーター効率、必要容量
-- 走行時間―必要電力量、速度条件―必要電力、効率―必要電池容量
-
-インバータ効率・モーター効率は固定過去問5問の直接答案要素とは主張せず、SPEC必須のエネルギー収支として扱う。N700Sの電池電圧、Ah、Wh、セル数、直並列数、Cレート、実放電電流、各効率は、一次資料・メーカー資料で確認できない値を真値化しない。
-
-## Topic 24 最終品質ゲート
-
-固定EXAM_ALIGNMENT:
-1. R7 一次「機械」問2 `(1)〜(5)` — 5答案要素
-2. R4 一次「機械」問2 `(3)〜(5)` — 3答案要素
-3. R2 一次「機械」問3 `(1),(4),(5)` — 3答案要素
-4. R3 二次「機械・制御」問1 `(3),(4)` — 2答案要素
-5. R7 二次「機械・制御」問2 `(1),(3)` — 4答案要素
-
-公式照合結果:
-- 固定5問: `5 / 5 PASS`
-- 一次答案要素: `11 / 11 PASS`
-- 二次答案要素: `6 / 6 PASS`
-- 合計: `17 / 17 PASS`
-- 固定候補の公式照合後編集: `0件`
-- 教材外知識による補完: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 21一般式変更: `0件`
-- SPEC外追加: `0件`
-- 未確認N700S実車値の真値化: `0件`
-- 新たなexact blocker: `0件`
-
-判定: `PASS / CLEAN_BLIND_COMPLETE`。Topic 24全体は `PASS / COMPLETED`。
-
-## Topic 24 既存成果
-
-- 制作前EXAM_ALIGNMENT: `PASS / EXAM_ALIGNMENT_COMPLETE`
-- 解説source: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
-- 練習source: `PASS / PRACTICE_SOURCE_COMPLETE`
-- 練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
-- 解説画像PowerPoint: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
-- 完成後clean blind: `PASS / CLEAN_BLIND_COMPLETE`
-- 最終判定: `PASS / COMPLETED`
-
-PowerPoint正本:
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx`
-- Git blob SHA: `6ae38920238198426df92ecf6bd99e74ca7214cf`
-- `264,329 bytes`
-- 16:9 / `6 slides`
-- ZIP integrity / python-pptx / LibreOffice: `PASS`
-- 固定17答案要素: `17 / 17 covered`
-- SPEC必須8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-
-## N700S実車接続・境界
-
-Topic 24では富士電機技報 2020 vol.93 no.2 p.95（5）でN700S向け主電動機の6極化を一次メーカー資料として確認済み。同資料の「駆動システム全体で約20%軽量化」はSiC素子搭載、主電動機6極化、主変圧器冷却方式見直しを合わせた結果として扱い、主電動機単体・6極化単独の20%軽量化とは扱わない。
-
-Topic 25では東芝インフラシステムズ2018-03-10公表資料でN700S確認試験車へのSCiB採用とバッテリー自走システム共同開発までを一次メーカー資料で確認した。未確認の電池数値は真値化しない。
+N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用・バッテリー自走共同開発まで。未確認の電池電圧、Ah、Wh、セル数、直並列数、Cレート、実放電電流、各効率を真値化しない。速度条件―必要電力は与件の仮定入力比較に限定し、未指定走行抵抗モデルを追加しない。
 
 ## Topic 21 H26二次 問1(4)
 
@@ -179,4 +79,4 @@ Topic 25では東芝インフラシステムズ2018-03-10公表資料でN700S確
 
 ## 次の安全な工程
 
-Topic 25練習PDFを生成し、表示・数式・単位・一次正答一意性・二次記述解答・固定28答案要素coverageをQAする。完成数は `24 / 39`。
+Topic 25解説PDFのGitHub正本artifactを修復し、正本再QAを完了する。修復完了まで練習PDF以降へ進まない。
