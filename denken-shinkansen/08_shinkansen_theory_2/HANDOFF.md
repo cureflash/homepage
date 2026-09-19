@@ -6,25 +6,22 @@
 
 Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_21_explanation_pdf_complete`
+current_status: `topic_21_practice_pdf_complete`
 
 active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QAまで完了し、`PASS / EXPLANATION_PDF_COMPLETE`。次工程は練習問題source＋練習PDF。
+Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QAまで完了し、`PASS / PRACTICE_PDF_COMPLETE`。次工程は解説画像PowerPoint＋表示QA。
 
-## Topic 21 source / PDF
+## Topic 21 成果物
 
-- source: `topics/21_integrated_simulation/21_integrated_simulation.md`
+- main source: `topics/21_integrated_simulation/21_integrated_simulation.md`
 - 解説PDF: `topics/21_integrated_simulation/21_integrated_simulation_explanation.pdf`
 - 解説PDF QA: `topics/21_integrated_simulation/21_integrated_simulation_explanation_pdf_qa.md`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- 練習source: `topics/21_integrated_simulation/21_integrated_simulation_practice.md`
+- 練習PDF: `topics/21_integrated_simulation/21_integrated_simulation_practice.pdf`
+- 練習PDF QA: `topics/21_integrated_simulation/21_integrated_simulation_practice_pdf_qa.md`
+- stage: `PRACTICE_PDF_COMPLETE`
 - completion: `in_progress`
-- 制作前blind独立再解答: `21 / 21 PASS`
-- 公式標準解答照合: `21 / 21一致`
-- 候補答案変更: `0件`
-- 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 解説PDF＋表示/収録QA: `PASS / EXPLANATION_PDF_COMPLETE`
-- 固定5問・21答案要素のPDF接続: `21 / 21`
 
 ## Topic 21 SPEC固定範囲
 
@@ -77,14 +74,11 @@ PWMインバータ
 - 二次: `1問・4答案要素 / 4 / 4 PASS`
 - 合計: `21 / 21 PASS`
 - 二次数合わせ: `0件`
+- 関連候補調査: `9件`
 
-関連候補は9件を確認。H28二次「機械・制御」問3 (3)(4)は高調波の直接関連候補だが、H24一次と論点が重なるため固定ゲートには採用しない。H30二次「電力・管理」問5、R7二次「電力・管理」問3、R6二次「機械・制御」問3は設備設計・単位法・制御等の固定範囲外要素が大きいため非採用。
-
-令和8年度二次試験は2026-11-15実施予定で、2026-09-19時点では未実施。
+令和8年度二次試験は2026-11-15実施予定で、2026-09-19時点では未実施。既実施年度から固定範囲に直接対応するR2二次「電力・管理」問6を採用した。
 
 ## 制作前blind独立再解答結果
-
-公式標準解答・保存済み正答を先に見ず、固定5問・21答案要素を独立導出してGitHubへ保存した後に公式標準解答へ照合した。
 
 - R8 一次 理論 問3: `5 / 5一致`
 - R8 一次 理論 問4: `5 / 5一致`
@@ -108,28 +102,37 @@ PWMインバータ
 - 本試験標準: 複数負荷のP-Q合算 → 容量制約 → 力率改善
 - 複合: RL過渡、高調波合成、直角相ブリッジ校正を別々に独立検算
 
-Topic 01〜20にない新論点追加 `0件`、実車主回路・East i内部回路・未公開定数の推測追加 `0件`、仕様追加 `0件`。
-
-## Topic 21 解説PDF＋表示/収録QA
+## 解説PDF＋表示/収録QA
 
 - A4縦4ページ
 - 200 dpi全ページ表示QA: `4 / 4 PASS`
-- PDF構造確認: `PASS`
 - 文字抽出QA: `PASS`
-- SHA-256: `411ba6a7ca98e58c4bf5350d6b0467acc80f1a9fcdf31d2ab90da16988aab478`
-- SPEC固定範囲: `5 / 5収録`
-- 過去問から逆算した必須説明: `10 / 10収録`
 - 固定5問・21答案要素: `21 / 21接続`
 - 3段階例題: `3 / 3収録`
 - 例題数値独立再計算: `3 / 3 PASS`
-- 数式・単位・P/Q符号・n次位相差・零位条件の表示: `PASS`
 - クリッピング/文字重なり/文字化け/ページ欠落: `0件`
-- 二次採用: `1問・4答案要素`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## 練習問題source＋練習PDF QA
+
+- 問題数: `12問`
+- 形式: `五肢択一11問 + 二次記述型1問（4小問）`
+- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
+- 固定一次4問・17答案要素: `17 / 17接続`
+- 固定二次1問・4答案要素: `4 / 4接続`
+- 合計: `5問・21 / 21答案要素`
+- SPEC固定範囲: `5 / 5接続`
+- 数値計算独立再計算: `11 / 11 PASS`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 問1〜問12本文・解答抽出: `12 / 12`
+- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
 - 二次数合わせ: `0件`
 - Topic 01〜20にない新論点追加: `0件`
 - 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
 - 仕様追加: `0件`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ## 公式正本・参考
 
@@ -151,11 +154,10 @@ Topic 01〜20にない新論点追加 `0件`、実車主回路・East i内部回
 
 ## 次工程
 
-Topic 21の練習問題source＋練習PDF。
+Topic 21の解説画像PowerPoint＋表示QA。
 
-- 系列SPEC第21章と固定5問・21答案要素だけで設計する。
-- 解説PDFの `回路・交流・過渡・高調波・計測` を横断して解かせる。
-- 一次選択式だけでなく、採用済みR2二次「電力・管理」問6に対応する途中式・理由説明も含める。
-- 数値計算は式、代入、単位、中間値、最終値、検算まで示す。
+- 系列SPEC第21章と固定5問・21答案要素だけで構成する。
+- `回路・交流・過渡・高調波・計測` の接続を視覚化する。
 - 実車主回路・East i内部回路・未公開定数を推測しない。
-- 二次問題を件数合わせで追加しない。
+- 固定範囲外の新論点を追加しない。
+- PowerPoint完了後もTopic 21は未完了。完成後独立再解答と最終QAを通過して初めて `completed` とする。
