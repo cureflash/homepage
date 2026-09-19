@@ -8,49 +8,50 @@
 
 Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
-現在地は `topic_21_h26_torque_discrepancy_diagnosed`。active topic は Topic 21 `高速域の速度・けん引力・出力制御`。
+現在地は `topic_21_explanation_source_h26_note_complete`。active topic は Topic 21 `高速域の速度・けん引力・出力制御`。
+
+## reconcile
+
+最新mainと直近コミットを確認し、同系列workerで既に完了していたTopic 21の解説PDF、練習source/PDF、PowerPoint、clean blind候補固定、公式照合、不一致診断を再制作していない。H26二次「機械・制御」問1 `(4)` の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を採用した丸め差として確定済みの診断を継承した。
 
 ## 今回実施
 
-H26二次「機械・制御」問1 `(4)` の固定候補 `48.0 N·m` と公式標準解答 `48.1 N·m` の不一致原因だけを診断した。
+Topic 21解説sourceへ、H26二次「機械・制御」問1 `(4)` の過去問固有注記だけを追加した。
 
-正本確認:
-- 公式問題: https://www.shiken.or.jp/chief/upload/20141123_ch_second_q02.pdf
-- 公式標準解答: https://www.shiken.or.jp/chief/upload/20141123_ch_second_a01.pdf
-
-独立再計算:
-- `I2'=22.4308861637 A`
-- 高精度 `π` では `TL=48.0467752730 N·m → 48.0 N·m`
-- 公式標準解答は `I2'=22.430 A` と同じトルク式を掲載し、`48.067 → 48.1 N·m`
-- 公式掲載値 `I2'=22.430 A` と `π=3.14` を使うと `48.067347... N·m` となり、公式掲載中間値 `48.067` を再現する
-
-原因診断:
-- 教材の式誤り: `なし`
-- 相電圧換算誤り: `なし`
-- 極数/極対数誤り: `なし`
-- すべり・機械出力・回転速度処理の誤り: `なし`
-- 固定候補計算誤り: `なし`
-- 不一致原因: `公式標準解答が当該計算でπ=3.14相当の数値処理を採用したことによる丸め差`
-
-問題冊子の確認範囲では `π=3.14` の明示指定はない。したがって一般公式や候補固定記録を改変せず、H26二次 問1(4) 固有の数値処理差だけを教材へ注記するのが最小修正となる。
+注記内容:
+- 一般式 `P=Tω`、`ω=2πN/60` は変更しない
+- 高精度 `π` では `TL=48.046775... N·m → 48.0 N·m`
+- 公式標準解答は `I2'=22.430 A`、`48.067 → 48.1 N·m`
+- `π=3.14` なら公式掲載中間値 `48.067347... N·m` を再現できる
+- 差は当該過去問固有の数値処理差として扱う
+- H26二次 問1(4) の公式照合では公式標準解答 `48.1 N·m` を正本とする
+- 他の例題・練習問題・一般式の `π` を `3.14` へ変更しない
 
 成果物:
-- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_h26_q1_4_discrepancy_diagnosis.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source.md`
+- 既存診断: `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_h26_q1_4_discrepancy_diagnosis.md`
+
+## 派生同期判定
+
+- 解説PDF: `要同期`
+- 一般式・3段階例題・SPEC指定3可視化: `変更不要`
+- 練習source/PDF・正答: `変更不要`
+- PowerPoint: 解説PDF同期後、当該注記を収録すべき箇所だけ同期判定
 
 ## 品質ゲート状態
 
-- clean blind公式照合: `5 / 6 PASS`
-- H26二次 問1(4): `原因診断完了 / 教材注記待ち`
+- clean blind公式照合の既存記録: `5 / 6 PASS`
+- H26二次 問1(4): `原因診断完了 / 解説source注記済み / 解説PDF同期待ち`
 - 候補答案変更: `0件`
 - 他5答案要素変更: `0件`
 - 固定問題差替え: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定SPEC外追加: `0件`
 - 練習問題・正答変更: `0件`
-- PDF/PPTX変更: `0件`
+- 一般式変更: `0件`
 - 未確認実車値の真値化: `0件`
 - Topic 21: まだ `completed` にしない
 
 ## 次の安全な工程
 
-Topic 21解説sourceへ「H26二次 問1(4) は公式標準解答が `π=3.14` 相当で `48.1 N·m`、高精度πでは `48.0 N·m`」という過去問固有注記だけを追加する。一般式 `P=Tω`、`ω=2πN/60`、候補固定ファイル、他5答案要素、固定EXAM_ALIGNMENT、SPEC範囲は変更しない。注記後に派生成果物へ再同期すべき範囲を判定する。
+Topic 21解説PDFへH26二次 問1(4) の過去問固有注記を同期し、PDFの表示・文字抽出・内容QAを再実施する。その後でPowerPoint同期要否とclean blind再確認へ進む。
