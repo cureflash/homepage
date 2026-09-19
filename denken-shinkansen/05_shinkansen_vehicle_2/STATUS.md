@@ -74,15 +74,16 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## Topic 23 clean blind補強 同期要否QA
 
-判定: `SYNC_REQUIRED / 3 artifacts`
+判定: `SYNC_REQUIRED / 3 ARTIFACTS`
 
-成果物:
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_remediation_sync_qa.md`
+正本QA:
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_post_blind_artifact_sync_qa.md`
+- QA commit: `d2b9e2e38b784c266bdf1df074e23807e1990955`
 
 同期判定:
-- 解説PDF: `SYNC_REQUIRED`。補強前sourceから生成されており、「矢印極性→状態表→平均値」と固定R2図3の三角波 `1/2` 判定を反映する必要がある
-- 練習PDF: `SYNC_REQUIRED`。補強後のR2読図対応と `VI t_s/6` の条件限定を反映する必要がある
-- PowerPoint: `SYNC_REQUIRED`。既存内容QAには上記2読図手順が明示されていないため、既存6枚構成の範囲で最小同期する
+- 解説PDF: `REGENERATE_REQUIRED`。補強後sourceの「矢印極性→状態表→平均値」と固定R2図3の三角波 `1/2` 判定を反映する
+- 練習PDF: `REGENERATE_REQUIRED`。R2読図補強と `VI t_s/6` の条件限定を反映する
+- PowerPoint: `REGENERATE_REQUIRED`。既存内容QAには固定R2向け2読図手順が明示されていないため、既存6枚構成の範囲で最小同期する
 
 品質ゲート:
 - 固定5問・23答案要素: `unchanged`
