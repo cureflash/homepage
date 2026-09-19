@@ -11,19 +11,19 @@
 - Topic 21先取り、未確認実車制御値の実車値化、固定公式過去問の個別正答保存は追加していない。
 
 ## 現行練習PDF
-- A4縦・15ページ。
+- A4縦・3ページ・2段組。
 - canonical source blob: `f6ff974780df1b0c53ebbcfd02df53ef554c9269`
-- PDF Git blob: `a66664f4e7eb231717b145a4cb3d630730163ac7`
-- PDF SHA-256: `d7630937c92bbd47c57cbdfeb1ca0ee740ff5cbb197b2d74bee132d361100b25`
-- PDF size: `25493 byte`
+- PDF Git blob: `da2093fe5f68f961c9e6a76e99b45746221fc69a`
+- PDF SHA-256: `24b3edbde90fb233985c12e6bfe94c58e3a0497d0fae5be02ba46642d1d4ef04`
+- PDF size: `11535 byte`
 
 ## 表示QA
-- Poppler `pdftoppm` 200 dpiで全15ページをPNGレンダリング: `15 / 15 PASS`。
+- Poppler `pdftoppm` 200 dpiで全3ページをPNGレンダリング: `3 / 3 PASS`。
 - 全ページ同一レンダリング寸法: `1654x2339 px`。
-- `pdftocairo` 160 dpiでも全15ページをレンダリング: `15 / 15 PASS`。全ページ `1323x1871 px`。
+- `pdftocairo` 160 dpiでも全3ページをレンダリング: `3 / 3 PASS`。全ページ `1323x1871 px`。
 - ページ外への内容はみ出し: `0件`。抽出word bboxも全件ページ内。
-- bbox最小余白: `30.53 pt`。
-- 異常な黒塗り領域: `0件`。200 dpiレンダリングの黒画素率最大値は `0.00991`。
+- bbox最小余白: `20.25 pt`。
+- 異常な黒塗り領域: `0件`。200 dpiレンダリングの黒画素率最大値は `0.02638`。
 
 判定: `PASS`。
 
@@ -31,8 +31,8 @@
 - `pdftotext -layout` 成功。
 - Unicode置換文字: `0件`。
 - `(cid:)`: `0件`。
-- `問1` / `問10` / `問11` / `問15`、`ラウス` / `ゲイン余裕` / `位相余裕` / `PI` を抽出確認。
-- bbox抽出語数: `811`。
+- `問1` / `問10` / `問11` / `問15`、`ラウス` / `ゲイン余裕` / `位相余裕` / `PI` / `約` を抽出確認。
+- bbox抽出語数: `662`。
 
 判定: `PASS`。
 
