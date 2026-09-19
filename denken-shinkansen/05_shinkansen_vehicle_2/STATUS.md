@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `21 / 39`
-- current_status: `topic_22_preproduction_exam_alignment_complete`
+- current_status: `topic_22_explanation_source_complete`
 - last_completed_topic: `21 高速域の速度・けん引力・出力制御`
 - active_topic: `22 E5系 再粘着制御`
-- next_start: Topic 22 解説source作成。固定した第二種一次2問＋二次3問、計5問・11答案要素とSPEC固定8項目・3可視化を変更しない
+- next_start: Topic 22 解説PDF作成＋PDF QA。固定した第二種一次2問＋二次3問、計5問・11答案要素、SPEC固定8項目・3可視化を変更しない
 
 ## 完了済み
 
@@ -47,6 +47,27 @@ Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 記録:
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control.md`
 
+## Topic 22 解説source
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+- 固定公式過去問: `5 / 5` 維持
+- 固定答案要素: `11 / 11 covered`
+- 一次答案要素: `3 / 3 covered`
+- 二次答案要素: `8 / 8 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3` 再生成条件あり
+- 3段階例題: `3 / 3`
+- 固定問題差替え: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 公式解答・標準解答の個別正答保存: `0件`
+- 固定SPEC外追加: `0件`
+- 未確認E5系実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
+
+記録:
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation_source.md`
+
 ## 次工程
 
-Topic 22解説sourceを作成する。固定5問・11答案要素、SPEC固定8項目、指定3可視化を変更せず、教材だけで各要求技能を解ける本文・3段階例題・可視化再生成条件を作る。
+Topic 22解説PDFをsourceから生成し、表示・文字抽出・固定11答案要素・SPEC固定8項目・指定3可視化をPDF QAする。

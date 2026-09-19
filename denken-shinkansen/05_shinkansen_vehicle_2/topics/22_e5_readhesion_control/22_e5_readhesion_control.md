@@ -4,14 +4,15 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 22固定範囲だけを対象とし、第二種一次2問＋二次3問、計5問・11答案要素を完成後品質ゲートとして固定する。
+制作前EXAM_ALIGNMENTと解説source作成まで完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 22固定範囲だけを対象とし、第二種一次2問＋二次3問、計5問・11答案要素を完成後品質ゲートとして固定したまま、固定8項目・指定3可視化・3段階例題を解説sourceへ実装した。
 
-current_status: `topic_22_preproduction_exam_alignment_complete`
+current_status: `topic_22_explanation_source_complete`
 
 現行成果物:
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation_source.md`
 
-次工程: Topic 22 解説source作成。
+次工程: Topic 22 解説PDF作成＋PDF QA。
 
 制作前段階では公式解答・標準解答の個別正答記号・最終数値を保存しない。完成後、教材だけでclean blind独立再解答した候補を先に固定してから公式解答・標準解答と照合する。
 
@@ -191,4 +192,20 @@ current_status: `topic_22_preproduction_exam_alignment_complete`
 - 固定SPEC外追加: `0件`
 - 未確認E5系実車値の真値化: `0件`
 
-次工程は解説source作成。固定5問・11答案要素とSPEC固定範囲を変更せず、教材だけで各要求技能を解ける説明・3段階例題・3可視化再生成条件を作る。
+## 解説source工程
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+- 固定5問・11答案要素: 変更なし、`11 / 11 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3` 再生成条件を固定
+- 3段階例題: `3 / 3`
+- 公式解答・標準解答の個別正答保存: `0件`
+- 固定SPEC外追加: `0件`
+- 未確認E5系実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
+
+記録:
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_explanation_source.md`
+
+次工程は解説PDF作成＋PDF QA。
