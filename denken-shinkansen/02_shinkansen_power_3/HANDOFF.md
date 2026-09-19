@@ -8,7 +8,7 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 16の初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX QA、SPEC境界はPASS。一方、旧工程を指す進捗記録7箇所が現在地と不一致のため、判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `15 / 16` のまま。
+Topic 16の初回最終QAで唯一FAILだった進捗記録整合を1段階進め、旧工程を指していた7箇所の進捗記録を現在地へ同期した。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、完成後独立再解答結果は変更していない。完成数は `15 / 16` のまま。
 
 最終QA: `topics/16_power_system_integration/16_power_system_integration_final_qa.md`
 source: `topics/16_power_system_integration/16_power_system_integration.md`
@@ -49,15 +49,17 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - 未確認新幹線実設備値の真値化: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - 初回最終QAの唯一の未達カテゴリ: 進捗記録整合
+- 旧工程を指した進捗記録7箇所同期: 完了
+- 最終QA再実施: 未実施
 
-## 進捗記録の未同期7箇所
-1. `STATUS.md` — `current_status` が `topic_16_main_source_synced`、`next_start` が最終QA実施のまま。
-2. `topics/16_power_system_integration/16_power_system_integration.md` — 状態、§19、次工程が最終QA未実施／最終QA実施のまま。
-3. `topics/16_power_system_integration/16_power_system_integration_explanation_qa.md` — 次工程が練習問題source作成のまま。
-4. `topics/16_power_system_integration/16_power_system_integration_practice_source.md` — 状態が `practice_source_complete`、次工程が練習PDF作成のまま。
-5. `topics/16_power_system_integration/16_power_system_integration_practice_qa.md` — 次工程がPowerPoint作成のまま。
-6. `topics/16_power_system_integration/16_power_system_integration_powerpoint_qa.md` — 次工程が完成後独立再解答のまま。
-7. `topics/16_power_system_integration/16_power_system_integration_independent_reanswer.md` — 結論が最終QA未実施、次工程がmain source同期のまま。
+## 進捗記録同期済み7箇所
+1. `STATUS.md` — 現在地を進捗記録同期完了・最終QA再実施待ちへ更新。
+2. `topics/16_power_system_integration/16_power_system_integration.md` — 状態、§19、次工程を初回最終QA後の現在地へ同期。
+3. `topics/16_power_system_integration/16_power_system_integration_explanation_qa.md` — 次工程を最終QA再実施へ同期。
+4. `topics/16_power_system_integration/16_power_system_integration_practice_source.md` — 状態と次工程を現在地へ同期。
+5. `topics/16_power_system_integration/16_power_system_integration_practice_qa.md` — 次工程を最終QA再実施へ同期。
+6. `topics/16_power_system_integration/16_power_system_integration_powerpoint_qa.md` — 次工程を最終QA再実施へ同期。
+7. `topics/16_power_system_integration/16_power_system_integration_independent_reanswer.md` — 結論・次工程を現在地へ同期。
 
 ## 範囲境界
 - Topic 01〜15の既習事項を `発電 → 送電 → 変電 → 相変換 → き電 → 架線 → 車両` と回生時の逆方向まで一本につなぐ総復習に限定する。
@@ -66,7 +68,7 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - 実設備値は一次資料確認済みのものだけを実値とする。
 
 ## 次
-上記7箇所の進捗記録を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、完成後独立再解答結果は変更しない。同期後にTopic 16の最終QAを再実施し、全件PASSの場合のみ `completed` とする。
+Topic 16の最終QAを再実施する。全件PASSの場合のみ `completed` とし、完成数を `16 / 16` へ更新する。今回の進捗記録同期では固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、完成後独立再解答結果を変更しない。
 
 ## 直前完了テーマ
 Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
