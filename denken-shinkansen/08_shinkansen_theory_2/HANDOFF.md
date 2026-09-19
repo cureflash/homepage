@@ -6,103 +6,107 @@
 
 Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_20_completed`
+current_status: `topic_21_exam_alignment_complete`
 
 active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施を通過し、`completed` 状態同期まで完了。初回最終QAの唯一のblockerだった主source進捗記録不整合は解消済み。次工程はTopic 21の制作前EXAM_ALIGNMENT。
+Topic 21は制作前EXAM_ALIGNMENTを完了し、`PASS / EXAM_ALIGNMENT_COMPLETE`。次工程は制作前blind独立再解答。
 
-## Topic 20 固定範囲
+## Topic 21 source
 
-- 測定誤差
-- 絶対誤差
-- 相対誤差
-- 精度
-- 有効数字
-- ブリッジ回路
-- 波形計測
-- オシロスコープ
-- A/D変換
-- サンプリング
-- 標本化
-- エイリアシング
+- `topics/21_integrated_simulation/21_integrated_simulation.md`
+- stage: `EXAM_ALIGNMENT_COMPLETE`
+- completion: `in_progress`
 
-East iは電気・電子計測の導入に限定する。公開資料で確認できない内部測定回路、ADC分解能、サンプリング周波数、センサ方式を推測で実値化しない。
+## Topic 21 SPEC固定範囲
 
-## Topic 20 固定EXAM_ALIGNMENT
+系列SPEC第21章の範囲だけを扱う。
 
-品質ゲート対象は一次5問・25答案要素。
+- 回路
+- 交流
+- 過渡
+- 高調波
+- 計測
 
-- R8 一次 理論 問4: 零位法、90°位相差、標準抵抗・未知容量、検出器零条件、周波数変更から校正。
-- R7 一次 理論 問4: 誘導分圧器、標準・未知枝電流、検出器零条件、複素インピーダンス比、平衡式。
-- R6 一次 理論 問6: 交流ブリッジ、寄生容量、誤差、補償・ガード、未知量算出。
-- H24 一次 理論 問7: 入力R/C、減衰比、プローブR/C、時定数一致、周波数補償。
-- H20 一次 理論 問6: 内部抵抗、二接続法、指示値と真値、誤差率、接続選択。
+簡略モデル:
 
-固定過去問に直接現れないA/D変換、サンプリング、標本化、エイリアシングは系列SPEC必須として教材・練習問題で補う。存在しない公式過去問へ接続しない。
+```text
+25kV電源
+↓
+架線等価回路
+↓
+主変圧器
+↓
+整流・DCリンク
+↓
+PWMインバータ
+↓
+簡略負荷
+↓
+電流・電圧センサ
+↓
+測定
+```
 
-## 二次試験の扱い
+入力例・出力例は系列SPEC記載項目の範囲に限定する。計算プログラムで連続特性・波形を出す場合は代表点を手計算または別手法で独立再計算する。
 
-- 系列08は一次理論中心。
-- Topic 20固定範囲だけで完答する直接対応記述問題を件数合わせで採用しない。
-- 二次採用: `0問`
+実車主回路やEast i内部回路を再現しない。公開資料で確認できない実車定数、PWM方式・周波数、センサ方式、サンプリング条件を推測で真値化しない。
+
+## Topic 21 固定EXAM_ALIGNMENT
+
+品質ゲート対象: `5問・21答案要素`。
+
+| 年度 | 区分・科目・問 | 要求 | 答案要素 |
+|---|---|---|---:|
+| R8 | 一次 理論 問3 | 回路網、閉路方程式、テブナン、相反定理 | 5 |
+| R8 | 一次 理論 問4 | 校正、零位法、検出器零条件、未知量算出 | 5 |
+| R8 | 一次 理論 問6 | RC・RL・RLC過渡、初期条件、自由応答、蓄積エネルギー | 5 |
+| H24 | 一次 機械 問3 (4)(5) | 基本波、高調波、位相差、合成 | 2 |
+| R2 | 二次 電力・管理 問6 (1)〜(3) | P・Q・S、総合力率、P-Qベクトル、無効電力補償 | 4 |
+
+集計:
+- 一次: `4問・17答案要素`
+- 二次: `1問・4答案要素`
 - 二次数合わせ: `0件`
 
-## Topic 20 成果物
+関連候補は9件を確認。H28二次「機械・制御」問3 (3)(4)は高調波の直接関連候補だが、H24一次と論点が重なるため固定ゲートには採用しない。H30二次「電力・管理」問5、R7二次「電力・管理」問3、R6二次「機械・制御」問3は設備設計・単位法・制御等の固定範囲外要素が大きいため非採用。
 
-- source: `topics/20_east_i_measurement/20_east_i_measurement.md`
-- 制作前blind独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_blind_reanswer.md`
-- 解説PDF: `topics/20_east_i_measurement/20_east_i_measurement_explanation.pdf`
-- 解説PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_explanation_pdf_qa.md`
-- 練習source: `topics/20_east_i_measurement/20_east_i_measurement_practice.md`
-- 練習PDF: `topics/20_east_i_measurement/20_east_i_measurement_practice.pdf`
-- 練習PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_practice_pdf_qa.md`
-- PowerPoint: `topics/20_east_i_measurement/20_east_i_measurement_images.pptx`
-- PowerPoint QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
-- 完成後独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_reanswer.md`
-- 最終QA: `topics/20_east_i_measurement/20_east_i_measurement_final_qa.md`
-- stage: `COMPLETED`
-- completion: `completed`
+令和8年度二次試験は2026-11-15実施予定で、2026-09-19時点では未実施。
 
-## 完成後独立再解答
+## 過去問から逆算した必須接続
 
-- R8 一次 理論 問4: `カ / ワ / リ / ホ / イ` → `5 / 5 PASS`
-- R7 一次 理論 問4: `ル / チ / ヌ / ヲ / ヨ` → `5 / 5 PASS`
-- R6 一次 理論 問6: `ヘ / ハ / ワ / チ / ヲ` → `5 / 5 PASS`
-- H24 一次 理論 問7: `ニ / ヨ / ヌ / イ / ヲ` → `5 / 5 PASS`
-- H20 一次 理論 問6: `ニ / カ / ヨ / リ / ワ` → `5 / 5 PASS`
-- 一次合計: `25 / 25 PASS`
-- 公式標準解答直接一致: `20 / 20`
-- H20二次資料掲載解答一致: `5 / 5`
-- 教材外知識補完: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路・未公開定数の推測追加: `0件`
-- 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 架線等価回路: KCL/KVL、テブナン等価等から負荷側電圧・電流へ接続
+- 交流: フェーザから `S=P+jQ`、有効電力・無効電力・力率へ接続
+- 過渡: `t=0- / 0+ / ∞`、RL・RC・RLC初期条件と時間応答
+- 高調波: PWM波形を基本波・高調波へ分解し、FFTと高調波次数を対応付ける
+- 計測: 理想値と測定値を分け、零位法・校正・測定誤差へ接続
+- 数値シミュレーション: 入力条件・単位・初期条件・代表点を明記し、代表点を独立再計算
 
-## completed状態同期
+Topic 01〜20にない新論点を追加しない。
 
-- 主source: `completion: completed` / `stage: COMPLETED`
-- 練習source: `completion: completed` / `stage: COMPLETED`
-- 固定一次5問・25答案要素: `25 / 25 PASS` 維持
-- R8/R7/R6/H24公式標準解答直接一致: `20 / 20` 維持
-- H20二次資料掲載解答一致: `5 / 5` 維持
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF・PowerPoint変更: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路・未公開定数の推測追加: `0件`
-- 判定: `PASS / completed`
+## 公式正本・参考
 
-## East i一次資料
+公式:
+- https://www.shiken.or.jp/chief/second/qa/
+- R8一次理論: https://www.shiken.or.jp/chief/upload/20260830_ch_second_q01.pdf
+- R8一次標準解答: https://www.shiken.or.jp/chief/upload/20260830_ch_second_a01.pdf
+- H24一次機械: https://www.shiken.or.jp/chief/upload/20120908_ch_second_q03.pdf
+- H24一次標準解答: https://www.shiken.or.jp/chief/upload/20120908_ch_second_a01.pdf
+- R2二次電力・管理: https://www.shiken.or.jp/chief/upload/20201122_ch_second_q01.pdf
+- R2二次標準解答: https://www.shiken.or.jp/chief/upload/20201122_ch_second_a01.pdf
 
-- JR東日本/JREメディアで、新幹線用East i（E926形）が走行しながら線路・架線等を検査・検測する車両であることを確認。
-- JR東日本 2025-10-23資料で、East-i搭載センサによるトロリ線の摩耗・高さ・偏位測定とカメラ画像等の取得を確認。
-- 上記を導入例としてのみ使い、E926の内部回路・同一センサ構成・未公開定数を断定しない。
-
-一次資料:
-- `https://www.jreast.co.jp/press/2025/20251023_ho02.pdf`
-- `https://media.jreast.co.jp/articles/1653`
+説明粒度・解法接続:
+- https://e-sysnet.com/principle-of-superposition/
+- https://e-sysnet.com/power_factor/
+- https://e-sysnet.com/%E9%81%8E%E6%B8%A1%E7%8F%BE%E8%B1%A1/
+- https://denken-ou.com/c2/
+- https://denken-ou.com/c2/denryokukanrir2-6/
 
 ## 次工程
 
-Topic 21「架線からEast iまで全部シミュレーションする」の制作前EXAM_ALIGNMENT。
+Topic 21の制作前blind独立再解答。
+
+- 固定5問・21答案要素を、公式標準解答・保存済み正答を先に見ずに解く。
+- 各答案要素について根拠式・途中式・単位・適用条件を残す。
+- 独立導出後に公式標準解答へ照合する。
+- 21 / 21を満たすまで解説本文制作へ進めない。
