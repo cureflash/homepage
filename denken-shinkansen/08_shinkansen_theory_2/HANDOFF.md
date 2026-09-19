@@ -6,11 +6,11 @@
 
 Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_21_powerpoint_complete`
+current_status: `topic_21_independent_reanswer_complete`
 
 active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QAまで完了し、`PASS / POWERPOINT_COMPLETE`。次工程は完成後独立再解答。
+Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了し、`PASS / INDEPENDENT_REANSWER_COMPLETE`。次工程は最終QA。
 
 ## Topic 21 成果物
 
@@ -22,7 +22,8 @@ Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照�
 - 練習PDF QA: `topics/21_integrated_simulation/21_integrated_simulation_practice_pdf_qa.md`
 - 解説画像PowerPoint: `topics/21_integrated_simulation/21_integrated_simulation_images.pptx`
 - PowerPoint QA: `topics/21_integrated_simulation/21_integrated_simulation_powerpoint_qa.md`
-- stage: `POWERPOINT_COMPLETE`
+- 完成後独立再解答: `topics/21_integrated_simulation/21_integrated_simulation_independent_reanswer.md`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 21 SPEC固定範囲
@@ -158,6 +159,26 @@ PWMインバータ
 - 仕様追加: `0件`
 - 判定: `PASS / POWERPOINT_COMPLETE`
 
+## 完成後独立再解答
+
+- 記録: `topics/21_integrated_simulation/21_integrated_simulation_independent_reanswer.md`
+- R8 一次 理論 問3: `5 / 5一致`
+- R8 一次 理論 問4: `5 / 5一致`
+- R8 一次 理論 問6: `5 / 5一致`
+- H24 一次 機械 問3 (4)(5): `2 / 2一致`
+- R2 二次 電力・管理 問6 (1)〜(3): `4 / 4一致`
+- 一次: `17 / 17 PASS`
+- 二次: `4 / 4 PASS`
+- 合計: `21 / 21 PASS`
+- 教材に存在しない外部知識で補完した答案要素: `0件`
+- 根拠を説明できない偶然正答: `0件`
+- 候補答案変更: `0件`
+- 二次数合わせ: `0件`
+- Topic 01〜20にない新論点追加: `0件`
+- 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
+- 仕様追加: `0件`
+- 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+
 ## 公式正本・参考
 
 公式:
@@ -178,10 +199,10 @@ PWMインバータ
 
 ## 次工程
 
-Topic 21の完成後独立再解答。
+Topic 21の最終QA。
 
-- 固定5問・21答案要素を、保存済み正答を先に見ず、教材内容だけで独立再解答する。
-- 一次4問・17答案要素、二次1問・4答案要素を維持する。
-- 二次数合わせをしない。
-- 固定範囲外の新論点を追加しない。
-- 完成後独立再解答を通過してもTopic 21は未完了。最終QAを通過して初めて `completed` とする。
+- MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPECの固定範囲と成果物を再照合する。
+- 必須成果物の存在、品質ゲート `5問・21答案要素`、一次 `17 / 17`・二次 `4 / 4` を維持していることを確認する。
+- source、STATUS、HANDOFFのstage・completion整合性を確認する。
+- 二次数合わせ、固定範囲外の新論点、未公開実車定数の推測、仕様追加が0件であることを確認する。
+- 最終QAを通過して初めてTopic 21を `completed`、系列完成数を `21 / 21` とする。
