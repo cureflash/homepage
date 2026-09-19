@@ -1,3 +1,4 @@
+# trigger after workflow registration
 name: Temporary vehicle2 Topic 24 progress sync
 
 on:
