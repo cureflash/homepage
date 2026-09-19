@@ -6,14 +6,37 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `19 / 39`
-- current_status: `topic_20_exam_alignment_complete`
+- current_status: `topic_20_explanation_source_complete`
 - last_completed_topic: `19 ミニ新幹線 複電圧主回路`
 - active_topic: `20 N700系 フィードバック制御`
-- next_start: Topic 20解説source。固定5問・19答案要素を逆算し、SPEC指定10項目・3可視化を教材内へ接続する
+- next_start: Topic 20解説PDF。解説sourceを正本にPDF化し、固定5問・19答案要素、SPEC指定10項目・3可視化、数式・文字・レイアウトをQAする
 
 ## 完了済み
 
 Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
+
+## Topic 20 解説source
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+成果物:
+- 主source: `topics/20_n700_feedback_control/20_n700_feedback_control.md`
+- 解説source: `topics/20_n700_feedback_control/20_n700_feedback_control_explanation_source.md`
+
+品質:
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問: `一次1問＋二次4問 / 5問`
+- 固定答案要素: `一次1＋二次18 / 19`
+- 固定要求知識の本文マッピング: `19 / 19 covered`
+- 3段階例題: `3 / 3`
+- 例題数値・式の独立再計算: `3 / 3 PASS`
+- SPEC指定10項目: `10 / 10 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 fixed`
+- 可視化数値の再計算: `PASS`
+- 公式解答・標準解答の個別正答参照・保存: `0件`
+- 固定問題差替え: `0件`
+- SPEC外追加: `0件`
+- 未確認N700系実車制御値の真値化: `0件`
 
 ## Topic 20 制作前EXAM_ALIGNMENT
 
@@ -349,4 +372,4 @@ PDF/PPTX本体・問題・正答・数式・固定過去問は最終QA再実施�
 
 ## 次工程
 
-Topic 20「N700系 フィードバック制御」の解説source。固定5問・19答案要素を逆算し、SPEC指定10項目・3可視化を教材内へ接続する。
+Topic 20「N700系 フィードバック制御」の解説PDF。解説sourceを正本としてPDF化し、固定5問・19答案要素、SPEC指定10項目・3可視化、数式・文字・レイアウトをQAする。
