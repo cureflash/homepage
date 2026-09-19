@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_15_practice_pdf_complete`
+current_status: `topic_15_powerpoint_complete`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
@@ -13,7 +13,7 @@ Topic 01〜14は `completed`。
 
 ## Topic 15 current progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QA、練習問題source作成、練習PDF生成＋PDF QAまで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QA、練習問題source作成、練習PDF生成＋PDF QA、PowerPoint制作＋PowerPoint QAまで完了。
 
 正式品質ゲート対象は一次3問＋二次2問、計5問・24答案要素で固定したまま変更なし。
 
@@ -76,7 +76,22 @@ Topic 01〜14は `completed`。
 - 固定5問・24答案要素の練習接続 `24 / 24`
 - QA総合判定 `PASS`
 
-PowerPoint、完成後blindは未着手。
+PowerPoint:
+- `topics/15_regenerative_power/15_regenerative_power_images.pptx`
+- `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md`
+- 16:9 `5スライド`
+- ZIP整合性: `PASS`
+- `slides_test.py`: `PASS / No overflow detected`
+- 1601×900レンダリング: `5 / 5 PASS`
+- 文字切れ・重なり・図形はみ出し: `0件`
+- PDF変換: `5ページ PASS`
+- PDF文字抽出: `PASS / U+FFFD 0件 / 黒四角0件 / □ 0件`
+- SPEC固定8項目: `8 / 8 PASS`
+- SPEC固定3可視化: `3 / 3 PASS`
+- 固定5問・24答案要素の説明接続: `24 / 24 covered`
+- QA総合判定: `PASS`
+
+完成後blindは未着手。
 
 ## Topic 14 completion
 
@@ -107,6 +122,8 @@ Topic 15:
 - 練習source固定答案要素接続: `24 / 24`
 - 練習PDF QA: `PASS`
 - 練習source問題構成: `15問 / 一次型10 / 二次型5`
+- PowerPoint QA: `PASS`
+- PowerPoint固定答案要素接続: `24 / 24`
 - 周辺問題による件数水増し: `0件`
 - Topic 14問題の重複採用: `0件`
 - Topic 16故障計算先取り: `0件`
@@ -134,8 +151,8 @@ Topic 15:
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — IN_PROGRESS / 解説PDF `PASS` / 練習PDF `PASS`
+- [ ] Topic 15 — IN_PROGRESS / 解説PDF `PASS` / 練習PDF `PASS` / PowerPoint `PASS`
 
 ## next_start
 
-固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、Topic 15のPowerPointを制作しPowerPoint QAを行う。完成後blindはまだ行わない。
+固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、完成済みlearner-facing成果物だけを使ってTopic 15の完成後blind独立再解答を行う。Webカタログ登録・最終QAはまだ行わない。
