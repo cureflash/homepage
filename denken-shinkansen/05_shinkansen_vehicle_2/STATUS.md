@@ -9,7 +9,8 @@
 - current_status: `topic_21_explanation_source_complete`
 - last_completed_topic: `20 N700系 フィードバック制御`
 - active_topic: `21 高速域の速度・けん引力・出力制御`
-- next_start: Topic 21 解説PDF作成。固定EXAM_ALIGNMENTの一次2問＋二次3問・6答案要素、SPEC固定8項目・3可視化を変更せず、解説sourceを版面化する
+- source_gate_reaudit: `PASS / SOURCE_GATE_REVALIDATED`
+- next_start: Topic 21 解説PDF作成。既存解説source＋過去問対応ゲート補足を版面化し、固定5問・6答案要素、SPEC固定8項目・3可視化を変更しない
 
 ## 完了済み
 
@@ -30,19 +31,28 @@ Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 - SPEC固定8項目: `8 / 8 covered`
 - SPEC指定3可視化の再生成条件: `3 / 3 fixed`
 - 3段階例題: `3 / 3`
-- 公式解答・標準解答の個別正答参照・保存: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
 
 成果物:
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control.md`
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source_gate_addendum.md`
 
-補足:
-- `P=Tω` と `P=Fv` を出力で接続し、定トルク→定出力、電圧/電流制限、高速側のけん引力低下を説明済み。
-- 主電動機出力→編成出力→走行抵抗→編成必要出力を、問題条件だけで計算できる形にした。
-- 可視化・例題の数値は全て「学習用仮定値」で、実車値として扱わない。
+## 今回の過去問対応ゲート再監査
+
+判定: `PASS / SOURCE_GATE_REVALIDATED`
+
+H26 一次「機械」問5 `(4),(5)` を選択肢判別まで再監査し、既存sourceで明記不足だった滑り周波数 `f_s` の状態を必要最小限だけ補完した。
+
+- 定加速域: `V/f = 一定`, `I_M = 一定`, `f_s = 可変`
+- 定出力域: `V = 一定`, `I_M = 一定`, `f_s = 可変`
+- 固定5問・6答案要素: 変更なし
+- SPEC固定8項目: 変更なし
+- SPEC外追加: `0件`
+- 未確認実車値の真値化: `0件`
+- 公式標準解答の個別正答記号を教材本文へ保存: `0件`
 
 ## 次工程
 
-Topic 21解説PDFを作成する。固定EXAM_ALIGNMENT・固定問題・固定答案要素・SPEC境界は変更しない。
+Topic 21解説PDFを作成する。固定EXAM_ALIGNMENT・固定問題・固定答案要素・SPEC境界は変更しない。既存解説sourceと過去問対応ゲート補足を同時に参照する。
