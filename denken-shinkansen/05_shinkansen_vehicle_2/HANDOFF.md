@@ -8,17 +8,16 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_blind_reanswer_needs_revision`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_source_blind_remediation_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## reconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果をreconcile済み。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、Topic 23既存成果物、clean blind候補・公式照合記録をreconcile済み。
 
-- Topic 23 練習PDF＋QAは別workerの既存成果を再生成せず採用。
-- Topic 23 解説画像PowerPoint＋QAも既存完成成果をreconcile。
 - clean blind候補は commit `17837d40774f12e8348e9b55f250d5573b35f901` で公式照合前に固定。
-- その後の公式照合は commit `beadcbf4c1b11b81d0425303d559adbe181ed21b` で記録済み。候補ファイルは変更していない。
-- Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は既存診断どおり公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
+- 公式照合では固定23答案要素中 `21 / 23 PASS`。R2一次「機械」問2 `(2),(4)` の2点だけ不一致。
+- 候補ファイルは後編集していない。
+- Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は既存診断どおり過去問固有丸め差。一般式は変更しない。
 
 ## Topic 23 固定EXAM_ALIGNMENT
 
@@ -33,25 +32,7 @@ latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果
 
 SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も変更しない。
 
-## Topic 23 既存成果物
-
-完成・QA済み:
-
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice.pdf`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_pdf_qa.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_images.pptx`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_powerpoint_qa.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_clean.md`
-- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_official_check.md`
-
-既存PDF/PPTXの表示QAはPASS。JR東海のN700A比7%をSiC単独効果へ読み替えず、富士電機の20%軽量化をN700S車両全体の重量低減率へ誤拡張しない。未確認のN700S実車 `V_on / R_on / E_on / E_off / f_s / R_th / T_j` は真値化しない。
-
-## clean blind公式照合
+## Topic 23 clean blind初回
 
 判定: `FAIL / NEEDS_REVISION`
 
@@ -67,29 +48,40 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 一般式変更: `0件`
 - SPEC外追加: `0件`
-- 新たなexact blocker: `0件`
 
-不一致はR2一次「機械」問2の2要素だけ。
+不一致A: R2一次問2 `(2)` は候補 `(1-D)V_dc`、公式 `D V_dc`。原因は問題図の電圧矢印極性とSオン／オフ状態の取り違え。
 
-### 不一致A — `(2)`
+不一致B: R2一次問2 `(4)` は候補 `(1/6)V_dc I_dc T_2`、公式 `(1/2)V_dc I_dc T_2`。原因は公式図3の `p(t)=i_s v_s` 三角波へ、教材中の別波形モデル `VI t/6` を誤適用したこと。
 
-候補 `(1-D)V_dc` `(ロ)`、公式 `D V_dc` `(ト)`。
+H24二次6要素は未丸め候補と公式標準解答の3桁丸めが数学的に一致し、`6 / 6 PASS`。
 
-原因はダイオード電圧の状態読み違い。公式図ではSオン中に `v=V_dc`、Sオフ還流中に `v=0` なので平均は `V=D V_dc`。教材には通流率式はあるが、この固定過去問に必要な「図の矢印極性→各スイッチ状態→平均値」の確認手順が不足していた。
+## 今回のsource補強
 
-### 不一致B — `(4)`
+判定: `PASS / SOURCE_REMEDIATION_COMPLETE`
 
-候補 `(1/6)V_dc I_dc T_2` `(ヘ)`、公式 `(1/2)V_dc I_dc T_2` `(リ)`。
+修正したのは以下2ファイルだけ。
 
-固定問題図3では `i_s v_s` 自体が底辺 `T_2`、高さ `V_dc I_dc` の三角波。したがって `W_off=(1/2)V_dc I_dc T_2`。候補は教材内の別波形モデルにある `1/6` を誤適用した。一般式 `E_sw=∫v(t)i(t)dt` は正しく、変更しない。
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_practice_source.md`
 
-H24二次6要素は未丸め候補と公式標準解答の丸め値が数学的に一致するため `6 / 6 PASS`。
+反映内容:
+
+1. チョッパの素子電圧は、問題図の矢印極性を正方向としてSオン／オフ状態表を作ってから平均する手順を追加。固定R2一次問2では `V=D V_dc` と明示。
+2. スイッチングエネルギーは係数を暗記せず `p(t)=v(t)i(t)` を問題図どおり積分する手順を追加。固定R2一次問2では `p(t)` が三角波なので `W_off=(1/2)V_dc I_dc T_2` と明示。
+3. 練習一次問4の `VI t_s/6` は、同問で与えた相補的直線ランプに限ることを明記。
+4. 固定R2読図補強を独立確認し `2 / 2 PASS`。
+
+維持事項:
+
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 一般式変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- JR東海7%値・富士電機20%値の誤拡張: `0件`
+- 初回clean blind候補の後編集: `0件`
+
+Topic 23はまだ `completed` にしない。既存PDF/PPTXはsource補強前のため、同期要否QAと必要更新、その後の修正後clean blind再試験が残る。
 
 ## 次の安全な工程
 
-固定問題・一般式・SPECを変更せず、Topic 23教材側へ次の2点だけを最小修正する。
-
-1. 降圧チョッパは問題図の矢印極性とSオン／オフ状態を表に落としてから平均化し、固定R2問2では `V=D V_dc` となることを明示する。
-2. スイッチングエネルギーは係数を暗記せず、問題で与えられた `p(t)=v(t)i(t)` 波形をそのまま積分する。固定R2問2の三角波では `W_off=(1/2)V_dc I_dc T_2` とする。
-
-まず `23_n700s_sic_main_converter_explanation_source.md` と `23_n700s_sic_main_converter_practice_source.md` だけを修正し、その後に解説PDF・練習PDF・PowerPointの同期要否をQAする。修正後のclean blindは既存候補を上書きせず、別ファイルで再実施する。
+既存の解説PDF・練習PDF・PowerPointについて、今回の2点を受講者が確認できるよう同期が必要かをQAする。必要な成果物だけ更新して表示QAし、その後に修正後clean blindを既存候補と別ファイルで実施する。固定EXAM_ALIGNMENT、SPEC、一般式、仮定値／実車値境界は変更しない。
