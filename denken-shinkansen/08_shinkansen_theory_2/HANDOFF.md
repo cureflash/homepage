@@ -6,11 +6,11 @@
 
 Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_21_practice_pdf_complete`
+current_status: `topic_21_powerpoint_complete`
 
 active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QAまで完了し、`PASS / PRACTICE_PDF_COMPLETE`。次工程は解説画像PowerPoint＋表示QA。
+Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QAまで完了し、`PASS / POWERPOINT_COMPLETE`。次工程は完成後独立再解答。
 
 ## Topic 21 成果物
 
@@ -20,7 +20,9 @@ Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照�
 - 練習source: `topics/21_integrated_simulation/21_integrated_simulation_practice.md`
 - 練習PDF: `topics/21_integrated_simulation/21_integrated_simulation_practice.pdf`
 - 練習PDF QA: `topics/21_integrated_simulation/21_integrated_simulation_practice_pdf_qa.md`
-- stage: `PRACTICE_PDF_COMPLETE`
+- 解説画像PowerPoint: `topics/21_integrated_simulation/21_integrated_simulation_images.pptx`
+- PowerPoint QA: `topics/21_integrated_simulation/21_integrated_simulation_powerpoint_qa.md`
+- stage: `POWERPOINT_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 21 SPEC固定範囲
@@ -134,6 +136,28 @@ PWMインバータ
 - 仕様追加: `0件`
 - 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## 解説画像PowerPoint＋表示QA
+
+- 16:9 / `8枚`
+- 200 dpi全スライド表示QA: `8 / 8 PASS`
+- レンダリング寸法: `2667 × 1500 px / slide`
+- shape geometry overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `8ページ / PASS`
+- PDF・PowerPoint XML文字抽出: `PASS`
+- replacement character: `0件`
+- クリッピング/文字重なり/ページ欠落: `0件`
+- SPEC固定範囲5領域: `5 / 5可視化`
+- 簡略モデル8ブロック: `8 / 8可視化`
+- 固定一次4問・17答案要素: `17 / 17可視化`
+- 固定二次1問・4答案要素: `4 / 4可視化`
+- 合計: `5問・21 / 21答案要素`
+- 二次数合わせ: `0件`
+- Topic 01〜20にない新論点追加: `0件`
+- 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
+- 仕様追加: `0件`
+- 判定: `PASS / POWERPOINT_COMPLETE`
+
 ## 公式正本・参考
 
 公式:
@@ -154,10 +178,10 @@ PWMインバータ
 
 ## 次工程
 
-Topic 21の解説画像PowerPoint＋表示QA。
+Topic 21の完成後独立再解答。
 
-- 系列SPEC第21章と固定5問・21答案要素だけで構成する。
-- `回路・交流・過渡・高調波・計測` の接続を視覚化する。
-- 実車主回路・East i内部回路・未公開定数を推測しない。
+- 固定5問・21答案要素を、保存済み正答を先に見ず、教材内容だけで独立再解答する。
+- 一次4問・17答案要素、二次1問・4答案要素を維持する。
+- 二次数合わせをしない。
 - 固定範囲外の新論点を追加しない。
-- PowerPoint完了後もTopic 21は未完了。完成後独立再解答と最終QAを通過して初めて `completed` とする。
+- 完成後独立再解答を通過してもTopic 21は未完了。最終QAを通過して初めて `completed` とする。
