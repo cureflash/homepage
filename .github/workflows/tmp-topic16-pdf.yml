@@ -1,0 +1,45 @@
+name: tmp-topic16-pdf
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/tmp-topic16-pdf.yml"
+      - ".github/tmp_topic16_pdf.py"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install reportlab==4.4.9
+      - name: Generate PDF
+        run: python .github/tmp_topic16_pdf.py
+      - name: Verify exact artifact
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          p=Path("denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_explanation.pdf")
+          b=p.read_bytes()
+          assert len(b)==34238, len(b)
+          assert hashlib.sha256(b).hexdigest()=="0d305c1240f57a3efe7a279130f18821bb204a561de46429df596a1ae64c79fb"
+          gitsha=hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()
+          assert gitsha=="626d9098ccf7453f2439b1ffc3df50c3bbdd3b5b"
+          print("verified", len(b), gitsha)
+          PY
+      - name: Commit PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_explanation.pdf
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Regenerate Topic 16 explanation PDF layout"
+          git push
