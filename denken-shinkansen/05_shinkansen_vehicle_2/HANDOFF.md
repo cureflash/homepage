@@ -8,13 +8,13 @@
 
 Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
 
-現在地は `topic_27_practice_source_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_practice_pdf_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27固定EXAM_ALIGNMENT、解説source、解説PDFをreconcileした。実行中に別workerがTopic 27解説PDF＋PDF QAを正本へ反映したため、その成果を採用して重複制作を避け、次工程へ進んだ。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27固定EXAM_ALIGNMENT、解説source/PDF、練習source/QA、直近の同系列worker成果をreconcileした。最新mainには別系列 `07_shinkansen_machine_2` の更新が入っていたが、本系列との競合・重複はないためそのまま採用した。
 
-Topic 27練習sourceとsource QAを作成。一次8問＋二次4問の計12問、固定5問・23答案要素 `23 / 23 connected`、SPEC必須7項目 `7 / 7 covered`、指定2可視化の計算系 `2 / 2 aligned`、数値・論理独立再計算 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取りはいずれも0件。exact blocker `0件`。
+Topic 27練習PDFとPDF QAを作成。一次8問＋二次4問の計12問、固定5問・23答案要素 `23 / 23 connected`、SPEC必須7項目 `7 / 7 covered`、指定2可視化の計算接続 `2 / 2 aligned`、数値・論理独立再計算 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`。A4縦3ページをPDFium/Popplerで `3 / 3 PASS`、`pdftotext -layout` PASS、置換文字0件。初回生成で `≈` の欠落グリフを検出したため、意味不変の「約」表記へ修正して再生成・再QAした。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取り、Topic 21一般式変更はいずれも0件。exact blocker `0件`。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -224,6 +224,36 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
+## Topic 27 練習PDF
+
+成果物:
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_practice.pdf`
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_practice_pdf_qa.md`
+
+判定:
+- `PASS / PRACTICE_PDF_COMPLETE`
+- canonical PDF blob SHA: `a5f336100e3b9c0ca697f729f476d475c80782a0`
+- file size: `11,721 bytes`
+- SHA-256: `31ca8307691fbee099ff891f99764ed114a0285b4bf7198054ab7f7eb0a41339`
+- A4縦: `3 pages`
+- PDFium / Poppler: `3 / 3 PASS`
+- `pdftotext -layout`: `PASS`（10,408 bytes）
+- 置換文字: `0件`
+- 一次8問＋正答・完全解説: `8 / 8 PASS`
+- 二次4問＋完全解説: `4 / 4 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `18 / 18 connected`
+- 二次答案要素: `5 / 5 connected`
+- 合計答案要素: `23 / 23 connected`
+- SPEC必須7項目: `7 / 7 covered`
+- 指定2可視化の計算接続: `2 / 2 aligned`
+- L0系未確認実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -236,4 +266,4 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## 次の安全な工程
 
-Topic 27 `L0系① リニア同期モータ` の練習PDFを生成し、一次8問＋二次4問の問題・正答・完全解説、文字抽出、PDFium/Popplerレンダリング、固定23答案要素への接続をPDF QAする。
+Topic 27 `L0系① リニア同期モータ` の解説画像PowerPointを生成し、固定5問・23答案要素、SPEC必須7項目、指定2可視化、L0系実車値境界をPowerPoint QAする。
