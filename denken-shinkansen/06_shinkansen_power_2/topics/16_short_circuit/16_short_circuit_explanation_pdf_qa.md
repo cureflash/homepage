@@ -1,35 +1,31 @@
 # Topic 16 解説PDF QA
 
 updated: 2026-09-19
-status: `FAIL / topic_16_explanation_pdf_current_blob_reqa_right_clipping`
+status: `PASS / topic_16_explanation_pdf_regenerated_exact_blob_qa_pass`
 
-対象: `16_short_circuit_explanation.pdf`
+target: `16_short_circuit_explanation.pdf`
 source: `16_short_circuit_explanation.md`
 
 ## 今回の目的
 
-最終QAで既存QA記録と現行GitHub artifactのidentity不一致が判明したため、既存QAを転用せず、現行blobそのものを再QAした。
+現行解説PDFで検出された右端クリッピングだけを修正した。固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済み5項目、本文内容は変更していない。
 
-正式品質ゲートの固定5問・23答案要素、固定10説明項目、補正済み5項目は変更していない。
+## 再生成成果物 identity
 
-## 現行成果物 identity
-
-- Git blob SHA-1: `a2fd385e832df7e628d6bd879d9ffcf26fca575b`
-- ファイルサイズ: `11232 bytes`
-- SHA-256: `e6ddb708e2d2002c33ac1af15091e756d1d25f021e5a7793ef6b4e25238cca92`
-- 用紙: A4縦
-- ページ数: `7`
-- 正式品質ゲート: 一次2問＋二次3問、固定 `5問・23答案要素`（変更なし）
+- Git blob SHA-1: `626d9098ccf7453f2439b1ffc3df50c3bbdd3b5b`
+- file size: `34,238 bytes`
+- SHA-256: `0d305c1240f57a3efe7a279130f18821bb204a561de46429df596a1ae64c79fb`
+- paper: A4 portrait
+- pages: `7`
+- formal gate: primary 2 + secondary 3 = fixed `5問・23答案要素`（変更なし）
 
 ## 構造・文字抽出QA
 
-- page tree: `7 pages`
-- encrypted: `False`
 - PDFium: `7 / 7 render completed`
 - Poppler: `7 / 7 render completed`
-- `pdftotext`: 抽出可能
+- `pdftotext`: PASS
 - U+FFFD: `0件`
-- 補正5項目の文字抽出: `5 / 5 present`
+- 補正5項目: `5 / 5 present`
   - 電磁誘導障害
   - 遮断容量
   - BTB
@@ -38,36 +34,24 @@ source: `16_short_circuit_explanation.md`
 
 ## 表示QA
 
-判定: `FAIL`
+判定: `PASS`
 
-PDFium / Popplerの両方で同じ右端クリッピングを確認した。
+PDFium / Popplerの両方で全7ページをrenderし、右端クリッピングがないことを確認した。
 
-- page 1: `PASS`
-- page 2: `FAIL`
-  - 基準換算式・解法アルゴリズムの右端がページ外へ切れる。
-  - `Z_pu,common` 周辺の式が学習者表示上で欠落する。
-- page 3: `PASS`
-- page 4: `FAIL`
-  - 本試験標準例題の `S_sc = 100 / 0.40 = 250 MVA` の末尾 `0` が右端で切れ、表示上 `25 MVA` に見える。
-  - 逆算問題の式も右端で切れる。
-- page 5: `PASS`
-- page 6: `FAIL`
-  - 25kV架線の教材用仮定モデル式・説明文が右端で切れる。
-- page 7: `FAIL`
-  - 参照URLと末尾説明文が右端で切れる。
-
-表示正常: `3 / 7 pages`
-表示異常: `4 / 7 pages`
-
-黒四角・欠損グリフによる失敗は確認していない。失敗原因は横方向のレイアウト超過。
+- 全ページ: right-edge overflow `0件`
+- PDFium: 最小右余白 `90 px`（180 dpi）
+- Poppler: 最小右余白 `91 px`（180 dpi）
+- 旧page 2相当: 基準換算式・解法アルゴリズムをページ幅内に収容
+- 旧page 4相当: `S_sc = S_B/0.40 = 250 MVA` を欠落なく表示
+- 旧page 6相当: 25kV架線の教材用仮定モデル式・説明文をページ幅内に収容
+- 旧page 7相当: 参照URL・末尾説明文を折返して表示
+- `√3×66 kV×2.19 kA ≒ 250 MVA`: learner-facing表示を確認
 
 ## 内容QA
 
-抽出テキスト上では固定10説明項目と補正5項目が存在する。ただしlearner-facing PDFの表示が欠落しているため、現行artifactを `covered / PASS` と認定しない。
+固定10説明項目と補正5項目を維持した。正式過去問対応品質ゲートは既存clean rerunの一次 `10 / 10 PASS`、二次 `13 / 13 PASS`、合計 `23 / 23 PASS` を変更しない。
 
-固定5問・23答案要素についても、元sourceおよび完成後blind clean rerunの `23 / 23 PASS` は変更しないが、現行解説PDF単体は表示欠落があるため品質ゲートの成果物要件を満たさない。
-
-特にpage 4では正しい `250 MVA` が表示上 `25 MVA` に見えるため、数値教材として許容不可。
+今回の変更はPDFレイアウトのみで、source本文・過去問選定・答案要素・計算値の変更はない。
 
 ## 仕様境界
 
@@ -80,8 +64,6 @@ PDFium / Popplerの両方で同じ右端クリッピングを確認した。
 
 ## 判定
 
-`FAIL / RIGHT_EDGE_CLIPPING_ON_CURRENT_BLOB`
+`PASS / CURRENT_EXPLANATION_PDF_EXACT_BLOB_QA`
 
-現行blob `a2fd385e...` は解説PDF QAを通過しない。
-
-次工程は、補正済み `16_short_circuit_explanation.md` の内容・固定品質ゲートを変えず、横方向の改行・折返しだけを修正して解説PDFを再生成し、新しい現行blobに対してPDFium / Poppler / 文字抽出 / 内容QAを再実施する。PowerPoint再QAへはまだ進まない。
+次工程は現行PowerPoint blob `a4817d7cfb1a1733f5147f52efa3ec4e249999d5` のexact-blob QA。Topic 16はまだ `completed` にしない。
