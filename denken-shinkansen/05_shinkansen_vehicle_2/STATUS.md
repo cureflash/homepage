@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `21 / 39`
-- current_status: `topic_22_powerpoint_complete`
+- current_status: `topic_22_independent_reanswer_needs_revision`
 - last_completed_topic: `21 高速域の速度・けん引力・出力制御`
 - active_topic: `22 E5系 再粘着制御`
-- next_start: Topic 22 完成後clean blind独立再解答を、当該個別解答を未閲覧のfresh independent workerで実施する。固定5問・11答案要素を変更せず、教材だけで候補を先に固定してから公式解答・標準解答と照合する
+- next_start: H21二次「機械・制御」問4 `(5a)` に必要な過去問固有の最小注記をTopic 22教材へ追加し、派生成果物を同期・QAする。固定5問・11答案要素、一般式、SPEC固定範囲は変更しない
 
 ## 完了済み
 
@@ -110,14 +110,31 @@ Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
 
-## Topic 22 clean blind 実行blocker
+## Topic 22 clean blind 実行blocker（先行worker）
 
-- 状態: `BLOCKED_FOR_THIS_WORKER`。Topic 22自体は `topic_22_powerpoint_complete` のまま。
-- 原因: H21二次「機械・制御」問4の問題図を回収する過程で、このworkerが候補解答固定前に個別解答を含む第三者ページを開いた。
-- 品質ゲート判定: `candidate lock -> official-answer comparison` のclean blind独立性を満たせないため、このworkerによる完成後独立再解答は無効。
-- 反映: clean blind候補ファイルは作成・コミットしていない。固定EXAM_ALIGNMENT、一般式、教材本文、PowerPoint、練習問題は変更していない。
-- 次工程: 当該個別解答を未閲覧のfresh independent workerが、固定5問・11答案要素でclean blindを最初から実施する。
+- 状態: `BLOCKED_FOR_THIS_WORKER`。
+- 原因: H21二次「機械・制御」問4の問題図を回収する過程で、先行workerが候補解答固定前に個別解答を含む第三者ページを開いた。
+- 品質ゲート判定: 先行workerによる独立再解答は無効。候補ファイル・照合結果は作成していない。
+- 固定EXAM_ALIGNMENT、一般式、教材本文、PowerPoint、練習問題は変更していない。
+
+## Topic 22 clean blind独立再解答
+
+判定: `NEEDS_REVISION / INDEPENDENT_REANSWER_FAILED`
+
+fresh independent workerが教材だけで候補を先に固定し、その後に公式解答・標準解答と照合した。
+
+- 一次: `3 / 3 PASS`
+- 二次: `7 / 8 PASS`
+- 合計: `10 / 11 PASS`
+- 固定5問を全答案要素まで正答: `4 / 5`
+- 不一致: H21二次「機械・制御」問4 `(5a)` の1要素
+- 原因: H21固有モデルについて `K2↑ → G(s)ゲイン↓ → K1G(s)ゲイン↓ → 速応性低下` を教材だけで一意に判定する説明が不足
+- 新規仕様追加の必要: `0件`
+- 未確認E5系実車値の真値化: `0件`
+
+記録:
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_independent_reanswer.md`
 
 ## 次工程
 
-Topic 22 完成後clean blind独立再解答をfresh independent workerで実施する。固定5問・11答案要素を教材だけで解き、候補を先に固定してから公式解答・標準解答と照合する。
+H21二次「機械・制御」問4 `(5a)` の既存橋渡し技能だけを最小補強する。固定EXAM_ALIGNMENT、一般式、SPEC固定8項目、指定3可視化は変更しない。補強後に派生成果物を同期・QAし、その後clean blind独立再解答を再実施する。
