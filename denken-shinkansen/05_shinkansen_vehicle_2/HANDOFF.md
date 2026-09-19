@@ -8,60 +8,33 @@
 
 Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
-現在地は `topic_20_completed`。次の未完了テーマは Topic 21 `高速域の速度・けん引力・出力制御`。
+現在地は `topic_21_exam_alignment_complete`。active topic は Topic 21 `高速域の速度・けん引力・出力制御`。
 
 ## 今回実施
 
-Topic 20最終QAを再実施し、前回唯一FAILだった進捗記録整合が解消済みであることを確認した。
+Topic 21の制作前EXAM_ALIGNMENTを完了した。
 
-判定: `PASS / COMPLETED`
+固定公式過去問:
+- H26 一次 機械 問5 `(4),(5)` — 2答案要素
+- H25 一次 機械 問3 `(1)` — 1答案要素
+- R7 二次 機械・制御 問2 `(1)のT1のみ` — 1答案要素
+- R1 二次 機械・制御 問1 `(4)` — 1答案要素
+- H26 二次 機械・制御 問1 `(4)` — 1答案要素
 
-確認事項:
-- 前回最終QA commit `c749003967911c8b2c0abe38f5b839a725833977` から再QA直前main `d98dc66f539e837f2f3bac98ea080e47d1e244ff` まで、Topic 20の技術成果物・各技術QA・clean blind記録に変更なし。
-- Topic 20で変更されたのは主source・`STATUS.md`・`HANDOFF.md` の進捗記録のみ。
-- 主source進捗同期 commit `f47d681ec9a349997b49bf4b5370e35c23a16075` により、前回FAIL理由を解消済み。
-- 再QAで技術品質・過去問対応・成果物・SPEC境界・進捗整合をすべてPASS確認。
+品質ゲート:
+- 一次2問＋二次3問、計5問
+- 一次3＋二次3、計6答案要素
+- 二次記述計算3問を含む
+- e-sysnet、電験王2の2系統以上を確認
+- 公式解答・標準解答の個別正答を制作前sourceへ保存していない
+- 固定SPEC外追加: `0件`
+- 未確認N700系実車値の真値化: `0件`
 
-変更していないもの:
-- 技術本文
-- 問題・正答
-- 数式
-- PDF/PPTX本体
-- 固定5問・19答案要素
-- 固定EXAM_ALIGNMENT
-- SPEC境界
+固定source:
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control.md`
 
-## Topic 20 技術品質
+## Topic 21 固定範囲
 
-- 固定5問・19答案要素: `変更なし`
-- clean blind公式照合: `19 / 19 PASS`
-- 必須成果物: `PASS`
-- 解説PDF QA: `PASS`
-- 練習PDF QA: `PASS`
-- PowerPoint QA: `PASS`
-- 練習問題独立再計算: `12 / 12 PASS`
-- SPEC指定10項目: `10 / 10 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT変更 / SPEC外追加 / 未確認N700系実車制御値の真値化: `0件`
-
-最終QA記録:
-- `topics/20_n700_feedback_control/20_n700_feedback_control_final_qa.md`
-- 判定: `PASS / COMPLETED`
-
-## worker reconcile
-
-- PowerPoint / QA: commit `ddd7a1b73b5b94d9bfd86a45b9de954ae6eb40a1`
-- clean blind候補固定: commit `cb1d6247a2c221151af9e7a7457875563ea83261`
-- clean blind公式照合: commit `160daedfa770c59c153f97f425f0f1c289a0d3bb`
-- 前回最終QA: commit `c749003967911c8b2c0abe38f5b839a725833977`
-- 主source進捗同期: commit `f47d681ec9a349997b49bf4b5370e35c23a16075`
-- Topic 20最終QA再実施・完了判定: 今回
-
-## 次の安全な工程
-
-Topic 21 `高速域の速度・けん引力・出力制御` の制作前EXAM_ALIGNMENT。
-
-固定SPEC:
 - 定トルク
 - 定出力
 - 電圧制限
@@ -70,12 +43,25 @@ Topic 21 `高速域の速度・けん引力・出力制御` の制作前EXAM_ALI
 - 主電動機出力
 - 編成出力
 - 走行抵抗
+
+SPEC指定可視化:
 - 速度―けん引力
 - 速度―主電動機出力
 - 速度―編成必要出力
 
-品質ゲート:
-- 二種一次・二次を合わせ原則5問以上の公式過去問を直近年度側から調査する。
-- 二次対象論点で該当する記述問題が確認できる場合は最低1問含める。
-- 固定SPEC外の論点を追加しない。
-- 過去問・教材範囲を確定できない場合は推測せずexact blockerを記録して停止する。
+境界:
+- V/f・すべり・等価回路は既習事項として必要最小限だけ参照する。
+- 加速抵抗・勾配抵抗・加速曲線、損失・熱、ベクトル制御、再粘着制御等を新規主題へ広げない。
+- 列車の `P=Fv` と走行抵抗はSPEC必須だが、今回固定した第二種過去問で直接出題されたとは記載しない。
+- N700系等の実車の基底速度、電圧・電流上限、出力、走行抵抗係数は一次資料で確認できない限り真値化しない。
+
+## 次の安全な工程
+
+Topic 21解説sourceを作成する。
+
+要件:
+- 固定5問・6答案要素を変更しない。
+- `P=Tω` と `P=Fv` を出力を介して接続し、定トルク→定出力、電圧/電流制限、高速側のけん引力低下を説明する。
+- 主電動機出力→編成出力→走行抵抗→編成必要出力を、問題条件だけで計算できる形にする。
+- SPEC指定3可視化を同一の仮定値・式系から再生成できるようにする。
+- 未確認実車値は「仮定値」「学習用モデル」と明記する。
