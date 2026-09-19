@@ -3,17 +3,17 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `16`
-current_status: `topic_16_explanation_pdf_regenerated_exact_blob_qa_pass`
+current_status: `topic_16_powerpoint_exact_blob_qa_fail`
 
 ## 今回実施
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、Topic 16の補正済みsourceと現行QAを再確認した。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS/HANDOFF、Topic 16の現行成果物を再確認した。
 
-現行解説PDFの右端クリッピングだけを修正して再生成し、新しいexact blobを既存QAから独立して再QAした。
+次工程として指定されていた現行 `16_short_circuit_images.pptx` のexact-blob PowerPoint QAを実施した。GitHub正本blobとローカル再取得物のidentityは一致したが、PPTXパッケージ自体の破損を検出したため `FAIL` とした。
 
 QA記録:
-- `topics/16_short_circuit/16_short_circuit_explanation_pdf_qa.md`
-- 判定: `PASS / CURRENT_EXPLANATION_PDF_EXACT_BLOB_QA`
+- `topics/16_short_circuit/16_short_circuit_powerpoint_qa.md`
+- 判定: `FAIL / CURRENT_PPTX_EXACT_BLOB_PACKAGE_CORRUPT`
 
 固定5問・23答案要素、Topic 16固定範囲、補正済み5項目、後続Topic境界は変更していない。
 
@@ -31,36 +31,40 @@ QA記録:
 
 正式過去問対応品質ゲート自体は `PASS`。
 
-## 解説PDF exact-blob再QA
+## PowerPoint exact-blob QA
 
-再生成artifact:
-- blob: `626d9098ccf7453f2439b1ffc3df50c3bbdd3b5b`
-- size: `34,238 bytes`
-- pages: `7`
-- SHA-256: `0d305c1240f57a3efe7a279130f18821bb204a561de46429df596a1ae64c79fb`
+現行artifact:
+- blob: `a4817d7cfb1a1733f5147f52efa3ec4e249999d5`
+- size: `26,007 bytes`
+- SHA-256: `e9c723e66a95ce4cf71de6f32155ed835bdce345bdd9c158e9d8af5eb927406a`
+- local/GitHub artifact identity: `PASS`
 
 検査:
-- PDFium: `7 / 7 render completed`
-- Poppler: `7 / 7 render completed`
-- `pdftotext`: PASS
-- U+FFFD: `0件`
-- 補正5項目: `5 / 5 present`
-- learner-facing display: `PASS`
-- right-edge overflow: `0件`
-- 旧表示不良の `250 MVA`、基準換算式、逆算式、25kV仮定モデル、参照URLはいずれもページ幅内に表示
+- `unzip -t`: `FAIL`
+  - `21 extra bytes at beginning or within zipfile`
+  - `ppt/slides/slide1.xml`: `invalid compressed data to inflate`
+  - local-header offset不整合
+- `python-pptx`: `FAIL / BadZipFile`
+- `slides_test.py`: `FAIL / BadZipFile`
+- `render_slides.py`: `FAIL / BadZipFile`
+- LibreOffice PDF変換: `FAIL / source file could not be loaded`
+- current-artifact表示QA: `NOT EXECUTABLE`
+
+既存PowerPoint QAの対象は `25,986 bytes` / SHA-256 `4b33e9e0333e86a8803e5b331cf22c2c1bf5a0718fad6171f0d08f269b84bf32` であり、現行artifactとはidentity不一致。旧PASSは転用していない。
 
 ## 他artifactの現在地
 
+- 解説PDF: current exact-blob QA `PASS`
 - 練習PDF: current / existing QA identity `PASS`
-- PowerPoint: current blob `a4817d7cfb1a1733f5147f52efa3ec4e249999d5` / `26,007 bytes`; existing QAとidentity不一致。current-artifact QAは未実施
+- PowerPoint: current exact-blob QA `FAIL`
 
 ## 進捗記録不整合
 
-主source `topics/16_short_circuit/16_short_circuit.md` は状態 `topic_16_preproduction_blind_complete` のままで現状と不一致。主source同期はまだ未実施。
+主source `topics/16_short_circuit/16_short_circuit.md` は状態 `topic_16_preproduction_blind_complete` のままで現状と不一致。主source同期はPowerPoint artifact gate解消後に行う。
 
 ## exact blocker
 
-`The explanation PDF blocker is cleared: the regenerated exact blob passes PDFium/Poppler/text/content/display QA with no right-edge clipping. The next unresolved gate is exact-blob QA for the current PowerPoint blob a4817d7cfb1a1733f5147f52efa3ec4e249999d5. Existing PowerPoint QA must not be reused because its artifact identity differs. After PowerPoint exact-blob QA, synchronize the stale progress state in 16_short_circuit.md before final QA.`
+`The current PowerPoint canonical blob is structurally corrupt even though the retrieved bytes exactly match GitHub. Regenerate/replace 16_short_circuit_images.pptx from the existing fixed learner-facing source/content without changing EXAM_ALIGNMENT, the fixed 5 questions / 23 answer elements, or Topic 16 scope; then rerun exact-blob PowerPoint QA. Do not byte-patch the corrupt package. Only after that PASS should the stale 16_short_circuit.md progress state be synchronized and final QA run.`
 
 ## 品質境界
 
@@ -68,15 +72,17 @@ QA記録:
 - Topic 16: `IN_PROGRESS`
 - 完成数: `15 / 22`
 - 固定5問・23答案要素変更: `0件`
+- 新規正式過去問追加: `0件`
 - Topic 17以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
 - 仕様追加: `0件`
 
 ## 次に行う
 
-固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済みsource/PDF、練習PDF、clean blind結果、Webカタログを変更せず、現行 `16_short_circuit_images.pptx` blob `a4817d7cfb1a1733f5147f52efa3ec4e249999d5` に対してexact-blob PowerPoint QAを再実施する。
+固定EXAM_ALIGNMENT、固定5問・23答案要素、補正済みsource/PDF、練習PDF、clean blind結果、Webカタログを変更せず、既存sourceから `16_short_circuit_images.pptx` を正常なPPTXとして再生成・置換する。その新しいexact blobに対してPowerPoint QAを再実施する。
 
 まだ行わない:
+- 破損PPTX bytesの直接パッチ
 - 固定EXAM_ALIGNMENT変更
 - Topic 16 `completed` 化
 - Topic 17以降
