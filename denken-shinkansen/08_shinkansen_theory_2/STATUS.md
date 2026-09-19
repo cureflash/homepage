@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 20 / 21
-- current_status: `topic_21_final_qa_blocked`
+- current_status: `topic_21_independent_reanswer_complete`
 - last_completed_topic: `20 East iは走りながら何をどう測る？`
 - active_topic: `21 架線からEast iまで全部シミュレーションする`
-- next_start: Topic 21 主source進捗記録同期
+- next_start: Topic 21 最終QA再実施
 
 ## 完成済み
 
@@ -51,28 +51,26 @@ Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 21の最終QAを実施した。
+Topic 21主sourceの進捗記録を実進捗へ同期した。
 
-- QA: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
-- 必須成果物欠落: `0件`
+- main source: `topics/21_integrated_simulation/21_integrated_simulation.md`
+- stage: `EXPLANATION_SOURCE_COMPLETE` → `INDEPENDENT_REANSWER_COMPLETE`
+- completion: `in_progress` のまま
+- 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
+- 解説画像PowerPoint: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `21 / 21 PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`（進捗記録不一致のみ）
 - 固定一次4問・17答案要素: `17 / 17 PASS`
 - 固定二次1問・4答案要素: `4 / 4 PASS`
 - 合計: `21 / 21 PASS`
-- 解説PDF表示QA: `4 / 4 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- PowerPoint表示QA: `8 / 8 PASS`
-- 完成後独立再解答: `21 / 21 PASS`
 - 二次数合わせ: `0件`
 - Topic 01〜20にない新論点追加: `0件`
 - 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
 - 仕様追加: `0件`
-- blocker: `1件`
-  - 主source `21_integrated_simulation.md` が `stage: EXPLANATION_SOURCE_COMPLETE` / `次工程: 解説PDF制作` のままで、実進捗 `INDEPENDENT_REANSWER_COMPLETE` と不一致
 
 ## 判定
 
-`NEEDS_REVISION / FINAL_QA_BLOCKED`。
+主source進捗記録同期完了。完成数は `20 / 21` のまま。
 
-品質ゲート・成果物品質・固定範囲はPASS。主source進捗記録を同期してから最終QAを再実施する。
-
-完成数は `20 / 21`。次工程はTopic 21主sourceの進捗記録同期。
+次工程はTopic 21の最終QA再実施。
