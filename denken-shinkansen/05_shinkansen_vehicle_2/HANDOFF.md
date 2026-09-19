@@ -8,7 +8,7 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_explanation_source_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_explanation_pdf_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## 今回のreconcile
 
@@ -18,7 +18,7 @@ Topic 22は最終QA `PASS / COMPLETED`。先行 `10 / 11` 診断はTopic 20の�
 
 Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
-同時進行workerがTopic 23制作前EXAM_ALIGNMENTを先に完了したため重複調査せず、その固定5問・23答案要素をreconcileして解説source作成へ進んだ。
+同時進行workerがTopic 23制作前EXAM_ALIGNMENTを先に完了したため重複調査せず、その固定5問・23答案要素をreconcileして解説source、解説PDFへ進んだ。
 
 ## Topic 23 制作前EXAM_ALIGNMENT
 
@@ -63,10 +63,29 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は、�
 - 未確認N700S実車値の真値化: `0件`
 - 新たなexact blocker: `0件`
 
+## Topic 23 解説PDF
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+- A4縦: `5 pages`
+- PDFium render: `5 / 5 PASS`
+- Poppler render: `5 / 5 PASS`
+- 文字抽出・破損グリフ: `PASS`
+- 固定5問・23答案要素: `23 / 23 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 仮定値／実車値境界: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+
 成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation.pdf`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_pdf_qa.md`
 
 ## 次の安全な工程
 
-Topic 23解説PDF作成＋PDF QA。sourceの固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。
+Topic 23練習source作成。固定5問・23答案要素、SPEC固定8項目、指定3可視化、仮定値／実車値境界を変更しない。
