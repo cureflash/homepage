@@ -6,18 +6,18 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `20 / 39`
-- current_status: `topic_21_explanation_pdf_complete`
+- current_status: `topic_21_practice_source_complete`
 - last_completed_topic: `20 N700系 フィードバック制御`
 - active_topic: `21 高速域の速度・けん引力・出力制御`
-- next_start: Topic 21 練習source作成。固定EXAM_ALIGNMENTの一次2問＋二次3問・6答案要素、SPEC固定8項目・3可視化を変更せず、一次試験型と二次記述式へ接続する
+- next_start: Topic 21 練習PDF作成。固定EXAM_ALIGNMENTの一次2問＋二次3問・6答案要素、SPEC固定8項目・3可視化、練習sourceの一次8問＋二次4問を変更せず版面化する
 
 ## 完了済み
 
 Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 
-## Topic 21 解説PDF
+## Topic 21 練習source
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
 固定品質ゲート:
 - H26 一次 機械 問5 `(4),(5)` — 2答案要素
@@ -26,11 +26,14 @@ Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 - R1 二次 機械・制御 問1 `(4)` — 1答案要素
 - H26 二次 機械・制御 問1 `(4)` — 1答案要素
 - 合計: `一次2問＋二次3問 / 5問 / 一次3＋二次3 = 6答案要素`
-- 固定答案要素のPDF接続: `6 / 6 covered`
+- 固定答案要素の練習問題接続: `6 / 6 mapped`
 - H26一次 問5 `(4),(5)` 最小判別条件: `2 / 2 covered`
 - SPEC固定8項目: `8 / 8 covered`
-- SPEC指定3可視化: `3 / 3 PASS`
-- 3段階例題: `3 / 3 PASS`
+- SPEC指定3可視化への式系接続: `3 / 3 PASS`
+- 一次試験型: `8 / 8 PASS`
+- 二次記述式: `4 / 4 PASS`
+- 独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
 - 公式解答・標準解答の個別正答参照・保存: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
@@ -41,15 +44,8 @@ Topic 01〜20は最終QAまで `PASS / completed`。完成数は `20 / 39`。
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source_gate_addendum.md`
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation.pdf`
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_pdf_qa.md`
-
-PDF QA:
-- A4縦 `3 pages`
-- PDFium 180 dpi: `3 / 3 PASS`
-- Poppler 180 dpi: `3 / 3 PASS`
-- 文字抽出: `PASS`
-- 欠落グリフ・黒四角・重なり・クリップ: `0件`
-- source数式・数値再照合: `PASS`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice_source.md`
 
 ## 次工程
 
-Topic 21練習sourceを作成する。固定EXAM_ALIGNMENT・固定問題・固定答案要素・SPEC境界は変更しない。完成後clean blind再解答は練習PDF・PowerPointまで完成してから行う。
+Topic 21練習PDFを作成する。練習sourceの問題・正答・数式・仮定値・固定EXAM_ALIGNMENTを変更しない。完成後clean blind再解答はPowerPoint完成後に行う。
