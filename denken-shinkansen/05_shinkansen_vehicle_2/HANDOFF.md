@@ -8,13 +8,48 @@
 
 Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 
-現在地は `topic_24_completed`。次のactive topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
+現在地は `topic_25_exam_alignment_complete`。active topicは Topic 25 `N700S バッテリー自走のエネルギー設計`。
 
 ## 今回のreconcile
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 24ディレクトリ、直近コミット、既存車両二種worker成果を確認した。PowerPoint正本修復済み成果、制作前EXAM_ALIGNMENT、解説・練習成果物QAを再利用し、重複生成・重複QA・過去問差替えはしていない。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md` を確認した。Topic 24は完了済みのため、最初の未完了テーマTopic 25へ移行した。
 
-別workerが公式解答参照前に固定した clean blind 候補 `17 / 17` を変更せず、今回公式解答・標準解答へ照合した。
+Topic 25では本文作成前に公式第二種過去問を直近年度側から確認し、一次4問＋二次1問を固定した。N700S固有値を推測せず、固定SPECの10項目・指定3計算／グラフだけを教材責務とした。
+
+## Topic 25 制作前EXAM_ALIGNMENT
+
+固定公式過去問:
+1. R8 一次「機械」問5 `(1)〜(5)` — 5答案要素
+2. R4 一次「機械」問6 `(1)〜(5)` — 5答案要素
+3. R2 一次「機械」問4 `(1)〜(5)` — 5答案要素
+4. R1 一次「機械」問4 `(1)〜(5)` — 5答案要素
+5. H23 二次「機械・制御」問3 `(1)〜(4)` — 8答案要素
+
+集計:
+- 一次: `4問 / 20答案要素`
+- 二次: `1問 / 8答案要素`
+- 合計: `5問 / 28答案要素`
+- 二次記述・計算問題: `1問`
+- SPEC必須10項目: `10 / 10 fixed`
+- SPEC指定3計算・グラフ: `3 / 3 fixed`
+- 未確認N700S電池値の真値化: `0件`
+- SPEC外追加: `0件`
+- 完成後clean blind: `PENDING`
+
+H23二次 問3は、可逆チョッパによる二次電池の充放電、Cレート、内部抵抗、端子電圧、充放電時間、エネルギー効率を途中式付きで要求するため、二次記述ゲートとして固定した。
+
+成果物:
+- `topics/25_n700s_battery_self_propulsion_energy_design/25_n700s_battery_self_propulsion_energy_design.md`
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`。
+
+## Topic 25 固定境界
+
+扱うのは系列SPECの次だけ:
+- 電池電圧、Ah、Wh、直列・並列、Cレート、放電電流、電池効率、インバータ効率、モーター効率、必要容量
+- 走行時間―必要電力量、速度条件―必要電力、効率―必要電池容量
+
+インバータ効率・モーター効率は固定過去問5問の直接答案要素とは主張せず、SPEC必須のエネルギー収支として扱う。N700Sの電池電圧、Ah、Wh、セル数、直並列数、Cレート、実放電電流、各効率は、一次資料・メーカー資料で確認できない値を真値化しない。
 
 ## Topic 24 最終品質ゲート
 
@@ -37,10 +72,6 @@ Topic 01〜24は最終QAまで `PASS / completed`。完成数は `24 / 39`。
 - SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
 - 新たなexact blocker: `0件`
-
-成果物:
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_blind_reanswer_candidates_clean.md`
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_blind_reanswer_official_check.md`
 
 判定: `PASS / CLEAN_BLIND_COMPLETE`。Topic 24全体は `PASS / COMPLETED`。
 
@@ -77,4 +108,4 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 
 ## 次の安全な工程
 
-Topic 25 `N700S バッテリー自走のエネルギー設計` の制作前EXAM_ALIGNMENT。公式第二種一次・二次過去問を先に固定し、既存workerの検証済み成果と重複しない範囲だけ新規調査する。完成数は `24 / 39`。
+Topic 25の固定EXAM_ALIGNMENTを変更せず、解説sourceを作成する。固定5問・28答案要素、SPEC必須10項目、指定3計算・グラフをすべて接続する。完成数は `24 / 39`。
