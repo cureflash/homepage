@@ -6,51 +6,47 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `21 / 39`
-- current_status: `topic_21_completed`
+- current_status: `topic_22_preproduction_exam_alignment_complete`
 - last_completed_topic: `21 高速域の速度・けん引力・出力制御`
 - active_topic: `22 E5系 再粘着制御`
-- next_start: Topic 22の制作前EXAM_ALIGNMENT。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`のTopic 22固定範囲に従い、第二種一次・二次の公式過去問を先に調査して固定品質ゲートを作る
+- next_start: Topic 22 解説source作成。固定した第二種一次2問＋二次3問、計5問・11答案要素とSPEC固定8項目・3可視化を変更しない
 
 ## 完了済み
 
 Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 
-## Topic 21 最終QA
+## Topic 22 制作前EXAM_ALIGNMENT
 
-判定: `PASS / COMPLETED`
+判定: `PASS / PREPRODUCTION_EXAM_ALIGNMENT_COMPLETE`
+
+固定公式過去問:
+- H28 一次 機械 問5 `(4),(5)` — `2答案要素 / 直接`
+- R2 一次 機械 問3 `(1)` — `1答案要素 / 橋渡し`
+- R7 二次 機械・制御 問2 `(1)のs1のみ`, `(3)のN2のみ` — `2答案要素 / 橋渡し`
+- R2 二次 機械・制御 問1 `(2),(3),(4)` — `3答案要素 / 橋渡し`
+- H21 二次 機械・制御 問4 `(4),(5a),(5b)` — `3答案要素 / 橋渡し`
 
 固定品質ゲート:
-- H26 一次 機械 問5 `(4),(5)` — `2 / 2 PASS`
-- H25 一次 機械 問3 `(1)` — `1 / 1 PASS`
-- R7 二次 機械・制御 問2 `(1)のT1のみ` — `1 / 1 PASS`
-- R1 二次 機械・制御 問1 `(4)` — `1 / 1 PASS`
-- H26 二次 機械・制御 問1 `(4)` — 教材注記反映後再確認 `1 / 1 PASS`
-- 一次: `3 / 3 PASS`
-- 二次: `3 / 3 PASS`
-- 総計: `6 / 6 PASS`
-- 固定5問: `5 / 5 PASS`
+- 一次: `2問・3答案要素`
+- 二次: `3問・8答案要素`
+- 合計: `5問・11答案要素`
+- 二次記述問題: `3問`
+- 直接問題: `1問`
+- 橋渡し問題: `4問`
+- SPEC固定8項目: `8 / 8 mapped`
+- SPEC指定3可視化: `3 / 3 requirements fixed`
 
-H26二次 問1(4):
-- 高精度 `π` では `48.046775... N·m → 48.0 N·m`
-- 公式標準解答は `I2'=22.430 A`、`48.067 → 48.1 N·m`
-- 公式掲載値と `π=3.14` で `48.067347... N·m` を再現
-- 当該過去問固有の数値処理差として解説source / 解説PDFへ注記済み
-- 一般式 `P=Tω`、`ω=2πN/60` は変更なし
-- PowerPointは個別数値計算を掲載していないため同期不要
-
-成果物QA:
-- 解説PDF: `3 / 3 PASS`（2 renderer）、固定6答案要素 `6 / 6 covered`、SPEC 8項目・3可視化・3段階例題 PASS
-- 練習PDF: `4 / 4 PASS`（2 renderer）、一次8問＋二次4問、独立再計算 `12 / 12 PASS`、固定6答案要素 `6 / 6 PASS`
-- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、固定6答案要素 `6 / 6 PASS`、SPEC 8項目・3可視化 PASS
-- 候補答案変更: `0件`
-- 固定問題差替え: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
+境界:
+- H28一次 問5が粘着差と車輪回転速度差を直接扱う。
+- 残る4問は速度差・滑り・トルク応答・フィードバック特性の橋渡し技能として固定し、再粘着の直接出題とは扱わない。
+- SPEC固有の粘着係数・粘着限界・空転・滑走・再粘着・3可視化は教材内で明示的に補完する。
+- 公式解答・標準解答の個別正答記号・最終数値は制作前段階では保存しない。
 - 固定SPEC外追加: `0件`
-- 未確認実車値の真値化: `0件`
+- 未確認E5系実車値の真値化: `0件`
 
-最終QA記録:
-- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_final_qa.md`
+記録:
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control.md`
 
 ## 次工程
 
-Topic 22「E5系 再粘着制御」の制作前EXAM_ALIGNMENTを行う。仕様を追加せず、まず公式過去問から第二種の試験要求を固定する。
+Topic 22解説sourceを作成する。固定5問・11答案要素、SPEC固定8項目、指定3可視化を変更せず、教材だけで各要求技能を解ける本文・3段階例題・可視化再生成条件を作る。
