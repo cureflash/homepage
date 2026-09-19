@@ -4,11 +4,14 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`の固定範囲だけを対象とし、第二種一次2問＋二次3問、計5問・6答案要素を品質ゲートとして固定した。公式解答・標準解答の個別正答は本段階では照合していない。
+制作前EXAM_ALIGNMENTと解説sourceを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`の固定範囲だけを対象とし、第二種一次2問＋二次3問、計5問・6答案要素を品質ゲートとして固定している。公式解答・標準解答の個別正答は本段階では照合していない。
 
-current_status: `topic_21_exam_alignment_complete`
+current_status: `topic_21_explanation_source_complete`
 
-次工程: Topic 21 解説source作成。
+現行成果物:
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source.md`
+
+次工程: Topic 21 解説PDF作成。
 
 ## 固定範囲
 
@@ -149,15 +152,19 @@ current_status: `topic_21_exam_alignment_complete`
 | 正誤判定知識 | 定出力域で速度が上がってもトルク・けん引力は一定ではない、電圧制限と電流制限を取り違えない |
 | 複数論点接続 | 電動機側 `P=Tω` と車両側 `P=Fv` を出力を介して接続する |
 
-## 制作前ゲート判定
+## 解説source進捗
 
-- 固定SPEC逸脱: `0件`
-- 固定公式過去問: `一次2問＋二次3問 / 計5問`
-- 固定答案要素: `一次3＋二次3 / 計6`
-- 二次記述計算: `3問含む`
-- 参考教材: `2系統以上確認`
-- 公式解答・標準解答の個別正答を制作前sourceへ保存: `0件`
-- 未確認N700系実車値の真値化: `0件`
-- 判定: `PASS / topic_21_exam_alignment_complete`
+- 成果物: `21_high_speed_tractive_force_output_control_explanation_source.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問: `一次2問＋二次3問 / 5問`
+- 固定答案要素: `一次3＋二次3 / 6`
+- 固定要求知識の本文マッピング: `6 / 6 covered`
+- SPEC指定8項目: `8 / 8 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 fixed`
+- 3段階例題: `3 / 3`
+- 公式解答・標準解答の個別正答参照・保存: `0件`
+- SPEC外追加: `0件`
+- 未確認実車値の真値化: `0件`
 
-次工程は、この固定EXAM_ALIGNMENTを変更せずTopic 21解説sourceを作成する。
+次工程は解説PDF。固定EXAM_ALIGNMENTを変更せず、解説sourceを版面化する。
