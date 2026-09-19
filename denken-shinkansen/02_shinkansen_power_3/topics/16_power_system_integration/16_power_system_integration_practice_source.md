@@ -1,7 +1,7 @@
 # Topic 16 練習問題source — 発電所からN700Sまで全部つないでみる
 
 ## 状態
-`practice_source_complete`
+`practice_source_complete`。Topic 16の初回最終QAまで完了し、指摘された進捗記録同期を完了。最終QA再実施待ち。
 
 `16_power_system_integration.md` のSPEC固定範囲と固定EXAM_ALIGNMENT 5出題回・7答案要素から逆算した、電験三種「電力」型の練習問題source。全12問・全問五肢択一、基礎3問／本試験標準7問／複合2問。固定公式過去問の問題文・保存済み正答は転記せず、同じ要求知識を独自問題で練習する。
 
@@ -482,4 +482,4 @@ N700S
 `PASS / PRACTICE_SOURCE_COMPLETE`
 
 ## 次
-Topic 16の練習PDFを作成する。
+初回最終QAで指摘された進捗記録同期を完了。次はTopic 16の最終QAを再実施する。
