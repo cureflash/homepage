@@ -4,16 +4,16 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `18 / 22`
-- current_status: `topic_19_final_qa_pass / IN_PROGRESS`
-- last_completed_topic: `18 速度指令を変えたら何秒で追従する？`
-- active_topic: `19 PIDで新幹線の速度を制御する`
-- next_start: Topic 19 completed確定・完了記録同期
+- exam_aligned_completed_topics: `19 / 22`
+- current_status: `topic_19_final_qa_pass / completed`
+- last_completed_topic: `19 PIDで新幹線の速度を制御する`
+- active_topic: `20 制御系はなぜ発振する？`
+- next_start: Topic 20 制作前EXAM_ALIGNMENT
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
 - [x] Topic 18 最終QA `PASS / topic_18_final_qa_pass / completed`
-- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`、練習source `PASS`、練習PDF＋QA `PASS`、解説画像PowerPoint＋QA `PASS`、独立再解答前ゲート `BLIND_REANSWER_READY`、完成後独立再解答ロック時公式一致 `11 / 12`、解答群記号訂正後の記録QA `12 / 12 PASS`、最終QA再実施 `PASS / topic_19_final_qa_pass`。completed確定・完了記録同期のみ未実施
+- [x] Topic 19 最終QA `PASS / topic_19_final_qa_pass / completed`
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -121,8 +121,16 @@ blocker修正:
 - 進捗記録整合: `4 / 4 PASS`
 - 最終判定: `PASS / topic_19_final_qa_pass`
 
+## Topic 19 completed状態同期
+- 主source: `topic_19_final_qa_pass / completed`
+- 練習source: 最終QA `PASS / completed`、次工程Topic 20制作前EXAM_ALIGNMENT
+- STATUS/HANDOFF: 完成数 `19 / 22`、active Topic 20へ同期
+- 固定一次1問＋二次4問・12答案要素: `12 / 12 PASS` 維持
+- 技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果: 変更なし
+- 判定: `PASS / completed`
+
 ## 今回進めた内容
-Topic 19の最終QAを再実施し、前回blocker解消を確認して `PASS / topic_19_final_qa_pass` とした。技術・試験対応内容は変更していない。完成数はcompleted確定・完了記録同期前のため `18 / 22` のまま。
+Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期した。技術・試験対応内容は変更していない。完成数は `19 / 22`。
 
 ## 次工程
-Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期する。
+Topic 20「制御系はなぜ発振する？」の制作前EXAM_ALIGNMENTを行う。
