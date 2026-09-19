@@ -8,9 +8,10 @@
 
 - path: `25_n700s_battery_self_propulsion_energy_design_practice.pdf`
 - GitHub blob SHA: `2dbb1439e2ee237065fce69e8ac11a9315c0335f`
-- file size: `14,077 bytes`
+- file size: `14,089 bytes`
 - SHA-256: `ab6df0853fe14f2ec8daeb4a43329bab7fcc9a3eeb68f260aadb05531f4d343c`
 - A4縦: `5 pages`
+- canonical size sync: GitHub正本blobのmetadataに合わせて `14,089 bytes` へ訂正。blob SHAは不変。
 
 ## 表示・構造QA
 
