@@ -6,8 +6,8 @@
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_20_final_qa_progress_metadata_unsynced / NEEDS_REVISION`
-- 次工程: Topic 20 進捗・メタデータ記録3件の同期
+- current status: `topic_20_progress_metadata_synced / IN_PROGRESS`
+- 次工程: Topic 20 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -89,18 +89,18 @@
 
 技術本文・練習問題・固定EXAM_ALIGNMENT・PDF/PPTXは変更していない。
 
-## Topic 20 最終QA
-過去問対応・成果物・独立再解答の技術ゲートは全てPASS。ただし最終整合QAで次の3件を確認した。
+## Topic 20 前回最終QA
+過去問対応・成果物・独立再解答の技術ゲートは全てPASS。ただし進捗・メタデータ3件が未同期だったため `NEEDS_REVISION / topic_20_final_qa_progress_metadata_unsynced` とした。
 
-1. main source冒頭の状態・次工程が解説source完成時点のまま。
-2. 練習source末尾の次工程が練習PDF作成前のまま。
-3. 解説PDF QAはGit blob `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f` を正しく記録しているが、size欄 `17333 bytes` が現行main Contents APIの `17336 bytes` と不一致。
+## 今回の進捗・メタデータ同期
+1. main sourceの状態・次工程を現行成果物と独立再解答完了状態へ同期: `PASS`
+2. 練習sourceの次工程をTopic 20最終QA再実施へ同期: `PASS`
+3. 解説PDF QAのsize記録を `17333 bytes` → `17336 bytes` に訂正: `PASS`
 
-- 技術本文の修正要否: `0件`
-- 固定EXAM_ALIGNMENT変更要否: `0件`
-- PDF/PPTX再生成要否: `0件`
-- 最終QA判定: `NEEDS_REVISION / topic_20_final_qa_progress_metadata_unsynced`
-- 完成数: `19 / 22`
+- Git blob `bbe9d9ff7ee149b9c625cdfd121a2dd0756efd1f` は変更なし
+- SHA-256 `f8e84a5f92fc05e07845a551625b9abd01a6e6823cfb322a6aa465b0e9a4b648` は変更なし
+- 技術本文・練習問題・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答内容の変更: `0件`
+- 判定: `PASS / topic_20_progress_metadata_synced`
 
 ## 次工程
-上記3件の進捗・メタデータ記録だけを現行mainへ同期する。技術本文、練習問題、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答内容は変更しない。
+Topic 20最終QAを再実施する。再QAで全ゲートがPASSした場合にのみ `completed` とする。
