@@ -3,11 +3,11 @@
 更新日: 2026-09-19
 
 ## 現在地
-- Topic 01〜18: 最終QA `PASS / completed`
-- 完成数: `18 / 22`
-- active topic: `19 PIDで新幹線の速度を制御する`
-- current status: `topic_19_final_qa_pass / IN_PROGRESS`
-- 次工程: Topic 19 completed確定・完了記録同期
+- Topic 01〜19: 最終QA `PASS / completed`
+- 完成数: `19 / 22`
+- active topic: `20 制御系はなぜ発振する？`
+- current status: `topic_19_final_qa_pass / completed`
+- 次工程: Topic 20 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -91,14 +91,21 @@ blocker修正:
 
 最終判定: `PASS / topic_19_final_qa_pass`。
 
-## 今回完了した段階
-Topic 19最終QAを再実施し、前回blockerの解消を確認した。
+## completed状態同期
+- 主source: `topic_19_final_qa_pass / completed`
+- 練習source: 最終QA `PASS / completed`、次工程Topic 20制作前EXAM_ALIGNMENT
+- STATUS/HANDOFF: 完成数 `19 / 22`、active Topic 20へ同期
+- 固定一次1問＋二次4問・12答案要素: `12 / 12 PASS` 維持
+- 技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果の変更なし
+- 判定: `PASS / completed`
 
-- 最終QA記録を `PASS / topic_19_final_qa_pass` へ更新
-- STATUS/HANDOFFを同状態へ同期
-- 技術本文、練習問題、正答、固定EXAM_ALIGNMENT、PDF/PPTX、独立再解答結果は変更なし
-- completed確定・主source/練習sourceの完了記録同期は次工程
-- 完成数は `18 / 22` のまま
+## 今回完了した段階
+Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期した。
+
+- 最終QA `PASS / topic_19_final_qa_pass` を維持
+- 固定一次1問＋二次4問・12答案要素 `12 / 12 PASS` を維持
+- 技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更なし
+- 完成数は `19 / 22`
 
 ## 次に行うこと
-Topic 19を `completed` として確定し、主source・練習source・STATUS/HANDOFFの完了記録を同期する。
+Topic 20「制御系はなぜ発振する？」の制作前EXAM_ALIGNMENTを行う。
