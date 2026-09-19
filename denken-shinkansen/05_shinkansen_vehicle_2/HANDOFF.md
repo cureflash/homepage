@@ -8,13 +8,11 @@
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
-現在地は `topic_24_powerpoint_blocked_canonical_zip_integrity`。active topic は Topic 24 `N700S 主電動機設計の比較`。Topic 24全体は未完了。
+現在地は `topic_24_powerpoint_canonical_repair_complete`。active topic は Topic 24 `N700S 主電動機設計の比較`。Topic 24全体は未完了。
 
 ## 今回のreconcile
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 24ディレクトリ、直近コミット、既存車両二種worker成果を確認した。練習PDFは別workerが `PASS / PRACTICE_PDF_COMPLETE` まで進めていたため重複作業していない。
-
-固定品質ゲートは再利用し、過去問の差替え・追加・重複再調査はしていない。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 24ディレクトリ、直近コミット、既存車両二種worker成果を確認した。固定品質ゲートは再利用し、過去問の差替え・追加・重複再調査はしていない。
 
 - R7一次「機械」問2: Topic 10 `5 / 5 PASS`
 - R4一次「機械」問2 `(3)〜(5)`: Topic 12 `3 / 3 PASS`
@@ -24,30 +22,24 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 
 ## Topic 24 解説画像PowerPoint
 
-ローカル最終artifactは以下までQA済み。
+GitHub main正本を既存のTopic 24生成sourceから再生成し、正本そのものをQAした。
 
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx`
+- Git blob SHA: `6ae38920238198426df92ecf6bd99e74ca7214cf`
+- `264,329 bytes`
+- 修復コミット: `22f4bed3aa88ea00e99274c7b59d08198ef1a84b`
 - 16:9 / `6 slides`
-- `27,698 bytes`
-- SHA-256: `9d551c8110e7bd3081f7219d6d85e66f23f859d02ff4326ebf70ec51f3eca4f8`
-- ZIP / python-pptx / LibreOffice / Poppler / PDFium / contact sheet: `PASS`
-- 文字切れ・重なり・欠落グリフ: `0件`
+- ZIP integrity: `PASS`
+- python-pptx open: `PASS`
+- geometry overflow: `0`
+- LibreOffice PDF変換: `PASS / 6 pages`
 - 固定5問・17答案要素: `17 / 17 covered`
 - SPEC必須8項目: `8 / 8 covered`
 - SPEC指定3可視化: `3 / 3 PASS`
 
-GitHub main正本:
-- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_images.pptx`
-- Git blob SHA: `5aa5cd61b81bc1d941d9d628c7abbc7af2bf536d`
-- `24,879 bytes`
+判定: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
 
-正本そのものを独立QAする一時workflowを実行したが、checkout直後の最初の構造検査 `unzip -t` で `exit code 9`。python-pptx / LibreOffice / render QAへ進めなかった。ローカルQA済みartifactともbyte identityが一致しない。
-
-判定: `BLOCKED / CANONICAL_PPTX_ZIP_INTEGRITY_FAIL`
-
-exact blocker:
-`GitHub main正本PPTX (24,879 bytes, blob 5aa5cd61b81bc1d941d9d628c7abbc7af2bf536d) は独立QAの最初の ZIP integrity check "unzip -t" で exit code 9 となった。正本を有効なPPTX packageとして確認できず、構造・表示QAを実施できない。QA済みローカルartifact (27,698 bytes, SHA-256 9d551c8110e7bd3081f7219d6d85e66f23f859d02ff4326ebf70ec51f3eca4f8) ともidentity不一致。`
-
-clean blindへは進めていない。
+旧GitHub正本のZIP integrity / artifact identity blockerは解消した。固定EXAM_ALIGNMENT、一般式、SPEC、未確認実車値境界は変更していない。clean blindへはまだ進めていない。
 
 ## Topic 24 既存成果
 
@@ -56,7 +48,7 @@ clean blindへは進めていない。
 - 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
 - 練習source: `PASS / PRACTICE_SOURCE_COMPLETE`
 - 練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
-- 解説画像PowerPoint: `BLOCKED / CANONICAL_PPTX_ZIP_INTEGRITY_FAIL`
+- 解説画像PowerPoint: `PASS / POWERPOINT_CANONICAL_REPAIR_COMPLETE`
 - 完成後clean blind固定過去問再解答: `未実施`
 
 ## Topic 24 固定EXAM_ALIGNMENT
@@ -81,4 +73,4 @@ N700S主電動機の実運転周波数、実回転速度、実トルク、寸法
 
 ## 次の安全な工程
 
-GitHub正本PPTXを有効なQA済みartifactへ修復・置換し、その正本に対してZIP/open/render QAを再実施する。解消前はclean blind独立再解答へ進まない。完成数は `23 / 39` のまま。
+Topic 24教材だけで固定第二種一次3問＋二次2問、合計5問・17答案要素をclean blind独立再解答する。完成数は `23 / 39` のまま。
