@@ -4,7 +4,7 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `15`
 theme: 回生した電力が大量に戻ったら？
-current_status: `topic_15_explanation_pdf_complete`
+current_status: `topic_15_practice_source_complete`
 completed_topics: `14 / 22`
 
 ## Completed through Topic 14
@@ -13,7 +13,7 @@ Topic 01〜14は `completed`。
 
 ## Topic 15 current progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QAまで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source作成、解説PDF生成＋PDF QA、練習問題source作成まで完了。
 
 正式品質ゲート対象は一次3問＋二次2問、計5問・24答案要素で固定したまま変更なし。
 
@@ -57,7 +57,17 @@ Topic 01〜14は `completed`。
 - 逆潮流時の `電圧上昇` の最小限の説明 — `RESOLVED`
 - `回生失効の概念` — `RESOLVED`
 
-練習問題、PowerPoint、完成後blindは未着手。
+練習問題source:
+- `topics/15_regenerative_power/15_regenerative_power_practice.md`
+- 全15問
+- 基礎4問 / 本試験標準8問 / 複合・応用3問
+- 二種一次型五肢択一10問 / 二種二次型記述5問
+- 全問に完全解説
+- 固定5問・24答案要素を `24 / 24` 接続
+- SPEC固定項目・時系列電力収支・蓄電あり/なし比較を収録
+- 公式過去問転載、新規正式過去問追加、後続Topic先取り: `0件`
+
+練習PDF、PowerPoint、完成後blindは未着手。
 
 ## Topic 14 completion
 
@@ -85,10 +95,13 @@ Topic 15:
 - 制作前blind: `24 / 24 PASS`
 - 解説source固定本文節: `8 / 8` 接続
 - 解説PDF QA: `PASS`
+- 練習source固定答案要素接続: `24 / 24`
+- 練習source問題構成: `15問 / 一次型10 / 二次型5`
 - 周辺問題による件数水増し: `0件`
 - Topic 14問題の重複採用: `0件`
 - Topic 16故障計算先取り: `0件`
 - Topic 17保護・FRT設計先取り: `0件`
+- Topic 18雷サージ先取り: `0件`
 - Topic 20安定度先取り: `0件`
 - Topic 21需給制御一般の新規展開: `0件`
 - 未確認実設備値の真値化: `0件`
@@ -111,8 +124,8 @@ Topic 15:
 - [x] Topic 12 completed
 - [x] Topic 13 completed
 - [x] Topic 14 completed
-- [ ] Topic 15 — IN_PROGRESS / 解説PDF `PASS`
+- [ ] Topic 15 — IN_PROGRESS / 解説PDF `PASS` / 練習source complete
 
 ## next_start
 
-固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、Topic 15の練習問題sourceを作成する。PowerPoint、完成後blindはまだ行わない。
+固定5問・24答案要素、本文節マッピング、仮定値/実値境界、後続Topic境界を変更せず、`15_regenerative_power_practice.md` から練習PDFを生成しPDF QAを行う。PowerPoint、完成後blindはまだ行わない。
