@@ -6,11 +6,11 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_20_source_progress_synced`
+current_status: `topic_20_final_qa_complete`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAで唯一のblockerだった主source進捗記録不整合は同期済み。次工程は最終QA再実施。
+Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施まで完了。初回最終QAの唯一のblockerだった主source進捗記録不整合は解消済みで、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。次工程は `completed` 状態同期。
 
 ## Topic 20 固定範囲
 
@@ -61,7 +61,7 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - PowerPoint QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
 - 完成後独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_reanswer.md`
 - 最終QA: `topics/20_east_i_measurement/20_east_i_measurement_final_qa.md`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `FINAL_QA_COMPLETE`
 - completion: `in_progress`
 
 ## 完成後独立再解答
@@ -79,10 +79,13 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - East i内部測定回路・未公開定数の推測追加: `0件`
 - 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
-## 初回最終QA
+## 最終QA再実施
 
+- 初回blocker解消: `1 / 1`
 - 必須成果物欠落: `0件`
 - 固定一次5問・25答案要素: `25 / 25 PASS`
+- R8/R7/R6/H24公式標準解答直接一致: `20 / 20`
+- H20二次資料掲載解答一致: `5 / 5`
 - SPEC固定範囲: `12 / 12`
 - 解説PDF表示QA: `8 / 8 PASS`
 - 練習PDF表示QA: `4 / 4 PASS`
@@ -92,17 +95,8 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
 - East i内部測定回路・未公開定数の推測追加: `0件`
-- 初回blocker: 主source `20_east_i_measurement.md` の状態欄が実進捗と不一致
-- blocker解消: `2026-09-19 / source進捗記録同期済み`
-- 初回判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
-
-## 今回のreconcile
-
-- 最新main・STATUS/HANDOFF・直近変更・上位SPECを再確認。
-- 主枠側の初回最終QA結果を採用し、再制作・再計算を重複実施していない。
-- 主sourceの進捗記録だけを実成果物へ同期。
-- 技術本文・固定EXAM_ALIGNMENT・過去問正答・PDF/PPTX成果物の変更: `0件`
-- 仕様追加: `0件`
+- 主source / STATUS / HANDOFF の最終QA前進捗整合: `PASS`
+- 判定: `PASS / FINAL_QA_COMPLETE`
 
 ## East i一次資料
 
@@ -116,4 +110,4 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 
 ## 次工程
 
-Topic 20最終QAを再実施する。固定一次5問・25答案要素、SPEC固定範囲12項目、必須成果物、各表示QA、完成後独立再解答、East i出典境界、進捗記録整合を確認し、すべてPASSした場合のみ `completed` 状態同期へ進む。
+Topic 20の `completed` 状態同期。完成数を `20 / 21` へ更新し、次の未完了テーマTopic 21へ移るのは、その同期が完了した後。
