@@ -8,23 +8,20 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_practice_pdf_resync_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_powerpoint_resync_complete`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## reconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23 clean blind候補・公式照合、source補強、成果物同期QA、解説PDF再同期、練習PDF再同期をreconcile済み。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23初回clean blind、source補強、成果物同期QA、解説PDF再同期、練習PDF再同期、PowerPoint再同期をreconcile済み。
 
 - 初回clean blind候補は commit `17837d40774f12e8348e9b55f250d5573b35f901` で公式照合前に固定。後編集しない
 - 初回公式照合は固定23答案要素中 `21 / 23 PASS`。不一致はR2一次「機械」問2 `(2),(4)` のみ
 - 解説source補強: commit `c778f6afcdc0132824bc4321099e1257b78c979c`
 - 練習source補強: commit `49758b6587fa8ce4bd2b6a8e27b0936d6c430871`
-- source補強進捗同期: commit `7b6cf706ca24ee55f81cb34f1ebcc4252cf2f753`
 - 成果物同期QA正本: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_post_blind_artifact_sync_qa.md`
-- 成果物同期QA commit: `d2b9e2e38b784c266bdf1df074e23807e1990955`
-- 同工程で生成された重複QAは削除済みで、正本1件へ統合
-- 解説PDFは補強後sourceから再生成し、clean blind補強2点・固定23答案要素・表示QAを `PASS`
-- 練習PDFは補強後practice sourceから再生成し、R2読図補強2点・一次問4 `VI t_s/6` 条件限定・固定23答案要素・表示QAを `PASS`
-- Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は既存診断どおり過去問固有丸め差。一般式 `P=Tω`、`ω=2πN/60` は変更しない
+- 解説PDF・練習PDFは補強後sourceから再生成・QA済み
+- PowerPointは既存6枚構成の範囲で再生成し、R2読図補強2点を同期・表示QA済み
+- Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は過去問固有丸め差。一般式 `P=Tω`、`ω=2πN/60` は変更しない
 
 ## Topic 23 固定EXAM_ALIGNMENT
 
@@ -39,7 +36,7 @@ latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果
 
 SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も変更しない。
 
-## 初回clean blind不一致とsource補強
+## 初回clean blind不一致と補強
 
 不一致A: R2一次問2 `(2)` は候補 `(1-D)V_dc`、公式 `D V_dc`。原因は問題図の電圧矢印極性とS ON/OFF状態の取り違え。
 
@@ -47,76 +44,39 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 
 補強済み:
 
-1. 「矢印極性→状態表→平均値」の順を追加し、固定R2では `V=D V_dc` と明示
-2. スイッチングエネルギーは `p(t)=v(t)i(t)` を問題図どおり積分し、固定R2図3では `W_off=(1/2)V_dc I_dc T_2` と明示
-3. 練習一次問4の `VI t_s/6` は当該相補的直線ランプ条件だけに限定
+1. 「矢印極性→状態表→平均値」の順を追加し、固定R2では `V=D V_dc`
+2. 固定R2図3では `W_off=(1/2)V_dc I_dc T_2`
+3. `VI t_s/6` は相補的直線ランプ条件だけに限定
 4. 一般式 `E_sw=∫v(t)i(t)dt` は変更しない
 
-## clean blind補強 成果物同期QA
+## 成果物同期状態
 
-判定: `SYNC_REQUIRED / 3 ARTIFACTS`
-
-- 解説PDF: `PASS / RESYNCED`。補強後sourceの2読図手順を反映し、表示・内容QA済み
-- 練習PDF: `PASS / RESYNCED`。R2読図補強2点と `VI t_s/6` の条件限定を反映し、表示・内容QA済み
-- PowerPoint: `REGENERATE_REQUIRED`。固定R2向け2読図手順を既存6枚構成の範囲で最小同期する
+- 解説PDF: `PASS / RESYNCED`
+- 練習PDF: `PASS / RESYNCED`
+- PowerPoint: `PASS / RESYNCED`
+  - `23_n700s_sic_main_converter_images.pptx`
+  - `23_n700s_sic_main_converter_powerpoint_qa.md`
+  - 16:9 `6 slides`
+  - SHA-256 `dc5babab362325cb00ca462660cd7f9b6c1cd1f6ef6f1e36c62ffe55395ae70c`
+  - clean blind補強2点 `2 / 2 PASS`
+  - 固定5問・23答案要素 `23 / 23 covered`
+  - SPEC固定8項目 `8 / 8 covered`
+  - SPEC指定3可視化 `3 / 3 PASS`
+  - LibreOffice / pdftoppm `6 / 6 PASS`
+  - geometry overflow `0`
 
 維持事項:
 
-- 固定5問・23答案要素: `unchanged`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 一般式変更: `0件`
-- SPEC固定8項目・指定3可視化変更: `0件`
 - 新規問題追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
 - JR東海7%値・富士電機20%値の誤拡張: `0件`
 - 初回clean blind候補の後編集: `0件`
 - 新たなexact blocker: `0件`
 
-## 解説PDF clean blind後再同期
-
-判定: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
-
-- `23_n700s_sic_main_converter_explanation.pdf`
-- `23_n700s_sic_main_converter_explanation_pdf_qa.md`
-- A4縦 `5 pages`
-- SHA-256 `13ea5c2773466a40f1053ea850051b5b2740682244495d7c8b482f86a83e6e27`
-- PDFium `5 / 5 PASS`
-- Poppler `5 / 5 PASS`
-- clean blind補強2点 `2 / 2 PASS`
-- 固定5問・23答案要素 `23 / 23 covered`
-- SPEC固定8項目 `8 / 8 covered`
-- SPEC指定3可視化 `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT変更 `0件`
-- 一般式変更 `0件`
-- SPEC外追加 `0件`
-- 未確認N700S実車値の真値化 `0件`
-- 新たなexact blocker `0件`
-
-## 練習PDF clean blind後再同期
-
-判定: `PASS / PRACTICE_PDF_RESYNC_COMPLETE`
-
-- `23_n700s_sic_main_converter_practice.pdf`
-- `23_n700s_sic_main_converter_practice_pdf_qa.md`
-- A4縦 `5 pages`
-- SHA-256 `9dce2e523db192ca32ce786e7ca60672fe8fca6a91f279117c17d8ce3e81d1fc`
-- PDFium `5 / 5 PASS`
-- Poppler `5 / 5 PASS`
-- clean blind補強2点 `2 / 2 PASS`
-- 一次問4 `VI t_s/6` 条件限定 `PASS`
-- 一次8問＋二次4問 = `12 / 12`
-- 既存12問の問題数・正答・数値変更 `0件`
-- 固定5問・23答案要素 `23 / 23 covered`
-- SPEC固定8項目 `8 / 8 covered`
-- SPEC指定3可視化 `3 / 3 aligned`
-- 固定EXAM_ALIGNMENT変更 `0件`
-- 一般式変更 `0件`
-- SPEC外追加 `0件`
-- 未確認N700S実車値の真値化 `0件`
-- 新たなexact blocker `0件`
-
 Topic 23はまだ `completed` にしない。
 
 ## 次の安全な工程
 
-Topic 23 PowerPointを既存6枚構成の範囲で必要最小限再生成する。固定R2一次問2 `(2)` の「矢印極性→状態表→平均値」と `(4)` の `p(t)` 三角波積分を同期し、表示・内容QAする。固定5問・23答案要素、SPEC固定8項目・指定3可視化、一般式、仮定値／実車値境界は変更しない。PowerPoint同期後に初回候補とは別ファイルで修正後clean blindを実施する。
+初回clean blind候補とは別ファイルを作り、補強後のTopic 23教材だけで固定5問・23答案要素を保存済み正答を見ずに独立再解答する。候補を固定した後で公式解答・標準解答と照合する。固定EXAM_ALIGNMENT、一般式、SPEC固定8項目・指定3可視化、仮定値／実車値境界は変更しない。
