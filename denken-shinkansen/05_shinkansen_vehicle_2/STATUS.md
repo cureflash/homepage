@@ -1,19 +1,48 @@
 # STATUS - 新幹線車両・電験二種
 
-更新日: 2026-09-19
+更新日: 2026-09-20
 
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `23 / 39`
-- current_status: `topic_24_explanation_pdf_complete`
+- current_status: `topic_24_practice_source_complete`
 - last_completed_topic: `23 N700S SiC主変換装置`
 - active_topic: `24 N700S 主電動機設計の比較`
-- next_start: Topic 24練習sourceを作成し、一次型・二次記述型の練習問題と完全解説を固定17答案要素へ接続する
+- next_start: Topic 24練習sourceから練習PDFを生成し、数式・単位・一次五肢択一・二次記述解説・固定17答案要素coverage・表示をQAする
 
 ## 完了済み
 
 Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
+
+## Topic 24 練習source
+
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 一次試験型: `8問`（五肢択一）
+- 二次試験型: `4問`（途中式・前提・単位・理由を含む記述式）
+- 合計: `12問`
+- 固定過去問: 第二種一次3問＋二次2問 = `5 / 5 connected`
+- 一次答案要素: `11 / 11 connected`
+- 二次答案要素: `6 / 6 connected`
+- 合計答案要素: `17 / 17 connected`
+- SPEC必須8項目: `8 / 8 covered`
+- SPEC指定3可視化の計算系: `3 / 3 aligned`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- N700S実車接続: 確認済み6極化のみを実値として使用
+- 軽量化境界: 駆動システム全体約20%であり、主電動機単体・6極化単独の20%とは扱わない
+- 未確認N700S実運転周波数・回転速度・トルク・寸法・質量の真値化: `0件`
+- Topic 21 H26二次 問1(4)の丸め注記: `48.1 / 48.0 N·m` を過去問固有差として維持
+- Topic 21一般式変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外主題追加: `0件`
+- 完成後clean blind固定過去問再解答: `未実施`
+- 新たなexact blocker: `0件`
+
+成果物:
+- `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_practice_source.md`
+
+この段階は練習sourceまでの完成であり、Topic 24全体はまだ `completed` としない。
 
 ## Topic 24 解説PDF
 
@@ -42,8 +71,6 @@ Topic 01〜23は最終QAまで `PASS / completed`。完成数は `23 / 39`。
 成果物:
 - `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation.pdf`
 - `topics/24_n700s_main_motor_design_comparison/24_n700s_main_motor_design_comparison_explanation_pdf_qa.md`
-
-この段階は解説PDFまでの完成であり、Topic 24全体はまだ `completed` としない。clean blind独立再解答も未実施。
 
 ## Topic 24 解説source
 
@@ -106,4 +133,4 @@ Topic 24完成後はTopic 24教材だけで固定 `5問・17答案要素` をcle
 
 ## 次工程
 
-Topic 24練習sourceを作成する。一次型と二次記述型を含め、固定5問・17答案要素へ接続し、数値問題は公式選択理由・単位・中間計算・検算まで、記述式は前提・途中式・理由説明まで採点可能な形にする。未確認実車値は追加しない。
+Topic 24練習sourceから練習PDFを生成する。数式・単位・一次五肢択一・二次記述解説・固定5問17答案要素coverage・表示破綻をQAし、未確認実車値を追加しない。練習PDF完成後もclean blindはまだ実施せず、PowerPoint完成後に固定5問・17答案要素をTopic 24教材だけで再解答する。
