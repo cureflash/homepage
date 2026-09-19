@@ -44,12 +44,11 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_images.pptx`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_powerpoint_qa.md`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_candidates_clean.md`
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_comparison.md`
 - `topics/22_e5_readhesion_control/22_e5_readhesion_control_final_qa.md`
 
 ### clean blind reconcile
 
-先行 `10 / 11` 記録は、Topic 22が前提参照を許可するTopic 20フィードバック制御教材を参照範囲から外したworkerの診断だった。有効候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定され、許可されたTopic 20既習内容を用いてH21二次 問4 `(5a)` を正しく導出。その後の公式照合で `11 / 11 PASS`。Topic 22本文・一般式・PDF/PPTXへの追加修正は不要。
+先行 `10 / 11` 記録は、Topic 22が前提参照を許可するTopic 20フィードバック制御教材を参照範囲から外したworkerの診断だった。有効候補は公式照合前に commit `f8aa715525de8747459c27cb02254575eaeca868` で固定され、許可されたTopic 20既習内容を用いてH21二次 問4 `(5a)` を正しく導出。その後の公式照合で `11 / 11 PASS`。公式照合結果は最終QA正本へ統合済みで、重複照合ファイルは削除済み。Topic 22本文・一般式・PDF/PPTXへの追加修正は不要。
 
 ## Topic 21 H26二次 問1(4)
 
