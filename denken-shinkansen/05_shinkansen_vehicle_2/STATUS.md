@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `22 / 39`
-- current_status: `topic_23_exam_alignment_complete`
+- current_status: `topic_23_explanation_source_complete`
 - last_completed_topic: `22 E5系 再粘着制御`
 - active_topic: `23 N700S SiC主変換装置`
-- next_start: 固定5問・23答案要素を変えずTopic 23解説sourceを作成する。Topic 17の一般損失理論は必要最小限だけ前提参照し、SiC・N700S固有の説明へ接続する
+- next_start: Topic 23解説PDF作成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化を変更しない
 
 ## 完了済み
 
@@ -67,8 +67,25 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 - 未確認N700S実車値の真値化: `0件`
 - 新たなexact blocker: `0件`
 
-記録:
+## Topic 23 解説source
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+- 固定5問: `5 / 5 unchanged`
+- 一次答案要素: `17 / 17 covered`
+- 二次答案要素: `6 / 6 covered`
+- 合計: `23 / 23 covered`
+- SPEC固定8項目: `8 / 8 covered`
+- SPEC指定3可視化: `3 / 3 regeneration-ready`
+- 3段階例題: `3 / 3 complete`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認N700S実車値の真値化: `0件`
+- 新たなexact blocker: `0件`
+
+成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_explanation_source.md`
 
 ## Topic 21 H26二次 問1(4)
 
@@ -76,4 +93,4 @@ Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
 ## 次工程
 
-Topic 23解説source作成。固定5問・23答案要素、SPEC固定範囲、指定3可視化を変更しない。
+Topic 23解説PDF作成＋PDF QA。固定5問・23答案要素、SPEC固定8項目、指定3可視化を変更しない。
