@@ -8,9 +8,9 @@
 
 Topic 17「パワー半導体の損失比較」で既に公式問題・SPEC境界・clean blindまで検証済みの損失／熱設計問題を再利用し、同じ過去問の再調査・再解答を重複実施しない。Topic 23ではSiCとN700Sへの接続、小型軽量化までを追加の教材責務として扱う。
 
-解説PDF・練習PDF・PowerPointまで作成済みだが、完成後clean blind初回は固定23答案要素中 `21/23 PASS`。R2一次「機械」問2 `(2),(4)` の2点だけ説明不足が露呈したため、固定EXAM_ALIGNMENT・一般式・SPECを変更せず、解説sourceと練習sourceへ読図手順を最小補強した。既存候補ファイルは後編集していない。
+完成後clean blind初回は固定23答案要素中 `21/23 PASS`。R2一次「機械」問2 `(2),(4)` の2点だけ説明不足が露呈したため、固定EXAM_ALIGNMENT・一般式・SPECを変更せず教材側を最小補強した。解説PDF・練習PDF・PowerPointを再同期後、初回候補とは別の修正後候補を公式照合前に固定し、固定5問・23答案要素 `23/23 PASS` を確認した。最終QAも全項目PASS。
 
-current_status: `topic_23_source_blind_remediation_complete`
+current_status: `topic_23_completed`
 
 現行成果物:
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter.md`
@@ -24,8 +24,12 @@ current_status: `topic_23_source_blind_remediation_complete`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_powerpoint_qa.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_clean.md`
 - `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_official_check.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_remediated_clean.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_remediated_lock_qa.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_remediated_official_check.md`
+- `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_final_qa.md`
 
-次工程: sourceで補強した2点について、既存の解説PDF・練習PDF・PowerPointへの同期要否をQAし、必要な成果物だけ更新する。その後、修正後clean blindを別記録で実施する。
+次工程: Topic 24「N700S 主電動機設計の比較」の制作前EXAM_ALIGNMENT。
 
 ## 固定範囲
 
@@ -168,9 +172,13 @@ Topic 17で上記5問・23答案要素はclean blind `23 / 23 PASS` 済み。Top
 - 固定SPEC外追加: `0件`
 - 未確認N700S実車値の真値化: `0件`
 - 解説source: `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 3段階例題 `3 / 3`, blind補強 `2 / 2`
-- 解説PDF: A4縦 `5 pages`, PDFium / Poppler `5 / 5 PASS`（source補強後の同期要否QA待ち）
+- 解説PDF: A4縦 `5 pages`, PDFium / Poppler `5 / 5 PASS`, 補強後再同期済み
 - 練習source: 一次8問＋二次4問、固定23答案要素 `23 / 23 connected`, SPEC `8 / 8`, 指定3可視化 `3 / 3`, 数値・論理 `12 / 12 PASS`, 一次正答一意性 `8 / 8 PASS`, 固定R2読図補強 `2 / 2 PASS`
-- 練習PDF / PowerPoint: 既存表示QAはPASS、source補強後の同期要否QA待ち
+- 練習PDF: A4縦 `5 pages`, PDFium / pdftoppm `5 / 5 PASS`, 補強後再同期済み
+- PowerPoint: 16:9 `6 slides`, 表示QA `6 / 6 PASS`, 固定23答案要素 `23 / 23 covered`, SPEC `8 / 8`, 指定3可視化 `3 / 3 PASS`, 補強後再同期済み
 - 初回clean blind: `21 / 23 PASS / NEEDS_REVISION`
 - 初回候補の後編集: `0件`
-- 状態: `PASS / SOURCE_REMEDIATION_COMPLETE`
+- 修正後clean blind: `23 / 23 PASS`
+- 修正後候補の後編集: `0件`
+- 最終QA: `PASS / COMPLETED`
+- 状態: `topic_23_completed`
