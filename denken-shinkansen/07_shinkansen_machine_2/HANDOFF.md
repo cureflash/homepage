@@ -6,8 +6,8 @@
 - Topic 01〜19: 最終QA `PASS / completed`
 - 完成数: `19 / 22`
 - active topic: `20 制御系はなぜ発振する？`
-- current status: `topic_20_powerpoint_complete / IN_PROGRESS`
-- 次工程: Topic 20 独立再解答前ゲート
+- current status: `topic_20_blind_reanswer_ready / IN_PROGRESS`
+- 次工程: Topic 20 完成後独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -143,6 +143,7 @@ blocker修正:
 - `topics/20_control_system_stability/20_control_system_stability_practice_pdf_qa.md`
 - `topics/20_control_system_stability/20_control_system_stability_images.pptx`
 - `topics/20_control_system_stability/20_control_system_stability_powerpoint_qa.md`
+- `topics/20_control_system_stability/20_control_system_stability_blind_reanswer_gate.md`
 
 ## Topic 20 解説source QA
 - 固定5問・14答案要素: `14 / 14 COVERED`
@@ -211,13 +212,24 @@ blocker修正:
 - Topic 21先取り・未確認実車制御値化・固定過去問個別正答保存: `各0件 / PASS`
 - 判定: `PASS / topic_20_powerpoint_complete / IN_PROGRESS`
 
-## 今回完了した段階
-Topic 20の解説画像PowerPoint＋QAを完成した。
+## Topic 20 独立再解答前ゲート
+- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` と最新mainを再監査: `PASS`
+- 固定一次2問＋二次3問、計5問・14答案要素: `変更なし / PASS`
+- 公式正答・標準解答の事前保存: `0件 / PASS`
+- 固定過去問の完成済み個別解答・導出結果の事前保存: `0件 / PASS`
+- 解説PDF表示 `5 / 5 PASS`、練習PDF表示 `3 / 3 PASS`、PowerPoint表示 `4 / 4 PASS`
+- 一次練習正答一意性 `10 / 10 PASS`、全15問独立再計算・論理QA `15 / 15 PASS`
+- Topic 21先取り、未確認実車制御値化、SPEC外高度制御理論追加: `各0件 / PASS`
+- 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
 
-- 16:9・4枚、表示 `4 / 4 PASS`
-- 固定一次2問＋二次3問・14答案要素を `14 / 14 COVERED`
-- Topic 21先取り・未確認実車値化・固定過去問個別正答保存は各0件
+## 今回完了した段階
+Topic 20の独立再解答前ゲートを完了した。
+
+- 固定一次2問＋二次3問・14答案要素を変更していない
+- 公式正答・標準解答は開いていない
+- 完成教材・各QA・正本blobを監査済み
+- Topic 21先取り・未確認実車値化・SPEC外高度制御理論追加は各0件
 - 完成数は `19 / 22` のまま
 
 ## 次に行うこと
-Topic 20「制御系はなぜ発振する？」の独立再解答前ゲート。
+Topic 20「制御系はなぜ発振する？」の完成後独立再解答。
