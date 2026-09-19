@@ -4,7 +4,7 @@
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - completion: `in_progress`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: `一次4問・17答案要素 + 二次1問・4答案要素 = 5問・21答案要素`
@@ -12,10 +12,15 @@
 - 公式標準解答照合: `21 / 21一致`
 - 候補答案変更: `0件`
 - 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
+- 解説画像PowerPoint: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `21 / 21 PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`（進捗記録不一致のみ）
 - 二次採用: `1問・4答案要素`
 - 二次数合わせ: `0件`
 - 仕様追加: `0件`
-- 次工程: 解説PDF制作
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -627,4 +632,4 @@ C. 校正: R8型の教育用直角相ブリッジで `n=4, Rs=100 kΩ`、零位�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
 
-次工程は、このsourceを正本として解説PDFを制作し、数式・単位・ページ表示・固定21答案要素の収録をQAする。
+解説PDF・練習PDF・PowerPoint・完成後独立再解答は完了済み。初回最終QAで指摘された主sourceの進捗記録不一致をこの更新で同期した。次工程は最終QA再実施。
