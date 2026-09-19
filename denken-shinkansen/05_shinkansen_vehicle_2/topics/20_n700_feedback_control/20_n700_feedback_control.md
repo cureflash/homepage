@@ -4,11 +4,11 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`の固定範囲から外さず、第二種の一次・二次を含む公式過去問5問を品質ゲートとして固定した。
+制作前EXAM_ALIGNMENTと解説sourceを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`の固定範囲から外さず、第二種の一次・二次を含む固定5問・19答案要素を解説本文へ接続した。
 
-current_status: `topic_20_exam_alignment_complete`
+current_status: `topic_20_explanation_source_complete`
 
-次工程: 解説source。固定5問・19答案要素を逆算し、SPEC指定10項目・3可視化を教材内へ接続する。公式解答・標準解答の個別正答は完成後clean blind候補固定まで参照・保存しない。
+次工程: 解説PDF。`20_n700_feedback_control_explanation_source.md` を正本としてPDF化し、数式・文字・可視化・固定19答案要素の接続をQAする。公式解答・標準解答の個別正答は完成後clean blind候補固定まで参照・保存しない。
 
 ## 固定範囲
 
@@ -174,3 +174,27 @@ current_status: `topic_20_exam_alignment_complete`
 - 公式解答・標準解答の個別正答保存: `0件`
 - 固定SPEC外追加: `0件`
 - 未確認N700系実車制御値の真値化: `0件`
+
+## 解説source
+
+成果物:
+- `topics/20_n700_feedback_control/20_n700_feedback_control_explanation_source.md`
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+品質:
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問: `一次1問＋二次4問 / 5問`
+- 固定答案要素: `一次1＋二次18 / 19`
+- 固定要求知識の本文マッピング: `19 / 19 covered`
+- 3段階例題: `3 / 3`
+- 例題数値・式の独立再計算: `3 / 3 PASS`
+- SPEC指定10項目: `10 / 10 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 fixed`
+- 可視化数値の再計算: `PASS`
+- 公式解答・標準解答の個別正答参照・保存: `0件`
+- 固定問題差替え: `0件`
+- SPEC外追加: `0件`
+- 未確認N700系実車制御値の真値化: `0件`
+
+次工程は解説PDF。
