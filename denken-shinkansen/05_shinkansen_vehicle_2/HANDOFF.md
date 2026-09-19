@@ -108,7 +108,7 @@ PPTX SHA-256: `dd06f2a02d5327fdc9dc70be89f3f8949f75669619f740daf34f4d1fa47450f8`
 - 未確認E5系実車値の真値化: `0件`
 
 公式照合記録:
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_comparison.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_check.md`
 
 このreconcileにより、H21問4 `(5a)` のためのTopic 22本文・一般式・PDF/PPTXへの追加修正は不要と判定した。
 
