@@ -6,11 +6,11 @@
 
 Topic 01〜20は `PASS / completed`。完成数は `20 / 21`。
 
-current_status: `topic_21_independent_reanswer_complete`
+current_status: `topic_21_final_qa_blocked`
 
 active_topic: `21 架線からEast iまで全部シミュレーションする`
 
-Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了し、`PASS / INDEPENDENT_REANSWER_COMPLETE`。次工程は最終QA。
+Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照合、解説source本文＋3段階例題、解説PDF＋表示/収録QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了している。最終QAでは内容・成果物・品質ゲートはPASSしたが、主sourceの進捗記録が実進捗と不一致のため `NEEDS_REVISION / FINAL_QA_BLOCKED`。次工程は主source進捗記録同期。
 
 ## Topic 21 成果物
 
@@ -23,7 +23,8 @@ Topic 21は制作前EXAM_ALIGNMENT、制作前blind独立再解答＋公式照�
 - 解説画像PowerPoint: `topics/21_integrated_simulation/21_integrated_simulation_images.pptx`
 - PowerPoint QA: `topics/21_integrated_simulation/21_integrated_simulation_powerpoint_qa.md`
 - 完成後独立再解答: `topics/21_integrated_simulation/21_integrated_simulation_independent_reanswer.md`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- 最終QA: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
+- stage: `FINAL_QA_BLOCKED`
 - completion: `in_progress`
 
 ## Topic 21 SPEC固定範囲
@@ -179,6 +180,24 @@ PWMインバータ
 - 仕様追加: `0件`
 - 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
+## 最終QA
+
+- 記録: `topics/21_integrated_simulation/21_integrated_simulation_final_qa.md`
+- 必須成果物欠落: `0件`
+- 固定一次4問・17答案要素: `17 / 17 PASS`
+- 固定二次1問・4答案要素: `4 / 4 PASS`
+- 合計: `21 / 21 PASS`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 練習PDF表示QA: `4 / 4 PASS`
+- PowerPoint表示QA: `8 / 8 PASS`
+- 二次数合わせ: `0件`
+- 固定範囲外追加: `0件`
+- 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
+- 仕様追加: `0件`
+- blocker: `1件`
+  - 主sourceが `stage: EXPLANATION_SOURCE_COMPLETE` / `次工程: 解説PDF制作` のままで実進捗と不一致
+- 判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+
 ## 公式正本・参考
 
 公式:
@@ -199,10 +218,11 @@ PWMインバータ
 
 ## 次工程
 
-Topic 21の最終QA。
+Topic 21主sourceの進捗記録同期。
 
-- MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPECの固定範囲と成果物を再照合する。
-- 必須成果物の存在、品質ゲート `5問・21答案要素`、一次 `17 / 17`・二次 `4 / 4` を維持していることを確認する。
-- source、STATUS、HANDOFFのstage・completion整合性を確認する。
-- 二次数合わせ、固定範囲外の新論点、未公開実車定数の推測、仕様追加が0件であることを確認する。
-- 最終QAを通過して初めてTopic 21を `completed`、系列完成数を `21 / 21` とする。
+- `21_integrated_simulation.md` の `stage` を実進捗 `INDEPENDENT_REANSWER_COMPLETE` へ同期する。
+- 解説PDF、練習PDF、PowerPoint、完成後独立再解答の完了状態を主sourceへ反映する。
+- 初回最終QA `NEEDS_REVISION / FINAL_QA_BLOCKED` を記録する。
+- `completion` はまだ `in_progress` のままとする。
+- 次工程を `最終QA再実施` とする。
+- 固定EXAM_ALIGNMENT、品質ゲート `5問・21答案要素`、二次採用、固定範囲は変更しない。
