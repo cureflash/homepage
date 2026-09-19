@@ -1,0 +1,85 @@
+name: Temporary Topic 16 PPTX exact QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/_tmp_topic16_pptx_exact_qa.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  qa:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Exact artifact QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          p='denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx'
+          test "$(wc -c < "$p")" = "38384"
+          test "$(git hash-object "$p")" = "4aee9bedf079ed9a44fe789562e2192fc00728f3"
+          test "$(sha256sum "$p" | awk '{print $1}')" = "8a1c8035d9c9cf02e420f0f2ba1d7836df46123cf2a5715efe4eb7d28c9c7fa3"
+          unzip -t "$p" >/tmp/unzip.txt
+          python -m pip install -q python-pptx
+          python - <<'PY'
+          from pptx import Presentation
+          p='denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx'
+          prs=Presentation(p)
+          assert len(prs.slides)==6
+          sw,sh=prs.slide_width,prs.slide_height
+          texts=[]
+          for n,sl in enumerate(prs.slides,1):
+              for shape in sl.shapes:
+                  assert shape.left >= 0 and shape.top >= 0, (n,shape.name,'negative')
+                  assert shape.left + shape.width <= sw, (n,shape.name,'right overflow')
+                  assert shape.top + shape.height <= sh, (n,shape.name,'bottom overflow')
+                  if hasattr(shape,'text') and shape.text:
+                      texts.append(shape.text)
+          t='\n'.join(texts)
+          required=['電磁誘導障害','遮断容量','BTB','電圧階級上昇','故障前','6.08 kA','10.3 kA','23/23','Topic 17']
+          for x in required: assert x in t,x
+          print('python-pptx=PASS slides=6 shape-bounds=PASS required-terms=PASS')
+          PY
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libreoffice-impress poppler-utils >/dev/null
+          mkdir -p /tmp/topic16
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic16 "$p" >/tmp/lo.txt 2>&1
+          pdf='/tmp/topic16/16_short_circuit_images.pdf'
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = "6"
+          pdftoppm -png -r 110 "$pdf" /tmp/topic16/page >/tmp/pdftoppm.txt 2>&1
+          test "$(find /tmp/topic16 -name 'page-*.png' | wc -l)" = "6"
+          pdftotext "$pdf" /tmp/topic16/text.txt
+          for term in '23/23' '6.08 kA' '10.3 kA' 'BTB'; do grep -q "$term" /tmp/topic16/text.txt; done
+          pdftotext -bbox "$pdf" /tmp/topic16/bbox.html
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          s=Path('/tmp/topic16/bbox.html').read_text(errors='replace')
+          pages=re.findall(r'<page width="([0-9.]+)" height="([0-9.]+)">(.*?)</page>',s,re.S)
+          assert len(pages)==6, len(pages)
+          for i,(w,h,body) in enumerate(pages,1):
+              W,H=float(w),float(h)
+              for x1,y1,x2,y2 in re.findall(r'<word xMin="([0-9.]+)" yMin="([0-9.]+)" xMax="([0-9.]+)" yMax="([0-9.]+)"',body):
+                  x1,y1,x2,y2=map(float,(x1,y1,x2,y2))
+                  assert 0 <= x1 <= x2 <= W+0.2, (i,x1,x2,W)
+                  assert 0 <= y1 <= y2 <= H+0.2, (i,y1,y2,H)
+          print('libreoffice-render=PASS pages=6 raster=PASS bbox-page-bounds=PASS text=PASS')
+          PY
+          echo 'EXACT_PPTX_QA=PASS'
+          git config user.name 'denken-power2-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git rm .github/workflows/_tmp_topic16_pptx_exact_qa.yml
+          git commit -m 'Remove temporary Topic 16 PowerPoint QA workflow'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1
