@@ -4,14 +4,27 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説sourceを完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`の固定範囲だけを対象とし、第二種一次2問＋二次3問、計5問・6答案要素を品質ゲートとして固定している。公式解答・標準解答の個別正答は本段階では照合していない。
+制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、clean blind候補固定・公式照合、H26二次 問1(4) の不一致診断・過去問固有注記同期・再確認、最終QAまで完了。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`の固定範囲から外さず、第二種一次2問＋二次3問、計5問・6答案要素は現行完成後独立試験で `6 / 6 PASS`。最終QAで全品質ゲートがPASSしたため、本テーマを `completed` とする。
 
-current_status: `topic_21_explanation_source_complete`
+current_status: `completed`
 
 現行成果物:
 - `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_source_gate_addendum.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation.pdf`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_explanation_pdf_qa.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice_source.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice.pdf`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_practice_qa.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_images.pptx`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_powerpoint_qa.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_blind_reanswer_candidates_clean.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_blind_reanswer_official_check.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_h26_q1_4_discrepancy_diagnosis.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_h26_q1_4_clean_blind_recheck.md`
+- `topics/21_high_speed_tractive_force_output_control/21_high_speed_tractive_force_output_control_final_qa.md`（`PASS / COMPLETED`）
 
-次工程: Topic 21 解説PDF作成。
+次工程: Topic 22「E5系 再粘着制御」の制作前EXAM_ALIGNMENT。
 
 ## 固定範囲
 
@@ -152,19 +165,24 @@ current_status: `topic_21_explanation_source_complete`
 | 正誤判定知識 | 定出力域で速度が上がってもトルク・けん引力は一定ではない、電圧制限と電流制限を取り違えない |
 | 複数論点接続 | 電動機側 `P=Tω` と車両側 `P=Fv` を出力を介して接続する |
 
-## 解説source進捗
+## 完了状態
 
-- 成果物: `21_high_speed_tractive_force_output_control_explanation_source.md`
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 判定: `PASS / COMPLETED`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定過去問: `一次2問＋二次3問 / 5問`
 - 固定答案要素: `一次3＋二次3 / 6`
-- 固定要求知識の本文マッピング: `6 / 6 covered`
+- 完成後独立試験: `一次3 / 3 PASS、二次3 / 3 PASS、総計6 / 6 PASS`
+- 固定5問: `5 / 5 PASS`
+- H26二次 問1(4) 過去問固有注記: `解説source / 解説PDFへ同期済み`
+- 一般式 `P=Tω`、`ω=2πN/60` 変更: `0件`
 - SPEC指定8項目: `8 / 8 covered`
-- SPEC指定3可視化の再生成条件: `3 / 3 fixed`
-- 3段階例題: `3 / 3`
-- 公式解答・標準解答の個別正答参照・保存: `0件`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 練習問題: `一次8問＋二次4問 / 12 / 12 QA PASS`
+- PowerPoint: `4 / 4表示QA PASS`
 - SPEC外追加: `0件`
 - 未確認実車値の真値化: `0件`
 
-次工程は解説PDF。固定EXAM_ALIGNMENTを変更せず、解説sourceを版面化する。
+最終QA: `21_high_speed_tractive_force_output_control_final_qa.md` — `PASS / COMPLETED`。
+
+次工程は Topic 22「E5系 再粘着制御」の制作前EXAM_ALIGNMENT。
