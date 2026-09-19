@@ -4,7 +4,7 @@ updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
 theme: 事故区間だけをどう一瞬で切る？
-current_status: `topic_17_clean_blind_input_prepared`
+current_status: `topic_17_clean_blind_mismatch`
 completed_topics: `16 / 22`
 
 ## Completed through Topic 16
@@ -24,7 +24,7 @@ Topic 16最終品質ゲート:
 
 ## Topic 17 current stage
 
-制作前EXAM_ALIGNMENTは固定済み。初回制作前blind独立再解答は `24 / 26 PASS` で品質ゲート未通過。
+制作前EXAM_ALIGNMENTは固定済み。
 
 固定公式過去問:
 - 一次: 令和4年度「電力」問3、平成29年度「電力」問3、平成25年度「電力」問4
@@ -36,12 +36,22 @@ Topic 16最終品質ゲート:
 - 合計: `5問 / 26答案要素`
 - SPEC固定11項目マッピング: `11 / 11`
 
-初回blind記録は保存済みだが、正答情報を含むためclean blind候補答案を固定する前には参照しない。
-
 clean blind専用入力:
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_input_20260920.md`
 
-このrunでは公式標準解答と既存blind記録を既に参照したため、同一runでの再解答をclean blindとは扱わない。教材本文、PDF、PowerPointは未着手のまま維持する。
+今回のclean blind候補答案と公式照合結果は保存済み:
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_20260920.md`
+- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_20260920.md`
+
+今回判定:
+- 一次: `15 / 15 PASS`
+- 二次: `8 / 11 PASS`
+- 合計: `23 / 26 PASS`
+- 制作品質ゲート: `未通過`
+
+既存の初回blind記録には公式解答マッピングの誤記が1件あり、今回の公式正本再照合でreconcile済み。詳細はclean blind resultに記録した。次回clean blindの候補答案固定前には、旧blind記録・clean blind candidate・clean blind result・公式標準解答を参照しない。
+
+教材本文、PDF、PowerPointは未着手のまま維持する。
 
 ## 品質境界
 
@@ -54,4 +64,4 @@ clean blind専用入力:
 
 ## next_start
 
-`17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、保存済み候補答案・公式標準解答を候補答案固定前に見ず、固定5問・26答案要素をclean blind独立再解答する。候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` を確認するまで教材本文・解説PDF・練習PDF・PowerPointへ進まない。
+`17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、保存済み候補答案・過去blind記録・clean blind result・公式標準解答を候補答案固定前に見ず、固定5問・26答案要素を再度clean blind独立再解答する。候補答案保存後に公式標準解答と照合し、`26 / 26 PASS` を確認するまで教材本文・解説PDF・練習PDF・PowerPointへ進まない。
