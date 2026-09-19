@@ -4,7 +4,7 @@ updated: 2026-09-20
 series: `06_shinkansen_power_2`
 active_topic: `17`
 theme: 事故区間だけをどう一瞬で切る？
-current_status: `topic_17_clean_blind_rerun2_mismatch`
+current_status: `topic_17_clean_blind_pending_fresh_run`
 completed_topics: `16 / 22`
 
 ## Completed through Topic 16
@@ -39,31 +39,21 @@ Topic 16最終品質ゲート:
 clean blind専用入力:
 - `topics/17_protection_coordination/17_protection_coordination_clean_blind_input_20260920.md`
 
-保存済みblind記録:
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_20260920.md`
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_20260920.md`
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_rerun_20260920.md`
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_rerun_20260920.md`
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_candidate_rerun2_20260920.md`
-- `topics/17_protection_coordination/17_protection_coordination_clean_blind_result_rerun2_20260920.md`
+既存blind記録は保存済みだが、fresh clean blind候補固定前には開かない。
 
-最新rerun2判定:
-- 一次: `14 / 15 PASS`
-- 二次: `11 / 11 PASS`
-- 合計: `25 / 26 PASS`
-- 制作品質ゲート: `未通過`
+## exact blocker
 
-exact blocker:
-1. H25一次「電力」問4(1): 問題文は `3 × [1] × 三相短絡電流` なので正答は `基準電圧（相電圧）`。候補は同値な `√3 × 線間電圧 × 三相短絡電流` へ読み替え、空欄を線間電圧と誤答した。
+このrunは、必須の最新 `STATUS.md` / `HANDOFF.md` 確認時点で旧記録に前回blindの具体的な不一致内容が記載されており、候補答案固定前に既知情報へ接触した。したがって、このrunでclean blindを実施しても独立再解答とは認定できない。
 
-R2二次 問2の前回不足3点（信頼性、5/3サイクル、DSR採用理由）はrerun2で全て解消し、二次 `11 / 11 PASS`。
+対処として、`STATUS.md` / `HANDOFF.md` から候補答案を汚染する具体的な旧不一致内容を除去した。詳細な過去結果は既存のcandidate/resultファイルに保持し、削除・改変していない。
 
-このrunでは候補答案固定後に公式標準解答へ接触済みであるため、同run内で答案を書き換えてPASS扱いにはしない。教材本文、PDF、PowerPointは未着手のまま維持する。
+教材本文、解説PDF、練習PDF、PowerPointは未着手のまま維持する。
 
 ## 品質境界
 
 - Topic 16固定5問・23答案要素変更: `0件`
 - Topic 17固定EXAM_ALIGNMENT変更: `0件`
+- Topic 17固定5問・26答案要素変更: `0件`
 - Topic 18以降先取り: `0件`
 - 未確認実設備値の真値化: `0件`
 - 仕様追加: `0件`
@@ -71,7 +61,9 @@ R2二次 問2の前回不足3点（信頼性、5/3サイクル、DSR採用理由
 
 ## next_start
 
-次のfresh runでは `17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、固定5問・26答案要素を再度clean blind独立再解答する。
+次のfresh runでは、最初に最新mainとこのサニタイズ済み `STATUS.md` / `HANDOFF.md`、上位仕様、系列SPECを確認する。
+
+その後、`17_protection_coordination_clean_blind_input_20260920.md` とそこに列挙した公式問題PDFだけを使い、固定5問・26答案要素をclean blind独立再解答する。
 
 候補答案を保存するまで開かない:
 - `17_protection_coordination_preproduction_blind_20260920.md`
