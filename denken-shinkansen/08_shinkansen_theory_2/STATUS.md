@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 20 / 21
-- current_status: `topic_21_explanation_source_complete`
+- current_status: `topic_21_explanation_pdf_complete`
 - last_completed_topic: `20 East iは走りながら何をどう測る？`
 - active_topic: `21 架線からEast iまで全部シミュレーションする`
-- next_start: Topic 21 解説PDF制作＋表示/収録QA
+- next_start: Topic 21 練習問題source＋練習PDF
 
 ## 完成済み
 
@@ -50,24 +50,26 @@ Topic 01〜20は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 21の解説source本文と基礎・本試験標準・複合の3段階例題を制作し、`PASS / EXPLANATION_SOURCE_COMPLETE` とした。
+Topic 21の解説PDFを制作し、表示・文字抽出・収録QAを実施して `PASS / EXPLANATION_PDF_COMPLETE` とした。
 
-- source: `topics/21_integrated_simulation/21_integrated_simulation.md`
+- PDF: `topics/21_integrated_simulation/21_integrated_simulation_explanation.pdf`
+- QA: `topics/21_integrated_simulation/21_integrated_simulation_explanation_pdf_qa.md`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
 - 固定範囲: `回路・交流・過渡・高調波・計測` を収録
-- 簡略モデルの入出力量区別: `PASS`
-- 回路網・テブナン・相反定理: `PASS`
-- P・Q・S・力率・P-Q合算: `PASS`
-- `t=0- / 0+ / ∞`、RL・RC・RLC、蓄積エネルギー: `PASS`
-- 基本波・高調波・n次位相差・同一次数合成: `PASS`
-- 零位法・校正・測定誤差: `PASS`
-- 固定5問・21答案要素の本文接続: `21 / 21`
-- 3段階例題: `3 / 3`
+- 過去問から逆算した必須説明: `10 / 10収録`
+- 固定5問・21答案要素のPDF接続: `21 / 21`
+- 3段階例題: `3 / 3収録`
+- 例題数値独立再計算: `3 / 3 PASS`
+- 数式・単位・P/Q符号・n次位相差・零位条件の表示: `PASS`
+- クリッピング・文字重なり・文字化け・ページ欠落: `0件`
 - 実車主回路・East i内部回路・未公開定数の推測追加: `0件`
 - Topic 01〜20にない新論点追加: `0件`
 - 仕様追加: `0件`
 
 ## 判定
 
-`PASS / EXPLANATION_SOURCE_COMPLETE`。
+`PASS / EXPLANATION_PDF_COMPLETE`。
 
-完成数は `20 / 21`。次工程はTopic 21の解説PDF制作と、数式・単位・ページ表示・固定21答案要素の収録QA。
+完成数は `20 / 21`。次工程はTopic 21の練習問題source＋練習PDF。
