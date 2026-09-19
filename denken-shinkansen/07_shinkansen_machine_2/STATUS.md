@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `19 / 22`
-- current_status: `topic_20_explanation_pdf_complete / IN_PROGRESS`
+- current_status: `topic_20_practice_source_complete / IN_PROGRESS`
 - last_completed_topic: `19 PIDで新幹線の速度を制御する`
 - active_topic: `20 制御系はなぜ発振する？`
-- next_start: Topic 20 練習source
+- next_start: Topic 20 練習PDF＋QA
 
 ## 完了テーマ
 - [x] Topic 01〜17 最終QA `PASS / completed`
@@ -201,12 +201,30 @@ QA:
 - 文字抽出 replacement char / `(cid:)`: `0 / 0`
 - 教材用モデル数値・論理QA: `8 / 8 PASS`
 - Topic 21先取り: `0件 / PASS`
-- 未確認実車制御値の実車値化: `0件 / PASS`
+- 未確認実車制御値化: `0件 / PASS`
 - 固定過去問の個別正答保存: `0件 / PASS`
 - 判定: `PASS / topic_20_explanation_pdf_complete`
 
+## Topic 20 練習source
+成果物:
+- `topics/20_control_system_stability/20_control_system_stability_practice.md`
+
+QA:
+- 一次試験型: 10問（全問五肢択一）
+- 一次正答一意性: `10 / 10 PASS`
+- 二次試験型: 5問（記述・式変形・検算付き）
+- 全15問の独立再計算・論理確認: `15 / 15 PASS`
+- 固定一次2問＋二次3問・14答案要素への接続: `14 / 14 COVERED`
+- 特性方程式・指定極・ラウス・二次振動条件・PI折れ線・GM/PM・指定交差条件逆算: `PASS`
+- 同一教材モデルでラウス安定限界とゲイン余裕を照合: `PASS`
+- 根軌跡の詳細作図則追加: `0件 / PASS`
+- Topic 21先取り: `0件 / PASS`
+- 未確認実車制御値の実車値化: `0件 / PASS`
+- 固定過去問の個別正答保存: `0件 / PASS`
+- 判定: `PASS / topic_20_practice_source_complete`
+
 ## 今回進めた内容
-Topic 20の解説PDF＋QAを完成させた。固定一次2問＋二次3問、計5問・14答案要素を解説PDFへ接続し、SPEC指定のボード線図、ゲイン変更時の応答、安定・安定限界・不安定比較を同一教材用モデルで収載した。完成数は `19 / 22` のまま。
+Topic 20の練習sourceを完成させた。一次10問＋二次5問の計15問を作成し、固定一次2問＋二次3問・14答案要素へ `14 / 14 COVERED`。完成数は `19 / 22` のまま。
 
 ## 次工程
-Topic 20「制御系はなぜ発振する？」の練習source。
+Topic 20「制御系はなぜ発振する？」の練習PDF＋QA。
