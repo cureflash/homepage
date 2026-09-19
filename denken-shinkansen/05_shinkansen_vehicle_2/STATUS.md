@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `19 / 39`
-- current_status: `topic_20_practice_pdf_complete`
+- current_status: `topic_20_powerpoint_complete`
 - last_completed_topic: `19 ミニ新幹線 複電圧主回路`
 - active_topic: `20 N700系 フィードバック制御`
-- next_start: Topic 20解説画像PowerPoint。固定5問・19答案要素、一次8問＋二次4問、問題・正答・数式、SPEC指定10項目・3可視化を変更せずPPTX化・表示QAする
+- next_start: Topic 20完成後clean blind公式照合。固定5問・19答案要素を教材だけで独立再解答し、公式解答・標準解答は候補答案固定後に照合する
 
 ## 完了済み
 
@@ -22,37 +22,33 @@ Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
 - 解説PDF: `PASS / EXPLANATION_PDF_COMPLETE`
 - 練習source: `PASS / PRACTICE_SOURCE_COMPLETE`
 - 練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
-- PowerPoint: `未実施`
-- clean blind公式照合: `未実施 / PowerPoint完成後`
+- PowerPoint: `PASS / POWERPOINT_COMPLETE`
+- clean blind公式照合: `未実施 / 次工程`
 - 最終QA: `未実施`
 
-## Topic 20 練習PDF
+## Topic 20 PowerPoint
 
-判定: `PASS / PRACTICE_PDF_COMPLETE`
+判定: `PASS / POWERPOINT_COMPLETE`
 
 成果物:
-- 練習source: `topics/20_n700_feedback_control/20_n700_feedback_control_practice_source.md`
-- 練習PDF: `topics/20_n700_feedback_control/20_n700_feedback_control_practice.pdf`
-- QA: `topics/20_n700_feedback_control/20_n700_feedback_control_practice_qa.md`
+- PowerPoint: `topics/20_n700_feedback_control/20_n700_feedback_control_images.pptx`
+- QA: `topics/20_n700_feedback_control/20_n700_feedback_control_powerpoint_qa.md`
 
 品質:
-- A4縦: `6 pages`
-- PDFium / pdftoppm 180 dpi: `6 / 6 PASS` / `6 / 6 PASS`
-- PDF構造・開封・文字抽出: `PASS`
-- 問題見出し抽出: `12 / 12 PASS`
-- 欠落グリフ・黒四角・重なり・クリップ: `0件`
-- 一次試験型: `8問 / 全問五肢択一`
-- 二次試験型: `4問 / 記述式`
-- 完全解説: `12 / 12`
-- 数値・式・論理独立再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
+- 16:9: `4 slides`
+- python-pptx open / PPTX ZIP整合性: `PASS / PASS`
+- LibreOffice PDF変換: `PASS / 4 pages`
+- pdftoppm 1600×900: `4 / 4 PASS`
+- 文字抽出: `PASS`
+- Unicode置換文字 / `(cid:)`: `0件 / 0件`
+- 目視表示QA: `4 / 4 PASS`
 - 固定公式過去問: `一次1問＋二次4問 / 5問 / 変更なし`
 - 固定答案要素: `一次1＋二次18 / 19 / 19 covered`
 - SPEC指定10項目: `10 / 10 covered`
 - SPEC指定3可視化: `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT変更 / 固定問題差替え / SPEC外追加 / 未確認N700系実車制御値の真値化: `0件`
+- 一次8問＋二次4問の問題・正答・数式変更: `0件`
+- 固定EXAM_ALIGNMENT変更 / SPEC外追加 / 未確認N700系実車制御値の真値化: `0件`
 - 公式解答・標準解答の個別正答参照・保存: `0件`
-- 完成後clean blind公式照合: `未実施 / PowerPoint完成後`
 
 ## Topic 20 固定ゲート
 
@@ -85,12 +81,14 @@ Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
 ## worker reconcile
 
 - Topic 20練習source commit: `4f7fc0ec9acb3f79aa7b83152adfd406a2a735e8`
-- 本工程開始時main HEAD: `ea8fe8ce3aaa6e03c485303d636817fcb82d543b`
-- 練習PDF commit: `dad1d08bada18be7e5dc1804ae58ff5004725298`
-- 練習PDF QA commit: `f9168a285a30ad527b85887ba246d606937ff44e`
-- 開始時HEADおよび途中の更新は別系列のみで、Topic 20成果物との競合・重複作業はない。
+- Topic 20練習PDF commit: `dad1d08bada18be7e5dc1804ae58ff5004725298`
+- Topic 20練習PDF QA commit: `f9168a285a30ad527b85887ba246d606937ff44e`
+- 直前の本系列正本同期: `07fcc657819b88a2e04c0a40c23fa43049b58d59`
+- PowerPoint工程開始時main HEAD: `62434e5269a93d46570b5287e350fe4308aa4d89`
+- 開始時HEAD差分は別系列 `02_shinkansen_power_3` の進捗同期のみで、本系列との競合・重複作業はない。
+- 解説source/PDF、練習source/PDFを再作成せず、最初の未完了工程であるPowerPointのみ進めた。
 - 詳細な工程QAは各topic配下の `*_qa.md` を正本とする。
 
 ## 次工程
 
-Topic 20「N700系 フィードバック制御」の解説画像PowerPointを制作・QAする。固定5問・19答案要素、一次8問＋二次4問、問題・正答・数式、SPEC指定10項目・3可視化を変更しない。PowerPoint完成後にclean blind候補固定へ進む。
+Topic 20「N700系 フィードバック制御」の完成後clean blind公式照合。固定5問・19答案要素を教材だけで独立再解答し、候補答案を固定するまで公式解答・標準解答を参照しない。既存成果物・固定EXAM_ALIGNMENT・SPEC境界は変更しない。
