@@ -1,0 +1,48 @@
+name: Temporary Topic 16 PPTX repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/_tmp_topic16_pptx_repair.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Assemble exact Topic 16 PowerPoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          target='denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx'
+          cat .github/tmp/topic16-pptx.part* | base64 -d > "$target"
+          test "$(wc -c < "$target")" = "16924"
+          test "$(sha256sum "$target" | awk '{print $1}')" = "37ff64541fca3a374ca192d8cc1a4f3a22d3d118fa1b2f8d27185afc47a43af2"
+          python - <<'PY'
+          import zipfile
+          p='denken-shinkansen/06_shinkansen_power_2/topics/16_short_circuit/16_short_circuit_images.pptx'
+          with zipfile.ZipFile(p) as z:
+              bad=z.testzip()
+              assert bad is None, bad
+          print('zip-pass')
+          PY
+          git config user.name 'denken-power2-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git add "$target"
+          git rm .github/tmp/topic16-pptx.part*
+          git rm .github/workflows/_tmp_topic16_pptx_repair.yml
+          git commit -m 'Regenerate power2 Topic 16 PowerPoint exact artifact'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1
