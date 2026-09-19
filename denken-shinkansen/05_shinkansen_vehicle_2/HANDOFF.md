@@ -8,11 +8,11 @@
 
 Topic 01〜22は最終QAまで `PASS / completed`。完成数は `22 / 39`。
 
-現在地は `topic_23_remediated_blind_candidates_locked`。active topic は Topic 23 `N700S SiC主変換装置`。
+現在地は `topic_23_remediated_blind_official_check_pass`。active topic は Topic 23 `N700S SiC主変換装置`。
 
 ## reconcile
 
-latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23初回clean blind、source補強、成果物同期QA、解説PDF再同期、練習PDF再同期、PowerPoint再同期をreconcile済み。
+latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果、Topic 23初回clean blind、source補強、成果物同期QA、解説PDF再同期、練習PDF再同期、PowerPoint再同期、修正後clean blind候補固定・候補固定QA、修正後公式照合をreconcile済み。
 
 - 初回clean blind候補は commit `17837d40774f12e8348e9b55f250d5573b35f901` で公式照合前に固定。後編集しない
 - 初回公式照合は固定23答案要素中 `21 / 23 PASS`。不一致はR2一次「機械」問2 `(2),(4)` のみ
@@ -21,8 +21,9 @@ latest main、最新 `STATUS.md` / `HANDOFF.md`、直近車両二種worker成果
 - 成果物同期QA正本: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_post_blind_artifact_sync_qa.md`
 - 解説PDF・練習PDFは補強後sourceから再生成・QA済み
 - PowerPointは既存6枚構成の範囲で再生成し、R2読図補強2点を同期・表示QA済み
-- 修正後clean blind候補は別ファイル `23_n700s_sic_main_converter_blind_reanswer_candidates_remediated_clean.md` として commit `5d28e38e9151edc9d2ca3e309783aea2e6b9272f` で固定
-- 修正後候補は固定5問・23答案要素すべてについて候補を保存済み。公式照合はまだ実施していない
+- 修正後clean blind候補は `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_remediated_clean.md` として commit `5d28e38e9151edc9d2ca3e309783aea2e6b9272f` で固定
+- 修正後候補固定QA: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_remediated_lock_qa.md` = `PASS / CANDIDATES_LOCKED`
+- 修正後公式照合: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_remediated_official_check.md` = `PASS / 23_OF_23`
 - Topic 21 H26二次「機械・制御」問1(4)の `48.0 / 48.1 N·m` 差は過去問固有丸め差。一般式 `P=Tω`、`ω=2πN/60` は変更しない
 
 ## Topic 23 固定EXAM_ALIGNMENT
@@ -51,6 +52,8 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 3. `VI t_s/6` は相補的直線ランプ条件だけに限定
 4. 一般式 `E_sw=∫v(t)i(t)dt` は変更しない
 
+修正後clean blindでは、R2一次問2 `(2),(4)` を含む固定23答案要素が公式解答・標準解答と `23 / 23 PASS`。
+
 ## 成果物同期状態
 
 - 解説PDF: `PASS / RESYNCED`
@@ -67,19 +70,19 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
   - LibreOffice / pdftoppm `6 / 6 PASS`
   - geometry overflow `0`
 
-## 修正後clean blind候補
+## 修正後clean blind公式照合
 
-判定: `LOCKED / NOT_YET_OFFICIAL_CHECKED`
+判定: `PASS / 23_OF_23`
 
-- 候補固定commit: `5d28e38e9151edc9d2ca3e309783aea2e6b9272f`
-- 候補ファイル: `topics/23_n700s_sic_main_converter/23_n700s_sic_main_converter_blind_reanswer_candidates_remediated_clean.md`
-- R7一次 `5 / 5 candidate fixed`
-- R4一次 `5 / 5 candidate fixed`
-- R2一次 `5 / 5 candidate fixed`
-- H24一次 `2 / 2 candidate fixed`
-- H24二次 `6 / 6 candidate fixed`
-- 合計 `23 / 23 candidate fixed`
-- 既存初回候補・既存公式照合記録は後編集していない
+- R7一次 `5 / 5 PASS`
+- R4一次 `5 / 5 PASS`
+- R2一次 `5 / 5 PASS`
+- H24一次 `2 / 2 PASS`
+- H24二次 `6 / 6 PASS`
+- 一次 `17 / 17 PASS`
+- 二次 `6 / 6 PASS`
+- 合計 `23 / 23 PASS`
+- 修正後候補固定後の後編集: `0件`
 
 維持事項:
 
@@ -89,11 +92,11 @@ SPEC固定8項目、指定3可視化、N700S実車値／教材仮定値境界も
 - 未確認N700S実車値の真値化: `0件`
 - JR東海7%値・富士電機20%値の誤拡張: `0件`
 - 初回clean blind候補の後編集: `0件`
-- 修正後clean blind候補の公式照合前後編集: `0件`
+- 修正後clean blind候補の後編集: `0件`
 - 新たなexact blocker: `0件`
 
 Topic 23はまだ `completed` にしない。
 
 ## 次の安全な工程
 
-固定済み修正後clean blind候補 `5d28e38...` を後編集せず、電気技術者試験センター公式解答・標準解答と固定5問・23答案要素を照合する。`23 / 23 PASS` の場合のみ最終QAへ進む。不一致があれば候補を書き換えず、exact blockerまたは教材不足として原因を記録して止める。固定EXAM_ALIGNMENT、一般式、SPEC固定8項目・指定3可視化、仮定値／実車値境界は変更しない。
+Topic 23の最終QAを実施する。固定5問・23答案要素の `23 / 23 PASS`、解説PDF・練習PDF・PowerPoint同期状態、SPEC固定8項目・指定3可視化、固定EXAM_ALIGNMENT、一般式、N700S実車値／教材仮定値境界、STATUS/HANDOFFを再確認する。全項目PASSの場合のみTopic 23を `completed` とし、完成数を `23 / 39` へ進める。
