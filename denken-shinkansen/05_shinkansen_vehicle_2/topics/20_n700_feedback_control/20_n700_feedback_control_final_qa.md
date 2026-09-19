@@ -4,11 +4,11 @@
 
 ## 判定
 
-`NEEDS_REVISION / PROGRESS_SYNC_REQUIRED`
+`PASS / COMPLETED`
 
 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 20の必須成果物・各QA・完成後clean blind記録をreconcileした。
 
-技術内容・過去問対応品質ゲートはすべてPASS。唯一の未整合は主source `20_n700_feedback_control.md` の進捗表記で、実成果物がclean blind公式照合まで完了しているのに、同ファイル冒頭が `topic_20_explanation_pdf_complete` / `次工程: 練習source` のまま残っている。最終完成判定はこの進捗整合を直してから再実施する。
+前回最終QAの唯一のFAILだった主source進捗表記は commit `f47d681ec9a349997b49bf4b5370e35c23a16075` で同期済み。前回最終QA commit `c749003967911c8b2c0abe38f5b839a725833977` から再QA直前main `d98dc66f539e837f2f3bac98ea080e47d1e244ff` までの差分を確認し、Topic 20で変更されたのは主source・`STATUS.md`・`HANDOFF.md` の進捗記録のみ。技術本文、問題・正答、数式、PDF/PPTX、各技術QA、clean blind候補・公式照合、固定EXAM_ALIGNMENTには変更がない。
 
 ## 1. 上位仕様確認
 - `MASTER_SPEC.md`: 教材だけで対応過去問を自力解答できることを完了条件とする。
@@ -33,6 +33,7 @@
 
 ## 3. 完成後clean blind
 - 候補固定commit: `cb1d6247a2c221151af9e7a7457875563ea83261`
+- 公式照合commit: `160daedfa770c59c153f97f425f0f1c289a0d3bb`
 - H25一次: `1 / 1 PASS`
 - R7二次: `5 / 5 PASS`
 - R6二次: `4 / 4 PASS`
@@ -100,16 +101,13 @@ GitHub正本で実在を確認した。
 
 SPEC境界: `PASS`。
 
-## 7. 進捗整合
-- PowerPoint / QA: 完成済み。
-- clean blind候補固定: 完成済み。
-- clean blind公式照合: `19 / 19 PASS`。
-- `STATUS.md` / `HANDOFF.md`: clean blind公式照合完了まで整合。
-- 主source `20_n700_feedback_control.md`: `current_status: topic_20_explanation_pdf_complete`、`次工程: 練習source` のままで実成果物より古い。
-- 個別QAに残る当時の「次工程」「clean blind未実施」は工程実施時点の履歴なのでblockerではない。
-- 最終QA工程で教材本文・問題・正答・数式・PDF/PPTX本体・固定EXAM_ALIGNMENTの変更: `0件`。
+## 7. 進捗整合再確認
+- 主source `20_n700_feedback_control.md`: `topic_20_progress_sync_complete`、現行成果物一覧、再QA工程まで同期済み。
+- `STATUS.md` / `HANDOFF.md`: 再QA待ちとして同期済み。
+- 前回QA後のTopic 20差分は進捗記録のみ。
+- 技術本文・問題・正答・数式・PDF/PPTX・固定EXAM_ALIGNMENTの変更: `0件`。
 
-進捗記録整合: `FAIL / 主sourceのみ要同期`。
+進捗記録整合: `PASS`。
 
 ## 8. 最終判定
 - 技術内容: `PASS`
@@ -120,8 +118,6 @@ SPEC境界: `PASS`。
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
 - 仕様外追加: `0件`
-- 進捗記録整合: `FAIL / 主sourceのみ`
+- 進捗記録整合: `PASS`
 
-したがって現時点では `completed` にしない。完成数は `19 / 39` のまま。
-
-次工程は、主source `20_n700_feedback_control.md` の状態・成果物一覧・次工程だけを実成果物へ同期する。技術本文、問題、正答、数式、PDF/PPTX、固定過去問、固定EXAM_ALIGNMENTは変更しない。その後に最終QAを再実施する。
+Topic 20 は `completed`。完成数は `20 / 39`。次の未完了テーマは Topic 21「高速域の速度・けん引力・出力制御」。次工程は制作前EXAM_ALIGNMENT。
