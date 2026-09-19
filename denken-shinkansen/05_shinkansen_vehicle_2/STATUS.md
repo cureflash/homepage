@@ -136,7 +136,7 @@ Topic 01〜21は最終QAまで `PASS / completed`。完成数は `21 / 39`。
 - 未確認E5系実車値の真値化: `0件`
 
 記録:
-- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_comparison.md`
+- `topics/22_e5_readhesion_control/22_e5_readhesion_control_blind_reanswer_official_check.md`
 
 ### 先行10/11診断のreconcile
 
