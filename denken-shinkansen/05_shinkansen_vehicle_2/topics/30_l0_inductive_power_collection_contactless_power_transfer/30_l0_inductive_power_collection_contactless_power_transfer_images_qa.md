@@ -1,0 +1,84 @@
+# Topic 30 PowerPoint QA
+
+更新日: 2026-09-20
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+## reconcile
+
+最新`main`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、直近の車両二種worker成果をreconcileした。Topic 30は解説PDF・練習PDFまで完了済みであり、本工程では重複せず次の未完了工程である解説画像PowerPointだけを生成した。
+
+固定EXAM_ALIGNMENTは変更していない。Topic 21 H26二次「機械・制御」問1(4)の `48.1 N・m / 48.0 N・m` は過去問固有丸め差として維持し、一般式 `P=Tω`、`ω=2πN/60` は変更していない。
+
+## canonical artifact
+
+- path: `30_l0_inductive_power_collection_contactless_power_transfer_images.pptx`
+- canonical blob SHA: `1b6841ad16eb59c9d9d80daf2cbdd51c45446641`
+- file size: `152773 bytes`
+- SHA-256: `69fe66cb39aef88973876cca81c26e38d99ce6646e8b2027ba5213620313edfa`
+- 16:9 / `6 slides`
+- python-pptx open / geometry bounds: `6 / 6 PASS`
+- LibreOffice PDF変換: `6 / 6 pages PASS`
+- `pdftotext -layout`: `PASS (7828 bytes)`
+- 置換文字 `�`: `0件`
+- 全6枚レンダー確認: `6 / 6 PASS`
+- 文字切れ・数式欠け・グラフ欠け・主要要素重なり: `0件`
+
+## 固定過去問接続
+
+| 固定過去問 | PowerPoint接続 | 判定 |
+|---|---:|---|
+| R8 一次「理論」問5 | 5 / 5 | PASS |
+| R7 一次「理論」問2 | 5 / 5 | PASS |
+| H30 一次「理論」問2 | 5 / 5 | PASS |
+| H30 一次「機械」問5 | 5 / 5 | PASS |
+| R2 二次「機械・制御」問2 | 5 / 5 | PASS |
+
+- 一次: `20 / 20 connected`
+- 二次: `5 / 5 connected`
+- 合計: `25 / 25 connected`
+
+接続内容:
+- R8一次: RLC直列共振、共振電流、Q、L/C端子電圧、共振条件
+- R7一次: 相互インダクタンス、磁気エネルギー、誘導起電力、`M²<=L_1L_2`、結合係数
+- H30一次理論: 磁気回路、磁束分配、`L_1`、`L_2`、`M`
+- H30一次機械: 無負荷・短絡試験、鉄損の周波数依存、銅損、規約効率
+- R2二次: 無負荷損、全負荷銅損、最大効率条件、`η_max`、指定負荷率・力率での効率
+
+公式正答値は教材例題へ流用せず、PowerPoint内の数値例はsourceでQA済みの教材用仮定値だけを使用した。
+
+## SPEC gate
+
+- 相互インダクタンス: `PASS`
+- 結合係数: `PASS`
+- 誘導起電力: `PASS`
+- 等価回路: `PASS`
+- 交流電力: `PASS`
+- 力率: `PASS`
+- 変換効率: `PASS`
+- SPEC必須7項目: `7 / 7 PASS`
+
+指定3可視化:
+1. 結合係数―伝送電力: `PASS`
+2. 負荷条件―効率: `PASS`
+3. 周波数特性: `PASS`
+
+集計: `3 / 3 PASS`。
+
+可視化には解説source QA済みの教材用仮定値を使用し、数値差 `0件`。
+
+## 実車・範囲境界
+
+- 未確認L0系実車値の真値化: `0件`
+- 教材用仮定値表示: `PASS`
+- L0系非接触給電と通常変圧器を同一構造・同一定数として扱う記述: `0件`
+- Topic 31以降の主題先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+## 判定
+
+`PASS / POWERPOINT_COMPLETE`
+
+Topic 30の教材成果物は、解説source・解説PDF・練習source・練習PDF・解説画像PowerPointまで揃った。次工程はfresh workerによるclean blind独立再解答candidate固定である。candidate固定前にTopic 30 EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を開かない。
