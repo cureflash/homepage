@@ -30,7 +30,7 @@ jobs:
           set -euo pipefail
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils >/dev/null
-          python -m pip install -q pypdfium2
+          python -m pip install -q pypdfium2 pillow
           PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation.pdf'
           mkdir -p /tmp/pdfium /tmp/poppler
           python - <<'PY'
