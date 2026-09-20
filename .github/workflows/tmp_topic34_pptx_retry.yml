@@ -1,0 +1,164 @@
+name: Retry Topic 34 PowerPoint
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp_topic34_pptx_retry.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet python-pptx pillow
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libreoffice-impress poppler-utils fonts-noto-cjk
+      - name: Generate PowerPoint
+        run: |
+          set -euo pipefail
+          python .github/scripts/tmp_topic34_pptx.py
+      - name: Render and validate
+        run: |
+          set -euo pipefail
+          base='denken-shinkansen/05_shinkansen_vehicle_2/topics/34_compressor_pump_fan_load_characteristics'
+          pptx="$base/34_compressor_pump_fan_load_characteristics_images.pptx"
+          mkdir -p /tmp/topic34/render
+          python - <<'PY'
+          from pptx import Presentation
+          from pathlib import Path
+          p=Path('denken-shinkansen/05_shinkansen_vehicle_2/topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images.pptx')
+          prs=Presentation(p)
+          assert len(prs.slides)==6
+          assert abs(prs.slide_width/914400-13.333333)<0.01
+          assert abs(prs.slide_height/914400-7.5)<0.01
+          for si,s in enumerate(prs.slides,1):
+              for sh in s.shapes:
+                  assert sh.left >= 0 and sh.top >= 0, (si, sh.name)
+                  assert sh.left + sh.width <= prs.slide_width + 2, (si, sh.name, 'right')
+                  assert sh.top + sh.height <= prs.slide_height + 2, (si, sh.name, 'bottom')
+          print('geometry 6/6 PASS')
+          PY
+          libreoffice --headless --convert-to pdf --outdir /tmp/topic34 "$pptx" >/tmp/topic34/lo.txt 2>&1
+          cat /tmp/topic34/lo.txt
+          pdf='/tmp/topic34/34_compressor_pump_fan_load_characteristics_images.pdf'
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = '6'
+          pdftotext -layout "$pdf" /tmp/topic34/extracted.txt
+          if grep -q '�' /tmp/topic34/extracted.txt; then echo 'replacement char found'; exit 1; fi
+          for token in 'P = Tω' 'Ph = ρgQH' 'P∝N³' 'Ed = 1.35×220 = 297 V' 'R7二次 機械・制御 問2' 'SPEC固定 7 / 7'; do grep -F "$token" /tmp/topic34/extracted.txt >/dev/null; done
+          pdftoppm -png -r 120 "$pdf" /tmp/topic34/render/slide >/dev/null 2>&1
+          test "$(find /tmp/topic34/render -name 'slide-*.png' | wc -l)" = '6'
+          python - <<'PY'
+          from PIL import Image, ImageStat
+          from pathlib import Path
+          imgs=sorted(Path('/tmp/topic34/render').glob('slide-*.png'))
+          assert len(imgs)==6
+          for p in imgs:
+              im=Image.open(p).convert('L')
+              assert ImageStat.Stat(im).mean[0] < 253.5, p
+          print('render 6/6 PASS')
+          PY
+      - name: Write QA record
+        run: |
+          set -euo pipefail
+          base='denken-shinkansen/05_shinkansen_vehicle_2/topics/34_compressor_pump_fan_load_characteristics'
+          pptx="$base/34_compressor_pump_fan_load_characteristics_images.pptx"
+          qa="$base/34_compressor_pump_fan_load_characteristics_images_qa.md"
+          size=$(stat -c%s "$pptx")
+          sha=$(sha256sum "$pptx" | awk '{print $1}')
+          bytes=$(wc -c </tmp/topic34/extracted.txt | tr -d ' ')
+          cat > "$qa" <<EOF
+          # Topic 34 PowerPoint QA — コンプレッサ・ポンプ・ファンの負荷特性
+
+          更新日: 2026-09-21
+
+          判定: \`PASS / POWERPOINT_COMPLETE\`
+
+          ## reconcile
+
+          最新main、\`MASTER_SPEC.md\`、\`EXAM_ALIGNMENT_SPEC.md\`、系列\`SPEC.md\`、\`STATUS.md\` / \`HANDOFF.md\`、Topic 34固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDFと各QAをreconcileし、未完了だった解説画像PowerPointのみを作成した。固定EXAM_ALIGNMENT、一次8問・二次4問、正答、既存PDFは変更していない。
+
+          ## canonical artifact
+
+          - path: \`34_compressor_pump_fan_load_characteristics_images.pptx\`
+          - file size: \`${size} bytes\`
+          - SHA-256: \`${sha}\`
+          - 16:9 / \`6 slides\`
+          - python-pptx open / geometry bounds: \`6 / 6 PASS\`
+          - LibreOffice PDF変換: \`6 / 6 pages PASS\`
+          - \`pdftotext -layout\`: \`PASS (${bytes} bytes)\`
+          - 置換文字 \`�\`: \`0件\`
+          - PNG render: \`6 / 6 PASS\`
+          - blank render / page-edge overflow: \`0件\`
+          - source notes: \`6 / 6 slides\`
+
+          ## slide構成
+
+          1. SIV / 補助電源 → インバータ → 電動機 → 補機負荷の全体像、SPEC固定7項目、範囲境界
+          2. \`P=Tω\`、回転系運動方程式、同期速度・すべり、電動機トルクと負荷トルクの動作点、R7一次/H25一次接続
+          3. 効率・損失の電力フロー、R7二次問2の同期速度・すべり・トルク・二次銅損・固定損・半トルク時出力
+          4. ポンプ動力、条件付きファン相似則、60 Hz→45 Hz仮定例、VVVF速度制御による負荷低減
+          5. 整流器→DC link→PWMインバータ→誘導電動機、R4二次/R6一次/H25一次の固定答案要素
+          6. 本試験解法順序、固定5問27答案要素のPowerPointマッピング、SPEC固定7項目の収録確認、品質境界
+
+          ## 固定過去問接続
+
+          - R7 一次「機械」問2: \`5 / 5\` → slide 2
+          - R6 一次「機械」問2: \`5 / 5\` → slide 5
+          - H25 一次「機械」問3: \`5 / 5\` → slides 2 / 4 / 5
+          - R7 二次「機械・制御」問2: \`6 / 6\` → slide 3
+          - R4 二次「機械・制御」問3: \`6 / 6\` → slide 5
+          - 一次: \`15 / 15 connected\`
+          - 二次: \`12 / 12 connected\`
+          - 合計: \`27 / 27 connected\`
+
+          ## SPEC gate
+
+          - 電動機出力: \`PASS\` — slides 2 / 3
+          - 負荷トルク: \`PASS\` — slide 2
+          - ポンプ動力: \`PASS\` — slide 4
+          - ファン動力: \`PASS\` — slide 4
+          - 回転速度: \`PASS\` — slides 2 / 3 / 5
+          - 効率: \`PASS\` — slides 3 / 4
+          - インバータ制御: \`PASS\` — slides 4 / 5
+          - SPEC固定7項目: \`7 / 7 PASS\`
+
+          ## 数値・内容QA
+
+          - R7二次問2: \`Ns=1200 min^-1\`, \`s=0.035\`, \`T≈181 N·m\`, \`Pc2≈798 W\`, \`Pf≈1.55 kW\`, 半トルク時 \`N≈1180 min^-1\`, \`P≈11.2 kW\`: \`PASS\`
+          - R4二次問3: \`Ed=297 V\`, \`Id=33.7 A\`, \`I1=26.2 A\`, \`Vph,peak≈134 V\`, \`VLL,rms≈164 V\`, \`V/f一定\`: \`PASS\`
+          - 仮定ファン例: \`k=45/60=0.75\`, \`k^3=0.421875\`, \`18 kW→7.59 kW\`, \`7.59/0.88=8.63 kW\`: \`PASS\`
+          - Topic 21一般式 \`P=Tω\`, \`ω=2πN/60\`: 変更なし
+
+          ## 境界確認
+
+          - 固定EXAM_ALIGNMENT変更: \`0件\`
+          - 二次問題の件数合わせ採用: \`0件\`
+          - ポンプ水動力式を固定二種過去問の直接出題式と誤記: \`0件\`
+          - ファン相似則を成立条件なしで一般化: \`0件\`
+          - コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: \`0件\`
+          - 未確認実車値の真値化: \`0件\`
+          - Topic 35以降の先取り: \`0件\`
+          - exact blocker: \`0件\`
+
+          PowerPoint工程は完了。次工程はanswer-bearing資料を先に開かないfresh workerによるclean blind candidate固定。本runは固定EXAM_ALIGNMENT・解説・練習のanswer-bearing資料を確認済みのため、clean blind candidateは作成しない。
+          EOF
+          sed -i 's/^          //' "$qa"
+      - name: Commit canonical artifacts
+        run: |
+          set -euo pipefail
+          git config user.name 'cureflash'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          rm -f .github/workflows/tmp_topic34_pptx.yml .github/workflows/tmp_topic34_pptx_retry.yml .github/scripts/tmp_topic34_pptx.py
+          git add -A
+          git commit -m 'Add Topic 34 PowerPoint and QA'
+          git pull --rebase origin main
+          git push origin HEAD:main
