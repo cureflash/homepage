@@ -8,7 +8,7 @@
 
 Topic 01〜36は最終QAまで `PASS / completed`。完成数 `36 / 39`。
 
-現在地は `topic_37_explanation_pdf_complete`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QAまで完了。固定5問・25答案要素は一次 `5 / 5`、二次 `20 / 20`、合計 `25 / 25 PASS`。SPEC固定8項目 `8 / 8 PASS`、系列SPEC固定計算・グラフ2項目 `2 / 2 PASS`、3段階例題 `3 / 3 PASS`、二次問題の件数合わせ0件、未確認実車ATC内部実装・数値の真値化0件、Topic 38先取り0件、Topic 21一般式変更0件、exact blocker `0件`。次工程はTopic 37練習source作成＋独立source QA。
+現在地は `topic_37_practice_source_complete`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋独立source QAまで完了。固定5問・25答案要素は一次 `5 / 5`、二次 `20 / 20`、合計 `25 / 25 PASS`。練習は一次12問 `12 / 12` 正答一意、二次4題 `20 / 20` 独立再計算PASS。SPEC固定8項目 `8 / 8 PASS`、系列SPEC固定計算・グラフ2項目 `2 / 2 PASS`、二次問題の件数合わせ0件、未確認実車ATC内部実装・数値の真値化0件、Topic 38先取り0件、Topic 21一般式変更0件、exact blocker `0件`。次工程はTopic 37練習PDF生成＋PDF QA。
 
 ## Topic 34 完了記録
 
@@ -474,7 +474,7 @@ Topic 36は全工程を通過したため `PASS / COMPLETED`。完成数を `36 
 
 ## Topic 37 進捗
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
 canonical:
 - EXAM_ALIGNMENT source: `topics/37_atc_speed_control_system/37_atc_speed_control_system.md`
@@ -492,6 +492,12 @@ canonical:
 - explanation PDF canonical commit: `369b8c4c8cb31dc1c931d1406ac68ccdc83f0a01`
 - explanation PDF blob SHA: `b69862efb2f2905b56cdd8a981ae39ea5e5db1d1`
 - explanation PDF SHA-256: `8b9a65616365ddbf7796982df62c3819dc850ef0cb3192effaa1f27de69e761b`
+- practice source: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_source.md`
+- practice source commit: `7359874c3d74128ccea71d6cd2b8fa63460f64de`
+- practice source blob SHA: `25f28d819dd5ebfe049d7c7bf6e181be0d5c58bc`
+- practice source QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_source_qa.md`
+- practice source QA commit: `a9db0039f49375a1155809d22128444c20ed22ba`
+- practice source QA blob SHA: `686ccbbe8df765f9c3e08ec1fad15d956d297e97`
 
 固定過去問:
 - R4一次「機械」問7
@@ -502,19 +508,15 @@ canonical:
 
 品質ゲート:
 - 固定公式過去問: `5 / 5 PASS`
-- 一次: `1問 / 5答案要素`、`5 / 5 PASS`
-- 二次: `4問 / 20答案要素`、`20 / 20 PASS`
+- 一次固定答案要素: `5 / 5 PASS`
+- 二次固定答案要素: `20 / 20 PASS`
 - 合計: `25 / 25 PASS`
+- 練習一次: `12問 / 12問五肢択一`
+- 一次正答一意性: `12 / 12 PASS`
+- 練習二次: `4題`
+- 二次独立再計算: `20 / 20 PASS`
 - SPEC固定8項目: `8 / 8 PASS`
 - 系列SPEC固定計算・グラフ: `2 / 2 PASS`
-- 3段階例題: `3 / 3 PASS`
-- PDF A4縦: `3頁`
-- Ghostscript nullpage parse/render: `PASS`
-- Poppler `pdfinfo` / `pdftotext -layout`: `PASS`
-- PDFium / Poppler render: `3 / 3 PASS`
-- visual inspection: `3 / 3 PASS`
-- extracted text: `2605 chars / PASS`
-- replacement character U+FFFD: `0件`
 - 二次問題の件数合わせ採用: `0件`
 - JRTT一次資料へのATC一般原理接続: `PASS`
 - ATS-Dxを新幹線ATC実装として使用: `0件`
@@ -524,6 +526,6 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QAまで完了。完成数は `36 / 39` のまま。
+Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋独立source QAまで完了。完成数は `36 / 39` のまま。
 
-次工程: Topic 37練習source作成＋独立source QA。固定5問・25答案要素、SPEC固定8項目、一次・二次の試験対応、鉄道一次資料の境界を変更しない。
+次工程: Topic 37練習PDF生成＋PDF QA。固定5問・25答案要素、一次12問・二次4題、SPEC固定8項目、系列SPEC固定計算・グラフ2項目、鉄道一次資料の境界を変更しない。
