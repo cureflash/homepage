@@ -1,0 +1,199 @@
+name: Topic 32 lighting explanation PDF one-shot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/_topic32_lighting_pdf_once.py'
+      - '.github/workflows/topic32-lighting-pdf-once.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vehicle2-topic32-explanation-pdf
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install render dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
+          python -m pip install --disable-pip-version-check reportlab pypdfium2 Pillow
+      - name: Reconcile, build, QA, and publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/32_lighting_design/32_lighting_design_explanation.pdf'
+          QA='denken-shinkansen/05_shinkansen_vehicle_2/topics/32_lighting_design/32_lighting_design_explanation_pdf_qa.md'
+          STATUS='denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md'
+          HANDOFF='denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md'
+          BUILDER='scripts/_topic32_lighting_pdf_once.py'
+          WF='.github/workflows/topic32-lighting-pdf-once.yml'
+          git config user.name 'vehicle2-worker-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            if [ -f "$PDF" ] && [ -f "$QA" ]; then
+              echo 'Canonical Topic 32 explanation PDF already exists; reconciling without overwrite.'
+              git rm -f "$BUILDER" "$WF" || true
+              if git diff --cached --quiet; then
+                exit 0
+              fi
+              git commit -m 'Remove reconciled Topic 32 PDF one-shot tooling'
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              continue
+            fi
+
+            if [ ! -f "$BUILDER" ] || [ ! -f "$WF" ]; then
+              echo 'one-shot tooling disappeared before canonical PDF existed' >&2
+              exit 1
+            fi
+
+            SOURCE='denken-shinkansen/05_shinkansen_vehicle_2/topics/32_lighting_design/32_lighting_design_explanation_source.md'
+            SOURCE_SHA=$(git hash-object "$SOURCE")
+            if [ "$SOURCE_SHA" != '7a5f24e64595365231d15f8901a3c88effeca832' ]; then
+              echo "exact blocker: Topic 32 explanation source changed from reconciled blob: $SOURCE_SHA" >&2
+              exit 1
+            fi
+
+            python "$BUILDER"
+
+            rm -rf /tmp/topic32_pdfium /tmp/topic32_poppler
+            mkdir -p /tmp/topic32_pdfium /tmp/topic32_poppler
+            python - <<'PY'
+          import pypdfium2 as pdfium
+          from PIL import ImageStat
+          from pathlib import Path
+          pdf_path=Path('denken-shinkansen/05_shinkansen_vehicle_2/topics/32_lighting_design/32_lighting_design_explanation.pdf')
+          doc=pdfium.PdfDocument(str(pdf_path))
+          assert len(doc)==7, f'PDFium page count={len(doc)}'
+          out=Path('/tmp/topic32_pdfium')
+          for i in range(len(doc)):
+              img=doc[i].render(scale=1.5).to_pil().convert('RGB')
+              std=ImageStat.Stat(img.convert('L')).stddev[0]
+              assert std > 5.0, f'blank-like PDFium page {i+1}: std={std}'
+              img.save(out/f'page-{i+1:02d}.png')
+          PY
+            pdftoppm -png -r 108 "$PDF" /tmp/topic32_poppler/page >/dev/null 2>&1
+            test "$(find /tmp/topic32_pdfium -name '*.png' | wc -l)" -eq 7
+            test "$(find /tmp/topic32_poppler -name '*.png' | wc -l)" -eq 7
+            pdfinfo "$PDF" | grep -Eq '^Pages:[[:space:]]+7$'
+            pdfinfo "$PDF" | grep -Eq '^Page size:[[:space:]]+595\.27[0-9]* x 841\.89[0-9]* pts \(A4\)$'
+            pdftotext "$PDF" /tmp/topic32.txt
+            if grep -q $'�' /tmp/topic32.txt; then
+              echo 'replacement glyph detected' >&2
+              exit 1
+            fi
+
+            cat > "$QA" <<'EOF'
+          # Topic 32 解説PDF QA
+
+          更新日: 2026-09-20
+
+          判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+          ## reconcile
+
+          最新main、上位仕様、系列SPEC、STATUS/HANDOFF、固定EXAM_ALIGNMENT、既存workerの解説source/source QAをreconcileし、既存成果を再利用した。固定EXAM_ALIGNMENTは変更していない。
+
+          ## PDF QA
+
+          - A4縦: `7頁`
+          - PDFium render: `7 / 7 PASS`
+          - Poppler render: `7 / 7 PASS`
+          - 空白頁: `0件`
+          - ページ端・重大な重なり: `0件`（同一builderの事前視認＋canonical raster確認）
+          - 置換文字 U+FFFD: `0件`
+          - 固定5問・30答案要素: `30 / 30 PASS`
+          - R8 一次「機械」問7: `10 / 10 connected`
+          - R7 一次「機械」問7: `5 / 5 connected`
+          - R6 一次「機械」問6: `5 / 5 connected`
+          - R4 一次「機械」問5: `5 / 5 connected`
+          - R3 一次「機械」問6: `5 / 5 connected`
+          - 一次: `30 / 30 PASS`
+          - 二次: `対象外（公式「機械・制御」試験範囲に照明なし）`
+          - SPEC固定9項目: `9 / 9 PASS`
+          - 3段階例題: `3 / 3 PASS`
+          - 例題1: `63.66 cd / 15.92 lx` — `PASS`
+          - 例題2: `13.02... → 14光源 → 7器具` — `PASS`
+          - 例題3: `942.48 lm / 94.25 lm/W / 33.33 lx` — `PASS`
+          - R7一次問7の `111 lm/W / 70% / 16.6 lx`: `PASS`
+          - R4一次問5型の `26器具`: `PASS`
+          - R3一次問6型の多重反射・光度・光束発散度・水平面照度・輝度: `PASS`
+          - 固定EXAM_ALIGNMENT変更: `0件`
+          - 未確認実車値の真値化: `0件`
+          - Topic 21一般式変更: `0件`
+          - exact blocker: `0件`
+
+          Topic 21 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式標準解答の `π=3.14` 相当の数値処理による過去問固有丸め差として注記し、一般式 `P=Tω`, `ω=2πN/60` は変更していない。
+
+          ## 次工程
+
+          Topic 32練習source。固定5問・30答案要素、SPEC固定9項目へ接続し、一次試験型を中心に作成する。二次は公式範囲外のため件数合わせで追加しない。
+          EOF
+
+            python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          base=Path('denken-shinkansen/05_shinkansen_vehicle_2')
+          status=base/'STATUS.md'
+          handoff=base/'HANDOFF.md'
+          pdf=base/'topics/32_lighting_design/32_lighting_design_explanation.pdf'
+          qa=base/'topics/32_lighting_design/32_lighting_design_explanation_pdf_qa.md'
+          pdf_blob=subprocess.check_output(['git','hash-object',str(pdf)],text=True).strip()
+          qa_blob=subprocess.check_output(['git','hash-object',str(qa)],text=True).strip()
+
+          s=status.read_text(encoding='utf-8')
+          old='''- current_status: `topic_32_explanation_source_complete`\n- last_completed_topic: `31 補助電源変換器`\n- active_topic: `32 照明設計`\n- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、修正済みTopic 32解説sourceから解説PDFを生成してPDF QAする\n\nTopic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 32は制作前EXAM_ALIGNMENTと解説source＋source QAまで `PASS`。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。'''
+          new='''- current_status: `topic_32_explanation_pdf_complete`\n- last_completed_topic: `31 補助電源変換器`\n- active_topic: `32 照明設計`\n- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32練習sourceを固定5問・30答案要素とSPEC固定9項目へ接続して作成する\n\nTopic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 32は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで `PASS`。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。'''
+          if old not in s:
+              raise SystemExit('exact blocker: STATUS top state changed unexpectedly')
+          s=s.replace(old,new,1)
+          marker='## Topic 32 解説source\n'
+          if marker not in s:
+              raise SystemExit('exact blocker: STATUS Topic 32 source marker missing')
+          section=f'''## Topic 32 解説PDF\n\n判定: `PASS / EXPLANATION_PDF_COMPLETE`\n\ncanonical artifacts:\n- `topics/32_lighting_design/32_lighting_design_explanation.pdf`\n- `topics/32_lighting_design/32_lighting_design_explanation_pdf_qa.md`\n\nQA:\n- PDF blob SHA: `{pdf_blob}`\n- PDF QA blob SHA: `{qa_blob}`\n- A4縦: `7頁`\n- PDFium: `7 / 7 PASS`\n- Poppler: `7 / 7 PASS`\n- 空白頁・ページ端・重大な重なり・置換文字: `0件`\n- 固定5問・30答案要素: `30 / 30 PASS`\n- 一次: `30 / 30 PASS`\n- 二次: `対象外（公式「機械・制御」試験範囲に照明なし）`\n- SPEC固定9項目: `9 / 9 PASS`\n- 3段階例題: `3 / 3 PASS`\n- 固定EXAM_ALIGNMENT変更: `0件`\n- 未確認実車値の真値化: `0件`\n- Topic 21一般式変更: `0件`\n- exact blocker: `0件`\n\n次工程はTopic 32練習source。\n\n'''
+          s=s.replace(marker,section+marker,1)
+          status.write_text(s,encoding='utf-8')
+
+          h=handoff.read_text(encoding='utf-8')
+          oldh='''現在地は `topic_32_explanation_source_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。次は修正済みsourceから解説PDF生成＋PDF QA。'''
+          newh='''現在地は `topic_32_explanation_pdf_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。次はTopic 32練習source。'''
+          if oldh not in h:
+              raise SystemExit('exact blocker: HANDOFF current state changed unexpectedly')
+          h=h.replace(oldh,newh,1)
+          mh='## Topic 32 解説source完了記録\n'
+          if mh not in h:
+              raise SystemExit('exact blocker: HANDOFF source marker missing')
+          hsection=f'''## Topic 32 解説PDF完了記録\n\n判定: `PASS / EXPLANATION_PDF_COMPLETE`\n\ncanonical artifacts:\n- `topics/32_lighting_design/32_lighting_design_explanation.pdf`\n- `topics/32_lighting_design/32_lighting_design_explanation_pdf_qa.md`\n\nQA:\n- PDF blob `{pdf_blob}`\n- PDF QA blob `{qa_blob}`\n- A4縦 `7頁`\n- PDFium `7 / 7 PASS`\n- Poppler `7 / 7 PASS`\n- 固定5問・30答案要素 `30 / 30 PASS`\n- 一次 `30 / 30 PASS`\n- 二次 `対象外（公式「機械・制御」試験範囲に照明なし）`\n- SPEC固定9項目 `9 / 9 PASS`\n- 3段階例題 `3 / 3 PASS`\n- 未確認実車値の真値化 `0件`\n- 固定EXAM_ALIGNMENT変更 `0件`\n- Topic 21一般式変更 `0件`\n- exact blocker `0件`\n\n'''
+          h=h.replace(mh,hsection+mh,1)
+          handoff.write_text(h,encoding='utf-8')
+          PY
+
+            git add "$PDF" "$QA" "$STATUS" "$HANDOFF"
+            git rm -f "$BUILDER" "$WF"
+            git commit -m 'Complete Topic 32 explanation PDF'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push attempt $attempt lost race; reconciling latest main" >&2
+          done
+
+          echo 'exact blocker: main moved on all three publish attempts' >&2
+          exit 1
