@@ -6,8 +6,8 @@
 - Topic 01〜20: 最終QA `PASS / completed`
 - 完成数: `20 / 22`
 - active topic: `21 空転した車輪を再粘着させる`
-- current status: `topic_21_explanation_pdf_complete / IN_PROGRESS`
-- 次工程: Topic 21 練習source
+- current status: `topic_21_practice_source_complete / IN_PROGRESS`
+- 次工程: Topic 21 練習PDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -127,5 +127,20 @@ Topic 20成果物QA:
 - STAR21公開値の現行新幹線一般化: `0件 / PASS`
 - Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 
+## Topic 21 練習source
+- `topics/21_readhesion_control/21_readhesion_control_practice.md`
+- 状態: `PASS / topic_21_practice_source_complete`
+- 一次試験型: `10問 / 全問五肢択一`
+- 一次正答一意性: `10 / 10 PASS`
+- 二次試験型: `5問 / 記述・式変形・検算付き`
+- 全15問独立再計算・論理確認: `15 / 15 PASS`
+- 固定5問・14答案要素: `14 / 14 COVERED`
+- センサ・アクチュエータ、シーケンス/フィードバック、ロータリエンコーダ、磁気/光電センサ: `PASS`
+- 車輪速度、加速度推定、空転/滑走、粘着、トルク抑制、再粘着: `PASS`
+- 非線形性、飽和、応答速度: `PASS`
+- 閉ループ伝達関数、インパルス応答、単位ステップ応答、指定時刻評価: `PASS`
+- 固定過去問個別正答保存: `0件 / PASS`
+- 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の練習source。
+Topic 21「空転した車輪を再粘着させる」の練習PDF。
