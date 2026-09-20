@@ -6,8 +6,8 @@
 - Topic 01〜20: 最終QA `PASS / completed`
 - 完成数: `20 / 22`
 - active topic: `21 空転した車輪を再粘着させる`
-- current status: `topic_21_practice_pdf_complete / IN_PROGRESS`
-- 次工程: Topic 21 解説画像PowerPoint source
+- current status: `topic_21_powerpoint_complete / IN_PROGRESS`
+- 次工程: Topic 21 独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -156,5 +156,17 @@ Topic 20成果物QA:
 - 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 - 固定過去問個別正答保存: `0件 / PASS`
 
+## Topic 21 解説画像PowerPoint
+- `topics/21_readhesion_control/21_readhesion_control_images.pptx`
+- `topics/21_readhesion_control/21_readhesion_control_powerpoint_qa.md`
+- 状態: `PASS / topic_21_powerpoint_complete / IN_PROGRESS`
+- 16:9・4枚、LibreOffice変換 `PASS`、1600×900レンダリング `4 / 4 PASS`
+- PPTX ZIP整合・slide XML: `PASS / 4`
+- PDF文字抽出異常: `replacement char 0 / (cid:) 0`
+- 固定一次4問＋二次1問・14答案要素: `14 / 14 COVERED`
+- 一次・二次・二次記述式: `PASS`
+- 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 固定過去問個別正答保存: `0件 / PASS`
+
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の解説画像PowerPoint source。
+Topic 21「空転した車輪を再粘着させる」の独立再解答前ゲート。

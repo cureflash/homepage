@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_practice_pdf_complete / IN_PROGRESS`
+- current_status: `topic_21_powerpoint_complete / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 解説画像PowerPoint source
+- next_start: Topic 21 独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -230,6 +230,18 @@
 - 固定公式過去問個別正答保存: `0件 / PASS`
 - 判定: `PASS / topic_21_practice_pdf_complete`
 
+## Topic 21 解説画像PowerPoint品質ゲート
+- 16:9・4枚: `PASS`
+- LibreOffice headless PDF変換: `PASS`
+- 1600×900レンダリング: `4 / 4 PASS`
+- スライド外周クリップ: `0件 / PASS`
+- `pdftotext` 抽出、replacement char、`(cid:)`: `PASS / 0 / 0`
+- PPTX ZIP整合・slide XML: `PASS / 4`
+- 固定一次4問＋二次1問・14答案要素: `14 / 14 COVERED`
+- 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 固定公式過去問個別正答保存: `0件 / PASS`
+- 判定: `PASS / topic_21_powerpoint_complete / IN_PROGRESS`
+
 ## Topic 21 成果物
 - `topics/21_readhesion_control/21_readhesion_control.md` — 制作前EXAM_ALIGNMENT＋解説source本文完了
 - `topics/21_readhesion_control/21_readhesion_control_explanation.pdf` — 解説PDF完了
@@ -237,9 +249,11 @@
 - `topics/21_readhesion_control/21_readhesion_control_practice.md` — 練習source完了
 - `topics/21_readhesion_control/21_readhesion_control_practice.pdf` — 練習PDF完了
 - `topics/21_readhesion_control/21_readhesion_control_practice_pdf_qa.md` — 練習PDF QA完了
+- `topics/21_readhesion_control/21_readhesion_control_images.pptx` — 解説画像PowerPoint完了
+- `topics/21_readhesion_control/21_readhesion_control_powerpoint_qa.md` — PowerPoint QA完了
 
 ## 今回進めた内容
-Topic 21の練習PDF＋QAを完了した。A4縦2ページ・2段組、200 dpi表示 `2 / 2 PASS`、`pdftocairo` 160 dpi表示 `2 / 2 PASS`、文字抽出異常0件。一次10問＋二次5問、固定一次4問＋二次1問・14答案要素 `14 / 14 COVERED`。未確認実車仕様化、Topic 22先取り、SPEC外A-D変換器方式追加は行っていない。
+Topic 21の解説画像PowerPoint＋QAを完了した。16:9・4枚、1600×900レンダリング `4 / 4 PASS`、固定一次4問＋二次1問・14答案要素 `14 / 14 COVERED`。未確認実車仕様化、Topic 22先取り、SPEC外A-D変換器方式追加は行っていない。完成数は `20 / 22` のまま。
 
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の解説画像PowerPoint source。
+Topic 21「空転した車輪を再粘着させる」の独立再解答前ゲート。
