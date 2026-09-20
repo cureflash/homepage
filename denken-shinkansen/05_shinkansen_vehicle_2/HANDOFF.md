@@ -8,7 +8,7 @@
 
 Topic 01〜28は最終QAまで `PASS / completed`。完成数は `28 / 39`。
 
-現在地は `topic_29_powerpoint_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
+現在地は `topic_29_clean_blind_fresh_worker_blocked`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。教材一式はPowerPointまで完成済みだが、clean blind品質ゲート未通過のためTopic 29はまだ `completed` ではない。
 
 ## Topic 28 完了状態
 
@@ -103,9 +103,7 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
-## Topic 29 今回完了
-
-練習PDFとPDF QAをGitHub正本へ固定した。
+## Topic 29 練習PDF
 
 - PDF: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice.pdf`
 - QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_pdf_qa.md`
@@ -145,6 +143,15 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
+## Topic 29 clean blind fresh-worker blocker
+
+- blocker: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_fresh_worker_blocker.md`
+- 判定: `BLOCKED / FRESH_WORKER_CONDITION_NOT_CERTIFIABLE`
+- 本runはactive theme alignment本体を開いた時点で、制作前独立再計算・公式照合の結果と公式照合済み数値を閲覧した。
+- このrunでcandidateを作ってもclean blind実施者条件を満たさないため、候補を捏造せず停止した。
+- 固定EXAM_ALIGNMENT、教材一式、L0系実車境界、Topic 30境界は変更していない。
+- 完成数は `28 / 39` のまま。
+
 ## Topic 29 固定SPEC境界
 
 必須8項目:
@@ -162,17 +169,27 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 2. 速度―誘導電流
 3. 速度―電磁力
 
-固定EXAM_ALIGNMENTは変更しない。L0系実車の未確認の磁界・コイル電流・`R/L/M`・幾何寸法・浮上力・案内力・速度しきい値を真値化しない。教材用仮定値は実車一般式へ昇格させない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。教材一式はPowerPointまで完成。次はclean blind独立再解答候補固定へ進む。
+固定EXAM_ALIGNMENTは変更しない。L0系実車の未確認の磁界・コイル電流・`R/L/M`・幾何寸法・浮上力・案内力・速度しきい値を真値化しない。教材用仮定値は実車一般式へ昇格させない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。
 
 ## 次の安全な工程
 
-Topic 29のclean blind独立再解答候補を固定する。
+answer-bearing資料を候補固定前に参照していないfresh workerで、Topic 29のclean blind候補を固定する。
 
-- 公式解答・保存済み正答を先に見ない
-- 固定5問・24答案要素を独立再解答する
-- candidate固定後は変更しない
-- 固定後に公式照合し、不一致は教材側の不足として診断する
-- Topic 21一般式・固定EXAM_ALIGNMENT・SPEC境界は変更しない
+候補固定前に開いてよいもの:
+- `MASTER_SPEC.md`
+- `EXAM_ALIGNMENT_SPEC.md`
+- 系列 `SPEC.md`
+- 系列 `STATUS.md` / `HANDOFF.md`
+- Topic 29の解説source
+- 固定5問の公式問題PDFのみ
+
+候補固定前に開かないもの:
+- `29_l0_superconducting_magnetic_levitation_force.md`
+- `29_l0_superconducting_magnetic_levitation_force_exam_alignment_qa.md`
+- 公式解答PDF
+- 今後作成されるblind compare QA
+
+固定問題IDは `STATUS.md` / `HANDOFF.md` の一覧を使う。固定5問・24答案要素を教材だけで再解答してcandidateを別ファイルへ固定し、固定後に初めて公式照合へ進む。candidate固定後は変更しない。
 
 ## Topic 21 H26二次 問1(4)
 
