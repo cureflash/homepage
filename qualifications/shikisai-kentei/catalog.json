@@ -1,0 +1,23 @@
+{
+  "title": "色彩検定×自然科学",
+  "updated": "2026-09-20",
+  "targetArticles": 48,
+  "series": [
+    {"id":"physics","order":1,"name":"物理","targetTopics":13,"description":"電磁波、光学、散乱、干渉、黒体放射、照明、混色"},
+    {"id":"chemistry-geoscience","order":2,"name":"化学・地学","targetTopics":6,"description":"吸収、分子軌道、結晶場、顔料・染料、鉱物・宝石"},
+    {"id":"biology","order":3,"name":"生物","targetTopics":9,"description":"網膜、オプシン、生化学、遺伝、進化、動植物の色"},
+    {"id":"vision-psychology","order":4,"name":"色覚・心理","targetTopics":7,"description":"順応、反対色、対比、色恒常性、心理物理学"},
+    {"id":"colorimetry-design","order":5,"name":"測色・表色・配色","targetTopics":13,"description":"PCCS、マンセル、XYZ、L*a*b*、色差、測色、配色"}
+  ],
+  "topics": [
+    {
+      "id":"04_transparent_color_beer_lambert",
+      "articleNo":4,
+      "seriesId":"chemistry-geoscience",
+      "title":"透明な物質に、なぜ色がつくのか",
+      "summary":"「透明」と「無色」を分け、分光透過率とBeer–Lambert則から、濃度・光路長・吸収スペクトルが色を決める仕組みを理解する。",
+      "levels":["3級：光と色","大学化学：分光学"],
+      "source":"articles/04_transparent_color_beer_lambert.md"
+    }
+  ]
+}
