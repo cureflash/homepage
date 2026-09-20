@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `33 / 39`
-- current_status: `topic_33_completed_ready_topic_34_exam_alignment`
+- current_status: `topic_34_exam_alignment_complete`
 - last_completed_topic: `33 空調・電熱の熱収支`
 - active_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 34の制作前EXAM_ALIGNMENTから開始する。固定過去問を先に確定し、一次・二次の適用範囲を公式試験範囲と実問題で判定する。未確認実車値は真値化しない。
+- next_start: Topic 34の固定5問・27答案要素とSPEC固定7項目を変更せず、解説sourceを作成する。二次「機械・制御」2問を維持し、コンプレッサ固有の圧縮熱力学や未確認実車値は追加しない。
 
 Topic 01〜33は `PASS / completed`。完成数 `33 / 39`。
 
@@ -121,6 +121,42 @@ SPEC固定項目:
 - 効率
 
 Topic 33はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程 `PASS`。
+
+## Topic 34 コンプレッサ・ポンプ・ファンの負荷特性
+
+判定: `IN_PROGRESS / EXAM_ALIGNMENT_COMPLETE`
+
+制作前EXAM_ALIGNMENT:
+- source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics.md`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_exam_alignment_qa.md`
+- 固定公式過去問: `5問`
+- 一次: `3問 / 15答案要素`
+- 二次: `2問 / 12答案要素`
+- 独立再解答・公式照合: `27 / 27 PASS`
+- SPEC固定7項目: `7 / 7 mapped`
+- H25一次「機械」問3でファン・ポンプ用途を直接確認
+- 二次問題の件数合わせ採用: `0件`
+- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性の追加: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 35以降の先取り: `0件`
+
+固定過去問:
+- R7一次「機械」問2
+- R6一次「機械」問2
+- H25一次「機械」問3
+- R7二次「機械・制御」問2
+- R4二次「機械・制御」問3
+
+SPEC固定項目:
+- 電動機出力
+- 負荷トルク
+- ポンプ動力
+- ファン動力
+- 回転速度
+- 効率
+- インバータ制御
+
+次工程はTopic 34解説source。完成数は `33 / 39` のまま。
 
 ## Topic 21 固定注記
 
