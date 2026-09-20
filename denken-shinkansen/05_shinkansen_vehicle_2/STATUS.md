@@ -6,12 +6,44 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `29 / 39`
-- current_status: `topic_30_practice_source_complete`
+- current_status: `topic_30_practice_pdf_complete`
 - last_completed_topic: `29 L0系③ 超電導磁気浮上の電磁力`
 - active_topic: `30 L0系④ 誘導集電・非接触電力伝送`
-- next_start: Topic 30練習PDFを生成し、一次8問・二次4問・固定25答案要素・SPEC必須7項目・指定3可視化への接続をPDF QAする
+- next_start: Topic 30解説画像PowerPointを生成し、固定25答案要素・SPEC必須7項目・指定3可視化への接続と表示をQAする
 
-Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで完了した。
+Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了した。
+
+## Topic 30 練習PDF
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+成果物:
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice.pdf`
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_pdf_qa.md`
+
+結果:
+- canonical blob SHA: `f1e9650e39e236a6fb3629fd93a234dfbafe89c2`
+- source blob SHA: `4a9b6c802a9182225594b4ce7274d98c931d120a`
+- A4縦: `7 pages`
+- PDFium / Poppler: `7 / 7 PASS`
+- page-edge overflow / blank-page: `7 / 7 PASS` in both renderers
+- `pdftotext -layout`: `PASS`
+- 置換文字: `0件`
+- 一次試験型: `8 / 8 PASS`
+- 二次試験型: `4 / 4 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- 一次: `20 / 20 connected`
+- 二次: `5 / 5 connected`
+- SPEC必須7項目: `7 / 7 covered`
+- 指定3可視化: `3 / 3 aligned`
+- 未確認L0系実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 31範囲先取り: `0件`
+- exact blocker: `0件`
+
+初回PDF QAは「8頁以上」という仕様外の固定ページ数仮定で停止した。canonical sourceと出力を診断し、実際の正本はA4縦7頁で全内容を収録していることを確認したため、ページ数を固定せず全頁レンダー・内容・端部を検査するQAへ修正してPASSした。教材内容・一般式は変更していない。
+
+これは練習PDF工程の接続QAであり、Topic 30最終clean blind PASSを意味しない。
 
 ## Topic 30 練習source
 
