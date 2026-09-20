@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `32 / 39`
-- current_status: `topic_33_exam_alignment_complete`
+- current_status: `topic_33_explanation_source_complete`
 - last_completed_topic: `32 照明設計`
 - active_topic: `33 空調・電熱の熱収支`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENTをreconcile後、Topic 33解説sourceを作成する。固定5問・22答案要素とSPEC固定7項目を本文へ接続し、固定EXAM_ALIGNMENTは差し替えない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENT、解説source/QAをreconcile後、Topic 33解説PDFを生成してPDF QAする。固定5問・22答案要素、SPEC固定7項目、3段階例題、数式・単位・ページ端・置換文字を検査し、固定EXAM_ALIGNMENTは差し替えない。
 
 Topic 01〜32は `PASS / completed`。完成数 `32 / 39`。
 
@@ -35,7 +35,7 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 
 ## Topic 33 空調・電熱の熱収支
 
-判定: `PASS / topic_33_exam_alignment_complete`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 制作前EXAM_ALIGNMENT:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
@@ -47,7 +47,18 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 - SPEC固定7項目: `7 / 7 mapped`
 - 参考教材比較: `e-sysnet + 電験王2`
 - 件数合わせ採用: `0件`
+
+解説source:
+- source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_source.md`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_source_qa.md`
+- 固定5問・22答案要素: `22 / 22 connected`
+- SPEC固定7項目: `7 / 7 connected`
+- 3段階例題: `3 / 3 PASS`
+- COPと効率の区別: `PASS`
+- 外気負荷・車内負荷: `PASS`
 - 未確認実車値の真値化: `0件`
+- Topic 21一般式変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
 SPEC固定項目:
@@ -59,7 +70,7 @@ SPEC固定項目:
 - 車内負荷
 - 効率
 
-次工程はTopic 33解説source。完成数は `32 / 39` のまま。
+次工程はTopic 33解説PDF生成＋PDF QA。完成数は `32 / 39` のまま。
 
 ## Topic 21 固定注記
 
