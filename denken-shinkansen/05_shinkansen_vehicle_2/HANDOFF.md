@@ -8,7 +8,7 @@
 
 Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
 
-現在地は `topic_33_practice_source_complete`。active topicは `33 空調・電熱の熱収支`。
+現在地は `topic_33_practice_pdf_blocked_integrity_mismatch`。active topicは `33 空調・電熱の熱収支`。
 
 ## Topic 32 完了記録
 
@@ -107,18 +107,27 @@ canonical:
 - 車内負荷
 - 効率
 
-## 次工程 — Topic 33 練習PDF
+## Topic 33 練習PDF integrity blocker
 
-fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、固定EXAM_ALIGNMENT、解説source/PDF/QA、練習source/QAをreconcileしてから開始する。
+materialization staging:
+- commits: `058e6ea5fbd7b2d6833c39c85aed2e4f5f90ed92`, `9a035479828e1c1c5045741fc6440e6ac8f710b6`
+- retrigger commit: `732c9851a44f89759fe28001bd528e3266423c5c`
+- workflow: `.github/workflows/tmp_topic33_practice_pdf.yml`
+- run / job: `35511621652 / 106080397325`
+- workflow composition: `part0 + part1 + part2`
+- decoded size check: `19,106 bytes PASS`
+- expected SHA256: `392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705`
+- SHA256 check: `FAIL`
+- `part1a` は追加staging済みだが、正本・workflowに用途または置換位置の指定がない。
+- canonical `33_hvac_thermal_balance_practice.pdf`: `未成立`
+- PDF QA: `未実施`
 
-品質ゲート:
-- canonical practice sourceの一次10問・完全解説をPDFへ接続する。
-- 固定5問・22答案要素とSPEC固定7項目を欠落させない。
-- 二次は公式範囲外のため件数合わせで追加しない。
-- 数式・単位・正答一意性を再確認する。
-- A4レイアウト、ページ端切れ、空白頁、重大な重なり、文字化け・欠字、置換文字U+FFFDをPDFium / Popplerで確認する。
-- 未確認の実車空調能力、COP、消費電力、換気量、熱貫流率、乗客発熱、機器発熱を追加しない。
-- 固定EXAM_ALIGNMENTは差し替えない。
+exact blocker:
+`part0 + part1 + part2` は期待サイズに復号できる一方でcanonical SHA256に一致しない。`part1a` の用途を根拠なく推測してchunk構成を変更すると正本性を破壊するため、canonical payload構成または正しいchunkが確定するまで停止する。
+
+## 次工程 — blocker解消後のみ
+
+fresh workerは最新mainと上記記録をreconcileし、canonical payload構成が根拠付きで確定した場合のみTopic 33練習PDF materializationを再開する。PDFが正しいSHAまたは新たに正本化された検証可能なhashへ一致し、PDFium / Poppler QAを通過するまではPowerPoint・完成後clean blindへ進めない。
 
 ## Topic 21 固定境界
 
