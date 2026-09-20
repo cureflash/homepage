@@ -6,9 +6,9 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜35は最終QAまで `PASS / completed`。完成数 `35 / 39`。
+Topic 01〜36は最終QAまで `PASS / completed`。完成数 `36 / 39`。
 
-現在地は `topic_36_powerpoint_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QA、解説source/PDF、練習source/PDF、解説画像PowerPoint＋QAまで完了。固定5問・25答案要素は `25 / 25 connected`、SPEC固定8項目は `8 / 8 PASS`、二次は公式科目範囲外のため固定0問、exact blocker `0件`。次工程はanswer-bearing資料を先に開かないfresh workerによるclean blind candidate固定＋独立再解答。candidate固定後修正、未確認実車値の真値化、Topic 37・38先取りは行わない。
+現在地は `topic_36_completed_topic_37_pre_exam_alignment`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 36は制作前EXAM_ALIGNMENT＋QA、解説source/PDF、練習source/PDF、解説画像PowerPoint＋QA、fresh clean blind独立再解答まで完了。固定5問・25答案要素 `25 / 25 PASS`、SPEC固定8項目 `8 / 8 connected`、二次は公式科目範囲外のため固定0問、candidate固定後修正0件、exact blocker `0件`。次工程は最新main・上位仕様・系列SPEC・`STATUS.md` / `HANDOFF.md`・既存worker成果をreconcileしたうえで、Topic 37の制作前EXAM_ALIGNMENTを開始する。
 
 ## Topic 34 完了記録
 
@@ -289,9 +289,9 @@ canonical:
 
 Topic 35は全工程を通過したため `PASS / COMPLETED`。完成数を `35 / 39` とする。
 
-## Topic 36 進捗
+## Topic 36 完了記録
 
-判定: `PASS / PRACTICE_PDF_COMPLETE`
+判定: `PASS / COMPLETED`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -425,8 +425,6 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程: Topic 36解説画像PowerPoint作成＋QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
-
 ## Topic 21 固定境界
 
 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有の丸め差として診断済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
@@ -449,4 +447,29 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程: fresh clean blind。現在runはanswer-bearing資料を確認済みのためcandidateを作成しない。
+### Topic 36 clean blind
+
+canonical:
+- candidate: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_clean_blind_candidate.md`
+- candidate blob SHA: `0117314c6f99beacdd5e203292da63619f04eaa2`
+- candidate lock commit: `08e103113ee309a460588224a0daceae23fa6ba1`
+- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_clean_blind_qa.md`
+- QA commit: `f20b4601bd859ad05c1bdcf46a3d6cb0d1d0445d`
+
+品質ゲート:
+- 固定公式過去問: `5 / 5 PASS`
+- 一次: `25 / 25 PASS`
+- 二次: `0問`（公式科目範囲外、件数合わせなし）
+- 合計: `25 / 25 PASS`
+- candidate固定前に公式解答PDF・Topic 36 answer-bearing QAを参照: `0件`
+- candidate固定後修正: `0件`
+- 教材外知識による補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物再生成: `0件`
+- SPEC固定8項目: `8 / 8 connected`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+Topic 36は全工程を通過したため `PASS / COMPLETED`。完成数を `36 / 39` とする。
+
+次工程: Topic 37 `ATC③ 速度制御系` の制作前EXAM_ALIGNMENT。
