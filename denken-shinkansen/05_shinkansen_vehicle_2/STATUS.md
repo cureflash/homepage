@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `34 / 39`
-- current_status: `topic_35_practice_source_complete`
+- current_status: `topic_35_practice_pdf_complete`
 - last_completed_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
 - active_topic: `35 ATC① 軌道回路の回路解析`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、固定EXAM_ALIGNMENT・解説source/PDF・練習sourceを変更せずTopic 35練習PDFを生成してPDF QAを実施する。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、固定EXAM_ALIGNMENT・解説source/PDF・練習source/PDFを変更せずTopic 35解説画像PowerPointを生成してrender/content QAを実施する。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
 
 Topic 01〜34は `PASS / completed`。完成数は `34 / 39`。
 
@@ -121,7 +121,7 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 35 ATC① 軌道回路の回路解析
 
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -199,7 +199,27 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程は固定EXAM_ALIGNMENT・解説source/PDF・練習sourceを変更せず、Topic 35練習PDF生成＋PDF QA。完成数は `34 / 39` のまま。
+### 練習PDF
+
+- PDF: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice.pdf`
+- PDF QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice_pdf_qa.md`
+- PDF canonical commit: `408f00c194c4a407c1e0b885f62c58df63e5f36d`
+- PDF blob SHA: `060f442964cc94114e1e556c6a7dfb0ad891ad75`
+- PDF SHA-256: `305c1aeadc3a9ddbae73ea16b2d1b3b7abfeaf8ed2a5961c83f2e9dd602898e4`
+- A4縦: `6頁`
+- PDFium / Poppler render: `6 / 6 PASS`
+- `pdfinfo` / `pdftotext -layout`: `PASS`
+- 文字抽出: `6847 chars / PASS`
+- 置換文字 U+FFFD: `0件`
+- 一次問題・正答・完全解説: `12 / 12 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定7項目: `7 / 7 PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 36・37先取り: `0件`
+- exact blocker: `0件`
+
+次工程は固定EXAM_ALIGNMENT・解説source/PDF・練習source/PDFを変更せず、Topic 35解説画像PowerPoint生成＋render/content QA。完成数は `34 / 39` のまま。
 
 ## Topic 21 固定注記
 
