@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `26 / 39`
-- current_status: `topic_27_clean_blind_candidates_locked`
+- current_status: `topic_27_clean_blind_official_match_complete`
 - last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
 - active_topic: `27 L0系① リニア同期モータ`
-- next_start: Topic 27のlocked candidateを変更せず、公式解答・保存済み照合結果と比較してclean blind公式照合QAを作成する
+- next_start: Topic 27の既存必須成果物・QA・clean blind公式照合をreconcileし、最終QAを作成する
 
 ## Topic 25 最終状態
 
@@ -380,10 +380,24 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - Topic 28範囲の先取り: `0件`
 - exact blocker: `0件`
 
+## Topic 27 clean blind公式照合
+
+- 判定: `PASS / CLEAN_BLIND_OFFICIAL_MATCH_COMPLETE`
+- QA: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_clean_blind_official_match_qa.md`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `18 / 18 PASS`
+- 二次答案要素: `5 / 5 PASS`
+- 合計答案要素: `23 / 23 PASS`
+- candidate lock後の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- 不一致: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27はPowerPoint完了・clean blind候補固定済み。次は公式解答照合。
+Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27はPowerPoint完了・clean blind公式照合PASS。次は最終QA。
