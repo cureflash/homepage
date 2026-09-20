@@ -8,7 +8,7 @@
 
 Topic 01〜35は最終QAまで `PASS / completed`。完成数 `35 / 39`。
 
-現在地は `topic_36_exam_alignment_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QAを完了し、固定5問・25答案要素は `25 / 25 PASS`、SPEC固定8項目は `8 / 8 mapped`。二次は公式科目範囲外のため固定0問とし、件数合わせは行っていない。次工程はTopic 36解説source。固定EXAM_ALIGNMENT、一次限定の二次適用判定、鉄道一次資料の境界を変更せず、未確認実車値の真値化、Topic 37・38先取りを行わない。
+現在地は `topic_36_explanation_source_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QA、解説source＋source QAまで完了。固定5問・25答案要素は `25 / 25 connected`、SPEC固定8項目は `8 / 8 PASS`、3段階例題 `3 / 3 PASS`、exact blocker `0件`。二次は公式科目範囲外のため固定0問とし、件数合わせは行っていない。次工程はTopic 36解説PDF生成＋表示QA。固定EXAM_ALIGNMENT、一次限定の二次適用判定、鉄道一次資料の境界を変更せず、未確認実車値の真値化、Topic 37・38先取りを行わない。
 
 ## Topic 34 完了記録
 
@@ -291,7 +291,7 @@ Topic 35は全工程を通過したため `PASS / COMPLETED`。完成数を `35 
 
 ## Topic 36 進捗
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -330,7 +330,26 @@ SPEC固定項目:
 - デジタル判定
 - 冗長化
 
-次工程: Topic 36解説source。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
+### 解説source
+
+canonical:
+- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_source.md`
+- source commit: `886685450f33f48c929e19f09e4a37ac46e45fde`
+- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_source_qa.md`
+- QA commit: `8a22bde3a2257187adafaf7503c8570efb7b5dec`
+
+品質ゲート:
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 公式・数値独立再計算: `PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 37・38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程: Topic 36解説PDF生成＋表示QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
 
 ## Topic 21 固定境界
 
