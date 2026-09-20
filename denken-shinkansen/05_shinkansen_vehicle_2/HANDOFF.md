@@ -8,7 +8,7 @@
 
 Topic 01〜33は最終QAまで `PASS / completed`。完成数 `33 / 39`。
 
-現在地は `topic_34_exam_alignment_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENTは完了し、次工程は解説source。
+現在地は `topic_34_explanation_source_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENTと解説source QAまで完了し、次工程は解説PDF。
 
 ## Topic 32 完了記録
 
@@ -143,11 +143,35 @@ SPEC固定項目:
 - 効率
 - インバータ制御
 
+## Topic 34 解説source 完了
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+canonical:
+- source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source.md`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source_qa.md`
+
+品質ゲート:
+- 固定5問・27答案要素: `27 / 27 COVERED`
+- 一次: `15 / 15 COVERED`
+- 二次: `12 / 12 COVERED`
+- SPEC固定7項目: `7 / 7 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 数値再計算: `PASS`
+- ポンプ水動力式・ファン相似則は三種既習の接続事項として扱い、固定二種過去問の直接出題式とは記述していない
+- ファン相似則の成立条件: 明記
+- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 35以降の先取り: `0件`
+- Topic 21一般式変更: `0件`
+- Topic 21 H26二次問1(4)丸め差注記: source 2節へ追加
+- exact blocker: `0件`
+
 Topic 34自体はまだ未完了。完成数は `33 / 39` のまま。
 
 ## 次工程
 
-Topic 34の固定5問・27答案要素とSPEC固定7項目を変更せず、解説sourceを作成する。ポンプ水動力式・ファン相似則を二種固定過去問で直接問われた式とは扱わず、三種既習内容から二種の電動機出力・負荷トルク・速度・効率・インバータ制御へ接続する。コンプレッサ固有の圧縮熱力学は追加しない。Topic 35以降は先取りしない。
+Topic 34解説sourceを正本として解説PDFを生成する。A4縦、固定5問・27答案要素、SPEC固定7項目、3段階例題を維持し、文字抽出、PDFium / Poppler表示、ページ端切れ・文字化け・欠字・重大な重なりをQAする。コンプレッサ固有の圧縮熱力学や未確認実車値は追加しない。Topic 35以降は先取りしない。
 
 ## Topic 21 固定境界
 
