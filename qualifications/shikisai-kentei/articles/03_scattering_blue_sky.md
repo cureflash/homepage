@@ -92,6 +92,31 @@ $$
 
 という波長依存性である。
 
+この関係は、散乱断面積を使うとさらに明確になる。SI単位系で、等方的な小さな散乱体の分極率を $\alpha$、真空中の波数を
+
+$$
+k=\frac{2\pi}{\lambda}
+$$
+
+とすると、電気双極子近似での全Rayleigh散乱断面積は
+
+$$
+\boxed{
+\sigma_{\mathrm{R}}=
+\frac{k^4|\alpha|^2}{6\pi\varepsilon_0^2}
+}
+$$
+
+となる。したがって、$\alpha$ の波長依存性を無視できる範囲では
+
+$$
+\sigma_{\mathrm{R}}\propto k^4\propto \lambda^{-4}
+$$
+
+である。
+
+「短波長ほど散乱される」という経験則は、分子が電場で分極し、その誘起双極子が放射するというMaxwell電磁気学から出てくる。
+
 厳密には分子の分極率、屈折率、分子の非等方性なども効くので、実際の大気の散乱断面積は単純な $\lambda^{-4}$ だけではない。しかし、可視域の基本的な色依存性を理解するにはこの近似が非常に重要である。
 
 ## 4　青と赤では、どのくらい差があるのか
@@ -219,6 +244,20 @@ $$
 \tau(\lambda)=\int \beta(\lambda,s)\,ds
 $$
 
+散乱体の数密度を $N(s)$、1個あたりの散乱断面積を $\sigma_{\mathrm{R}}(\lambda)$ とすると、散乱係数は
+
+$$
+\beta_s(\lambda,s)=N(s)\sigma_{\mathrm{R}}(\lambda)
+$$
+
+だから、散乱だけを考えれば
+
+$$
+\tau_s(\lambda)=\int N(s)\sigma_{\mathrm{R}}(\lambda)\,ds
+$$
+
+となる。つまり、散乱による減衰は「分子1個の散乱しやすさ」と「光路上に何個の分子があるか」の積分で決まる。
+
 直達光は
 
 $$
@@ -278,23 +317,53 @@ $$
 
 と整理できる。
 
-## 11　散乱光は偏光している
+## 11　散乱光はなぜ偏光するのか
 
-Rayleigh散乱には方向依存性がある。
+Rayleigh散乱には角度依存性と偏光依存性がある。
 
-電気双極子は、その振動軸方向にはほとんど放射せず、振動軸に垂直な方向へ強く放射する。双極子放射の角度分布は、単純化すると
+まず、1個の誘起双極子を考える。双極子の振動軸と観察方向のなす角を $\psi$ とすると、遠方へ放射される強度は
 
 $$
-I(\theta)\propto \sin^2\theta
+I(\psi)\propto \sin^2\psi
+$$
+
+である。双極子は振動軸方向には放射せず、それに垂直な方向へ最も強く放射する。
+
+ただし、大気へ入射する太陽光はほぼ無偏光なので、そのまま $\sin^2\psi$ を「散乱角の分布」として使ってはいけない。入射方向と散乱方向のなす角を $\theta$ とし、2つの直交偏光成分を平均すると、Rayleigh散乱の微分断面積は
+
+$$
+\boxed{
+\frac{d\sigma}{d\Omega}
+=
+\frac{k^4|\alpha|^2}{32\pi^2\varepsilon_0^2}
+\left(1+\cos^2\theta\right)
+}
 $$
 
 となる。
 
-太陽光は多くの偏光方向を含むが、大気分子で散乱された後の光は、観察方向によって部分的に偏光する。
+この式から、前方 $\theta=0^\circ$ と後方 $180^\circ$ では散乱強度が大きく、直角方向 $90^\circ$ ではその半分になることが分かる。一方、偏光度は理想的なRayleigh散乱なら
 
-そのため、偏光サングラスを回転させながら青空を見ると、方向によって明るさが変化する。OpenStaxも、空の散乱光が部分偏光していることをRayleigh散乱の例として説明している。
+$$
+\boxed{
+P(\theta)=
+\frac{1-\cos^2\theta}{1+\cos^2\theta}
+}
+$$
 
-散乱は単に「色を変える」現象ではなく、光の進行方向と偏光状態も変える現象である。
+で与えられる。
+
+したがって
+
+$$
+P(90^\circ)=1
+$$
+
+となり、単一散乱だけを考えれば、太陽から空の上で $90^\circ$ 離れた方向の散乱光は最も強く直線偏光する。
+
+実際の空では、分子の非等方性、エアロゾル、地表反射、多重散乱などによって完全な100%偏光にはならない。それでも偏光サングラスを回転させながら青空を見ると明るさが変わるのは、この散乱偏光のためである。
+
+ここで重要なのは、Rayleigh散乱が単に「短波長を強く散らす」だけではないことである。散乱後の光は、波長・方向・偏光状態の3つが同時に変化する。
 
 ## 12　色を理解するときは「スペクトルの再分配」と考える
 
@@ -334,18 +403,21 @@ p=\alpha E
 $$
 
 $$
-P_{\mathrm{rad}}\propto \omega^4p_0^2
+\sigma_{\mathrm{R}}=
+\frac{k^4|\alpha|^2}{6\pi\varepsilon_0^2}
 $$
 
 $$
-I_{\mathrm{sca}}\propto \lambda^{-4}
+\frac{d\sigma}{d\Omega}
+\propto
+1+\cos^2\theta
 $$
 
 $$
 I(\lambda)=I_0(\lambda)e^{-\tau(\lambda)}
 $$
 
-という誘起双極子、電磁波放射、Rayleigh散乱、光学的厚さの連鎖として説明できる。
+という誘起双極子、散乱断面積、角度分布、光学的厚さの連鎖として説明できる。
 
 空の青も夕焼けの赤も、色そのものが空気中に存在しているのではない。太陽光のスペクトルが大気によって波長別・方向別に再配分され、その一部が眼へ入った結果である。
 
@@ -356,6 +428,9 @@ $$
 - [色彩検定協会「色彩検定とは・各級の目安」](https://www.aft.or.jp/pages/feature/level)
 - [NASA Science, Wave Behaviors](https://science.nasa.gov/ems/03_behaviors/)
 - [NASA Space Place, Why Is the Sky Blue?](https://spaceplace.nasa.gov/blue-sky/en/)
+- [NASA Goddard Space Flight Center, Planetary Spectrum Generator: Molecular (Rayleigh) and Aerosol (Mie) Scattering](https://psg.gsfc.nasa.gov/helpatm.php)
 - [UCAR Center for Science Education, The Appearance of the Sky](https://scied.ucar.edu/learning-zone/atmosphere/appearance-sky)
 - [New Mexico State University, Rayleigh Scattering: Optical Depth](https://atmos.nmsu.edu/education_and_outreach/encyclopedia/rayleigh_optical.htm)
 - [OpenStax University Physics Volume 3, 1.7 Polarization](https://openstax.org/books/university-physics-volume-3/pages/1-7-polarization)
+- C. F. Bohren and D. R. Huffman, *Absorption and Scattering of Light by Small Particles*, Wiley, 1983.
+- J. D. Jackson, *Classical Electrodynamics*, 3rd ed., Wiley, 1998.
