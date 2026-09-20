@@ -6,8 +6,8 @@
 - Topic 01〜21: 最終QA `PASS / completed`
 - 完成数: `21 / 22`
 - active topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- current status: `topic_22_explanation_pdf_complete / IN_PROGRESS`
-- 次工程: Topic 22 練習source
+- current status: `topic_22_practice_source_complete / IN_PROGRESS`
+- 次工程: Topic 22 練習プリントPDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -96,5 +96,18 @@
 - 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
 - 独立過去問再解答: `NOT_RUN`
 
+## Topic 22 練習source完了
+- 状態: `PASS / topic_22_practice_source_complete / IN_PROGRESS`
+- source: `topics/22_integrated_route_simulation/22_integrated_route_simulation_practice.md`
+- 一次試験型: `10 / 10` 五肢択一
+- 二次試験型: `5 / 5` 記述・途中式・単位・検算付き
+- 固定答案要素: `16 / 16 COVERED`
+- 主回路→誘導機→走行系→速度フィードバック統合: `COVERED`
+- 力行・回生の符号規約と消費電力・回生電力分離: `COVERED`
+- 未確認実車・実路線値の真値化: `0件 / PASS`
+- 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
+- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
+- 独立過去問再解答: `NOT_RUN`
+
 ## 次工程
-Topic 22 練習source。固定16答案要素と解説PDFの範囲だけで、一次・二次を含む練習問題sourceを作る。独立再解答は全成果物完成後に行う。
+Topic 22 練習プリントPDF。本sourceの15問だけを用い、問題・解答・完全解説をPDF化して表示・文字抽出・数値QAを行う。固定EXAM_ALIGNMENTは変更しない。独立再解答は全成果物完成後に行う。
