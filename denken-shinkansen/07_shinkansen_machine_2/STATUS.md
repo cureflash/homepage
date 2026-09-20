@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_powerpoint_complete / IN_PROGRESS`
+- current_status: `topic_21_blind_reanswer_ready / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 独立再解答前ゲート
+- next_start: Topic 21 完成後独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -242,6 +242,19 @@
 - 固定公式過去問個別正答保存: `0件 / PASS`
 - 判定: `PASS / topic_21_powerpoint_complete / IN_PROGRESS`
 
+## Topic 21 独立再解答前ゲート
+- `topics/21_readhesion_control/21_readhesion_control_blind_reanswer_gate.md`
+- 固定一次4問＋二次1問・14答案要素: `変更なし / PASS`
+- 固定公式過去問の公式正答・標準解答本文の事前保存: `0件 / PASS`
+- 固定公式過去問の完成済み個別解答・完成済み導出結果の事前保存: `0件 / PASS`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 練習PDF表示QA: `2 / 2 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- 一次練習正答一意性: `10 / 10 PASS`
+- 全15問独立再計算・論理確認: `15 / 15 PASS`
+- 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 判定: `BLIND_REANSWER_READY / topic_21_blind_reanswer_ready / IN_PROGRESS`
+
 ## Topic 21 成果物
 - `topics/21_readhesion_control/21_readhesion_control.md` — 制作前EXAM_ALIGNMENT＋解説source本文完了
 - `topics/21_readhesion_control/21_readhesion_control_explanation.pdf` — 解説PDF完了
@@ -251,9 +264,10 @@
 - `topics/21_readhesion_control/21_readhesion_control_practice_pdf_qa.md` — 練習PDF QA完了
 - `topics/21_readhesion_control/21_readhesion_control_images.pptx` — 解説画像PowerPoint完了
 - `topics/21_readhesion_control/21_readhesion_control_powerpoint_qa.md` — PowerPoint QA完了
+- `topics/21_readhesion_control/21_readhesion_control_blind_reanswer_gate.md` — 独立再解答前ゲート完了
 
 ## 今回進めた内容
-Topic 21の解説画像PowerPoint＋QAを完了した。16:9・4枚、1600×900レンダリング `4 / 4 PASS`、固定一次4問＋二次1問・14答案要素 `14 / 14 COVERED`。未確認実車仕様化、Topic 22先取り、SPEC外A-D変換器方式追加は行っていない。完成数は `20 / 22` のまま。
+Topic 21の独立再解答前ゲートを完了した。固定一次4問＋二次1問・14答案要素と完成済み教材を変更せず、公式正答・標準解答を開かない状態で正本同一性と成果物QAを再監査し、`BLIND_REANSWER_READY` を確定した。完成数は `20 / 22` のまま。
 
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の独立再解答前ゲート。
+Topic 21「空転した車輪を再粘着させる」の完成後独立再解答。
