@@ -8,7 +8,36 @@
 
 Topic 01〜31は最終QAまで `PASS / completed`。完成数 `31 / 39`。
 
-現在地は `topic_31_completed_topic_32_exam_alignment_pending`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QA、fresh clean blind＋公式照合まで完了。次はTopic 32 `照明設計` の制作前EXAM_ALIGNMENT。
+現在地は `topic_32_exam_alignment_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENTまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 mapped`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外とし、件数合わせ採用はしていない。次はTopic 32解説source。
+
+## Topic 32 EXAM_ALIGNMENT完了記録
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+canonical artifacts:
+- `topics/32_lighting_design/32_lighting_design.md`
+- `topics/32_lighting_design/32_lighting_design_exam_alignment_qa.md`
+
+固定5問:
+- R8 一次「機械」問7 `10 / 10 PASS`
+- R7 一次「機械」問7 `5 / 5 PASS`
+- R6 一次「機械」問6 `5 / 5 PASS`
+- R4 一次「機械」問5 `5 / 5 PASS`
+- R3 一次「機械」問6 `5 / 5 PASS`
+- 一次 `30 / 30 PASS`
+- 二次 `対象外（公式「機械・制御」試験範囲に照明なし）`
+- SPEC固定9項目 `9 / 9 mapped`
+- 参考教材比較 `e-sysnet + 電験王2`
+- 件数合わせ採用 `0件`
+- 未確認実車値の真値化 `0件`
+- exact blocker `0件`
+
+固定境界:
+- R7問7の色温度・ランプ寿命は固定過去問を解くための最小ブリッジとし、SPEC固定項目へ昇格させない。
+- R8問7の光束発散度・輝度は測光量の混同防止に必要な中間知識とし、独立テーマへ拡張しない。
+- R3問6の多重反射は全光束・光度・照度への複合接続に限定する。
+- `lm/W`のエネルギー消費効率と照明率`U`を混同しない。
+- 実車照明の方式・器具・灯数・定格・照度・消費電力・効率は一次資料確認なしに真値化しない。
 
 ## Topic 31 最終完了記録
 
@@ -242,8 +271,8 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 ## 次の安全な工程
 
 1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、既存の車両二種worker成果をreconcileする。
-2. Topic 32 `照明設計` について、電気技術者試験センターの二種公式過去問を直近年度から遡り、一次・二次を合わせ原則5問以上調査する。二次記述問題が確認できる場合は最低1問含める。
-3. 光束・光度・照度・配光・照明率・保守率・所要灯数・消費電力・効率の9項目へ、採用過去問の要求知識・式・設問型を1対1でマッピングしてEXAM_ALIGNMENTを固定する。
+2. Topic 32解説sourceを、固定5問・30答案要素とSPEC固定9項目へ1対1接続して作成する。
+3. `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` に従い、基礎・本試験標準・複合/ひっかけの最低3段階例題を入れ、式の意味・成立条件・単位・逆算・典型ミスまで説明する。
 4. 実車照明の方式・灯数・光束・照度・消費電力・効率等は一次資料で確認できた値だけを実値として扱い、未確認値は真値化しない。
 5. Topic 21のH26二次問1(4) `48.1 N・m / 48.0 N・m` は過去問固有丸め差として維持し、一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 6. 仕様不整合または確定不能事項が生じた場合は推測せずexact blockerを記録して停止する。
