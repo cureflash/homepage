@@ -8,7 +8,7 @@
 
 Topic 01〜36は最終QAまで `PASS / completed`。完成数 `36 / 39`。
 
-現在地は `topic_36_completed_topic_37_pre_exam_alignment`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 36は制作前EXAM_ALIGNMENT＋QA、解説source/PDF、練習source/PDF、解説画像PowerPoint＋QA、fresh clean blind独立再解答まで完了。固定5問・25答案要素 `25 / 25 PASS`、SPEC固定8項目 `8 / 8 connected`、二次は公式科目範囲外のため固定0問、candidate固定後修正0件、exact blocker `0件`。次工程は最新main・上位仕様・系列SPEC・`STATUS.md` / `HANDOFF.md`・既存worker成果をreconcileしたうえで、Topic 37の制作前EXAM_ALIGNMENTを開始する。
+現在地は `topic_37_exam_alignment_complete`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QAまで完了。固定5問・25答案要素は一次 `5 / 5`、二次 `20 / 20`、合計 `25 / 25 PASS`。SPEC固定8項目 `8 / 8 mapped`、系列SPEC固定計算・グラフ2項目 `2 / 2 mapped`、二次問題の件数合わせ0件、未確認実車ATC内部実装・数値の真値化0件、Topic 38先取り0件、exact blocker `0件`。次工程はTopic 37解説source＋source QA。
 
 ## Topic 34 完了記録
 
@@ -472,4 +472,37 @@ canonical:
 
 Topic 36は全工程を通過したため `PASS / COMPLETED`。完成数を `36 / 39` とする。
 
-次工程: Topic 37 `ATC③ 速度制御系` の制作前EXAM_ALIGNMENT。
+## Topic 37 進捗
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+canonical:
+- source: `topics/37_atc_speed_control_system/37_atc_speed_control_system.md`
+- source commit: `b7f947e0f5faeeccc161bef37c11f105ead8fd2d`
+- QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_exam_alignment_qa.md`
+- QA commit: `482dcfa917de54c13d1a5904be0eb7185a14a1a7`
+
+固定過去問:
+- R4一次「機械」問7
+- R7二次「機械・制御」問4
+- R6二次「機械・制御」問4
+- R4二次「機械・制御」問4
+- R3二次「機械・制御」問4
+
+品質ゲート:
+- 固定公式過去問: `5 / 5 PASS`
+- 一次: `1問 / 5答案要素`、`5 / 5 PASS`
+- 二次: `4問 / 20答案要素`、`20 / 20 PASS`
+- 合計: `25 / 25 PASS`
+- SPEC固定8項目: `8 / 8 mapped`
+- 系列SPEC固定計算・グラフ: `2 / 2 mapped`
+- 二次問題の件数合わせ採用: `0件`
+- JRTT一次資料へのATC一般原理接続: `PASS`
+- ATS-Dxを新幹線ATC実装として使用: `0件`
+- 未確認実車速度検出方式・制御周期・制御器構造/ゲイン・伝達関数・ブレーキ則・減速度・遅れ時間・フェイルセーフ実装の真値化: `0件`
+- Topic 38先取り: `0件`
+- exact blocker: `0件`
+
+Topic 37は制作前EXAM_ALIGNMENT＋QAのみ完了。完成数は `36 / 39` のまま。
+
+次工程: Topic 37解説source作成＋source QA。固定5問・25答案要素、SPEC固定8項目、計算・グラフ2項目、一次・二次の試験対応、鉄道一次資料の境界を変更しない。
