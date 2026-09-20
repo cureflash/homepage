@@ -8,7 +8,31 @@
 
 Topic 01〜31は最終QAまで `PASS / completed`。完成数 `31 / 39`。
 
-現在地は `topic_32_explanation_source_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。次は修正済みsourceから解説PDF生成＋PDF QA。
+現在地は `topic_32_explanation_pdf_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。次はTopic 32練習source。
+
+## Topic 32 解説PDF完了記録
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+canonical artifacts:
+- `topics/32_lighting_design/32_lighting_design_explanation.pdf`
+- `topics/32_lighting_design/32_lighting_design_explanation_pdf_qa.md`
+
+QA:
+- PDF blob `93cbe2042655e8c96b1b9af1de216ac94acc9644`
+- PDF QA blob `a80ae54a96920fb856f61e1337a16e689ae2c5fc`
+- A4縦 `7頁`
+- PDFium `7 / 7 PASS`
+- Poppler `7 / 7 PASS`
+- 固定5問・30答案要素 `30 / 30 PASS`
+- 一次 `30 / 30 PASS`
+- 二次 `対象外（公式「機械・制御」試験範囲に照明なし）`
+- SPEC固定9項目 `9 / 9 PASS`
+- 3段階例題 `3 / 3 PASS`
+- 未確認実車値の真値化 `0件`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
 
 ## Topic 32 解説source完了記録
 
