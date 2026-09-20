@@ -1,13 +1,14 @@
 {
   "title": "色彩検定×自然科学",
   "updated": "2026-09-20",
-  "targetArticles": 48,
+  "targetArticles": 66,
   "series": [
     {"id":"physics","order":1,"name":"物理","targetTopics":13,"description":"電磁波、光学、散乱、干渉、黒体放射、照明、混色"},
     {"id":"chemistry-geoscience","order":2,"name":"化学・地学","targetTopics":6,"description":"吸収、分子軌道、結晶場、顔料・染料、鉱物・宝石"},
     {"id":"biology","order":3,"name":"生物","targetTopics":9,"description":"網膜、オプシン、生化学、遺伝、進化、動植物の色"},
     {"id":"vision-psychology","order":4,"name":"色覚・心理","targetTopics":7,"description":"順応、反対色、対比、色恒常性、心理物理学"},
-    {"id":"colorimetry-design","order":5,"name":"測色・表色・配色","targetTopics":13,"description":"PCCS、マンセル、XYZ、L*a*b*、色差、測色、配色"}
+    {"id":"colorimetry-design","order":5,"name":"測色・表色・配色","targetTopics":13,"description":"PCCS、マンセル、XYZ、L*a*b*、色差、測色、配色"},
+    {"id":"digital-color","order":6,"name":"デジタル色彩・画像処理","targetTopics":18,"description":"RGB、画素、量子化、レイヤー合成、色調補正、トーンカーブ、画像処理、カラーマネジメント"}
   ],
   "topics": [
     {"id":"01_what_is_light_color","articleNo":1,"seriesId":"physics","title":"光とは何だろう――「色」の入口を電磁波と光子から考える","summary":"色彩検定3級の「光とは何だろう」を、Maxwell方程式、波長・振動数、光子エネルギー、強度、スペクトル、波動粒子二重性まで物理学から掘り下げる。","levels":["3級：光と色・光とは何だろう","大学：電磁気学・量子論"],"source":"articles/01_what_is_light_color.md"},
@@ -43,6 +44,7 @@
     {"id":"37_amethyst_color_center","articleNo":37,"seriesId":"chemistry-geoscience","title":"アメシストはなぜ紫なのか――鉄不純物・照射・色中心から発色を考える","summary":"SiO₂格子中のFe不純物と放射線誘起色中心から、約545 nmの選択吸収、欠陥準位、加熱による退色、地質学的履歴と色の関係まで理解する。","levels":["3級：光と色・光の性質と色・照明と色の見え方","2級：光の性質と色","大学：固体化学・鉱物学・分光学"],"source":"articles/37_amethyst_color_center.md"},
     {"id":"38_precious_opal_photonic_crystal","articleNo":38,"seriesId":"chemistry-geoscience","title":"オパールはなぜ虹色に見えるのか――シリカ球の周期構造とフォトニック結晶","summary":"含水シリカ球の規則配列を周期的な屈折率構造として捉え、Bragg–Snell則、(111)面間隔、実効屈折率、角度依存反射、秩序度からプレシャスオパールの遊色効果を理解する。","levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：鉱物学・波動光学・フォトニクス"],"source":"articles/38_precious_opal_photonic_crystal.md"},
     {"id":"39_memory_color_color_memory","articleNo":39,"seriesId":"vision-psychology","title":"バナナはなぜ「黄色く」見えやすいのか――記憶色と色記憶を認知科学から考える","summary":"記憶色と色記憶を区別し、熟知物体の無彩色設定、Bayes的事前分布、色記憶のバイアスと分散、色恒常性との関係から、過去の経験が現在の色知覚へ作用する仕組みを理解する。","levels":["1級：色彩心理・記憶色と色記憶・心理物理学的測定法","大学：認知科学・心理物理学・視覚科学・統計学"],"source":"articles/39_memory_color_color_memory.md"},
-    {"id":"40_color_categorical_perception","articleNo":40,"seriesId":"vision-psychology","title":"色は連続なのに、なぜ「赤」「橙」と境界ができるのか――色カテゴリー知覚を心理物理学から考える","summary":"連続的な色空間を離散カテゴリーへ写す過程を、ロジスティック心理測定、信号検出理論、測色距離の統制、言語相対性、fMRIによるカテゴリー表現まで心理物理学・認知科学・神経科学から理解する。","levels":["1級：色彩心理・心理物理学的測定法・色知覚の複雑性・記憶色と色記憶","大学：認知科学・心理物理学・神経科学・統計学"],"source":"articles/40_color_categorical_perception.md"}
+    {"id":"40_color_categorical_perception","articleNo":40,"seriesId":"vision-psychology","title":"色は連続なのに、なぜ「赤」「橙」と境界ができるのか――色カテゴリー知覚を心理物理学から考える","summary":"連続的な色空間を離散カテゴリーへ写す過程を、ロジスティック心理測定、信号検出理論、測色距離の統制、言語相対性、fMRIによるカテゴリー表現まで心理物理学・認知科学・神経科学から理解する。","levels":["1級：色彩心理・心理物理学的測定法・色知覚の複雑性・記憶色と色記憶","大学：認知科学・心理物理学・神経科学・統計学"],"source":"articles/40_color_categorical_perception.md"},
+    {"id":"49_rgb_pixels_quantization","articleNo":49,"seriesId":"digital-color","title":"デジタル画像の色は何でできているのか――RGB・画素・量子化","summary":"RGB画像を画素とチャンネルの配列として捉え、8 bitコード値、16進カラーコード、量子化誤差、ビット深度、バンディング、sRGBの非線形符号化までを画像工学から理解する。","levels":["3級：混色・加法混色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/49_rgb_pixels_quantization.md"}
   ]
 }
