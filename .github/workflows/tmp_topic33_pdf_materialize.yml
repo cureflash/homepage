@@ -18,7 +18,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE='denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance'
-          cat "$BASE"/.tmp_pdf_parts/part* | base64 -d > "$BASE/33_hvac_thermal_balance_explanation.pdf"
+          cat "$BASE/.tmp_pdf_parts/part00a" "$BASE/.tmp_pdf_parts/part00b" "$BASE/.tmp_pdf_parts/part1" "$BASE/.tmp_pdf_parts/part2" "$BASE/.tmp_pdf_parts/part3" "$BASE/.tmp_pdf_parts/part4" "$BASE/.tmp_pdf_parts/part5" "$BASE/.tmp_pdf_parts/part6" | base64 -d > "$BASE/33_hvac_thermal_balance_explanation.pdf"
           python - <<'PY'
           from pathlib import Path
           import hashlib
