@@ -6,9 +6,9 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜34は最終QAまで `PASS / completed`。完成数 `34 / 39`。
+Topic 01〜35は最終QAまで `PASS / completed`。完成数 `35 / 39`。
 
-現在地は `topic_35_powerpoint_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENT、解説source/PDF QA、練習source/PDF QA、解説画像PowerPoint＋render/content QAまで完了。次工程は固定EXAM_ALIGNMENT・全既存成果物を変更せず、answer-bearing資料を先に開かないfresh workerによるclean blind candidate固定＋独立再解答QA。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
+現在地は `topic_35_completed_ready_topic_36_exam_alignment`。active topicは `36 ATC② 信号伝送と周波数`。Topic 35は制作前EXAM_ALIGNMENT、解説source/PDF QA、練習source/PDF QA、解説画像PowerPoint＋render/content QA、clean blind独立再解答まで全工程完了。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileし、Topic 36の制作前EXAM_ALIGNMENTから開始する。一次・二次の適用範囲を公式試験資料と実問題で判定し、件数合わせ、未確認実車値の真値化、Topic 37・38先取りは行わない。
 
 ## Topic 34 完了記録
 
@@ -124,9 +124,9 @@ canonical:
 
 Topic 34は全工程を通過したため `PASS / COMPLETED`。完成数を `34 / 39` とする。
 
-## Topic 35 進捗
+## Topic 35 完了記録
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `PASS / COMPLETED`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -266,7 +266,44 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程: 固定EXAM_ALIGNMENT・解説source/PDF・練習source/PDF・PowerPointを変更せず、answer-bearing資料を先に開かないfresh workerによるclean blind candidate固定＋独立再解答QA。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
+### clean blind
+
+canonical:
+- candidate: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_clean_blind_candidate.md`
+- candidate blob SHA: `132183604321049b5072c68476b93c06dd69d50a`
+- candidate lock commit: `2bcf5961818074ad647004af19ce8d74b3021d07`
+- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_clean_blind_qa.md`
+- QA commit: `d401c3c67a7688bb3a6beeeb31a924959291b2cf`
+
+品質ゲート:
+- 固定公式過去問: `5 / 5 PASS`
+- 一次: `25 / 25 PASS`
+- 二次: `0問`（直接対応問題未確認、件数合わせなし）
+- 合計: `25 / 25 PASS`
+- candidate固定後修正: `0件`
+- 教材欠落による補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物再生成: `0件`
+- SPEC固定7項目: `7 / 7 connected`
+- exact blocker: `0件`
+
+Topic 35は全工程を通過したため `PASS / COMPLETED`。完成数を `35 / 39` とする。
+
+## Topic 36 開始位置
+
+判定: `NOT_STARTED / READY_EXAM_ALIGNMENT`
+
+SPEC固定項目:
+- 周波数
+- 信号伝送
+- 変調
+- フィルタ
+- ノイズ
+- S/N
+- デジタル判定
+- 冗長化
+
+次工程: 制作前EXAM_ALIGNMENT。公式過去問を先に調査・固定し、一次・二次の実問題対応を確認する。件数合わせやATC固有値の推測はしない。
 
 ## Topic 21 固定境界
 
