@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install PDF QA dependencies
+      - name: Build and validate canonical practice PDF
         shell: bash
         run: |
           set -euo pipefail
@@ -27,101 +27,81 @@ jobs:
             sudo apt-get install -y -qq poppler-utils
           fi
 
-      - name: Diagnose abandoned staging payload without guessing chunk order
-        shell: bash
-        run: |
-          set -euo pipefail
           BASE='denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance'
-          TMP="$BASE/.tmp_practice_pdf_parts"
-          python - <<'PY'
-          from pathlib import Path
-          import base64, hashlib
-          tmp=Path('denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance/.tmp_practice_pdf_parts')
-          p0=(tmp/'part0').read_text()
-          p1=(tmp/'part1').read_text()
-          p1a=(tmp/'part1a').read_text()
-          p2=(tmp/'part2').read_text()
-          assert p1.startswith(p1a), 'part1a is not an exact prefix of part1; staging state changed'
-          data=base64.b64decode(p0+p1+p2, validate=True)
-          assert len(data)==19106, len(data)
-          actual=hashlib.sha256(data).hexdigest()
-          expected='392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705'
-          assert actual != expected, 'old staging unexpectedly matches expected hash; stop and reconcile instead of regenerating'
-          print('old_staging_bytes', len(data))
-          print('old_staging_sha256', actual)
-          print('old_expected_sha256', expected)
-          print('part1a_exact_prefix_of_part1', len(p1a), 'of', len(p1))
-          PY
+          rm -rf /tmp/topic33_pdfium /tmp/topic33_poppler
+          mkdir -p /tmp/topic33_pdfium /tmp/topic33_poppler
 
-      - name: Build canonical practice PDF directly from canonical Markdown
-        shell: bash
-        run: |
-          set -euo pipefail
           python - <<'PY'
           from pathlib import Path
           from html import escape
-          import re
+          import base64, hashlib, re
           from reportlab.lib import colors
-          from reportlab.lib.enums import TA_LEFT, TA_CENTER
           from reportlab.lib.pagesizes import A4
-          from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+          from reportlab.lib.styles import ParagraphStyle
           from reportlab.lib.units import mm
           from reportlab.pdfbase import pdfmetrics
           from reportlab.pdfbase.cidfonts import UnicodeCIDFont
           from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, HRFlowable
 
           base=Path('denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance')
+          tmp=base/'.tmp_practice_pdf_parts'
+          p0=(tmp/'part0').read_text()
+          p1=(tmp/'part1').read_text()
+          p1a=(tmp/'part1a').read_text()
+          p2=(tmp/'part2').read_text()
+          assert p1.startswith(p1a), 'part1a is not an exact prefix of part1; staging changed'
+          old=base64.b64decode(p0+p1+p2, validate=True)
+          assert len(old)==19106, len(old)
+          old_sha=hashlib.sha256(old).hexdigest()
+          old_expected='392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705'
+          assert old_sha != old_expected, 'old staging unexpectedly matches prior expected hash'
+
           src=base/'33_hvac_thermal_balance_practice_source.md'
           out=base/'33_hvac_thermal_balance_practice.pdf'
           text=src.read_text(encoding='utf-8')
 
           pdfmetrics.registerFont(UnicodeCIDFont('HeiseiMin-W3'))
           pdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
-
           body=ParagraphStyle('Body', fontName='HeiseiMin-W3', fontSize=8.4, leading=11.0,
                               textColor=colors.black, spaceAfter=2.2*mm, wordWrap='CJK')
           small=ParagraphStyle('Small', parent=body, fontSize=7.4, leading=9.5, spaceAfter=1.2*mm)
-          h1=ParagraphStyle('H1', parent=body, fontName='HeiseiKakuGo-W5', fontSize=15.5, leading=19,
-                            spaceBefore=2*mm, spaceAfter=4*mm, keepWithNext=True)
-          h2=ParagraphStyle('H2', parent=body, fontName='HeiseiKakuGo-W5', fontSize=11.5, leading=14.5,
-                            spaceBefore=3*mm, spaceAfter=2.2*mm, keepWithNext=True)
-          h3=ParagraphStyle('H3', parent=body, fontName='HeiseiKakuGo-W5', fontSize=9.6, leading=12.5,
-                            spaceBefore=2*mm, spaceAfter=1.3*mm, keepWithNext=True)
+          h1=ParagraphStyle('H1', parent=body, fontName='HeiseiKakuGo-W5', fontSize=15.5,
+                            leading=19, spaceBefore=2*mm, spaceAfter=4*mm, keepWithNext=True)
+          h2=ParagraphStyle('H2', parent=body, fontName='HeiseiKakuGo-W5', fontSize=11.5,
+                            leading=14.5, spaceBefore=3*mm, spaceAfter=2.2*mm, keepWithNext=True)
+          h3=ParagraphStyle('H3', parent=body, fontName='HeiseiKakuGo-W5', fontSize=9.6,
+                            leading=12.5, spaceBefore=2*mm, spaceAfter=1.3*mm, keepWithNext=True)
 
-          def clean_inline(s):
-              s=s.replace('`','')
-              s=s.replace('**','')
-              return escape(s, quote=False)
+          def clean(s):
+              return escape(s.replace('`','').replace('**',''), quote=False)
 
           story=[]
           para=[]
           def flush():
-              nonlocal para
               if para:
                   s=' '.join(x.strip() for x in para if x.strip())
                   if s:
-                      story.append(Paragraph(clean_inline(s), body))
-                  para=[]
+                      story.append(Paragraph(clean(s), body))
+                  para.clear()
 
           for raw in text.splitlines():
               line=raw.rstrip()
               if not line.strip():
-                  flush()
-                  continue
+                  flush(); continue
               if line.strip()=='---':
                   flush(); story.append(Spacer(1,1.2*mm)); story.append(HRFlowable(width='100%', thickness=0.35, color=colors.grey)); story.append(Spacer(1,1.2*mm)); continue
               if line.startswith('# '):
-                  flush(); story.append(Paragraph(clean_inline(line[2:].strip()), h1)); continue
+                  flush(); story.append(Paragraph(clean(line[2:].strip()), h1)); continue
               if line.startswith('## '):
-                  flush(); story.append(Paragraph(clean_inline(line[3:].strip()), h2)); continue
+                  flush(); story.append(Paragraph(clean(line[3:].strip()), h2)); continue
               if line.startswith('### '):
-                  flush(); story.append(Paragraph(clean_inline(line[4:].strip()), h3)); continue
+                  flush(); story.append(Paragraph(clean(line[4:].strip()), h3)); continue
               if line.startswith('|'):
-                  flush(); story.append(Paragraph(clean_inline(line), small)); continue
+                  flush(); story.append(Paragraph(clean(line), small)); continue
               if line.startswith('- '):
-                  flush(); story.append(Paragraph('・'+clean_inline(line[2:].strip()), body)); continue
+                  flush(); story.append(Paragraph('・'+clean(line[2:].strip()), body)); continue
               if re.match(r'^\d+\.\s', line):
-                  flush(); story.append(Paragraph(clean_inline(line), body)); continue
+                  flush(); story.append(Paragraph(clean(line), body)); continue
               para.append(line)
           flush()
 
@@ -129,31 +109,24 @@ jobs:
               canvas.saveState()
               canvas.setFont('HeiseiKakuGo-W5', 6.8)
               canvas.drawString(14*mm, 8*mm, '電験×新幹線 / Topic 33 空調・電熱の熱収支 - 練習問題・完全解説')
-              canvas.drawRightString(A4[0]-14*mm, 8*mm, f'{doc.page}')
+              canvas.drawRightString(A4[0]-14*mm, 8*mm, str(doc.page))
               canvas.restoreState()
 
           doc=SimpleDocTemplate(str(out), pagesize=A4,
                                 leftMargin=14*mm, rightMargin=14*mm,
                                 topMargin=14*mm, bottomMargin=14*mm,
                                 title='Topic 33 空調・電熱の熱収支 - 練習問題・完全解説',
-                                author='denken-shinkansen',
-                                creator='ReportLab',
-                                pageCompression=1)
+                                author='denken-shinkansen', creator='ReportLab', pageCompression=1)
           doc.build(story, onFirstPage=footer, onLaterPages=footer)
+          print('old_staging_sha256', old_sha)
+          print('part1a_exact_prefix_of_part1', len(p1a), 'of', len(p1))
           print('generated', out, out.stat().st_size)
           PY
 
-      - name: Render and validate PDF in PDFium and Poppler
-        shell: bash
-        run: |
-          set -euo pipefail
-          BASE='denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance'
           PDF="$BASE/33_hvac_thermal_balance_practice.pdf"
-          QA="$BASE/33_hvac_thermal_balance_practice_pdf_qa.md"
-          rm -rf /tmp/topic33_pdfium /tmp/topic33_poppler
-          mkdir -p /tmp/topic33_pdfium /tmp/topic33_poppler
           pdftoppm -png -r 180 "$PDF" /tmp/topic33_poppler/page >/dev/null 2>&1
           pdftotext -layout "$PDF" /tmp/topic33_practice.txt
+
           python - <<'PY'
           from pathlib import Path
           from PIL import Image
@@ -164,38 +137,36 @@ jobs:
           pdf=base/'33_hvac_thermal_balance_practice.pdf'
           qa=base/'33_hvac_thermal_balance_practice_pdf_qa.md'
           source=base/'33_hvac_thermal_balance_practice_source.md'
+          part1=(base/'.tmp_practice_pdf_parts/part1').read_text()
+          part1a=(base/'.tmp_practice_pdf_parts/part1a').read_text()
 
           doc=pdfium.PdfDocument(str(pdf))
-          pdfium_dir=Path('/tmp/topic33_pdfium')
+          pdir=Path('/tmp/topic33_pdfium')
           for i in range(len(doc)):
-              page=doc[i]
-              bitmap=page.render(scale=180/72)
-              img=bitmap.to_pil()
-              img.save(pdfium_dir/f'page-{i+1:02d}.png')
-
+              img=doc[i].render(scale=180/72).to_pil()
+              img.save(pdir/f'page-{i+1:02d}.png')
           pop=sorted(Path('/tmp/topic33_poppler').glob('page-*.png'))
-          pdi=sorted(pdfium_dir.glob('page-*.png'))
-          assert len(pop)==len(pdi)==len(doc) and len(doc)>0, (len(pop),len(pdi),len(doc))
+          pdi=sorted(pdir.glob('page-*.png'))
+          assert len(pop)==len(pdi)==len(doc) and len(doc)>0
 
           def inspect(paths):
-              blank=0; edge=0
+              blank=edge=0
               for p in paths:
                   im=Image.open(p).convert('L')
-                  # content pixels darker than 248; generated margins are generous
                   mask=im.point(lambda v: 0 if v>=248 else 255)
                   bbox=mask.getbbox()
                   if bbox is None:
-                      blank += 1; continue
+                      blank += 1
+                      continue
                   l,t,r,b=bbox
                   if l<8 or t<8 or r>im.width-8 or b>im.height-8:
                       edge += 1
-              return blank, edge
-          blank_p, edge_p=inspect(pop)
-          blank_f, edge_f=inspect(pdi)
-          assert blank_p==blank_f==0, (blank_p,blank_f)
-          assert edge_p==edge_f==0, (edge_p,edge_f)
+              return blank,edge
+          assert inspect(pop)==(0,0), inspect(pop)
+          assert inspect(pdi)==(0,0), inspect(pdi)
 
-          txt=Path('/tmp/topic33_practice.txt').read_text(encoding='utf-8', errors='replace')
+          txtp=Path('/tmp/topic33_practice.txt')
+          txt=txtp.read_text(encoding='utf-8', errors='replace')
           assert '\ufffd' not in txt
           for n in range(1,11):
               assert f'問{n}' in txt, f'missing 問{n}'
@@ -204,68 +175,54 @@ jobs:
 
           sha256=hashlib.sha256(pdf.read_bytes()).hexdigest()
           blob_sha=subprocess.check_output(['git','hash-object',str(pdf)], text=True).strip()
-          size=pdf.stat().st_size
           source_blob=subprocess.check_output(['git','hash-object',str(source)], text=True).strip()
-          text_bytes=Path('/tmp/topic33_practice.txt').stat().st_size
-
-          old_expected='392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705'
-          part1=(base/'.tmp_practice_pdf_parts/part1').read_text()
-          part1a=(base/'.tmp_practice_pdf_parts/part1a').read_text()
+          size=pdf.stat().st_size
+          text_bytes=txtp.stat().st_size
           prefix='PASS' if part1.startswith(part1a) else 'FAIL'
+          old_expected='392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705'
 
-          qa.write_text(f'''# Topic 33 練習PDF QA
-
-更新日: 2026-09-20
-
-判定: `PASS / PRACTICE_PDF_COMPLETE`
-
-## reconcile / blocker解消
-
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md` / `HANDOFF.md`、固定EXAM_ALIGNMENT、解説source/PDF/QA、練習source/source QAをreconcileした。
-
-旧staging payloadは `part0 + part1 + part2` で19,106 bytesへ復号できる一方、宣言済みSHA-256 `{old_expected}` と一致しないためcanonical化しなかった。追加 `part1a` は `part1` の先頭2,123文字と完全一致（prefix check: `{prefix}`）しており、用途を推測してchunk順序を変更していない。
-
-blockerは、輸送用staging payloadを修復推測するのではなく、canonical練習sourceからPDFを再生成し、生成物そのものを二重rendererとtext QAで検証して新たなcanonical PDFとすることで解消した。固定EXAM_ALIGNMENT・問題内容・正答・一般式には変更を加えていない。
-
-## canonical PDF
-
-- path: `33_hvac_thermal_balance_practice.pdf`
-- canonical blob SHA: `{blob_sha}`
-- source blob SHA: `{source_blob}`
-- file size: `{size} bytes`
-- SHA-256: `{sha256}`
-- A4縦: `{len(doc)} pages`
-
-## render / text QA
-
-- PDFium render: `{len(pdi)} / {len(doc)} PASS`
-- Poppler render: `{len(pop)} / {len(doc)} PASS`
-- page-edge overflow: `0件`
-- blank page: `0件`
-- `pdftotext -layout`: `PASS ({text_bytes} bytes)`
-- 置換文字 `�`: `0件`
-- 問1〜問10: `10 / 10収録 PASS`
-- 正答・完全解説: `10 / 10収録 PASS`
-
-## 過去問対応品質ゲート
-
-- 固定5問・22答案要素: `22 / 22 connected`
-- 一次: `22 / 22 connected`
-- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
-- SPEC固定7項目: `7 / 7 covered`
-- 一次試験型: `10 / 10`（全問五肢択一）
-- 一次正答一意性: `10 / 10 PASS` を維持
-- source QA済み数値問題独立再計算: `6 / 6 PASS` を維持
-- source QA済み知識・識別問題: `4 / 4 PASS` を維持
-- COPと電熱器効率の混同: `0件`
-- J/W/kW・秒換算の不整合: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-本判定は練習PDF工程のPASSであり、Topic 33最終完了を意味しない。次工程はTopic 33 PowerPoint生成＋render QA。
-''', encoding='utf-8')
+          lines=[
+              '# Topic 33 練習PDF QA','',
+              '更新日: 2026-09-20','',
+              '判定: `PASS / PRACTICE_PDF_COMPLETE`','',
+              '## reconcile / blocker解消','',
+              '最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md` / `HANDOFF.md`、固定EXAM_ALIGNMENT、解説source/PDF/QA、練習source/source QAをreconcileした。','',
+              f'旧staging payloadは `part0 + part1 + part2` で19,106 bytesへ復号できる一方、宣言済みSHA-256 `{old_expected}` と一致しないためcanonical化しなかった。追加 `part1a` は `part1` の先頭2,123文字と完全一致（prefix check: `{prefix}`）しており、用途を推測してchunk順序を変更していない。','',
+              'blockerは、輸送用staging payloadを修復推測するのではなく、canonical練習sourceからPDFを再生成し、生成物そのものを二重rendererとtext QAで検証して新たなcanonical PDFとすることで解消した。固定EXAM_ALIGNMENT・問題内容・正答・一般式には変更を加えていない。','',
+              '## canonical PDF','',
+              '- path: `33_hvac_thermal_balance_practice.pdf`',
+              f'- canonical blob SHA: `{blob_sha}`',
+              f'- source blob SHA: `{source_blob}`',
+              f'- file size: `{size} bytes`',
+              f'- SHA-256: `{sha256}`',
+              f'- A4縦: `{len(doc)} pages`','',
+              '## render / text QA','',
+              f'- PDFium render: `{len(pdi)} / {len(doc)} PASS`',
+              f'- Poppler render: `{len(pop)} / {len(doc)} PASS`',
+              '- page-edge overflow: `0件`',
+              '- blank page: `0件`',
+              f'- `pdftotext -layout`: `PASS ({text_bytes} bytes)`',
+              '- 置換文字 `�`: `0件`',
+              '- 問1〜問10: `10 / 10収録 PASS`',
+              '- 正答・完全解説: `10 / 10収録 PASS`','',
+              '## 過去問対応品質ゲート','',
+              '- 固定5問・22答案要素: `22 / 22 connected`',
+              '- 一次: `22 / 22 connected`',
+              '- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`',
+              '- SPEC固定7項目: `7 / 7 covered`',
+              '- 一次試験型: `10 / 10`（全問五肢択一）',
+              '- 一次正答一意性: `10 / 10 PASS` を維持',
+              '- source QA済み数値問題独立再計算: `6 / 6 PASS` を維持',
+              '- source QA済み知識・識別問題: `4 / 4 PASS` を維持',
+              '- COPと電熱器効率の混同: `0件`',
+              '- J/W/kW・秒換算の不整合: `0件`',
+              '- 固定EXAM_ALIGNMENT変更: `0件`',
+              '- 未確認実車値の真値化: `0件`',
+              '- Topic 21一般式変更: `0件`',
+              '- exact blocker: `0件`','',
+              '本判定は練習PDF工程のPASSであり、Topic 33最終完了を意味しない。次工程はTopic 33 PowerPoint生成＋render QA。',''
+          ]
+          qa.write_text('\n'.join(lines), encoding='utf-8')
           print('pages', len(doc), 'sha256', sha256, 'blob', blob_sha)
           PY
 
@@ -276,10 +233,10 @@ blockerは、輸送用staging payloadを修復推測するのではなく、cano
           BASE='denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance'
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git rm -r "$BASE/.tmp_practice_pdf_parts"
-          git rm -f '.github/workflows/tmp_topic33_practice_pdf.yml'
-          git rm -f '.github/workflows/tmp_topic33_practice_pdf_regen.yml'
-          git add "$BASE/33_hvac_thermal_balance_practice.pdf" "$BASE/33_hvac_thermal_balance_practice_pdf_qa.md"
+          rm -rf "$BASE/.tmp_practice_pdf_parts"
+          rm -f '.github/workflows/tmp_topic33_practice_pdf.yml'
+          rm -f '.github/workflows/tmp_topic33_practice_pdf_regen.yml'
+          git add -A
           git commit -m 'Add Topic 33 practice PDF and QA'
           for i in 1 2 3 4; do
             if git pull --rebase origin main && git push origin HEAD:main; then
