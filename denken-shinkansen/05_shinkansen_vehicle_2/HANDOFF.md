@@ -8,7 +8,7 @@
 
 Topic 01〜28は最終QAまで `PASS / completed`。完成数は `28 / 39`。
 
-現在地は `topic_29_explanation_source_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
+現在地は `topic_29_explanation_pdf_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
 
 ## Topic 28 完了状態
 
@@ -51,9 +51,7 @@ clean blind v2:
 
 H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲートとして使用する。誘導機制御をTopic 29へ追加しない。
 
-## Topic 29 今回完了
-
-解説sourceとQAをGitHub正本へ固定した。
+## Topic 29 解説source
 
 - source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source.md`
 - QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source_qa.md`
@@ -69,6 +67,25 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 一次資料で確認した実車接続は、鉄道総研・JR東海が説明する超電導磁石、浮上・案内コイル、電磁誘導による浮上と中央復元まで。未確認の磁界、コイル電流、`R/L/M`、幾何寸法、浮上力、案内力、速度しきい値は真値化していない。
 
 教材用速度モデル `I_rms(v)` と `F_model(v)` は、指定可視化を説明するための仮定モデルとして明記済み。L0系実車の速度―力特性式として扱わない。
+
+## Topic 29 今回完了
+
+解説PDFとQAをGitHub正本へ反映する。
+
+- PDF: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation.pdf`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_pdf_qa.md`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- canonical blob SHA: `f656c1b95a542bf15bfc77ca2f799fda6886faa0`
+- A4縦4頁
+- PDFium / Poppler: `4 / 4 PASS`
+- `pdftotext -layout`: `PASS`
+- 固定5問・24答案要素: `24 / 24 covered`
+- 一次: `20 / 20 covered`
+- 二次: `4 / 4 covered`
+- SPEC必須8項目: `8 / 8 covered`
+- 指定3可視化: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
 
 ## Topic 29 固定SPEC境界
 
@@ -87,19 +104,18 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 2. 速度―誘導電流
 3. 速度―電磁力
 
-固定EXAM_ALIGNMENTは変更しない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。教材一式完成前にclean blind独立再解答へ進まない。
+固定EXAM_ALIGNMENTは変更しない。L0系実車の未確認の磁界・コイル電流・`R/L/M`・幾何寸法・浮上力・案内力・速度しきい値を真値化しない。教材用仮定値は実車一般式へ昇格させない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。教材一式完成前にclean blind独立再解答へ進まない。
 
 ## 次の安全な工程
 
-`29_l0_superconducting_magnetic_levitation_force_explanation_source.md` を正本として解説PDFを生成する。
+Topic 29練習sourceを作成する。
 
 QA項目:
-- A4縦、表示欠け・文字化けなし
-- 数式・単位・符号のsource一致
-- 固定5問・24答案要素への説明接続維持
+- 固定5問・24答案要素に対応する練習問題・解答・途中式を整備
+- 一次20 / 20、二次4 / 4の接続維持
 - SPEC必須8項目維持
-- 指定3可視化を教材用仮定値として表示
-- 未確認実車値の真値化0件
+- 解説source/PDFと数式・単位・符号を一致
+- L0系未確認実車値の真値化0件
 - Topic 30先取り0件
 
 ## Topic 21 H26二次 問1(4)
