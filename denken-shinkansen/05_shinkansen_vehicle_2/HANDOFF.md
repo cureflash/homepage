@@ -8,7 +8,7 @@
 
 Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
 
-現在地は `topic_33_explanation_source_complete`。active topicは `33 空調・電熱の熱収支`。
+現在地は `topic_33_explanation_pdf_complete`。active topicは `33 空調・電熱の熱収支`。
 
 ## Topic 32 完了記録
 
@@ -41,7 +41,7 @@ canonical:
 固定ゲート:
 - R8一次「機械」問6: `5 / 5 PASS`
 - R3一次「機械」問7: `5 / 5 PASS`
-- R1一次「機械」問7の(1)ヒートポンプ行: `2 / 2 PASS`
+- R1一次「機械」問7のヒートポンプ行: `2 / 2 PASS`
 - H30一次「機械」問4: `5 / 5 PASS`
 - H27一次「機械」問4: `5 / 5 PASS`
 - 一次合計: `22 / 22 PASS`
@@ -51,7 +51,7 @@ canonical:
 - 未確認実車値の真値化: `0件`
 - exact blocker: `0件`
 
-二次対象外は未調査ではない。電気技術者試験センター公式試験概要で一次「機械」に「電熱」が含まれる一方、二次「機械・制御」は「電気機器、パワーエレクトロニクス、自動制御及びメカトロニクス」であり、Topic 33の固定論点である電熱を含まないため、件数合わせ採用を行っていない。
+二次対象外は未調査ではない。公式試験概要で一次「機械」に「電熱」が含まれる一方、二次「機械・制御」は「電気機器、パワーエレクトロニクス、自動制御及びメカトロニクス」であり、本Topicの固定論点である電熱を含まないため、件数合わせ採用を行っていない。
 
 ## Topic 33 解説source 完了
 
@@ -74,6 +74,30 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+## Topic 33 解説PDF 完了
+
+canonical:
+- PDF: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation.pdf`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_pdf_qa.md`
+
+品質ゲート:
+- A4縦: `7頁`
+- PDFium render: `7 / 7 PASS`
+- Poppler render: `7 / 7 PASS`
+- 固定5問・22答案要素: `22 / 22 PASS`
+- SPEC固定7項目: `7 / 7 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 数式・単位: `PASS`
+- ページ端切れ・重大な重なり: `0件`
+- 文字化け・欠字: `0件`
+- 置換文字 U+FFFD: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+canonical化前の初回renderではCID font非対応の下付き数字・近似記号を検出し、`S1/F12/T1/T2` と `= 約` へ置換して両rendererで再検証した。これは表記修正のみで一般式・固定EXAM_ALIGNMENTを変更していない。
+
 系列SPEC固定項目:
 - 熱量
 - 熱収支
@@ -83,16 +107,16 @@ canonical:
 - 車内負荷
 - 効率
 
-## 次工程 — Topic 33 解説PDF
+## 次工程 — Topic 33 練習source
 
-fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、固定EXAM_ALIGNMENT、解説source/QAをreconcileしてから開始する。
+fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、固定EXAM_ALIGNMENT、解説source/PDF/QAをreconcileしてから開始する。
 
 品質ゲート:
-- 解説sourceを正本としてPDF化する。
-- 固定5問・22答案要素の説明を欠落させない。
-- SPEC固定7項目を欠落させない。
-- 3段階例題の式・数値・単位を維持する。
-- 数式崩れ、文字化け、置換文字、ページ端切れ、重なりをPDF QAする。
+- 固定5問・22答案要素とSPEC固定7項目へ接続する。
+- 一次試験型を中心に、基礎→標準→発展の順で構成する。
+- 二次は公式範囲外のため件数合わせで追加しない。
+- 数値問題は式・代入・単位・中間値・最終値・検算まで示す。
+- COPと効率、J/W/kW、秒換算、外気負荷/車内負荷の取り違えを演習へ含める。
 - 未確認の実車空調能力、COP、消費電力、換気量、熱貫流率、乗客発熱、機器発熱を追加しない。
 - 固定EXAM_ALIGNMENTは差し替えない。
 
