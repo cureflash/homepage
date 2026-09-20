@@ -8,7 +8,7 @@
 
 Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
 
-現在地は `topic_33_exam_alignment_complete`。active topicは `33 空調・電熱の熱収支`。
+現在地は `topic_33_explanation_source_complete`。active topicは `33 空調・電熱の熱収支`。
 
 ## Topic 32 完了記録
 
@@ -34,20 +34,9 @@ EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後cle
 
 ## Topic 33 制作前EXAM_ALIGNMENT 完了
 
-テーマ: `空調・電熱の熱収支`
-
 canonical:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
 - QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_exam_alignment_qa.md`
-
-系列SPEC固定項目:
-- 熱量
-- 熱収支
-- COP
-- 消費電力
-- 外気負荷
-- 車内負荷
-- 効率
 
 固定ゲート:
 - R8一次「機械」問6: `5 / 5 PASS`
@@ -58,25 +47,53 @@ canonical:
 - 一次合計: `22 / 22 PASS`
 - 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
 - SPEC固定7項目: `7 / 7 mapped`
-- 固定問題の件数合わせ採用: `0件`
-- 二次問題の件数合わせ採用: `0件`
+- 件数合わせ採用: `0件`
 - 未確認実車値の真値化: `0件`
 - exact blocker: `0件`
 
 二次対象外は未調査ではない。電気技術者試験センター公式試験概要で一次「機械」に「電熱」が含まれる一方、二次「機械・制御」は「電気機器、パワーエレクトロニクス、自動制御及びメカトロニクス」であり、Topic 33の固定論点である電熱を含まないため、件数合わせ採用を行っていない。
 
-## 次工程 — Topic 33 解説source
+## Topic 33 解説source 完了
 
-fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENTをreconcileしてから開始する。
+canonical:
+- source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_source.md`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_source_qa.md`
 
 品質ゲート:
-- 固定5問・22答案要素を変更しない。
-- SPEC固定7項目をすべて本文へ接続する。
-- 熱量、熱平衡、伝導・対流・放射、ヒートポンプ熱収支、COP、消費電力、外気負荷、車内負荷、効率の接続を明示する。
-- COPとエネルギー変換効率を混同しない。
-- 外気負荷・車内負荷に未確認の実車換気量、乗客発熱、機器発熱を置かない。
-- 実車の空調方式、冷媒、能力、消費電力、COP、熱負荷を一次資料なしに真値化しない。
-- 最低3段階例題を作る。
+- 固定5問・22答案要素: `22 / 22 connected`
+- SPEC固定7項目: `7 / 7 connected`
+- 3段階例題: `3 / 3 PASS`
+- 熱量・熱平衡・伝導・対流・放射: `PASS`
+- ヒートポンプ熱収支・COP・消費電力: `PASS`
+- 外気負荷・車内負荷: `PASS`
+- COPとエネルギー変換効率の区別: `PASS`
+- R1問7はヒートポンプ行のみ固定: `PASS`
+- H27問4のHFCを現行実車へ一般化しない: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+系列SPEC固定項目:
+- 熱量
+- 熱収支
+- COP
+- 消費電力
+- 外気負荷
+- 車内負荷
+- 効率
+
+## 次工程 — Topic 33 解説PDF
+
+fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、固定EXAM_ALIGNMENT、解説source/QAをreconcileしてから開始する。
+
+品質ゲート:
+- 解説sourceを正本としてPDF化する。
+- 固定5問・22答案要素の説明を欠落させない。
+- SPEC固定7項目を欠落させない。
+- 3段階例題の式・数値・単位を維持する。
+- 数式崩れ、文字化け、置換文字、ページ端切れ、重なりをPDF QAする。
+- 未確認の実車空調能力、COP、消費電力、換気量、熱貫流率、乗客発熱、機器発熱を追加しない。
 - 固定EXAM_ALIGNMENTは差し替えない。
 
 ## Topic 21 固定境界
