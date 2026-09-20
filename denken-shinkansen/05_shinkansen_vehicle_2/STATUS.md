@@ -6,12 +6,33 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `29 / 39`
-- current_status: `topic_30_exam_alignment_complete`
+- current_status: `topic_30_explanation_source_complete`
 - last_completed_topic: `29 L0系③ 超電導磁気浮上の電磁力`
 - active_topic: `30 L0系④ 誘導集電・非接触電力伝送`
-- next_start: Topic 30の解説sourceを作成し、固定5問・25答案要素、SPEC必須7項目、指定3可視化へ接続する
+- next_start: Topic 30の解説PDFをsourceから生成し、表示・数式・単位・可視化・過去問接続QAを行う
 
-Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENTまで完了し、教材制作前品質ゲートを通過した。
+Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了した。
+
+## Topic 30 解説source
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+成果物:
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_source.md`
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_source_qa.md`
+
+結果:
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC必須7項目: `7 / 7 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 数式・単位・数値例: `PASS`
+- 未確認L0系実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+教材用結合回路の可視化条件は仮定値として固定し、L0系実機値へ一般化しない。変圧器問題は結合回路・交流電力・損失・効率の二種水準の橋渡しとして扱い、L0系非接触給電を通常変圧器と同一構造・同一定数とは扱わない。
 
 ## Topic 30 制作前EXAM_ALIGNMENT
 
@@ -38,8 +59,6 @@ Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前
 正本:
 - `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer.md`
 - `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_exam_alignment_qa.md`
-
-変圧器問題は、結合回路・交流電力・損失・効率を二種水準で検証する橋渡しとして扱う。L0系非接触給電を通常変圧器と同一構造・同一定数とは扱わない。
 
 ## Topic 30 系列SPEC固定範囲
 
