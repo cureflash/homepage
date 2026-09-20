@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_practice_source_complete / IN_PROGRESS`
+- current_status: `topic_21_practice_pdf_complete / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 練習PDF
+- next_start: Topic 21 解説画像PowerPoint source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -215,14 +215,31 @@
 - 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 - 判定: `PASS / topic_21_practice_source_complete`
 
+## Topic 21 練習PDF品質ゲート
+- canonical練習source blob: `c9a87ccf46b7f8caa91c064af1fc56149d05e3d1`
+- A4縦2ページ・2段組: `PASS`
+- 200 dpi表示: `2 / 2 PASS`
+- `pdftocairo` 160 dpi表示: `2 / 2 PASS`
+- 文字切れ・重なり・ページ外はみ出し・欠落グリフ: `0件 / PASS`
+- `pdftotext` 抽出、replacement char、`(cid:)`: `PASS / 0 / 0`
+- 一次10問＋二次5問: `15 / 15 INCLUDED`
+- 一次正答一意性: `10 / 10 PASS`
+- 全15問独立再計算・論理確認: `15 / 15 PASS`
+- 固定一次4問＋二次1問・14答案要素: `14 / 14 COVERED`
+- 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 固定公式過去問個別正答保存: `0件 / PASS`
+- 判定: `PASS / topic_21_practice_pdf_complete`
+
 ## Topic 21 成果物
 - `topics/21_readhesion_control/21_readhesion_control.md` — 制作前EXAM_ALIGNMENT＋解説source本文完了
 - `topics/21_readhesion_control/21_readhesion_control_explanation.pdf` — 解説PDF完了
 - `topics/21_readhesion_control/21_readhesion_control_explanation_pdf_qa.md` — 解説PDF QA完了
 - `topics/21_readhesion_control/21_readhesion_control_practice.md` — 練習source完了
+- `topics/21_readhesion_control/21_readhesion_control_practice.pdf` — 練習PDF完了
+- `topics/21_readhesion_control/21_readhesion_control_practice_pdf_qa.md` — 練習PDF QA完了
 
 ## 今回進めた内容
-Topic 21の練習sourceを完了した。一次10問＋二次5問を作成し、一次正答一意性 `10 / 10 PASS`、全15問独立再計算・論理確認 `15 / 15 PASS`、固定一次4問＋二次1問・14答案要素 `14 / 14 COVERED`。未確認実車仕様化、Topic 22先取り、SPEC外A-D変換器方式追加は行っていない。
+Topic 21の練習PDF＋QAを完了した。A4縦2ページ・2段組、200 dpi表示 `2 / 2 PASS`、`pdftocairo` 160 dpi表示 `2 / 2 PASS`、文字抽出異常0件。一次10問＋二次5問、固定一次4問＋二次1問・14答案要素 `14 / 14 COVERED`。未確認実車仕様化、Topic 22先取り、SPEC外A-D変換器方式追加は行っていない。
 
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の練習PDF。
+Topic 21「空転した車輪を再粘着させる」の解説画像PowerPoint source。
