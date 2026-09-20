@@ -80,10 +80,10 @@ jobs:
           assert abs(Erms-26.65729762895)<1e-9
           def I(v): return (4*0.08*v/math.sqrt(2))/math.sqrt(0.6**2+(4*0.02*v)**2)
           vals={10:I(10),30:I(30),60:I(60)}
-          assert abs(vals[10]-2.2627417)<1e-5
-          assert abs(vals[30]-2.744432)<1e-5
-          assert abs(vals[60]-2.806379)<1e-5
-          assert abs(40*vals[30]-109.7773)<0.01
+          assert abs(vals[10]-2.2627416998)<1e-9
+          assert abs(vals[30]-2.7439773623)<1e-9
+          assert abs(vals[60]-2.8065856618)<1e-9
+          assert abs(40*vals[30]-109.7590944912)<1e-8
           print('numeric QA PASS')
           PY
 
