@@ -18,7 +18,7 @@
 ## artifact identity
 
 - path: `28_l0_synchronous_machine_phasor_propulsion_explanation.pdf`
-- canonical blob SHA: `76972b166fbe6241349ba1b31f21367e5a1f298e`
+- canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
 - file size: `11,959 bytes`
 - SHA-256: `a6cd9a0b51e3dfc49f8773e4f56fa4779f673b9b2e09525e81662acf2bbb676a`
 - A4縦: `3 pages`
