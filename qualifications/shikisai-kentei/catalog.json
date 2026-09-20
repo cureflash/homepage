@@ -56,6 +56,15 @@
       "source":"articles/19_complementary_afterimage.md"
     },
     {
+      "id":"20_simultaneous_color_contrast",
+      "articleNo":20,
+      "seriesId":"vision-psychology",
+      "title":"同じ灰色なのに色が違って見えるのはなぜか――同時色対比を神経回路から考える",
+      "summary":"色彩検定3級の「色の対比」を、L・M・S錐体、反対色処理、中心―周辺型受容野、側抑制、V1のdouble-opponent細胞、色誘導の心理物理学まで掘り下げる。",
+      "levels":["3級：色彩心理・色の対比","大学：神経科学・心理物理学"],
+      "source":"articles/20_simultaneous_color_contrast.md"
+    },
+    {
       "id":"25_cie_xyz_tristimulus",
       "articleNo":25,
       "seriesId":"colorimetry-design",
