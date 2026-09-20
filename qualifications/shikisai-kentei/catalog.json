@@ -20,6 +20,15 @@
       "source":"articles/01_what_is_light_color.md"
     },
     {
+      "id":"02_reflection_absorption_transmission",
+      "articleNo":2,
+      "seriesId":"physics",
+      "title":"物体の色はどう決まるのか――反射・吸収・透過を物理で考える",
+      "summary":"反射率・透過率・吸収率のエネルギー保存から、Fresnel反射、複素屈折率、吸収係数、散乱までを使って物体色の物理を理解する。",
+      "levels":["3級：光と色・光の性質と色","大学：電磁気学・光学"],
+      "source":"articles/02_reflection_absorption_transmission.md"
+    },
+    {
       "id":"04_transparent_color_beer_lambert",
       "articleNo":4,
       "seriesId":"chemistry-geoscience",
