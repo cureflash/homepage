@@ -6,12 +6,37 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `29 / 39`
-- current_status: `topic_30_explanation_pdf_complete`
+- current_status: `topic_30_practice_source_complete`
 - last_completed_topic: `29 L0系③ 超電導磁気浮上の電磁力`
 - active_topic: `30 L0系④ 誘導集電・非接触電力伝送`
-- next_start: Topic 30練習sourceを作成し、固定5問25答案要素・一次20/20・二次5/5・SPEC必須7項目への接続をQAする
+- next_start: Topic 30練習PDFを生成し、一次8問・二次4問・固定25答案要素・SPEC必須7項目・指定3可視化への接続をPDF QAする
 
-Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了した。
+Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで完了した。
+
+## Topic 30 練習source
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
+成果物:
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_source.md`
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_source_qa.md`
+
+結果:
+- 一次試験型: `8 / 8 PASS`（全問五肢択一）
+- 二次試験型: `4 / 4 PASS`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- 一次固定答案要素: `20 / 20 connected`
+- 二次固定答案要素: `5 / 5 connected`
+- SPEC必須7項目: `7 / 7 covered`
+- 指定3可視化: `3 / 3 aligned`
+- 未確認L0系実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外主題追加: `0件`
+- exact blocker: `0件`
+
+練習問題の `k`,`L`,`M`,`R`,`C`,`f`,伝送電力、効率は一般問題または教材用仮定値であり、L0系実車値ではない。直列補償回路もL0系実機構成として扱わない。
 
 ## Topic 30 解説PDF
 
@@ -36,7 +61,7 @@ Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-これは解説PDF工程の接続QAであり、Topic 30最終clean blind PASSを意味しない。次工程は練習source作成＋QA。
+これは解説PDF工程の接続QAであり、Topic 30最終clean blind PASSを意味しない。
 
 ## Topic 30 解説source
 
