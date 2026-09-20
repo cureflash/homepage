@@ -27,6 +27,15 @@
       "summary":"色彩検定3級の補色残像を、L・M・S錐体の順応、cone-opponent処理、網膜神経節細胞の減算的順応とリバウンド、皮質の寄与まで分けて理解する。",
       "levels":["3級：色彩心理・補色残像","大学：神経科学・心理物理学"],
       "source":"articles/19_complementary_afterimage.md"
+    },
+    {
+      "id":"25_cie_xyz_tristimulus",
+      "articleNo":25,
+      "seriesId":"colorimetry-design",
+      "title":"XYZ表色系はなぜ作られたのか――色を3つの数値にする",
+      "summary":"色合わせ実験から三刺激値を導き、RGBの負値、XYZへの基底変換、分光積分、標準観察者、メタメリズムまでを線形代数と測色学で理解する。",
+      "levels":["1級：XYZ表色系","大学：色彩科学・線形代数"],
+      "source":"articles/25_cie_xyz_tristimulus.md"
     }
   ]
 }
