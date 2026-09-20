@@ -6,8 +6,8 @@
 - Topic 01〜20: 最終QA `PASS / completed`
 - 完成数: `20 / 22`
 - active topic: `21 空転した車輪を再粘着させる`
-- current status: `topic_21_final_qa_needs_revision / IN_PROGRESS`
-- 次工程: Topic 21 進捗・メタデータ同期（main source / 練習source）
+- current status: `topic_21_metadata_sync_complete / IN_PROGRESS`
+- 次工程: Topic 21 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -113,6 +113,7 @@ Topic 20成果物QA:
 - 公開値の現行新幹線一般化: `0件 / PASS`
 - 固定過去問個別正答保存: `0件 / PASS`
 - Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 進捗メタデータ: 独立再解答 `14 / 14 PASS`、次工程 `最終QA再実施` へ同期済み
 
 ## Topic 21 解説PDF
 - `topics/21_readhesion_control/21_readhesion_control_explanation.pdf`
@@ -141,6 +142,7 @@ Topic 20成果物QA:
 - 閉ループ伝達関数、インパルス応答、単位ステップ応答、指定時刻評価: `PASS`
 - 固定過去問個別正答保存: `0件 / PASS`
 - 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 進捗メタデータ: 次工程 `最終QA再実施` へ同期済み
 
 ## Topic 21 練習PDF
 - `topics/21_readhesion_control/21_readhesion_control_practice.pdf`
@@ -202,10 +204,11 @@ Topic 20成果物QA:
 - 成果物ゲート: `PASS`
 - 独立再解答ゲート: `PASS / 14 / 14`
 - 独立再解答記録QA: `8 / 8 PASS`
-- 進捗・正本整合ゲート: `NEEDS_REVISION`
-- 未同期: `21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件
-- 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの修正必要: `0件`
-- 状態: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
+- 前回の進捗・正本整合ゲート: `NEEDS_REVISION`
+- 前回未同期: `21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件
+- 現在: 2件とも同期済み / 最終QA再判定待ち
+- 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの修正: `0件`
+- 前回状態: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
 
 ## 次工程
-`21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件を現行状態へ同期する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更しない。
+Topic 21の最終QAを再実施する。
