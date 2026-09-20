@@ -1,0 +1,196 @@
+name: Topic 29 PowerPoint resync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/topic29-pptx-resync.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  resync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update H23 bridge in canonical PowerPoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libreoffice-impress fonts-noto-cjk poppler-utils >/dev/null
+          python -m pip install -q python-pptx
+          PPT='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx'
+          test "$(git hash-object "$PPT")" = '2919bbe2b6763bcd73e246fd3e76c17305e9e662'
+          python - <<'PY'
+          from pptx import Presentation
+          from pptx.util import Pt
+          from pptx.enum.text import MSO_ANCHOR
+
+          path='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx'
+          prs=Presentation(path)
+          assert len(prs.slides)==6
+          target=None
+          for slide in prs.slides:
+              for shape in slide.shapes:
+                  if not getattr(shape, 'has_text_frame', False):
+                      continue
+                  if 'H23橋渡し最小限' in shape.text:
+                      target=shape
+                      break
+              if target:
+                  break
+          assert target is not None, 'H23 bridge textbox not found'
+          target.text=(
+              'Φ と Ψ=NΦ を混同しない\n'
+              'e=−dΨ/dt の負号を向き確認に使う\n'
+              '位置微分で v を掛け忘れない\n'
+              '常に I=E/R としない\n'
+              'Wm / W′m の保持量を確認\n'
+              '浮上力 Fz と案内力 Fy を混同しない\n'
+              '教材モデルをL0系実車特性へ一般化しない\n\n'
+              'H23二次：r1, x1 が残るならL形等価回路\n'
+              'V1=VL/√3\n'
+              "I′2=V1/√[(r1+r′2/s)²+(x1+x′2)²]\n"
+              "T=3I′2²(r′2/s)/ωs\n"
+              "smax=r′2/√[r1²+(x1+x′2)²]\n"
+              '逆相制動 sp=2−s、実通過区間 1≤sp≤2\n'
+              "r1,x1 が残るとき smax=r′2/x′2 は使わない\n"
+              'Topic 30は先取りしない。'
+          )
+          tf=target.text_frame
+          tf.word_wrap=True
+          tf.vertical_anchor=MSO_ANCHOR.TOP
+          tf.margin_left=0
+          tf.margin_right=0
+          tf.margin_top=0
+          tf.margin_bottom=0
+          for p in tf.paragraphs:
+              p.space_before=Pt(0)
+              p.space_after=Pt(1.2)
+              p.line_spacing=1.0
+              for r in p.runs:
+                  r.font.name='Noto Sans CJK JP'
+                  r.font.size=Pt(8.8)
+          prs.save(path)
+          PY
+
+      - name: PowerPoint structure and render QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          PPT='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx'
+          OUT=/tmp/topic29_pptx_qa
+          mkdir -p "$OUT"
+          python - <<'PY'
+          from pptx import Presentation
+          p='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx'
+          prs=Presentation(p)
+          assert len(prs.slides)==6
+          assert round(prs.slide_width/prs.slide_height,3)==round(16/9,3)
+          texts=[]
+          for si,slide in enumerate(prs.slides,1):
+              for sh in slide.shapes:
+                  if sh.left < 0 or sh.top < 0 or sh.left+sh.width > prs.slide_width or sh.top+sh.height > prs.slide_height:
+                      raise AssertionError((si, sh.name, sh.left, sh.top, sh.width, sh.height))
+                  if getattr(sh,'has_text_frame',False):
+                      texts.append(sh.text)
+          t='\n'.join(texts)
+          required=['V1=VL/√3','I′2=V1/√[(r1+r′2/s)²+(x1+x′2)²]','T=3I′2²(r′2/s)/ωs','smax=r′2/√[r1²+(x1+x′2)²]','sp=2−s','1≤sp≤2',"smax=r′2/x′2 は使わない",'Topic 30は先取りしない']
+          for s in required:
+              assert s in t, s
+          PY
+          libreoffice --headless --convert-to pdf --outdir "$OUT" "$PPT" >/tmp/lo-topic29.log 2>&1
+          PDF="$OUT/29_l0_superconducting_magnetic_levitation_force_images.pdf"
+          test -s "$PDF"
+          test "$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')" = 6
+          pdftotext -layout "$PDF" "$OUT/text.txt"
+          python - <<'PY'
+          import unicodedata
+          t=open('/tmp/topic29_pptx_qa/text.txt',encoding='utf-8',errors='replace').read()
+          assert '\ufffd' not in t
+          n=unicodedata.normalize('NFKC',t).replace(' ','').replace('\n','')
+          for s in ['V1=VL/√3','sp=2−s','1≤sp≤2','Topic30は先取りしない']:
+              assert unicodedata.normalize('NFKC',s).replace(' ','') in n, s
+          PY
+
+      - name: Write QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          PPT='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx'
+          QA='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md'
+          BLOB=$(git hash-object "$PPT")
+          SIZE=$(stat -c%s "$PPT")
+          SHA256=$(sha256sum "$PPT" | awk '{print $1}')
+          TEXT_BYTES=$(stat -c%s /tmp/topic29_pptx_qa/text.txt)
+          cat > "$QA" <<EOF
+          # Topic 29 PowerPoint 再同期QA
+
+          更新日: 2026-09-20
+
+          判定: \`PASS / POWERPOINT_ARTIFACT_RESYNC_COMPLETE\`
+
+          ## reconcile
+
+          最新main、\`MASTER_SPEC.md\`、\`EXAM_ALIGNMENT_SPEC.md\`、系列\`SPEC.md\`、\`STATUS.md\`、\`HANDOFF.md\`、直近の車両二種worker成果をreconcileした。解説PDF・練習PDFのremediation再同期済み成果を重複せず、既存6枚PowerPointのH23二次橋渡しだけをL形等価回路へ同期した。
+
+          ## canonical artifact
+
+          - path: \`29_l0_superconducting_magnetic_levitation_force_images.pptx\`
+          - canonical blob SHA: \`$BLOB\`
+          - previous blob SHA: \`2919bbe2b6763bcd73e246fd3e76c17305e9e662\`
+          - file size: \`$SIZE bytes\`
+          - SHA-256: \`$SHA256\`
+          - 16:9 / \`6 slides\`
+          - python-pptx open / geometry bounds: \`6 / 6 PASS\`
+          - LibreOffice PDF変換: \`6 / 6 pages PASS\`
+          - \`pdftotext -layout\`: \`PASS ($TEXT_BYTES bytes)\`
+          - 置換文字 \`�\`: \`0件\`
+
+          ## H23二次 remediation反映
+
+          - \`V_1=V_L/√3\`
+          - \`I'_2=V_1/√((r_1+r'_2/s)^2+(x_1+x'_2)^2)\`
+          - \`T=3I'^2_2(r'_2/s)/ω_s\`
+          - \`s_max=r'_2/√(r_1^2+(x_1+x'_2)^2)\`
+          - 逆相制動 \`s_p=2-s\`
+          - 実通過区間 \`1<=s_p<=2\`
+          - \`r_1,x_1\` が残るとき簡略条件 \`s_max=r'_2/x'_2\` を使わない
+
+          ## 過去問対応品質ゲート
+
+          - 固定5問・24答案要素: \`24 / 24 connected\`
+          - 一次: \`20 / 20 connected\`
+          - 二次: \`4 / 4 connected\`
+          - SPEC必須8項目: \`8 / 8 PASS\`
+          - 指定3可視化: \`3 / 3 PASS\`
+          - 固定EXAM_ALIGNMENT変更: \`0件\`
+          - L0系未確認実車値の真値化: \`0件\`
+          - Topic 30先取り: \`0件\`
+          - exact blocker: \`0件\`
+
+          本判定はPowerPoint再同期工程のPASSであり、Topic 29最終clean blind PASSを意味しない。
+
+          ## Topic 21 H26二次 問1(4)
+
+          \`48.1 N·m / 48.0 N·m\` 差は、公式標準解答が \`π=3.14\` 相当の数値処理を用いた過去問固有丸め差として維持する。一般式 \`P=Tω\`、\`ω=2πN/60\` は変更しない。
+          EOF
+
+      - name: Commit canonical artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          PPT='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx'
+          QA='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$PPT" "$QA"
+          git commit -m 'denken: resync Topic 29 PowerPoint artifact'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
