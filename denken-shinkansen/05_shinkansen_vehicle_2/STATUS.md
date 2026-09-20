@@ -6,12 +6,37 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `30 / 39`
-- current_status: `topic_31_pending_exam_alignment`
+- current_status: `topic_31_exam_alignment_complete`
 - last_completed_topic: `30 L0系④ 誘導集電・非接触電力伝送`
 - active_topic: `31 補助電源変換器`
-- next_start: 最新main・系列正本・直近worker成果をreconcileし、Topic 31の制作前EXAM_ALIGNMENTを公式過去問から固定する
+- next_start: Topic 31解説sourceを作成し、固定5問・27答案要素とSPEC 8項目を本文へ1対1で接続する
 
-Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。
+Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENTまで完了。
+
+## Topic 31 EXAM_ALIGNMENT
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter.md`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_exam_alignment_qa.md`
+
+固定過去問:
+- R7 一次「機械」問4: `5 / 5 PASS`
+- R5 二次「機械・制御」問3: `7 / 7 PASS`
+- R4 一次「機械」問4: `5 / 5 PASS`
+- R2 二次「機械・制御」問2: `5 / 5 PASS`
+- H22 一次「機械」問3: `5 / 5 PASS`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- 合計: `27 / 27 PASS`
+- SPEC固定8項目: `8 / 8 mapped`
+- 二次記述・計算問題: `2問`
+- 未確認実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT仕様不整合: `0件`
+- exact blocker: `0件`
+
+R2二次問2は「固定損＋負荷依存損失→効率・負荷変動」の一般モデルへだけ接続し、変圧器固有の最大効率条件を補助電源変換器の普遍則へ一般化しない。H22一次問3の太陽光・MPPT固有事項、R5二次問3の能動フィルタ実装事実も実車補助電源へ持ち込まない。
 
 ## Topic 30 最終結果
 
@@ -53,12 +78,9 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 
 ## Topic 31 系列SPEC固定範囲
 
-### 主題
-
 `31 補助電源変換器`
 
-### 扱う内容
-
+扱う内容:
 - インバータ
 - コンバータ
 - 三相負荷
@@ -67,8 +89,6 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 - 変換損失
 - 効率
 - 負荷変動
-
-制作前に `MASTER_SPEC.md` と `EXAM_ALIGNMENT_SPEC.md` に従って、二種一次・二次を合わせ原則5問以上の公式過去問を調査し、必要論点・式・設問型を固定する。二次対象論点で該当記述問題が確認できる場合は最低1問を含める。固定前に教材制作へ進まない。
 
 実車・設備仕様は一次資料で確認できたものだけを実値として扱い、未確認値を推測で確定しない。
 
