@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `21 / 22`
-- current_status: `topic_22_independent_reanswer_pass / IN_PROGRESS`
+- current_status: `topic_22_final_qa_needs_revision / IN_PROGRESS`
 - last_completed_topic: `21 空転した車輪を再粘着させる`
 - active_topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- next_start: Topic 22 最終QA
+- next_start: Topic 22 進捗メタデータ同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -190,10 +190,19 @@
 - 系列SPEC外仕様追加: `0件`
 - 記録QA: `8 / 8 PASS`
 
+## Topic 22 最終QA
+- 状態: `NEEDS_REVISION / topic_22_final_qa_needs_revision / IN_PROGRESS`
+- 記録: `topics/22_integrated_route_simulation/22_integrated_route_simulation_final_qa.md`
+- 技術・試験対応品質ゲート: `PASS`
+- 成果物ゲート: `PASS`
+- 独立再解答ゲート: `PASS`
+- 進捗・正本整合ゲート: `FAIL / 2ファイル未同期`
+- 未同期: `22_integrated_route_simulation.md`、`22_integrated_route_simulation_practice.md`
+
 ## 今回進めた内容
-Topic 22の固定一次4問＋二次2問、計6問・16答案要素を完成教材だけで独立再解答し、その後に公式正答・標準解答と照合した。`16 / 16 PASS`、照合後訂正0件、教材外知識補完0件。固定EXAM_ALIGNMENT、教材本文、PDF/PPTX、シミュレーション仕様は変更していない。
+Topic 22の最終QAを実施した。固定一次4問＋二次2問・16答案要素、全成果物、シミュレーションQA、PDF/PPTX QA、独立再解答はすべてPASS。canonical source 2ファイルに古い進捗メタデータが残っているため、進捗・正本整合ゲートのみ `NEEDS_REVISION` とした。技術本文、固定EXAM_ALIGNMENT、PDF/PPTX、計算プログラム・CSV・グラフは変更していない。
 
 完成数は `21 / 22` のまま。
 
 ## 次工程
-Topic 22 最終QA。全成果物、固定EXAM_ALIGNMENT、独立再解答記録の整合を確認し、品質ゲートを満たした場合のみ `completed` とする。
+`22_integrated_route_simulation.md` と `22_integrated_route_simulation_practice.md` の進捗メタデータを現行状態へ同期する。
