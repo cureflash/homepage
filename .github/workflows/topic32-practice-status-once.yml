@@ -1,0 +1,90 @@
+name: Topic 32 practice source status one-shot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/topic32-practice-status-once.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vehicle2-topic32-practice-status
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Reconcile and sync canonical status
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'vehicle2-worker-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git fetch origin main
+          git reset --hard origin/main
+
+          BASE='denken-shinkansen/05_shinkansen_vehicle_2'
+          SRC="$BASE/topics/32_lighting_design/32_lighting_design_practice_source.md"
+          QA="$BASE/topics/32_lighting_design/32_lighting_design_practice_source_qa.md"
+          STATUS="$BASE/STATUS.md"
+          HANDOFF="$BASE/HANDOFF.md"
+          WF='.github/workflows/topic32-practice-status-once.yml'
+
+          test "$(git hash-object "$SRC")" = 'ad3f1fabdb4e54da9196f0c8ff717c6c055b4c8f' || { echo 'exact blocker: Topic 32 practice source changed'; exit 1; }
+          test "$(git hash-object "$QA")" = '80f3f0cb5fede9d25bcc3ef5a5ddfa2d0946c852' || { echo 'exact blocker: Topic 32 practice QA changed'; exit 1; }
+
+          python - <<'PY'
+          from pathlib import Path
+          base=Path('denken-shinkansen/05_shinkansen_vehicle_2')
+          status=base/'STATUS.md'
+          handoff=base/'HANDOFF.md'
+
+          s=status.read_text(encoding='utf-8')
+          if 'current_status: `topic_32_practice_source_complete`' not in s:
+              if 'current_status: `topic_32_explanation_pdf_complete`' not in s:
+                  raise SystemExit('exact blocker: STATUS current_status is neither expected explanation PDF state nor reconciled practice-source state')
+              s=s.replace('- current_status: `topic_32_explanation_pdf_complete`','- current_status: `topic_32_practice_source_complete`',1)
+              old='- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32練習sourceを固定5問・30答案要素とSPEC固定9項目へ接続して作成する'
+              new='- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32練習sourceから練習PDFを生成してPDF QAする'
+              if old not in s:
+                  raise SystemExit('exact blocker: STATUS next_start changed unexpectedly')
+              s=s.replace(old,new,1)
+              oldsum='Topic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 32は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで `PASS`。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。'
+              newsum='Topic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 32は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで `PASS`。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。'
+              if oldsum not in s:
+                  raise SystemExit('exact blocker: STATUS summary changed unexpectedly')
+              s=s.replace(oldsum,newsum,1)
+              marker='## Topic 32 解説PDF\n'
+              if marker not in s:
+                  raise SystemExit('exact blocker: STATUS Topic 32 explanation PDF marker missing')
+              section='''## Topic 32 練習source\n\n判定: `PASS / PRACTICE_SOURCE_COMPLETE`\n\ncanonical artifacts:\n- `topics/32_lighting_design/32_lighting_design_practice_source.md`\n- `topics/32_lighting_design/32_lighting_design_practice_source_qa.md`\n\nQA:\n- source blob SHA: `ad3f1fabdb4e54da9196f0c8ff717c6c055b4c8f`\n- source QA blob SHA: `80f3f0cb5fede9d25bcc3ef5a5ddfa2d0946c852`\n- 一次試験型: `10 / 10`（全問五肢択一）\n- 正答一意性: `10 / 10 PASS`\n- 数値問題独立再計算: `7 / 7 PASS`\n- 固定5問・30答案要素: `30 / 30 connected`\n- 一次: `30 / 30 connected`\n- 二次: `対象外（公式「機械・制御」試験範囲に照明なし）`\n- SPEC固定9項目: `9 / 9 PASS`\n- 固定EXAM_ALIGNMENT変更: `0件`\n- 未確認実車値の真値化: `0件`\n- Topic 21一般式変更: `0件`\n- exact blocker: `0件`\n\n次工程はTopic 32練習PDF生成＋PDF QA。\n\n'''
+              s=s.replace(marker,section+marker,1)
+              status.write_text(s,encoding='utf-8')
+
+          h=handoff.read_text(encoding='utf-8')
+          if '現在地は `topic_32_practice_source_complete`' not in h:
+              oldh='現在地は `topic_32_explanation_pdf_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。次はTopic 32練習source。'
+              newh='現在地は `topic_32_practice_source_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。次はTopic 32練習PDF生成＋PDF QA。'
+              if oldh not in h:
+                  raise SystemExit('exact blocker: HANDOFF current paragraph changed unexpectedly')
+              h=h.replace(oldh,newh,1)
+              markerh='## Topic 32 解説PDF完了記録\n'
+              if markerh not in h:
+                  raise SystemExit('exact blocker: HANDOFF Topic 32 explanation PDF marker missing')
+              sectionh='''## Topic 32 練習source完了記録\n\n判定: `PASS / PRACTICE_SOURCE_COMPLETE`\n\ncanonical artifacts:\n- `topics/32_lighting_design/32_lighting_design_practice_source.md`\n- `topics/32_lighting_design/32_lighting_design_practice_source_qa.md`\n\nQA:\n- source blob `ad3f1fabdb4e54da9196f0c8ff717c6c055b4c8f`\n- source QA blob `80f3f0cb5fede9d25bcc3ef5a5ddfa2d0946c852`\n- 一次試験型 `10 / 10`（全問五肢択一）\n- 正答一意性 `10 / 10 PASS`\n- 数値問題独立再計算 `7 / 7 PASS`\n- 固定5問・30答案要素 `30 / 30 connected`\n- 一次 `30 / 30 connected`\n- 二次 `対象外（公式「機械・制御」試験範囲に照明なし）`\n- SPEC固定9項目 `9 / 9 PASS`\n- 固定EXAM_ALIGNMENT変更 `0件`\n- 未確認実車値の真値化 `0件`\n- Topic 21一般式変更 `0件`\n- exact blocker `0件`\n\n固定境界:\n- 色温度・LED寿命はR7固定過去問を解くための最小ブリッジに限定する。\n- 光束発散度・輝度は測光量識別とR8/R3固定過去問対応に限定する。\n- 多重反射式は固定過去問の簡略球形グローブ条件に限定する。\n- 実車照明値を一次資料なしに真値化しない。\n- `lm/W` と照明率 `U` を混同しない。\n\n'''
+              h=h.replace(markerh,sectionh+markerh,1)
+              handoff.write_text(h,encoding='utf-8')
+          PY
+
+          git add "$STATUS" "$HANDOFF"
+          git rm -f "$WF"
+          git commit -m 'Advance Topic 32 to practice source complete'
+          git pull --rebase origin main
+          git push origin HEAD:main
