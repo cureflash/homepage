@@ -6,12 +6,40 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `30 / 39`
-- current_status: `topic_31_explanation_source_complete`
+- current_status: `topic_31_explanation_pdf_complete`
 - last_completed_topic: `30 L0系④ 誘導集電・非接触電力伝送`
 - active_topic: `31 補助電源変換器`
-- next_start: Topic 31解説sourceから解説PDFを生成し、A4・全文・数式・表・ページ端・置換文字を複数レンダラでQAする
+- next_start: Topic 31練習sourceを作成し、固定5問・27答案要素とSPEC 8項目を維持してsource QAする
 
-Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了。
+Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了。
+
+## Topic 31 解説PDF
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation.pdf`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation_pdf_qa.md`
+
+QA:
+- PDF blob SHA: `f65e5669a279a522d26016ae1763346912b90b18`
+- A4縦: `7頁`
+- PDFium: `7 / 7 PASS`
+- Poppler: `7 / 7 PASS`
+- 空白頁・端切れ・重大な重なり・置換文字: `0件`
+- 固定5問・27答案要素: `27 / 27 PASS`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- SPEC固定8項目: `8 / 8 PASS`
+- 3段階例題: `3 / 3 PASS`
+- H22一次問3の三角搬送波・系統より進む位相: `確認済み`
+- R5二次問3の高調波発生源・影響・基本波／高調波分離: `確認済み`
+- 未確認実車値の真値化: `0件`
+- Topic 32〜34先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+初回ローカル生成でCIDフォントの `≈` 非収録を検出し、原因を字形不足と診断して意味を保つ丸め表記へ再生成。canonical PDFは再レンダリング・再QA後の版。
 
 ## Topic 31 解説source
 
