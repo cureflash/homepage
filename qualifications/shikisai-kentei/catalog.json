@@ -56,6 +56,15 @@
       "source":"articles/05_refraction_dispersion.md"
     },
     {
+      "id":"06_thin_film_interference",
+      "articleNo":6,
+      "seriesId":"physics",
+      "title":"シャボン玉はなぜ虹色に見えるのか――薄膜干渉と構造色",
+      "summary":"電場の重ね合わせ、光学距離、Fresnel反射によるπ位相反転から薄膜干渉条件を導き、膜厚・屈折率・観察角度が反射スペクトルと構造色を決める仕組みを理解する。",
+      "levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：波動光学・電磁気学"],
+      "source":"articles/06_thin_film_interference.md"
+    },
+    {
       "id":"14_retina_phototransduction",
       "articleNo":14,
       "seriesId":"biology",
