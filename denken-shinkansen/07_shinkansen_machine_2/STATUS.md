@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_final_qa_needs_revision / IN_PROGRESS`
+- current_status: `topic_21_metadata_sync_complete / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 進捗・メタデータ同期（main source / 練習source）
+- next_start: Topic 21 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -184,6 +184,7 @@
 - 公開値の現行新幹線一般化: `0件 / PASS`
 - 固定過去問個別正答の保存: `0件 / PASS`
 - Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 独立再解答: `14 / 14 PASS`
 - 判定: `PASS / topic_21_explanation_source_complete`
 
 ## Topic 21 解説PDF品質ゲート
@@ -216,7 +217,8 @@
 - 判定: `PASS / topic_21_practice_source_complete`
 
 ## Topic 21 練習PDF品質ゲート
-- canonical練習source blob: `c9a87ccf46b7f8caa91c064af1fc56149d05e3d1`
+- PDF生成時canonical練習source blob: `c9a87ccf46b7f8caa91c064af1fc56149d05e3d1`
+- 現行メタデータ同期済み練習source blob: `a710fd8efd3c200c7d922c86048244da43431789`
 - A4縦2ページ・2段組: `PASS`
 - 200 dpi表示: `2 / 2 PASS`
 - `pdftocairo` 160 dpi表示: `2 / 2 PASS`
@@ -282,7 +284,7 @@
 - `topics/21_readhesion_control/21_readhesion_control_powerpoint_qa.md` — PowerPoint QA完了
 - `topics/21_readhesion_control/21_readhesion_control_blind_reanswer_gate.md` — 独立再解答前ゲート完了
 - `topics/21_readhesion_control/21_readhesion_control_independent_reanswer.md` — 完成後独立再解答・公式照合・記録QA完了
-- `topics/21_readhesion_control/21_readhesion_control_final_qa.md` — 最終QA `NEEDS_REVISION`
+- `topics/21_readhesion_control/21_readhesion_control_final_qa.md` — 前回最終QA `NEEDS_REVISION`、再実施待ち
 
 ## Topic 21 最終QA
 - 上位仕様・系列SPEC照合: `PASS`
@@ -293,11 +295,12 @@
 - 独立再解答記録QA: `8 / 8 PASS`
 - 教材の概念・解法不足: `0件`
 - 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
-- 進捗・正本整合: main sourceと練習sourceの2件未同期
-- 判定: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
+- 前回の進捗・正本整合: main sourceと練習sourceの2件未同期
+- 現在: 2件とも同期済み、最終QA再判定待ち
+- 前回判定: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
 
 ## 今回進めた内容
-Topic 21の最終QAを実施した。技術・試験対応、成果物、独立再解答はすべてPASSしたが、`21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件が現状と不一致のため `NEEDS_REVISION` とした。完成数は `20 / 22` のまま。
+Topic 21の最終QAで指摘された進捗メタデータ2件を同期した。`21_readhesion_control.md` は現行工程・独立再解答結果・次工程を同期し、`21_readhesion_control_practice.md` は次工程を最終QA再実施へ更新した。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更していない。完成数は `20 / 22` のまま。
 
 ## 次工程
-Topic 21のmain sourceと練習sourceの進捗メタデータ2件を現行状態へ同期する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更しない。
+Topic 21の最終QAを再実施する。
