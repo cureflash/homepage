@@ -18,6 +18,15 @@
       "summary":"「透明」と「無色」を分け、分光透過率とBeer–Lambert則から、濃度・光路長・吸収スペクトルが色を決める仕組みを理解する。",
       "levels":["3級：光と色","大学化学：分光学"],
       "source":"articles/04_transparent_color_beer_lambert.md"
+    },
+    {
+      "id":"19_complementary_afterimage",
+      "articleNo":19,
+      "seriesId":"vision-psychology",
+      "title":"補色残像はなぜ見えるのか",
+      "summary":"色彩検定3級の補色残像を、L・M・S錐体の順応、cone-opponent処理、網膜神経節細胞の減算的順応とリバウンド、皮質の寄与まで分けて理解する。",
+      "levels":["3級：色彩心理・補色残像","大学：神経科学・心理物理学"],
+      "source":"articles/19_complementary_afterimage.md"
     }
   ]
 }
