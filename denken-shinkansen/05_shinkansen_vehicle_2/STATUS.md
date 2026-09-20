@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `33 / 39`
-- current_status: `topic_34_exam_alignment_complete`
+- current_status: `topic_34_explanation_source_complete`
 - last_completed_topic: `33 空調・電熱の熱収支`
 - active_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- next_start: Topic 34の固定5問・27答案要素とSPEC固定7項目を変更せず、解説sourceを作成する。二次「機械・制御」2問を維持し、コンプレッサ固有の圧縮熱力学や未確認実車値は追加しない。
+- next_start: Topic 34の解説sourceを正本として解説PDFを生成し、A4縦・文字抽出・PDFium / Poppler表示・固定5問27答案要素・SPEC固定7項目・3段階例題をQAする。
 
 Topic 01〜33は `PASS / completed`。完成数 `33 / 39`。
 
@@ -124,7 +124,7 @@ Topic 33はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 
 ## Topic 34 コンプレッサ・ポンプ・ファンの負荷特性
 
-判定: `IN_PROGRESS / EXAM_ALIGNMENT_COMPLETE`
+判定: `IN_PROGRESS / EXPLANATION_SOURCE_COMPLETE`
 
 制作前EXAM_ALIGNMENT:
 - source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics.md`
@@ -156,7 +156,20 @@ SPEC固定項目:
 - 効率
 - インバータ制御
 
-次工程はTopic 34解説source。完成数は `33 / 39` のまま。
+解説source:
+- source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source.md`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source_qa.md`
+- 固定5問・27答案要素: `27 / 27 COVERED`
+- SPEC固定7項目: `7 / 7 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 例題数値再計算: `PASS`
+- ポンプ水動力式・ファン相似則は三種既習の接続事項として明示し、固定二種過去問の直接出題式とは扱わない
+- Topic 21丸め差注記: sourceへ追加、一般式変更 `0件`
+- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
+- 未確認実車値の真値化: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 34解説PDF。完成数は `33 / 39` のまま。
 
 ## Topic 21 固定注記
 
