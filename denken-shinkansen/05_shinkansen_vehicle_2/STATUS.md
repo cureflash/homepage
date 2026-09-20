@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `27 / 39`
-- current_status: `topic_28_source_remediation_complete`
+- current_status: `topic_28_explanation_pdf_resync_complete`
 - last_completed_topic: `27 L0系① リニア同期モータ`
 - active_topic: `28 L0系② 同期機のフェーザと推進力`
-- next_start: remediation後sourceから解説PDFを再生成しPDF QAを実施する。その後、公式解答を見ていないfresh workerでclean blindを新規固定する
+- next_start: 公式解答を見ていないfresh workerで、remediation後教材だけを使ったclean blind候補を別ファイルへ新規固定して再照合する
 
 ## 完成済み
 
@@ -57,12 +57,27 @@ Topic 27最終QA:
 
 ## Topic 28 解説PDF
 
-- 判定: `STALE / RESYNC_REQUIRED`
+- 判定: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
 - path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation.pdf`
-- stale canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
-- 旧QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_pdf_qa.md`
-- 理由: H29 `φ / θ / δ` 補強後source `8f9562b6b56a22ec7b507a5dc5834fda73787515` が未同期
-- exact blocker: `1件`（source/PDF同期）
+- canonical blob SHA: `1eaa458d46a636ac4955d3475073e14071b4cd7f`
+- source blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
+- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_pdf_qa.md`
+- file size: `17,642 bytes`
+- SHA-256: `45d7c54bda708a74bf760fa7c1ec470f4aedce67ab564eae52f7d99f09f23e9c`
+- A4縦: `3 pages`
+- PDFium / Poppler render: `3 / 3 PASS`
+- `pdftotext -layout`: `PASS`（`11,200 bytes`）
+- 置換文字 `�`: `0件`
+- 固定過去問: `5 / 5 covered`
+- 一次答案要素: `5 / 5 covered`
+- 二次答案要素: `22 / 22 covered`
+- 合計答案要素: `27 / 27 covered`
+- SPEC必須8項目: `8 / 8 covered`
+- 指定3可視化: `3 / 3 PASS`
+- H29 `φ` = 本教材 `θ` = 力率角、`δ` = 負荷角: `PDF同期 PASS`
+- H29指定変数式 `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` と電圧変動率式: `PDF同期 PASS`
+- 旧clean blind候補の編集: `0件`
+- exact blocker: `0件`
 
 ## Topic 28 練習source
 
@@ -161,7 +176,7 @@ Topic 27最終QA:
 - 式整合: 既存発電機フェーザ式から独立展開 `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 新規仕様追加: `0件`
-- PDF同期: `未実施`
+- PDF同期: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
 
 ## Topic 28 固定境界
 
@@ -173,4 +188,4 @@ L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ
 
 ## 次の安全な工程
 
-Topic 28はまだ `completed` と数えない。remediation後sourceから解説PDFを再生成しPDF QAを実施する。その後、公式解答を見ていないfresh workerがclean blindを新規固定して再照合する。今回固定した旧候補は修正しない。
+Topic 28はまだ `completed` と数えない。公式解答を見ていないfresh workerが、remediation後教材だけを使ってclean blind候補を別ファイルへ新規固定し、固定5問・27答案要素を公式再照合する。今回固定した旧候補は修正しない。再照合PASS後に最終QAへ進む。
