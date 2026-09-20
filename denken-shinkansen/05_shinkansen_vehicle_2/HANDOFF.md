@@ -8,7 +8,7 @@
 
 Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
 
-現在地は `topic_33_practice_pdf_complete`。active topicは `33 空調・電熱の熱収支`。次工程はPowerPoint生成＋render QA。
+現在地は `topic_33_powerpoint_complete_ready_clean_blind`。active topicは `33 空調・電熱の熱収支`。次工程はfresh clean blind独立再解答。
 
 ## Topic 32 完了記録
 
@@ -140,9 +140,39 @@ render / text QA:
 - canonical練習sourceからPDFを再生成し、PDFium / Poppler / text QAを通過した生成物を新canonicalとした。
 - 旧staging chunksとtemporary workflowは削除済み。
 
+## Topic 33 PowerPoint 完了
+
+canonical:
+- PPTX: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_images.pptx`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_images_qa.md`
+- commit: `1154f804df8acff3956fee2d1ded4666c46afaaa`
+- PPTX blob SHA: `22679f0b7d8ecd34b1a0556d1c591fc81bf996c4`
+- SHA-256: `cb1d632c0788653314a79ed9c1ab36cc13414d664b3de5b9dbd872d3d5dba594`
+- 16:9: `6 slides`
+
+render / quality gate:
+- python-pptx open / geometry bounds: `6 / 6 PASS`
+- LibreOffice PDF render: `6 / 6 PASS`
+- PNG render: `6 / 6 PASS`
+- blank render: `0件`
+- page-edge overflow: `0件`
+- U+FFFD: `0件`
+- 固定5問・一次22答案要素: `22 / 22 connected`
+- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
+- SPEC固定7項目: `7 / 7 PASS`
+- HFC過去問固有知識を現行実車仕様へ一般化: `0件`
+- 未確認実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+初回render QAは `pdftotext` が `SPEC 7項目` の間に空白を挿入したためexact-token assertionのみ失敗した。6枚生成、geometry、6枚PNG render、blank/edge、U+FFFD、先行token群は通過済み。抽出テキストの空白だけを正規化した再試験でPASSし、教材内容は変更していない。temporary PowerPoint workflowsはcanonical commitで削除済み。
+
 ## 次工程
 
-fresh workerは最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33の全canonical成果物をreconcileする。重複成果がないことを確認したうえで、Topic 33 PowerPoint生成＋render QAへ進む。PowerPoint完了後にclean blind独立再解答へ進み、固定5問・22答案要素を教材だけで再解答できることを確認するまではTopic 33をcompletedにしない。
+fresh workerは最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md` とTopic 33の教材成果物をreconcileする。answer-bearing資料（固定EXAM_ALIGNMENTの公式正答、既存clean-blind QA等）を先に開かず、教材だけで固定5問・22答案要素のclean blind candidateを作成してcommitで固定する。固定後に初めて公式解答と照合し、candidate固定後修正0件・全答案要素PASSを確認する。ここを通過するまではTopic 33をcompletedにしない。
+
+今runはanswer-bearing資料を確認済みのためclean blind candidate固定には進まない。
 
 ## Topic 21 固定境界
 
