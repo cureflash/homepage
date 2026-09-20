@@ -1,7 +1,0 @@
-size=376373
-sha256=19f86b51ebbdc96b62c9fcfd023843d421f4377991b8b1b1db07a09dd6d99b3a
-slides=6
-render_pages=6
-pdftotext=PASS
-text_bytes=12976
-numeric_qa=PASS
