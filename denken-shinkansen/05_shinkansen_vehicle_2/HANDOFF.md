@@ -8,7 +8,7 @@
 
 Topic 01〜28は最終QAまで `PASS / completed`。完成数は `28 / 39`。
 
-現在地は `topic_29_practice_pdf_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
+現在地は `topic_29_powerpoint_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
 
 ## Topic 28 完了状態
 
@@ -126,6 +126,25 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
+## Topic 29 PowerPoint
+
+- PowerPoint: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md`
+- 判定: `PASS / POWERPOINT_COMPLETE`
+- canonical blob SHA: `2919bbe2b6763bcd73e246fd3e76c17305e9e662`
+- SHA-256: `19f86b51ebbdc96b62c9fcfd023843d421f4377991b8b1b1db07a09dd6d99b3a`
+- 16:9・6 slides
+- GitHub Actions run `35490660751`: `success`
+- 固定5問・24答案要素: `24 / 24 connected`
+- 一次: `20 / 20 connected`
+- 二次: `4 / 4 connected`
+- SPEC必須8項目: `8 / 8 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- L0系未確認実車値の真値化: `0件`
+- Topic 30先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
 ## Topic 29 固定SPEC境界
 
 必須8項目:
@@ -143,20 +162,17 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 2. 速度―誘導電流
 3. 速度―電磁力
 
-固定EXAM_ALIGNMENTは変更しない。L0系実車の未確認の磁界・コイル電流・`R/L/M`・幾何寸法・浮上力・案内力・速度しきい値を真値化しない。教材用仮定値は実車一般式へ昇格させない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。教材一式完成前にclean blind独立再解答へ進まない。
+固定EXAM_ALIGNMENTは変更しない。L0系実車の未確認の磁界・コイル電流・`R/L/M`・幾何寸法・浮上力・案内力・速度しきい値を真値化しない。教材用仮定値は実車一般式へ昇格させない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。教材一式はPowerPointまで完成。次はclean blind独立再解答候補固定へ進む。
 
 ## 次の安全な工程
 
-Topic 29解説画像PowerPointを生成し、QAする。
+Topic 29のclean blind独立再解答候補を固定する。
 
-QA項目:
-- 16:9、表示欠け・文字化けなし
-- 固定5問・24答案要素への接続維持
-- SPEC必須8項目と指定3可視化を維持
-- 数式・単位・符号が解説source / 練習sourceと一致
-- L0系未確認実車値の真値化0件
-- Topic 30先取り0件
-- 固定EXAM_ALIGNMENT変更0件
+- 公式解答・保存済み正答を先に見ない
+- 固定5問・24答案要素を独立再解答する
+- candidate固定後は変更しない
+- 固定後に公式照合し、不一致は教材側の不足として診断する
+- Topic 21一般式・固定EXAM_ALIGNMENT・SPEC境界は変更しない
 
 ## Topic 21 H26二次 問1(4)
 

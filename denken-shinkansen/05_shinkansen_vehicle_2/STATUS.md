@@ -6,16 +6,16 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `28 / 39`
-- current_status: `topic_29_practice_pdf_complete`
+- current_status: `topic_29_powerpoint_complete`
 - last_completed_topic: `28 L0系② 同期機のフェーザと推進力`
 - active_topic: `29 L0系③ 超電導磁気浮上の電磁力`
-- next_start: Topic 29解説画像PowerPointを生成し、16:9表示・数式・単位・固定5問24答案要素・SPEC必須8項目との接続をQAする
+- next_start: Topic 29のclean blind独立再解答候補を、公式解答・保存済み正答を先に見ずに固定する
 
 ## 完成済み
 
 Topic 01〜28: `PASS / completed`。完成数 `28 / 39`。
 
-Topic 29は `PRACTICE_PDF_COMPLETE`。テーマ自体はまだ `completed` ではない。
+Topic 29は `POWERPOINT_COMPLETE`。テーマ自体はまだ `completed` ではない。
 
 ## Topic 28 最終判定
 
@@ -173,7 +173,27 @@ L0系実車の未確認の超電導磁石磁界、コイル電流、抵抗・イ
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 29解説画像PowerPoint生成＋QA。教材一式完成前にclean blind独立再解答へ進まない。
+## Topic 29 PowerPoint
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+- PowerPoint: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md`
+- canonical blob SHA: `2919bbe2b6763bcd73e246fd3e76c17305e9e662`
+- 16:9・6 slides
+- GitHub Actions run `35490660751`: `success`
+- 固定5問・24答案要素: `24 / 24 connected`
+- 一次: `20 / 20 connected`
+- 二次: `4 / 4 connected`
+- SPEC必須8項目: `8 / 8 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- 数値・式QA: `PASS`
+- L0系未確認実車値の真値化: `0件`
+- Topic 30先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 29のclean blind独立再解答候補固定。公式解答・保存済み正答を先に見ず、固定後に公式照合・最終QAへ進む。
 
 ## Topic 21 H26二次 問1(4)
 
