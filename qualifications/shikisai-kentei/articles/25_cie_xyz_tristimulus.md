@@ -1,0 +1,382 @@
+# XYZ表色系はなぜ作られたのか――色を3つの数値にする
+
+虹のスペクトルは連続している。光源の分光分布も、物体の分光反射率も、本来は波長ごとの値を持つ関数である。それなのに色彩学では、色を $X,Y,Z$ という3つの数値で表せる。
+
+なぜ無限個に近い波長成分を、3個の数に圧縮してよいのか。ここを理解すると、XYZ表色系、xy色度図、L*a*b*、色差、測色、メタメリズムが一本につながる。
+
+色彩検定1級の公式テキストでは、「混色」のグラスマンの法則に続いて「XYZ表色系」、さらに「均等色空間とL*a*b*色空間」「測色」が配置されている。本記事では、その数学的な土台を大学レベルまで掘り下げる。
+
+## 1　スペクトルは高次元なのに、色合わせは3変数でできる
+
+ある光の分光分布を $P(\lambda)$ とする。可視域を1 nm刻みで記録すれば、数百個の値からなるデータになる。
+
+しかし人間の明所視では、色合わせに必要な独立変数は基本的に3つで足りる。これは網膜にL・M・Sの3種類の錐体があり、入射スペクトルが最終的に3種類の受容器応答へ圧縮されることと関係している。
+
+ただし重要なのは、XYZがL・M・S錐体の応答そのものではないという点である。XYZは、人間の「等色」という心理物理実験を基礎に定義された測色量である。
+
+色合わせ実験では、観察者に試験光と、3種類の原色を混ぜた光を並べて見せる。観察者は3原色の量を調整し、両者が同じ色に見える点を探す。
+
+ある単色光 $\lambda$ を3原色 $[R],[G],[B]$ で等色できるなら、記号的には
+
+$$
+[C_\lambda]
+\equiv
+\bar r(\lambda)[R]
++\bar g(\lambda)[G]
++\bar b(\lambda)[B]
+$$
+
+と書ける。
+
+$\bar r(\lambda),\bar g(\lambda),\bar b(\lambda)$ が色合わせ関数である。波長ごとに「その単色光と同じ色を作るには、各原色をどれだけ混ぜればよいか」を表す。
+
+## 2　なぜRGBの色合わせ関数には負の値が出るのか
+
+実在する3原色を選んでも、可視域のすべての単色光を、その3原色の正の加法混色だけで作れるわけではない。
+
+たとえば、ある試験光を合わせるために
+
+$$
+[C_\lambda]+a[R]
+\equiv
+b[G]+c[B]
+$$
+
+としなければならない場合がある。
+
+左辺の試験光側へ赤原色を足した、という意味である。代数的に右辺へ移項すれば
+
+$$
+[C_\lambda]
+\equiv
+-a[R]+b[G]+c[B]
+$$
+
+となり、赤成分が負になる。
+
+ここで「負の光」が実在するわけではない。負号は、色合わせ実験でその原色を混合側ではなく試験光側へ加えたことを表す。
+
+この負値は計算上扱いにくい。そこでCIEは1931年、WrightとGuildらの色合わせ実験を基礎にしたCIE RGB系を線形変換し、$X,Y,Z$ という新しい3成分を定義した。
+
+## 3　XYZは「色空間の基底変換」である
+
+線形代数の言葉で考えると理解しやすい。
+
+ある色をRGB座標で
+
+$$
+\mathbf{c}_{RGB}=
+\begin{bmatrix}
+R\\G\\B
+\end{bmatrix}
+$$
+
+と表しているとする。同じ色を別の座標系で表すには、可逆な行列 $M$ を使って
+
+$$
+\mathbf{c}_{XYZ}
+=
+M\mathbf{c}_{RGB}
+$$
+
+と変換できる。
+
+ここで
+
+$$
+\mathbf{c}_{XYZ}=
+\begin{bmatrix}
+X\\Y\\Z
+\end{bmatrix}
+$$
+
+である。
+
+つまりXYZ表色系は、「RGBとは別の色を測っている」のではなく、同じ等色関係を別の基底で記述したものと考えられる。
+
+CIE 1931 XYZ系では、対応する色合わせ関数
+
+$$
+\bar x(\lambda),\quad
+\bar y(\lambda),\quad
+\bar z(\lambda)
+$$
+
+が可視域で負にならないように設計されている。また $\bar y(\lambda)$ は明所視の分光視感効率 $V(\lambda)$ と一致するように定められているため、$Y$ は測光量の明るさ側と直接つながる。
+
+CIEの国際規格では、1931標準測色観察者はおおむね視角1°〜4°の中心視野に対応する色合わせ関数として規定されている。
+
+## 4　スペクトルからXYZを計算する
+
+分光分布 $P(\lambda)$ をもつ光源の三刺激値は、連続波長なら
+
+$$
+X=K\int P(\lambda)\bar x(\lambda)\,d\lambda
+$$
+
+$$
+Y=K\int P(\lambda)\bar y(\lambda)\,d\lambda
+$$
+
+$$
+Z=K\int P(\lambda)\bar z(\lambda)\,d\lambda
+$$
+
+と表せる。
+
+実際の測定データは離散値なので、コンピュータでは
+
+$$
+X\approx K\sum_i P(\lambda_i)\bar x(\lambda_i)\Delta\lambda
+$$
+
+のような数値積分を行う。$Y,Z$ も同様である。
+
+式の意味は単純である。
+
+1. 各波長にどれだけ光があるかを測る
+2. その波長に対する標準観察者の色合わせ関数を掛ける
+3. 可視域全体で足し合わせる
+
+分光器で測った物理量を、人間の等色特性で重み付けして3数値へ圧縮している。
+
+## 5　物体色では「照明×反射率×標準観察者」になる
+
+物体色の場合、眼に入るスペクトルは物体だけでは決まらない。
+
+照明の分光分布を $S(\lambda)$、物体の分光反射率を $R(\lambda)$ とすれば、観察方向へ届く光のスペクトルは理想化して
+
+$$
+P(\lambda)\propto S(\lambda)R(\lambda)
+$$
+
+となる。
+
+したがって反射物体のXYZは
+
+$$
+X=k\int S(\lambda)R(\lambda)\bar x(\lambda)\,d\lambda
+$$
+
+$$
+Y=k\int S(\lambda)R(\lambda)\bar y(\lambda)\,d\lambda
+$$
+
+$$
+Z=k\int S(\lambda)R(\lambda)\bar z(\lambda)\,d\lambda
+$$
+
+で求められる。
+
+完全拡散反射体の $Y$ を100に正規化する場合は、一般に
+
+$$
+k=
+\frac{100}
+{\int S(\lambda)\bar y(\lambda)\,d\lambda}
+$$
+
+とする。
+
+ここから重要な事実が出る。
+
+同じ物体でも、照明 $S(\lambda)$ が変わればXYZも変わる。つまり物体の「色」は分光反射率だけの固有値ではない。
+
+$$
+\text{照明}
+\times
+\text{物体の分光特性}
+\times
+\text{標準観察者}
+\rightarrow
+XYZ
+$$
+
+という系全体で決まる。
+
+## 6　X・Y・Zは何を意味しているのか
+
+$X,Y,Z$ を「赤・緑・青」と覚えるのは誤りである。
+
+XYZの基準刺激は、実在するRGBディスプレイの三原色ではない。数学的に定義された基準であり、$X,Y,Z$ は標準観察者に対する三刺激値である。
+
+特に $Y$ には特別な意味がある。$\bar y(\lambda)$ は明所視の分光視感効率と一致するため、適切な定数を用いれば $Y$ は測光量の輝度と比例関係をもつ。
+
+一方で $X$ と $Z$ を単独で「赤さ」「青さ」と読むことはできない。
+
+またXYZは錐体応答そのものでもない。LMS錐体空間とXYZ空間の間には線形変換関係を設定できるが、両者は目的も定義も異なる。
+
+## 7　xy色度座標は、XYZから大きさを取り除く
+
+XYZは3次元量だが、同じ色みの光を強くしただけなら、3成分はほぼ同じ比率で大きくなる。
+
+そこで
+
+$$
+x=\frac{X}{X+Y+Z}
+$$
+
+$$
+y=\frac{Y}{X+Y+Z}
+$$
+
+$$
+z=\frac{Z}{X+Y+Z}
+$$
+
+と正規化する。
+
+すると
+
+$$
+x+y+z=1
+$$
+
+なので、独立な座標は2つでよい。通常は $x,y$ を使う。
+
+これは3次元ベクトル $(X,Y,Z)$ の「大きさ」に相当する情報を捨て、成分比だけを残す操作である。
+
+ただしxy色度図には明るさの情報が含まれない。完全な色指定には、通常 $x,y$ に加えて $Y$ などの明るさ情報が必要になる。
+
+xy色度図そのものは次の記事で詳しく扱う。
+
+## 8　メタメリズムは「3次元への射影」で理解できる
+
+XYZ表色系の本質が最もよく見えるのがメタメリズムである。
+
+異なる2つのスペクトルを $P_1(\lambda),P_2(\lambda)$ とする。スペクトル形状が全く違っていても、
+
+$$
+\int P_1(\lambda)\bar x(\lambda)d\lambda
+=
+\int P_2(\lambda)\bar x(\lambda)d\lambda
+$$
+
+$$
+\int P_1(\lambda)\bar y(\lambda)d\lambda
+=
+\int P_2(\lambda)\bar y(\lambda)d\lambda
+$$
+
+$$
+\int P_1(\lambda)\bar z(\lambda)d\lambda
+=
+\int P_2(\lambda)\bar z(\lambda)d\lambda
+$$
+
+を満たせば、標準観察者に対して同じXYZになる。
+
+差
+
+$$
+D(\lambda)=P_1(\lambda)-P_2(\lambda)
+$$
+
+を使えば、条件は
+
+$$
+\int D(\lambda)\bar x(\lambda)d\lambda=0
+$$
+
+$$
+\int D(\lambda)\bar y(\lambda)d\lambda=0
+$$
+
+$$
+\int D(\lambda)\bar z(\lambda)d\lambda=0
+$$
+
+となる。
+
+線形代数的には、非常に高次元なスペクトル空間を3次元のXYZ空間へ写像しているため、異なるスペクトルが同じ点へ投影されることがある。この「情報の圧縮」がメタマーを生む。
+
+したがって「XYZが同じ」ことは「スペクトルが同じ」ことを意味しない。
+
+## 9　分光測色計と三刺激値直読式色彩計の違い
+
+XYZを得る代表的な方法は2つある。
+
+分光測色計は、まず波長ごとの反射率や放射量を測定する。その後、標準光源と色合わせ関数を使って数値積分し、XYZを計算する。
+
+一方、三刺激値直読式の色彩計は、検出器とフィルタの分光応答を $\bar x,\bar y,\bar z$ に近づけ、3チャンネルの出力から直接XYZ相当量を得る。
+
+概念的には
+
+$$
+\text{分光測色}
+:
+P(\lambda)\rightarrow \text{スペクトル}\rightarrow XYZ
+$$
+
+$$
+\text{三刺激値測色}
+:
+P(\lambda)\rightarrow XYZ
+$$
+
+という違いになる。
+
+分光測色では元のスペクトル情報が残るため、別の標準光源下での色を計算したり、メタメリズムを検討したりできる。一方、XYZだけを測った場合、失われたスペクトル情報を一意に復元することはできない。
+
+## 10　XYZ空間は「知覚的に均等」ではない
+
+XYZには大きな利点があるが、座標間のユークリッド距離
+
+$$
+d=\sqrt{(\Delta X)^2+(\Delta Y)^2+(\Delta Z)^2}
+$$
+
+を、そのまま人間が感じる色差とみなすことはできない。
+
+XYZ空間は等色を数量化するための基礎空間であり、知覚的な距離が均等になるようには設計されていない。
+
+この問題を改善するため、CIEは後にCIELABやCIELUVなどの「より均等な色空間」を標準化した。CIELABではXYZを非線形変換し、色差を座標距離として扱いやすくする。
+
+したがって流れは
+
+$$
+\text{スペクトル}
+\rightarrow
+XYZ
+\rightarrow
+L^*a^*b^*
+\rightarrow
+\Delta E
+$$
+
+となる。
+
+XYZは終点ではなく、現代測色の基礎座標である。
+
+## 11　色彩検定で押さえるところ
+
+色彩検定1級では、まず次の骨格を押さえる。
+
+- XYZ表色系はCIEが1931年に定めた表色系である
+- 標準観察者の色合わせ関数 $\bar x,\bar y,\bar z$ を使って三刺激値を求める
+- $Y$ は明るさ側の測光量と結びつく
+- $x,y,z$ はXYZを総和で正規化した色度座標で、$x+y+z=1$
+- XYZ空間やxy色度図は知覚的に均等な空間ではない
+- XYZはCIELAB、色差、測色へ進むための基礎になる
+
+大学レベルでは、さらに
+
+$$
+\text{スペクトル関数}
+\xrightarrow{\text{3つの色合わせ関数との内積}}
+(X,Y,Z)
+$$
+
+という線形写像として理解するとよい。
+
+この見方をすると、「なぜ3数値で色を表せるのか」「なぜメタマーが存在するのか」「なぜXYZからスペクトルへ戻れないのか」が同じ数学で説明できる。
+
+## 参考資料
+
+- [色彩検定協会「公式テキスト1級 目次」](https://www.aft.or.jp/images/text_of-1st-grade_mokuji.pdf)
+- [色彩検定協会「各級の目安」](https://www.aft.or.jp/pages/feature/level)
+- [CIE / ISO 11664-1:2019, Colorimetry — Part 1: CIE standard colorimetric observers](https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0)
+- [CIE e-ILV: CIE 1931 standard colorimetric system](https://cie.co.at/eilvterm/17-23-045)
+- [CIE 1931 colour-matching functions, 2 degree observer, official dataset](https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer)
+- [NIST, Y. Ohno, CIE Fundamentals for Color Measurements](https://www.nist.gov/publications/cie-fundamentals-color-measurements-0)
+- [Fairman, Brill & Hemmendinger, How the CIE 1931 color-matching functions were derived from Wright-Guild data, Color Research & Application, 1997](https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291520-6378%28199702%2922%3A1%3C11%3A%3AAID-COL4%3E3.0.CO%3B2-7)
