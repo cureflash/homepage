@@ -2,11 +2,13 @@
 
 更新日: 2026-09-20
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
 
 ## reconcile
 
-最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、Topic 28制作前EXAM_ALIGNMENT、解説sourceとsource QAを確認した。Topic 28は解説sourceまで完了済みだったため、重複せず次工程の解説PDF生成＋PDF QAだけを実施した。
+最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、Topic 28固定EXAM_ALIGNMENT、remediation後解説source、既存練習PDF・PowerPoint・旧clean blind結果を確認した。
+
+既存workerがH29二次「機械・制御」問1(1)の `φ / θ / δ` 記号対応を解説sourceへ最小補強済みで、旧解説PDFだけが補強前sourceのままだった。このため本工程では解説PDF再同期＋表示/構造QAだけを実施し、練習成果物・PowerPoint・固定clean blind候補は再作成/編集していない。
 
 固定EXAM_ALIGNMENTは変更していない。
 
@@ -18,16 +20,17 @@
 ## artifact identity
 
 - path: `28_l0_synchronous_machine_phasor_propulsion_explanation.pdf`
-- canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
-- file size: `11,959 bytes`
-- SHA-256: `a6cd9a0b51e3dfc49f8773e4f56fa4779f673b9b2e09525e81662acf2bbb676a`
+- canonical blob SHA: `1eaa458d46a636ac4955d3475073e14071b4cd7f`
+- source blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
+- file size: `17,642 bytes`
+- SHA-256: `45d7c54bda708a74bf760fa7c1ec470f4aedce67ab564eae52f7d99f09f23e9c`
 - A4縦: `3 pages`
 
 ## 表示・構造QA
 
 - PDFium 130 dpi: `3 / 3 PASS`
 - Poppler 130 dpi: `3 / 3 PASS`
-- `pdftotext -layout`: `PASS`（8,271 bytes）
+- `pdftotext -layout`: `PASS`（`11,200 bytes`）
 - 置換文字 `�`: `0件`
 - 文字・図のクリッピング: `0件`
 - 文字重なり: `0件`
@@ -40,15 +43,23 @@
 
 PDFiumとPopplerの双方で全3ページを確認し、本文・図・表の欠落、クリッピング、重なりは確認されなかった。
 
+## remediation同期QA
+
+- H29本試験の `φ` = 本教材の `θ` = 力率角: `PASS`
+- `φ / θ` は `V-I` 位相差、`δ` は `V-E` 負荷角として分離: `PASS`
+- 指定変数式 `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)`: `PASS`
+- 電圧変動率 `ε={E-V}/V×100 [%]`: `PASS`
+- 頻出ミスへの `φ / θ / δ` 取り違え追加: `PASS`
+- 旧clean blind候補の編集: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+
 ## 数値・論理独立再計算
 
 ### 例題1 発電機フェーザ
 
 `V=1.00`, `X_s=0.80`, `I=0.60`, 力率`0.80`遅れ。
 
-`sinθ=0.60`, `X_sI=0.48`
-
-`E=(1+0.48×0.60)+j(0.48×0.80)=1.288+j0.384`
+`E=1.288+j0.384`
 
 `|E|=1.3440238... p.u.`, `δ=16.6012...°`
 
@@ -60,9 +71,9 @@ PDFiumとPopplerの双方で全3ページを確認し、本文・図・表の欠
 
 `V=1.00`, `E=1.20`, `X_s=0.70`, `δ=25°`
 
-`P=(1.20/0.70)sin25°=0.724488... p.u.`
+`P=0.724488... p.u.`
 
-`Q=(1.20/0.70)cos25°-1/0.70=0.125099... p.u.`
+`Q=0.125099... p.u.`
 
 判定: `PASS`
 
@@ -70,13 +81,9 @@ PDFiumとPopplerの双方で全3ページを確認し、本文・図・表の欠
 
 `V=1.00`, `E=1.15`, `X_s=0.60`, `P_e=0.80 p.u.`, base=`30 MW`, `η=0.88`, `v=500 km/h`
 
-`sinδ=0.80×0.60/1.15=0.4173913...`
+`δ=24.669998...°`, `P_e=24.0 MW`, `P_mech=21.12 MW`, `v=138.888... m/s`
 
-`δ=24.669998...°`
-
-`P_e=24.0 MW`, `P_mech=21.12 MW`, `v=138.888... m/s`
-
-`F=21.12×10^6/138.888...=152064 N≈152 kN`
+`F=152064 N≈152 kN`
 
 判定: `PASS`
 
@@ -93,7 +100,6 @@ PDFiumとPopplerの双方で全3ページを確認し、本文・図・表の欠
 - 二次答案要素: `22 / 22 covered`
 - 合計答案要素: `27 / 27 covered`
 - SPEC必須8項目: `8 / 8 covered`
-- 固定教材必要説明8項目: `8 / 8 covered`
 - 指定3可視化: `3 / 3 PASS`
 - 3段階例題: `3 / 3 PASS`
 
@@ -110,8 +116,8 @@ PDFiumとPopplerの双方で全3ページを確認し、本文・図・表の欠
 
 ## 最終判定
 
-`PASS / EXPLANATION_PDF_COMPLETE`
+`PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
 
-完成数は `27 / 39` のまま。Topic 28は未完了。
+完成数は `27 / 39` のまま。Topic 28はまだ未完了。
 
-次工程: Topic 28 練習source。固定5問・27答案要素と解説PDFを入力として、一次試験型＋二次記述式の練習問題を作成し、数値・論理を独立再計算する。
+次工程: 公式解答を見ていないfresh workerが、remediation後教材だけを使ってclean blind候補を別ファイルへ新規固定し、固定5問・27答案要素を公式再照合する。旧候補は編集しない。
