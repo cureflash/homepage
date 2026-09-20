@@ -8,13 +8,13 @@
 
 Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
 
-現在地は `topic_27_practice_pdf_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_powerpoint_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27固定EXAM_ALIGNMENT、解説source/PDF、練習source/QA、直近の同系列worker成果をreconcileした。最新mainには別系列 `07_shinkansen_machine_2` の更新が入っていたが、本系列との競合・重複はないためそのまま採用した。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、直近の同系列worker成果をreconcileした。開始時点の正本はTopic 27練習PDF完了で、PowerPointは未作成だったため重複作業はない。
 
-Topic 27練習PDFとPDF QAを作成。一次8問＋二次4問の計12問、固定5問・23答案要素 `23 / 23 connected`、SPEC必須7項目 `7 / 7 covered`、指定2可視化の計算接続 `2 / 2 aligned`、数値・論理独立再計算 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`。A4縦3ページをPDFium/Popplerで `3 / 3 PASS`、`pdftotext -layout` PASS、置換文字0件。初回生成で `≈` の欠落グリフを検出したため、意味不変の「約」表記へ修正して再生成・再QAした。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取り、Topic 21一般式変更はいずれも0件。exact blocker `0件`。
+Topic 27解説画像PowerPointとPowerPoint QAを作成。Topic 26で確認済みのbinary truncate回避手順を再利用し、GitHub Actions上でcanonical PowerPointを生成・検証した。16:9・6枚、ZIP/python-pptx/geometry PASS、LibreOffice PDF変換 `6 / 6 PASS`、`pdftotext -layout` PASS、置換文字0件。固定5問・23答案要素 `23 / 23 connected`、SPEC必須7項目 `7 / 7 PASS`、指定2可視化 `2 / 2 PASS`。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取り、Topic 21一般式変更はいずれも0件。exact blocker `0件`。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -254,6 +254,35 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
+## Topic 27 PowerPoint
+
+成果物:
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_images.pptx`
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_images_qa.md`
+
+判定:
+- `PASS / POWERPOINT_COMPLETE`
+- canonical blob SHA: `fa47872508029438c1056ea8130b636e8bb4c75b`
+- file size: `220,628 bytes`
+- SHA-256: `443a36dd659a9b4c0dabade616a15aee8ec9d39dcc88572337c45c624b46e9cc`
+- 16:9: `6 slides`
+- GitHub Actions canonical rebuild/validation: `PASS`
+- PPTX ZIP / python-pptx / geometry: `PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`（9,826 bytes）
+- 置換文字: `0件`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `18 / 18 connected`
+- 二次答案要素: `5 / 5 connected`
+- 合計答案要素: `23 / 23 connected`
+- SPEC必須7項目: `7 / 7 PASS`
+- 指定2可視化: `2 / 2 PASS`
+- L0系未確認実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -266,4 +295,4 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## 次の安全な工程
 
-Topic 27 `L0系① リニア同期モータ` の解説画像PowerPointを生成し、固定5問・23答案要素、SPEC必須7項目、指定2可視化、L0系実車値境界をPowerPoint QAする。
+Topic 27 `L0系① リニア同期モータ` の完成後clean blind独立再解答候補を固定する。保存済み正答・公式解答を先に見ず、固定5問・23答案要素を教材だけで解く。

@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `26 / 39`
-- current_status: `topic_27_practice_pdf_complete`
+- current_status: `topic_27_powerpoint_complete`
 - last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
 - active_topic: `27 L0系① リニア同期モータ`
-- next_start: Topic 27の解説画像PowerPoint生成＋PowerPoint QA。固定5問・23答案要素、SPEC必須7項目、指定2可視化、L0系実車値境界を維持する
+- next_start: Topic 27の完成後clean blind独立再解答候補固定。保存済み正答・公式解答を先に見ず、固定5問・23答案要素を教材だけで解いて候補を固定する
 
 ## Topic 25 最終状態
 
@@ -327,10 +327,36 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+## Topic 27 PowerPoint
+
+- 判定: `PASS / POWERPOINT_COMPLETE`
+- path: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_images.pptx`
+- canonical blob SHA: `fa47872508029438c1056ea8130b636e8bb4c75b`
+- QA: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_images_qa.md`
+- file size: `220,628 bytes`
+- SHA-256: `443a36dd659a9b4c0dabade616a15aee8ec9d39dcc88572337c45c624b46e9cc`
+- 16:9: `6 slides`
+- GitHub Actions canonical rebuild/validation: `PASS`
+- PPTX ZIP / python-pptx / geometry: `PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`（9,826 bytes）
+- 置換文字 `�`: `0件`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `18 / 18 connected`
+- 二次答案要素: `5 / 5 connected`
+- 合計答案要素: `23 / 23 connected`
+- SPEC必須7項目: `7 / 7 PASS`
+- SPEC指定2可視化: `2 / 2 PASS`
+- 未確認L0系実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27は練習PDF完了、次は解説画像PowerPoint生成＋PowerPoint QA。
+Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27はPowerPoint完了、次は完成後clean blind独立再解答候補固定。
