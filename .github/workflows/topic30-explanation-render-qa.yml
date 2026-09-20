@@ -19,7 +19,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y poppler-utils
-          python -m pip install pypdfium2
+          python -m pip install pypdfium2 pillow
       - name: Verify canonical PDF identity and text
         run: |
           PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf'
