@@ -122,4 +122,4 @@ H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は既診断
 
 Topic 35「ATC① 軌道回路の回路解析」は、EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、clean blind独立再解答まで全工程を通過したため `PASS / COMPLETED` とする。
 
-次工程: Topic 36「ATC② 信号処理とS/N設計」の制作前EXAM_ALIGNMENT。
+次工程: Topic 36「ATC② 信号伝送と周波数」の制作前EXAM_ALIGNMENT。
