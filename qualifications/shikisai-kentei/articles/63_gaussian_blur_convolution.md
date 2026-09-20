@@ -211,7 +211,7 @@ SciPyの現行`gaussian_filter`ドキュメントも、多次元ガウスフィ�
 
 ## 8　色彩学上の注意――RGB平均と「光の平均」は同じとは限らない
 
-[RBG・画素・量子化](49_rgb_pixels_quantization.md)で扱ったように、一般的なsRGBのコード値は光量に対して線形ではない。
+[RGB・画素・量子化](49_rgb_pixels_quantization.md)で扱ったように、一般的なsRGBのコード値は光量に対して線形ではない。
 
 そのため、sRGBコード値の
 
