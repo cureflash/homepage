@@ -5,32 +5,32 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `33 / 39`
-- current_status: `topic_34_clean_blind_v1_failed`
-- last_completed_topic: `33 空調・電熱の熱収支`
-- active_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- next_start: Topic 34のv1 candidate・v1 QA・公式解答・固定EXAM_ALIGNMENT・解説・練習・PowerPointを未閲覧のfresh workerがclean blind v2 candidateを固定し、独立再解答する。candidate固定後にのみ公式照合する。
+- exam_aligned_completed_topics: `34 / 39`
+- current_status: `topic_34_completed_ready_topic_35_exam_alignment`
+- last_completed_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
+- active_topic: `35 ATC① 軌道回路の回路解析`
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 35の制作前EXAM_ALIGNMENTから開始する。固定公式過去問を先に確定し、一次・二次の適用範囲を公式試験範囲と実問題で判定する。未確認実車値は真値化しない。
 
-Topic 01〜33は `PASS / completed`。完成数は `33 / 39` のまま。
+Topic 01〜34は `PASS / completed`。完成数は `34 / 39`。
 
 ## Topic 33 空調・電熱の熱収支
 
 判定: `PASS / COMPLETED`
 
-EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程 `PASS`。固定5問・22答案要素 `22 / 22 PASS`、SPEC固定7項目 `7 / 7`。未確認実車値の真値化、Topic 21一般式変更、exact blockerはいずれも `0件`。
+EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程 `PASS`。固定5問・22答案要素 `22 / 22 PASS`、SPEC固定7項目 `7 / 7`、exact blocker `0件`。
 
 ## Topic 34 コンプレッサ・ポンプ・ファンの負荷特性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V1_FAILED`
+判定: `PASS / COMPLETED`
 
 ### 制作前EXAM_ALIGNMENT
 
 - source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics.md`
 - QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_exam_alignment_qa.md`
-- 固定公式過去問: `5問`
-- 一次: `3問 / 15答案要素`
-- 二次: `2問 / 12答案要素`
-- 制作前独立再解答・公式照合: `27 / 27 PASS`
+- 固定公式過去問: `5 / 5`
+- 一次: `3問 / 15答案要素`、`15 / 15 PASS`
+- 二次: `2問 / 12答案要素`、`12 / 12 PASS`
+- 合計: `27 / 27 PASS`
 - SPEC固定7項目: `7 / 7 mapped`
 - 二次問題の件数合わせ採用: `0件`
 - exact blocker: `0件`
@@ -62,91 +62,77 @@ SPEC固定項目:
 - A4縦: `8頁`
 - PDFium / Poppler: `8 / 8 PASS`
 - 固定5問・27答案要素: `27 / 27 PASS`
-- 一次: `15 / 15 PASS`
-- 二次: `12 / 12 PASS`
 - SPEC固定7項目: `7 / 7 PASS`
 - 3段階例題: `3 / 3 PASS`
-- exact blocker: `0件`
 
-### 練習source
+### 練習source / PDF
 
 - source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_source.md`
-- source blob SHA: `2b2ba22fc66ede164abafb853e13d3e199a8b12e`
-- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_source_qa.md`
-- 一次試験型: `8問 / 8問五肢択一`
-- 二次試験型: `4問`
-- 一次正答一意性: `8 / 8 PASS`
-- 数値独立再計算: `PASS`
-- 知識・論理QA: `PASS`
-- 固定5問・27答案要素: `27 / 27 connected`
-- 一次: `15 / 15 PASS`
-- 二次: `12 / 12 PASS`
-- SPEC固定7項目: `7 / 7 PASS`
-- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
-- ポンプ水動力式を固定二種過去問の直接出題式と誤記: `0件`
-- ファン相似則を成立条件なしで一般化: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 35以降の先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-### 練習PDF
-
+- source QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_source_qa.md`
 - PDF: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice.pdf`
 - PDF QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_pdf_qa.md`
 - PDF canonical commit: `afa0daf7535ae614728734cebe48470a2651e631`
-- PDF blob SHA: `6a9ea3697385c5cc1e951106b1f8a76470138ec1`
 - PDF SHA-256: `2f7c1af14e3c6ff1d60bcec1a51e3432b7fe1cfcb2b1056f9b71ff4197f08040`
+- 一次試験型: `8問 / 8問五肢択一`
+- 二次試験型: `4問`
+- 一次正答一意性: `8 / 8 PASS`
 - A4縦: `8頁`
 - PDFium / Poppler: `8 / 8 PASS`
-- blank page / page-edge overflow / U+FFFD: `0件`
-- 一次1〜8: `8 / 8収録 PASS`
-- 二次1〜4: `4 / 4収録 PASS`
 - 固定5問・27答案要素: `27 / 27 connected`
-- 一次: `15 / 15 PASS`
-- 二次: `12 / 12 PASS`
 - SPEC固定7項目: `7 / 7 PASS`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
 
 ### 解説画像PowerPoint
 
 - PowerPoint: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images.pptx`
 - QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images_qa.md`
 - canonical commit: `e165d6db6fb212cfdf750ddbc7953138cde75cf8`
-- PowerPoint SHA-256: `a50257290c31e1ecc3a2c3456bc8ec9762cbc677333414313c0597e9770e44f0`
+- SHA-256: `a50257290c31e1ecc3a2c3456bc8ec9762cbc677333414313c0597e9770e44f0`
 - 16:9: `6枚`
-- python-pptx geometry bounds: `6 / 6 PASS`
-- LibreOffice PDF変換: `6 / 6 PASS`
-- PNG render: `6 / 6 PASS`
-- source notes: `6 / 6 PASS`
-- blank render / page-edge overflow / U+FFFD: `0件`
+- python-pptx geometry / LibreOffice PDF / PNG render: `6 / 6 PASS`
 - 固定5問・27答案要素: `27 / 27 connected`
-- 一次: `15 / 15 PASS`
-- 二次: `12 / 12 PASS`
 - SPEC固定7項目: `7 / 7 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 35以降の先取り: `0件`
-- exact blocker: `0件`
 
-### clean blind v1
+### clean blind
 
+v1:
 - candidate: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_candidate.md`
-- candidate commit: `851446050c4e4e7723373e3cabf715f58d24bc65`
 - QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_qa.md`
 - result: `26 / 27 FAIL`
-- 一次: `14 / 15`
-- 二次: `12 / 12`
-- candidate固定後修正: `0件`
-- 教材欠落によるFAIL: `0件`
-- 診断: `1要素の穴埋め文・選択肢対応ミス。必要な物理関係は既存解説sourceに収録済み。`
+- 診断: `1要素の穴埋め文・選択肢対応ミス。教材欠落ではない。`
 - 既存成果物の修正・再生成: `0件`
-- Topic 21一般式変更: `0件`
+
+v2:
+- candidate: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_v2_candidate.md`
+- candidate blob SHA: `fdf4b1217885497d478e17647598e4713fcca95b`
+- candidate lock commit: `94af90f8472262da74dda7b02eb6c362348fe207`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_v2_qa.md`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- 合計: `27 / 27 PASS`
+- R7二次問2の半負荷回転速度: candidate計算値 `1179 min^-1`、公式最終表示 `1180 min^-1`。同一計算の表示丸め差として `PASS_WITH_ROUNDING_NOTE`。
+- R4二次問3の数値: candidate未丸め値を公式指定桁へ丸めると全件一致。
+- candidate固定後修正: `0件`
+- 教材外知識による補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物再生成: `0件`
 - exact blocker: `0件`
 
-Topic 34自体は未完了。完成数は `33 / 39` のまま。次工程はanswer-bearing未閲覧のfresh workerによるclean blind v2。Topic 35以降はTopic 34完了まで先取りしない。
+Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、clean blind v2独立再解答まで全工程 `PASS`。完成数を `34 / 39` へ更新する。
+
+## Topic 35 ATC① 軌道回路の回路解析
+
+判定: `NOT_STARTED / READY_EXAM_ALIGNMENT`
+
+SPEC固定項目:
+- 軌道回路
+- レールインピーダンス
+- 車軸短絡
+- 受信レベル
+- 信号電流
+- 回路条件
+- フェイルセーフ
+
+次工程は制作前EXAM_ALIGNMENT。公式過去問を先に調査・固定し、一次・二次の実問題対応を確認する。件数合わせやATC固有値の推測はしない。
 
 ## Topic 21 固定注記
 
