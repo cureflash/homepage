@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `36 / 39`
-- current_status: `topic_36_completed_topic_37_pre_exam_alignment`
+- current_status: `topic_37_exam_alignment_complete`
 - last_completed_topic: `36 ATC② 信号伝送と周波数`
 - active_topic: `37 ATC③ 速度制御系`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 37の制作前EXAM_ALIGNMENTを開始する。公式過去問を直近年度から一次・二次の適用範囲を確認し、速度検出・目標速度・伝達関数・ブロック線図・応答・安定性・ブレーキ制御・フェイルセーフのSPEC固定8項目を過去問要求へmappingする。二次対象論点が確認できる場合は記述問題を最低1問含め、確定不能事項は推測しない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 37制作前EXAM_ALIGNMENT＋QAをreconcileし、固定5問・25答案要素（一次5、二次20）、SPEC固定8項目、計算・グラフ2項目、鉄道一次資料の境界を維持したままTopic 37解説sourceを作成する。未確認の実車ATC内部実装・数値を真値化せず、Topic 38を先取りしない。
 
 Topic 01〜36は `PASS / completed`。完成数は `36 / 39`。
 
@@ -413,4 +413,46 @@ H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式
 
 Topic 36はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、clean blind独立再解答まで全工程 `PASS`。完成数を `36 / 39` へ更新する。
 
-次工程はTopic 37 `ATC③ 速度制御系` の制作前EXAM_ALIGNMENT。
+## Topic 37 ATC③ 速度制御系
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+### 制作前EXAM_ALIGNMENT
+
+- source: `topics/37_atc_speed_control_system/37_atc_speed_control_system.md`
+- source commit: `b7f947e0f5faeeccc161bef37c11f105ead8fd2d`
+- QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_exam_alignment_qa.md`
+- QA commit: `482dcfa917de54c13d1a5904be0eb7185a14a1a7`
+- 固定公式過去問: `5 / 5 PASS`
+- 一次: `1問 / 5答案要素`、`5 / 5 PASS`
+- 二次: `4問 / 20答案要素`、`20 / 20 PASS`
+- 合計: `25 / 25 PASS`
+- SPEC固定8項目: `8 / 8 mapped`
+- 系列SPEC固定計算・グラフ: `2 / 2 mapped`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車ATC内部実装・数値の真値化: `0件`
+- Topic 38先取り: `0件`
+- exact blocker: `0件`
+
+固定過去問:
+- R4一次「機械」問7
+- R7二次「機械・制御」問4
+- R6二次「機械・制御」問4
+- R4二次「機械・制御」問4
+- R3二次「機械・制御」問4
+
+SPEC固定項目:
+- 速度検出
+- 目標速度
+- 伝達関数
+- ブロック線図
+- 応答
+- 安定性
+- ブレーキ制御
+- フェイルセーフ
+
+鉄道側はJRTT一次資料で「速度信号―列車速度―自動ブレーキ」の一般原理まで固定し、実車速度検出方式・制御周期・制御器ゲイン・伝達関数・ブレーキ則・減速度・遅れ時間・フェイルセーフ実装は推測しない。鉄道総研ATS-Dxは関連する速度照査の補助資料に限定し、新幹線ATC実装として扱わない。
+
+Topic 37は制作前EXAM_ALIGNMENT＋QAのみ完了。完成数は `36 / 39` のまま。
+
+次工程: Topic 37解説source作成＋source QA。固定5問・25答案要素、SPEC固定8項目、計算・グラフ2項目、一次・二次の試験対応、鉄道一次資料の境界を変更しない。
