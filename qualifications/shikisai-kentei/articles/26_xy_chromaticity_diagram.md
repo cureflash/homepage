@@ -1,6 +1,6 @@
 # xy色度図は何を捨て、何を残すのか――XYZを2次元へ射影する
 
-色彩検定1級では、XYZ表色系と均等色空間が重要範囲になる。色彩検定協会が2026年に案内している1級公式テキスト解説セミナーでも、p.41〜52の「混色」「XYZ表色系と均等色空間」が対象として明示されている。
+色彩検定1級では、XYZ表色系と均等色空間が重要範囲になる。色彩検定協会が2026年に案内している1級公式テキスト解説セミナーでも、公式テキストp.41〜52の「混色」「XYZ表色系と均等色空間」が対象として明示されている。
 
 XYZ表色系を学ぶと、次に馬蹄形のxy色度図が出てくる。しかし、なぜ3個の三刺激値 $X,Y,Z$ を2個の座標 $x,y$ に減らしてよいのか、図上の直線や三角形が何を意味するのかを理解しないまま暗記すると、色域・補色・混色・白色点の関係がばらばらに見えてしまう。
 
@@ -135,7 +135,7 @@ $$
 
 CIEは1931標準測色観察者について、波長ごとの色度座標データを公開している。
 
-単色光のXYZは、その波長 $\lambda$ に対する色合わせ関数
+単色光のXYZは、その波長 $\lambda$ に対する等色関数
 
 $$
 \bar x(\lambda),\quad\bar y(\lambda),\quad\bar z(\lambda)
@@ -218,9 +218,30 @@ $$
 
 である。
 
-これは $(x_1,y_1)$ と $(x_2,y_2)$ の加重平均なので、混合色の色度は必ず2点を結ぶ線分上に来る。
+ここで
 
-ここで注意したいのは、図上の中点が必ずしも「2つの光を物理的に同じパワーで混ぜた状態」になるわけではないことである。重みには $S_1,S_2$ も入るからである。
+$$
+t=\frac{bS_2}{aS_1+bS_2},\qquad 0\le t\le1
+$$
+
+と置けば、
+
+$$
+(x,y)
+=(1-t)(x_1,y_1)+t(x_2,y_2)
+$$
+
+となる。これは2点の凸結合である。したがって混合色の色度は必ず $(x_1,y_1)$ と $(x_2,y_2)$ を結ぶ線分上に来る。
+
+この式は、色度図上の位置が単なる図形上の経験則ではなく、XYZの線形加算と正規化から必然的に生じることを示している。
+
+また、図上の中点 $t=1/2$ になる条件は
+
+$$
+aS_1=bS_2
+$$
+
+である。したがって $a=b$、つまり2つの光源を同じ倍率で足しただけでは、一般には色度図上の中点にはならない。三刺激値総和 $S_1,S_2$ が異なるからである。
 
 ## 6　三原色の色域が三角形になる理由
 
@@ -242,11 +263,40 @@ $$
 
 となる。
 
-2色混合が線分を作るので、3色の全混合はxy色度図上で三原色の色度点を頂点とする三角形の内部を埋める。
+それぞれの三刺激値総和を $S_R,S_G,S_B$ とし、
 
-これがディスプレイの色域が三角形で描かれる理由である。
+$$
+w_R=\frac{rS_R}{rS_R+gS_G+bS_B},
+$$
 
-三角形の外側の色度をその3原色だけで作ろうとすると、少なくとも1つの係数を負にしなければならない。実際の加法混色では「負の光」は出せないため、その色は色域外となる。
+$$
+w_G=\frac{gS_G}{rS_R+gS_G+bS_B},
+$$
+
+$$
+w_B=\frac{bS_B}{rS_R+gS_G+bS_B}
+$$
+
+と置くと、
+
+$$
+w_R+w_G+w_B=1,
+\qquad
+w_R,w_G,w_B\ge0
+$$
+
+であり、混合色の色度は
+
+$$
+(x,y)
+=w_R(x_R,y_R)+w_G(x_G,y_G)+w_B(x_B,y_B)
+$$
+
+となる。
+
+これは3頂点に対する重心座標、すなわち3点の凸結合である。したがって三原色から作れる色度の集合は、xy色度図上で三原色の色度点を頂点とする三角形の内部になる。
+
+三角形の外側の色度をその3原色だけで作ろうとすると、少なくとも1つの重みを負にしなければならない。実際の加法混色では「負の光」は出せないため、その色は色域外となる。
 
 これはXYZ表色系の記事で扱った「色合わせで負のRGB係数が必要になる」問題と同じ線形代数で説明できる。
 
@@ -284,13 +334,33 @@ xy色度図を見ると、2点間の距離をそのまま色差だと思いた�
 
 $$
 u'=\frac{4X}{X+15Y+3Z}
+=\frac{4x}{-2x+12y+3}
 $$
 
 $$
 v'=\frac{9Y}{X+15Y+3Z}
+=\frac{9y}{-2x+12y+3}
 $$
 
 を使う。
+
+2点の色度差は、この平面上で
+
+$$
+\Delta c
+=
+\sqrt{(\Delta u')^2+(\Delta v')^2}
+$$
+
+と表せる。ただし $u'v'$ は色度だけを扱う2次元座標であり、明度差まで含む完全な知覚色差ではない。物体色の3次元的な色差にはCIELABやCIELUVなどを用いる。
+
+CIE 1976 UCSはCIE 1960 UCSを改良したもので、CIEの定義では
+
+$$
+u'=u,\qquad v'=1.5v
+$$
+
+という関係にある。
 
 xy色度図が「混色関係を理解する図」として非常に便利なのに対し、知覚的な色差を扱う目的では、さらにL*a*b*などの均等色空間が必要になる。
 
@@ -318,7 +388,55 @@ $$
 
 したがって数学的には、XYZ空間のスケールを取り除いた射影座標と考えるとよい。
 
-## 11　色彩検定で押さえるところ
+## 11　色度を「射影空間の点」として考える
+
+大学レベルでは、色度の数学的意味をさらに明確にできる。
+
+正の倍率 $k$ による
+
+$$
+(X,Y,Z)\sim(kX,kY,kZ),\qquad k>0
+$$
+
+を「同じ色度を表す」という同値関係だと考える。すると1つの色度は、XYZ空間の1点ではなく、原点から同じ方向へ伸びる半直線全体に対応する。
+
+これを斉次座標で
+
+$$
+[X:Y:Z]
+$$
+
+と書けば、
+
+$$
+[X:Y:Z]=[kX:kY:kZ]
+$$
+
+である。
+
+xy色度座標は、この同値類から
+
+$$
+X+Y+Z=1
+$$
+
+となる代表点を1つ選び、
+
+$$
+(x,y,z)
+=
+\left(
+\frac{X}{X+Y+Z},
+\frac{Y}{X+Y+Z},
+\frac{Z}{X+Y+Z}
+\right)
+$$
+
+と表したものだと解釈できる。
+
+物理的に実現する通常の色刺激では $X,Y,Z\ge0$ なので、扱うのは射影空間全体ではなく、その正の領域である。この見方をすると、「明るさを捨てる」「2色混合が直線になる」「三原色色域が凸包になる」という性質が、すべて同じ幾何学から理解できる。
+
+## 12　色彩検定で押さえるところ
 
 検定対策としては、次の関係をまとめて理解するとよい。
 
@@ -328,8 +446,9 @@ $$
 - スペクトル軌跡は単色光の色度を結んだもの
 - 紫軌跡には対応する単一波長がない
 - 2色の加法混色は2点を結ぶ線分上に現れる
-- 三原色の色域は3点を結ぶ三角形になる
+- 三原色の色域は3点を結ぶ三角形、数学的には凸包になる
 - xy図上の距離は知覚的色差に比例しない
+- CIE 1976 UCSでは $u',v'$ を用いて色度の均等性を改善する
 
 最も重要なのは、xy色度図を「色を並べた地図」として暗記しないことである。
 
@@ -349,9 +468,12 @@ $$
 - [色彩検定協会「セミナー・イベント」― 2026年『XYZ 表色系と均等色空間』](https://www.aft.or.jp/pages/event-seminar)
 - [色彩検定協会「色彩検定とは・各級の目安」](https://www.aft.or.jp/pages/feature/level)
 - [CIE e-ILV: chromaticity coordinates](https://cie.co.at/eilvterm/17-23-053)
-- [CIE e-ILV: chromaticity diagram](https://cie.co.at/eilv/147)
+- [CIE e-ILV: chromaticity diagram](https://cie.co.at/eilvterm/17-23-054)
+- [CIE e-ILV: spectral chromaticity coordinates](https://cie.co.at/eilvterm/17-23-055)
+- [CIE e-ILV: purple boundary](https://cie.co.at/eilvterm/17-23-058)
+- [CIE e-ILV: excitation purity](https://cie.co.at/eilvterm/17-23-066)
+- [CIE e-ILV: CIE 1976 uniform-chromaticity-scale diagram](https://cie.co.at/eilvterm/17-23-073)
 - [CIE Datasets: CIE 1931 chromaticity coordinates of spectrum loci / colour-matching functions](https://www.cie.co.at/data-tables)
 - [ISO/CIE 11664-1:2019 Colorimetry — Part 1: CIE standard colorimetric observers](https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0)
+- [ISO/CIE 11664-5:2016 Colorimetry — Part 5: CIE 1976 L*u*v* Colour Space and u', v' Uniform Chromaticity Scale Diagram](https://www.cie.co.at/publications/colorimetry-part-5-cie-1976-luv-colour-space-and-u-v-uniform-chromaticity-scale)
 - [CIE 015:2018 Colorimetry, 4th Edition](https://www.cie.co.at/publications/colorimetry-4th-edition)
-- [CIE e-ILV: CIE 1976 uniform chromaticity scale diagram](https://cie.co.at/eilv/162)
-- [CIE e-ILV: excitation purity](https://cie.co.at/eilvterm/17-23-066)
