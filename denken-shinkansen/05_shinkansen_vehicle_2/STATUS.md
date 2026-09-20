@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `36 / 39`
-- current_status: `topic_37_exam_alignment_complete`
+- current_status: `topic_37_explanation_source_complete`
 - last_completed_topic: `36 ATC② 信号伝送と周波数`
 - active_topic: `37 ATC③ 速度制御系`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 37制作前EXAM_ALIGNMENT＋QAをreconcileし、固定5問・25答案要素（一次5、二次20）、SPEC固定8項目、計算・グラフ2項目、鉄道一次資料の境界を維持したままTopic 37解説sourceを作成する。未確認の実車ATC内部実装・数値を真値化せず、Topic 38を先取りしない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 37制作前EXAM_ALIGNMENT＋QA、解説source＋source QAをreconcileし、固定5問・25答案要素（一次5、二次20）、SPEC固定8項目、計算・グラフ2項目、鉄道一次資料の境界を維持したままTopic 37解説PDFを生成して表示QAへ進む。未確認の実車ATC内部実装・数値を真値化せず、Topic 38を先取りしない。
 
 Topic 01〜36は `PASS / completed`。完成数は `36 / 39`。
 
@@ -415,7 +415,7 @@ Topic 36はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 37 ATC③ 速度制御系
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -453,6 +453,29 @@ SPEC固定項目:
 
 鉄道側はJRTT一次資料で「速度信号―列車速度―自動ブレーキ」の一般原理まで固定し、実車速度検出方式・制御周期・制御器ゲイン・伝達関数・ブレーキ則・減速度・遅れ時間・フェイルセーフ実装は推測しない。鉄道総研ATS-Dxは関連する速度照査の補助資料に限定し、新幹線ATC実装として扱わない。
 
-Topic 37は制作前EXAM_ALIGNMENT＋QAのみ完了。完成数は `36 / 39` のまま。
+### 解説source
 
-次工程: Topic 37解説source作成＋source QA。固定5問・25答案要素、SPEC固定8項目、計算・グラフ2項目、一次・二次の試験対応、鉄道一次資料の境界を変更しない。
+- source: `topics/37_atc_speed_control_system/37_atc_speed_control_system_explanation_source.md`
+- source commit: `3964fa2fef6222dd65aa802c3e7d9363faefb27a`
+- source blob SHA: `8f4f64b2fcbd75c8f13c156b57ae564c33a719dd`
+- source QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_explanation_source_qa.md`
+- source QA commit: `eb895eb15fd1bea8f89751d824375db0ea09b403`
+- source QA blob SHA: `5f57ef0a04a90469c8d3d545eafefebc067c51d4`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- 一次: `5 / 5 PASS`
+- 二次: `20 / 20 PASS`
+- SPEC固定8項目: `8 / 8 PASS`
+- 系列SPEC固定計算・グラフ: `2 / 2 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 公式・数値独立再計算: `PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 教材用仮定値を実車値として使用: `0件`
+- ATS-Dxを新幹線ATC実装として使用: `0件`
+- 未確認実車ATC内部実装・数値の真値化: `0件`
+- Topic 38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QAまで完了。完成数は `36 / 39` のまま。
+
+次工程: Topic 37解説PDF生成＋表示QA。固定5問・25答案要素、SPEC固定8項目、計算・グラフ2項目、3段階例題、一次・二次の試験対応、鉄道一次資料の境界を変更しない。
