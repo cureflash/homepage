@@ -1,0 +1,36 @@
+name: Topic 35 PDF one-shot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'denken-shinkansen/05_shinkansen_vehicle_2/topics/35_atc_track_circuit_analysis/.pdf_build/BUILD'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconstruct canonical PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='denken-shinkansen/05_shinkansen_vehicle_2/topics/35_atc_track_circuit_analysis'
+          cat "$base"/.pdf_build/part*.b64 | tr -d '\n\r' | base64 -d > "$base/35_atc_track_circuit_analysis_explanation.pdf"
+          test "$(sha256sum "$base/35_atc_track_circuit_analysis_explanation.pdf" | awk '{print $1}')" = 'c3d19babf5624e8cbf856959c0cb53dac5b1eedfcc071f8908bf4326d76cd9cc'
+          rm -rf "$base/.pdf_build"
+          rm -f .github/workflows/topic35-pdf-once.yml
+      - name: Commit generated PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add Topic 35 explanation PDF'
+          git push origin HEAD:main
