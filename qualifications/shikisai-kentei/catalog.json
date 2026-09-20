@@ -74,6 +74,15 @@
       "source":"articles/25_cie_xyz_tristimulus.md"
     },
     {
+      "id":"26_xy_chromaticity_diagram",
+      "articleNo":26,
+      "seriesId":"colorimetry-design",
+      "title":"xy色度図は何を捨て、何を残すのか――XYZを2次元へ射影する",
+      "summary":"XYZの正規化からxy色度座標を導き、スペクトル軌跡、紫軌跡、混色直線、三原色色域、白色点、補色、非均等性までを線形代数と測色学で理解する。",
+      "levels":["1級：XYZ表色系・均等色空間","大学：測色学・線形代数"],
+      "source":"articles/26_xy_chromaticity_diagram.md"
+    },
+    {
       "id":"34_emerald_crystal_field",
       "articleNo":34,
       "seriesId":"chemistry-geoscience",
