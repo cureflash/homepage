@@ -8,7 +8,7 @@
 
 Topic 01〜28は最終QAまで `PASS / completed`。完成数は `28 / 39`。
 
-現在地は `topic_29_explanation_pdf_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
+現在地は `topic_29_practice_source_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
 
 ## Topic 28 完了状態
 
@@ -68,9 +68,7 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 
 教材用速度モデル `I_rms(v)` と `F_model(v)` は、指定可視化を説明するための仮定モデルとして明記済み。L0系実車の速度―力特性式として扱わない。
 
-## Topic 29 今回完了
-
-解説PDFとQAをGitHub正本へ反映する。
+## Topic 29 解説PDF
 
 - PDF: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation.pdf`
 - QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_pdf_qa.md`
@@ -84,6 +82,26 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 - 二次: `4 / 4 covered`
 - SPEC必須8項目: `8 / 8 covered`
 - 指定3可視化: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
+## Topic 29 今回完了
+
+練習sourceとQAをGitHub正本へ固定した。
+
+- source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_source.md`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_source_qa.md`
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 一次試験型: `8 / 8 PASS`、五肢択一・正答一意
+- 二次試験型: `4 / 4 PASS`、途中式・前提・単位・理由を記載
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 固定5問・24答案要素: `24 / 24 connected`
+- 一次: `20 / 20 connected`
+- 二次: `4 / 4 connected`
+- SPEC必須8項目: `8 / 8 covered`
+- 指定3可視化の計算系: `3 / 3 aligned`
+- L0系未確認実車値の真値化: `0件`
+- Topic 30先取り: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
@@ -108,13 +126,14 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 
 ## 次の安全な工程
 
-Topic 29練習sourceを作成する。
+`29_l0_superconducting_magnetic_levitation_force_practice_source.md` を正本として練習PDFを生成する。
 
 QA項目:
-- 固定5問・24答案要素に対応する練習問題・解答・途中式を整備
-- 一次20 / 20、二次4 / 4の接続維持
+- A4縦、表示欠け・文字化けなし
+- 一次8問・二次4問を欠落なく収録
+- 解答・途中式・単位・符号がpractice sourceと一致
+- 固定5問・24答案要素への接続維持
 - SPEC必須8項目維持
-- 解説source/PDFと数式・単位・符号を一致
 - L0系未確認実車値の真値化0件
 - Topic 30先取り0件
 
