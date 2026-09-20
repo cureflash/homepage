@@ -2,7 +2,7 @@
 
 更新日: 2026-09-20
 
-判定: `EXPLANATION_SOURCE_DRAFT_COMPLETE`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 固定EXAM_ALIGNMENTの正本は `30_l0_inductive_power_collection_contactless_power_transfer.md` とする。本sourceは固定5問・25答案要素、系列SPEC必須7項目、指定3可視化を変更せず、解説本文・解法手順・3段階例題・可視化条件を具体化する。
 
@@ -580,4 +580,4 @@ H30一次「機械」問5とR2二次「機械・制御」問2への橋渡しと�
 - Topic 21 H26二次問1(4)の一般式変更: 0件
 - `48.1 N・m / 48.0 N・m` は既診断どおり `π=3.14` 相当の過去問固有丸め差として維持し、`P=Tω`,`ω=2πN/60` は変更しない。
 
-次工程は本sourceのQAを行い、固定5問・25答案要素、SPEC必須7項目、指定3可視化、数式・単位・数値例、実車境界がPASSなら `EXPLANATION_SOURCE_COMPLETE` とする。その後に解説PDF生成へ進む。
+source QAは `PASS / EXPLANATION_SOURCE_COMPLETE`。次工程は本sourceから解説PDFを生成し、表示・数式・単位・指定3可視化・固定5問25答案要素への接続をQAする。
