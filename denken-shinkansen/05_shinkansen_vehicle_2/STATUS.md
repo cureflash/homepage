@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `27 / 39`
-- current_status: `topic_28_explanation_pdf_resync_complete`
+- current_status: `topic_28_clean_blind_fresh_worker_blocked`
 - last_completed_topic: `27 L0系① リニア同期モータ`
 - active_topic: `28 L0系② 同期機のフェーザと推進力`
-- next_start: 公式解答を見ていないfresh workerで、remediation後教材だけを使ったclean blind候補を別ファイルへ新規固定して再照合する
+- next_start: 公式解答・既存blind比較結果を事前に参照していない別fresh workerで、remediation後教材だけを使ったclean blind候補を別ファイルへ新規固定する
 
 ## 完成済み
 
@@ -178,6 +178,15 @@ Topic 27最終QA:
 - 新規仕様追加: `0件`
 - PDF同期: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
 
+## Topic 28 fresh-worker blocker
+
+- 判定: `BLOCKED / FRESH_WORKER_CONDITION_NOT_CERTIFIABLE`
+- blocker: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_fresh_worker_blocker.md`
+- exact reason: 本runは必須reconcileで `STATUS.md` / `HANDOFF.md` を読んだ時点で前回blindの公式照合内容を閲覧済みのため、本run自身を「公式解答を先に見ていないfresh worker」と認定できない
+- 旧blind候補変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 28 completed化: `しない`
+
 ## Topic 28 固定境界
 
 L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ推進コイルへ三相交流を供給し、移動磁界と車上超電導磁石との吸引・反発で推進する」という原理まで。公開一次資料で確認していない実際の `X_s`、`E`、`δ`、有効電力、無効電力、推力、推進効率を真値化しない。例題・グラフの数値は教材用仮定値として扱う。Topic 29の浮上・案内系は先取りしない。
@@ -188,4 +197,4 @@ L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ
 
 ## 次の安全な工程
 
-Topic 28はまだ `completed` と数えない。公式解答を見ていないfresh workerが、remediation後教材だけを使ってclean blind候補を別ファイルへ新規固定し、固定5問・27答案要素を公式再照合する。今回固定した旧候補は修正しない。再照合PASS後に最終QAへ進む。
+Topic 28はまだ `completed` と数えない。公式解答・既存blind比較結果を事前に参照していない別fresh workerが、remediation後教材だけを使ってclean blind候補を別ファイルへ新規固定し、固定5問・27答案要素を公式再照合する。今回固定した旧候補は修正しない。再照合PASS後に最終QAへ進む。
