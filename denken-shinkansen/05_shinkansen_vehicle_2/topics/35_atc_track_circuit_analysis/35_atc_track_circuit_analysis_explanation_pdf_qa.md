@@ -11,6 +11,7 @@
 - PDF: `35_atc_track_circuit_analysis_explanation.pdf`
 - PDF canonical commit: `51bed9f651d4ba499d54e5de40d6e3061e68b420`
 - PDF SHA-256: `f35699fb423d486ef36ba8a4d69056c8b06eb5059139c8df459b9e1356fef9be`
+- dual-render QA: `35_atc_track_circuit_analysis_renderer_qa_result.md`
 - 初回生成PDFにPopplerの非致命的syntax warningが1件あったため、内容を変更せずqpdfで構造正規化した。最終PDFではqpdf / Popplerとも構文エラー0件。
 
 ## PDF QA
@@ -19,12 +20,17 @@
 - qpdf check: `PASS`（syntax / stream encoding error 0件）
 - Poppler `pdfinfo`: `PASS`
 - Poppler `pdftotext`: `PASS`
-- Poppler `pdftoppm`: `10 / 10 PASS`
-- 文字抽出: `7576 chars / PASS`
+- Poppler 160 dpi render: `10 / 10 PASS`
+- PDFium 160 dpi render: `10 / 10 PASS`
+- 空白頁: `0件`
+- ページ端切れ: `0件`（両rendererの最小content margin `53 px`）
+- renderer mean pixel差: `0.6050%〜1.4595%`
+- 文字抽出: content QA `7576 chars`、dual-render QA `6293 chars`。文字数はQA手順依存の参考値とし、合否は必須語句・数値抽出と文字化け有無で判定する。
 - 置換文字 U+FFFD: `0件`
 - SPEC固定語句: `7 / 7 PASS`
 - 固定過去問ラベル: `R8一次 / R7一次 / R6一次 / R5一次 = 4 / 4 PASS`
 - 3段階例題の代表値 `9.00 / 9.78 / 15.677 / 2.683`: `4 / 4 PASS`
+- dual-render QA追加例題値 `0.500 / 7.692 / 0.7519 / 0.03759 / 0.1712`: `5 / 5 PASS`
 - 固定答案列の抽出: `PASS`
 
 ## 固定過去問答案要素ゲート
