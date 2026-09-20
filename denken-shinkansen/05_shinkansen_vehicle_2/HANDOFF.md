@@ -8,7 +8,7 @@
 
 Topic 01〜33は最終QAまで `PASS / completed`。完成数 `33 / 39`。
 
-現在地は `topic_34_powerpoint_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPointまで完了。次工程はanswer-bearing資料を未閲覧のfresh workerによるclean blind candidate固定・独立再解答。
+現在地は `topic_34_clean_blind_v1_failed`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPointまで完了。clean blind v1は `26 / 27 FAIL`。次工程はanswer-bearing資料を未閲覧のfresh workerによるclean blind v2 candidate固定・独立再解答。
 
 ## Topic 33 完了記録
 
@@ -173,11 +173,32 @@ canonical:
 - Topic 35以降の先取り: `0件`
 - exact blocker: `0件`
 
+## Topic 34 clean blind v1
+
+判定: `FAIL / 26 of 27`
+
+canonical:
+- candidate: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_candidate.md`
+- candidate commit: `851446050c4e4e7723373e3cabf715f58d24bc65`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_qa.md`
+
+品質ゲート:
+- 固定5問・27答案要素: `26 / 27`
+- 一次: `14 / 15`
+- 二次: `12 / 12`
+- candidate固定後修正: `0件`
+- 教材欠落によるFAIL: `0件`
+- 診断: `1要素の穴埋め文・選択肢対応ミス。必要な物理関係は既存解説sourceに収録済み。`
+- 既存成果物の修正・再生成: `0件`
+- 公式問題・標準解答の確定不能事項: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 Topic 34自体は未完了。完成数は `33 / 39` のまま。
 
 ## 次工程
 
-answer-bearing資料を未閲覧のfresh workerがTopic 34のclean blind candidateを固定し、独立再解答する。その後に固定EXAM_ALIGNMENT・公式解答と照合してTopic 34の最終完了を判定する。本runは固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointのanswer-bearing資料を確認済みなのでclean blind candidateを作成しない。Topic 35以降はTopic 34完了まで先取りしない。
+本v1 candidate・v1 QA・公式解答・固定EXAM_ALIGNMENT・解説source/PDF・練習source/PDF・PowerPointなどanswer-bearing資料を未閲覧のfresh workerが、公式問題のみを用いてTopic 34 clean blind v2 candidateを固定し、独立再解答する。candidate固定後に公式標準解答と照合し、`27 / 27` の場合のみTopic 34をcompletedとする。Topic 35以降はTopic 34完了まで先取りしない。
 
 ## Topic 21 固定境界
 
