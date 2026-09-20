@@ -5,13 +5,13 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `34 / 39`
-- current_status: `topic_35_powerpoint_complete`
-- last_completed_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- active_topic: `35 ATC① 軌道回路の回路解析`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 35の固定EXAM_ALIGNMENT・解説source/PDF・練習source/PDF・PowerPointを変更せず、answer-bearing資料を先に開かないfresh workerでclean blind candidateを固定して独立再解答QAへ進む。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
+- exam_aligned_completed_topics: `35 / 39`
+- current_status: `topic_35_completed_ready_topic_36_exam_alignment`
+- last_completed_topic: `35 ATC① 軌道回路の回路解析`
+- active_topic: `36 ATC② 信号伝送と周波数`
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 36の制作前EXAM_ALIGNMENTから開始する。固定公式過去問を先に確定し、一次・二次の適用範囲を公式試験資料と実問題で判定する。未確認実車値の真値化、Topic 37・38先取りは行わない。
 
-Topic 01〜34は `PASS / completed`。完成数は `34 / 39`。
+Topic 01〜35は `PASS / completed`。完成数は `35 / 39`。
 
 ## Topic 33 空調・電熱の熱収支
 
@@ -121,7 +121,7 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 35 ATC① 軌道回路の回路解析
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `PASS / COMPLETED`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -237,7 +237,39 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程は固定EXAM_ALIGNMENT・解説source/PDF・練習source/PDF・PowerPointを変更せず、answer-bearing資料を先に開かないfresh workerによるclean blind candidate固定＋独立再解答QA。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
+### clean blind
+
+- candidate: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_clean_blind_candidate.md`
+- candidate blob SHA: `132183604321049b5072c68476b93c06dd69d50a`
+- candidate lock commit: `2bcf5961818074ad647004af19ce8d74b3021d07`
+- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_clean_blind_qa.md`
+- QA canonical commit: `d401c3c67a7688bb3a6beeeb31a924959291b2cf`
+- 一次: `25 / 25 PASS`
+- 二次: `0問`（直接対応問題未確認、件数合わせなし）
+- 合計: `25 / 25 PASS`
+- candidate固定後修正: `0件`
+- 教材欠落による補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物再生成: `0件`
+- exact blocker: `0件`
+
+Topic 35はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、clean blind独立再解答まで全工程 `PASS`。完成数を `35 / 39` へ更新する。
+
+## Topic 36 ATC② 信号伝送と周波数
+
+判定: `NOT_STARTED / READY_EXAM_ALIGNMENT`
+
+SPEC固定項目:
+- 周波数
+- 信号伝送
+- 変調
+- フィルタ
+- ノイズ
+- S/N
+- デジタル判定
+- 冗長化
+
+次工程は制作前EXAM_ALIGNMENT。公式過去問を先に調査・固定し、一次・二次の実問題対応を確認する。件数合わせやATC固有値の推測はしない。
 
 ## Topic 21 固定注記
 
