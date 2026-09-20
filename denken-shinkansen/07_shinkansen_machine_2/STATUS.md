@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_metadata_sync_complete / IN_PROGRESS`
-- last_completed_topic: `20 制御系はなぜ発振する？`
-- active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 最終QA再実施
+- exam_aligned_completed_topics: `21 / 22`
+- current_status: `topic_21_final_qa_pass / completed`
+- last_completed_topic: `21 空転した車輪を再粘着させる`
+- active_topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
+- next_start: Topic 22 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -17,7 +17,7 @@
 - [x] Topic 18 最終QA `PASS / completed`
 - [x] Topic 19 最終QA `PASS / completed`
 - [x] Topic 20 最終QA `PASS / completed`
-- [ ] Topic 21
+- [x] Topic 21 最終QA `PASS / completed`
 - [ ] Topic 22
 
 ## Topic 20 固定範囲
@@ -284,7 +284,7 @@
 - `topics/21_readhesion_control/21_readhesion_control_powerpoint_qa.md` — PowerPoint QA完了
 - `topics/21_readhesion_control/21_readhesion_control_blind_reanswer_gate.md` — 独立再解答前ゲート完了
 - `topics/21_readhesion_control/21_readhesion_control_independent_reanswer.md` — 完成後独立再解答・公式照合・記録QA完了
-- `topics/21_readhesion_control/21_readhesion_control_final_qa.md` — 前回最終QA `NEEDS_REVISION`、再実施待ち
+- `topics/21_readhesion_control/21_readhesion_control_final_qa.md` — 最終QA `PASS / completed`
 
 ## Topic 21 最終QA
 - 上位仕様・系列SPEC照合: `PASS`
@@ -295,12 +295,12 @@
 - 独立再解答記録QA: `8 / 8 PASS`
 - 教材の概念・解法不足: `0件`
 - 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
-- 前回の進捗・正本整合: main sourceと練習sourceの2件未同期
-- 現在: 2件とも同期済み、最終QA再判定待ち
-- 前回判定: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
+- 前回未同期の進捗メタデータ2件: `2 / 2 PASS`
+- 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの追加修正: `0件`
+- 判定: `PASS / topic_21_final_qa_pass / completed`
 
 ## 今回進めた内容
-Topic 21の最終QAで指摘された進捗メタデータ2件を同期した。`21_readhesion_control.md` は現行工程・独立再解答結果・次工程を同期し、`21_readhesion_control_practice.md` は次工程を最終QA再実施へ更新した。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更していない。完成数は `20 / 22` のまま。
+Topic 21の最終QAを再実施した。前回指摘した進捗メタデータ2件は現行mainで同期済み、技術・成果物・独立再解答・正本整合の全ゲートがPASSしたため、Topic 21を `completed` とした。完成数は `21 / 22`。
 
 ## 次工程
-Topic 21の最終QAを再実施する。
+Topic 22「東京→新大阪を主回路＋走行制御でシミュレーション」の制作前EXAM_ALIGNMENT。
