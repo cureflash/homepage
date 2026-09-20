@@ -6,12 +6,35 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `30 / 39`
-- current_status: `topic_31_exam_alignment_complete`
+- current_status: `topic_31_explanation_source_complete`
 - last_completed_topic: `30 L0系④ 誘導集電・非接触電力伝送`
 - active_topic: `31 補助電源変換器`
-- next_start: Topic 31解説sourceを作成し、固定5問・27答案要素とSPEC 8項目を本文へ1対1で接続する
+- next_start: Topic 31解説sourceから解説PDFを生成し、A4・全文・数式・表・ページ端・置換文字を複数レンダラでQAする
 
-Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENTまで完了。
+Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了。
+
+## Topic 31 解説source
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation_source.md`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation_source_qa.md`
+
+QA:
+- 固定5問・27答案要素への教材接続: `27 / 27 PASS`
+- SPEC固定8項目: `8 / 8 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 数式・数値独立確認: `PASS`
+- R2二次問2の変圧器固有最大効率条件を変換器へ普遍化: `0件`
+- H22一次問3の太陽光・MPPT固有事項追加: `0件`
+- R5二次問3の能動フィルタを実車搭載事実化: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 32〜34先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+教材例題の電圧・電流・容量・損失等はすべて教材用仮定値と明示。実車接続はメーカー一次資料で確認できた鉄道車両用電源装置の一般事実に限定し、特定新幹線の未確認定格・トポロジー・素子・効率を真値化していない。
 
 ## Topic 31 EXAM_ALIGNMENT
 
