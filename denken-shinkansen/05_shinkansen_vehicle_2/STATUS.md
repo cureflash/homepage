@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `26 / 39`
-- current_status: `topic_27_clean_blind_blocked_this_run`
+- current_status: `topic_27_clean_blind_candidates_locked`
 - last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
 - active_topic: `27 L0系① リニア同期モータ`
-- next_start: fresh workerでTopic 27 clean blind候補固定。candidate lock前はanswer-bearing `27_l0_linear_synchronous_motor.md` を開かず、固定問題IDはSTATUS/HANDOFFから取得し、教材だけで固定5問・23答案要素を解いて候補をcommitする
+- next_start: Topic 27のlocked candidateを変更せず、公式解答・保存済み照合結果と比較してclean blind公式照合QAを作成する
 
 ## Topic 25 最終状態
 
@@ -340,13 +340,13 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - PPTX ZIP / python-pptx / geometry: `PASS`
 - LibreOffice PDF変換: `6 / 6 PASS`
 - `pdftotext -layout`: `PASS`（9,826 bytes）
-- 置換文字 `�`: `0件`
+- 置換文字: `0件`
 - 固定過去問: `5 / 5 connected`
 - 一次答案要素: `18 / 18 connected`
 - 二次答案要素: `5 / 5 connected`
 - 合計答案要素: `23 / 23 connected`
 - SPEC必須7項目: `7 / 7 PASS`
-- SPEC指定2可視化: `2 / 2 PASS`
+- 指定2可視化: `2 / 2 PASS`
 - 未確認L0系実車値の真値化: `0件`
 - Topic 28範囲の先取り: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -355,14 +355,30 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 ## Topic 27 clean blind gate blocker
 
-- 判定: `BLOCKED_THIS_RUN / CLEAN_BLIND_INTEGRITY`
+- 判定: `RESOLVED_BY_FRESH_WORKER / HISTORICAL_RECORD`
 - record: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_clean_blind_gate_blocker.md`
-- candidate作成: `0件`
-- 原因: candidate lock前に保存済み独立解答・公式照合結果を含むanswer-bearing sourceを参照したため、このrunではblind性を証明不能
+- 原因: 前runでcandidate lock前にanswer-bearing sourceを参照し、blind性を証明できなかった
+- 回復: fresh workerでanswer-bearing source・公式解答をcandidate lock前に開かず再実施し、候補固定を完了
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 21一般式変更: `0件`
-- technical/spec blocker: `0件`
-- fresh workerで回復可能
+
+## Topic 27 clean blind候補固定
+
+- 判定: `LOCKED / CLEAN_BLIND_CANDIDATES_FIXED`
+- path: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_blind_candidates.md`
+- lock commit: `fe677eb5c89613a8ed06e1c2343a5cf0525f5d21`
+- 固定過去問: `5 / 5 candidate fixed`
+- 一次答案要素: `18 / 18 candidate fixed`
+- 二次答案要素: `5 / 5 candidate fixed`
+- 合計答案要素: `23 / 23 candidate fixed`
+- candidate lock前の公式解答参照: `0件`
+- candidate lock前のanswer-bearing `27_l0_linear_synchronous_motor.md`参照: `0件`
+- candidate lock後の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- 未確認L0系実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- exact blocker: `0件`
 
 ## Topic 21 H26二次 問1(4)
 
@@ -370,4 +386,4 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 
 ## 完成数
 
-Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27はPowerPoint完了済み。clean blind候補固定はfresh workerへ引き継ぐ。
+Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27はPowerPoint完了・clean blind候補固定済み。次は公式解答照合。
