@@ -47,6 +47,15 @@
       "source":"articles/04_transparent_color_beer_lambert.md"
     },
     {
+      "id":"05_refraction_dispersion",
+      "articleNo":5,
+      "seriesId":"physics",
+      "title":"なぜプリズムで白い光が虹色に分かれるのか――屈折と分散を電磁気学から考える",
+      "summary":"Snellの法則を位相連続から導き、Lorentz振動子による物質分極、複素屈折率、正常分散、Cauchy・Sellmeier式、プリズム分光、色収差までつなげて理解する。",
+      "levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：電磁気学・光学"],
+      "source":"articles/05_refraction_dispersion.md"
+    },
+    {
       "id":"14_retina_phototransduction",
       "articleNo":14,
       "seriesId":"biology",
