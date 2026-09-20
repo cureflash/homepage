@@ -8,7 +8,7 @@
 
 Topic 01〜34は最終QAまで `PASS / completed`。完成数 `34 / 39`。
 
-現在地は `topic_35_exam_alignment_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENTは固定5問・25答案要素 `25 / 25 PASS`、SPEC固定7項目 `7 / 7 mapped`。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、固定EXAM_ALIGNMENTを変更せずTopic 35解説sourceを作成する。
+現在地は `topic_35_explanation_source_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENTと解説source QAまで完了。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、固定EXAM_ALIGNMENTと解説sourceを変更せずTopic 35解説PDFを生成し、PDF QAを実施する。
 
 ## Topic 34 完了記録
 
@@ -124,9 +124,11 @@ canonical:
 
 Topic 34は全工程を通過したため `PASS / COMPLETED`。完成数を `34 / 39` とする。
 
-## Topic 35 制作前EXAM_ALIGNMENT 完了
+## Topic 35 進捗
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+### 制作前EXAM_ALIGNMENT
 
 canonical:
 - source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis.md`
@@ -149,29 +151,29 @@ canonical:
 - R7〜R5二次確認範囲で本Topicへ直接対応する問題: `0件`
 - 二次問題の件数合わせ採用: `0件`
 - SPEC固定7項目: `7 / 7 mapped`
-- 公式解答との不一致: `0件`
 - exact blocker: `0件`
 
-SPEC固定項目:
-- 軌道回路
-- レールインピーダンス
-- 車軸短絡
-- 受信レベル
-- 信号電流
-- 回路条件
-- フェイルセーフ
+### 解説source
 
-固定過去問は軌道回路そのものを問う問題とは扱わず、一般回路理論を軌道回路の簡略等価回路へ接続するための試験対応として固定した。鉄道固有原理はJRTT・鉄道総研の一次資料で確認済み。
+canonical:
+- source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_source.md`
+- source commit: `6f1e43f9473bfe004b0385260f77bf49d4d21d82`
+- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_source_qa.md`
+- QA commit: `283cc934c5339f7eec882af4c1573bc024467dfe`
 
-境界:
-- 未確認レールインピーダンス実値の真値化: `0件`
-- 未確認車軸短絡抵抗実値の真値化: `0件`
-- 未確認受信しきい値・信号電流実値の真値化: `0件`
-- Topic 36の変調・フィルタ・ノイズ・S/N等の先取り: `0件`
-- Topic 37の速度制御・ブレーキ制御の先取り: `0件`
+品質ゲート:
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定7項目: `7 / 7 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 数値・複素数再計算: `PASS`
+- JRTT・鉄道総研一次資料への接続: `PASS`
+- 固定過去問を軌道回路そのものの出題と偽装: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 36・37先取り: `0件`
 - Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
-次工程: 固定5問・25答案要素、SPEC固定7項目、二次適用判定、鉄道一次資料の境界を変更せず、Topic 35解説sourceを作成する。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
+次工程: 固定EXAM_ALIGNMENTと解説sourceを変更せず、Topic 35解説PDFを生成しPDF QAを実施する。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
 
 ## Topic 21 固定境界
 
