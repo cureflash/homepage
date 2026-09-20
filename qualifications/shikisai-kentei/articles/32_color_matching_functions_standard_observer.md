@@ -426,7 +426,73 @@ $$
 
 なども最終XYZの不確かさへ影響する。
 
-## 14　色彩検定で押さえるべき因果関係
+## 14　分光帯域幅と測定誤差はXYZへどう伝わるか
+
+分光器は、ある波長だけを無限に細く切り出して測ることはできない。真のスペクトルを $\Phi(\lambda)$、装置の正規化された分光応答（スリット関数・line-spread function）を $h(\lambda)$ とすると、測定スペクトルは近似的に
+
+$$
+\Phi_{\mathrm{meas}}(\lambda)
+=
+\int h(\lambda-\lambda')\Phi(\lambda')\,d\lambda',
+\qquad
+\int h(\lambda)\,d\lambda=1
+$$
+
+と書ける。つまり装置は真のスペクトルをそのまま読むのではなく、装置自身の分光応答との畳み込みを測っている。
+
+分光帯域幅が広いほど、狭い発光ピークや急峻な吸収端は平滑化される。白熱光のような滑らかなスペクトルより、LEDやレーザーのような狭帯域成分を含む光源で影響が大きくなりやすい。
+
+離散化した測色式を
+
+$$
+\mathbf{t}=A\boldsymbol{\Phi},
+\qquad
+\mathbf{t}=
+\begin{bmatrix}X\\Y\\Z\end{bmatrix}
+$$
+
+と書く。スペクトル測定に誤差 $\delta\boldsymbol{\Phi}$ が加われば、XYZの一次誤差は
+
+$$
+\delta\mathbf{t}=A\,\delta\boldsymbol{\Phi}
+$$
+
+となる。これは「波長ごとの測定誤差が、等色関数による重み付き和としてXYZへ伝播する」ことを意味する。
+
+さらにスペクトル測定値の共分散行列を $\Sigma_{\Phi}$ とすれば、線形モデルではXYZの共分散は
+
+$$
+\boxed{
+\Sigma_{XYZ}=A\Sigma_{\Phi}A^{\mathsf T}
+}
+$$
+
+となる。したがって、同じ大きさの測定誤差でも、等色関数の重みが大きい波長域の誤差ほどXYZへ強く効く。また隣接波長の誤差が相関していれば、その相関もXYZの不確かさへ残る。
+
+波長校正のずれも同様に評価できる。波長位置が微小量 $\delta\lambda_i$ ずれたとき、等色関数側だけを一次展開した単純化モデルでは
+
+$$
+\delta X
+\approx
+k\sum_i
+\Phi_i
+\left.\frac{d\bar{x}}{d\lambda}\right|_{\lambda_i}
+\delta\lambda_i\,\Delta\lambda
+$$
+
+となり、$Y,Z$ も同様である。実際には試料スペクトル自身の波長方向勾配も効くため、急峻なスペクトル構造では波長誤差の影響がさらに大きくなる。
+
+したがって、分光帯域幅・波長精度・迷光・サンプリング間隔は単なる「装置の仕様」ではない。それらは測定されたスペクトル $\boldsymbol{\Phi}$ を変え、最終的に
+
+$$
+\boldsymbol{\Phi}
+\xrightarrow{A}
+(X,Y,Z)
+$$
+
+という測色演算そのものへ誤差として入る。大学レベルでは、分光測色を「スペクトルを測ってXYZを計算する手順」だけでなく、「測定系と線形写像を通した不確かさ伝播」として理解するとよい。
+
+## 15　色彩検定で押さえるべき因果関係
 
 暗記ではなく、次の順序でつなげると理解しやすい。
 
@@ -462,7 +528,7 @@ $$
 
 色彩検定で「標準観察者」「等色関数」「XYZ表色系」「三刺激値」「分光測色」が別々の用語として出てきても、実際にはこの1本の計算経路の異なる部分を指している。
 
-## 15　まとめ
+## 16　まとめ
 
 等色関数の本質は、各波長の色刺激をXYZ三刺激値へ変換するための3本の標準化された重み関数である。
 
@@ -486,7 +552,7 @@ $$
 
 という3つの内積によって、高次元のスペクトルが3個の三刺激値へ圧縮される。
 
-この構造が分かれば、XYZ表色系、標準観察者、分光測色、メタメリズム、2°と10°の違いを同じ数学の上で理解できる。
+この構造が分かれば、XYZ表色系、標準観察者、分光測色、メタメリズム、2°と10°の違いを同じ数学の上で理解できる。さらに測定誤差を $\delta\mathbf{t}=A\delta\boldsymbol{\Phi}$ と書けば、分光測定の不確かさがXYZへどう伝わるかまで同じ線形代数で追跡できる。
 
 ## 参考資料
 
@@ -497,3 +563,4 @@ $$
 5. W. D. Wright, “A re-determination of the trichromatic coefficients of the spectral colours,” *Transactions of the Optical Society*, 30(4), 141–164, 1929. DOI: 10.1088/1475-4878/30/4/301.
 6. J. Guild, “The colorimetric properties of the spectrum,” *Philosophical Transactions of the Royal Society of London, Series A*, 230, 149–187, 1931/1932. DOI: 10.1098/rsta.1932.0005.
 7. H. S. Fairman, M. H. Brill, H. Hemmendinger, “How the CIE 1931 color-matching functions were derived from Wright-Guild data,” *Color Research & Application*, 22(1), 11–23, 1997.
+8. JCGM, *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*, JCGM 100:2008. DOI: 10.59161/JCGM100-2008E. https://www.bipm.org/en/doi/10.59161/jcgm100-2008e
