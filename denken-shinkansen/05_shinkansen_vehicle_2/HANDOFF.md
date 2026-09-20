@@ -6,10 +6,37 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜30は最終QAまで `PASS / completed`。完成数 `30 / 39`。
+Topic 01〜31は最終QAまで `PASS / completed`。完成数 `31 / 39`。
 
-現在地は `topic_31_powerpoint_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QAまで完了。次はfresh workerによるclean blind candidate固定。
+現在地は `topic_31_completed_topic_32_exam_alignment_pending`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QA、fresh clean blind＋公式照合まで完了。次はTopic 32 `照明設計` の制作前EXAM_ALIGNMENT。
 
+## Topic 31 最終完了記録
+
+判定: `PASS / COMPLETED`
+
+clean blind:
+- candidate: `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_clean_blind_candidate.md`
+- candidate blob: `007efb48e5934ed4a18aee12ec7ba8a252bc78b0`
+- candidate lock commit: `4a945dd9adf321cd7a4d1df97a9c4cec262b2b90`
+- compare QA: `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_clean_blind_compare_qa.md`
+- candidate固定後修正: `0件`
+
+完成後独立再解答:
+- R7 一次「機械」問4 `5 / 5 PASS`
+- R5 二次「機械・制御」問3 `7 / 7 PASS`
+- R4 一次「機械」問4 `5 / 5 PASS`
+- R2 二次「機械・制御」問2 `5 / 5 PASS`
+- H22 一次「機械」問3 `5 / 5 PASS`
+- 一次 `15 / 15 PASS`
+- 二次 `12 / 12 PASS`
+- 合計 `27 / 27 PASS`
+- 公式照合不一致 `0件`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 未確認実車値の真値化 `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
+
+R5二次問3(2)のcandidate「機器の損失・発熱が増加する」は、公式標準解答例の「コンデンサやリアクトルの過熱や振動」と同じ過熱・発熱影響を述べており整合。R2二次問2は `400 W / 624 W / 80.0 % / 99.0 % / 97.5 %` で公式表示と全一致。
 
 ## Topic 31 PowerPoint完了記録
 
@@ -199,28 +226,24 @@ canonical artifacts:
 
 R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響しない微小差があるが、5答案要素 `400 W / 624 W / 80.0 % / 99.0 % / 97.5 %` は公式表示と全一致。candidateは変更していない。
 
-## Topic 31 固定範囲
+## Topic 32 固定範囲
 
-系列SPECの `31 補助電源変換器` で扱う内容:
-- インバータ
-- コンバータ
-- 三相負荷
-- 力率
-- 高調波
-- 変換損失
+系列SPECの `32 照明設計` で扱う内容:
+- 光束
+- 光度
+- 照度
+- 配光
+- 照明率
+- 保守率
+- 所要灯数
+- 消費電力
 - 効率
-- 負荷変動
 
 ## 次の安全な工程
 
-1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、Topic 31教材成果物をreconcileする。
-2. answer-bearing資料（固定EXAM_ALIGNMENT本体、exam alignment QA、公式解答等）を先に開かないfresh workerで、Topic 31教材だけを使って固定5問・27答案要素を再解答する。
-3. clean blind candidateを先に固定し、固定後に公式解答と照合する。candidate固定後の修正はしない。
-4. R2二次問2の変圧器固有条件、H22のPV/MPPT、R5能動フィルタ実車搭載など固定境界を維持する。
-5. fresh worker条件を満たせない場合はcandidateを捏造せずexact blockerを記録する。
-
-Topic 31完成後のclean blind candidate固定前には、固定EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を先に開かない。
-
-## Topic 21 H26二次 問1(4)
-
-`48.1 N・m / 48.0 N・m` 差は既診断どおり、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として維持する。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
+1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、既存の車両二種worker成果をreconcileする。
+2. Topic 32 `照明設計` について、電気技術者試験センターの二種公式過去問を直近年度から遡り、一次・二次を合わせ原則5問以上調査する。二次記述問題が確認できる場合は最低1問含める。
+3. 光束・光度・照度・配光・照明率・保守率・所要灯数・消費電力・効率の9項目へ、採用過去問の要求知識・式・設問型を1対1でマッピングしてEXAM_ALIGNMENTを固定する。
+4. 実車照明の方式・灯数・光束・照度・消費電力・効率等は一次資料で確認できた値だけを実値として扱い、未確認値は真値化しない。
+5. Topic 21のH26二次問1(4) `48.1 N・m / 48.0 N・m` は過去問固有丸め差として維持し、一般式 `P=Tω`、`ω=2πN/60` は変更しない。
+6. 仕様不整合または確定不能事項が生じた場合は推測せずexact blockerを記録して停止する。
