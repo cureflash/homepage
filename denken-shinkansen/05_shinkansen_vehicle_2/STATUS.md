@@ -6,16 +6,16 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `28 / 39`
-- current_status: `topic_29_practice_source_complete`
+- current_status: `topic_29_practice_pdf_complete`
 - last_completed_topic: `28 L0系② 同期機のフェーザと推進力`
 - active_topic: `29 L0系③ 超電導磁気浮上の電磁力`
-- next_start: Topic 29練習sourceを正本として練習PDFを生成し、表示・数式・単位・一次8問/二次4問・固定5問24答案要素との接続をQAする
+- next_start: Topic 29解説画像PowerPointを生成し、16:9表示・数式・単位・固定5問24答案要素・SPEC必須8項目との接続をQAする
 
 ## 完成済み
 
 Topic 01〜28: `PASS / completed`。完成数 `28 / 39`。
 
-Topic 29は `PRACTICE_SOURCE_COMPLETE`。テーマ自体はまだ `completed` ではない。
+Topic 29は `PRACTICE_PDF_COMPLETE`。テーマ自体はまだ `completed` ではない。
 
 ## Topic 28 最終判定
 
@@ -151,7 +151,29 @@ L0系実車の未確認の超電導磁石磁界、コイル電流、抵抗・イ
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 29練習PDF生成＋PDF QA。教材一式完成前にclean blind独立再解答へ進まない。
+## Topic 29 練習PDF
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+- PDF: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice.pdf`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_pdf_qa.md`
+- canonical blob SHA: `1f639d616e3c2432279e02e599c374771c0cfb70`
+- A4縦7頁
+- PDFium / Poppler: `7 / 7 PASS`
+- `pdftotext -layout`: `PASS`
+- 一次試験型: `8 / 8 covered`
+- 二次試験型: `4 / 4 covered`
+- 固定5問・24答案要素: `24 / 24 connected`
+- 一次答案要素: `20 / 20 connected`
+- 二次答案要素: `4 / 4 connected`
+- SPEC必須8項目: `8 / 8 covered`
+- 指定3可視化の計算系: `3 / 3 aligned`
+- L0系未確認実車値の真値化: `0件`
+- Topic 30先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 29解説画像PowerPoint生成＋QA。教材一式完成前にclean blind独立再解答へ進まない。
 
 ## Topic 21 H26二次 問1(4)
 
