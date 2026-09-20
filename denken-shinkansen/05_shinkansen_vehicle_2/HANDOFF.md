@@ -8,7 +8,33 @@
 
 Topic 01〜30は最終QAまで `PASS / completed`。完成数 `30 / 39`。
 
-現在地は `topic_31_explanation_source_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QAまで完了。次は解説PDF＋PDF QA。
+現在地は `topic_31_explanation_pdf_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了。次は練習source。
+
+## Topic 31 解説PDF完了記録
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation.pdf`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation_pdf_qa.md`
+
+QA:
+- PDF blob SHA `f65e5669a279a522d26016ae1763346912b90b18`
+- A4縦 `7頁`
+- PDFium `7 / 7 PASS`
+- Poppler `7 / 7 PASS`
+- 空白頁・端切れ・重大な重なり・置換文字 `0件`
+- 固定5問・27答案要素 `27 / 27 PASS`
+- 一次 `15 / 15 PASS`
+- 二次 `12 / 12 PASS`
+- SPEC固定8項目 `8 / 8 PASS`
+- 3段階例題 `3 / 3 PASS`
+- 未確認実車値の真値化 `0件`
+- Topic 32〜34先取り `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
+
+H22一次問3の三角搬送波・系統より進む位相、R5二次問3の高調波発生源・影響を最終PDFで明示確認。初回ローカル生成でCIDフォントの `≈` 字形不足を検出したため、意味を保つ丸め表記へ再生成してからcanonical化した。
 
 ## Topic 31 解説source完了記録
 
@@ -107,11 +133,11 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 ## 次の安全な工程
 
 1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、直近worker成果をreconcileする。
-2. 固定EXAM_ALIGNMENTと解説sourceを変更せず、Topic 31解説PDFを生成する。
-3. PDFはA4、全文、数式、表、ページ端、置換文字、空白頁を確認し、可能な複数レンダラで全頁QAする。
-4. 固定5問・27答案要素、SPEC 8項目、3段階例題がPDFへ欠落なく入ったことを確認する。
-5. 実車接続は一次資料で確認できた事実だけを維持し、未確認実車値を追加しない。
-6. PDF QAがPASSしてから練習sourceへ進む。
+2. 固定EXAM_ALIGNMENT、解説source、解説PDFを変更せず、Topic 31練習sourceを作成する。
+3. 一次選択式と二次記述・途中式の両方へ接続し、固定5問・27答案要素、SPEC 8項目を欠落させない。
+4. 解答解説は公式選択・理由・数値代入・中間計算・単位・検算まで採点可能な形にする。
+5. R2二次問2の変圧器固有条件、H22のPV/MPPT、R5能動フィルタ実車搭載など固定境界を維持する。
+6. 練習source QAがPASSしてから練習PDFへ進む。
 7. 仕様不整合・確定不能事項が出た場合はexact blockerを記録して停止する。
 
 Topic 31完成後のclean blind candidate固定前には、固定EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を先に開かない。
