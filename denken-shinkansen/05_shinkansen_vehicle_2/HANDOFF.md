@@ -8,7 +8,32 @@
 
 Topic 01〜29は最終QAまで `PASS / completed`。完成数 `29 / 39`。
 
-現在地は `topic_30_explanation_pdf_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了。次は練習source作成＋QA。
+現在地は `topic_30_practice_source_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで完了。次は練習PDF生成＋PDF QA。
+
+## Topic 30 練習source完了記録
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
+canonical source:
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_source.md`
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_source_qa.md`
+
+QA:
+- 一次試験型 `8 / 8 PASS`（全問五肢択一）
+- 二次試験型 `4 / 4 PASS`
+- 数値・論理独立再計算 `12 / 12 PASS`
+- 一次正答一意性 `8 / 8 PASS`
+- 固定5問・25答案要素 `25 / 25 connected`
+- 一次固定答案要素 `20 / 20 connected`
+- 二次固定答案要素 `5 / 5 connected`
+- SPEC必須7項目 `7 / 7 covered`
+- 指定3可視化 `3 / 3 aligned`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- SPEC外主題追加 `0件`
+- 未確認L0系実車値の真値化 `0件`
+- exact blocker `0件`
+
+練習問題では、結合係数―伝送電力、負荷条件―効率、周波数特性を教材用結合回路で計算させ、RLC共振・磁気回路・交流電力・変圧器損失/効率を固定過去問へ接続した。教材用 `k`,`L`,`M`,`R`,`C`,`f`,伝送電力、効率はL0系実車値ではない。
 
 ## Topic 30 解説PDF完了記録
 
@@ -31,10 +56,7 @@ QA:
 - 指定3可視化 `3 / 3 PASS`
 - 未確認L0系実車値の真値化 `0件`
 - 固定EXAM_ALIGNMENT変更 `0件`
-- Topic 21一般式変更 `0件`
 - exact blocker `0件`
-
-既存workerが作成済みの一時PDF builderを引き継いで生成し、EXAM_ALIGNMENT/source工程は再実施していない。PDF QA通過後、一時builderは正本から除去済み。
 
 ## Topic 30 解説source完了記録
 
@@ -52,10 +74,9 @@ QA:
 - 数式・単位・数値例 `PASS`
 - 未確認L0系実車値の真値化 `0件`
 - 固定EXAM_ALIGNMENT変更 `0件`
-- Topic 21一般式変更 `0件`
 - exact blocker `0件`
 
-JR東海一次資料で確認した誘導集電の原理・L0系改良型での全面採用だけを実車事実として使用。鉄道総研のWPT資料は一般原理の参考に限定し、その装置定数をL0系へ転用していない。source中の `k`,`L`,`M`,`R`,周波数、伝送電力、効率、補償定数は教材用仮定値として明示済み。
+JR東海一次資料で確認した誘導集電の原理・L0系改良型での全面採用だけを実車事実として使用。鉄道総研のWPT資料は一般原理の参考に限定し、その装置定数をL0系へ転用していない。
 
 ## Topic 30 固定EXAM_ALIGNMENT
 
@@ -97,13 +118,13 @@ JR東海一次資料で確認した誘導集電の原理・L0系改良型での�
 
 ## 次の安全な工程
 
-1. Topic 30練習sourceを作成する。
-2. 固定5問25答案要素に対応する一次型・二次記述型の練習問題、解答、途中式、理由説明を整備する。
-3. 一次 `20 / 20`、二次 `5 / 5`、SPEC必須7項目への接続をQAする。
-4. source QAがPASSしたら練習PDFへ進む。
+1. Topic 30練習sourceから練習PDFを生成する。
+2. 一次8問・二次4問・解答・途中式・単位が欠落していないことを確認する。
+3. 固定25答案要素、SPEC必須7項目、指定3可視化への接続をPDF上でQAする。
+4. A4表示崩れ、数式欠け、表の切れ、文字化けをPDFium/Poppler等で確認する。
 5. 固定EXAM_ALIGNMENTは差し替えない。
 6. L0系実車値は一次資料で確認できたもの以外を真値化しない。
-7. Topic 21 H26二次問1(4)の `48.1 / 48.0 N・m` は `π=3.14` 相当の過去問固有丸め差として維持し、一般式を変更しない。
+7. 練習PDF QAがPASSしたらPowerPoint工程へ進む。
 
 教材完成後clean blindのcandidate固定前には、Topic 30 EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を開かない。
 
