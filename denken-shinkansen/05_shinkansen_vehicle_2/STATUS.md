@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `36 / 39`
-- current_status: `topic_37_practice_source_complete`
+- current_status: `topic_37_powerpoint_complete`
 - last_completed_topic: `36 ATC② 信号伝送と周波数`
 - active_topic: `37 ATC③ 速度制御系`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 37制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAをreconcileし、固定5問・25答案要素（一次5、二次20）、SPEC固定8項目、鉄道一次資料の境界を維持したままTopic 37練習PDF生成＋PDF QAへ進む。未確認の実車ATC内部実装・数値を真値化せず、Topic 38を先取りしない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 37の全既存成果物をreconcileする。次工程はanswer-bearing資料を先に開かないfresh workerによるclean blind candidate固定→固定5問・25答案要素（一次5、二次20）の独立再解答QA。candidate固定前に公式標準解答、固定EXAM_ALIGNMENTの正答、解説source/PDF、練習source/PDF、各answer-bearing QAを開かない。未確認の実車ATC内部実装・数値を真値化せず、Topic 38を先取りしない。
 
 Topic 01〜36は `PASS / completed`。完成数は `36 / 39`。
 
@@ -415,7 +415,7 @@ Topic 36はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 37 ATC③ 速度制御系
 
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+判定: `PASS / POWERPOINT_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -528,6 +528,51 @@ SPEC固定項目:
 - Topic 38先取り: `0件`
 - exact blocker: `0件`
 
-Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋独立source QAまで完了。完成数は `36 / 39` のまま。
+### 練習PDF
 
-次工程: Topic 37練習PDF生成＋PDF QA。固定5問・25答案要素、一次12問・二次4題、SPEC固定8項目、系列SPEC固定計算・グラフ2項目、鉄道一次資料の境界を変更しない。
+- PDF: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice.pdf`
+- PDF QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_pdf_qa.md`
+- PDF canonical commit: `b27f2fdc6d6fa78dc03aa5641ddbb14aebd5679c`
+- PDF blob SHA: `9605d04a84a1d9b0c44104ec1ae13c6919c275b4`
+- PDF SHA-256: `2b7df3337f220982f62a5a8758a9d1c9acc626c636f1f9edad7f0e5a08bf962f`
+- file size: `11691 bytes`
+- A4縦: `6頁`
+- Ghostscript nullpage parse/render: `PASS`
+- PDFium / Poppler render: `6 / 6 PASS`
+- visual inspection: `6 / 6 PASS`
+- extracted text: `4124 chars`
+- replacement character U+FFFD: `0件`
+- 一次試験型五肢択一: `12 / 12`
+- 二次試験型記述: `4 / 4`
+- 二次独立再計算答案要素: `20 / 20` 継承
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 系列SPEC固定計算・グラフ: `2 / 2 PASS`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+### 解説画像PowerPoint
+
+- PowerPoint: `topics/37_atc_speed_control_system/37_atc_speed_control_system_images.pptx`
+- QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_images_qa.md`
+- canonical commit: `de3e673ce4ebb12ab9e8c4c4b789e18371ff31bc`
+- SHA-256: `bab088b6ea5aa2ebb6833090c2fb5f4d7ce25c3af0fafa0caa9100392136f670`
+- file size: `53973 bytes`
+- 16:9: `6枚`
+- python-pptx geometry / text-content assertions / source notes: `6 / 6 PASS`
+- LibreOffice PDF: `6 / 6 pages PASS`
+- Poppler text / PNG render / visual inspection: `6 / 6 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- 一次: `5 / 5 connected`
+- 二次: `20 / 20 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 系列SPEC固定計算・グラフ: `2 / 2 PASS`
+- 教材用仮定値を実車値として使用: `0件`
+- ATS-Dxを新幹線ATC実装として使用: `0件`
+- Topic 38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+Topic 37はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointまで `PASS`。完成数は `36 / 39` のまま。完成判定にはfresh clean blind独立再解答が未実施。
+
+次工程: answer-bearing資料を先に開かないfresh workerでclean blind candidateを固定し、その後に公式標準解答・教材との照合QAを行う。本runはanswer-bearing資料を参照済みのためcandidateを作成しない。
