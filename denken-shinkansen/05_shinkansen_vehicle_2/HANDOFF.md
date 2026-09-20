@@ -6,9 +6,9 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
+Topic 01〜33は最終QAまで `PASS / completed`。完成数 `33 / 39`。
 
-現在地は `topic_33_powerpoint_complete_ready_clean_blind`。active topicは `33 空調・電熱の熱収支`。次工程はfresh clean blind独立再解答。
+現在地は `topic_33_completed_ready_topic_34_exam_alignment`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。次工程は制作前EXAM_ALIGNMENT。
 
 ## Topic 32 完了記録
 
@@ -30,149 +30,85 @@ clean blind canonical:
 - 未確認実車値の真値化 `0件`
 - exact blocker `0件`
 
-EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程を通過済み。
+## Topic 33 完了記録
 
-## Topic 33 制作前EXAM_ALIGNMENT 完了
+判定: `PASS / COMPLETED`
 
-canonical:
+制作前EXAM_ALIGNMENT canonical:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
 - QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_exam_alignment_qa.md`
-
-固定ゲート:
-- R8一次「機械」問6: `5 / 5 PASS`
-- R3一次「機械」問7: `5 / 5 PASS`
-- R1一次「機械」問7のヒートポンプ行: `2 / 2 PASS`
-- H30一次「機械」問4: `5 / 5 PASS`
-- H27一次「機械」問4: `5 / 5 PASS`
-- 一次合計: `22 / 22 PASS`
+- 固定過去問: R8一次「機械」問6、R3一次「機械」問7、R1一次「機械」問7ヒートポンプ行、H30一次「機械」問4、H27一次「機械」問4
+- 一次: `22 / 22 PASS`
 - 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
 - SPEC固定7項目: `7 / 7 mapped`
 - 件数合わせ採用: `0件`
-- 未確認実車値の真値化: `0件`
-- exact blocker: `0件`
 
-二次対象外は未調査ではない。公式試験概要で一次「機械」に「電熱」が含まれる一方、二次「機械・制御」は「電気機器、パワーエレクトロニクス、自動制御及びメカトロニクス」であり、本Topicの固定論点である電熱を含まないため、件数合わせ採用を行っていない。
-
-## Topic 33 解説source / PDF 完了
-
-canonical:
+解説source / PDF canonical:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_source.md`
 - source QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_source_qa.md`
 - PDF: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation.pdf`
 - PDF QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation_pdf_qa.md`
-
-品質ゲート:
 - 固定5問・22答案要素: `22 / 22 PASS`
 - SPEC固定7項目: `7 / 7 PASS`
 - 3段階例題: `3 / 3 PASS`
-- PDF A4縦: `7頁`
-- PDFium / Poppler: `7 / 7 PASS`
+- A4縦 `7頁`、PDFium / Poppler `7 / 7 PASS`
 - ページ端切れ・重大な重なり・文字化け・欠字・U+FFFD: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
 
-## Topic 33 練習source 完了
-
-canonical:
+練習source / PDF canonical:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_source.md`
 - source blob SHA: `dcee853dedc9adeb2f351315dc6ca97f3d23a118`
-- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_source_qa.md`
-
-品質ゲート:
-- 一次試験型: `10問`
-- 五肢択一: `10 / 10`
-- 正答一意性: `10 / 10 PASS`
-- 数値問題独立再計算: `6 / 6 PASS`
-- 知識・識別問題: `4 / 4 PASS`
-- 固定5問・22答案要素: `22 / 22 connected`
-- SPEC固定7項目: `7 / 7 PASS`
-- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
-- 二次問題の件数合わせ採用: `0件`
-- COPと電熱器効率の混同: `0件`
-- J/W/kW・秒換算の不整合: `0件`
-- H27のHFCを現行実車へ一般化: `0件`
-- 未確認実車値の真値化: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-系列SPEC固定項目:
-- 熱量
-- 熱収支
-- COP
-- 消費電力
-- 外気負荷
-- 車内負荷
-- 効率
-
-## Topic 33 練習PDF 完了
-
-canonical:
+- source QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_source_qa.md`
 - PDF: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice.pdf`
-- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_pdf_qa.md`
-- commit: `3637ae75c356bfc3613d2102c729397a40a64fce`
+- PDF QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_pdf_qa.md`
+- PDF canonical commit: `3637ae75c356bfc3613d2102c729397a40a64fce`
 - PDF blob SHA: `6f97c59f3b4cd54c47ab1fc9f7039c3fbb39417f`
-- source blob SHA: `dcee853dedc9adeb2f351315dc6ca97f3d23a118`
-- SHA-256: `079a09b8a2517c3171f4055d9549f9857570a68ecf3e3d8ad57e204c43503954`
-- file size: `21,971 bytes`
-- A4縦: `7頁`
+- PDF SHA-256: `079a09b8a2517c3171f4055d9549f9857570a68ecf3e3d8ad57e204c43503954`
+- 一次試験型 `10問`、五肢択一 `10 / 10`
+- 正答一意性 `10 / 10 PASS`、数値独立再計算 `6 / 6 PASS`、知識・識別 `4 / 4 PASS`
+- 固定5問・22答案要素 `22 / 22 connected`
+- SPEC固定7項目 `7 / 7 PASS`
+- A4縦 `7頁`、PDFium / Poppler `7 / 7 PASS`
+- page-edge overflow / blank page / U+FFFD: `0件`
 
-render / text QA:
-- PDFium: `7 / 7 PASS`
-- Poppler: `7 / 7 PASS`
-- page-edge overflow: `0件`
-- blank page: `0件`
-- `pdftotext -layout`: `PASS (15,021 bytes)`
-- U+FFFD: `0件`
-- 問1〜問10: `10 / 10収録 PASS`
-- 正答・完全解説: `10 / 10収録 PASS`
-- 固定5問・22答案要素: `22 / 22 connected`
-- SPEC固定7項目: `7 / 7 covered`
-- fixed EXAM_ALIGNMENT変更: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
+旧staging integrity blockerは、chunk順序を推測して修復せずcanonical練習sourceから再生成・再QAすることで解消済み。旧temporary chunks/workflowは削除済み。
 
-旧integrity blockerの診断:
-- `part0 + part1 + part2` は19,106 bytesへ復号できるが旧宣言SHA256と不一致だったためcanonical化しなかった。
-- `part1a` は `part1` の先頭2,123文字と完全一致することを確認した。用途を推測してchunk構成を変更していない。
-- canonical練習sourceからPDFを再生成し、PDFium / Poppler / text QAを通過した生成物を新canonicalとした。
-- 旧staging chunksとtemporary workflowは削除済み。
-
-## Topic 33 PowerPoint 完了
-
-canonical:
+PowerPoint canonical:
 - PPTX: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_images.pptx`
 - QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_images_qa.md`
-- commit: `1154f804df8acff3956fee2d1ded4666c46afaaa`
+- canonical commit: `1154f804df8acff3956fee2d1ded4666c46afaaa`
 - PPTX blob SHA: `22679f0b7d8ecd34b1a0556d1c591fc81bf996c4`
 - SHA-256: `cb1d632c0788653314a79ed9c1ab36cc13414d664b3de5b9dbd872d3d5dba594`
-- 16:9: `6 slides`
+- 16:9 `6 slides`
+- python-pptx geometry / LibreOffice PDF render / PNG render: `6 / 6 PASS`
+- blank / page-edge overflow / U+FFFD: `0件`
+- 固定5問・一次22答案要素 `22 / 22 connected`
+- SPEC固定7項目 `7 / 7 PASS`
 
-render / quality gate:
-- python-pptx open / geometry bounds: `6 / 6 PASS`
-- LibreOffice PDF render: `6 / 6 PASS`
-- PNG render: `6 / 6 PASS`
-- blank render: `0件`
-- page-edge overflow: `0件`
-- U+FFFD: `0件`
-- 固定5問・一次22答案要素: `22 / 22 connected`
-- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
-- SPEC固定7項目: `7 / 7 PASS`
-- HFC過去問固有知識を現行実車仕様へ一般化: `0件`
-- 未確認実車値の真値化: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
+完成後clean blind canonical:
+- candidate: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_clean_blind_candidate.md`
+- candidate blob SHA: `7c205a00c70e1b5e339d55fd01cb74cefb249d54`
+- lock commit: `7e32a02955fe3c7430abb7791314d8d109aee1db`
+- final QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_clean_blind_qa.md`
+- QA commit: `220a2a0b913d9fea2c2d596d9161a91f52198c69`
 
-初回render QAは `pdftotext` が `SPEC 7項目` の間に空白を挿入したためexact-token assertionのみ失敗した。6枚生成、geometry、6枚PNG render、blank/edge、U+FFFD、先行token群は通過済み。抽出テキストの空白だけを正規化した再試験でPASSし、教材内容は変更していない。temporary PowerPoint workflowsはcanonical commitで削除済み。
+最終QA:
+- 固定5問 `5 / 5 PASS`
+- 一次 `22 / 22 PASS`
+- 二次 `対象外（公式「機械・制御」試験範囲に電熱なし）`
+- candidate固定後修正 `0件`
+- 教材外知識による補完 `0件`
+- SPEC固定7項目 `7 / 7 connected`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- H27のHFCを現行実車仕様へ一般化 `0件`
+- 未確認実車値の真値化 `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
+
+Topic 33はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程を通過済み。
 
 ## 次工程
 
-fresh workerは最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md` とTopic 33の教材成果物をreconcileする。answer-bearing資料（固定EXAM_ALIGNMENTの公式正答、既存clean-blind QA等）を先に開かず、教材だけで固定5問・22答案要素のclean blind candidateを作成してcommitで固定する。固定後に初めて公式解答と照合し、candidate固定後修正0件・全答案要素PASSを確認する。ここを通過するまではTopic 33をcompletedにしない。
-
-今runはanswer-bearing資料を確認済みのためclean blind candidate固定には進まない。
+Topic 34「コンプレッサ・ポンプ・ファンの負荷特性」の制作前EXAM_ALIGNMENTから開始する。最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、直近worker成果をreconcileし、重複作業をしない。公式過去問を直近年度から確認し、一次・二次の適用範囲を実問題と公式試験範囲で確定してから教材範囲を固定する。未確認の実車コンプレッサ・ポンプ・ファン仕様値は推測で真値化しない。Topic 35以降は先取りしない。
 
 ## Topic 21 固定境界
 
