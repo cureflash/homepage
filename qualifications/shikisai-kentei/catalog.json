@@ -56,6 +56,15 @@
       "source":"articles/14_retina_phototransduction.md"
     },
     {
+      "id":"15_opsin_genetics_color_vision",
+      "articleNo":15,
+      "seriesId":"biology",
+      "title":"赤緑の色覚特性はなぜ遺伝するのか――オプシン遺伝子とX染色体",
+      "summary":"L・M・S錐体のオプシン遺伝子、X染色体上のOPN1LW/OPN1MW遺伝子アレイ、不等組換え、分光感度変化から、先天的な色覚特性が生じる機構を遺伝学と線形代数で理解する。",
+      "levels":["2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説","3級：眼のしくみ・網膜における光の処理","大学：遺伝学・分子生物学・神経科学"],
+      "source":"articles/15_opsin_genetics_color_vision.md"
+    },
+    {
       "id":"19_complementary_afterimage",
       "articleNo":19,
       "seriesId":"vision-psychology",
