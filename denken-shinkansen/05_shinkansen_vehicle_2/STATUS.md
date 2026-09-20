@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `35 / 39`
-- current_status: `topic_36_explanation_source_complete`
+- current_status: `topic_36_explanation_pdf_complete`
 - last_completed_topic: `35 ATC① 軌道回路の回路解析`
 - active_topic: `36 ATC② 信号伝送と周波数`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36の固定EXAM_ALIGNMENTと解説source/QAをreconcileし、Topic 36解説PDF生成＋表示QAから開始する。固定5問・25答案要素、SPEC固定8項目、二次は公式科目範囲外という適用判定、鉄道一次資料の境界を維持する。未確認実車値の真値化、Topic 37・38先取りは行わない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36の固定EXAM_ALIGNMENT、解説source/source QA、解説PDF/PDF QAをreconcileし、Topic 36練習source作成＋QAから開始する。固定5問・25答案要素、SPEC固定8項目、二次は公式科目範囲外という適用判定、鉄道一次資料の境界を維持する。未確認実車値の真値化、Topic 37・38先取りは行わない。
 
 Topic 01〜35は `PASS / completed`。完成数は `35 / 39`。
 
@@ -257,7 +257,7 @@ Topic 35はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 36 ATC② 信号伝送と周波数
 
-判定: `IN PROGRESS / EXPLANATION_SOURCE_COMPLETE`
+判定: `IN PROGRESS / EXPLANATION_PDF_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -308,7 +308,30 @@ SPEC固定項目:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 36解説PDF生成＋表示QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
+### 解説PDF
+
+- PDF: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation.pdf`
+- PDF QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_pdf_qa.md`
+- PDF canonical commit: `bff073fc92073c69f3856bb7af61e667b70ca164`
+- PDF blob SHA: `18f138fc0c2fa6699645c61c7f4f4d2c7d7bf3c1`
+- PDF SHA-256: `dc304539249d3bb644872bfdb0516dc0eb6e2b207c45c4e75be0c30603dff932`
+- file size: `8521 bytes`
+- A4縦: `2頁`
+- Ghostscript nullpage parse/render: `PASS`
+- Poppler `pdfinfo` / `pdftotext -layout`: `PASS`
+- PDFium / Poppler render: `2 / 2 PASS`
+- visual inspection: `2 / 2 PASS`
+- extracted text: `3007 chars / PASS`
+- replacement character U+FFFD: `0件`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 37・38先取り: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 36練習source作成＋QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
 
 ## Topic 21 固定注記
 
