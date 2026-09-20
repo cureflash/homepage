@@ -8,7 +8,35 @@
 
 Topic 01〜30は最終QAまで `PASS / completed`。完成数 `30 / 39`。
 
-現在地は `topic_31_pending_exam_alignment`。次はTopic 31 `補助電源変換器` の制作前EXAM_ALIGNMENT。
+現在地は `topic_31_exam_alignment_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENTまで完了。次は解説source。
+
+## Topic 31 EXAM_ALIGNMENT完了記録
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter.md`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_exam_alignment_qa.md`
+
+固定5問:
+- R7 一次「機械」問4 `5 / 5 PASS`
+- R5 二次「機械・制御」問3 `7 / 7 PASS`
+- R4 一次「機械」問4 `5 / 5 PASS`
+- R2 二次「機械・制御」問2 `5 / 5 PASS`
+- H22 一次「機械」問3 `5 / 5 PASS`
+- 一次 `15 / 15 PASS`
+- 二次 `12 / 12 PASS`
+- 合計 `27 / 27 PASS`
+- SPEC固定8項目 `8 / 8 mapped`
+- 二次記述・計算問題 `2問`
+- 未確認実車値の真値化 `0件`
+- exact blocker `0件`
+
+固定境界:
+- R2二次問2は固定損・負荷依存損失・負荷率・効率の一般モデルへだけ接続する。変圧器固有の `鉄損=銅損` を補助電源変換器の普遍則にしない。
+- H22一次問3の太陽光・MPPT固有事項は教材範囲へ追加しない。
+- R5二次問3の能動フィルタを実車補助電源の搭載事実として扱わない。
+- 補助電源方式、回路トポロジー、定格、周波数、容量、素子、損失、効率は一次資料確認なしに真値化しない。
 
 ## Topic 30 完了記録
 
@@ -58,19 +86,17 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 - 効率
 - 負荷変動
 
-現時点ではTopic 31のEXAM_ALIGNMENTは未固定。過去問・実車仕様を推測で先に決めない。
-
 ## 次の安全な工程
 
-1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、直近の車両二種worker成果をreconcileする。
-2. 電気技術者試験センター公式過去問を直近年度から調査し、Topic 31に直接必要な一次・二次の論点を抽出する。
-3. 二種は一次・二次を合わせ原則5問以上を固定する。二次対象論点で該当記述問題が確認できる場合は最低1問を含める。
-4. 各問題の答案要素を独立再計算・公式照合し、教材で必要な説明へ1対1でmapする。
-5. 公式過去問・公式解答・一次資料で確定できない事項はexact blockerとして記録し、推測で固定しない。
-6. EXAM_ALIGNMENTがPASSしてから解説source制作へ進む。
-7. 実車・設備値はJR各社、公的機関、メーカー、鉄道総研等の一次・技術資料で確認できたものだけを実値として扱う。
+1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、直近worker成果をreconcileする。
+2. 固定EXAM_ALIGNMENTは差し替えず、Topic 31解説sourceを作成する。
+3. 固定5問・27答案要素を本文へ1対1で接続し、SPEC 8項目を欠落させない。
+4. 実車接続は一次資料で確認できた事実だけを使い、未確認値は教材用仮定値として明示する。
+5. R2二次問2の変圧器固有最大効率条件を変換器へ一般化しない。
+6. source QAで `27 / 27`、SPEC `8 / 8`、範囲境界、未確認実車値0件を確認してからPDF工程へ進む。
+7. 仕様不整合・確定不能事項が出た場合はexact blockerを記録して停止する。
 
-Topic 31完成後のclean blind candidate固定前には、その時点で固定したEXAM_ALIGNMENTのanswer-bearing資料・公式解答・比較QAを先に開かない。
+Topic 31完成後のclean blind candidate固定前には、固定EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を先に開かない。
 
 ## Topic 21 H26二次 問1(4)
 
