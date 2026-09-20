@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `34 / 39`
-- current_status: `topic_35_exam_alignment_complete`
+- current_status: `topic_35_explanation_source_complete`
 - last_completed_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
 - active_topic: `35 ATC① 軌道回路の回路解析`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 35の固定5問・25答案要素、SPEC固定7項目、二次適用判定を変更せず解説sourceを作成する。未確認のレールインピーダンス、車軸短絡抵抗、受信しきい値、信号電流を真値化しない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 35の固定EXAM_ALIGNMENTと解説sourceを変更せず解説PDFを生成し、PDF QAを実施する。未確認実車値は真値化しない。
 
 Topic 01〜34は `PASS / completed`。完成数は `34 / 39`。
 
@@ -121,7 +121,7 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 35 ATC① 軌道回路の回路解析
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -143,18 +143,24 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 - R6一次「理論」問6
 - R5一次「理論」問4
 
-SPEC固定項目:
-- 軌道回路
-- レールインピーダンス
-- 車軸短絡
-- 受信レベル
-- 信号電流
-- 回路条件
-- フェイルセーフ
+### 解説source
 
-鉄道側の原理はJRTT・鉄道総研の一次資料で確認し、固定過去問は軌道回路そのものの出題ではなく一般回路理論の試験対応として明示した。未確認実車値の真値化、Topic 36・37先取り、Topic 21一般式変更はいずれも `0件`。
+- source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_source.md`
+- source commit: `6f1e43f9473bfe004b0385260f77bf49d4d21d82`
+- source QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_source_qa.md`
+- source QA commit: `283cc934c5339f7eec882af4c1573bc024467dfe`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定7項目: `7 / 7 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 数値・複素数再計算: `PASS`
+- 未確認実車値の真値化: `0件`
+- Topic 36・37先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
-次工程は固定5問・25答案要素、SPEC固定7項目、二次適用判定を変更せずTopic 35解説sourceを作成する。完成数は `34 / 39` のまま。
+鉄道側の原理はJRTT・鉄道総研の一次資料で確認し、固定過去問は軌道回路そのものの出題ではなく一般回路理論の試験対応として明示した。
+
+次工程は固定EXAM_ALIGNMENTと解説sourceを変更せず、解説PDFを生成してPDF QAを実施する。完成数は `34 / 39` のまま。
 
 ## Topic 21 固定注記
 
