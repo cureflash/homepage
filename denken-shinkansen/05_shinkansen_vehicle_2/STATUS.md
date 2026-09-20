@@ -6,16 +6,16 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `28 / 39`
-- current_status: `topic_29_exam_alignment_complete`
+- current_status: `topic_29_explanation_source_complete`
 - last_completed_topic: `28 L0系② 同期機のフェーザと推進力`
 - active_topic: `29 L0系③ 超電導磁気浮上の電磁力`
-- next_start: 固定EXAM_ALIGNMENTを変更せず、Topic 29解説sourceを制作し、固定5問・24答案要素、SPEC必須8項目、指定3可視化を全件マッピングする
+- next_start: Topic 29解説sourceを正本として解説PDFを生成し、表示・数式・単位・指定3可視化・固定5問24答案要素との接続をQAする
 
 ## 完成済み
 
 Topic 01〜28: `PASS / completed`。完成数 `28 / 39`。
 
-Topic 29は `EXAM_ALIGNMENT_COMPLETE`。テーマ自体はまだ `completed` ではない。
+Topic 29は `EXPLANATION_SOURCE_COMPLETE`。テーマ自体はまだ `completed` ではない。
 
 ## Topic 28 最終判定
 
@@ -95,6 +95,24 @@ SPEC必須8項目:
 - 速度―電磁力
 
 L0系実車の未確認の超電導磁石磁界、コイル電流、抵抗・インダクタンス、幾何寸法、浮上力、案内力、速度しきい値は真値化しない。数値例・グラフの仮定値は「教材用仮定値」と明記する。Topic 30範囲の先取りは0件。
+
+## Topic 29 解説source
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+- source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source.md`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source_qa.md`
+- 固定5問・24答案要素: `24 / 24 connected`
+- SPEC必須8項目: `8 / 8 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- 3段階例題: 基礎 / 本試験標準 / 複合 `PASS`
+- 数式・単位・例題独立再計算: `PASS`
+- L0系未確認実車値の真値化: `0件`
+- Topic 30先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
+次工程は解説PDF生成＋QA。教材一式完成前にclean blind独立再解答へ進まない。
 
 ## Topic 21 H26二次 問1(4)
 
