@@ -8,7 +8,30 @@
 
 Topic 01〜31は最終QAまで `PASS / completed`。完成数 `31 / 39`。
 
-現在地は `topic_32_exam_alignment_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENTまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 mapped`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外とし、件数合わせ採用はしていない。次はTopic 32解説source。
+現在地は `topic_32_explanation_source_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。次は修正済みsourceから解説PDF生成＋PDF QA。
+
+## Topic 32 解説source完了記録
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+canonical artifacts:
+- `topics/32_lighting_design/32_lighting_design_explanation_source.md`
+- `topics/32_lighting_design/32_lighting_design_explanation_source_qa.md`
+
+QA:
+- source blob `7a5f24e64595365231d15f8901a3c88effeca832`
+- source QA blob `e792f573bdabe7d0adedd439c673d24223a587bd`
+- 固定5問・30答案要素 `30 / 30 connected`
+- SPEC固定9項目 `9 / 9 connected`
+- 3段階例題 `3 / 3 PASS`
+- 例題1 `63.66 cd / 15.92 lx` `PASS`
+- 例題2 `13.02... → 14光源 → 7器具` `PASS`
+- 例題3 `942.48 lm / 94.25 lm/W / 33.33 lx` `PASS`
+- 初回QAで検出した `cd/m²` と `lx` の単位混同リスクは commit `e65d4349d705f983d645bf318fa6628795cad1e6` で根本修正済み
+- 未確認実車値の真値化 `0件`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
 
 ## Topic 32 EXAM_ALIGNMENT完了記録
 
@@ -271,8 +294,8 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 ## 次の安全な工程
 
 1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、既存の車両二種worker成果をreconcileする。
-2. Topic 32解説sourceを、固定5問・30答案要素とSPEC固定9項目へ1対1接続して作成する。
-3. `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` に従い、基礎・本試験標準・複合/ひっかけの最低3段階例題を入れ、式の意味・成立条件・単位・逆算・典型ミスまで説明する。
+2. 修正済み `32_lighting_design_explanation_source.md` から解説PDFを生成する。
+3. PDFは固定5問・30答案要素、SPEC固定9項目、3段階例題、数式・数値、A4縦、ページ端、置換文字をQAする。
 4. 実車照明の方式・灯数・光束・照度・消費電力・効率等は一次資料で確認できた値だけを実値として扱い、未確認値は真値化しない。
 5. Topic 21のH26二次問1(4) `48.1 N・m / 48.0 N・m` は過去問固有丸め差として維持し、一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 6. 仕様不整合または確定不能事項が生じた場合は推測せずexact blockerを記録して停止する。
