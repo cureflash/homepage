@@ -8,7 +8,7 @@
 
 Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
 
-現在地は `topic_32_completed`。次のactive topicは `33 空調・電熱の熱収支`。
+現在地は `topic_33_exam_alignment_complete`。active topicは `33 空調・電熱の熱収支`。
 
 ## Topic 32 完了記録
 
@@ -32,25 +32,52 @@ clean blind canonical:
 
 EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程を通過済み。
 
-## 次工程 — Topic 33 制作前EXAM_ALIGNMENT
+## Topic 33 制作前EXAM_ALIGNMENT 完了
 
 テーマ: `空調・電熱の熱収支`
+
+canonical:
+- source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_exam_alignment_qa.md`
 
 系列SPEC固定項目:
 - 熱量
 - 熱収支
 - COP
 - 消費電力
+- 外気負荷
+- 車内負荷
+- 効率
 
-fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、直近の車両二種worker成果をreconcileしてから開始する。
+固定ゲート:
+- R8一次「機械」問6: `5 / 5 PASS`
+- R3一次「機械」問7: `5 / 5 PASS`
+- R1一次「機械」問7の(1)ヒートポンプ行: `2 / 2 PASS`
+- H30一次「機械」問4: `5 / 5 PASS`
+- H27一次「機械」問4: `5 / 5 PASS`
+- 一次合計: `22 / 22 PASS`
+- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
+- SPEC固定7項目: `7 / 7 mapped`
+- 固定問題の件数合わせ採用: `0件`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- exact blocker: `0件`
+
+二次対象外は未調査ではない。電気技術者試験センター公式試験概要で一次「機械」に「電熱」が含まれる一方、二次「機械・制御」は「電気機器、パワーエレクトロニクス、自動制御及びメカトロニクス」であり、Topic 33の固定論点である電熱を含まないため、件数合わせ採用を行っていない。
+
+## 次工程 — Topic 33 解説source
+
+fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENTをreconcileしてから開始する。
 
 品質ゲート:
-- 電気技術者試験センター公式過去問を最優先し、直近年度から遡る。
-- 二種は一次・二次を合わせ原則5問以上を調査する。
-- 二次はTopic 33の固定論点に実際に対応する記述問題が確認できる場合のみ採用する。
-- 二次問題を件数合わせで採用しない。
-- 過去問の要求答案要素を分解し、SPEC固定項目との接続を記録する。
-- 仕様不整合・問題文解釈・公式解答との照合で確定不能事項が生じた場合は、推測せずexact blockerを記録して止める。
+- 固定5問・22答案要素を変更しない。
+- SPEC固定7項目をすべて本文へ接続する。
+- 熱量、熱平衡、伝導・対流・放射、ヒートポンプ熱収支、COP、消費電力、外気負荷、車内負荷、効率の接続を明示する。
+- COPとエネルギー変換効率を混同しない。
+- 外気負荷・車内負荷に未確認の実車換気量、乗客発熱、機器発熱を置かない。
+- 実車の空調方式、冷媒、能力、消費電力、COP、熱負荷を一次資料なしに真値化しない。
+- 最低3段階例題を作る。
+- 固定EXAM_ALIGNMENTは差し替えない。
 
 ## Topic 21 固定境界
 
