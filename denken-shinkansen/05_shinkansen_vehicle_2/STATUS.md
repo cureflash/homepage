@@ -5,89 +5,58 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `28 / 39`
-- current_status: `topic_29_artifacts_resynced_fresh_blind_v2_required`
-- last_completed_topic: `28 L0系② 同期機のフェーザと推進力`
-- active_topic: `29 L0系③ 超電導磁気浮上の電磁力`
-- next_start: answer-bearing資料を見ていないfresh workerでclean blind v2 candidateを新規固定する
+- exam_aligned_completed_topics: `29 / 39`
+- current_status: `topic_29_complete_topic_30_exam_alignment_required`
+- last_completed_topic: `29 L0系③ 超電導磁気浮上の電磁力`
+- active_topic: `30 L0系④ 誘導集電・非接触電力伝送`
+- next_start: Topic 30の制作前EXAM_ALIGNMENTを実施し、二種一次・二次を含む固定過去問候補を独立再計算・公式照合して品質ゲートを通す
 
-Topic 01〜28は `PASS / completed`。Topic 29はclean blind v1が `21 / 24 PASS` のため未完了。完成数は `28 / 39` のまま。
+Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。
 
-## Topic 29 固定EXAM_ALIGNMENT
+## Topic 29 最終結果
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
-
-- 固定5問・24答案要素
-  1. R8 一次「理論」問2: 5
-  2. R7 一次「理論」問2: 5
-  3. R4 一次「理論」問2: 5
-  4. R2 一次「理論」問2: 5
-  5. H23 二次「機械・制御」問1: 4
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC必須8項目: `8 / 8 maintained`
-- 指定3可視化: `3 / 3 maintained`
-
-## clean blind v1 / remediation
-
-- v1 candidate lock: `c60c20f76e9064964d666abf0a1823f417450d2c`
+- final QA: `PASS / COMPLETED`
+- clean blind v2 candidate lock: `18b7ea1d8796a4802e63c78088bb1fae87e70601`
 - candidate固定後修正: `0件`
 - 一次: `20 / 20 PASS`
-- H23二次: `1 / 4 PASS`
-- 合計: `21 / 24 PASS`
-- 判定: `NEEDS_REVISION`
+- 二次: `4 / 4 PASS`
+- 合計: `24 / 24 PASS`
+- SPEC必須8項目: `8 / 8 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
 
-不足はH23二次の一相L形等価回路への橋渡し。remediation済みsourceは以下を追加済み。
+artifact:
+- 解説PDF blob: `35ba843b81fd8fc08f76bd5de8aa9edee540d78f` / A4 4 pages / PDFium・Poppler `4 / 4 PASS`
+- 練習PDF blob: `bebec9f9a6ed60178ca567e54060b37958ea2a27` / A4 11 pages / PDFium・Poppler `11 / 11 PASS`
+- PowerPoint blob: `85394e303e8ff9bff19193a76b09d1db17406ec9` / 16:9 6 slides / render `6 / 6 PASS`
 
-- `V_1=V_L/sqrt(3)`
-- `I'_2=V_1/sqrt((r_1+r'_2/s)^2+(x_1+x'_2)^2)`
-- `T=3I'^2_2(r'_2/s)/ω_s`
-- `s_max=r'_2/sqrt(r_1^2+(x_1+x'_2)^2)`
-- 逆相制動 `s_p=2-s`
-- 実通過区間 `1<=s_p<=2`
-- `r_1`,`x_1` が残るとき簡略条件 `s_m=r'_2/x'_2` を使わない
+H23二次「機械・制御」問1(1)はcandidate `75.6 N・m`、公式 `75.7 N・m`。式・途中量は一致し、公式表示から `π_eff≈3.14003` と逆算できるため、`π=3.14` 相当の過去問固有丸め差として `PASS_WITH_ROUNDING_NOTE`。一般式は変更しない。
 
-source統合:
-- 解説source commit: `fd5fd78cc2fc4b9da10276751db92b47a160f3ff`
-- 練習source commit: `072c8f023f0386d70170676efd94bdbcd6c81697`
-- source integration QA: `PASS / SOURCE_INTEGRATION_COMPLETE`
+## Topic 30 系列SPEC固定範囲
 
-## artifact状態
+### 主題
 
-remediation後sourceとの再同期を完了。
+非接触給電を相互インダクタンスと結合回路として解析する。
 
-- 解説PDF: `29_l0_superconducting_magnetic_levitation_force_explanation.pdf`
-  - blob: `35ba843b81fd8fc08f76bd5de8aa9edee540d78f`
-  - QA: `PASS / EXPLANATION_ARTIFACT_RESYNC_COMPLETE`
-- 練習PDF: `29_l0_superconducting_magnetic_levitation_force_practice.pdf`
-  - blob: `bebec9f9a6ed60178ca567e54060b37958ea2a27`
-  - A4 11 pages / PDFium・Poppler `11 / 11 PASS`
-  - QA: `PASS / PRACTICE_ARTIFACT_RESYNC_COMPLETE`
-- PowerPoint: `29_l0_superconducting_magnetic_levitation_force_images.pptx`
-  - blob: `85394e303e8ff9bff19193a76b09d1db17406ec9`
-  - 16:9 / 6 slides / LibreOffice render `6 / 6 PASS`
-  - QA: `PASS / POWERPOINT_ARTIFACT_RESYNC_COMPLETE`
+### 扱う内容
 
-固定5問・24答案要素は `24 / 24 connected` を維持。L0系未確認実車値の真値化0件、Topic 30先取り0件、exact blocker 0件。
+- 相互インダクタンス
+- 結合係数
+- 誘導起電力
+- 等価回路
+- 交流電力
+- 力率
+- 変換効率
 
-## 次の安全な工程
+### 計算・グラフ
 
-1. answer-bearing資料を見ていないfresh workerでclean blind v2 candidateを新規固定する。
-2. candidate固定後にのみ公式標準解答と照合する。
-3. `24 / 24 PASS` の場合のみTopic 29最終QA・completedへ進む。FAILがあればcandidateは変更せず、原因診断→教材補強→artifact再同期→別fresh workerで再試験する。
+- 結合係数―伝送電力
+- 負荷条件―効率
+- 周波数特性
 
-fresh blind v2 candidate固定前に開かない:
-- active theme alignment本体 / exam alignment QA
-- 公式解答PDF
-- v1/v2 compare QA
-- `29_l0_superconducting_magnetic_levitation_force_h23_l_equivalent_remediation_note_20260920.md`
-
-fresh workerが参照してよい教材側資料:
-- remediation済み解説source / PDF
-- remediation済み練習source / PDF
-- remediation済みPowerPoint
-- `29_l0_superconducting_magnetic_levitation_force_h23_teaching_patch_20260920.md`
-- source integration QA / artifact QA
+制作前に `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` に従い、公式過去問から固定候補を選定し、必要知識・式・答案要素を逆算する。未確認のL0系実車値は真値化しない。
 
 ## Topic 21 H26二次 問1(4)
 
-`48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として維持する。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
+`48.1 N・m / 48.0 N・m` 差は既診断どおり、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として維持する。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
