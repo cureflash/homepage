@@ -3,11 +3,11 @@
 更新日: 2026-09-20
 
 ## 現在地
-- Topic 01〜20: 最終QA `PASS / completed`
-- 完成数: `20 / 22`
-- active topic: `21 空転した車輪を再粘着させる`
-- current status: `topic_21_metadata_sync_complete / IN_PROGRESS`
-- 次工程: Topic 21 最終QA再実施
+- Topic 01〜21: 最終QA `PASS / completed`
+- 完成数: `21 / 22`
+- active topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
+- current status: `topic_21_final_qa_pass / completed`
+- 次工程: Topic 22 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -204,11 +204,10 @@ Topic 20成果物QA:
 - 成果物ゲート: `PASS`
 - 独立再解答ゲート: `PASS / 14 / 14`
 - 独立再解答記録QA: `8 / 8 PASS`
-- 前回の進捗・正本整合ゲート: `NEEDS_REVISION`
-- 前回未同期: `21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件
-- 現在: 2件とも同期済み / 最終QA再判定待ち
-- 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの修正: `0件`
-- 前回状態: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
+- 前回未同期の進捗メタデータ2件: `2 / 2 PASS`
+- 進捗・正本整合ゲート: `PASS`
+- 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの追加修正: `0件`
+- 状態: `PASS / topic_21_final_qa_pass / completed`
 
 ## 次工程
-Topic 21の最終QAを再実施する。
+Topic 22「東京→新大阪を主回路＋走行制御でシミュレーション」の制作前EXAM_ALIGNMENT。
