@@ -8,7 +8,7 @@
 
 Topic 01〜28は最終QAまで `PASS / completed`。完成数は `28 / 39`。
 
-現在地は `topic_29_exam_alignment_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
+現在地は `topic_29_explanation_source_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
 
 ## Topic 28 完了状態
 
@@ -29,9 +29,7 @@ clean blind v2:
 
 公開一次資料で確認していないL0系実際の `X_s`、`E`、`δ`、有効電力、無効電力、推力、推進効率は真値化していない。
 
-## Topic 29 今回完了
-
-制作前EXAM_ALIGNMENTを固定した。
+## Topic 29 制作前EXAM_ALIGNMENT
 
 - source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force.md`
 - QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_exam_alignment_qa.md`
@@ -53,6 +51,25 @@ clean blind v2:
 
 H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲートとして使用する。誘導機制御をTopic 29へ追加しない。
 
+## Topic 29 今回完了
+
+解説sourceとQAをGitHub正本へ固定した。
+
+- source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source.md`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source_qa.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 固定5問・24答案要素: `24 / 24 connected`
+- SPEC必須8項目: `8 / 8 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- 3段階例題: 基礎 / 本試験標準 / 複合 `PASS`
+- 数式・単位・例題独立再計算: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
+一次資料で確認した実車接続は、鉄道総研・JR東海が説明する超電導磁石、浮上・案内コイル、電磁誘導による浮上と中央復元まで。未確認の磁界、コイル電流、`R/L/M`、幾何寸法、浮上力、案内力、速度しきい値は真値化していない。
+
+教材用速度モデル `I_rms(v)` と `F_model(v)` は、指定可視化を説明するための仮定モデルとして明記済み。L0系実車の速度―力特性式として扱わない。
+
 ## Topic 29 固定SPEC境界
 
 必須8項目:
@@ -70,15 +87,20 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 2. 速度―誘導電流
 3. 速度―電磁力
 
-固定EXAM_ALIGNMENTは以後勝手に変更しない。L0系実車の未確認の超電導磁石磁界、コイル電流、抵抗・インダクタンス、幾何寸法、浮上力、案内力、速度しきい値を真値化しない。例題・グラフの仮定値は「教材用仮定値」と明記する。Topic 30「誘導集電・非接触電力伝送」は先取りしない。
+固定EXAM_ALIGNMENTは変更しない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。教材一式完成前にclean blind独立再解答へ進まない。
 
 ## 次の安全な工程
 
-Topic 29解説sourceを制作する。
+`29_l0_superconducting_magnetic_levitation_force_explanation_source.md` を正本として解説PDFを生成する。
 
-固定5問・24答案要素から逆算した説明を、SPEC必須8項目・指定3可視化へ全件マッピングする。公式・成立条件・単位・符号・解法手順を省略しない。L0系実車事実は鉄道総研・JR東海等の一次資料で確認した範囲だけを使う。
-
-解説source完成後に解説PDFへ進み、教材一式完成後にclean blind独立再解答を行う。
+QA項目:
+- A4縦、表示欠け・文字化けなし
+- 数式・単位・符号のsource一致
+- 固定5問・24答案要素への説明接続維持
+- SPEC必須8項目維持
+- 指定3可視化を教材用仮定値として表示
+- 未確認実車値の真値化0件
+- Topic 30先取り0件
 
 ## Topic 21 H26二次 問1(4)
 
