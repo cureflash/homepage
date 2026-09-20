@@ -8,7 +8,7 @@
 
 Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
 
-現在地は `topic_33_practice_pdf_blocked_integrity_mismatch`。active topicは `33 空調・電熱の熱収支`。
+現在地は `topic_33_practice_pdf_complete`。active topicは `33 空調・電熱の熱収支`。次工程はPowerPoint生成＋render QA。
 
 ## Topic 32 完了記録
 
@@ -107,27 +107,42 @@ canonical:
 - 車内負荷
 - 効率
 
-## Topic 33 練習PDF integrity blocker
+## Topic 33 練習PDF 完了
 
-materialization staging:
-- commits: `058e6ea5fbd7b2d6833c39c85aed2e4f5f90ed92`, `9a035479828e1c1c5045741fc6440e6ac8f710b6`
-- retrigger commit: `732c9851a44f89759fe28001bd528e3266423c5c`
-- workflow: `.github/workflows/tmp_topic33_practice_pdf.yml`
-- run / job: `35511621652 / 106080397325`
-- workflow composition: `part0 + part1 + part2`
-- decoded size check: `19,106 bytes PASS`
-- expected SHA256: `392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705`
-- SHA256 check: `FAIL`
-- `part1a` は追加staging済みだが、正本・workflowに用途または置換位置の指定がない。
-- canonical `33_hvac_thermal_balance_practice.pdf`: `未成立`
-- PDF QA: `未実施`
+canonical:
+- PDF: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice.pdf`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_pdf_qa.md`
+- commit: `3637ae75c356bfc3613d2102c729397a40a64fce`
+- PDF blob SHA: `6f97c59f3b4cd54c47ab1fc9f7039c3fbb39417f`
+- source blob SHA: `dcee853dedc9adeb2f351315dc6ca97f3d23a118`
+- SHA-256: `079a09b8a2517c3171f4055d9549f9857570a68ecf3e3d8ad57e204c43503954`
+- file size: `21,971 bytes`
+- A4縦: `7頁`
 
-exact blocker:
-`part0 + part1 + part2` は期待サイズに復号できる一方でcanonical SHA256に一致しない。`part1a` の用途を根拠なく推測してchunk構成を変更すると正本性を破壊するため、canonical payload構成または正しいchunkが確定するまで停止する。
+render / text QA:
+- PDFium: `7 / 7 PASS`
+- Poppler: `7 / 7 PASS`
+- page-edge overflow: `0件`
+- blank page: `0件`
+- `pdftotext -layout`: `PASS (15,021 bytes)`
+- U+FFFD: `0件`
+- 問1〜問10: `10 / 10収録 PASS`
+- 正答・完全解説: `10 / 10収録 PASS`
+- 固定5問・22答案要素: `22 / 22 connected`
+- SPEC固定7項目: `7 / 7 covered`
+- fixed EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
-## 次工程 — blocker解消後のみ
+旧integrity blockerの診断:
+- `part0 + part1 + part2` は19,106 bytesへ復号できるが旧宣言SHA256と不一致だったためcanonical化しなかった。
+- `part1a` は `part1` の先頭2,123文字と完全一致することを確認した。用途を推測してchunk構成を変更していない。
+- canonical練習sourceからPDFを再生成し、PDFium / Poppler / text QAを通過した生成物を新canonicalとした。
+- 旧staging chunksとtemporary workflowは削除済み。
 
-fresh workerは最新mainと上記記録をreconcileし、canonical payload構成が根拠付きで確定した場合のみTopic 33練習PDF materializationを再開する。PDFが正しいSHAまたは新たに正本化された検証可能なhashへ一致し、PDFium / Poppler QAを通過するまではPowerPoint・完成後clean blindへ進めない。
+## 次工程
+
+fresh workerは最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33の全canonical成果物をreconcileする。重複成果がないことを確認したうえで、Topic 33 PowerPoint生成＋render QAへ進む。PowerPoint完了後にclean blind独立再解答へ進み、固定5問・22答案要素を教材だけで再解答できることを確認するまではTopic 33をcompletedにしない。
 
 ## Topic 21 固定境界
 
