@@ -5,14 +5,41 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `30 / 39`
-- current_status: `topic_31_powerpoint_complete`
-- last_completed_topic: `30 L0系④ 誘導集電・非接触電力伝送`
-- active_topic: `31 補助電源変換器`
-- next_start: answer-bearing資料未閲覧のfresh workerでTopic 31 clean blind candidateを固定し、教材だけで固定5問・27答案要素を再解答する
+- exam_aligned_completed_topics: `31 / 39`
+- current_status: `topic_31_completed_topic_32_exam_alignment_pending`
+- last_completed_topic: `31 補助電源変換器`
+- active_topic: `32 照明設計`
+- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32の制作前EXAM_ALIGNMENTを公式過去問から開始する
 
-Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QAまで完了。
+Topic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QA、fresh clean blind＋公式照合まで完了。
 
+## Topic 31 最終結果
+
+判定: `PASS / COMPLETED`
+
+clean blind:
+- candidate: `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_clean_blind_candidate.md`
+- candidate blob SHA: `007efb48e5934ed4a18aee12ec7ba8a252bc78b0`
+- candidate lock commit: `4a945dd9adf321cd7a4d1df97a9c4cec262b2b90`
+- compare QA: `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_clean_blind_compare_qa.md`
+- candidate固定後修正: `0件`
+
+完成後独立再解答:
+- R7 一次「機械」問4: `5 / 5 PASS`
+- R5 二次「機械・制御」問3: `7 / 7 PASS`
+- R4 一次「機械」問4: `5 / 5 PASS`
+- R2 二次「機械・制御」問2: `5 / 5 PASS`
+- H22 一次「機械」問3: `5 / 5 PASS`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- 合計: `27 / 27 PASS`
+- 公式照合不一致: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+R5二次問3(2)のcandidate「機器の損失・発熱が増加する」は、公式標準解答例の「コンデンサやリアクトルの過熱や振動」と同じ過熱・発熱影響を述べており、要求する影響記述として整合。R2二次問2は `400 W / 624 W / 80.0 % / 99.0 % / 97.5 %` で公式表示と全一致。
 
 ## Topic 31 PowerPoint
 
@@ -205,19 +232,20 @@ clean blind:
 
 R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響しない微小差があるが、公式表示の5答案要素 `400 W / 624 W / 80.0 % / 99.0 % / 97.5 %` は全一致。candidateは変更していない。
 
-## Topic 31 系列SPEC固定範囲
+## Topic 32 系列SPEC固定範囲
 
-`31 補助電源変換器`
+`32 照明設計`
 
 扱う内容:
-- インバータ
-- コンバータ
-- 三相負荷
-- 力率
-- 高調波
-- 変換損失
+- 光束
+- 光度
+- 照度
+- 配光
+- 照明率
+- 保守率
+- 所要灯数
+- 消費電力
 - 効率
-- 負荷変動
 
 実車・設備仕様は一次資料で確認できたものだけを実値として扱い、未確認値を推測で確定しない。
 
