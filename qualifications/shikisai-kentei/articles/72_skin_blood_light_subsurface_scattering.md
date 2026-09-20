@@ -326,7 +326,7 @@ $$
 
 - Lister, T., Wright, P. A., Chappell, P. H., “Optical properties of human skin”, Journal of Biomedical Optics 17(9), 2012. https://pubmed.ncbi.nlm.nih.gov/23085902/
 - Jacques, S. L., “Optical properties of biological tissues: a review”, Physics in Medicine & Biology 58(11), 2013. https://pubmed.ncbi.nlm.nih.gov/23666068/
-- Bashkatov et al. / skin-optics literature review, “Relevance and utility of the in-vivo and ex-vivo optical properties of the skin reported in the literature: a review”, Biomedical Optics Express, 2023. https://pmc.ncbi.nlm.nih.gov/articles/PMC10368038/
+- Setchfield, K., Gorman, A., Simpson, A. H. R. W., Somekh, M. G., Wright, A. J., “Relevance and utility of the in-vivo and ex-vivo optical properties of the skin reported in the literature: a review [Invited]”, Biomedical Optics Express 14(7), 2023. https://pmc.ncbi.nlm.nih.gov/articles/PMC10368038/
 - Jensen, H. W., Marschner, S. R., Levoy, M., Hanrahan, P., “A Practical Model for Subsurface Light Transport”, SIGGRAPH 2001. https://graphics.stanford.edu/papers/bssrdf/
 - “Melanometry for objective evaluation of skin pigmentation in pulse oximetry studies”, Communications Medicine, 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC11239860/
 - ibisPaint, “12. Turn Clipping On”, official tutorial. https://ibispaint.com/lecture/index.jsp?lang=en&no=85
