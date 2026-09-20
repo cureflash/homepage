@@ -2,13 +2,13 @@
 
 更新日: 2026-09-21
 
-判定: `NEEDS_REVISION / topic_22_final_qa_needs_revision / IN_PROGRESS`
+判定: `PASS / topic_22_final_qa_pass / completed`
 
 ## 対象
 - active topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
 - 固定EXAM_ALIGNMENT: 一次4問＋二次2問、計6問・16答案要素
 - QA前完成数: `21 / 22`
-- QA後完成数: `21 / 22`
+- QA後完成数: `22 / 22`
 
 ## 1. 上位仕様・系列仕様
 `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` と現行mainを再照合した。
@@ -42,7 +42,7 @@
 - PowerPoint QA: `22_integrated_route_simulation_powerpoint_qa.md`
 - 完成後独立再解答: `22_integrated_route_simulation_independent_reanswer.md`
 
-最終QA記録作成前の成果物存在: `18 / 18 PASS`。
+成果物存在: `18 / 18 PASS`。
 
 ## 3. 成果物QA
 - 解説source固定6問・16答案要素: `16 / 16 COVERED`
@@ -80,34 +80,36 @@
 
 過去問対応品質ゲート: `PASS`。
 
-## 5. 進捗・正本整合
-技術内容はPASSだが、現行mainのcanonical sourceに進捗メタデータ未同期を確認した。
+## 5. 前回NEEDS_REVISION 2件の再確認
+前回最終QA commit `0a6c9426e29d41588b7dbf6ac0afe6d3e2cf258a` で指摘したcanonical sourceの進捗メタデータ2件を現行mainで再確認した。
 
 1. `22_integrated_route_simulation.md`
-   - 冒頭状態が `topic_22_simulation_artifacts_complete / IN_PROGRESS` のまま。
-   - 次工程が「Topic 22 解説プリントPDF」のまま。
-   - source品質ゲートとシミュレーション品質ゲート内の独立再解答が `NOT_RUN` のまま。
-   - 現状の `topic_22_independent_reanswer_pass` と不一致。`NEEDS_REVISION`。
+   - 冒頭状態を `topic_22_progress_metadata_synced / IN_PROGRESS` へ同期済み。
+   - 独立再解答を `16 / 16 PASS` へ同期済み。
+   - 次工程を「Topic 22 最終QA再実施」へ同期済み。
+   - 同期commit: `a4ce54499c0232347f0b8762417f7e09cc8c8603`。
+   - 判定: `PASS`。
 2. `22_integrated_route_simulation_practice.md`
-   - 練習source品質ゲート内の独立再解答が `NOT_RUN` のまま。
-   - 次工程が「Topic 22 練習プリントPDF」のまま。
-   - 現状の最終QA工程と不一致。`NEEDS_REVISION`。
+   - 独立再解答を `16 / 16 PASS` へ同期済み。
+   - 次工程を「Topic 22 最終QA再実施」へ同期済み。
+   - 同期commit: `0e693791e261feac1a0c9d5681e7618304c8138d`。
+   - 判定: `PASS`。
 
-`STATUS.md` と `HANDOFF.md` は最終QA開始前の `topic_22_independent_reanswer_pass / IN_PROGRESS` を正しく示していた。
+進捗・メタデータ同期: `2 / 2 PASS`。
 
-進捗・正本整合ゲート: `FAIL / 2ファイル未同期`。
+前回最終QA後のTopic 22ディレクトリ変更は上記canonical source 2ファイルの進捗メタデータ同期のみであり、技術本文、固定EXAM_ALIGNMENT、計算プログラム、CSV、指定6グラフ、PDF、PowerPoint、独立再解答記録は変更されていない。
 
 ## 6. 最終判定
+MASTER SPEC、EXAM_ALIGNMENT SPEC、系列SPEC、固定EXAM_ALIGNMENT、成果物QA、独立再解答、前回指摘2件の整合をすべて満たす。
+
 - 技術・試験対応品質ゲート: `PASS`
 - 成果物ゲート: `PASS`
 - 独立再解答ゲート: `PASS`
-- 進捗・正本整合ゲート: `NEEDS_REVISION`
+- 進捗・正本整合ゲート: `PASS`
 
-したがってTopic 22はまだ `completed` にしない。
+判定: `PASS / topic_22_final_qa_pass / completed`
 
-判定: `NEEDS_REVISION / topic_22_final_qa_needs_revision / IN_PROGRESS`
-
-完成数: `21 / 22`
+完成数: `22 / 22`
 
 ## 次工程
-`22_integrated_route_simulation.md` と `22_integrated_route_simulation_practice.md` の進捗メタデータ2ファイルを現行状態へ同期する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTX、計算プログラム・CSV・グラフは変更しない。
+`07_shinkansen_machine_2` は全22テーマ `completed`。本系列内の未完了テーマはない。次回の制作対象は `MASTER_SPEC.md` の全系列制作順を先頭から再確認して選定する。
