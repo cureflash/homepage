@@ -8,7 +8,31 @@
 
 Topic 01〜30は最終QAまで `PASS / completed`。完成数 `30 / 39`。
 
-現在地は `topic_31_exam_alignment_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENTまで完了。次は解説source。
+現在地は `topic_31_explanation_source_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QAまで完了。次は解説PDF＋PDF QA。
+
+## Topic 31 解説source完了記録
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation_source.md`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_explanation_source_qa.md`
+
+QA:
+- 固定5問・27答案要素への教材接続 `27 / 27 PASS`
+- SPEC固定8項目 `8 / 8 PASS`
+- 3段階例題 `3 / 3 PASS`
+- 数式・数値独立確認 `PASS`
+- 未確認実車値の真値化 `0件`
+- Topic 32〜34先取り `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
+
+固定境界:
+- R2二次問2は固定損＋負荷依存損失の一般モデルへ接続するだけで、変圧器固有の `鉄損=銅損` を補助電源変換器の普遍則にしない。
+- H22一次問3の太陽光・MPPT固有事項は教材範囲へ追加していない。
+- R5二次問3の能動フィルタを実車補助電源の搭載事実として扱っていない。
+- 例題数値はすべて教材用仮定値。特定新幹線の出力電圧、周波数、容量、トポロジー、素子、効率は一次資料確認なしに真値化していない。
 
 ## Topic 31 EXAM_ALIGNMENT完了記録
 
@@ -31,12 +55,6 @@ canonical artifacts:
 - 二次記述・計算問題 `2問`
 - 未確認実車値の真値化 `0件`
 - exact blocker `0件`
-
-固定境界:
-- R2二次問2は固定損・負荷依存損失・負荷率・効率の一般モデルへだけ接続する。変圧器固有の `鉄損=銅損` を補助電源変換器の普遍則にしない。
-- H22一次問3の太陽光・MPPT固有事項は教材範囲へ追加しない。
-- R5二次問3の能動フィルタを実車補助電源の搭載事実として扱わない。
-- 補助電源方式、回路トポロジー、定格、周波数、容量、素子、損失、効率は一次資料確認なしに真値化しない。
 
 ## Topic 30 完了記録
 
@@ -89,11 +107,11 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 ## 次の安全な工程
 
 1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、直近worker成果をreconcileする。
-2. 固定EXAM_ALIGNMENTは差し替えず、Topic 31解説sourceを作成する。
-3. 固定5問・27答案要素を本文へ1対1で接続し、SPEC 8項目を欠落させない。
-4. 実車接続は一次資料で確認できた事実だけを使い、未確認値は教材用仮定値として明示する。
-5. R2二次問2の変圧器固有最大効率条件を変換器へ一般化しない。
-6. source QAで `27 / 27`、SPEC `8 / 8`、範囲境界、未確認実車値0件を確認してからPDF工程へ進む。
+2. 固定EXAM_ALIGNMENTと解説sourceを変更せず、Topic 31解説PDFを生成する。
+3. PDFはA4、全文、数式、表、ページ端、置換文字、空白頁を確認し、可能な複数レンダラで全頁QAする。
+4. 固定5問・27答案要素、SPEC 8項目、3段階例題がPDFへ欠落なく入ったことを確認する。
+5. 実車接続は一次資料で確認できた事実だけを維持し、未確認実車値を追加しない。
+6. PDF QAがPASSしてから練習sourceへ進む。
 7. 仕様不整合・確定不能事項が出た場合はexact blockerを記録して停止する。
 
 Topic 31完成後のclean blind candidate固定前には、固定EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を先に開かない。
