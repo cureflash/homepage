@@ -109,7 +109,7 @@
 - 力行点: `1828` 点 / PASS
 - 回生点: `1149` 点 / PASS
 - 消費・回生同時正値: `0` 点 / PASS
-- 速度負値: `0` 点 / PASS`
+- 速度負値: `0` 点 / PASS
 - SVG XML: `6 / 6 PASS`
 - 代表点独立再計算: 力行・回生各1点 / PASS
 - 詳細QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_calculation_qa.md`
