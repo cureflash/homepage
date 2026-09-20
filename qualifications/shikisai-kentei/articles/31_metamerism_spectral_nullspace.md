@@ -219,6 +219,68 @@ $$
 
 という制約があり、どんな零空間ベクトルでもそのまま物理的な試料にできるわけではない。それでも、異なる分光反射率が同じXYZを作れる自由度が非常に大きいことは変わらない。
 
+### 4.1　同じXYZを作るスペクトルは「基本成分＋メタメリックブラック」に分解できる
+
+零空間を使うと、「同じXYZを持つスペクトルが無数にある」という事実を、さらに具体的な形で書ける。
+
+目標三刺激値を $\mathbf{t}$ とし、測色行列 $A_S$ のMoore–Penrose擬似逆行列を $A_S^+$ とする。$\mathbf{t}$ が $A_S$ の値域にあるとき、最小ノルム解の一つは
+
+$$
+\boldsymbol{\rho}_f=A_S^+\mathbf{t}
+$$
+
+で与えられる。この $\boldsymbol{\rho}_f$ に、零空間の任意のベクトル $\mathbf{n}$ を加えて
+
+$$
+\boldsymbol{\rho}=\boldsymbol{\rho}_f+\mathbf{n},
+\qquad
+\mathbf{n}\in\ker(A_S)
+$$
+
+としても、
+
+$$
+A_S\boldsymbol{\rho}
+=A_SA_S^+\mathbf{t}+A_S\mathbf{n}
+=\mathbf{t}
+$$
+
+となり、XYZは変わらない。
+
+この「XYZへ寄与しないスペクトル成分」が、古典的な色彩科学でいう metameric black である。任意のベクトル $\mathbf{q}$ から零空間成分を作る射影行列は
+
+$$
+P_{\mathrm{null}}=I-A_S^+A_S
+$$
+
+なので、
+
+$$
+\mathbf{n}=P_{\mathrm{null}}\mathbf{q}
+$$
+
+と書ける。したがって、同じ三刺激値を与えるスペクトル全体は
+
+$$
+\boxed{
+\boldsymbol{\rho}
+=A_S^+\mathbf{t}
++(I-A_S^+A_S)\mathbf{q}
+}
+$$
+
+というアフィン部分空間として表せる。
+
+CohenとKappaufは、色刺激を三刺激値を決める fundamental metamer と、測色値へ寄与しない metameric black に分解する考え方を整理している。ここで重要なのは、metameric black が「黒い光」や「黒い顔料」を意味するわけではないことだ。指定した測色系に対する三刺激値がゼロになるスペクトル方向、という線形代数上の名称である。
+
+ただし、$A_S^+\mathbf{t}$ や任意の零空間成分がそのまま実在する物体の分光反射率になるとは限らない。物体色には
+
+$$
+0\le\rho_i\le1
+$$
+
+という物理制約があるため、実在可能なメタマーは、このアフィン部分空間と反射率の許容領域 $[0,1]^n$ の交わりとして考える必要がある。
+
 ## 5　「同じXYZ」でもスペクトルは同じとは限らない
 
 2つの試料A、Bがあるとする。
@@ -682,3 +744,4 @@ $$
 - CIE 080:1989, *Special metamerism index: Change in observer*. https://www.cie.co.at/publications/special-metamerism-index-change-observer
 - ISO/CIE 23603:2024, *Standard method of assessing the spectral quality of daylight simulators for visual appraisal and measurement of colour*. https://www.cie.co.at/publications/standard-method-assessing-spectral-quality-daylight-simulators-visual-appraisal-and-1
 - CIE, *CIE standard illuminant D65* data set, DOI: 10.25039/CIE.DS.hjfjmt59. https://www.cie.co.at/datatable/cie-standard-illuminant-d65
+- J. B. Cohen and W. E. Kappauf, “Metameric Color Stimuli, Fundamental Metamers, and Wyszecki's Metameric Blacks,” *The American Journal of Psychology*, 95(4), 537–564 (1982). DOI: 10.2307/1422186.
