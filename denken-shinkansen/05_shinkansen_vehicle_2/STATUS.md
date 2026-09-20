@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `35 / 39`
-- current_status: `topic_36_practice_pdf_complete`
+- current_status: `topic_36_powerpoint_complete`
 - last_completed_topic: `35 ATC① 軌道回路の回路解析`
 - active_topic: `36 ATC② 信号伝送と周波数`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36の固定EXAM_ALIGNMENT、解説source/PDF、練習source/source QA、練習PDF/PDF QAをreconcileし、Topic 36解説画像PowerPoint作成＋QAから開始する。固定5問・25答案要素、SPEC固定8項目、二次は公式科目範囲外という適用判定、鉄道一次資料の境界を維持する。未確認実車値の真値化、Topic 37・38先取りは行わない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36全成果物をreconcileし、answer-bearing資料を先に開かないfresh workerでclean blind candidateを固定して独立再解答する。固定5問・25答案要素、SPEC固定8項目、二次0問の適用判定、鉄道一次資料の境界を維持し、candidate固定後修正をしない。
 
 Topic 01〜35は `PASS / completed`。完成数は `35 / 39`。
 
@@ -257,7 +257,7 @@ Topic 35はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 36 ATC② 信号伝送と周波数
 
-判定: `IN PROGRESS / PRACTICE_PDF_COMPLETE`
+判定: `IN PROGRESS / POWERPOINT_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -379,3 +379,19 @@ SPEC固定項目:
 ## Topic 21 固定注記
 
 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有の丸め差として診断済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
+
+### 解説画像PowerPoint
+
+- PowerPoint: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_images.pptx`
+- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_images_qa.md`
+- SHA-256: `5de0ed500adca5da90ab90b172d5c591d1bb3e37f3d81e2f2acb3a9d2fb03691`
+- 16:9: `6枚`
+- python-pptx geometry: `6 / 6 PASS`
+- LibreOffice PDF / Poppler PNG render: `6 / 6 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 二次試験型: `0問`（公式科目範囲外）
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+PowerPoint工程まで完了。完成数は `35 / 39` のまま。次工程はfresh clean blind独立再解答。

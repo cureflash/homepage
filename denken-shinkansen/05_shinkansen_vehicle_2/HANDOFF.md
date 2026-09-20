@@ -8,7 +8,7 @@
 
 Topic 01〜35は最終QAまで `PASS / completed`。完成数 `35 / 39`。
 
-現在地は `topic_36_practice_pdf_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了。固定5問・25答案要素は `25 / 25 connected`、SPEC固定8項目は `8 / 8 PASS`、練習12問は `12 / 12` 五肢択一・正答一意、PDFium / Poppler renderは練習PDF `5 / 5 PASS`、exact blocker `0件`。二次は公式科目範囲外のため固定0問とし、件数合わせは行っていない。次工程はTopic 36解説画像PowerPoint作成＋QA。固定EXAM_ALIGNMENT、一次限定の二次適用判定、鉄道一次資料の境界を変更せず、未確認実車値の真値化、Topic 37・38先取りを行わない。
+現在地は `topic_36_powerpoint_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QA、解説source/PDF、練習source/PDF、解説画像PowerPoint＋QAまで完了。固定5問・25答案要素は `25 / 25 connected`、SPEC固定8項目は `8 / 8 PASS`、二次は公式科目範囲外のため固定0問、exact blocker `0件`。次工程はanswer-bearing資料を先に開かないfresh workerによるclean blind candidate固定＋独立再解答。candidate固定後修正、未確認実車値の真値化、Topic 37・38先取りは行わない。
 
 ## Topic 34 完了記録
 
@@ -430,3 +430,23 @@ canonical:
 ## Topic 21 固定境界
 
 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有の丸め差として診断済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
+
+### Topic 36 解説画像PowerPoint
+
+canonical:
+- PowerPoint: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_images.pptx`
+- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_images_qa.md`
+- SHA-256: `5de0ed500adca5da90ab90b172d5c591d1bb3e37f3d81e2f2acb3a9d2fb03691`
+
+品質ゲート:
+- 16:9: `6枚`
+- python-pptx geometry / text assertions / notes: `6 / 6 PASS`
+- LibreOffice PDF: `6 / 6 pages PASS`
+- Poppler PNG render: `6 / 6 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 二次: `0問`（公式科目範囲外、件数合わせ0件）
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程: fresh clean blind。現在runはanswer-bearing資料を確認済みのためcandidateを作成しない。
