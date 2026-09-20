@@ -6,8 +6,8 @@
 - Topic 01〜20: 最終QA `PASS / completed`
 - 完成数: `20 / 22`
 - active topic: `21 空転した車輪を再粘着させる`
-- current status: `topic_21_blind_reanswer_ready / IN_PROGRESS`
-- 次工程: Topic 21 完成後独立再解答
+- current status: `topic_21_independent_reanswer_pass / IN_PROGRESS`
+- 次工程: Topic 21 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -98,7 +98,7 @@ Topic 20成果物QA:
 - 未確認実車再粘着アルゴリズムの仕様化: `0件 / PASS`
 - Topic 22先取り: `0件 / PASS`
 - SPEC外A-D変換器方式等の追加: `0件 / PASS`
-- 独立再解答: `NOT_RUN`（完成教材後）
+- 独立再解答: `NOT_RUN`（制作前時点）
 - 判定: `PASS / topic_21_exam_alignment_complete`
 
 ## Topic 21 解説source
@@ -181,5 +181,20 @@ Topic 20成果物QA:
 - 全15問独立再計算・論理QA `15 / 15 PASS`
 - 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 
+## Topic 21 完成後独立再解答
+- `topics/21_readhesion_control/21_readhesion_control_independent_reanswer.md`
+- 公式照合前答案を commit `29fa8525a1a970236e44fac44421e3fa451b52a3` で固定: `PASS`
+- R08 一次: `5 / 5 PASS`
+- R06 一次: `1 / 1 PASS`
+- R04 一次: `1 / 1 PASS`
+- H27 一次: `4 / 4 PASS`
+- R07 二次: `3 / 3 PASS`
+- 公式一致: `14 / 14 PASS`
+- 訂正: `0件`
+- 記録QA: `8 / 8 PASS`
+- 教材の概念・解法不足: `0件`
+- 教材外知識補完・未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 状態: `PASS / topic_21_independent_reanswer_pass / IN_PROGRESS`
+
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の完成後独立再解答。公式正答・標準解答を先に開かず、完成教材と公式問題PDFだけで固定5問・14答案要素を解き、答案をGitHubへ固定してから公式照合する。
+Topic 21「空転した車輪を再粘着させる」の最終QA。
