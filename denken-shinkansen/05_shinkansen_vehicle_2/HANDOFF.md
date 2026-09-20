@@ -6,190 +6,106 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜28は最終QAまで `PASS / completed`。完成数は `28 / 39`。
+Topic 01〜28は最終QAまで `PASS / completed`。完成数 `28 / 39`。
 
-現在地は `topic_29_clean_blind_fresh_worker_blocked`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。教材一式はPowerPointまで完成済みだが、clean blind品質ゲート未通過のためTopic 29はまだ `completed` ではない。
+現在地は `topic_29_clean_blind_v1_needs_revision`。Topic 29 `L0系③ 超電導磁気浮上の電磁力` は、教材一式を一度PowerPointまで完成した後、clean blind v1で `21 / 24 PASS` となったため未完了。
 
-## Topic 28 完了状態
+## 固定EXAM_ALIGNMENT
 
-Topic 28 `L0系② 同期機のフェーザと推進力` は `PASS / COMPLETED`。
+固定5問・24答案要素は変更しない。
 
-最終QA:
-- `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_final_qa.md`
+1. R8 一次「理論」問2 — 5答案要素
+2. R7 一次「理論」問2 — 5答案要素
+3. R4 一次「理論」問2 — 5答案要素
+4. R2 一次「理論」問2 — 5答案要素
+5. H23 二次「機械・制御」問1 — 4答案要素
 
-clean blind v2:
-- R4一次: `5 / 5 PASS`
-- R7二次: `6 / 6 PASS`
-- R5二次: `6 / 6 PASS`
-- H29二次: `6 / 6 PASS`
-- H27二次: `4 / 4 PASS`
-- 合計: `27 / 27 PASS`
+固定source:
+- `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force.md`
+- `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_exam_alignment_qa.md`
+
+SPEC必須8項目と指定3可視化も変更しない。
+
+## clean blind v1
+
+candidate:
+- `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_fresh_blind_candidates_20260920.md`
+- lock commit: `c60c20f76e9064964d666abf0a1823f417450d2c`
 - candidate固定後修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
 
-公開一次資料で確認していないL0系実際の `X_s`、`E`、`δ`、有効電力、無効電力、推力、推進効率は真値化していない。
+compare QA:
+- `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_fresh_blind_compare_qa_20260920.md`
+- R8一次: `5 / 5 PASS`
+- R7一次: `5 / 5 PASS`
+- R4一次: `5 / 5 PASS`
+- R2一次: `5 / 5 PASS`
+- H23二次: `1 / 4 PASS`
+- 合計: `21 / 24 PASS`
+- 判定: `NEEDS_REVISION`
 
-## Topic 29 制作前EXAM_ALIGNMENT
+H23の不一致:
+- (1) 教材から未解答。公式 `75.7 N·m`。
+- (2) 簡略式から `0.375` としたが、公式は `0.212`。
+- (3) `0 min^-1` は一致。
+- (4) 教材から未解答。公式 `36.7 N·m`。
 
-- source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force.md`
-- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_exam_alignment_qa.md`
-- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
-- 固定過去問: `5問`
-- 一次: `4問・20答案要素`
-- 二次: `1問・4答案要素`
-- 合計: `24答案要素`
-- 制作前独立再計算・公式照合: `24 / 24 PASS`
-- 公式照合不一致: `0件`
-- exact blocker: `0件`
+## root cause
 
-固定問題:
-1. R8 一次「理論」問2 `(1)〜(5)` — 回転電荷、鎖交磁束、ファラデーの法則
-2. R7 一次「理論」問2 `(1)〜(5)` — 相互インダクタンス、磁気エネルギー、電磁トルク、誘導起電力
-3. R4 一次「理論」問2 `(1)〜(5)` — 磁界、磁束、磁気回路
-4. R2 一次「理論」問2 `(1)〜(5)` — 鎖交磁束保存、磁気エネルギー、外力仕事
-5. H23 二次「機械・制御」問1 `(1)〜(4)` — すべり、誘導電流、電磁トルク、逆相制動
+H23問1は固定子側 `r_1`,`x_1` を残した一相L形等価回路を要求するが、旧教材§12と練習問12は固定子側電圧降下を無視した簡略二次回路しか扱っていなかった。
 
-H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲートとして使用する。誘導機制御をTopic 29へ追加しない。
+不足していた橋渡し:
 
-## Topic 29 解説source
+- `V_1=V_L/sqrt(3)`
+- `I'_2=V_1/sqrt((r_1+r'_2/s)^2+(x_1+x'_2)^2)`
+- `T=3I'^2_2(r'_2/s)/ω_s`
+- `s_max=r'_2/sqrt(r_1^2+(x_1+x'_2)^2)`
+- 逆相制動 `s_p=2-s` と `1<=s_p<=2` の区間判定
 
-- source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source.md`
-- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_source_qa.md`
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 固定5問・24答案要素: `24 / 24 connected`
-- SPEC必須8項目: `8 / 8 PASS`
-- 指定3可視化: `3 / 3 PASS`
-- 3段階例題: 基礎 / 本試験標準 / 複合 `PASS`
-- 数式・単位・例題独立再計算: `PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- exact blocker: `0件`
+固定EXAM_ALIGNMENT自体は変更しない。「24/24 connected」とした旧教材QAが過大評価だったと診断する。
 
-一次資料で確認した実車接続は、鉄道総研・JR東海が説明する超電導磁石、浮上・案内コイル、電磁誘導による浮上と中央復元まで。未確認の磁界、コイル電流、`R/L/M`、幾何寸法、浮上力、案内力、速度しきい値は真値化していない。
+## remediation files
 
-教材用速度モデル `I_rms(v)` と `F_model(v)` は、指定可視化を説明するための仮定モデルとして明記済み。L0系実車の速度―力特性式として扱わない。
+answer-bearing内部診断:
+- `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_h23_l_equivalent_remediation_note_20260920.md`
+- H23公式数値を含むためfresh blind v2 candidate固定前は開かない。
 
-## Topic 29 解説PDF
+blind-safe teaching patch:
+- `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_h23_teaching_patch_20260920.md`
+- 公式正答値を含めず、一般式・成立条件・解法手順だけを記載。
+- 判定: `TEACHING_PATCH_READY / ARTIFACT_RESYNC_REQUIRED`
 
-- PDF: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation.pdf`
-- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_pdf_qa.md`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-- canonical blob SHA: `f656c1b95a542bf15bfc77ca2f799fda6886faa0`
-- A4縦4頁
-- PDFium / Poppler: `4 / 4 PASS`
-- `pdftotext -layout`: `PASS`
-- 固定5問・24答案要素: `24 / 24 covered`
-- 一次: `20 / 20 covered`
-- 二次: `4 / 4 covered`
-- SPEC必須8項目: `8 / 8 covered`
-- 指定3可視化: `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- exact blocker: `0件`
+## reconcile
 
-## Topic 29 練習source
+`29_l0_superconducting_magnetic_levitation_force_fresh_worker_blocker.md` は別workerが候補固定前にanswer-bearing alignmentを開いたため、そのworker自身に対して記録したblocker。
 
-- source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_source.md`
-- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_source_qa.md`
-- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
-- 一次試験型: `8 / 8 PASS`、五肢択一・正答一意
-- 二次試験型: `4 / 4 PASS`、途中式・前提・単位・理由を記載
-- 数値・論理独立再計算: `12 / 12 PASS`
-- 固定5問・24答案要素: `24 / 24 connected`
-- 一次: `20 / 20 connected`
-- 二次: `4 / 4 connected`
-- SPEC必須8項目: `8 / 8 covered`
-- 指定3可視化の計算系: `3 / 3 aligned`
-- L0系未確認実車値の真値化: `0件`
-- Topic 30先取り: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- exact blocker: `0件`
+candidate lock `c60c20f...` はそのblocker commitより前に、answer-bearing資料を参照していない別runで成立済み。したがって現在の工程はfresh-worker待ちではなく、clean blind v1のH23不足を教材側でremediationする段階。blockerファイルは履歴として残す。
 
-## Topic 29 練習PDF
+## 旧成果物の扱い
 
-- PDF: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice.pdf`
-- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_pdf_qa.md`
-- 判定: `PASS / PRACTICE_PDF_COMPLETE`
-- canonical blob SHA: `1f639d616e3c2432279e02e599c374771c0cfb70`
-- A4縦7頁
-- PDFium / Poppler: `7 / 7 PASS`
-- `pdftotext -layout`: `PASS`
-- 一次試験型: `8 / 8 PASS`
-- 二次試験型: `4 / 4 PASS`
-- 固定5問・24答案要素: `24 / 24 connected`
-- 一次: `20 / 20 connected`
-- 二次: `4 / 4 connected`
-- SPEC必須8項目: `8 / 8 covered`
-- 指定3可視化の計算系: `3 / 3 aligned`
-- L0系未確認実車値の真値化: `0件`
-- Topic 30先取り: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- exact blocker: `0件`
+以下はblind v1実施前の旧版。H23 teaching patch未反映のため、現時点では再同期待ち。
 
-## Topic 29 PowerPoint
+- 解説source: `29_l0_superconducting_magnetic_levitation_force_explanation_source.md`
+- 解説PDF: `29_l0_superconducting_magnetic_levitation_force_explanation.pdf` / blob `f656c1b95a542bf15bfc77ca2f799fda6886faa0`
+- 練習source: `29_l0_superconducting_magnetic_levitation_force_practice_source.md`
+- 練習PDF: `29_l0_superconducting_magnetic_levitation_force_practice.pdf` / blob `1f639d616e3c2432279e02e599c374771c0cfb70`
+- PowerPoint: `29_l0_superconducting_magnetic_levitation_force_images.pptx` / blob `2919bbe2b6763bcd73e246fd3e76c17305e9e662`
 
-- PowerPoint: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx`
-- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md`
-- 判定: `PASS / POWERPOINT_COMPLETE`
-- canonical blob SHA: `2919bbe2b6763bcd73e246fd3e76c17305e9e662`
-- SHA-256: `19f86b51ebbdc96b62c9fcfd023843d421f4377991b8b1b1db07a09dd6d99b3a`
-- 16:9・6 slides
-- GitHub Actions run `35490660751`: `success`
-- 固定5問・24答案要素: `24 / 24 connected`
-- 一次: `20 / 20 connected`
-- 二次: `4 / 4 connected`
-- SPEC必須8項目: `8 / 8 PASS`
-- 指定3可視化: `3 / 3 PASS`
-- L0系未確認実車値の真値化: `0件`
-- Topic 30先取り: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- exact blocker: `0件`
-
-## Topic 29 clean blind fresh-worker blocker
-
-- blocker: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_fresh_worker_blocker.md`
-- 判定: `BLOCKED / FRESH_WORKER_CONDITION_NOT_CERTIFIABLE`
-- 本runはactive theme alignment本体を開いた時点で、制作前独立再計算・公式照合の結果と公式照合済み数値を閲覧した。
-- このrunでcandidateを作ってもclean blind実施者条件を満たさないため、候補を捏造せず停止した。
-- 固定EXAM_ALIGNMENT、教材一式、L0系実車境界、Topic 30境界は変更していない。
-- 完成数は `28 / 39` のまま。
-
-## Topic 29 固定SPEC境界
-
-必須8項目:
-1. ファラデーの法則
-2. 相互誘導
-3. 誘導電流
-4. 磁気エネルギー
-5. 電磁力
-6. 超電導磁石
-7. 浮上力
-8. 案内力
-
-指定3可視化:
-1. 磁束変化―誘導起電力
-2. 速度―誘導電流
-3. 速度―電磁力
-
-固定EXAM_ALIGNMENTは変更しない。L0系実車の未確認の磁界・コイル電流・`R/L/M`・幾何寸法・浮上力・案内力・速度しきい値を真値化しない。教材用仮定値は実車一般式へ昇格させない。Topic 30「誘導集電・非接触電力伝送」は先取りしない。
+L0系未確認実車値を真値化しない。Topic 30を先取りしない。
 
 ## 次の安全な工程
 
-answer-bearing資料を候補固定前に参照していないfresh workerで、Topic 29のclean blind候補を固定する。
+1. `h23_teaching_patch_20260920.md` を解説sourceと練習教材へ統合する。
+2. 解説PDF・練習PDF・PowerPointを再生成しQAする。
+3. 再同期完了後、answer-bearing資料を見ていないfresh workerでclean blind v2 candidateを新規固定する。
+4. v2固定後に公式照合する。v1 candidateは変更しない。
 
-候補固定前に開いてよいもの:
-- `MASTER_SPEC.md`
-- `EXAM_ALIGNMENT_SPEC.md`
-- 系列 `SPEC.md`
-- 系列 `STATUS.md` / `HANDOFF.md`
-- Topic 29の解説source
-- 固定5問の公式問題PDFのみ
-
-候補固定前に開かないもの:
-- `29_l0_superconducting_magnetic_levitation_force.md`
-- `29_l0_superconducting_magnetic_levitation_force_exam_alignment_qa.md`
+fresh blind v2 candidate固定前に開かない:
+- active theme alignment本体 / exam alignment QA
 - 公式解答PDF
-- 今後作成されるblind compare QA
+- blind compare QA
+- `h23_l_equivalent_remediation_note_20260920.md`
 
-固定問題IDは `STATUS.md` / `HANDOFF.md` の一覧を使う。固定5問・24答案要素を教材だけで再解答してcandidateを別ファイルへ固定し、固定後に初めて公式照合へ進む。candidate固定後は変更しない。
+fresh workerが参照してよい追加教材は `h23_teaching_patch_20260920.md`。
 
 ## Topic 21 H26二次 問1(4)
 
