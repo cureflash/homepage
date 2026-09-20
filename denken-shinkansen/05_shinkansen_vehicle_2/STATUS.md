@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `27 / 39`
-- current_status: `topic_28_clean_blind_fresh_worker_blocked`
+- current_status: `topic_28_fresh_blind_handoff_ready`
 - last_completed_topic: `27 L0系① リニア同期モータ`
 - active_topic: `28 L0系② 同期機のフェーザと推進力`
-- next_start: 公式解答・既存blind比較結果を事前に参照していない別fresh workerで、remediation後教材だけを使ったclean blind候補を別ファイルへ新規固定する
+- next_start: fresh workerが下記「clean blind読取順」を厳守し、remediation後教材だけで新規候補を固定する
 
 ## 完成済み
 
@@ -38,154 +38,73 @@ Topic 27最終QA:
 - SPEC指定可視化: `3件`（電力角特性、負荷角―出力、フェーザ図）
 - exact blocker: `0件`
 
-## Topic 28 解説source
+## Topic 28 成果物
 
-- 判定: `PASS / EXPLANATION_SOURCE_REMEDIATED`
+### 解説source / PDF
+
+- explanation source: `PASS / EXPLANATION_SOURCE_REMEDIATED`
 - path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_source.md`
-- blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
-- 初回QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_source_qa.md`
-- remediation QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
-- 固定過去問: `5 / 5 mapped`
-- 合計答案要素: `27 / 27 covered`
-- SPEC必須8項目: `8 / 8 covered`
-- 指定3可視化: `3 / 3 defined`
-- H29 `φ / θ / δ` 記号対応: `補強済み`
-- 未確認L0系実車値の真値化: `0件`
-- Topic 29先取り: `0件`
-- fixed EXAM_ALIGNMENT変更: `0件`
-- exact blocker: `0件`
-
-## Topic 28 解説PDF
-
-- 判定: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
-- path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation.pdf`
-- canonical blob SHA: `1eaa458d46a636ac4955d3475073e14071b4cd7f`
 - source blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_pdf_qa.md`
-- file size: `17,642 bytes`
-- SHA-256: `45d7c54bda708a74bf760fa7c1ec470f4aedce67ab564eae52f7d99f09f23e9c`
-- A4縦: `3 pages`
+- remediation QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
+- explanation PDF: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
+- PDF path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation.pdf`
+- canonical blob SHA: `1eaa458d46a636ac4955d3475073e14071b4cd7f`
+- A4縦 `3 pages`
 - PDFium / Poppler render: `3 / 3 PASS`
-- `pdftotext -layout`: `PASS`（`11,200 bytes`）
-- 置換文字 `�`: `0件`
-- 固定過去問: `5 / 5 covered`
-- 一次答案要素: `5 / 5 covered`
-- 二次答案要素: `22 / 22 covered`
-- 合計答案要素: `27 / 27 covered`
-- SPEC必須8項目: `8 / 8 covered`
+- 固定答案要素接続: `27 / 27`
+- SPEC必須8項目: `8 / 8`
 - 指定3可視化: `3 / 3 PASS`
-- H29 `φ` = 本教材 `θ` = 力率角、`δ` = 負荷角: `PDF同期 PASS`
-- H29指定変数式 `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` と電圧変動率式: `PDF同期 PASS`
-- 旧clean blind候補の編集: `0件`
-- exact blocker: `0件`
 
-## Topic 28 練習source
+### 練習source / PDF
 
-- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
-- path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_practice_source.md`
-- blob SHA: `6ae62109d1efa99fe3913ecb258a58f151b6968a`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_practice_source_qa.md`
-- 一次試験型: `8問`
-- 二次試験型: `4問`
-- 合計: `12問`
-- 数値・論理独立再計算: `12 / 12 PASS`
+- practice source: `PASS / PRACTICE_SOURCE_COMPLETE`
+- source blob SHA: `6ae62109d1efa99fe3913ecb258a58f151b6968a`
+- 一次8問＋二次4問
+- 独立再計算: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
-- 固定過去問: `5 / 5 connected`
-- 一次答案要素: `5 / 5 connected`
-- 二次答案要素: `22 / 22 connected`
-- 合計答案要素: `27 / 27 connected`
-- SPEC必須8項目: `8 / 8 covered`
-- 指定3可視化の計算接続: `3 / 3 aligned`
-- exact blocker: `0件`
-
-## Topic 28 練習PDF
-
-- 判定: `PASS / PRACTICE_PDF_COMPLETE`
-- path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_practice.pdf`
+- practice PDF: `PASS / PRACTICE_PDF_COMPLETE`
 - canonical blob SHA: `2c24d79caa33af88db01324007c312c2551356ec`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_practice_pdf_qa.md`
-- file size: `12,096 bytes`
-- SHA-256: `773bf45ecd5aa839dd9a8a92df62717333af62305b2fb76e1b92155281f3041d`
-- A4縦: `5 pages`
+- A4縦 `5 pages`
 - PDFium / Poppler render: `5 / 5 PASS`
-- `pdftotext -layout`: `PASS`（`7,872 bytes`）
-- 置換文字 `�`: `0件`
-- 一次8問＋正答・完全解説: `8 / 8 PASS`
-- 二次4問＋途中式・前提・単位・理由説明: `4 / 4 PASS`
-- 数値・論理独立再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- 固定過去問: `5 / 5 connected`
-- 一次答案要素: `5 / 5 connected`
-- 二次答案要素: `22 / 22 connected`
-- 合計答案要素: `27 / 27 connected`
-- SPEC必須8項目: `8 / 8 covered`
-- 指定3可視化の計算接続: `3 / 3 aligned`
-- exact blocker: `0件`
+- 固定答案要素接続: `27 / 27`
 
-## Topic 28 PowerPoint
+### PowerPoint
 
 - 判定: `PASS / POWERPOINT_COMPLETE`
 - path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_images.pptx`
 - canonical blob SHA: `b677f457c8e8f6aebcfebeeecd0b68ff7736883b`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_images_qa.md`
 - canonical artifact commit: `8ca524e4836823d1f7df85dfabf5fc5ac00566bb`
+- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_images_qa.md`
+- 16:9 `6 slides`
 - GitHub Actions build/validation: `PASS`
-- file size: `241,446 bytes`
-- SHA-256: `48c2ed316625d3df369f38b4c08e1885c60222b6915a36a8862368da6e782a21`
-- 16:9: `6 slides`
-- PPTX ZIP / python-pptx / geometry: `PASS`
-- LibreOffice PDF変換: `6 / 6 PASS`
-- `pdftotext -layout`: `PASS`（`10,882 bytes`）
-- 置換文字 `�`: `0件`
-- 固定過去問: `5 / 5 connected`
-- 一次答案要素: `5 / 5 connected`
-- 二次答案要素: `22 / 22 connected`
-- 合計答案要素: `27 / 27 connected`
+- LibreOffice render: `6 / 6 PASS`
+- 固定答案要素接続: `27 / 27`
 - SPEC必須8項目: `8 / 8 PASS`
-- SPEC指定3可視化: `3 / 3 PASS`
-- 未確認L0系実車値の真値化: `0件`
-- Topic 29先取り: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
+- 指定3可視化: `3 / 3 PASS`
 
-## Topic 28 clean blind公式照合
+## Topic 28 clean blind履歴の扱い
 
-- 候補: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_blind_candidates.md`
-- 候補固定commit: `c3962aec781742bcbb17935327abcef9bb9d7317`
-- 候補blob SHA: `6bf27ac5829d763f30549f775e9c4b710c790588`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_blind_compare_qa.md`
-- 判定: `NEEDS_REVISION / 26_OF_27_PASS`
-- 一次: `5 / 5 PASS`
-- 二次: `21 / 22 PASS`
-- 合計: `26 / 27 PASS`
-- 不一致: H29二次「機械・制御」問1(1)のみ
-- 内容: 問題は `V,I,X_s,φ` で電圧変動率を表すことを要求するが、固定候補が力率角 `φ` ではなく負荷角 `δ` を用いた別表現で回答した
-- 原因: 本教材の力率角記号 `θ` とH29本試験の `φ` の対応をblind再解答で取り違え、`δ` を選択した
-- 固定候補の公式照合後編集: `0件`
-- fixed EXAM_ALIGNMENT変更: `0件`
+旧candidate・公式比較QA・fresh-worker blockerは履歴として残すが、fresh candidate固定前には内容を開かない。
 
-## Topic 28 source remediation
+保護対象:
+- `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_blind_candidates.md`
+- `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_blind_compare_qa.md`
+- `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_fresh_worker_blocker.md`
 
-- 判定: `PASS / SOURCE_REMEDIATION_COMPLETE`
-- source commit: `28692c4d7c5b0bfee99f28d32be4eaf19f404a14`
-- QA commit: `2e24f142239ea932c6fb28631b9ad35aec2e76d1`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
-- 補強: H29 `φ` = 本教材 `θ` = 力率角、`δ` = 負荷角を分離
-- 指定変数式: `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` と電圧変動率式を明記
-- 式整合: 既存発電機フェーザ式から独立展開 `PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 新規仕様追加: `0件`
-- PDF同期: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
+既存worker成果のreconcileは、fresh candidate固定前はcommit message・path・artifact存在確認までに限定する。旧candidateや比較結果の内容は参照しない。
 
-## Topic 28 fresh-worker blocker
+## clean blind読取順
 
-- 判定: `BLOCKED / FRESH_WORKER_CONDITION_NOT_CERTIFIABLE`
-- blocker: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_fresh_worker_blocker.md`
-- exact reason: 本runは必須reconcileで `STATUS.md` / `HANDOFF.md` を読んだ時点で前回blindの公式照合内容を閲覧済みのため、本run自身を「公式解答を先に見ていないfresh worker」と認定できない
-- 旧blind候補変更: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 28 completed化: `しない`
+fresh workerは次の順を厳守する。
+
+1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`を読む。
+2. 直近commitと既存worker成果はmetadata/pathでreconcileし、上記保護対象3ファイルの内容は開かない。
+3. remediation後のTopic 28教材を読む。旧blind candidate・公式比較QAは読まない。
+4. 固定5問を問題文だけから独立再解答し、新規candidateを別ファイルへ固定する。
+5. candidate固定commit後に初めて公式解答・旧比較QAを開き、27答案要素を照合する。
+6. `27 / 27 PASS` の場合のみ最終QAへ進む。FAILならcandidateは編集せず、教材側を最小remediationする。
+
+本runは既に旧比較内容を閲覧済みのためcandidate固定は実施しない。必須pre-read文書から比較結果の詳細を除き、次のfresh workerが品質条件を満たせる状態へ正本を整理した。
 
 ## Topic 28 固定境界
 
@@ -197,4 +116,4 @@ L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ
 
 ## 次の安全な工程
 
-Topic 28はまだ `completed` と数えない。公式解答・既存blind比較結果を事前に参照していない別fresh workerが、remediation後教材だけを使ってclean blind候補を別ファイルへ新規固定し、固定5問・27答案要素を公式再照合する。今回固定した旧候補は修正しない。再照合PASS後に最終QAへ進む。
+Topic 28はまだ `completed` と数えない。次のfresh workerが上記読取順で新規clean blind candidateを固定し、その後に公式照合する。旧candidateは修正しない。再照合PASS後に最終QAへ進む。
