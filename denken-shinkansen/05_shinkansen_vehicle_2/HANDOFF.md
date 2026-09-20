@@ -8,7 +8,7 @@
 
 Topic 01〜36は最終QAまで `PASS / completed`。完成数 `36 / 39`。
 
-現在地は `topic_37_practice_source_complete`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋独立source QAまで完了。固定5問・25答案要素は一次 `5 / 5`、二次 `20 / 20`、合計 `25 / 25 PASS`。練習は一次12問 `12 / 12` 正答一意、二次4題 `20 / 20` 独立再計算PASS。SPEC固定8項目 `8 / 8 PASS`、系列SPEC固定計算・グラフ2項目 `2 / 2 PASS`、二次問題の件数合わせ0件、未確認実車ATC内部実装・数値の真値化0件、Topic 38先取り0件、Topic 21一般式変更0件、exact blocker `0件`。次工程はTopic 37練習PDF生成＋PDF QA。
+現在地は `topic_37_powerpoint_complete`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋render QAまで完了。固定5問・25答案要素は一次 `5 / 5`、二次 `20 / 20`、合計 `25 / 25 PASS`。練習は一次12問 `12 / 12` 正答一意、二次4題 `20 / 20` 独立再計算PASS。SPEC固定8項目 `8 / 8 PASS`、系列SPEC固定計算・グラフ2項目 `2 / 2 PASS`、二次問題の件数合わせ0件、未確認実車ATC内部実装・数値の真値化0件、Topic 38先取り0件、Topic 21一般式変更0件、exact blocker `0件`。完成判定に必要なfresh clean blindのみ未実施。次工程はanswer-bearing資料を先に開かないfresh workerによるcandidate固定→独立再解答QA。本runはanswer-bearing資料参照済みのためcandidateを作成しない。
 
 ## Topic 34 完了記録
 
@@ -474,7 +474,7 @@ Topic 36は全工程を通過したため `PASS / COMPLETED`。完成数を `36 
 
 ## Topic 37 進捗
 
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+判定: `PASS / POWERPOINT_COMPLETE`
 
 canonical:
 - EXAM_ALIGNMENT source: `topics/37_atc_speed_control_system/37_atc_speed_control_system.md`
@@ -498,6 +498,16 @@ canonical:
 - practice source QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_source_qa.md`
 - practice source QA commit: `a9db0039f49375a1155809d22128444c20ed22ba`
 - practice source QA blob SHA: `686ccbbe8df765f9c3e08ec1fad15d956d297e97`
+- practice PDF: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice.pdf`
+- practice PDF canonical commit: `b27f2fdc6d6fa78dc03aa5641ddbb14aebd5679c`
+- practice PDF blob SHA: `9605d04a84a1d9b0c44104ec1ae13c6919c275b4`
+- practice PDF SHA-256: `2b7df3337f220982f62a5a8758a9d1c9acc626c636f1f9edad7f0e5a08bf962f`
+- practice PDF QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_pdf_qa.md`
+- practice PDF QA commit: `a36f4bfdf2b1366c891072561f0acf78cd507e2f`
+- PowerPoint: `topics/37_atc_speed_control_system/37_atc_speed_control_system_images.pptx`
+- PowerPoint SHA-256: `bab088b6ea5aa2ebb6833090c2fb5f4d7ce25c3af0fafa0caa9100392136f670`
+- PowerPoint QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_images_qa.md`
+- PowerPoint canonical commit: `de3e673ce4ebb12ab9e8c4c4b789e18371ff31bc`
 
 固定過去問:
 - R4一次「機械」問7
@@ -515,6 +525,8 @@ canonical:
 - 一次正答一意性: `12 / 12 PASS`
 - 練習二次: `4題`
 - 二次独立再計算: `20 / 20 PASS`
+- 練習PDF: `6頁 / PDFium・Poppler 6 / 6 PASS`
+- PowerPoint: `16:9 / 6枚 / render 6 / 6 PASS`
 - SPEC固定8項目: `8 / 8 PASS`
 - 系列SPEC固定計算・グラフ: `2 / 2 PASS`
 - 二次問題の件数合わせ採用: `0件`
@@ -526,6 +538,6 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋独立source QAまで完了。完成数は `36 / 39` のまま。
+Topic 37はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointまで完了。完成数は `36 / 39` のまま。完成判定にはfresh clean blind独立再解答が未実施。
 
-次工程: Topic 37練習PDF生成＋PDF QA。固定5問・25答案要素、一次12問・二次4題、SPEC固定8項目、系列SPEC固定計算・グラフ2項目、鉄道一次資料の境界を変更しない。
+次工程: answer-bearing資料を先に開かないfresh workerでclean blind candidateを固定し、その後に公式標準解答・教材との照合QAを行う。本runはanswer-bearing資料を参照済みのためcandidateを作成しない。
