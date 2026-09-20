@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `27 / 39`
-- current_status: `topic_28_powerpoint_complete`
+- current_status: `topic_28_blind_reanswer_needs_revision`
 - last_completed_topic: `27 L0系① リニア同期モータ`
 - active_topic: `28 L0系② 同期機のフェーザと推進力`
-- next_start: Topic 28の完成後clean blind独立再解答候補固定を実施する
+- next_start: H29二次「機械・制御」問1(1)の `φ / θ / δ` 記号対応を教材へ最小補強しPDFへ同期した後、fresh workerでclean blindを再実施する
 
 ## 完成済み
 
@@ -130,6 +130,22 @@ Topic 27最終QA:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+## Topic 28 clean blind公式照合
+
+- 候補: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_blind_candidates.md`
+- 候補固定commit: `c3962aec781742bcbb17935327abcef9bb9d7317`
+- 候補blob SHA: `6bf27ac5829d763f30549f775e9c4b710c790588`
+- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_blind_compare_qa.md`
+- 判定: `NEEDS_REVISION / 26_OF_27_PASS`
+- 一次: `5 / 5 PASS`
+- 二次: `21 / 22 PASS`
+- 合計: `26 / 27 PASS`
+- 不一致: H29二次「機械・制御」問1(1)のみ
+- 内容: 問題は `V,I,X_s,φ` で電圧変動率を表すことを要求するが、固定候補が力率角 `φ` ではなく負荷角 `δ` を用いた別表現で回答した
+- 原因: 本教材の力率角記号 `θ` とH29本試験の `φ` の対応をblind再解答で取り違え、`δ` を選択した
+- 固定候補の公式照合後編集: `0件`
+- fixed EXAM_ALIGNMENT変更: `0件`
+
 ## Topic 28 固定境界
 
 L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ推進コイルへ三相交流を供給し、移動磁界と車上超電導磁石との吸引・反発で推進する」という原理まで。公開一次資料で確認していない実際の `X_s`、`E`、`δ`、有効電力、無効電力、推力、推進効率を真値化しない。例題・グラフの数値は教材用仮定値として扱う。Topic 29の浮上・案内系は先取りしない。
@@ -140,4 +156,4 @@ L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ
 
 ## 次の安全な工程
 
-Topic 28の完成後clean blind独立再解答候補を、保存済み正答・公式解答を先に見ずに固定する。その後、公式照合→最終QAの順で進む。Topic 28はまだ `completed` と数えない。
+Topic 28はまだ `completed` と数えない。H29二次「機械・制御」問1(1)について、「本試験の `φ` は本教材の力率角 `θ` に対応し、負荷角 `δ` とは別物。`V,I,X_s,φ` 指定なら `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` から `ε` を表す」という過去問固有注記を教材へ最小補強し、解説PDFへ同期する。その後、公式解答を見ていないfresh workerがclean blindを新規固定して再照合する。
