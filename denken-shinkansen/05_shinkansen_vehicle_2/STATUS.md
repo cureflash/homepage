@@ -6,16 +6,16 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `28 / 39`
-- current_status: `topic_29_powerpoint_complete`
+- current_status: `topic_29_clean_blind_fresh_worker_blocked`
 - last_completed_topic: `28 L0系② 同期機のフェーザと推進力`
 - active_topic: `29 L0系③ 超電導磁気浮上の電磁力`
-- next_start: Topic 29のclean blind独立再解答候補を、公式解答・保存済み正答を先に見ずに固定する
+- next_start: answer-bearing資料を開いていないfresh workerでTopic 29のclean blind候補を固定する
 
 ## 完成済み
 
 Topic 01〜28: `PASS / completed`。完成数 `28 / 39`。
 
-Topic 29は `POWERPOINT_COMPLETE`。テーマ自体はまだ `completed` ではない。
+Topic 29は教材一式をPowerPointまで完成済みだが、clean blind品質ゲートは未通過。テーマ自体はまだ `completed` ではない。
 
 ## Topic 28 最終判定
 
@@ -193,7 +193,16 @@ L0系実車の未確認の超電導磁石磁界、コイル電流、抵抗・イ
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 29のclean blind独立再解答候補固定。公式解答・保存済み正答を先に見ず、固定後に公式照合・最終QAへ進む。
+## Topic 29 clean blind fresh-worker blocker
+
+判定: `BLOCKED / FRESH_WORKER_CONDITION_NOT_CERTIFIABLE`
+
+- blocker: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_fresh_worker_blocker.md`
+- 本runはactive theme alignment本体を現状確認時に開き、制作前公式照合済み結果を閲覧したため、clean blind候補作成者として認定しない。
+- 固定EXAM_ALIGNMENT、教材一式、実車境界は変更していない。
+- 完成数は `28 / 39` のまま。
+
+次工程は、answer-bearing資料を候補固定前に参照していないfresh workerによるTopic 29 clean blind候補固定。候補固定後にのみ公式照合へ進む。
 
 ## Topic 21 H26二次 問1(4)
 
