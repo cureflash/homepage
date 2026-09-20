@@ -21,10 +21,7 @@ jobs:
         run: |
           set -euo pipefail
           PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation.pdf'
-          : > "$PDF"
-          for f in denken-shinkansen/.tmp_topic29_explanation_{0,1,2,3}.b64; do
-            base64 -d "$f" >> "$PDF"
-          done
+          cat denken-shinkansen/.tmp_topic29_bin_{00,01,02,03,04,05,06,07} > "$PDF"
           test "$(git hash-object "$PDF")" = '35ba843b81fd8fc08f76bd5de8aa9edee540d78f'
           test "$(stat -c%s "$PDF")" = '15941'
       - name: Render and text QA
@@ -53,7 +50,7 @@ jobs:
           for s in ['V_1=V_L/sqrt(3)', "I'_2(s)", 's_p=2-s', '1<=s_p<=2', '48.1 / 48.0 N']:
               assert s in t, s
           PY
-      - name: Write QA and clean staging files
+      - name: Write QA
         shell: bash
         run: |
           set -euo pipefail
@@ -87,8 +84,6 @@ jobs:
 
           ## H23二次 remediation反映
 
-          正本PDFに以下のblind-safe橋渡しを反映した。
-
           - `V_1=V_L/sqrt(3)`
           - `I'_2(s)=V_1/sqrt((r_1+r'_2/s)^2+(x_1+x'_2)^2)`
           - `T(s)=3 I'^2_2(s)(r'_2/s)/ω_s`
@@ -114,14 +109,16 @@ jobs:
 
           `48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として維持する。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
           EOF
-          rm -f denken-shinkansen/.tmp_topic29_explanation_{0,1,2,3}.b64
-          rm -f .github/workflows/topic29-explanation-resync.yml
       - name: Commit canonical artifact
         shell: bash
         run: |
           set -euo pipefail
+          PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation.pdf'
+          QA='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation_pdf_qa.md'
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A denken-shinkansen .github/workflows/topic29-explanation-resync.yml
+          git add "$PDF" "$QA"
           git commit -m 'denken: resync Topic 29 explanation artifact'
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
