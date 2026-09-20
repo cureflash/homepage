@@ -99,6 +99,15 @@
       "summary":"ベリル中のCr³⁺が作るd軌道分裂とd-d遷移から、430 nm・600〜620 nm付近の選択吸収と緑色の発色を結晶場・配位子場理論で理解する。",
       "levels":["3級：光と色・物体色","大学：無機化学・鉱物学"],
       "source":"articles/34_emerald_crystal_field.md"
+    },
+    {
+      "id":"35_organic_dyes_pi_conjugation",
+      "articleNo":35,
+      "seriesId":"chemistry-geoscience",
+      "title":"有機色素はなぜ色づくのか――π共役とHOMO–LUMOギャップ",
+      "summary":"π共役による分子軌道の非局在化とHOMO–LUMOギャップの縮小から、可視吸収、発色団、吸収強度、置換基効果、染料・顔料の違いまで理解する。",
+      "levels":["3級：光と色・光の性質と色・減法混色","大学：有機化学・量子化学・分光学"],
+      "source":"articles/35_organic_dyes_pi_conjugation.md"
     }
   ]
 }
