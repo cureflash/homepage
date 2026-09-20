@@ -110,6 +110,15 @@
       "source":"articles/21_color_constancy_von_kries.md"
     },
     {
+      "id":"22_psychological_scaling_color",
+      "articleNo":22,
+      "seriesId":"vision-psychology",
+      "title":"色の印象はどうやって数値にするのか――心理学的尺度構成法と心理物理学",
+      "summary":"名義・順序・間隔・比率尺度の数学的意味から、一対比較法、Thurstoneモデル、SD法、因子分析、Weber–Fechner則、Stevens則、信頼性と妥当性までを使って色の印象測定を理解する。",
+      "levels":["1級：心理学的尺度構成法・一対比較法・SD法","大学：心理測定・心理物理学・認知科学・統計学"],
+      "source":"articles/22_psychological_scaling_color.md"
+    },
+    {
       "id":"25_cie_xyz_tristimulus",
       "articleNo":25,
       "seriesId":"colorimetry-design",
