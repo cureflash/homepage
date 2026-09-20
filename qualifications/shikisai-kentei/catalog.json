@@ -45,6 +45,15 @@
       "summary":"色合わせ実験から三刺激値を導き、RGBの負値、XYZへの基底変換、分光積分、標準観察者、メタメリズムまでを線形代数と測色学で理解する。",
       "levels":["1級：XYZ表色系","大学：色彩科学・線形代数"],
       "source":"articles/25_cie_xyz_tristimulus.md"
+    },
+    {
+      "id":"34_emerald_crystal_field",
+      "articleNo":34,
+      "seriesId":"chemistry-geoscience",
+      "title":"エメラルドはなぜ緑なのか――Cr³⁺と結晶場から発色を考える",
+      "summary":"ベリル中のCr³⁺が作るd軌道分裂とd-d遷移から、430 nm・600〜620 nm付近の選択吸収と緑色の発色を結晶場・配位子場理論で理解する。",
+      "levels":["3級：光と色・物体色","大学：無機化学・鉱物学"],
+      "source":"articles/34_emerald_crystal_field.md"
     }
   ]
 }
