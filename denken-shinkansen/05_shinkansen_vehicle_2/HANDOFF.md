@@ -8,13 +8,13 @@
 
 Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
 
-現在地は `topic_27_clean_blind_blocked_this_run`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_clean_blind_candidates_locked`。active topicは Topic 27 `L0系① リニア同期モータ`。
 
 ## 今回のreconcileと進行
 
-最新main `57f4f93e64a30aef4ae7e18f1b195b3a2d3f3c3c`、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、直近の同系列worker成果をreconcileした。開始時点でTopic 27は解説source/PDF、練習source/PDF、PowerPointまで完了済みで、次工程は完成後clean blind独立再解答候補固定だった。
+系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27既存教材・成果物をreconcileした。開始時点でTopic 27は解説source/PDF、練習source/PDF、PowerPointまで完了済みで、前runのclean blind完全性blockerからfresh workerで候補固定をやり直す段階だった。
 
-このrunではcandidate lock前に保存済み独立解答・公式照合結果を含むTopic 27のanswer-bearing EXAM_ALIGNMENT sourceを開いてしまったため、clean blind完全性を証明できない。候補ファイルは作成せず、exact blockerを `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_clean_blind_gate_blocker.md` に記録した。既存成果物・固定EXAM_ALIGNMENT・Topic 21一般式は変更していない。
+candidate lock前はanswer-bearing `27_l0_linear_synchronous_motor.md` と公式解答を開かず、固定問題IDはSTATUS/HANDOFFから取得し、教材と公式問題だけで固定5問・23答案要素を独立再解答した。候補を `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_blind_candidates.md` へcommitし、lock commitは `fe677eb5c89613a8ed06e1c2343a5cf0525f5d21`。固定EXAM_ALIGNMENT、Topic 21一般式、L0系実車境界、Topic 28範囲は変更していない。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -286,14 +286,31 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## Topic 27 clean blind gate blocker
 
-- 判定: `BLOCKED_THIS_RUN / CLEAN_BLIND_INTEGRITY`
+- 判定: `RESOLVED_BY_FRESH_WORKER / HISTORICAL_RECORD`
 - 記録: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_clean_blind_gate_blocker.md`
-- 原因: candidate lock前に保存済み独立解答・公式照合結果を含むanswer-bearing sourceを参照したため、このrunではblind性を証明不能
-- candidate作成: `0件`
-- 既存成果物変更: `0件`
+- 原因: 前runでcandidate lock前に保存済み独立解答・公式照合結果を含むanswer-bearing sourceを参照したため、そのrunではblind性を証明不能だった
+- 回復: fresh workerでanswer-bearing source・公式解答をcandidate lock前に開かず再実施し、候補固定を完了
+- candidate lock後の修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 21一般式変更: `0件`
-- 回復可能性: `fresh workerで可能`
+
+## Topic 27 clean blind候補固定
+
+候補:
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_blind_candidates.md`
+- lock commit: `fe677eb5c89613a8ed06e1c2343a5cf0525f5d21`
+- 固定過去問: `5 / 5 candidate fixed`
+- 一次答案要素: `18 / 18 candidate fixed`
+- 二次答案要素: `5 / 5 candidate fixed`
+- 合計答案要素: `23 / 23 candidate fixed`
+- candidate lock前の公式解答参照: `0件`
+- candidate lock前のanswer-bearing `27_l0_linear_synchronous_motor.md`参照: `0件`
+- candidate lock後の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- L0系未確認実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- exact blocker: `0件`
 
 ## 固定境界
 
@@ -306,4 +323,4 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## 次の安全な工程
 
-fresh workerでTopic 27 clean blind候補固定を行う。candidate lock前はanswer-bearing `27_l0_linear_synchronous_motor.md` を開かず、固定問題IDはこのHANDOFF/STATUSから取得する。教材だけで固定5問・23答案要素を解いて `27_l0_linear_synchronous_motor_blind_candidates.md` をcommitした後に、初めて公式解答・保存済み照合結果を参照して比較する。
+locked candidate `27_l0_linear_synchronous_motor_blind_candidates.md` は変更しない。公式解答と保存済み照合結果を開いて固定5問・23答案要素を照合し、`27_l0_linear_synchronous_motor_clean_blind_official_match_qa.md` を作成する。
