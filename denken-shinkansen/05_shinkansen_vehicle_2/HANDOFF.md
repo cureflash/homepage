@@ -8,15 +8,15 @@
 
 Topic 01〜27は最終QAまで `PASS / completed`。完成数は `27 / 39`。
 
-現在地は `topic_28_source_remediation_complete`。active topicは Topic 28 `L0系② 同期機のフェーザと推進力`。Topic 28はまだ `completed` ではない。
+現在地は `topic_28_explanation_pdf_resync_complete`。active topicは Topic 28 `L0系② 同期機のフェーザと推進力`。Topic 28はまだ `completed` ではない。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、Topic 28既存成果をreconcileした。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、Topic 28既存成果、直近コミットをreconcileした。
 
-開始時点のclean blindは固定5問・27答案要素中 `26 / 27 PASS`。唯一のFAILはH29二次「機械・制御」問1(1)で、本試験の力率角 `φ` を本教材の力率角 `θ` ではなく負荷角 `δ` と取り違えたものだった。
+既存workerがclean blindの唯一のFAILだったH29二次「機械・制御」問1(1)の `φ / θ / δ` 記号対応を解説sourceへ最小補強済みだったため、その作業は重複しなかった。旧解説PDFだけが補強前sourceだったので、remediation後sourceから解説PDFを再生成し、PDFium/Poppler表示QA、テキスト抽出、数値再計算、H29記号対応同期QAまで実施した。
 
-固定EXAM_ALIGNMENT・一般式・実車境界を変更せず、解説sourceへこの記号対応だけを最小補強した。source remediationは `PASS / SOURCE_REMEDIATION_COMPLETE`。旧解説PDFは補強前sourceから生成されたため `STALE / RESYNC_REQUIRED` とした。
+解説PDFは `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`。固定EXAM_ALIGNMENT、練習成果物、PowerPoint、旧clean blind候補は変更していない。
 
 ## Topic 28 固定EXAM_ALIGNMENT
 
@@ -58,9 +58,20 @@ SPEC必須8項目:
 - source remediation commit: `28692c4d7c5b0bfee99f28d32be4eaf19f404a14`
 - remediation QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
 - remediation QA commit: `2e24f142239ea932c6fb28631b9ad35aec2e76d1`
-- explanation PDF: `STALE / RESYNC_REQUIRED`
-- stale PDF canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
-- 理由: remediation後sourceのH29 `φ / θ / δ` 補強が未同期
+- explanation PDF: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
+- PDF canonical blob SHA: `1eaa458d46a636ac4955d3475073e14071b4cd7f`
+- PDF source blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
+- PDF QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_pdf_qa.md`
+- file size: `17,642 bytes`
+- SHA-256: `45d7c54bda708a74bf760fa7c1ec470f4aedce67ab564eae52f7d99f09f23e9c`
+- A4縦3頁、PDFium/Poppler `3 / 3 PASS`
+- `pdftotext -layout`: `PASS`（`11,200 bytes`）、置換文字 `0件`
+- 固定答案要素接続: `27 / 27`
+- SPEC必須8項目: `8 / 8`
+- 指定3可視化: `3 / 3 PASS`
+- H29 `φ` = 本教材 `θ` = 力率角、`δ` = 負荷角: `PDF同期 PASS`
+- H29指定変数式 `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` と電圧変動率式: `PDF同期 PASS`
+- exact blocker: `0件`
 
 ### 練習source / PDF
 
@@ -149,6 +160,7 @@ H29二次「機械・制御」問1 `(1)`。
 - SPEC外追加: `0件`
 - 未確認L0系実車値の真値化: `0件`
 - Topic 29先取り: `0件`
+- remediation後PDF同期: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
 
 ## 固定境界
 
@@ -162,4 +174,4 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は
 
 ## 次の安全な工程
 
-remediation後sourceから解説PDFを再生成しPDF QAを実施する。その後、公式解答を見ていないfresh workerでclean blind候補を別ファイルに新規固定し、公式照合→最終QAへ進む。Topic 28はそれまで `completed` に数えない。
+公式解答を見ていないfresh workerで、remediation後教材だけを使ったclean blind候補を別ファイルに新規固定し、固定5問・27答案要素を公式再照合する。旧候補は編集しない。再照合PASS後に最終QAへ進む。Topic 28はそれまで `completed` に数えない。
