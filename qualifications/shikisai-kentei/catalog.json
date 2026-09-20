@@ -204,6 +204,19 @@
       "source": "articles/22_psychological_scaling_color.md"
     },
     {
+      "id": "23_opponent_color_process",
+      "articleNo": 23,
+      "seriesId": "vision-psychology",
+      "title": "なぜ「赤―緑」「青―黄」は反対関係になるのか――反対色過程を神経科学から考える",
+      "summary": "L・M・S錐体からL-M、S-(L+M)、輝度系への基底変換、網膜神経節細胞のcone-opponency、cardinal directions、皮質での再結合までを神経科学・心理物理学・線形代数で理解する。",
+      "levels": [
+        "2級：色覚説・視覚系の構造と色",
+        "3級：眼のしくみ・網膜における光の処理・補色残像",
+        "大学：神経科学・心理物理学・線形代数"
+      ],
+      "source": "articles/23_opponent_color_process.md"
+    },
+    {
       "id": "25_cie_xyz_tristimulus",
       "articleNo": 25,
       "seriesId": "colorimetry-design",
