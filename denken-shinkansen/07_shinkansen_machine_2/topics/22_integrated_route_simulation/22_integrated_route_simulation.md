@@ -4,13 +4,13 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT` と解説source本文を完了した。現在 `topic_22_explanation_source_complete / IN_PROGRESS`。
+制作前 `EXAM_ALIGNMENT`、解説source本文、総合シミュレーション計算プログラム・CSV・指定6グラフ・数値QAを完了した。現在 `topic_22_simulation_artifacts_complete / IN_PROGRESS`。
 
 固定公式過去問は一次4問＋二次2問、計6問・16答案要素とする。令和8年度一次の最新問題と、2026-09-20時点で最新公表済みの令和7年度二次を含める。令和8年度二次は2026-11-15実施予定のため、この時点では未公表である。
 
 固定問題の個別正答記号、最終数値、完成済み式変形結果は保存していない。完成教材後、保存済み正答を見ずに固定6問を教材だけで独立再解答し、その後に公式解答・標準解答と照合する。
 
-解説source本文では固定16答案要素を全て対応節へ接続した。次工程は、このsourceの式・符号規約・仮定値に基づく総合シミュレーション計算プログラム、CSV、指定6グラフの作成と数値QA。
+解説source本文では固定16答案要素を全て対応節へ接続し、同じ式・符号規約・仮定値から総合シミュレーション計算プログラム、3301行のCSV、指定6グラフを生成して数値QAまで完了した。次工程はTopic 22 解説プリントPDF。
 
 ## 固定範囲
 
@@ -729,4 +729,24 @@ CSVには最低限、次を保存する。
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
 - 固定過去問の個別正答記号・最終数値保存: `0件 / PASS`
 - 独立再解答: `NOT_RUN`（全成果物完成後に実施）
-- 判定: `PASS / topic_22_explanation_source_complete / IN_PROGRESS`
+- 判定: `PASS / topic_22_simulation_artifacts_complete / IN_PROGRESS`
+
+# 総合シミュレーション成果物品質ゲート
+
+- 計算プログラム: `22_integrated_route_simulation_calc.py` / PASS
+- CSV: `22_integrated_route_simulation_results.csv` / 3301行 / PASS
+- 系列SPECの8出力: `8 / 8 SAVED`
+- 指定グラフ: `6 / 6 GENERATED`
+- 数値式照合: 同期速度・滑り・速度換算・駆動力・加速度すべて PASS
+- 力行点: `1828` 点 / PASS
+- 回生点: `1149` 点 / PASS
+- 消費電力・回生電力の同時正値: `0` 点 / PASS
+- 速度負値: `0` 点 / PASS
+- SVG XML: `6 / 6 PASS`
+- 代表点独立再計算: `t=120 s` 力行、`t=210 s` 回生 / PASS
+- 詳細: `22_integrated_route_simulation_calculation_qa.md`
+- 固定EXAM_ALIGNMENT: 一次4問＋二次2問・16答案要素を変更なし
+- 未確認実車・実路線値の真値化: `0件 / PASS`
+- 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
+- 独立過去問再解答: `NOT_RUN`（全成果物完成後）
+- 次工程: Topic 22 解説プリントPDF

@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `21 / 22`
-- current_status: `topic_22_explanation_source_complete / IN_PROGRESS`
+- current_status: `topic_22_simulation_artifacts_complete / IN_PROGRESS`
 - last_completed_topic: `21 空転した車輪を再粘着させる`
 - active_topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- next_start: Topic 22 総合シミュレーション計算プログラム・CSV・指定6グラフ・数値QA
+- next_start: Topic 22 解説プリントPDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -112,10 +112,27 @@
 - 固定過去問の個別正答記号・最終数値保存: `0件 / PASS`
 - 独立再解答: `NOT_RUN`
 
+## Topic 22 総合シミュレーション成果物
+- 状態: `PASS / topic_22_simulation_artifacts_complete / IN_PROGRESS`
+- `topics/22_integrated_route_simulation/22_integrated_route_simulation_calc.py`
+- `topics/22_integrated_route_simulation/22_integrated_route_simulation_results.csv`: `3301` 行
+- 指定6グラフ: `6 / 6 GENERATED`
+- 数値式照合: 同期速度・滑り・速度換算・駆動力・加速度 `PASS`
+- 力行点: `1828` 点 / PASS
+- 回生点: `1149` 点 / PASS
+- 消費・回生同時正値: `0` 点 / PASS
+- 速度負値: `0` 点 / PASS
+- SVG XML: `6 / 6 PASS`
+- 代表点独立再計算: 力行・回生各1点 / PASS
+- 詳細QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_calculation_qa.md`
+- 未確認実車・実路線値の真値化: `0件 / PASS`
+- 固定EXAM_ALIGNMENT: 一次4問＋二次2問・16答案要素を変更なし
+- 独立過去問再解答: `NOT_RUN`
+
 ## 今回進めた内容
-Topic 22の解説source本文を完成させた。変圧器損失・効率、PWM/DCリンク/VVVF、誘導機の同期速度・滑り・等価回路・二次入力・トルク、歯車・車輪・走行力学、PI/PID・閉ループ応答、力行・回生を一つの計算系列へ接続した。東京―新大阪の実運転曲線や未確認実機定数は採用せず、総合シミュレーション条件は教材用仮定値として分離した。
+Topic 22の総合シミュレーション計算プログラムを作成し、sourceで固定済みの教材用仮定値から3301行のCSVと指定6グラフを生成した。同期速度・滑り・速度換算・駆動力・加速度を式で照合し、力行1828点、回生1149点、消費・回生同時正値0点、速度負値0点を確認した。代表点は力行・回生各1点を別計算し一致を確認した。
 
 完成数は `21 / 22` のまま。
 
 ## 次工程
-Topic 22 総合シミュレーション計算プログラム・CSV・指定6グラフ・数値QA。解説sourceで固定した式、符号規約、仮定値だけを使い、系列SPECの8出力と6グラフを再現可能な形で生成する。
+Topic 22 解説プリントPDF。固定16答案要素、解説source、総合シミュレーション成果物を教材化し、試験論点・式・代表計算・6グラフへ接続する。
