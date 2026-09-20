@@ -6,12 +6,38 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `30 / 39`
-- current_status: `topic_31_practice_source_complete`
+- current_status: `topic_31_practice_pdf_complete`
 - last_completed_topic: `30 L0系④ 誘導集電・非接触電力伝送`
 - active_topic: `31 補助電源変換器`
-- next_start: Topic 31練習PDFを生成し、固定5問・27答案要素とSPEC 8項目を維持してPDF QAする
+- next_start: Topic 31 PowerPointを作成し、固定5問・27答案要素とSPEC 8項目を維持してrender QAする
 
-Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで完了。
+Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了。
+
+## Topic 31 練習PDF
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_practice.pdf`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_practice_pdf_qa.md`
+
+QA:
+- PDF blob SHA: `405383decbd8db2e9af66d314699081ccf1ec0a8`
+- source blob SHA: `ab834c6c1b640ad2f5e06d49370672a1d5bd14fd`
+- A4縦: `9頁`
+- PDFium: `9 / 9 PASS`
+- Poppler: `9 / 9 PASS`
+- 空白頁・ページ端・置換文字: `0件`
+- 一次8問＋二次4問: `12 / 12 PASS`
+- 固定5問・27答案要素: `27 / 27 PASS`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- SPEC固定8項目: `8 / 8 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 32〜34先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
 ## Topic 31 練習source
 

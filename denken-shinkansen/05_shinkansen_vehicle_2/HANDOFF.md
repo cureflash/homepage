@@ -8,7 +8,33 @@
 
 Topic 01〜30は最終QAまで `PASS / completed`。完成数 `30 / 39`。
 
-現在地は `topic_31_practice_source_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで完了。次は練習PDF＋PDF QA。
+現在地は `topic_31_practice_pdf_complete`。Topic 31 `補助電源変換器` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了。次はPowerPoint＋render QA。
+
+## Topic 31 練習PDF完了記録
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_practice.pdf`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_practice_pdf_qa.md`
+
+QA:
+- PDF blob `405383decbd8db2e9af66d314699081ccf1ec0a8`
+- source blob `ab834c6c1b640ad2f5e06d49370672a1d5bd14fd`
+- A4縦 `9頁`
+- PDFium `9 / 9 PASS`
+- Poppler `9 / 9 PASS`
+- 空白頁・ページ端・置換文字 `0件`
+- 一次8問＋二次4問 `12 / 12 PASS`
+- 固定5問・27答案要素 `27 / 27 PASS`
+- 一次 `15 / 15 PASS`
+- 二次 `12 / 12 PASS`
+- SPEC固定8項目 `8 / 8 PASS`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 未確認実車値の真値化 `0件`
+- Topic 32〜34先取り `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
 
 ## Topic 31 練習source完了記録
 
@@ -163,11 +189,11 @@ R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響�
 ## 次の安全な工程
 
 1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、直近worker成果をreconcileする。
-2. 固定EXAM_ALIGNMENT、解説source、解説PDF、練習sourceを変更せず、Topic 31練習PDFを生成する。
-3. PDFはA4、全文、数式、表、ページ端、置換文字、空白頁を確認し、可能な複数レンダラで全頁QAする。
-4. 固定5問・27答案要素、SPEC 8項目、一次8問＋二次4問がPDFへ欠落なく入ったことを確認する。
+2. 固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDFを変更せず、Topic 31 PowerPointを作成する。
+3. 固定5問・27答案要素、SPEC 8項目を可視化へ接続し、16:9全スライドをrender QAする。
+4. 数式・図・表・文字切れ・重なり・置換文字を確認し、未確認実車値を真値化しない。
 5. R2二次問2の変圧器固有条件、H22のPV/MPPT、R5能動フィルタ実車搭載など固定境界を維持する。
-6. 練習PDF QAがPASSしてからPowerPointへ進む。
+6. PowerPoint QAがPASSしてからclean blind candidate固定へ進む。
 7. 仕様不整合・確定不能事項が出た場合はexact blockerを記録して停止する。
 
 Topic 31完成後のclean blind candidate固定前には、固定EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を先に開かない。
