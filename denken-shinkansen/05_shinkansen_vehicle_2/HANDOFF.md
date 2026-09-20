@@ -8,7 +8,7 @@
 
 Topic 01〜33は最終QAまで `PASS / completed`。完成数 `33 / 39`。
 
-現在地は `topic_34_practice_pdf_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDFまで完了。次工程は解説画像PowerPoint生成＋render QA・内容QA。
+現在地は `topic_34_powerpoint_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPointまで完了。次工程はanswer-bearing資料を未閲覧のfresh workerによるclean blind candidate固定・独立再解答。
 
 ## Topic 33 完了記録
 
@@ -143,11 +143,41 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+## Topic 34 解説画像PowerPoint 完了
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+canonical:
+- PowerPoint: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images.pptx`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images_qa.md`
+- canonical commit: `e165d6db6fb212cfdf750ddbc7953138cde75cf8`
+- file size: `58419 bytes`
+- SHA-256: `a50257290c31e1ecc3a2c3456bc8ec9762cbc677333414313c0597e9770e44f0`
+
+品質ゲート:
+- 16:9: `6枚`
+- python-pptx open / geometry bounds: `6 / 6 PASS`
+- PPTX content assertions: `PASS`
+- source notes: `6 / 6 PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- PNG render: `6 / 6 PASS`
+- blank render / page-edge overflow / U+FFFD: `0件`
+- 固定5問・27答案要素: `27 / 27 connected`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- SPEC固定7項目: `7 / 7 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 二次問題の件数合わせ採用: `0件`
+- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 35以降の先取り: `0件`
+- exact blocker: `0件`
+
 Topic 34自体は未完了。完成数は `33 / 39` のまま。
 
 ## 次工程
 
-Topic 34解説画像PowerPointを生成し、render QA・内容QAを行う。固定5問・27答案要素、SPEC固定7項目、一次8問・二次4問の正本を変更しない。PowerPoint QA通過後にfresh clean blind独立再解答を行い、Topic 34の最終完了を判定する。Topic 35以降はTopic 34完了まで先取りしない。
+answer-bearing資料を未閲覧のfresh workerがTopic 34のclean blind candidateを固定し、独立再解答する。その後に固定EXAM_ALIGNMENT・公式解答と照合してTopic 34の最終完了を判定する。本runは固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointのanswer-bearing資料を確認済みなのでclean blind candidateを作成しない。Topic 35以降はTopic 34完了まで先取りしない。
 
 ## Topic 21 固定境界
 
