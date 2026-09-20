@@ -21,7 +21,10 @@ jobs:
         run: |
           set -euo pipefail
           PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_explanation.pdf'
-          cat denken-shinkansen/.tmp_topic29_explanation_{0,1,2,3}.b64 | base64 -d -i > "$PDF"
+          : > "$PDF"
+          for f in denken-shinkansen/.tmp_topic29_explanation_{0,1,2,3}.b64; do
+            base64 -d "$f" >> "$PDF"
+          done
           test "$(git hash-object "$PDF")" = '35ba843b81fd8fc08f76bd5de8aa9edee540d78f'
           test "$(stat -c%s "$PDF")" = '15941'
       - name: Render and text QA
