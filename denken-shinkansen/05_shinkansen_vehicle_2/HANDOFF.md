@@ -8,7 +8,7 @@
 
 Topic 01〜34は最終QAまで `PASS / completed`。完成数 `34 / 39`。
 
-現在地は `topic_34_completed_ready_topic_35_exam_alignment`。active topicは `35 ATC① 軌道回路の回路解析`。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、Topic 35の制作前EXAM_ALIGNMENT。公式過去問を先に固定し、一次・二次の実問題対応を確認する。
+現在地は `topic_35_exam_alignment_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENTは固定5問・25答案要素 `25 / 25 PASS`、SPEC固定7項目 `7 / 7 mapped`。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、固定EXAM_ALIGNMENTを変更せずTopic 35解説sourceを作成する。
 
 ## Topic 34 完了記録
 
@@ -124,9 +124,33 @@ canonical:
 
 Topic 34は全工程を通過したため `PASS / COMPLETED`。完成数を `34 / 39` とする。
 
-## Topic 35 次工程
+## Topic 35 制作前EXAM_ALIGNMENT 完了
 
-対象: `35 ATC① 軌道回路の回路解析`
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+canonical:
+- source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis.md`
+- source commit: `e23491f2b2a4178cbf270b28f417c79c76e4f2ef`
+- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_exam_alignment_qa.md`
+- QA commit: `b02af09ee5d016b9d0e1a27b2ac53c8b95a9804b`
+
+固定過去問:
+- R8一次「理論」問3
+- R7一次「理論」問3
+- R7一次「理論」問4
+- R6一次「理論」問6
+- R5一次「理論」問4
+
+品質ゲート:
+- 固定公式過去問: `5 / 5 PASS`
+- 一次: `5問 / 25答案要素`、`25 / 25 PASS`
+- 二次: `0問`
+- R8二次: 2026-09-21時点で未実施
+- R7〜R5二次確認範囲で本Topicへ直接対応する問題: `0件`
+- 二次問題の件数合わせ採用: `0件`
+- SPEC固定7項目: `7 / 7 mapped`
+- 公式解答との不一致: `0件`
+- exact blocker: `0件`
 
 SPEC固定項目:
 - 軌道回路
@@ -137,7 +161,17 @@ SPEC固定項目:
 - 回路条件
 - フェイルセーフ
 
-制作前EXAM_ALIGNMENTから開始する。公式過去問を直近年度から調査し、一次・二次を合わせ原則5問以上を固定する。該当二次問題が確認できる場合は最低1問を含める。件数合わせ採用、ATC固有値の推測、未確認実車値の真値化はしない。
+固定過去問は軌道回路そのものを問う問題とは扱わず、一般回路理論を軌道回路の簡略等価回路へ接続するための試験対応として固定した。鉄道固有原理はJRTT・鉄道総研の一次資料で確認済み。
+
+境界:
+- 未確認レールインピーダンス実値の真値化: `0件`
+- 未確認車軸短絡抵抗実値の真値化: `0件`
+- 未確認受信しきい値・信号電流実値の真値化: `0件`
+- Topic 36の変調・フィルタ・ノイズ・S/N等の先取り: `0件`
+- Topic 37の速度制御・ブレーキ制御の先取り: `0件`
+- Topic 21一般式変更: `0件`
+
+次工程: 固定5問・25答案要素、SPEC固定7項目、二次適用判定、鉄道一次資料の境界を変更せず、Topic 35解説sourceを作成する。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
 
 ## Topic 21 固定境界
 
