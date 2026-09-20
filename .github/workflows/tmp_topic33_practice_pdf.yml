@@ -43,3 +43,5 @@ jobs:
             sleep 3
           done
           exit 1
+
+# retrigger after all PDF chunks were staged
