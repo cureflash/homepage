@@ -1,14 +1,15 @@
 {
   "title": "色彩検定×自然科学",
   "updated": "2026-09-20",
-  "targetArticles": 66,
+  "targetArticles": 79,
   "series": [
     {"id":"physics","order":1,"name":"物理","targetTopics":13,"description":"電磁波、光学、散乱、干渉、黒体放射、照明、混色"},
     {"id":"chemistry-geoscience","order":2,"name":"化学・地学","targetTopics":6,"description":"吸収、分子軌道、結晶場、顔料・染料、鉱物・宝石"},
     {"id":"biology","order":3,"name":"生物","targetTopics":9,"description":"網膜、オプシン、生化学、遺伝、進化、動植物の色"},
     {"id":"vision-psychology","order":4,"name":"色覚・心理","targetTopics":7,"description":"順応、反対色、対比、色恒常性、心理物理学"},
     {"id":"colorimetry-design","order":5,"name":"測色・表色・配色","targetTopics":13,"description":"PCCS、マンセル、XYZ、L*a*b*、色差、測色、配色"},
-    {"id":"digital-color","order":6,"name":"デジタル色彩・画像処理","targetTopics":18,"description":"RGB、画素、量子化、レイヤー合成、色調補正、トーンカーブ、画像処理、カラーマネジメント"}
+    {"id":"digital-color","order":6,"name":"デジタル色彩・画像処理","targetTopics":18,"description":"RGB、画素、量子化、レイヤー合成、色調補正、トーンカーブ、画像処理、カラーマネジメント"},
+    {"id":"illustration-practice","order":7,"name":"イラスト実践・色彩学","targetTopics":13,"description":"影・光・彩度・明度設計・背景分離・肌・金属・髪・色調補正・色知覚をイラスト制作へ接続"}
   ],
   "topics": [
     {"id":"01_what_is_light_color","articleNo":1,"seriesId":"physics","title":"光とは何だろう――「色」の入口を電磁波と光子から考える","summary":"色彩検定3級の「光とは何だろう」を、Maxwell方程式、波長・振動数、光子エネルギー、強度、スペクトル、波動粒子二重性まで物理学から掘り下げる。","levels":["3級：光と色・光とは何だろう","大学：電磁気学・量子論"],"source":"articles/01_what_is_light_color.md"},
@@ -28,7 +29,7 @@
     {"id":"15_opsin_genetics_color_vision","articleNo":15,"seriesId":"biology","title":"赤緑の色覚特性はなぜ遺伝するのか――オプシン遺伝子とX染色体","summary":"L・M・S錐体のオプシン遺伝子、X染色体上のOPN1LW/OPN1MW遺伝子アレイ、不等組換え、分光感度変化から、先天的な色覚特性が生じる機構を遺伝学と線形代数で理解する。","levels":["2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説","3級：眼のしくみ・網膜における光の処理","大学：遺伝学・分子生物学・神経科学"],"source":"articles/15_opsin_genetics_color_vision.md"},
     {"id":"16_trichromatic_color_vision_evolution","articleNo":16,"seriesId":"biology","title":"人はなぜ三色型色覚になったのか――オプシン遺伝子重複と霊長類の進化","summary":"祖先型M/Lオプシン遺伝子の重複と分光感度の分化から、人を含む狭鼻猿類の恒常的三色型、新世界ザルの多型的三色型、ホエザルの収斂進化、果実・若葉・社会シグナルに関する選択圧までを遺伝学・神経科学・進化生態学で理解する。","levels":["3級：眼のしくみ・網膜における光の処理","2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説・視覚系の構造と色","大学：進化生物学・遺伝学・神経科学"],"source":"articles/16_trichromatic_color_vision_evolution.md"},
     {"id":"17_plant_pigments_color","articleNo":17,"seriesId":"biology","title":"植物はなぜ緑・赤・黄になるのか――クロロフィル、カロテノイド、アントシアニン","summary":"クロロフィル、カロテノイド、アントシアニンの吸収スペクトルと生理機能から、色素の生合成・遺伝子制御・細胞内局在・紅葉・組織散乱までつなぎ、植物の色を細胞生物学と生化学から理解する。","levels":["3級：光と色・光の性質と色・物体色","2級：光の性質と色・照明と色の見え方","大学：細胞生物学・生化学・植物生理学・遺伝学"],"source":"articles/17_plant_pigments_color.md"},
-    {"id":"18_warning_coloration_aposematism","articleNo":18,"seriesId":"biology","title":"なぜ警戒色は目立つのか――捕食者の学習とシグナル進化","summary":"警戒色を、受信者依存の色知覚、背景・模様内コントラスト、捕食者の学習、正の頻度依存選択、共進化、シグナルの正直性から捉え、誘目性と対比を進化生態学の情報通信として理解する。","levels":["3級：色の心理効果・光と色・色の見え方","2級：光と色・色彩心理","1級：誘目性を含む色彩設計","大学：進化生物学・行動生態学・感覚生態学"],"source":"articles/18_warning_coloration_aposematism.md"},
+    {"id":"18_warning_coloration_aposematism","articleNo":18,"seriesId":"biology","title":"なぜ警戒色は目立つのか――捕食者の学習とシグナル進化","summary":"警戒色を、受信者依存の色知覚、背景・模様内コントラスト、捕食者の学習、正の頻度依存選択、共進化、シグナルの正直性から捉え、誘目性と対比を進化生態学の情報通信として理解する。","levels":["3級：色の心理効果・光と色・色の見え方","2級：色彩心理・視覚系の構造と色","1級：誘目性を含む色彩設計","大学：進化生物学・行動生態学・感覚生態学"],"source":"articles/18_warning_coloration_aposematism.md"},
     {"id":"19_complementary_afterimage","articleNo":19,"seriesId":"vision-psychology","title":"補色残像はなぜ見えるのか","summary":"色彩検定3級の補色残像を、L・M・S錐体の順応、cone-opponent処理、網膜神経節細胞の減算的順応とリバウンド、皮質の寄与まで分けて理解する。","levels":["3級：色彩心理・補色残像","大学：神経科学・心理物理学"],"source":"articles/19_complementary_afterimage.md"},
     {"id":"20_simultaneous_color_contrast","articleNo":20,"seriesId":"vision-psychology","title":"同じ灰色なのに色が違って見えるのはなぜか――同時色対比を神経回路から考える","summary":"色彩検定3級の「色の対比」を、L・M・S錐体、反対色処理、中心―周辺型受容野、側抑制、V1のdouble-opponent細胞、色誘導の心理物理学まで掘り下げる。","levels":["3級：色彩心理・色の対比","大学：神経科学・心理物理学"],"source":"articles/20_simultaneous_color_contrast.md"},
     {"id":"21_color_constancy_von_kries","articleNo":21,"seriesId":"vision-psychology","title":"なぜ照明が変わっても物体の色が同じに見えるのか――色恒常性とvon Kries順応","summary":"照明スペクトルと分光反射率の積から生じる逆問題を出発点に、L・M・S錐体、色順応、von Kries型対角変換、CAT、照明推定まで使って色恒常性を理解する。","levels":["3級：光と色・照明と色の見え方・網膜における光の処理","2級：光の性質と色・視覚系の構造と色・照明","大学：神経科学・心理物理学・色彩科学"],"source":"articles/21_color_constancy_von_kries.md"},
@@ -55,6 +56,7 @@
     {"id":"42_guppy_color_sexual_selection","articleNo":42,"seriesId":"biology","title":"なぜ派手なオスは選ばれるのか――グッピーの体色と性選択","summary":"グッピーの橙色斑を、カロテノイド・プテリジン、色素胞分化、オプシン発現、メスの配偶者選択、Fisher型共進化、捕食とのトレードオフまでつなぎ、色相・彩度・照明が進化へ変換される過程を理解する。","levels":["3級：光と色・色の見え方・色の心理効果","2級：色彩心理・視覚系の構造と色","1級：誘目性・配色・色差（関連）","大学：進化生物学・行動生態学・遺伝学・発生生物学"],"source":"articles/42_guppy_color_sexual_selection.md"},
     {"id":"49_rgb_pixels_quantization","articleNo":49,"seriesId":"digital-color","title":"デジタル画像の色は何でできているのか――RGB・画素・量子化","summary":"RGB画像を画素とチャンネルの配列として捉え、8 bitコード値、16進カラーコード、量子化誤差、ビット深度、バンディング、sRGBの非線形符号化までを画像工学から理解する。","levels":["3級：混色・加法混色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/49_rgb_pixels_quantization.md"},
     {"id":"50_hsb_hsv_color_selection","articleNo":50,"seriesId":"digital-color","title":"HSB/HSVはなぜ色を選びやすいのか――RGBを「色相・彩度・明るさ」に組み替える","summary":"RGBをHue・Saturation・Brightness/Valueへ再パラメータ化し、RGB↔HSV変換、色相・彩度・明るさの数式、知覚明度・クロマとの違い、iBisPaintでの実用と注意点までを画像工学と色彩科学から理解する。","levels":["3級：色の三属性・混色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/50_hsb_hsv_color_selection.md"},
-    {"id":"51_alpha_compositing_opacity","articleNo":51,"seriesId":"digital-color","title":"レイヤーの不透明度は何をしているのか――α合成を数式で理解する","summary":"RGBにalphaを加えたRGBA表現から、source-over合成、出力alpha、straight/premultiplied alpha、レイヤー順序、透明PNGの縁、sRGBの非線形性、iBisPaintでの不透明度調整までを画像工学から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/51_alpha_compositing_opacity.md"}
+    {"id":"51_alpha_compositing_opacity","articleNo":51,"seriesId":"digital-color","title":"レイヤーの不透明度は何をしているのか――α合成を数式で理解する","summary":"RGBにalphaを加えたRGBA表現から、source-over合成、出力alpha、straight/premultiplied alpha、レイヤー順序、透明PNGの縁、sRGBの非線形性、iBisPaintでの不透明度調整までを画像工学から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/51_alpha_compositing_opacity.md"},
+    {"id":"67_shadow_light_environment_object_color","articleNo":67,"seriesId":"illustration-practice","title":"影はなぜ黒で塗るだけでは不自然になるのか――光源色・環境光・物体色から考える","summary":"黒を重ねる単純な減衰と、直接光・環境光・物体反射率で決まる実際の影を比較し、分光反射、レンダリング方程式、XYZ、RGB計算から影色をイラスト実践へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・配色（関連）","大学：光学・コンピュータグラフィックス・色彩科学"],"source":"articles/67_shadow_light_environment_object_color.md"}
   ]
 }
