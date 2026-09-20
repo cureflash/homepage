@@ -29,6 +29,15 @@
       "source":"articles/04_transparent_color_beer_lambert.md"
     },
     {
+      "id":"14_retina_phototransduction",
+      "articleNo":14,
+      "seriesId":"biology",
+      "title":"眼はどうやって光を電気信号に変えるのか――網膜の光情報変換",
+      "summary":"色彩検定3級の眼と網膜を、retinalの光異性化、オプシン、transducin、PDE6、cGMP、CNGチャネル、ON/OFF経路まで細胞生物学と神経科学から理解する。",
+      "levels":["3級：眼のしくみ・網膜における光の処理","2級：視覚系の構造と色・色覚説","大学：細胞生物学・神経科学"],
+      "source":"articles/14_retina_phototransduction.md"
+    },
+    {
       "id":"19_complementary_afterimage",
       "articleNo":19,
       "seriesId":"vision-psychology",
