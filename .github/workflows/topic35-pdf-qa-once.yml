@@ -39,63 +39,18 @@ jobs:
           pdftotext "$pdf" /tmp/topic35.txt 2>/tmp/pdftotext.err
           test ! -s /tmp/pdftotext.err
           grep -q 'ATC' /tmp/topic35.txt
-          chars="$(python - <<'PY'
-from pathlib import Path
-s=Path('/tmp/topic35.txt').read_text(errors='replace')
-print(len(s))
-PY
-          )"
-          replacements="$(python - <<'PY'
-from pathlib import Path
-s=Path('/tmp/topic35.txt').read_text(errors='replace')
-print(s.count('\ufffd'))
-PY
-          )"
+          chars="$(python -c "from pathlib import Path; s=Path('/tmp/topic35.txt').read_text(errors='replace'); print(len(s))")"
+          replacements="$(python -c "from pathlib import Path; s=Path('/tmp/topic35.txt').read_text(errors='replace'); print(s.count(chr(0xfffd)))")"
           test "$replacements" -eq 0
           mkdir -p /tmp/poppler /tmp/pdfium
           pdftoppm -png -r 160 "$pdf" /tmp/poppler/page >/dev/null 2>/tmp/pdftoppm.err
           test ! -s /tmp/pdftoppm.err
-          python - <<'PY'
-import pypdfium2 as pdfium
-from pathlib import Path
-pdf=pdfium.PdfDocument('denken-shinkansen/05_shinkansen_vehicle_2/topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation.pdf')
-out=Path('/tmp/pdfium')
-for i,p in enumerate(pdf):
-    img=p.render(scale=160/72).to_pil()
-    img.save(out/f'page-{i+1:02d}.png')
-print('pdfium_pages', len(pdf))
-PY
+          python -c "import pypdfium2 as pdfium; from pathlib import Path; pdf=pdfium.PdfDocument('$base/35_atc_track_circuit_analysis_explanation.pdf'); out=Path('/tmp/pdfium'); [(p.render(scale=160/72).to_pil().save(out/f'page-{i+1:02d}.png')) for i,p in enumerate(pdf)]; print('pdfium_pages',len(pdf))"
           pop_count="$(find /tmp/poppler -name 'page-*.png' | wc -l)"
           pdfium_count="$(find /tmp/pdfium -name 'page-*.png' | wc -l)"
           test "$pop_count" -eq 10
           test "$pdfium_count" -eq 10
-          python - <<'PY'
-from pathlib import Path
-from PIL import Image, ImageChops, ImageStat
-
-def bbox_margin(path):
-    im=Image.open(path).convert('L')
-    # pixels darker than 248 count as content
-    mask=im.point(lambda p: 255 if p < 248 else 0)
-    box=mask.getbbox()
-    if box is None:
-        return None
-    l,t,r,b=box
-    return (l,t,im.width-r,im.height-b), im.size
-
-mins=[]
-for engine in ('poppler','pdfium'):
-    files=sorted(Path('/tmp',engine).glob('page-*.png'))
-    assert len(files)==10
-    for i,p in enumerate(files,1):
-        res=bbox_margin(p)
-        assert res is not None, f'{engine} page {i} blank'
-        margins,size=res
-        mins.extend(margins)
-        assert min(margins) >= 8, f'{engine} page {i} content touches edge: {margins} size={size}'
-    print(engine, '10/10 PASS', 'minimum_margin_px', min(mins[-40:]))
-print('content_bounds PASS')
-PY
+          python -c "from pathlib import Path; from PIL import Image; mins=[]; files=[]; [files.extend(sorted(Path('/tmp',e).glob('page-*.png'))) for e in ('poppler','pdfium')]; assert len(files)==20; [(lambda im,box: (assertion:=None))(None,None) for _ in []]; results=[]; exec(\"for p in files:\\n im=Image.open(p).convert('L')\\n mask=im.point(lambda x: 255 if x<248 else 0)\\n box=mask.getbbox()\\n assert box is not None, f'blank {p}'\\n l,t,r,b=box\\n m=(l,t,im.width-r,im.height-b)\\n assert min(m)>=8, f'content touches edge {p}: {m}'\\n mins.extend(m)\"); print('content_bounds PASS minimum_margin_px',min(mins))"
           sha256sum "$pdf" | tee /tmp/topic35.sha256
           echo "validated pages=$pages size=${width}x${height} poppler=$pop_count/10 pdfium=$pdfium_count/10 chars=$chars replacements=$replacements"
           rm -rf "$base/.pdf_qa"
