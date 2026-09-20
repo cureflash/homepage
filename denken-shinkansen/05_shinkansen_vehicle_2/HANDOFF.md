@@ -8,13 +8,13 @@
 
 Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
 
-現在地は `topic_27_powerpoint_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_clean_blind_blocked_this_run`。active topicは Topic 27 `L0系① リニア同期モータ`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、直近の同系列worker成果をreconcileした。開始時点の正本はTopic 27練習PDF完了で、PowerPointは未作成だったため重複作業はない。
+最新main `57f4f93e64a30aef4ae7e18f1b195b3a2d3f3c3c`、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、直近の同系列worker成果をreconcileした。開始時点でTopic 27は解説source/PDF、練習source/PDF、PowerPointまで完了済みで、次工程は完成後clean blind独立再解答候補固定だった。
 
-Topic 27解説画像PowerPointとPowerPoint QAを作成。Topic 26で確認済みのbinary truncate回避手順を再利用し、GitHub Actions上でcanonical PowerPointを生成・検証した。16:9・6枚、ZIP/python-pptx/geometry PASS、LibreOffice PDF変換 `6 / 6 PASS`、`pdftotext -layout` PASS、置換文字0件。固定5問・23答案要素 `23 / 23 connected`、SPEC必須7項目 `7 / 7 PASS`、指定2可視化 `2 / 2 PASS`。L0系未確認実車値の真値化、固定EXAM_ALIGNMENT変更、Topic 28範囲の先取り、Topic 21一般式変更はいずれも0件。exact blocker `0件`。
+このrunではcandidate lock前に保存済み独立解答・公式照合結果を含むTopic 27のanswer-bearing EXAM_ALIGNMENT sourceを開いてしまったため、clean blind完全性を証明できない。候補ファイルは作成せず、exact blockerを `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_clean_blind_gate_blocker.md` に記録した。既存成果物・固定EXAM_ALIGNMENT・Topic 21一般式は変更していない。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -252,6 +252,7 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - L0系未確認実車値の真値化: `0件`
 - Topic 28範囲の先取り: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
 ## Topic 27 PowerPoint
@@ -283,6 +284,17 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+## Topic 27 clean blind gate blocker
+
+- 判定: `BLOCKED_THIS_RUN / CLEAN_BLIND_INTEGRITY`
+- 記録: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_clean_blind_gate_blocker.md`
+- 原因: candidate lock前に保存済み独立解答・公式照合結果を含むanswer-bearing sourceを参照したため、このrunではblind性を証明不能
+- candidate作成: `0件`
+- 既存成果物変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- 回復可能性: `fresh workerで可能`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -291,8 +303,7 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - 一般式 `P=Tω`, `ω=2πN/60` 変更: `0件`
 - L0系未確認実車値の真値化: `0件`
 - SPEC外主題追加: `0件`
-- exact blocker: `0件`
 
 ## 次の安全な工程
 
-Topic 27 `L0系① リニア同期モータ` の完成後clean blind独立再解答候補を固定する。保存済み正答・公式解答を先に見ず、固定5問・23答案要素を教材だけで解く。
+fresh workerでTopic 27 clean blind候補固定を行う。candidate lock前はanswer-bearing `27_l0_linear_synchronous_motor.md` を開かず、固定問題IDはこのHANDOFF/STATUSから取得する。教材だけで固定5問・23答案要素を解いて `27_l0_linear_synchronous_motor_blind_candidates.md` をcommitした後に、初めて公式解答・保存済み照合結果を参照して比較する。
