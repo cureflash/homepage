@@ -11,6 +11,15 @@
   ],
   "topics": [
     {
+      "id":"01_what_is_light_color",
+      "articleNo":1,
+      "seriesId":"physics",
+      "title":"光とは何だろう――「色」の入口を電磁波と光子から考える",
+      "summary":"色彩検定3級の「光とは何だろう」を、Maxwell方程式、波長・振動数、光子エネルギー、強度、スペクトル、波動粒子二重性まで物理学から掘り下げる。",
+      "levels":["3級：光と色・光とは何だろう","大学：電磁気学・量子論"],
+      "source":"articles/01_what_is_light_color.md"
+    },
+    {
       "id":"04_transparent_color_beer_lambert",
       "articleNo":4,
       "seriesId":"chemistry-geoscience",
