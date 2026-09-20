@@ -1,0 +1,65 @@
+name: tmp-vehicle2-topic29-sync
+
+on:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.event.head_commit.message == 'Sync Topic 29 PowerPoint progress'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Sync STATUS and HANDOFF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          python - <<'PY'
+          from pathlib import Path
+          status=Path('denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md')
+          handoff=Path('denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md')
+          ppt='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx'
+          qa='denken-shinkansen/05_shinkansen_vehicle_2/topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md'
+          assert Path(ppt).is_file() and Path(qa).is_file()
+          s=status.read_text()
+          h=handoff.read_text()
+          assert 'current_status: `topic_29_practice_pdf_complete`' in s
+          assert '現在地は `topic_29_practice_pdf_complete`' in h
+          assert '## Topic 29 PowerPoint' not in s
+          assert '## Topic 29 PowerPoint' not in h
+          s=s.replace('current_status: `topic_29_practice_pdf_complete`','current_status: `topic_29_powerpoint_complete`',1)
+          s=s.replace('- next_start: Topic 29解説画像PowerPointを生成し、16:9表示・数式・単位・固定5問24答案要素・SPEC必須8項目との接続をQAする','- next_start: Topic 29のclean blind独立再解答候補を、公式解答・保存済み正答を先に見ずに固定する',1)
+          s=s.replace('Topic 29は `PRACTICE_PDF_COMPLETE`。テーマ自体はまだ `completed` ではない。','Topic 29は `POWERPOINT_COMPLETE`。テーマ自体はまだ `completed` ではない。',1)
+          old='次工程はTopic 29解説画像PowerPoint生成＋QA。教材一式完成前にclean blind独立再解答へ進まない。'
+          new='''## Topic 29 PowerPoint\n\n判定: `PASS / POWERPOINT_COMPLETE`\n\n- PowerPoint: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx`\n- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md`\n- canonical blob SHA: `2919bbe2b6763bcd73e246fd3e76c17305e9e662`\n- 16:9・6 slides\n- GitHub Actions run `35490660751`: `success`\n- 固定5問・24答案要素: `24 / 24 connected`\n- 一次: `20 / 20 connected`\n- 二次: `4 / 4 connected`\n- SPEC必須8項目: `8 / 8 PASS`\n- 指定3可視化: `3 / 3 PASS`\n- 数値・式QA: `PASS`\n- L0系未確認実車値の真値化: `0件`\n- Topic 30先取り: `0件`\n- 固定EXAM_ALIGNMENT変更: `0件`\n- exact blocker: `0件`\n\n次工程はTopic 29のclean blind独立再解答候補固定。公式解答・保存済み正答を先に見ず、固定後に公式照合・最終QAへ進む。'''
+          assert old in s
+          s=s.replace(old,new,1)
+          h=h.replace('現在地は `topic_29_practice_pdf_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。','現在地は `topic_29_powerpoint_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。',1)
+          marker='## Topic 29 固定SPEC境界\n'
+          assert marker in h
+          pptsec='''## Topic 29 PowerPoint\n\n- PowerPoint: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images.pptx`\n- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_images_qa.md`\n- 判定: `PASS / POWERPOINT_COMPLETE`\n- canonical blob SHA: `2919bbe2b6763bcd73e246fd3e76c17305e9e662`\n- SHA-256: `19f86b51ebbdc96b62c9fcfd023843d421f4377991b8b1b1db07a09dd6d99b3a`\n- 16:9・6 slides\n- GitHub Actions run `35490660751`: `success`\n- 固定5問・24答案要素: `24 / 24 connected`\n- 一次: `20 / 20 connected`\n- 二次: `4 / 4 connected`\n- SPEC必須8項目: `8 / 8 PASS`\n- 指定3可視化: `3 / 3 PASS`\n- L0系未確認実車値の真値化: `0件`\n- Topic 30先取り: `0件`\n- 固定EXAM_ALIGNMENT変更: `0件`\n- exact blocker: `0件`\n\n'''
+          h=h.replace(marker,pptsec+marker,1)
+          h=h.replace('教材一式完成前にclean blind独立再解答へ進まない。','教材一式はPowerPointまで完成。次はclean blind独立再解答候補固定へ進む。',1)
+          oldnext='''Topic 29解説画像PowerPointを生成し、QAする。\n\nQA項目:\n- 16:9、表示欠け・文字化けなし\n- 固定5問・24答案要素への接続維持\n- SPEC必須8項目と指定3可視化を維持\n- 数式・単位・符号が解説source / 練習sourceと一致\n- L0系未確認実車値の真値化0件\n- Topic 30先取り0件\n- 固定EXAM_ALIGNMENT変更0件'''
+          newnext='''Topic 29のclean blind独立再解答候補を固定する。\n\n- 公式解答・保存済み正答を先に見ない\n- 固定5問・24答案要素を独立再解答する\n- candidate固定後は変更しない\n- 固定後に公式照合し、不一致は教材側の不足として診断する\n- Topic 21一般式・固定EXAM_ALIGNMENT・SPEC境界は変更しない'''
+          assert oldnext in h
+          h=h.replace(oldnext,newnext,1)
+          status.write_text(s)
+          handoff.write_text(h)
+          PY
+          git config user.name 'denken-vehicle2-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git add denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md
+          git commit -m 'denken: mark Topic 29 PowerPoint complete'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1
