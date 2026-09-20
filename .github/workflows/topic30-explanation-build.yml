@@ -1,0 +1,52 @@
+name: Topic 30 explanation PDF build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/topic30-explanation-build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile latest main
+        run: git pull --rebase origin main
+      - name: Install PDF dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk poppler-utils
+          python -m pip install --upgrade pip
+          python -m pip install reportlab matplotlib
+      - name: Build Topic 30 explanation PDF
+        run: |
+          python denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/_tmp_build_topic30_explanation.py
+      - name: Validate artifact
+        run: |
+          PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf'
+          test -s "$PDF"
+          test "$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')" = "7"
+          pdftotext -layout "$PDF" /tmp/topic30.txt
+          grep -F '接続数: 25 / 25' /tmp/topic30.txt
+          grep -F '48.1 / 48.0' /tmp/topic30.txt
+          grep -F 'P=T' /tmp/topic30.txt
+          git hash-object "$PDF"
+      - name: Commit canonical PDF
+        run: |
+          PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$PDF"
+          if git diff --cached --quiet; then
+            echo 'No PDF change to commit.'
+            exit 0
+          fi
+          git commit -m 'denken: build Topic 30 explanation PDF'
+          git push origin HEAD:main
