@@ -8,7 +8,7 @@
 
 Topic 01〜33は最終QAまで `PASS / completed`。完成数 `33 / 39`。
 
-現在地は `topic_33_completed_ready_topic_34_exam_alignment`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。次工程は制作前EXAM_ALIGNMENT。
+現在地は `topic_34_exam_alignment_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENTは完了し、次工程は解説source。
 
 ## Topic 32 完了記録
 
@@ -106,9 +106,48 @@ PowerPoint canonical:
 
 Topic 33はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程を通過済み。
 
+## Topic 34 制作前EXAM_ALIGNMENT 完了
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+canonical:
+- source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics.md`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_exam_alignment_qa.md`
+
+固定過去問:
+- R7一次「機械」問2
+- R6一次「機械」問2
+- H25一次「機械」問3
+- R7二次「機械・制御」問2
+- R4二次「機械・制御」問3
+
+品質ゲート:
+- 固定公式過去問: `5 / 5`
+- 一次: `3問 / 15答案要素`、`15 / 15 PASS`
+- 二次: `2問 / 12答案要素`、`12 / 12 PASS`
+- 合計: `27 / 27 PASS`
+- SPEC固定7項目: `7 / 7 mapped`
+- H25一次「機械」問3でファン・ポンプ用途を直接確認
+- 二次問題の件数合わせ採用: `0件`
+- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性の追加: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 35以降の先取り: `0件`
+- exact blocker: `0件`
+
+SPEC固定項目:
+- 電動機出力
+- 負荷トルク
+- ポンプ動力
+- ファン動力
+- 回転速度
+- 効率
+- インバータ制御
+
+Topic 34自体はまだ未完了。完成数は `33 / 39` のまま。
+
 ## 次工程
 
-Topic 34「コンプレッサ・ポンプ・ファンの負荷特性」の制作前EXAM_ALIGNMENTから開始する。最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、直近worker成果をreconcileし、重複作業をしない。公式過去問を直近年度から確認し、一次・二次の適用範囲を実問題と公式試験範囲で確定してから教材範囲を固定する。未確認の実車コンプレッサ・ポンプ・ファン仕様値は推測で真値化しない。Topic 35以降は先取りしない。
+Topic 34の固定5問・27答案要素とSPEC固定7項目を変更せず、解説sourceを作成する。ポンプ水動力式・ファン相似則を二種固定過去問で直接問われた式とは扱わず、三種既習内容から二種の電動機出力・負荷トルク・速度・効率・インバータ制御へ接続する。コンプレッサ固有の圧縮熱力学は追加しない。Topic 35以降は先取りしない。
 
 ## Topic 21 固定境界
 
