@@ -2,13 +2,13 @@
 
 更新日: 2026-09-20
 
-判定: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
+判定: `PASS / topic_21_final_qa_pass / completed`
 
 ## 対象
 - active topic: `21 空転した車輪を再粘着させる`
 - 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・14答案要素
-- QA前完成数: `20 / 22`
-- QA後完成数: `20 / 22`
+- 再QA前完成数: `20 / 22`
+- 再QA後完成数: `21 / 22`
 
 ## 1. 上位仕様・系列仕様
 `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` と現行mainを再照合した。
@@ -68,35 +68,35 @@
 - 教材の概念・解法不足: `0件`
 - 教材外知識補完: `0件`
 
-過去問対応品質ゲート自体は `PASS`。
+過去問対応品質ゲート: `PASS`。
 
-## 5. 進捗・正本整合
-技術内容はPASSだが、現行mainのcanonical sourceに進捗メタデータの未同期を確認した。
+## 5. 前回NEEDS_REVISION 2件の再確認
+前回最終QAで指摘した進捗メタデータ未同期2件を現行mainで再確認した。
 
 1. `21_readhesion_control.md`
-   - 冒頭状態が `topic_21_explanation_source_complete / IN_PROGRESS` のまま。
-   - 次工程が「解説PDF」のまま。
-   - source品質ゲート内の独立再解答が `NOT_RUN` のまま。
-   - 現状の `topic_21_independent_reanswer_pass` と不一致。`NEEDS_REVISION`。
+   - 状態を `topic_21_metadata_sync_complete / IN_PROGRESS` へ同期済み。
+   - 独立再解答を `14 / 14 PASS` へ同期済み。
+   - 次工程を「Topic 21 最終QA再実施」へ同期済み。
+   - 判定: `PASS`。
 2. `21_readhesion_control_practice.md`
-   - 次工程が「Topic 21 練習PDF」のまま。
-   - 現状の最終QA工程と不一致。`NEEDS_REVISION`。
+   - 次工程を「Topic 21 最終QA再実施」へ同期済み。
+   - 判定: `PASS`。
 
-`STATUS.md` と `HANDOFF.md` は最終QA開始前の `topic_21_independent_reanswer_pass / IN_PROGRESS` を正しく示していた。
+進捗・メタデータ同期: `2 / 2 PASS`。
 
-進捗・正本整合ゲート: `FAIL / 2件未同期`。
+Topic 21ディレクトリでは、前回最終QA commit `a8c254e1e9b46c00fa1afb77924eef22579e52d1` 後の成果物変更は、main sourceのメタデータ同期 commit `11a823d7394642c7a5814673863293d8eae1a2c8` と練習sourceのメタデータ同期 commit `83d4f73b8c986151ff5d16858c3e7d28930349f6` の2件のみである。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更されていない。
 
 ## 6. 最終判定
+MASTER SPEC、EXAM_ALIGNMENT SPEC、系列SPEC、固定EXAM_ALIGNMENT、成果物QA、独立再解答、前回指摘2件の整合をすべて満たす。
+
 - 技術・試験対応品質ゲート: `PASS`
 - 成果物ゲート: `PASS`
 - 独立再解答ゲート: `PASS`
-- 進捗・正本整合ゲート: `NEEDS_REVISION`
+- 進捗・正本整合ゲート: `PASS`
 
-したがってTopic 21はまだ `completed` にしない。
+判定: `PASS / topic_21_final_qa_pass / completed`
 
-判定: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
-
-完成数: `20 / 22`
+完成数: `21 / 22`
 
 ## 次工程
-`21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件を現行状態へ同期する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更しない。
+Topic 22「東京→新大阪を主回路＋走行制御でシミュレーション」の制作前EXAM_ALIGNMENT。
