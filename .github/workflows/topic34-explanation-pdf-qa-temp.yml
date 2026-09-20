@@ -3,8 +3,6 @@ on:
   push:
     paths:
       - '.github/workflows/topic34-explanation-pdf-qa-temp.yml'
-permissions:
-  contents: write
 jobs:
   qa:
     runs-on: ubuntu-latest
@@ -23,156 +21,57 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import subprocess, hashlib, re, sys
+          import subprocess, hashlib, re, json
           from PIL import Image, ImageChops
           import pypdfium2 as pdfium
-
           base=Path('denken-shinkansen/05_shinkansen_vehicle_2/topics/34_compressor_pump_fan_load_characteristics')
           pdf=base/'34_compressor_pump_fan_load_characteristics_explanation.pdf'
-          qa=base/'34_compressor_pump_fan_load_characteristics_explanation_pdf_qa.md'
           tmp=Path('/tmp/topic34_pdf_qa'); tmp.mkdir(exist_ok=True)
           pop=tmp/'poppler'; pop.mkdir(exist_ok=True)
           pui=tmp/'pdfium'; pui.mkdir(exist_ok=True)
-
           info=subprocess.check_output(['pdfinfo',str(pdf)],text=True,errors='replace')
-          m=re.search(r'^Pages:\s+(\d+)',info,re.M); pages=int(m.group(1))
+          pages=int(re.search(r'^Pages:\s+(\d+)',info,re.M).group(1))
           sz=re.search(r'^Page size:\s+([0-9.]+) x ([0-9.]+) pts',info,re.M)
           wpt,hpt=map(float,sz.groups())
           a4=abs(wpt-595.276)<1 and abs(hpt-841.89)<1
-
           txtpath=tmp/'text.txt'
           subprocess.run(['pdftotext','-layout',str(pdf),str(txtpath)],check=True)
           text=txtpath.read_text(encoding='utf-8',errors='replace').replace('\u0332','_')
           compact=re.sub(r'\s+','',text)
           urep=text.count('\ufffd')
-
-          checks=[
-            '3V_1^2','s>0','停動トルク','二次抵抗','T∝s',
-            '誘導電動機','s<0','ブラシ','IGBT','V/f',
-            '回転角速度','過負荷耐量','定常状態','トルク成分','滑り角周波数',
-            'N_s=120f/p','すべり','定格トルク','P_c2','固定損','小すべり',
-            'E_d=1.35V_LL','I_d=P_d/E_d','I_1=P_d/(sqrt(3)V_LL)','V_ph,peak=mE_d/2','V_LL,rms','V/f'
-          ]
-          present=[]
-          for s in checks:
-            present.append(re.sub(r'\s+','',s) in compact)
+          checks=['3V_1^2','s>0','停動トルク','二次抵抗','T∝s','誘導電動機','s<0','ブラシ','IGBT','V/f','回転角速度','過負荷耐量','定常状態','トルク成分','滑り角周波数','N_s=120f/p','すべり','定格トルク','P_c2','固定損','小すべり','E_d=1.35V_LL','I_d=P_d/E_d','I_1=P_d/(sqrt(3)V_LL)','V_ph,peak=mE_d/2','V_LL,rms','V/f']
+          present=[re.sub(r'\s+','',s) in compact for s in checks]
           fixed=sum(present)
-
           specs=['電動機出力','負荷トルク','ポンプ動力','ファン動力','回転速度','効率','インバータ制御']
           spec_ok=sum(s in text for s in specs)
           examples=['95.5N·m','1500min^-1','4.0%','199N·m','33.3kW','7.59kW','8.63kW','0.75']
           ex_ok=sum(re.sub(r'\s+','',s) in compact for s in examples)
-
           subprocess.run(['pdftoppm','-png','-r','160',str(pdf),str(pop/'page')],check=True,stdout=subprocess.DEVNULL)
           doc=pdfium.PdfDocument(str(pdf)); scale=160/72
           for i in range(len(doc)):
-            img=doc[i].render(scale=scale).to_pil().convert('RGB')
-            img.save(pui/f'page-{i+1:02d}.png')
+              doc[i].render(scale=scale).to_pil().convert('RGB').save(pui/f'page-{i+1:02d}.png')
           popimgs=sorted(pop.glob('page-*.png')); puiimgs=sorted(pui.glob('page-*.png'))
-          if len(popimgs)!=pages or len(puiimgs)!=pages: raise SystemExit('render page count mismatch')
-
-          blank=0; edge=0; parity_bad=0; bounds=[]; parity=[]
-          for i,(a,b) in enumerate(zip(popimgs,puiimgs),1):
-            im1=Image.open(a).convert('L'); im2=Image.open(b).convert('L')
-            mask=im2.point(lambda p: 255 if p<245 else 0)
-            bb=mask.getbbox()
-            if not bb:
-              blank+=1; bounds.append(None)
-            else:
-              bounds.append(bb)
-              l,t,r,bt=bb; W,H=im2.size
-              if l<12 or t<12 or r>W-12 or bt>H-12: edge+=1
-            if im1.size!=im2.size: im1=im1.resize(im2.size)
-            d=ImageChops.difference(im1,im2)
-            hist=d.histogram(); total=im2.size[0]*im2.size[1]
-            changed=sum(hist[35:])/total*100
-            parity.append(changed)
-            if changed>2.0: parity_bad+=1
-
-          sha=hashlib.sha256(pdf.read_bytes()).hexdigest()
-          ok=a4 and pages>0 and urep==0 and blank==0 and edge==0 and parity_bad==0 and fixed==27 and spec_ok==7 and ex_ok==8
-          if not ok:
-            print(dict(a4=a4,pages=pages,urep=urep,blank=blank,edge=edge,parity_bad=parity_bad,fixed=fixed,spec=spec_ok,examples=ex_ok,bounds=bounds,parity=parity))
-            raise SystemExit(1)
-
-          md=f'''# Topic 34 コンプレッサ・ポンプ・ファンの負荷特性 - 解説PDF QA
-
-更新日: 2026-09-20
-
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
-
-## reconcile
-
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md` / `HANDOFF.md`、固定EXAM_ALIGNMENT、解説source/source QAを正本として確認した。固定5問・27答案要素とSPEC固定7項目を変更せずPDFへ接続した。
-
-## PDF QA
-
-- canonical: `34_compressor_pump_fan_load_characteristics_explanation.pdf`
-- canonical PDF commit: `af98ac988b87f5c14b06257cbcaef69a197d661d`
-- SHA-256: `{sha}`
-- A4縦: `{pages}頁 / PASS`
-- PDFium render: `{pages} / {pages} PASS`
-- Poppler render: `{pages} / {pages} PASS`
-- renderer parity >2%差: `{parity_bad}頁`
-- 空白頁: `{blank}件`
-- ページ端切れ検出: `{edge}件`
-- 置換文字 U+FFFD: `{urep}件`
-- pdftotext文字抽出: `PASS`
-
-## 固定過去問ゲート
-
-- R7 一次「機械」問2: `5 / 5 PASS`
-- R6 一次「機械」問2: `5 / 5 PASS`
-- H25 一次「機械」問3: `5 / 5 PASS`
-- R7 二次「機械・制御」問2: `6 / 6 PASS`
-- R4 二次「機械・制御」問3: `6 / 6 PASS`
-- 一次: `15 / 15 PASS`
-- 二次: `12 / 12 PASS`
-- 合計: `{fixed} / 27 PASS`
-
-## SPEC固定7項目
-
-- 電動機出力: `PASS`
-- 負荷トルク: `PASS`
-- ポンプ動力: `PASS`
-- ファン動力: `PASS`
-- 回転速度: `PASS`
-- 効率: `PASS`
-- インバータ制御: `PASS`
-
-`{spec_ok} / 7 PASS`。
-
-## 3段階例題
-
-- 基礎: `15 kW`, `1500 min^-1` -> `95.5 N·m`: `PASS`
-- 本試験標準: `Ns=1500 min^-1`, `s=4.0 %`, `T=199 N·m`, `Pin=33.3 kW`: `PASS`
-- 複合・ひっかけ: `k=0.75`, `P2=7.59 kW`, `Pin=8.63 kW`, `V/f`電圧比`0.75`: `PASS`
-
-表示値・再計算値の接続: `3 / 3 PASS`。
-
-## 範囲境界QA
-
-- 固定EXAM_ALIGNMENT変更: `0件`
-- コンプレッサ圧縮熱力学追加: `0件`
-- 冷凍サイクル・冷媒物性追加: `0件`
-- 未確認新幹線実車値の真値化: `0件`
-- Topic 35以降の先取り: `0件`
-- Topic 21一般式変更: `0件`
-- ポンプ水動力式・ファン相似則を固定二種過去問の直接出題式とする記述: `0件`
-- exact blocker: `0件`
-
-## 次工程
-
-Topic 34練習source。固定5問・27答案要素、SPEC固定7項目へ接続し、一次試験型と二次記述型を含める。範囲境界は維持する。
-'''
-          qa.write_text(md,encoding='utf-8')
-          print(md)
+          if len(popimgs)!=pages or len(puiimgs)!=pages:
+              raise SystemExit('render page count mismatch')
+          blank=edge=parity_bad=0; bounds=[]; parity=[]
+          for a,b in zip(popimgs,puiimgs):
+              im1=Image.open(a).convert('L'); im2=Image.open(b).convert('L')
+              mask=im2.point(lambda p: 255 if p<245 else 0)
+              bb=mask.getbbox(); bounds.append(bb)
+              if not bb:
+                  blank+=1
+              else:
+                  l,t,r,bt=bb; W,H=im2.size
+                  if l<12 or t<12 or r>W-12 or bt>H-12:
+                      edge+=1
+              if im1.size!=im2.size:
+                  im1=im1.resize(im2.size)
+              hist=ImageChops.difference(im1,im2).histogram(); total=im2.size[0]*im2.size[1]
+              changed=sum(hist[35:])/total*100; parity.append(round(changed,4))
+              if changed>2.0:
+                  parity_bad+=1
+          metrics={'a4':a4,'pages':pages,'urep':urep,'blank':blank,'edge':edge,'parity_bad':parity_bad,'parity_pct':parity,'bounds':bounds,'fixed':fixed,'fixed_each':present,'spec':spec_ok,'examples':ex_ok,'text_chars':len(text),'sha256':hashlib.sha256(pdf.read_bytes()).hexdigest()}
+          print('TOPIC34_QA='+json.dumps(metrics,ensure_ascii=False))
+          if not (a4 and pages>0 and urep==0 and blank==0 and edge==0 and parity_bad==0 and fixed==27 and spec_ok==7 and ex_ok==8):
+              raise SystemExit(1)
           PY
-      - name: Commit QA report
-        shell: bash
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add denken-shinkansen/05_shinkansen_vehicle_2/topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_pdf_qa.md
-          git commit -m 'QA Topic 34 explanation PDF'
-          git push
