@@ -6,204 +6,71 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜29は最終QAまで `PASS / completed`。完成数 `29 / 39`。
+Topic 01〜30は最終QAまで `PASS / completed`。完成数 `30 / 39`。
 
-現在地は `topic_30_powerpoint_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了。次はfresh clean blind独立再解答のcandidate固定工程。
+現在地は `topic_31_pending_exam_alignment`。次はTopic 31 `補助電源変換器` の制作前EXAM_ALIGNMENT。
 
-## Topic 30 PowerPoint完了記録
+## Topic 30 完了記録
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `PASS / COMPLETED`
 
-canonical artifacts:
-- PPTX: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images.pptx`
-- QA: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images_qa.md`
-- PPTX blob: `1b6841ad16eb59c9d9d80daf2cbdd51c45446641`
+clean blind:
+- candidate: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_clean_blind_candidate.md`
+- candidate blob: `33b53e26f54b8619da9819e2ce48cb2250ad13b1`
+- candidate lock commit: `a9295e2a018f4d75d3b99ac7c5c6c9044528c8e7`
+- compare QA: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_clean_blind_compare_qa.md`
+- candidate固定後修正: `0件`
 
-QA:
-- 16:9 `6 slides`
-- python-pptx geometry bounds `6 / 6 PASS`
-- LibreOffice PDF変換 `6 / 6 PASS`
-- `pdftotext -layout` `PASS`
-- 全6枚レンダー確認 `6 / 6 PASS`
-- 文字切れ・数式欠け・グラフ欠け・主要要素重なり `0件`
-- 固定5問・25答案要素 `25 / 25 connected`
-- 一次 `20 / 20 connected`
-- 二次 `5 / 5 connected`
-- SPEC必須7項目 `7 / 7 PASS`
-- 指定3可視化 `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT変更 `0件`
-- Topic 31範囲先取り `0件`
-- 未確認L0系実車値の真値化 `0件`
-- Topic 21一般式変更 `0件`
-- exact blocker `0件`
-
-## Topic 30 練習PDF完了記録
-
-判定: `PASS / PRACTICE_PDF_COMPLETE`
-
-canonical artifacts:
-- PDF: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice.pdf`
-- QA: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_pdf_qa.md`
-- PDF blob: `f1e9650e39e236a6fb3629fd93a234dfbafe89c2`
-- source blob: `4a9b6c802a9182225594b4ce7274d98c931d120a`
-
-QA:
-- A4縦 `7 pages`
-- PDFium / Poppler `7 / 7 PASS`
-- page-edge overflow / blank-page `7 / 7 PASS` in both renderers
-- `pdftotext -layout` `PASS`
-- 置換文字 `0件`
-- 一次試験型 `8 / 8 PASS`
-- 二次試験型 `4 / 4 PASS`
-- source QA済み数値・論理 `12 / 12 PASS` を維持
-- 一次正答一意性 `8 / 8 PASS` を維持
-- 固定5問・25答案要素 `25 / 25 connected`
-- 一次 `20 / 20 connected`
-- 二次 `5 / 5 connected`
-- SPEC必須7項目 `7 / 7 covered`
-- 指定3可視化 `3 / 3 aligned`
-- 固定EXAM_ALIGNMENT変更 `0件`
-- Topic 31範囲先取り `0件`
-- 未確認L0系実車値の真値化 `0件`
-- exact blocker `0件`
-
-初回builderの停止原因は内容不備ではなく、仕様にない「8頁以上」をQA条件へ固定していたこと。診断で正本出力がA4縦7頁・全12問収録・置換文字0件であることを確認し、ページ数を仮定せず実際の全頁をPDFium/Popplerで検査するQAへ修正してPASSした。教材内容や一般式は変更していない。
-
-## Topic 30 練習source完了記録
-
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`
-
-canonical source:
-- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_source.md`
-- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice_source_qa.md`
-
-QA:
-- 一次試験型 `8 / 8 PASS`（全問五肢択一）
-- 二次試験型 `4 / 4 PASS`
-- 数値・論理独立再計算 `12 / 12 PASS`
-- 一次正答一意性 `8 / 8 PASS`
-- 固定5問・25答案要素 `25 / 25 connected`
-- 一次固定答案要素 `20 / 20 connected`
-- 二次固定答案要素 `5 / 5 connected`
-- SPEC必須7項目 `7 / 7 covered`
-- 指定3可視化 `3 / 3 aligned`
-- 固定EXAM_ALIGNMENT変更 `0件`
-- SPEC外主題追加 `0件`
-- 未確認L0系実車値の真値化 `0件`
-- exact blocker `0件`
-
-練習問題では、結合係数―伝送電力、負荷条件―効率、周波数特性を教材用結合回路で計算させ、RLC共振・磁気回路・交流電力・変圧器損失/効率を固定過去問へ接続した。教材用 `k`,`L`,`M`,`R`,`C`,`f`,伝送電力、効率はL0系実車値ではない。
-
-## Topic 30 解説PDF完了記録
-
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
-
-canonical artifacts:
-- PDF: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf`
-- QA: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_pdf_qa.md`
-- PDF blob: `a3926909e5240e4d77042f12e903f299f81d6800`
-- source blob: `4c65d9499783cf262f7cc5d9956bd75da7866cbc`
-
-QA:
-- A4縦 `7 pages`
-- PDFium / Poppler `7 / 7 PASS`
-- `pdftotext -layout` `PASS`
-- 固定5問・25答案要素 `25 / 25 covered`
-- 一次 `20 / 20 covered`
-- 二次 `5 / 5 covered`
-- SPEC必須7項目 `7 / 7 covered`
-- 指定3可視化 `3 / 3 PASS`
-- 未確認L0系実車値の真値化 `0件`
-- 固定EXAM_ALIGNMENT変更 `0件`
-- exact blocker `0件`
-
-## Topic 30 解説source完了記録
-
-判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-
-canonical source:
-- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_source.md`
-- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_source_qa.md`
-
-QA:
-- 固定5問・25答案要素 `25 / 25 connected`
-- SPEC必須7項目 `7 / 7 PASS`
-- 指定3可視化 `3 / 3 PASS`
-- 3段階例題 `3 / 3 PASS`
-- 数式・単位・数値例 `PASS`
-- 未確認L0系実車値の真値化 `0件`
-- 固定EXAM_ALIGNMENT変更 `0件`
-- exact blocker `0件`
-
-JR東海一次資料で確認した誘導集電の原理・L0系改良型での全面採用だけを実車事実として使用。鉄道総研のWPT資料は一般原理の参考に限定し、その装置定数をL0系へ転用していない。
-
-## Topic 30 固定EXAM_ALIGNMENT
-
-固定5問・25答案要素。教材制作中に差し替えない。
-
-1. R8 一次「理論」問5 — 5答案要素
-2. R7 一次「理論」問2 — 5答案要素
-3. H30 一次「理論」問2 — 5答案要素
-4. H30 一次「機械」問5 — 5答案要素
-5. R2 二次「機械・制御」問2 — 5答案要素
-
-制作前独立再計算・公式照合:
+完成後独立再解答:
+- R8 一次「理論」問5 `5 / 5 PASS`
+- R7 一次「理論」問2 `5 / 5 PASS`
+- H30 一次「理論」問2 `5 / 5 PASS`
+- H30 一次「機械」問5 `5 / 5 PASS`
+- R2 二次「機械・制御」問2 `5 / 5 PASS`
 - 一次 `20 / 20 PASS`
 - 二次 `5 / 5 PASS`
 - 合計 `25 / 25 PASS`
 - 公式照合不一致 `0件`
-- exact blocker `0件`
-
-正本:
-- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer.md`
-- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_exam_alignment_qa.md`
-
-## Topic 30 固定範囲
-
-系列SPEC:
-- 主題: 非接触給電を相互インダクタンスと結合回路として解析する
-- 相互インダクタンス
-- 結合係数
-- 誘導起電力
-- 等価回路
-- 交流電力
-- 力率
-- 変換効率
-- 可視化: 結合係数―伝送電力 / 負荷条件―効率 / 周波数特性
-
-変圧器問題は結合回路・交流電力・損失・効率の二種試験対応橋渡しとして使用する。L0系非接触給電を通常変圧器と同一構造・同一定数とは扱わない。
-
-未確認のL0系結合係数、自己・相互インダクタンス、抵抗、周波数、伝送電力、効率、ギャップ、コイル寸法等は真値化しない。教材用数値を置く場合は仮定値と明示する。
-
-## 次の安全な工程
-
-1. 最新mainと車両二種worker成果を再reconcileする。
-2. Topic 30教材完成状態を確認後、fresh clean blind用candidateをanswer-bearing資料を見ずに固定する。
-3. candidate固定後に公式標準解答と比較し、一次20要素＋二次5要素の `25 / 25` を判定する。
-4. 不一致時はcandidateを改変せず原因を分類し、教材不足のみremediationする。仕様不整合・確定不能事項はexact blockerとして停止する。
-5. 固定EXAM_ALIGNMENTは差し替えず、未確認L0系実車値は真値化しない。
-
-教材完成後clean blindのcandidate固定前には、Topic 30 EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を開かない。
-
-## Topic 29 完了記録
-
-- final QA: `PASS / COMPLETED`
-- clean blind v2 candidate lock: `18b7ea1d8796a4802e63c78088bb1fae87e70601`
-- compare QA: `PASS / 24_OF_24`
-- candidate固定後修正: `0件`
-- 一次 `20 / 20 PASS`
-- 二次 `4 / 4 PASS`
-- 合計 `24 / 24 PASS`
-- SPEC必須8項目 `8 / 8 PASS`
-- 指定3可視化 `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更 `0件`
 - exact blocker `0件`
 
 canonical artifacts:
-- 解説PDF `35ba843b81fd8fc08f76bd5de8aa9edee540d78f`
-- 練習PDF `bebec9f9a6ed60178ca567e54060b37958ea2a27`
-- PowerPoint `85394e303e8ff9bff19193a76b09d1db17406ec9`
+- 解説PDF: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf` / blob `a3926909e5240e4d77042f12e903f299f81d6800` / A4縦7頁 / PDFium・Poppler `7 / 7 PASS`
+- 練習PDF: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_practice.pdf` / blob `f1e9650e39e236a6fb3629fd93a234dfbafe89c2` / A4縦7頁 / PDFium・Poppler `7 / 7 PASS`
+- PowerPoint: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images.pptx` / blob `1b6841ad16eb59c9d9d80daf2cbdd51c45446641` / 16:9 6枚 / render `6 / 6 PASS`
+- source/各QA: 同Topic 30ディレクトリのcanonical source・QAを使用
+- 固定5問・25答案要素への教材接続 `25 / 25 PASS`
+- SPEC必須7項目 `7 / 7 PASS`
+- 指定3可視化 `3 / 3 PASS`
+- 未確認L0系実車値の真値化 `0件`
 
-H23二次問1(1)のcandidate `75.6 N・m` と公式 `75.7 N・m` は、一般式・途中量が一致し、公式表示から `π_eff≈3.14003` と逆算できるため `π=3.14` 相当の過去問固有丸め差として扱った。candidateは変更せず `PASS_WITH_ROUNDING_NOTE`。一般式は変更しない。
+R2二次問2はcandidateと公式の未丸め途中値に最終表示へ影響しない微小差があるが、5答案要素 `400 W / 624 W / 80.0 % / 99.0 % / 97.5 %` は公式表示と全一致。candidateは変更していない。
+
+## Topic 31 固定範囲
+
+系列SPECの `31 補助電源変換器` で扱う内容:
+- インバータ
+- コンバータ
+- 三相負荷
+- 力率
+- 高調波
+- 変換損失
+- 効率
+- 負荷変動
+
+現時点ではTopic 31のEXAM_ALIGNMENTは未固定。過去問・実車仕様を推測で先に決めない。
+
+## 次の安全な工程
+
+1. 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、直近の車両二種worker成果をreconcileする。
+2. 電気技術者試験センター公式過去問を直近年度から調査し、Topic 31に直接必要な一次・二次の論点を抽出する。
+3. 二種は一次・二次を合わせ原則5問以上を固定する。二次対象論点で該当記述問題が確認できる場合は最低1問を含める。
+4. 各問題の答案要素を独立再計算・公式照合し、教材で必要な説明へ1対1でmapする。
+5. 公式過去問・公式解答・一次資料で確定できない事項はexact blockerとして記録し、推測で固定しない。
+6. EXAM_ALIGNMENTがPASSしてから解説source制作へ進む。
+7. 実車・設備値はJR各社、公的機関、メーカー、鉄道総研等の一次・技術資料で確認できたものだけを実値として扱う。
+
+Topic 31完成後のclean blind candidate固定前には、その時点で固定したEXAM_ALIGNMENTのanswer-bearing資料・公式解答・比較QAを先に開かない。
 
 ## Topic 21 H26二次 問1(4)
 
