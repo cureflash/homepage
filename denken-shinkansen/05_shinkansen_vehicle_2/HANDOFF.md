@@ -8,7 +8,33 @@
 
 Topic 01〜29は最終QAまで `PASS / completed`。完成数 `29 / 39`。
 
-現在地は `topic_30_explanation_source_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了。次は解説PDF生成＋QA。
+現在地は `topic_30_explanation_pdf_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了。次は練習source作成＋QA。
+
+## Topic 30 解説PDF完了記録
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+canonical artifacts:
+- PDF: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf`
+- QA: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_pdf_qa.md`
+- PDF blob: `a3926909e5240e4d77042f12e903f299f81d6800`
+- source blob: `4c65d9499783cf262f7cc5d9956bd75da7866cbc`
+
+QA:
+- A4縦 `7 pages`
+- PDFium / Poppler `7 / 7 PASS`
+- `pdftotext -layout` `PASS`
+- 固定5問・25答案要素 `25 / 25 covered`
+- 一次 `20 / 20 covered`
+- 二次 `5 / 5 covered`
+- SPEC必須7項目 `7 / 7 covered`
+- 指定3可視化 `3 / 3 PASS`
+- 未確認L0系実車値の真値化 `0件`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
+
+既存workerが作成済みの一時PDF builderを引き継いで生成し、EXAM_ALIGNMENT/source工程は再実施していない。PDF QA通過後、一時builderは正本から除去済み。
 
 ## Topic 30 解説source完了記録
 
@@ -71,12 +97,13 @@ JR東海一次資料で確認した誘導集電の原理・L0系改良型での�
 
 ## 次の安全な工程
 
-1. `explanation_source.md` だけから解説PDFを生成する。
-2. A4縦、表示崩れ、数式、単位、3可視化、3段階例題、25答案要素への接続をQAする。
-3. PDF QAがPASSしたら練習source→練習PDFへ進む。
-4. 固定EXAM_ALIGNMENTは差し替えない。
-5. L0系実車値は一次資料で確認できたもの以外を真値化しない。
-6. Topic 21 H26二次問1(4)の `48.1 / 48.0 N・m` は `π=3.14` 相当の過去問固有丸め差として維持し、一般式を変更しない。
+1. Topic 30練習sourceを作成する。
+2. 固定5問25答案要素に対応する一次型・二次記述型の練習問題、解答、途中式、理由説明を整備する。
+3. 一次 `20 / 20`、二次 `5 / 5`、SPEC必須7項目への接続をQAする。
+4. source QAがPASSしたら練習PDFへ進む。
+5. 固定EXAM_ALIGNMENTは差し替えない。
+6. L0系実車値は一次資料で確認できたもの以外を真値化しない。
+7. Topic 21 H26二次問1(4)の `48.1 / 48.0 N・m` は `π=3.14` 相当の過去問固有丸め差として維持し、一般式を変更しない。
 
 教材完成後clean blindのcandidate固定前には、Topic 30 EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を開かない。
 
