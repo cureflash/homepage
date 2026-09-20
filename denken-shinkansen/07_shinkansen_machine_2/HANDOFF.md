@@ -6,8 +6,8 @@
 - Topic 01〜20: 最終QA `PASS / completed`
 - 完成数: `20 / 22`
 - active topic: `21 空転した車輪を再粘着させる`
-- current status: `topic_21_independent_reanswer_pass / IN_PROGRESS`
-- 次工程: Topic 21 最終QA
+- current status: `topic_21_final_qa_needs_revision / IN_PROGRESS`
+- 次工程: Topic 21 進捗・メタデータ同期（main source / 練習source）
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -196,5 +196,16 @@ Topic 20成果物QA:
 - 教材外知識補完・未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 - 状態: `PASS / topic_21_independent_reanswer_pass / IN_PROGRESS`
 
+## Topic 21 最終QA
+- `topics/21_readhesion_control/21_readhesion_control_final_qa.md`
+- 技術・試験対応品質ゲート: `PASS`
+- 成果物ゲート: `PASS`
+- 独立再解答ゲート: `PASS / 14 / 14`
+- 独立再解答記録QA: `8 / 8 PASS`
+- 進捗・正本整合ゲート: `NEEDS_REVISION`
+- 未同期: `21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件
+- 技術本文・固定EXAM_ALIGNMENT・PDF/PPTXの修正必要: `0件`
+- 状態: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
+
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の最終QA。
+`21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件を現行状態へ同期する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更しない。
