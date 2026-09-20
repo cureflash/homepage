@@ -1,0 +1,36 @@
+name: tmp-topic33-pdf-materialize
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp_topic33_pdf_materialize.yml'
+      - 'denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance/.tmp_pdf_parts/**'
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild canonical PDF and clean temporary files
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance'
+          cat "$BASE"/.tmp_pdf_parts/part* | base64 -d > "$BASE/33_hvac_thermal_balance_explanation.pdf"
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          p=Path('denken-shinkansen/05_shinkansen_vehicle_2/topics/33_hvac_thermal_balance/33_hvac_thermal_balance_explanation.pdf')
+          data=p.read_bytes()
+          assert len(data)==20873, len(data)
+          assert hashlib.sha256(data).hexdigest()=='5b657e987cff73e94ff92877cb6d8b8c296b9cf8e33b6701ffa5987a406ae570'
+          PY
+          rm -rf "$BASE/.tmp_pdf_parts"
+          rm -f .github/workflows/tmp_topic33_pdf_materialize.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add Topic 33 explanation PDF'
+          git push origin HEAD:main
