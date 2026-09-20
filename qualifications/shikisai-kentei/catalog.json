@@ -74,6 +74,15 @@
       "source":"articles/15_opsin_genetics_color_vision.md"
     },
     {
+      "id":"16_trichromatic_color_vision_evolution",
+      "articleNo":16,
+      "seriesId":"biology",
+      "title":"人はなぜ三色型色覚になったのか――オプシン遺伝子重複と霊長類の進化",
+      "summary":"祖先型M/Lオプシン遺伝子の重複と分光感度の分化から、人を含む狭鼻猿類の恒常的三色型、新世界ザルの多型的三色型、ホエザルの収斂進化、果実・若葉・社会シグナルに関する選択圧までを遺伝学・神経科学・進化生態学で理解する。",
+      "levels":["3級：眼のしくみ・網膜における光の処理","2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説・視覚系の構造と色","大学：進化生物学・遺伝学・神経科学"],
+      "source":"articles/16_trichromatic_color_vision_evolution.md"
+    },
+    {
       "id":"19_complementary_afterimage",
       "articleNo":19,
       "seriesId":"vision-psychology",
