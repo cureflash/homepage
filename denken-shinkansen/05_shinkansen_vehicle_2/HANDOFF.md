@@ -6,15 +6,15 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
+Topic 01〜27は最終QAまで `PASS / completed`。完成数は `27 / 39`。
 
-現在地は `topic_27_clean_blind_official_match_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_completed`。次のactive topicは Topic 28 `L0系② 同期機のフェーザと推進力`。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27既存教材・成果物、直近コミットをreconcileした。05系列の直近状態はclean blind候補固定済みで、その後の最新コミットは07系列の別worker成果だったため重複作業はない。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27既存教材・成果物・QA、直近コミット、既存車両二種worker成果をreconcileした。Topic 27は解説source/PDF、練習source/PDF、PowerPoint、clean blind公式照合まで完了済みで、重複作業を避けて最終QAのみ実施した。
 
-locked candidate `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_blind_candidates.md` はlock commit `fe677eb5c89613a8ed06e1c2343a5cf0525f5d21` 時点と照合開始時点で同一blob SHA `c9606b30811c630d8b1c90d56f4f552b9895abeb` を維持している。lock後にのみ公式解答・保存済み照合結果を参照し、固定5問・23答案要素を公式正本と照合して `23 / 23 PASS`、不一致0件を確認した。固定EXAM_ALIGNMENT、Topic 21一般式、L0系実車境界、Topic 28範囲は変更していない。
+`topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_final_qa.md` で必須成果物・既存QA・clean blind公式照合を統合確認し、固定5問・23答案要素 `23 / 23 PASS`、SPEC必須7項目 `7 / 7 PASS`、指定2可視化 `2 / 2 PASS`、candidate lock後修正0件、exact blocker 0件を確認した。Topic 27を `PASS / COMPLETED` とする。固定EXAM_ALIGNMENT、Topic 21一般式、L0系実車境界、Topic 28範囲は変更していない。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -329,6 +329,27 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - 不一致: `0件`
 - exact blocker: `0件`
 
+## Topic 27 最終QA
+
+成果物:
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_final_qa.md`
+
+判定:
+- `PASS / COMPLETED`
+- 必須成果物: `全件存在・既存QA PASS`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `18 / 18 PASS`
+- 二次答案要素: `5 / 5 PASS`
+- 合計答案要素: `23 / 23 PASS`
+- SPEC必須7項目: `7 / 7 PASS`
+- SPEC指定2可視化: `2 / 2 PASS`
+- candidate lock後の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- L0系未確認実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -340,4 +361,4 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## 次の安全な工程
 
-locked candidate `27_l0_linear_synchronous_motor_blind_candidates.md` は変更しない。Topic 27の必須成果物・既存QA・clean blind公式照合QAをreconcileし、`27_l0_linear_synchronous_motor_final_qa.md` を作成する。
+Topic 28 `L0系② 同期機のフェーザと推進力` の制作前EXAM_ALIGNMENTを実施する。公式過去問を一次・二次合わせて原則5問以上調査し、固定前に独立再解答してから教材範囲を確定する。
