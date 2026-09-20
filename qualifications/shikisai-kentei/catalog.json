@@ -83,6 +83,15 @@
       "source":"articles/20_simultaneous_color_contrast.md"
     },
     {
+      "id":"21_color_constancy_von_kries",
+      "articleNo":21,
+      "seriesId":"vision-psychology",
+      "title":"なぜ照明が変わっても物体の色が同じに見えるのか――色恒常性とvon Kries順応",
+      "summary":"照明スペクトルと分光反射率の積から生じる逆問題を出発点に、L・M・S錐体、色順応、von Kries型対角変換、CAT、照明推定まで使って色恒常性を理解する。",
+      "levels":["3級：光と色・照明と色の見え方・網膜における光の処理","2級：光の性質と色・視覚系の構造と色・照明","大学：神経科学・心理物理学・色彩科学"],
+      "source":"articles/21_color_constancy_von_kries.md"
+    },
+    {
       "id":"25_cie_xyz_tristimulus",
       "articleNo":25,
       "seriesId":"colorimetry-design",
