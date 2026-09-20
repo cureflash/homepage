@@ -1,15 +1,15 @@
 # STATUS - 新幹線車両・電験二種
 
-更新日: 2026-09-20
+更新日: 2026-09-21
 
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `33 / 39`
-- current_status: `topic_34_practice_source_complete`
+- current_status: `topic_34_practice_pdf_complete`
 - last_completed_topic: `33 空調・電熱の熱収支`
 - active_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- next_start: Topic 34練習PDFを生成し、全ページ表示QA・内容QAを行う。固定5問27答案要素、SPEC固定7項目、一次8問・二次4問の正本を変更しない。
+- next_start: Topic 34解説画像PowerPointを生成し、render QA・内容QAを行う。固定5問27答案要素、SPEC固定7項目、一次8問・二次4問の正本を変更しない。
 
 Topic 01〜33は `PASS / completed`。完成数は `33 / 39` のまま。
 
@@ -21,7 +21,7 @@ EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後cle
 
 ## Topic 34 コンプレッサ・ポンプ・ファンの負荷特性
 
-判定: `IN_PROGRESS / PRACTICE_SOURCE_COMPLETE`
+判定: `IN_PROGRESS / PRACTICE_PDF_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -90,7 +90,26 @@ SPEC固定項目:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-Topic 34自体は未完了。次工程は練習PDF生成＋PDF QAであり、その後PowerPoint、完成後clean blind独立再解答を行う。
+### 練習PDF
+
+- PDF: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice.pdf`
+- PDF QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_pdf_qa.md`
+- PDF canonical commit: `afa0daf7535ae614728734cebe48470a2651e631`
+- PDF blob SHA: `6a9ea3697385c5cc1e951106b1f8a76470138ec1`
+- PDF SHA-256: `2f7c1af14e3c6ff1d60bcec1a51e3432b7fe1cfcb2b1056f9b71ff4197f08040`
+- A4縦: `8頁`
+- PDFium / Poppler: `8 / 8 PASS`
+- blank page / page-edge overflow / U+FFFD: `0件`
+- 一次1〜8: `8 / 8収録 PASS`
+- 二次1〜4: `4 / 4収録 PASS`
+- 固定5問・27答案要素: `27 / 27 connected`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- SPEC固定7項目: `7 / 7 PASS`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+Topic 34自体は未完了。次工程は解説画像PowerPoint生成＋render QA・内容QAであり、その後fresh clean blind独立再解答を行う。
 
 ## Topic 21 固定注記
 
