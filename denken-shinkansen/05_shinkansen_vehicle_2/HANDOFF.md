@@ -8,15 +8,15 @@
 
 Topic 01〜27は最終QAまで `PASS / completed`。完成数は `27 / 39`。
 
-現在地は `topic_28_blind_reanswer_needs_revision`。active topicは Topic 28 `L0系② 同期機のフェーザと推進力`。Topic 28はまだ `completed` ではない。
+現在地は `topic_28_source_remediation_complete`。active topicは Topic 28 `L0系② 同期機のフェーザと推進力`。Topic 28はまだ `completed` ではない。
 
 ## 今回のreconcileと進行
 
-最新main、系列 `STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、Topic 28既存成果、直近コミット、既存車両二種worker成果をreconcileした。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、Topic 28既存成果をreconcileした。
 
-開始時点でTopic 28は制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointまで完了していたため、それらを再作成せず完成後clean blind工程へ進んだ。
+開始時点のclean blindは固定5問・27答案要素中 `26 / 27 PASS`。唯一のFAILはH29二次「機械・制御」問1(1)で、本試験の力率角 `φ` を本教材の力率角 `θ` ではなく負荷角 `δ` と取り違えたものだった。
 
-公式解答を開く前に固定5問・27答案要素の候補を新規ファイルへ固定し、commit `c3962aec781742bcbb17935327abcef9bb9d7317` とした。候補固定後に公式標準解答と照合し、候補ファイルは変更していない。
+固定EXAM_ALIGNMENT・一般式・実車境界を変更せず、解説sourceへこの記号対応だけを最小補強した。source remediationは `PASS / SOURCE_REMEDIATION_COMPLETE`。旧解説PDFは補強前sourceから生成されたため `STALE / RESYNC_REQUIRED` とした。
 
 ## Topic 28 固定EXAM_ALIGNMENT
 
@@ -53,10 +53,14 @@ SPEC必須8項目:
 
 ### 解説source / PDF
 
-- explanation source: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- source blob SHA: `793d886094722b469d844cadded5d990bdb2cdf2`
-- explanation PDF: `PASS / EXPLANATION_PDF_COMPLETE`
-- PDF canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
+- explanation source: `PASS / EXPLANATION_SOURCE_REMEDIATED`
+- source blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
+- source remediation commit: `28692c4d7c5b0bfee99f28d32be4eaf19f404a14`
+- remediation QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
+- remediation QA commit: `2e24f142239ea932c6fb28631b9ad35aec2e76d1`
+- explanation PDF: `STALE / RESYNC_REQUIRED`
+- stale PDF canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
+- 理由: remediation後sourceのH29 `φ / θ / δ` 補強が未同期
 
 ### 練習source / PDF
 
@@ -117,12 +121,34 @@ H29二次「機械・制御」問1 `(1)`。
 
 原因は記号対応。本教材では力率角を `θ` と置く一方、H29本試験では同じ力率角を `φ` と置く。blind再解答時に `φ` と負荷角 `δ` を取り違えた。
 
-必要な最小補強:
-- H29本試験の `φ` = 本教材の力率角 `θ`
-- `φ/θ` と負荷角 `δ` は別物
-- `V,I,X_s,φ` 指定なら発電機遅れ力率式から `ε` を表す
+今回固定した旧候補は変更しない。
 
-この補強後、解説PDFへ同期し、公式解答を見ていないfresh workerでclean blindを新規固定する。今回固定した候補は修正しない。
+## source remediation
+
+追加したのはclean blindで露呈した最小範囲のみ。
+
+- §2: H29 `φ` = 本教材 `θ` = 力率角と明示。
+- §2: `φ / θ` は `V-I` 位相差、`δ` は `V-E` 位相差と分離。
+- §10: `V,I,X_s,φ` 指定時の `E` と `ε` の式を明記。
+- §16: `φ / θ` と `δ` の取り違えを頻出ミスへ追加。
+- H29対応節へ §2・§16を追加。
+
+式は既存の遅れ力率発電機フェーザ
+
+`E=(V+X_sI sinφ)+jX_sI cosφ`
+
+から平方和を展開し、
+
+`|E|^2=V^2+2VX_sI sinφ+(X_sI)^2`
+
+となることを独立確認済み。
+
+- 固定過去問: `5問` のまま
+- 固定答案要素: `27` のまま
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認L0系実車値の真値化: `0件`
+- Topic 29先取り: `0件`
 
 ## 固定境界
 
@@ -136,4 +162,4 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は
 
 ## 次の安全な工程
 
-H29 `(1)` の `φ / θ / δ` 記号対応を教材へ最小補強し、解説PDFを同期する。その後は公式解答を見ていないfresh workerでclean blind候補を別ファイルに新規固定し、公式照合→最終QAへ進む。Topic 28はそれまで `completed` に数えない。
+remediation後sourceから解説PDFを再生成しPDF QAを実施する。その後、公式解答を見ていないfresh workerでclean blind候補を別ファイルに新規固定し、公式照合→最終QAへ進む。Topic 28はそれまで `completed` に数えない。
