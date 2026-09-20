@@ -1,0 +1,6 @@
+size=220628
+sha256=443a36dd659a9b4c0dabade616a15aee8ec9d39dcc88572337c45c624b46e9cc
+slides=6
+render_pages=6
+pdftotext=PASS
+text_bytes=9826
