@@ -8,7 +8,7 @@
 
 Topic 01〜34は最終QAまで `PASS / completed`。完成数 `34 / 39`。
 
-現在地は `topic_35_explanation_source_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENTと解説source QAまで完了。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、固定EXAM_ALIGNMENTと解説sourceを変更せずTopic 35解説PDFを生成し、PDF QAを実施する。
+現在地は `topic_35_explanation_pdf_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENT、解説source、解説PDF QAまで完了。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、固定EXAM_ALIGNMENT・解説source/PDFを変更せずTopic 35練習sourceを作成し、source QAを実施する。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
 
 ## Topic 34 完了記録
 
@@ -126,7 +126,7 @@ Topic 34は全工程を通過したため `PASS / COMPLETED`。完成数を `34 
 
 ## Topic 35 進捗
 
-判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -173,7 +173,32 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程: 固定EXAM_ALIGNMENTと解説sourceを変更せず、Topic 35解説PDFを生成しPDF QAを実施する。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
+### 解説PDF
+
+canonical:
+- PDF: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation.pdf`
+- PDF QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_pdf_qa.md`
+- PDF canonical commit: `51bed9f651d4ba499d54e5de40d6e3061e68b420`
+- PDF SHA-256: `f35699fb423d486ef36ba8a4d69056c8b06eb5059139c8df459b9e1356fef9be`
+
+品質ゲート:
+- A4縦: `10頁`
+- qpdf syntax / stream check: `PASS`
+- Poppler `pdfinfo` / `pdftotext`: `PASS`
+- Poppler render: `10 / 10 PASS`
+- 文字抽出: `7576 chars / PASS`
+- 置換文字 U+FFFD: `0件`
+- SPEC固定語句: `7 / 7 PASS`
+- 固定過去問ラベル: `4 / 4 PASS`
+- 3段階例題代表値: `4 / 4 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- 二次問題の件数合わせ採用: `0件`
+- 3段階例題: `3 / 3 PASS`
+- 未確認実車値の真値化: `0件`
+- Topic 36・37先取り: `0件`
+- exact blocker: `0件`
+
+次工程: 固定EXAM_ALIGNMENT・解説source/PDFを変更せず、Topic 35練習sourceを作成してsource QAを実施する。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
 
 ## Topic 21 固定境界
 
