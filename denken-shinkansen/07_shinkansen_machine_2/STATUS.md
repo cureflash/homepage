@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_independent_reanswer_pass / IN_PROGRESS`
+- current_status: `topic_21_final_qa_needs_revision / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 最終QA
+- next_start: Topic 21 進捗・メタデータ同期（main source / 練習source）
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -282,9 +282,22 @@
 - `topics/21_readhesion_control/21_readhesion_control_powerpoint_qa.md` — PowerPoint QA完了
 - `topics/21_readhesion_control/21_readhesion_control_blind_reanswer_gate.md` — 独立再解答前ゲート完了
 - `topics/21_readhesion_control/21_readhesion_control_independent_reanswer.md` — 完成後独立再解答・公式照合・記録QA完了
+- `topics/21_readhesion_control/21_readhesion_control_final_qa.md` — 最終QA `NEEDS_REVISION`
+
+## Topic 21 最終QA
+- 上位仕様・系列SPEC照合: `PASS`
+- 固定一次4問＋二次1問・14答案要素: `14 / 14 COVERED`
+- 成果物存在: `10 / 10 PASS`
+- 成果物QA: `PASS`
+- 独立再解答: `14 / 14 PASS`
+- 独立再解答記録QA: `8 / 8 PASS`
+- 教材の概念・解法不足: `0件`
+- 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 進捗・正本整合: main sourceと練習sourceの2件未同期
+- 判定: `NEEDS_REVISION / topic_21_final_qa_needs_revision / IN_PROGRESS`
 
 ## 今回進めた内容
-Topic 21の完成後独立再解答を実施した。公式正答・標準解答を開く前に完成教材だけで固定5問・14答案要素を解き、commit `29fa8525a1a970236e44fac44421e3fa451b52a3` へ固定後に公式照合した。`14 / 14 PASS`、訂正0件、記録QA `8 / 8 PASS`。完成数は最終QA前のため `20 / 22` のまま。
+Topic 21の最終QAを実施した。技術・試験対応、成果物、独立再解答はすべてPASSしたが、`21_readhesion_control.md` と `21_readhesion_control_practice.md` の進捗メタデータ2件が現状と不一致のため `NEEDS_REVISION` とした。完成数は `20 / 22` のまま。
 
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の最終QA。
+Topic 21のmain sourceと練習sourceの進捗メタデータ2件を現行状態へ同期する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTXは変更しない。
