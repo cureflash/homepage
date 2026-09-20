@@ -23,11 +23,14 @@ jobs:
           base='denken-shinkansen/05_shinkansen_vehicle_2/topics/35_atc_track_circuit_analysis'
           pdf="$base/35_atc_track_circuit_analysis_explanation.pdf"
           cat "$base"/.pdf_build/part*.b64 | tr -d '\n\r' | base64 -d > "$pdf"
-          test "$(head -c 5 "$pdf")" = '%PDF-'
-          grep -a -q '%%EOF' "$pdf"
-          command -v pdfinfo >/dev/null
-          command -v pdftotext >/dev/null
-          command -v pdftoppm >/dev/null
+          header="$(head -c 5 "$pdf")"
+          eof_count="$(grep -a -c '%%EOF' "$pdf" || true)"
+          echo "header=$header eof_count=$eof_count bytes=$(wc -c < "$pdf")"
+          command -v pdfinfo
+          command -v pdftotext
+          command -v pdftoppm
+          test "$header" = '%PDF-'
+          test "$eof_count" -ge 1
           pdfinfo "$pdf" | tee /tmp/topic35.pdfinfo
           pages="$(awk '/^Pages:/ {print $2}' /tmp/topic35.pdfinfo)"
           test "$pages" = '10'
