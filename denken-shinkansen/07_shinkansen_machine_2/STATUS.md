@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `21 / 22`
-- current_status: `topic_22_exam_alignment_complete / IN_PROGRESS`
+- current_status: `topic_22_explanation_source_complete / IN_PROGRESS`
 - last_completed_topic: `21 空転した車輪を再粘着させる`
 - active_topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- next_start: Topic 22 解説source本文
+- next_start: Topic 22 総合シミュレーション計算プログラム・CSV・指定6グラフ・数値QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -73,7 +73,7 @@
 境界:
 - Topics 01〜21は既習事項として必要な範囲だけ統合する。
 - 実車・実路線値は一次資料等で確認できた値だけを実値とし、計算値・仮定値を区別する。
-- 現時点では東京―新大阪の実速度曲線、勾配、区間距離、実車の変圧器定数・モーター定数・PI/PIDゲイン等を固定していない。
+- 東京―新大阪の実速度曲線、勾配、区間距離、実車の変圧器定数・モーター定数・PI/PIDゲイン等は固定していない。
 - 系列SPECにない新規制御方式・車両仕様は追加しない。
 
 ## Topic 22 固定EXAM_ALIGNMENT
@@ -99,13 +99,23 @@
 - 制作前sourceへの固定過去問個別正答保存: `0件 / PASS`
 - 一次資料未確認の実車・実路線値の真値化: `0件 / PASS`
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
-- 独立再解答: `NOT_RUN`（制作前時点）
-- 判定: `PASS / topic_22_exam_alignment_complete / IN_PROGRESS`
+- 独立再解答: `NOT_RUN`
+
+## Topic 22 解説source
+- 状態: `PASS / topic_22_explanation_source_complete / IN_PROGRESS`
+- 固定答案要素本文収録: `16 / 16 COVERED`
+- 系列SPEC入力: `10 / 10 COVERED`
+- 系列SPEC出力: `8 / 8 COVERED`
+- 指定グラフ: `6 / 6 COVERED`
+- 実値・計算値・仮定値の区別: `PASS`
+- 未確認実路線・実車値の真値化: `0件 / PASS`
+- 固定過去問の個別正答記号・最終数値保存: `0件 / PASS`
+- 独立再解答: `NOT_RUN`
 
 ## 今回進めた内容
-Topic 22の制作前EXAM_ALIGNMENTを完了した。令和8年度一次の最新問題と、2026-09-20時点で最新公表済みの令和7年度二次を含む一次4問＋二次2問、計6問・16答案要素を固定し、全答案要素を解説sourceの予定節へ割り当てた。固定問題の個別正答は保存していない。
+Topic 22の解説source本文を完成させた。変圧器損失・効率、PWM/DCリンク/VVVF、誘導機の同期速度・滑り・等価回路・二次入力・トルク、歯車・車輪・走行力学、PI/PID・閉ループ応答、力行・回生を一つの計算系列へ接続した。東京―新大阪の実運転曲線や未確認実機定数は採用せず、総合シミュレーション条件は教材用仮定値として分離した。
 
 完成数は `21 / 22` のまま。
 
 ## 次工程
-Topic 22 解説source本文。固定16答案要素と系列SPECの入出力・6グラフを欠落させず、実値・計算値・仮定値を分離して教材本文と総合シミュレーション条件を作る。
+Topic 22 総合シミュレーション計算プログラム・CSV・指定6グラフ・数値QA。解説sourceで固定した式、符号規約、仮定値だけを使い、系列SPECの8出力と6グラフを再現可能な形で生成する。
