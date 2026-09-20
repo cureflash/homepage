@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `33 / 39`
-- current_status: `topic_34_practice_pdf_complete`
+- current_status: `topic_34_powerpoint_complete`
 - last_completed_topic: `33 空調・電熱の熱収支`
 - active_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- next_start: Topic 34解説画像PowerPointを生成し、render QA・内容QAを行う。固定5問27答案要素、SPEC固定7項目、一次8問・二次4問の正本を変更しない。
+- next_start: answer-bearing資料を未閲覧のfresh workerがTopic 34 clean blind candidateを固定し、独立再解答する。本runは固定EXAM_ALIGNMENT・解説・練習のanswer-bearing資料を確認済みのためclean blind candidateを作成しない。
 
 Topic 01〜33は `PASS / completed`。完成数は `33 / 39` のまま。
 
@@ -21,7 +21,7 @@ EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後cle
 
 ## Topic 34 コンプレッサ・ポンプ・ファンの負荷特性
 
-判定: `IN_PROGRESS / PRACTICE_PDF_COMPLETE`
+判定: `IN_PROGRESS / POWERPOINT_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -109,7 +109,29 @@ SPEC固定項目:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-Topic 34自体は未完了。次工程は解説画像PowerPoint生成＋render QA・内容QAであり、その後fresh clean blind独立再解答を行う。
+### 解説画像PowerPoint
+
+- PowerPoint: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images.pptx`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images_qa.md`
+- canonical commit: `e165d6db6fb212cfdf750ddbc7953138cde75cf8`
+- PowerPoint SHA-256: `a50257290c31e1ecc3a2c3456bc8ec9762cbc677333414313c0597e9770e44f0`
+- 16:9: `6枚`
+- python-pptx geometry bounds: `6 / 6 PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- PNG render: `6 / 6 PASS`
+- source notes: `6 / 6 PASS`
+- blank render / page-edge overflow / U+FFFD: `0件`
+- 固定5問・27答案要素: `27 / 27 connected`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- SPEC固定7項目: `7 / 7 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 35以降の先取り: `0件`
+- exact blocker: `0件`
+
+Topic 34自体は未完了。次工程はfresh clean blind独立再解答。本runはanswer-bearing資料を閲覧済みのためcandidate固定は行わない。
 
 ## Topic 21 固定注記
 
