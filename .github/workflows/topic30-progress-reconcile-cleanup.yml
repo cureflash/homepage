@@ -1,0 +1,70 @@
+name: Topic 30 progress reconcile cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/topic30-progress-reconcile-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconcile latest main, update progress, clean temporary builders
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          python - <<'PY'
+          from pathlib import Path
+
+          status = Path('denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md')
+          s = status.read_text(encoding='utf-8')
+          s = s.replace('- current_status: `topic_30_practice_pdf_complete`', '- current_status: `topic_30_powerpoint_complete`')
+          s = s.replace('- next_start: Topic 30解説画像PowerPointを生成し、固定25答案要素・SPEC必須7項目・指定3可視化への接続と表示をQAする', '- next_start: Topic 30教材完成状態をreconcileし、fresh clean blind独立再解答のcandidate固定工程へ進む')
+          s = s.replace('Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了した。', 'Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了した。')
+          if '## Topic 30 PowerPoint\n' not in s:
+              marker = '## Topic 30 練習PDF\n'
+              assert marker in s
+              section = '''## Topic 30 PowerPoint\n\n判定: `PASS / POWERPOINT_COMPLETE`\n\n成果物:\n- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images.pptx`\n- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images_qa.md`\n\n結果:\n- canonical blob SHA: `1b6841ad16eb59c9d9d80daf2cbdd51c45446641`\n- 16:9: `6 slides`\n- python-pptx geometry bounds: `6 / 6 PASS`\n- LibreOffice PDF変換: `6 / 6 PASS`\n- `pdftotext -layout`: `PASS`\n- 全6枚レンダー確認: `6 / 6 PASS`\n- 文字切れ・数式欠け・グラフ欠け・主要要素重なり: `0件`\n- 固定5問・25答案要素: `25 / 25 connected`\n- 一次: `20 / 20 connected`\n- 二次: `5 / 5 connected`\n- SPEC必須7項目: `7 / 7 PASS`\n- 指定3可視化: `3 / 3 PASS`\n- 未確認L0系実車値の真値化: `0件`\n- 固定EXAM_ALIGNMENT変更: `0件`\n- Topic 31範囲先取り: `0件`\n- Topic 21一般式変更: `0件`\n- exact blocker: `0件`\n\nこれはPowerPoint工程の接続QAであり、Topic 30最終clean blind PASSを意味しない。\n\n'''
+              s = s.replace(marker, section + marker, 1)
+          status.write_text(s, encoding='utf-8')
+
+          handoff = Path('denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md')
+          h = handoff.read_text(encoding='utf-8')
+          h = h.replace('現在地は `topic_30_practice_pdf_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了。次は解説画像PowerPoint生成＋QA。', '現在地は `topic_30_powerpoint_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了。次はfresh clean blind独立再解答のcandidate固定工程。')
+          if '## Topic 30 PowerPoint完了記録\n' not in h:
+              marker = '## Topic 30 練習PDF完了記録\n'
+              assert marker in h
+              section = '''## Topic 30 PowerPoint完了記録\n\n判定: `PASS / POWERPOINT_COMPLETE`\n\ncanonical artifacts:\n- PPTX: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images.pptx`\n- QA: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images_qa.md`\n- PPTX blob: `1b6841ad16eb59c9d9d80daf2cbdd51c45446641`\n\nQA:\n- 16:9 `6 slides`\n- python-pptx geometry bounds `6 / 6 PASS`\n- LibreOffice PDF変換 `6 / 6 PASS`\n- `pdftotext -layout` `PASS`\n- 全6枚レンダー確認 `6 / 6 PASS`\n- 文字切れ・数式欠け・グラフ欠け・主要要素重なり `0件`\n- 固定5問・25答案要素 `25 / 25 connected`\n- 一次 `20 / 20 connected`\n- 二次 `5 / 5 connected`\n- SPEC必須7項目 `7 / 7 PASS`\n- 指定3可視化 `3 / 3 PASS`\n- 固定EXAM_ALIGNMENT変更 `0件`\n- Topic 31範囲先取り `0件`\n- 未確認L0系実車値の真値化 `0件`\n- Topic 21一般式変更 `0件`\n- exact blocker `0件`\n\n'''
+              h = h.replace(marker, section + marker, 1)
+          start = h.index('## 次の安全な工程\n')
+          end = h.index('\n## Topic 29 完了記録', start)
+          next_section = '''## 次の安全な工程\n\n1. 最新mainと車両二種worker成果を再reconcileする。\n2. Topic 30教材完成状態を確認後、fresh clean blind用candidateをanswer-bearing資料を見ずに固定する。\n3. candidate固定後に公式標準解答と比較し、一次20要素＋二次5要素の `25 / 25` を判定する。\n4. 不一致時はcandidateを改変せず原因を分類し、教材不足のみremediationする。仕様不整合・確定不能事項はexact blockerとして停止する。\n5. 固定EXAM_ALIGNMENTは差し替えず、未確認L0系実車値は真値化しない。\n\n教材完成後clean blindのcandidate固定前には、Topic 30 EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を開かない。\n'''
+          h = h[:start] + next_section + h[end:]
+          handoff.write_text(h, encoding='utf-8')
+          PY
+
+          git rm -f --ignore-unmatch \
+            .github/scripts/topic30_ppt_build.py \
+            .github/workflows/topic30-ppt-build.yml \
+            denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/.tmp_build_topic30_ppt.js \
+            .github/workflows/topic30-powerpoint-build.yml \
+            .github/workflows/topic30-powerpoint-build-v2.yml \
+            .github/workflows/topic30-progress-reconcile-cleanup.yml
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add denken-shinkansen/05_shinkansen_vehicle_2/STATUS.md denken-shinkansen/05_shinkansen_vehicle_2/HANDOFF.md
+          git commit -m 'denken: reconcile Topic 30 PowerPoint progress'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
