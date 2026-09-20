@@ -6,12 +6,37 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `29 / 39`
-- current_status: `topic_30_explanation_source_complete`
+- current_status: `topic_30_explanation_pdf_complete`
 - last_completed_topic: `29 L0系③ 超電導磁気浮上の電磁力`
 - active_topic: `30 L0系④ 誘導集電・非接触電力伝送`
-- next_start: Topic 30の解説PDFをsourceから生成し、表示・数式・単位・可視化・過去問接続QAを行う
+- next_start: Topic 30練習sourceを作成し、固定5問25答案要素・一次20/20・二次5/5・SPEC必須7項目への接続をQAする
 
-Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了した。
+Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで完了した。
+
+## Topic 30 解説PDF
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+成果物:
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf`
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_pdf_qa.md`
+
+結果:
+- canonical blob SHA: `a3926909e5240e4d77042f12e903f299f81d6800`
+- A4縦: `7 pages`
+- PDFium / Poppler: `7 / 7 PASS`
+- `pdftotext -layout`: `PASS`
+- 固定5問・25答案要素: `25 / 25 covered`
+- 一次: `20 / 20 covered`
+- 二次: `5 / 5 covered`
+- SPEC必須7項目: `7 / 7 covered`
+- 指定3可視化: `3 / 3 PASS`
+- 未確認L0系実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+これは解説PDF工程の接続QAであり、Topic 30最終clean blind PASSを意味しない。次工程は練習source作成＋QA。
 
 ## Topic 30 解説source
 
