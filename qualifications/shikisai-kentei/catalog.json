@@ -95,6 +95,15 @@
       "source": "articles/06_thin_film_interference.md"
     },
     {
+      "id": "07_blackbody_color_temperature",
+      "articleNo": 7,
+      "seriesId": "physics",
+      "title": "色温度はなぜ「温度」なのか――黒体放射とPlanckの法則",
+      "summary": "Planckの法則、Wienの変位則、Stefan–Boltzmann則から黒体スペクトルを導き、CIE XYZ、黒体軌跡、色温度・相関色温度、白熱ランプとLEDの違いまで理解する。",
+      "levels": ["3級：光と色・照明と色の見え方", "2級：照明の表し方・白熱ランプ・LED", "大学：熱放射・量子論・測色学"],
+      "source": "articles/07_blackbody_color_temperature.md"
+    },
+    {
       "id": "14_retina_phototransduction",
       "articleNo": 14,
       "seriesId": "biology",
