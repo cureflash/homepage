@@ -6,19 +6,12 @@
 - Topic 01〜21: 最終QA `PASS / completed`
 - 完成数: `21 / 22`
 - active topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- current status: `topic_22_practice_source_complete / IN_PROGRESS`
-- 次工程: Topic 22 練習プリントPDF
+- current status: `topic_22_practice_pdf_complete / IN_PROGRESS`
+- 次工程: Topic 22 解説画像PowerPoint source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 過去テーマの詳細な固定EXAM_ALIGNMENT、成果物QA、独立再解答、最終QA記録は各 `topics/<topic>/` 配下を正本とする。
-
-## Topic 21 完了確認
-- `topics/21_readhesion_control/21_readhesion_control_final_qa.md`
-- 固定一次4問＋二次1問・14答案要素: `14 / 14 COVERED`
-- 完成後独立再解答: `14 / 14 PASS`
-- 記録QA: `8 / 8 PASS`
-- 状態: `PASS / topic_21_final_qa_pass / completed`
 
 ## Topic 22 固定範囲
 系列 `SPEC.md` の Topic 22 のみ。
@@ -56,58 +49,34 @@
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
 - 独立再解答: `NOT_RUN`
 
-## Topic 22 解説source完了
-- 状態: `PASS / topic_22_explanation_source_complete / IN_PROGRESS`
-- 固定答案要素本文収録: `16 / 16 COVERED`
-- 系列SPEC入力: `10 / 10 COVERED`
-- 系列SPEC出力: `8 / 8 COVERED`
-- 指定グラフ: `6 / 6 COVERED`
-- 実値・計算値・仮定値の区別: `PASS`
-- 未確認実路線・実車値の真値化: `0件 / PASS`
-- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
-- 独立再解答: `NOT_RUN`
+## Topic 22 完了済み工程
+- 解説source: `PASS / topic_22_explanation_source_complete / IN_PROGRESS`
+- 総合シミュレーション成果物: `PASS / topic_22_simulation_artifacts_complete / IN_PROGRESS`
+  - program: `topics/22_integrated_route_simulation/22_integrated_route_simulation_calc.py`
+  - CSV: `topics/22_integrated_route_simulation/22_integrated_route_simulation_results.csv` / `3301` 行
+  - 指定6グラフ: `6 / 6 GENERATED`
+- 解説プリントPDF: `PASS / topic_22_explanation_pdf_complete / IN_PROGRESS`
+  - PDF: `topics/22_integrated_route_simulation/22_integrated_route_simulation_explanation.pdf`
+  - QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_explanation_pdf_qa.md`
+- 練習source: `PASS / topic_22_practice_source_complete / IN_PROGRESS`
+  - source: `topics/22_integrated_route_simulation/22_integrated_route_simulation_practice.md`
+  - 一次10問＋二次5問、固定16答案要素 `16 / 16 COVERED`
+- 練習プリントPDF: `PASS / topic_22_practice_pdf_complete / IN_PROGRESS`
+  - PDF: `topics/22_integrated_route_simulation/22_integrated_route_simulation_practice.pdf`
+  - QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_practice_pdf_qa.md`
+  - A4縦・2ページ・2段組
+  - 一次試験型 `10 / 10` 五肢択一
+  - 二次試験型 `5 / 5` 記述・途中式・単位・検算付き
+  - 固定答案要素 `16 / 16 COVERED`
+  - 表示QA `PASS`、文字抽出QA `PASS`、数値・論理QA `15 / 15 PASS`
+  - 未確認実車・実路線値の真値化 `0件 / PASS`
+  - 系列SPEC外の新規制御方式・車両仕様追加 `0件 / PASS`
+  - 固定公式過去問個別正答保存 `0件 / PASS`
 
-## Topic 22 総合シミュレーション成果物完了
-- 状態: `PASS / topic_22_simulation_artifacts_complete / IN_PROGRESS`
-- program: `topics/22_integrated_route_simulation/22_integrated_route_simulation_calc.py`
-- CSV: `topics/22_integrated_route_simulation/22_integrated_route_simulation_results.csv` / `3301` 行
-- 指定6グラフ: `6 / 6 GENERATED`
-- 力行点: `1828` 点 / PASS
-- 回生点: `1149` 点 / PASS
-- 消費・回生同時正値: `0` 点 / PASS
-- 速度負値: `0` 点 / PASS
-- QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_calculation_qa.md`
-- 固定EXAM_ALIGNMENT: 一次4問＋二次2問・16答案要素を変更なし
-- 未確認実車・実路線値の真値化: `0件 / PASS`
-- 独立過去問再解答: `NOT_RUN`
-
-## Topic 22 解説プリントPDF完了
-- 状態: `PASS / topic_22_explanation_pdf_complete / IN_PROGRESS`
-- PDF: `topics/22_integrated_route_simulation/22_integrated_route_simulation_explanation.pdf`
-- QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_explanation_pdf_qa.md`
-- A4縦 `2ページ`
-- 固定答案要素: `16 / 16 COVERED`
-- 例題: 基礎・本試験標準・複合 `3 / 3 INCLUDED`
-- 系列SPEC指定6グラフ: `6 / 6 INCLUDED`
-- 200 dpiレンダリング: `2 / 2 PASS`
-- 文字抽出: `PASS`、欠落グリフ・replacement character・`(cid:)` なし
-- 数値QA: 変圧器・誘導機・PI時間応答・既存シミュレーション整合 `PASS`
-- 未確認実車・実路線値の真値化: `0件 / PASS`
-- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
-- 独立過去問再解答: `NOT_RUN`
-
-## Topic 22 練習source完了
-- 状態: `PASS / topic_22_practice_source_complete / IN_PROGRESS`
-- source: `topics/22_integrated_route_simulation/22_integrated_route_simulation_practice.md`
-- 一次試験型: `10 / 10` 五肢択一
-- 二次試験型: `5 / 5` 記述・途中式・単位・検算付き
-- 固定答案要素: `16 / 16 COVERED`
-- 主回路→誘導機→走行系→速度フィードバック統合: `COVERED`
-- 力行・回生の符号規約と消費電力・回生電力分離: `COVERED`
-- 未確認実車・実路線値の真値化: `0件 / PASS`
-- 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
-- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
-- 独立過去問再解答: `NOT_RUN`
+## 未完了ゲート
+- 解説画像PowerPoint: `NOT_STARTED`
+- 全成果物完成後の独立過去問再解答: `NOT_RUN`
+- 最終QA: `NOT_RUN`
 
 ## 次工程
-Topic 22 練習プリントPDF。本sourceの15問だけを用い、問題・解答・完全解説をPDF化して表示・文字抽出・数値QAを行う。固定EXAM_ALIGNMENTは変更しない。独立再解答は全成果物完成後に行う。
+Topic 22 解説画像PowerPoint source。固定EXAM_ALIGNMENTは変更しない。独立過去問再解答は全成果物完成後に行う。

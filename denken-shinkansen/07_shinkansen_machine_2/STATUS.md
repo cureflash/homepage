@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `21 / 22`
-- current_status: `topic_22_practice_source_complete / IN_PROGRESS`
+- current_status: `topic_22_practice_pdf_complete / IN_PROGRESS`
 - last_completed_topic: `21 空転した車輪を再粘着させる`
 - active_topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- next_start: Topic 22 練習プリントPDF
+- next_start: Topic 22 解説画像PowerPoint source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -21,15 +21,6 @@
 - [ ] Topic 22
 
 各完了テーマの固定EXAM_ALIGNMENT、成果物QA、独立再解答、最終QAの詳細は各 `topics/<topic>/` 配下のsource・QA記録を正本とする。
-
-## Topic 21 最終状態
-- `topics/21_readhesion_control/21_readhesion_control.md`
-- `topics/21_readhesion_control/21_readhesion_control_final_qa.md`
-- 固定一次4問＋二次1問・14答案要素: `14 / 14 COVERED`
-- 完成後独立再解答: `14 / 14 PASS`
-- 独立再解答記録QA: `8 / 8 PASS`
-- 成果物QA・進捗整合: `PASS`
-- 判定: `PASS / topic_21_final_qa_pass / completed`
 
 ## Topic 22 固定範囲
 系列 `SPEC.md` の Topic 22 で指定された内容だけを扱う。
@@ -154,10 +145,27 @@
 - 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
 - 独立過去問再解答: `NOT_RUN`
 
+## Topic 22 練習プリントPDF
+- 状態: `PASS / topic_22_practice_pdf_complete / IN_PROGRESS`
+- PDF: `topics/22_integrated_route_simulation/22_integrated_route_simulation_practice.pdf`
+- QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_practice_pdf_qa.md`
+- A4縦・2ページ・2段組
+- 一次試験型: `10 / 10` 五肢択一
+- 二次試験型: `5 / 5` 記述・途中式・単位・検算付き
+- 固定答案要素: `16 / 16 COVERED`
+- 200 dpiレンダリング: `2 / 2 PASS`
+- `pdftocairo` 160 dpiレンダリング: `2 / 2 PASS`
+- 文字抽出: `PASS`、replacement character `0`、`(cid:)` `0`
+- 数値・論理QA: `15 / 15 PASS`
+- 未確認実車・実路線値の真値化: `0件 / PASS`
+- 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
+- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
+- 独立過去問再解答: `NOT_RUN`
+
 ## 今回進めた内容
-Topic 22の練習問題sourceを作成した。一次試験型10問を全問五肢択一、二次試験型5問を記述・途中式・単位・検算付きとし、固定一次4問＋二次2問・16答案要素を `16 / 16 COVERED` で接続した。扱った数値は教材用仮定値に限定し、未確認実車・実路線値の真値化と系列SPEC外の仕様追加は行っていない。
+Topic 22の練習sourceを正本として、一次10問＋二次5問の問題・解答・完全解説をA4縦2ページの練習プリントPDFへ反映した。表示・文字抽出・数値・論理QAを実施し、`15 / 15 PASS`。固定一次4問＋二次2問・16答案要素は変更せず `16 / 16 COVERED` を維持した。未確認実車・実路線値の真値化と系列SPEC外の仕様追加は行っていない。
 
 完成数は `21 / 22` のまま。
 
 ## 次工程
-Topic 22 練習プリントPDF。本sourceの15問だけを用い、問題・解答・完全解説をPDF化して表示・文字抽出・数値QAを行う。独立再解答は全成果物完成後まで実施しない。
+Topic 22 解説画像PowerPoint source。固定EXAM_ALIGNMENTは変更せず、独立過去問再解答は全成果物完成後に行う。
