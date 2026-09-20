@@ -8,7 +8,28 @@
 
 Topic 01〜29は最終QAまで `PASS / completed`。完成数 `29 / 39`。
 
-現在地は `topic_30_exam_alignment_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENTを完了。次は解説source作成。
+現在地は `topic_30_explanation_source_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENTと解説source＋source QAまで完了。次は解説PDF生成＋QA。
+
+## Topic 30 解説source完了記録
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+canonical source:
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_source.md`
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation_source_qa.md`
+
+QA:
+- 固定5問・25答案要素 `25 / 25 connected`
+- SPEC必須7項目 `7 / 7 PASS`
+- 指定3可視化 `3 / 3 PASS`
+- 3段階例題 `3 / 3 PASS`
+- 数式・単位・数値例 `PASS`
+- 未確認L0系実車値の真値化 `0件`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
+
+JR東海一次資料で確認した誘導集電の原理・L0系改良型での全面採用だけを実車事実として使用。鉄道総研のWPT資料は一般原理の参考に限定し、その装置定数をL0系へ転用していない。source中の `k`,`L`,`M`,`R`,周波数、伝送電力、効率、補償定数は教材用仮定値として明示済み。
 
 ## Topic 30 固定EXAM_ALIGNMENT
 
@@ -44,20 +65,18 @@ Topic 01〜29は最終QAまで `PASS / completed`。完成数 `29 / 39`。
 - 変換効率
 - 可視化: 結合係数―伝送電力 / 負荷条件―効率 / 周波数特性
 
-SPEC必須7項目 `7 / 7 mapped`、指定3可視化 `3 / 3 mapped`。SPEC外主題追加0件。
-
 変圧器問題は結合回路・交流電力・損失・効率の二種試験対応橋渡しとして使用する。L0系非接触給電を通常変圧器と同一構造・同一定数とは扱わない。
 
 未確認のL0系結合係数、自己・相互インダクタンス、抵抗、周波数、伝送電力、効率、ギャップ、コイル寸法等は真値化しない。教材用数値を置く場合は仮定値と明示する。
 
 ## 次の安全な工程
 
-1. Topic 30固定5問・25答案要素から必要説明を逆算して解説sourceを作成する。
-2. SPEC必須7項目をすべて本文・解法・例題へ接続する。
-3. 指定3可視化の式・仮定条件をsource内に固定する。
-4. 二種一次だけでなく、R2二次「機械・制御」問2を途中式・力率・損失・効率まで教材だけで解けるようにする。
+1. `explanation_source.md` だけから解説PDFを生成する。
+2. A4縦、表示崩れ、数式、単位、3可視化、3段階例題、25答案要素への接続をQAする。
+3. PDF QAがPASSしたら練習source→練習PDFへ進む。
+4. 固定EXAM_ALIGNMENTは差し替えない。
 5. L0系実車値は一次資料で確認できたもの以外を真値化しない。
-6. 解説source後、PDF・練習・PowerPoint・clean blindへ順に進める。
+6. Topic 21 H26二次問1(4)の `48.1 / 48.0 N・m` は `π=3.14` 相当の過去問固有丸め差として維持し、一般式を変更しない。
 
 教材完成後clean blindのcandidate固定前には、Topic 30 EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を開かない。
 
