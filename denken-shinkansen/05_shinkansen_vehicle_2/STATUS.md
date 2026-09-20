@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `35 / 39`
-- current_status: `topic_36_explanation_pdf_complete`
+- current_status: `topic_36_practice_pdf_complete`
 - last_completed_topic: `35 ATC① 軌道回路の回路解析`
 - active_topic: `36 ATC② 信号伝送と周波数`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36の固定EXAM_ALIGNMENT、解説source/source QA、解説PDF/PDF QAをreconcileし、Topic 36練習source作成＋QAから開始する。固定5問・25答案要素、SPEC固定8項目、二次は公式科目範囲外という適用判定、鉄道一次資料の境界を維持する。未確認実車値の真値化、Topic 37・38先取りは行わない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36の固定EXAM_ALIGNMENT、解説source/PDF、練習source/source QA、練習PDF/PDF QAをreconcileし、Topic 36解説画像PowerPoint作成＋QAから開始する。固定5問・25答案要素、SPEC固定8項目、二次は公式科目範囲外という適用判定、鉄道一次資料の境界を維持する。未確認実車値の真値化、Topic 37・38先取りは行わない。
 
 Topic 01〜35は `PASS / completed`。完成数は `35 / 39`。
 
@@ -257,7 +257,7 @@ Topic 35はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 36 ATC② 信号伝送と周波数
 
-判定: `IN PROGRESS / EXPLANATION_PDF_COMPLETE`
+判定: `IN PROGRESS / PRACTICE_PDF_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -331,7 +331,50 @@ SPEC固定項目:
 - Topic 37・38先取り: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 36練習source作成＋QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
+### 練習source
+
+- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_source.md`
+- source commit: `f785bd183e5a3bebe976b9839a2b1a41c34168a1`
+- source blob SHA: `d39c83d9329b71336f327f41e86c2bc9f0bdc7bb`
+- source QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_source_qa.md`
+- source QA commit: `d9c3cb66b01be29c05ba702e0c108de9492c0e2c`
+- 一次試験型: `12問 / 12問五肢択一`
+- 二次試験型: `0問`（公式科目範囲外）
+- 一次正答一意性: `12 / 12 PASS`
+- 数値・公式独立再計算: `5 / 5 PASS`
+- 知識・境界問題: `7 / 7 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 未確認実車値の真値化: `0件`
+- Topic 37・38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+### 練習PDF
+
+- PDF: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice.pdf`
+- PDF QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_pdf_qa.md`
+- PDF canonical commit: `51d9ea42398c28ac5b27006d6868aeb96f0b1838`
+- PDF blob SHA: `f678daa6fa5554266716877d32f1aca0acc21e02`
+- PDF SHA-256: `707d1ae1564b13393545c9b27e0d47ed36f1e33390aa827fdd5b4c9a7dfdf0bc`
+- file size: `6700 bytes`
+- A4縦: `5頁`
+- Ghostscript nullpage parse/render: `PASS`
+- Poppler `pdfinfo` / `pdftotext -layout`: `PASS`
+- PDFium / Poppler render: `5 / 5 PASS`
+- visual inspection: `5 / 5 PASS`
+- extracted text: `2894 chars / PASS`
+- replacement character U+FFFD: `0件`
+- 一次問題・正答・解説: `12 / 12 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 37・38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 36解説画像PowerPoint作成＋QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
 
 ## Topic 21 固定注記
 
