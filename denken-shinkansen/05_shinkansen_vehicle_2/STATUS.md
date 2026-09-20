@@ -6,12 +6,37 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `30 / 39`
-- current_status: `topic_31_practice_pdf_complete`
+- current_status: `topic_31_powerpoint_complete`
 - last_completed_topic: `30 L0系④ 誘導集電・非接触電力伝送`
 - active_topic: `31 補助電源変換器`
-- next_start: Topic 31 PowerPointを作成し、固定5問・27答案要素とSPEC 8項目を維持してrender QAする
+- next_start: answer-bearing資料未閲覧のfresh workerでTopic 31 clean blind candidateを固定し、教材だけで固定5問・27答案要素を再解答する
 
-Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了。
+Topic 01〜30は `PASS / completed`。完成数 `30 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QAまで完了。
+
+
+## Topic 31 PowerPoint
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+canonical artifacts:
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_images.pptx`
+- `topics/31_auxiliary_power_converter/31_auxiliary_power_converter_images_qa.md`
+
+QA:
+- PowerPoint blob SHA: `e9967a2566c12d286521a7458ce83de19b91da83`
+- 16:9: `6 slides`
+- LibreOffice PDF変換: `6 / 6 pages PASS`
+- PNG render: `6 / 6 PASS`
+- 空白render・置換文字: `0件`
+- 固定5問・27答案要素: `27 / 27 connected`
+- 一次: `15 / 15 connected`
+- 二次: `12 / 12 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 32〜34先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
 ## Topic 31 練習PDF
 
