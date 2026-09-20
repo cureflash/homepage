@@ -6,12 +6,41 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `29 / 39`
-- current_status: `topic_30_practice_pdf_complete`
+- current_status: `topic_30_powerpoint_complete`
 - last_completed_topic: `29 L0系③ 超電導磁気浮上の電磁力`
 - active_topic: `30 L0系④ 誘導集電・非接触電力伝送`
-- next_start: Topic 30解説画像PowerPointを生成し、固定25答案要素・SPEC必須7項目・指定3可視化への接続と表示をQAする
+- next_start: Topic 30教材完成状態をreconcileし、fresh clean blind独立再解答のcandidate固定工程へ進む
 
-Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了した。
+Topic 01〜29は `PASS / completed`。完成数 `29 / 39`。Topic 30は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了した。
+
+## Topic 30 PowerPoint
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+成果物:
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images.pptx`
+- `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images_qa.md`
+
+結果:
+- canonical blob SHA: `1b6841ad16eb59c9d9d80daf2cbdd51c45446641`
+- 16:9: `6 slides`
+- python-pptx geometry bounds: `6 / 6 PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`
+- 全6枚レンダー確認: `6 / 6 PASS`
+- 文字切れ・数式欠け・グラフ欠け・主要要素重なり: `0件`
+- 固定5問・25答案要素: `25 / 25 connected`
+- 一次: `20 / 20 connected`
+- 二次: `5 / 5 connected`
+- SPEC必須7項目: `7 / 7 PASS`
+- 指定3可視化: `3 / 3 PASS`
+- 未確認L0系実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 31範囲先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+これはPowerPoint工程の接続QAであり、Topic 30最終clean blind PASSを意味しない。
 
 ## Topic 30 練習PDF
 

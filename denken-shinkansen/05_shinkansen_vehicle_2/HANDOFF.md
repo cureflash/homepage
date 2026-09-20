@@ -8,7 +8,34 @@
 
 Topic 01〜29は最終QAまで `PASS / completed`。完成数 `29 / 39`。
 
-現在地は `topic_30_practice_pdf_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了。次は解説画像PowerPoint生成＋QA。
+現在地は `topic_30_powerpoint_complete`。Topic 30 `L0系④ 誘導集電・非接触電力伝送` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了。次はfresh clean blind独立再解答のcandidate固定工程。
+
+## Topic 30 PowerPoint完了記録
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
+canonical artifacts:
+- PPTX: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images.pptx`
+- QA: `topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_images_qa.md`
+- PPTX blob: `1b6841ad16eb59c9d9d80daf2cbdd51c45446641`
+
+QA:
+- 16:9 `6 slides`
+- python-pptx geometry bounds `6 / 6 PASS`
+- LibreOffice PDF変換 `6 / 6 PASS`
+- `pdftotext -layout` `PASS`
+- 全6枚レンダー確認 `6 / 6 PASS`
+- 文字切れ・数式欠け・グラフ欠け・主要要素重なり `0件`
+- 固定5問・25答案要素 `25 / 25 connected`
+- 一次 `20 / 20 connected`
+- 二次 `5 / 5 connected`
+- SPEC必須7項目 `7 / 7 PASS`
+- 指定3可視化 `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- Topic 31範囲先取り `0件`
+- 未確認L0系実車値の真値化 `0件`
+- Topic 21一般式変更 `0件`
+- exact blocker `0件`
 
 ## Topic 30 練習PDF完了記録
 
@@ -150,12 +177,11 @@ JR東海一次資料で確認した誘導集電の原理・L0系改良型での�
 
 ## 次の安全な工程
 
-1. Topic 30の解説source・練習sourceを基に解説画像PowerPointを生成する。
-2. 固定5問・25答案要素、SPEC必須7項目、指定3可視化への接続をスライド上で確認する。
-3. 16:9表示で文字切れ、重なり、数式欠け、グラフ欠けを全スライドQAする。
-4. 固定EXAM_ALIGNMENTは差し替えない。
-5. L0系実車値は一次資料で確認できたもの以外を真値化しない。
-6. PowerPoint QAがPASSした後、教材完成状態をreconcileしてclean blind工程へ進む。
+1. 最新mainと車両二種worker成果を再reconcileする。
+2. Topic 30教材完成状態を確認後、fresh clean blind用candidateをanswer-bearing資料を見ずに固定する。
+3. candidate固定後に公式標準解答と比較し、一次20要素＋二次5要素の `25 / 25` を判定する。
+4. 不一致時はcandidateを改変せず原因を分類し、教材不足のみremediationする。仕様不整合・確定不能事項はexact blockerとして停止する。
+5. 固定EXAM_ALIGNMENTは差し替えず、未確認L0系実車値は真値化しない。
 
 教材完成後clean blindのcandidate固定前には、Topic 30 EXAM_ALIGNMENT本体、exam alignment QA、公式解答等のanswer-bearing資料を開かない。
 
