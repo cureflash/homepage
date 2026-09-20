@@ -8,7 +8,7 @@
 
 Topic 01〜33は最終QAまで `PASS / completed`。完成数 `33 / 39`。
 
-現在地は `topic_34_explanation_source_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENTと解説source QAまで完了し、次工程は解説PDF。
+現在地は `topic_34_explanation_pdf_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENT、解説source、解説PDF QAまで完了し、次工程は練習source。
 
 ## Topic 32 完了記録
 
@@ -167,11 +167,36 @@ canonical:
 - Topic 21 H26二次問1(4)丸め差注記: source 2節へ追加
 - exact blocker: `0件`
 
+## Topic 34 解説PDF 完了
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+canonical:
+- PDF: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation.pdf`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_pdf_qa.md`
+- PDF canonical commit: `fc51bf01a1ffbeca40d0ccf8c5820278731009ea`
+- PDF SHA-256: `0e296a9fe5efe720c7d1ed3d21194327b2eded20c6e4c80c0db03d6d0a00e507`
+
+品質ゲート:
+- A4縦: `8頁`
+- PDFium / Poppler: `8 / 8 PASS`
+- blank / page-edge overflow / U+FFFD: `0件`
+- 固定5問・27答案要素: `27 / 27 PASS`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- SPEC固定7項目: `7 / 7 PASS`
+- 3段階例題: `3 / 3 PASS`
+- コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 35以降の先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 Topic 34自体はまだ未完了。完成数は `33 / 39` のまま。
 
 ## 次工程
 
-Topic 34解説sourceを正本として解説PDFを生成する。A4縦、固定5問・27答案要素、SPEC固定7項目、3段階例題を維持し、文字抽出、PDFium / Poppler表示、ページ端切れ・文字化け・欠字・重大な重なりをQAする。コンプレッサ固有の圧縮熱力学や未確認実車値は追加しない。Topic 35以降は先取りしない。
+Topic 34練習sourceを作成する。固定5問・27答案要素、SPEC固定7項目へ接続し、一次試験型と二次記述型を含める。コンプレッサ固有の圧縮熱力学や未確認実車値は追加しない。Topic 35以降は先取りしない。
 
 ## Topic 21 固定境界
 
