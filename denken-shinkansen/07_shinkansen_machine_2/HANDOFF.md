@@ -6,8 +6,8 @@
 - Topic 01〜21: 最終QA `PASS / completed`
 - 完成数: `21 / 22`
 - active topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- current status: `topic_22_final_qa_needs_revision / IN_PROGRESS`
-- 次工程: Topic 22 進捗メタデータ同期
+- current status: `topic_22_progress_metadata_synced / IN_PROGRESS`
+- 次工程: Topic 22 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -84,19 +84,23 @@
   - 未確認実車・実路線値の答案利用: `0件`
   - 系列SPEC外仕様追加: `0件`
   - 記録QA: `8 / 8 PASS`
+- 進捗メタデータ同期: `PASS / topic_22_progress_metadata_synced / IN_PROGRESS`
+  - `22_integrated_route_simulation.md`: 冒頭状態・独立再解答・次工程を同期
+  - `22_integrated_route_simulation_practice.md`: 独立再解答・次工程を同期
+  - 前回最終QAの指摘2件: `2 / 2 対応済み`
+  - 技術本文・固定EXAM_ALIGNMENT・PDF/PPTX・計算成果物変更: `0件`
 
-## 最終QA
+## 最終QA（前回判定）
 - 記録: `topics/22_integrated_route_simulation/22_integrated_route_simulation_final_qa.md`
 - 技術・試験対応品質ゲート: `PASS`
 - 成果物ゲート: `PASS`
 - 独立再解答ゲート: `PASS`
 - 進捗・正本整合ゲート: `NEEDS_REVISION / 2ファイル未同期`
 - 判定: `NEEDS_REVISION / topic_22_final_qa_needs_revision / IN_PROGRESS`
+- 修正対応: canonical source 2ファイルを同期済み。最終QA再実施待ち。
 
 ## 未完了ゲート
-- `22_integrated_route_simulation.md` の進捗メタデータ同期
-- `22_integrated_route_simulation_practice.md` の進捗メタデータ同期
-- 同期後の最終QA再実施
+- Topic 22 最終QA再実施
 
 ## 次工程
-上記2つのcanonical sourceの進捗メタデータだけを現行状態へ同期する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTX、計算プログラム・CSV・グラフは変更しない。
+Topic 22の最終QAを再実施する。固定6問・16答案要素、成果物、独立再解答、進捗・正本整合を再確認し、全ゲートPASSの場合のみ `completed` とする。
