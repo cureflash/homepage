@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `33 / 39`
-- current_status: `topic_34_explanation_source_complete`
+- current_status: `topic_34_explanation_pdf_complete`
 - last_completed_topic: `33 空調・電熱の熱収支`
 - active_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- next_start: Topic 34の解説sourceを正本として解説PDFを生成し、A4縦・文字抽出・PDFium / Poppler表示・固定5問27答案要素・SPEC固定7項目・3段階例題をQAする。
+- next_start: Topic 34練習sourceを作成し、固定5問27答案要素・SPEC固定7項目へ接続する。一次試験型と二次記述型を含め、範囲境界を維持する。
 
 Topic 01〜33は `PASS / completed`。完成数 `33 / 39`。
 
@@ -124,7 +124,7 @@ Topic 33はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 
 ## Topic 34 コンプレッサ・ポンプ・ファンの負荷特性
 
-判定: `IN_PROGRESS / EXPLANATION_SOURCE_COMPLETE`
+判定: `IN_PROGRESS / EXPLANATION_PDF_COMPLETE`
 
 制作前EXAM_ALIGNMENT:
 - source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics.md`
@@ -156,20 +156,29 @@ SPEC固定項目:
 - 効率
 - インバータ制御
 
-解説source:
+解説source / PDF:
 - source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source.md`
-- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source_qa.md`
-- 固定5問・27答案要素: `27 / 27 COVERED`
+- source QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source_qa.md`
+- PDF: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation.pdf`
+- PDF QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_pdf_qa.md`
+- PDF canonical commit: `fc51bf01a1ffbeca40d0ccf8c5820278731009ea`
+- PDF SHA-256: `0e296a9fe5efe720c7d1ed3d21194327b2eded20c6e4c80c0db03d6d0a00e507`
+- A4縦: `8頁`
+- PDFium / Poppler: `8 / 8 PASS`
+- blank / page-edge overflow / U+FFFD: `0件`
+- 固定5問・27答案要素: `27 / 27 PASS`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
 - SPEC固定7項目: `7 / 7 PASS`
 - 3段階例題: `3 / 3 PASS`
 - 例題数値再計算: `PASS`
 - ポンプ水動力式・ファン相似則は三種既習の接続事項として明示し、固定二種過去問の直接出題式とは扱わない
-- Topic 21丸め差注記: sourceへ追加、一般式変更 `0件`
+- Topic 21丸め差注記: 維持、一般式変更 `0件`
 - コンプレッサ圧縮熱力学・冷凍サイクル・冷媒物性追加: `0件`
 - 未確認実車値の真値化: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 34解説PDF。完成数は `33 / 39` のまま。
+次工程はTopic 34練習source。完成数は `33 / 39` のまま。
 
 ## Topic 21 固定注記
 
