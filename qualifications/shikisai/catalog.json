@@ -1,0 +1,21 @@
+{
+  "title": "色彩検定×自然科学",
+  "updated": "2026-09-20",
+  "series": [
+    {"id":"color-vision-psychology","name":"色覚・心理","description":"色彩検定の色彩心理・色覚を、神経科学・心理物理学・認知科学から大学レベルで掘り下げる。"}
+  ],
+  "topics": [
+    {"id":"01_afterimage","seriesId":"color-vision-psychology","order":1,"title":"補色残像はなぜ見えるのか","status":"published","path":"topics/01_afterimage/"},
+    {"id":"02_chromatic_adaptation","seriesId":"color-vision-psychology","order":2,"title":"色順応とは何か","status":"planned"},
+    {"id":"03_opponent_processing","seriesId":"color-vision-psychology","order":3,"title":"反対色過程はどこで起きるのか","status":"planned"},
+    {"id":"04_simultaneous_contrast","seriesId":"color-vision-psychology","order":4,"title":"同じ色が背景で変わって見える理由","status":"planned"},
+    {"id":"05_lateral_inhibition","seriesId":"color-vision-psychology","order":5,"title":"側抑制と境界強調","status":"planned"},
+    {"id":"06_color_constancy","seriesId":"color-vision-psychology","order":6,"title":"照明が変わっても物体色が保たれる理由","status":"planned"},
+    {"id":"07_von_kries","seriesId":"color-vision-psychology","order":7,"title":"von Kries順応モデル","status":"planned"},
+    {"id":"08_weber_fechner","seriesId":"color-vision-psychology","order":8,"title":"刺激量と感覚量―Weber–Fechner則","status":"planned"},
+    {"id":"09_stevens","seriesId":"color-vision-psychology","order":9,"title":"Stevensのべき法則","status":"planned"},
+    {"id":"10_memory_color","seriesId":"color-vision-psychology","order":10,"title":"記憶色は実物より鮮やかなのか","status":"planned"},
+    {"id":"11_categorical_perception","seriesId":"color-vision-psychology","order":11,"title":"色カテゴリーは知覚を変えるのか","status":"planned"},
+    {"id":"12_psychophysical_scaling","seriesId":"color-vision-psychology","order":12,"title":"色の感覚をどう測るか―心理測定法","status":"planned"}
+  ]
+}
