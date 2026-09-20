@@ -1,6 +1,6 @@
 {
   "title": "色彩検定×自然科学",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "targetArticles": 79,
   "series": [
     {"id":"physics","order":1,"name":"物理","targetTopics":13,"description":"電磁波、光学、散乱、干渉、黒体放射、照明、混色"},
@@ -57,6 +57,7 @@
     {"id":"43_diffraction_grating_cd_rainbow","articleNo":43,"seriesId":"physics","title":"CDはなぜ虹色に見えるのか――回折格子と波の干渉","summary":"CDの周期的なトラックを反射型回折格子として捉え、回折格子式、Nスリット干渉、角分散、分解能、構造色、分光分布からXYZへの接続までを波動光学・測色学から理解する。","levels":["3級：光と色・光の性質と色（発展）","2級：光と色・光の性質と色（発展）","大学：波動光学・分光学・測色学"],"source":"articles/43_diffraction_grating_cd_rainbow.md"},
     {"id":"44_color_management_icc_profiles","articleNo":44,"seriesId":"colorimetry-design","title":"同じRGB値なのに、なぜ色が違うのか――ICCカラーマネジメントを座標変換として理解する","summary":"RGB・CMYKをデバイス依存座標として捉え、ICCプロファイル、PCS（XYZ/L*a*b*）、TRC・行列・LUT、D50色順応、色域写像、レンダリングインテント、測定と色差評価までを測色学・線形代数・最適化から理解する。","levels":["1級：測色・色彩設計・色再現（発展）","大学：測色学・色彩工学・線形代数・数値最適化"],"source":"articles/44_color_management_icc_profiles.md"},
     {"id":"45_cieluv_uniform_chromaticity","articleNo":45,"seriesId":"colorimetry-design","title":"u′v′とL*u*v*は何を均等にしたのか――CIELUVを射影変換と色差から理解する","summary":"CIE 1976 u′v′をxy色度図の射影変換として捉え、直線関係の保存、L*・u*・v*の定義、基準白、クロマ・色相角、ΔE*uv、CIELABとの違い、分光測色からの計算までを測色学と線形代数で理解する。","levels":["1級：XYZ表色系・均等色空間・測色","大学：測色学・線形代数・数理色彩学"],"source":"articles/45_cieluv_uniform_chromaticity.md"},
+    {"id":"46_standard_illuminants_colorimetry","articleNo":46,"seriesId":"colorimetry-design","title":"標準イルミナントは何を標準化しているのか――A・D65・D50を測色の演算子として理解する","summary":"標準イルミナントを測色計算の相対分光分布として捉え、AのPlanck放射、D系列の基底スペクトル、D65・D50、XYZ積分、白色点、メタメリズム、光源との違いまでを測色学・線形代数から理解する。","levels":["1級：標準イルミナント・測色・XYZ表色系","大学：測色学・分光学・線形代数"],"source":"articles/46_standard_illuminants_colorimetry.md"},
     {"id":"49_rgb_pixels_quantization","articleNo":49,"seriesId":"digital-color","title":"デジタル画像の色は何でできているのか――RGB・画素・量子化","summary":"RGB画像を画素とチャンネルの配列として捉え、8 bitコード値、16進カラーコード、量子化誤差、ビット深度、バンディング、sRGBの非線形符号化までを画像工学から理解する。","levels":["3級：混色・加法混色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/49_rgb_pixels_quantization.md"},
     {"id":"50_hsb_hsv_color_selection","articleNo":50,"seriesId":"digital-color","title":"HSB/HSVはなぜ色を選びやすいのか――RGBを「色相・彩度・明るさ」に組み替える","summary":"RGBをHue・Saturation・Brightness/Valueへ再パラメータ化し、RGB↔HSV変換、色相・彩度・明るさの数式、知覚明度・クロマとの違い、iBisPaintでの実用と注意点までを画像工学と色彩科学から理解する。","levels":["3級：色の三属性・混色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/50_hsb_hsv_color_selection.md"},
     {"id":"51_alpha_compositing_opacity","articleNo":51,"seriesId":"digital-color","title":"レイヤーの不透明度は何をしているのか――α合成を数式で理解する","summary":"RGBにalphaを加えたRGBA表現から、source-over合成、出力alpha、straight/premultiplied alpha、レイヤー順序、透明PNGの縁、sRGBの非線形性、iBisPaintでの不透明度調整までを画像工学から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/51_alpha_compositing_opacity.md"},
