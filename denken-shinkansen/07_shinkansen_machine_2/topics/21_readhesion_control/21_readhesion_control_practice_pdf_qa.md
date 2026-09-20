@@ -13,8 +13,8 @@
 ## 現行練習PDF
 - A4縦・2ページ・2段組。
 - canonical source blob: `c9a87ccf46b7f8caa91c064af1fc56149d05e3d1`
-- PDF Git blob: `a54103133a981d7fa749e31b065ad822ede25db6`
-- PDF SHA-256: `a8575745c534c3869b4d71aad1c8ab4e61cc9035f8a935de2e3dc557dcd85909`
+- PDF Git blob: `29c89b41edfb4b2dda95edca77cc7bf529faa758`
+- PDF SHA-256: `dbe0cb6ff26fa23d7f99f1d1c8a9b48984822ae02bbb5146a57c9ea95f5ea88e`
 - PDF size: `12680 byte`
 
 ## 表示QA
