@@ -8,7 +8,7 @@
 
 Topic 01〜34は最終QAまで `PASS / completed`。完成数 `34 / 39`。
 
-現在地は `topic_35_explanation_pdf_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENT、解説source、解説PDF QAまで完了。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、固定EXAM_ALIGNMENT・解説source/PDFを変更せずTopic 35練習sourceを作成し、source QAを実施する。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
+現在地は `topic_35_practice_source_complete`。active topicは `35 ATC① 軌道回路の回路解析`。制作前EXAM_ALIGNMENT、解説source、解説PDF QA、練習source QAまで完了。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileしたうえで、固定EXAM_ALIGNMENT・解説source/PDF・練習sourceを変更せずTopic 35練習PDFを生成し、PDF QAを実施する。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
 
 ## Topic 34 完了記録
 
@@ -126,7 +126,7 @@ Topic 34は全工程を通過したため `PASS / COMPLETED`。完成数を `34 
 
 ## Topic 35 進捗
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -198,7 +198,30 @@ canonical:
 - Topic 36・37先取り: `0件`
 - exact blocker: `0件`
 
-次工程: 固定EXAM_ALIGNMENT・解説source/PDFを変更せず、Topic 35練習sourceを作成してsource QAを実施する。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
+### 練習source
+
+canonical:
+- source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice_source.md`
+- source commit: `d3179e7f0af0dd9e5650127dac65549132e6c8a1`
+- source blob SHA: `ad27d26a4f661e84160ecad4838baea6f43287a2`
+- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice_source_qa.md`
+- QA commit: `4e6d6b4e5a7ea736f39d611a5c5a955c0053c3e9`
+
+品質ゲート:
+- 一次試験型: `12 / 12`
+- 五肢択一: `12 / 12`
+- 正答一意性: `12 / 12 PASS`
+- 数値・回路式独立再計算: `10 / 10 PASS`
+- 知識・境界問題: `2 / 2 PASS`
+- 二次試験型: `0問`（直接対応問題未確認のため件数合わせなし）
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定7項目: `7 / 7 PASS`
+- 未確認実車値の真値化: `0件`
+- Topic 36・37先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程: 固定EXAM_ALIGNMENT・解説source/PDF・練習sourceを変更せず、Topic 35練習PDF生成＋PDF QA。Topic 35はまだ未完了で、完成数は `34 / 39` のまま。
 
 ## Topic 21 固定境界
 
