@@ -1,6 +1,6 @@
 # HANDOFF - 新幹線車両・電験二種
 
-更新日: 2026-09-20
+更新日: 2026-09-21
 
 ## 正本・現在地
 
@@ -8,7 +8,7 @@
 
 Topic 01〜33は最終QAまで `PASS / completed`。完成数 `33 / 39`。
 
-現在地は `topic_34_practice_source_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENT、解説source/PDF、練習source QAまで完了。次工程は練習PDF生成＋全ページPDF QA。
+現在地は `topic_34_practice_pdf_complete`。active topicは `34 コンプレッサ・ポンプ・ファンの負荷特性`。制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDFまで完了。次工程は解説画像PowerPoint生成＋render QA・内容QA。
 
 ## Topic 33 完了記録
 
@@ -114,19 +114,40 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+## Topic 34 練習PDF 完了
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+canonical:
+- PDF: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice.pdf`
+- PDF QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_pdf_qa.md`
+- canonical commit: `afa0daf7535ae614728734cebe48470a2651e631`
+- PDF blob SHA: `6a9ea3697385c5cc1e951106b1f8a76470138ec1`
+- PDF SHA-256: `2f7c1af14e3c6ff1d60bcec1a51e3432b7fe1cfcb2b1056f9b71ff4197f08040`
+
+品質ゲート:
+- A4縦: `8頁`
+- PDFium render: `8 / 8 PASS`
+- Poppler render: `8 / 8 PASS`
+- blank / page-edge overflow / U+FFFD: `0件`
+- 一次1〜8: `8 / 8収録 PASS`
+- 二次1〜4: `4 / 4収録 PASS`
+- 一次正答: `8 / 8収録 PASS`
+- 完全解説: `12 / 12収録 PASS`
+- 固定5問・27答案要素: `27 / 27 connected`
+- 一次: `15 / 15 PASS`
+- 二次: `12 / 12 PASS`
+- SPEC固定7項目: `7 / 7 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21 H26二次問1(4)丸め差注記: 維持
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 Topic 34自体は未完了。完成数は `33 / 39` のまま。
 
 ## 次工程
 
-Topic 34練習PDFをcanonical練習sourceから生成する。PDFでは以下を必ず確認する。
-
-- 一次8問・二次4問が欠落なく収録されていること
-- 正答・完全解説が全問に付くこと
-- 固定5問・27答案要素とSPEC固定7項目の接続を壊さないこと
-- 全ページをPDFium/Poppler等で表示確認し、blank、page-edge overflow、重大な重なり、文字化け、U+FFFDを検査すること
-- PDF生成のために問題文・数値・正答・一般式を改変しないこと
-
-練習PDF QA通過後は解説画像PowerPoint、最後にfresh clean blind独立再解答へ進む。Topic 35以降はTopic 34完了まで先取りしない。
+Topic 34解説画像PowerPointを生成し、render QA・内容QAを行う。固定5問・27答案要素、SPEC固定7項目、一次8問・二次4問の正本を変更しない。PowerPoint QA通過後にfresh clean blind独立再解答を行い、Topic 34の最終完了を判定する。Topic 35以降はTopic 34完了まで先取りしない。
 
 ## Topic 21 固定境界
 
