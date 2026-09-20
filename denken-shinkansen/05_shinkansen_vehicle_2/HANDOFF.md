@@ -8,13 +8,13 @@
 
 Topic 01〜26は最終QAまで `PASS / completed`。完成数は `26 / 39`。
 
-現在地は `topic_27_clean_blind_candidates_locked`。active topicは Topic 27 `L0系① リニア同期モータ`。
+現在地は `topic_27_clean_blind_official_match_complete`。active topicは Topic 27 `L0系① リニア同期モータ`。
 
 ## 今回のreconcileと進行
 
-系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27既存教材・成果物をreconcileした。開始時点でTopic 27は解説source/PDF、練習source/PDF、PowerPointまで完了済みで、前runのclean blind完全性blockerからfresh workerで候補固定をやり直す段階だった。
+最新main、系列 `STATUS.md` / `HANDOFF.md`、上位仕様、系列 `SPEC.md`、Topic 27既存教材・成果物、直近コミットをreconcileした。05系列の直近状態はclean blind候補固定済みで、その後の最新コミットは07系列の別worker成果だったため重複作業はない。
 
-candidate lock前はanswer-bearing `27_l0_linear_synchronous_motor.md` と公式解答を開かず、固定問題IDはSTATUS/HANDOFFから取得し、教材と公式問題だけで固定5問・23答案要素を独立再解答した。候補を `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_blind_candidates.md` へcommitし、lock commitは `fe677eb5c89613a8ed06e1c2343a5cf0525f5d21`。固定EXAM_ALIGNMENT、Topic 21一般式、L0系実車境界、Topic 28範囲は変更していない。
+locked candidate `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_blind_candidates.md` はlock commit `fe677eb5c89613a8ed06e1c2343a5cf0525f5d21` 時点と照合開始時点で同一blob SHA `c9606b30811c630d8b1c90d56f4f552b9895abeb` を維持している。lock後にのみ公式解答・保存済み照合結果を参照し、固定5問・23答案要素を公式正本と照合して `23 / 23 PASS`、不一致0件を確認した。固定EXAM_ALIGNMENT、Topic 21一般式、L0系実車境界、Topic 28範囲は変更していない。
 
 ## Topic 26 固定EXAM_ALIGNMENT
 
@@ -312,6 +312,23 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 - Topic 28範囲の先取り: `0件`
 - exact blocker: `0件`
 
+## Topic 27 clean blind公式照合
+
+成果物:
+- `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_clean_blind_official_match_qa.md`
+
+判定:
+- `PASS / CLEAN_BLIND_OFFICIAL_MATCH_COMPLETE`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `18 / 18 PASS`
+- 二次答案要素: `5 / 5 PASS`
+- 合計答案要素: `23 / 23 PASS`
+- candidate lock後の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- 不一致: `0件`
+- exact blocker: `0件`
+
 ## 固定境界
 
 - Topic 26固定EXAM_ALIGNMENT: `5問・16答案要素`
@@ -323,4 +340,4 @@ L0系実車接続は、鉄道総合技術研究所等の一次資料で確認し
 
 ## 次の安全な工程
 
-locked candidate `27_l0_linear_synchronous_motor_blind_candidates.md` は変更しない。公式解答と保存済み照合結果を開いて固定5問・23答案要素を照合し、`27_l0_linear_synchronous_motor_clean_blind_official_match_qa.md` を作成する。
+locked candidate `27_l0_linear_synchronous_motor_blind_candidates.md` は変更しない。Topic 27の必須成果物・既存QA・clean blind公式照合QAをreconcileし、`27_l0_linear_synchronous_motor_final_qa.md` を作成する。
