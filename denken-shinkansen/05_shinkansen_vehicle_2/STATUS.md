@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `34 / 39`
-- current_status: `topic_35_explanation_source_complete`
+- current_status: `topic_35_explanation_pdf_complete`
 - last_completed_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
 - active_topic: `35 ATC① 軌道回路の回路解析`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 35の固定EXAM_ALIGNMENTと解説sourceを変更せず解説PDFを生成し、PDF QAを実施する。未確認実車値は真値化しない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、既存の車両二種worker成果をreconcileし、Topic 35の固定EXAM_ALIGNMENT・解説source/PDFを変更せず練習sourceを作成してsource QAを実施する。二次問題の件数合わせ、未確認実車値の真値化、Topic 36・37先取りは行わない。
 
 Topic 01〜34は `PASS / completed`。完成数は `34 / 39`。
 
@@ -121,7 +121,7 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 35 ATC① 軌道回路の回路解析
 
-判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -160,7 +160,27 @@ Topic 34はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 鉄道側の原理はJRTT・鉄道総研の一次資料で確認し、固定過去問は軌道回路そのものの出題ではなく一般回路理論の試験対応として明示した。
 
-次工程は固定EXAM_ALIGNMENTと解説sourceを変更せず、解説PDFを生成してPDF QAを実施する。完成数は `34 / 39` のまま。
+### 解説PDF
+
+- PDF: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation.pdf`
+- PDF QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_pdf_qa.md`
+- PDF canonical commit: `51bed9f651d4ba499d54e5de40d6e3061e68b420`
+- PDF SHA-256: `f35699fb423d486ef36ba8a4d69056c8b06eb5059139c8df459b9e1356fef9be`
+- A4縦: `10頁`
+- qpdf syntax / stream check: `PASS`
+- Poppler `pdfinfo` / `pdftotext`: `PASS`
+- Poppler render: `10 / 10 PASS`
+- 文字抽出: `7576 chars / PASS`
+- 置換文字 U+FFFD: `0件`
+- 固定5問・25答案要素: `25 / 25 connected`
+- 二次問題の件数合わせ採用: `0件`
+- SPEC固定7項目: `7 / 7 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 未確認実車値の真値化: `0件`
+- Topic 36・37先取り: `0件`
+- exact blocker: `0件`
+
+次工程は固定EXAM_ALIGNMENT・解説source/PDFを変更せず、Topic 35練習sourceを作成してsource QAを実施する。完成数は `34 / 39` のまま。
 
 ## Topic 21 固定注記
 
