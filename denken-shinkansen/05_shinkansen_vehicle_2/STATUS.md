@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `27 / 39`
-- current_status: `topic_28_practice_pdf_complete`
+- current_status: `topic_28_powerpoint_complete`
 - last_completed_topic: `27 L0系① リニア同期モータ`
 - active_topic: `28 L0系② 同期機のフェーザと推進力`
-- next_start: Topic 28の解説画像PowerPoint生成＋QAを実施する
+- next_start: Topic 28の完成後clean blind独立再解答候補固定を実施する
 
 ## 完成済み
 
@@ -101,6 +101,29 @@ Topic 27最終QA:
 - 合計答案要素: `27 / 27 connected`
 - SPEC必須8項目: `8 / 8 covered`
 - 指定3可視化の計算接続: `3 / 3 aligned`
+- exact blocker: `0件`
+
+## Topic 28 PowerPoint
+
+- 判定: `PASS / POWERPOINT_COMPLETE`
+- path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_images.pptx`
+- canonical blob SHA: `b677f457c8e8f6aebcfebeeecd0b68ff7736883b`
+- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_images_qa.md`
+- canonical artifact commit: `8ca524e4836823d1f7df85dfabf5fc5ac00566bb`
+- GitHub Actions build/validation: `PASS`
+- file size: `241,446 bytes`
+- SHA-256: `48c2ed316625d3df369f38b4c08e1885c60222b6915a36a8862368da6e782a21`
+- 16:9: `6 slides`
+- PPTX ZIP / python-pptx / geometry: `PASS`
+- LibreOffice PDF変換: `6 / 6 PASS`
+- `pdftotext -layout`: `PASS`（`10,882 bytes`）
+- 置換文字 `�`: `0件`
+- 固定過去問: `5 / 5 connected`
+- 一次答案要素: `5 / 5 connected`
+- 二次答案要素: `22 / 22 connected`
+- 合計答案要素: `27 / 27 connected`
+- SPEC必須8項目: `8 / 8 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
 - 未確認L0系実車値の真値化: `0件`
 - Topic 29先取り: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -117,4 +140,4 @@ L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ
 
 ## 次の安全な工程
 
-Topic 28の解説画像PowerPointを生成し、固定5問・27答案要素、SPEC必須8項目、指定3可視化を接続したQAを実施する。その後、完成後clean blind独立再解答候補固定へ進む。
+Topic 28の完成後clean blind独立再解答候補を、保存済み正答・公式解答を先に見ずに固定する。その後、公式照合→最終QAの順で進む。Topic 28はまだ `completed` と数えない。
