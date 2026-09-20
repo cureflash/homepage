@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `32 / 39`
-- current_status: `topic_32_completed`
+- current_status: `topic_33_exam_alignment_complete`
 - last_completed_topic: `32 照明設計`
 - active_topic: `33 空調・電熱の熱収支`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、直近の車両二種worker成果をreconcile後、Topic 33の制作前EXAM_ALIGNMENTを公式過去問から開始する。二次は実際に対応論点が確認できる場合のみ採用し、件数合わせをしない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENTをreconcile後、Topic 33解説sourceを作成する。固定5問・22答案要素とSPEC固定7項目を本文へ接続し、固定EXAM_ALIGNMENTは差し替えない。
 
 Topic 01〜32は `PASS / completed`。完成数 `32 / 39`。
 
@@ -33,17 +33,33 @@ Topic 01〜32は `PASS / completed`。完成数 `32 / 39`。
 
 Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程 `PASS`。
 
-## Topic 33 次工程
+## Topic 33 空調・電熱の熱収支
 
-テーマ: `空調・電熱の熱収支`
+判定: `PASS / topic_33_exam_alignment_complete`
+
+制作前EXAM_ALIGNMENT:
+- source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_exam_alignment_qa.md`
+- 固定公式過去問: `5問`
+- 一次: `5問 / 22答案要素`
+- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
+- 一次独立再解答: `22 / 22 PASS`
+- SPEC固定7項目: `7 / 7 mapped`
+- 参考教材比較: `e-sysnet + 電験王2`
+- 件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- exact blocker: `0件`
 
 SPEC固定項目:
 - 熱量
 - 熱収支
 - COP
 - 消費電力
+- 外気負荷
+- 車内負荷
+- 効率
 
-制作前EXAM_ALIGNMENTでは、公式過去問を直近年度から調査し、一次・二次を合わせ原則5問以上を対象とする。二次で対応する記述問題が確認できない場合は推測・件数合わせをせず、確認できた範囲を正本へ記録する。
+次工程はTopic 33解説source。完成数は `32 / 39` のまま。
 
 ## Topic 21 固定注記
 
