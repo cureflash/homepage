@@ -6,8 +6,8 @@
 - Topic 01〜21: 最終QA `PASS / completed`
 - 完成数: `21 / 22`
 - active topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- current status: `topic_22_exam_alignment_complete / IN_PROGRESS`
-- 次工程: Topic 22 解説source本文
+- current status: `topic_22_explanation_source_complete / IN_PROGRESS`
+- 次工程: Topic 22 総合シミュレーション計算プログラム・CSV・指定6グラフ・数値QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -59,12 +59,12 @@
 境界:
 - Topics 01〜21は必要な既習事項だけ統合する。
 - 実車・実路線値は一次資料等で確認できた値だけを実値とし、計算値・仮定値を分離する。
-- 現時点では東京―新大阪の実速度曲線、勾配、区間距離、実車の変圧器定数・モーター定数・PI/PIDゲイン等を固定していない。
+- 東京―新大阪の実速度曲線、勾配、区間距離、実車の変圧器定数・モーター定数・PI/PIDゲイン等は固定していない。
 - 系列SPEC外の新規制御方式・車両仕様は追加しない。
 
-## Topic 22 制作前EXAM_ALIGNMENT
+## Topic 22 固定EXAM_ALIGNMENT
 - source: `topics/22_integrated_route_simulation/22_integrated_route_simulation.md`
-- 状態: `PASS / topic_22_exam_alignment_complete / IN_PROGRESS`
+- 一次4問＋二次2問、計6問・16答案要素
 
 固定公式過去問:
 - R08 一次 機械 問3 (1)〜(3) — 3答案要素
@@ -74,7 +74,7 @@
 - R07 二次 機械・制御 問2 (1) — 2答案要素
 - R07 二次 機械・制御 問4 (1)〜(5) — 6答案要素
 
-品質ゲート:
+制作前品質ゲート:
 - 一次4問＋二次2問、計6問: `PASS`
 - 二次記述式2問: `PASS`
 - 令和8年度最新一次を含む: `PASS`
@@ -86,5 +86,26 @@
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
 - 独立再解答: `NOT_RUN`
 
+## Topic 22 解説source完了
+- 状態: `PASS / topic_22_explanation_source_complete / IN_PROGRESS`
+- 固定答案要素本文収録: `16 / 16 COVERED`
+- 系列SPEC入力: `10 / 10 COVERED`
+- 系列SPEC出力: `8 / 8 COVERED`
+- 指定グラフ: `6 / 6 COVERED`
+- 実値・計算値・仮定値の区別: `PASS`
+- 東京―新大阪の未確認実速度曲線・勾配・区間距離の真値化: `0件 / PASS`
+- 未確認実車定数の真値化: `0件 / PASS`
+- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
+- 独立再解答: `NOT_RUN`
+
+本文で接続済み:
+- 変圧器の規約効率・負荷損・最大効率条件
+- PWMの信号波・キャリア・スイッチング周波数、DCリンク、力行・回生方向
+- 誘導機の同期速度・滑り・L形等価回路・二次入力・トルク・軸出力
+- 歯車比・車輪径・モーター回転速度・列車速度・走行抵抗・加速度
+- PI/PID、偏差伝達関数、閉ループ伝達関数、定常偏差、インパルス応答、指定時刻出力
+- 符号付き力行／回生電力
+- 再現可能な教材用仮定値、時間刻み、速度指令、保存列、6グラフ、数値QA条件
+
 ## 次工程
-Topic 22 解説source本文。固定16答案要素をすべて本文へ接続し、系列SPECで指定された入出力・時間系列6グラフ・再現可能な総合シミュレーション条件を作る。個別正答は完成後の独立再解答まで保存しない。
+Topic 22の総合シミュレーション計算プログラムを作成し、同じ仮定値からCSVと指定6グラフを生成する。数値QAでは同期速度・滑り・速度変換・駆動力・加速度・力行/回生符号・CSV/グラフ整合を検証する。実車・実路線の未確認値へ置換しない。
