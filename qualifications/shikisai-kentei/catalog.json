@@ -29,6 +29,15 @@
       "source":"articles/02_reflection_absorption_transmission.md"
     },
     {
+      "id":"03_scattering_blue_sky",
+      "articleNo":3,
+      "seriesId":"physics",
+      "title":"空はなぜ青く、夕焼けはなぜ赤いのか――散乱を電磁気学から考える",
+      "summary":"誘起双極子と双極子放射からRayleigh散乱のλ^-4則を導き、青空・夕焼け・白い雲・偏光を光学的厚さと粒子サイズまで含めて理解する。",
+      "levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：電磁気学・大気光学"],
+      "source":"articles/03_scattering_blue_sky.md"
+    },
+    {
       "id":"04_transparent_color_beer_lambert",
       "articleNo":4,
       "seriesId":"chemistry-geoscience",
