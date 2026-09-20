@@ -1,0 +1,52 @@
+name: Topic 30 explanation PDF render QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/topic30-explanation-render-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install renderers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install pypdfium2
+      - name: Verify canonical PDF identity and text
+        run: |
+          PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf'
+          test "$(git hash-object "$PDF")" = 'a3926909e5240e4d77042f12e903f299f81d6800'
+          test "$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')" = '7'
+          pdftotext -layout "$PDF" /tmp/topic30.txt
+          ! grep -q $'\uFFFD' /tmp/topic30.txt
+          grep -F '接続数: 25 / 25' /tmp/topic30.txt
+          grep -F '48.1 / 48.0' /tmp/topic30.txt
+      - name: Render with Poppler
+        run: |
+          mkdir -p /tmp/poppler
+          PDF='denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf'
+          pdftoppm -png -r 150 "$PDF" /tmp/poppler/page >/dev/null 2>&1
+          test "$(find /tmp/poppler -name 'page-*.png' | wc -l)" = '7'
+      - name: Render with PDFium
+        run: |
+          mkdir -p /tmp/pdfium
+          python - <<'PY'
+          import pypdfium2 as pdfium
+          from pathlib import Path
+          p='denken-shinkansen/05_shinkansen_vehicle_2/topics/30_l0_inductive_power_collection_contactless_power_transfer/30_l0_inductive_power_collection_contactless_power_transfer_explanation.pdf'
+          doc=pdfium.PdfDocument(p)
+          assert len(doc)==7
+          out=Path('/tmp/pdfium')
+          for i,page in enumerate(doc):
+              bitmap=page.render(scale=150/72)
+              bitmap.to_pil().save(out/f'page-{i+1:02d}.png')
+          assert len(list(out.glob('page-*.png')))==7
+          PY
