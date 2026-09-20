@@ -68,4 +68,4 @@
 
 ## 結論
 
-Topic 27は `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の必須成果物・一次/二次過去問対応品質ゲートを満たすため、`PASS / COMPLETED` とする。次の安全な工程は Topic 28 `L0系② 同期リアクタンスと出力` の制作前EXAM_ALIGNMENT。
+Topic 27は `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の必須成果物・一次/二次過去問対応品質ゲートを満たすため、`PASS / COMPLETED` とする。次の安全な工程は Topic 28 `L0系② 同期機のフェーザと推進力` の制作前EXAM_ALIGNMENT。
