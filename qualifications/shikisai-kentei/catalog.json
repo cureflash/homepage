@@ -110,6 +110,15 @@
       "source":"articles/26_xy_chromaticity_diagram.md"
     },
     {
+      "id":"27_cielab_color_difference",
+      "articleNo":27,
+      "seriesId":"colorimetry-design",
+      "title":"L*a*b*はなぜXYZを曲げるのか――均等色空間と色差",
+      "summary":"XYZを基準白で正規化し非線形変換するCIELABを、区分的立方根、L*・a*・b*の数学的意味、ΔE*ab、CIEDE2000、分光測色との接続まで理解する。",
+      "levels":["1級：XYZ表色系・均等色空間・色差","大学：測色学・心理物理学・数理色彩学"],
+      "source":"articles/27_cielab_color_difference.md"
+    },
+    {
       "id":"34_emerald_crystal_field",
       "articleNo":34,
       "seriesId":"chemistry-geoscience",
