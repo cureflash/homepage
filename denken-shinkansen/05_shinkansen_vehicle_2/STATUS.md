@@ -6,12 +6,40 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `31 / 39`
-- current_status: `topic_31_completed_topic_32_exam_alignment_pending`
+- current_status: `topic_32_exam_alignment_complete`
 - last_completed_topic: `31 補助電源変換器`
 - active_topic: `32 照明設計`
-- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32の制作前EXAM_ALIGNMENTを公式過去問から開始する
+- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32解説sourceを固定5問・30答案要素とSPEC固定9項目へ1対1接続して作成する
 
-Topic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 31は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QA、fresh clean blind＋公式照合まで完了。
+Topic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 32は制作前EXAM_ALIGNMENTまで `PASS`。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 mapped`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外とし、件数合わせ採用はしない。
+
+## Topic 32 EXAM_ALIGNMENT
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+canonical artifacts:
+- `topics/32_lighting_design/32_lighting_design.md`
+- `topics/32_lighting_design/32_lighting_design_exam_alignment_qa.md`
+
+QA:
+- EXAM_ALIGNMENT source blob SHA: `19328f7cbc854ac96a9bebdbd5f243b47d939e04`
+- QA blob SHA: `d8c159454bcfa2d4ae1996a5ee5dfc02cc2b2d24`
+- R8 一次「機械」問7: `10 / 10 PASS`
+- R7 一次「機械」問7: `5 / 5 PASS`
+- R6 一次「機械」問6: `5 / 5 PASS`
+- R4 一次「機械」問5: `5 / 5 PASS`
+- R3 一次「機械」問6: `5 / 5 PASS`
+- 一次: `30 / 30 PASS`
+- 二次: `対象外（公式「機械・制御」試験範囲に照明なし）`
+- SPEC固定9項目: `9 / 9 mapped`
+- 参考教材比較: `e-sysnet + 電験王2`
+- 固定問題の件数合わせ採用: `0件`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT仕様不整合: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 32解説source。固定5問・30答案要素とSPEC固定9項目を本文へ接続し、最低3段階例題を作る。固定EXAM_ALIGNMENTは差し替えない。
 
 ## Topic 31 最終結果
 
