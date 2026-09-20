@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `32 / 39`
-- current_status: `topic_33_explanation_pdf_complete`
+- current_status: `topic_33_practice_source_complete`
 - last_completed_topic: `32 照明設計`
 - active_topic: `33 空調・電熱の熱収支`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENT、解説source/PDF/QAをreconcile後、Topic 33練習sourceを作成する。固定5問・22答案要素、SPEC固定7項目へ接続し、一次試験型を中心にする。二次は公式範囲外のため件数合わせで追加しない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENT、解説source/PDF/QA、練習source/QAをreconcile後、Topic 33練習PDFを生成しPDF QAする。一次10問、固定5問・22答案要素、SPEC固定7項目、正答一意性、数式・単位、A4レイアウトを確認する。二次は公式範囲外のため件数合わせで追加しない。
 
 Topic 01〜32は `PASS / completed`。完成数 `32 / 39`。
 
@@ -35,7 +35,7 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 
 ## Topic 33 空調・電熱の熱収支
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
 制作前EXAM_ALIGNMENT:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
@@ -65,9 +65,22 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 - 3段階例題: `3 / 3 PASS`
 - 文字化け・欠字・ページ端切れ・重大な重なり: `0件`
 - 置換文字 U+FFFD: `0件`
+
+練習source:
+- source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_source.md`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_source_qa.md`
+- 一次試験型: `10問`（五肢択一 `10 / 10`）
+- 二次: `対象外（公式「機械・制御」試験範囲に電熱なし）`
+- 正答一意性: `10 / 10 PASS`
+- 数値独立再計算: `6 / 6 PASS`
+- 知識・識別問題: `4 / 4 PASS`
+- 固定5問・22答案要素: `22 / 22 connected`
+- SPEC固定7項目: `7 / 7 PASS`
+- COPと効率の区別: `PASS`
+- J/W/kW・秒換算: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - 未確認実車値の真値化: `0件`
 - Topic 21一般式変更: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
 SPEC固定項目:
@@ -79,7 +92,7 @@ SPEC固定項目:
 - 車内負荷
 - 効率
 
-次工程はTopic 33練習source。完成数は `32 / 39` のまま。
+次工程はTopic 33練習PDF＋PDF QA。完成数は `32 / 39` のまま。
 
 ## Topic 21 固定注記
 
