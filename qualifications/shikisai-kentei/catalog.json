@@ -146,6 +146,15 @@
       "source":"articles/27_cielab_color_difference.md"
     },
     {
+      "id":"28_spectral_colorimetry",
+      "articleNo":28,
+      "seriesId":"colorimetry-design",
+      "title":"分光測色計は何を測っているのか――分光反射率からXYZへ",
+      "summary":"分光測色計の校正、45/0・d/8測定幾何、積分球、分光帯域幅から、分光反射率を標準イルミナントと等色関数で積分してXYZへ変換するまでを測定工学と線形代数で理解する。",
+      "levels":["1級：測色・物理測色・XYZ表色系","大学：測色学・光学・線形代数・計測工学"],
+      "source":"articles/28_spectral_colorimetry.md"
+    },
+    {
       "id":"34_emerald_crystal_field",
       "articleNo":34,
       "seriesId":"chemistry-geoscience",
