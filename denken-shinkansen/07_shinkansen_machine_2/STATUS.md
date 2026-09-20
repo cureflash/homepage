@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-20
+更新日: 2026-09-21
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `21 / 22`
-- current_status: `topic_22_powerpoint_complete / IN_PROGRESS`
+- current_status: `topic_22_independent_reanswer_pass / IN_PROGRESS`
 - last_completed_topic: `21 空転した車輪を再粘着させる`
 - active_topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- next_start: Topic 22 固定公式過去問の独立再解答
+- next_start: Topic 22 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -87,7 +87,7 @@
 - 制作前sourceへの固定過去問個別正答保存: `0件 / PASS`
 - 一次資料未確認の実車・実路線値の真値化: `0件 / PASS`
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
-- 独立再解答: `NOT_RUN`
+- 独立再解答: `16 / 16 PASS`
 
 ## Topic 22 解説source
 - 状態: `PASS / topic_22_explanation_source_complete / IN_PROGRESS`
@@ -97,8 +97,8 @@
 - 指定グラフ: `6 / 6 COVERED`
 - 実値・計算値・仮定値の区別: `PASS`
 - 未確認実路線・実車値の真値化: `0件 / PASS`
-- 固定過去問の個別正答記号・最終数値保存: `0件 / PASS`
-- 独立再解答: `NOT_RUN`
+- 固定過去問の個別正答記号・最終数値保存: 制作前 `0件 / PASS`
+- 独立再解答: `16 / 16 PASS`
 
 ## Topic 22 総合シミュレーション成果物
 - 状態: `PASS / topic_22_simulation_artifacts_complete / IN_PROGRESS`
@@ -109,13 +109,13 @@
 - 力行点: `1828` 点 / PASS
 - 回生点: `1149` 点 / PASS
 - 消費・回生同時正値: `0` 点 / PASS
-- 速度負値: `0` 点 / PASS
+- 速度負値: `0` 点 / PASS`
 - SVG XML: `6 / 6 PASS`
 - 代表点独立再計算: 力行・回生各1点 / PASS
 - 詳細QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_calculation_qa.md`
 - 未確認実車・実路線値の真値化: `0件 / PASS`
 - 固定EXAM_ALIGNMENT: 一次4問＋二次2問・16答案要素を変更なし
-- 独立過去問再解答: `NOT_RUN`
+- 独立過去問再解答: `16 / 16 PASS`
 
 ## Topic 22 解説プリントPDF
 - 状態: `PASS / topic_22_explanation_pdf_complete / IN_PROGRESS`
@@ -129,8 +129,8 @@
 - 文字抽出: `PASS`、replacement character `0`、`(cid:)` `0`
 - 数値QA: 変圧器例・誘導機例・PI時間応答・既存シミュレーション整合 `PASS`
 - 未確認実車・実路線値の真値化: `0件 / PASS`
-- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
-- 独立過去問再解答: `NOT_RUN`
+- 固定過去問個別正答記号・最終数値保存: 制作前 `0件 / PASS`
+- 独立過去問再解答: `16 / 16 PASS`
 
 ## Topic 22 練習source
 - 状態: `PASS / topic_22_practice_source_complete / IN_PROGRESS`
@@ -142,8 +142,8 @@
 - 力行・回生の符号規約、消費電力・回生電力分離: `COVERED`
 - 未確認実車・実路線値の真値化: `0件 / PASS`
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
-- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
-- 独立過去問再解答: `NOT_RUN`
+- 固定過去問個別正答記号・最終数値保存: 制作前 `0件 / PASS`
+- 独立過去問再解答: `16 / 16 PASS`
 
 ## Topic 22 練習プリントPDF
 - 状態: `PASS / topic_22_practice_pdf_complete / IN_PROGRESS`
@@ -159,8 +159,8 @@
 - 数値・論理QA: `15 / 15 PASS`
 - 未確認実車・実路線値の真値化: `0件 / PASS`
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
-- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
-- 独立過去問再解答: `NOT_RUN`
+- 固定過去問個別正答記号・最終数値保存: 制作前 `0件 / PASS`
+- 独立過去問再解答: `16 / 16 PASS`
 
 ## Topic 22 解説画像PowerPoint
 - 状態: `PASS / topic_22_powerpoint_complete / IN_PROGRESS`
@@ -175,13 +175,25 @@
 - 外部画像転載: `0件`
 - 未確認実車・実路線値の真値化: `0件 / PASS`
 - 系列SPEC外の新規制御方式・車両仕様追加: `0件 / PASS`
-- 固定過去問個別正答記号・最終数値保存: `0件 / PASS`
-- 独立過去問再解答: `NOT_RUN`
+- 固定過去問個別正答記号・最終数値保存: 制作前 `0件 / PASS`
+- 独立過去問再解答: `16 / 16 PASS`
+
+## Topic 22 独立再解答
+- 状態: `PASS / topic_22_independent_reanswer_pass / IN_PROGRESS`
+- 記録: `topics/22_integrated_route_simulation/22_integrated_route_simulation_independent_reanswer.md`
+- 固定問題: `一次4問＋二次2問 / 6問`
+- 固定答案要素: `16 / 16 REANSWERED`
+- 公式正答・標準解答一致: `16 / 16 PASS`
+- 公式照合後訂正: `0件`
+- 教材外知識補完: `0件`
+- 未確認実車・実路線値の答案利用: `0件`
+- 系列SPEC外仕様追加: `0件`
+- 記録QA: `8 / 8 PASS`
 
 ## 今回進めた内容
-Topic 22の解説画像PowerPointを作成し、GitHub正本へ反映した。16:9・4枚で、主回路の電力経路、誘導機から列車加速度まで、PI/PID速度フィードバック、固定一次4問＋二次2問・16答案要素の対応を図示した。GitHub ActionsでPPTX構造・ZIP integrityを確認し、同一sourceのローカル生成物でLibreOffice表示QAを実施して `PASS`。固定EXAM_ALIGNMENTは変更せず、未確認実車・実路線値の真値化と系列SPEC外の仕様追加は行っていない。
+Topic 22の固定一次4問＋二次2問、計6問・16答案要素を完成教材だけで独立再解答し、その後に公式正答・標準解答と照合した。`16 / 16 PASS`、照合後訂正0件、教材外知識補完0件。固定EXAM_ALIGNMENT、教材本文、PDF/PPTX、シミュレーション仕様は変更していない。
 
 完成数は `21 / 22` のまま。
 
 ## 次工程
-Topic 22の全成果物が揃ったため、固定一次4問＋二次2問、計6問・16答案要素を独立再解答する。再解答結果の記録後に最終QAへ進む。
+Topic 22 最終QA。全成果物、固定EXAM_ALIGNMENT、独立再解答記録の整合を確認し、品質ゲートを満たした場合のみ `completed` とする。
