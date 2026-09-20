@@ -206,6 +206,19 @@
       "source": "articles/16_trichromatic_color_vision_evolution.md"
     },
     {
+      "id": "17_plant_pigments_color",
+      "articleNo": 17,
+      "seriesId": "biology",
+      "title": "植物はなぜ緑・赤・黄になるのか――クロロフィル、カロテノイド、アントシアニン",
+      "summary": "クロロフィル、カロテノイド、アントシアニンの吸収スペクトルと生理機能から、色素の生合成・遺伝子制御・細胞内局在・紅葉・組織散乱までつなぎ、植物の色を細胞生物学と生化学から理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色・物体色",
+        "2級：光の性質と色・照明と色の見え方",
+        "大学：細胞生物学・生化学・植物生理学・遺伝学"
+      ],
+      "source": "articles/17_plant_pigments_color.md"
+    },
+    {
       "id": "19_complementary_afterimage",
       "articleNo": 19,
       "seriesId": "vision-psychology",
