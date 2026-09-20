@@ -8,7 +8,7 @@
 
 Topic 01〜35は最終QAまで `PASS / completed`。完成数 `35 / 39`。
 
-現在地は `topic_35_completed_ready_topic_36_exam_alignment`。active topicは `36 ATC② 信号伝送と周波数`。Topic 35は制作前EXAM_ALIGNMENT、解説source/PDF QA、練習source/PDF QA、解説画像PowerPoint＋render/content QA、clean blind独立再解答まで全工程完了。次工程は最新main・上位仕様・系列SPEC・既存worker成果をreconcileし、Topic 36の制作前EXAM_ALIGNMENTから開始する。一次・二次の適用範囲を公式試験資料と実問題で判定し、件数合わせ、未確認実車値の真値化、Topic 37・38先取りは行わない。
+現在地は `topic_36_exam_alignment_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QAを完了し、固定5問・25答案要素は `25 / 25 PASS`、SPEC固定8項目は `8 / 8 mapped`。二次は公式科目範囲外のため固定0問とし、件数合わせは行っていない。次工程はTopic 36解説source。固定EXAM_ALIGNMENT、一次限定の二次適用判定、鉄道一次資料の境界を変更せず、未確認実車値の真値化、Topic 37・38先取りを行わない。
 
 ## Topic 34 完了記録
 
@@ -289,9 +289,36 @@ canonical:
 
 Topic 35は全工程を通過したため `PASS / COMPLETED`。完成数を `35 / 39` とする。
 
-## Topic 36 開始位置
+## Topic 36 進捗
 
-判定: `NOT_STARTED / READY_EXAM_ALIGNMENT`
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+### 制作前EXAM_ALIGNMENT
+
+canonical:
+- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency.md`
+- source commit: `8591e534ca4bd929ab953ca5ac31bf9131c98c06`
+- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_exam_alignment_qa.md`
+- QA commit: `35a7eab21032b3ae79398a29702973c734511f40`
+
+固定過去問:
+- R8一次「理論」問5
+- R3一次「機械」問8
+- H26一次「機械」問8
+- H25一次「機械」問8
+- H22一次「機械」問8
+
+品質ゲート:
+- 固定公式過去問: `5 / 5 PASS`
+- 一次: `5問 / 25答案要素`、`25 / 25 PASS`
+- 二次: `0問`（公式科目範囲外）
+- 主題外二次問題の件数合わせ採用: `0件`
+- SPEC固定8項目: `8 / 8 mapped`
+- e-sysnet直接対応ページ未確認時の無理な対応付け: `0件`
+- 鉄道一次資料への接続: `PASS`
+- 未確認実車周波数・変調方式・受信しきい値・S/N要求値・冗長構成の真値化: `0件`
+- Topic 37先取り: `0件`
+- exact blocker: `0件`
 
 SPEC固定項目:
 - 周波数
@@ -303,7 +330,7 @@ SPEC固定項目:
 - デジタル判定
 - 冗長化
 
-次工程: 制作前EXAM_ALIGNMENT。公式過去問を先に調査・固定し、一次・二次の実問題対応を確認する。件数合わせやATC固有値の推測はしない。
+次工程: Topic 36解説source。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
 
 ## Topic 21 固定境界
 
