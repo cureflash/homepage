@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `33 / 39`
-- current_status: `topic_34_powerpoint_complete`
+- current_status: `topic_34_clean_blind_v1_failed`
 - last_completed_topic: `33 空調・電熱の熱収支`
 - active_topic: `34 コンプレッサ・ポンプ・ファンの負荷特性`
-- next_start: answer-bearing資料を未閲覧のfresh workerがTopic 34 clean blind candidateを固定し、独立再解答する。本runは固定EXAM_ALIGNMENT・解説・練習のanswer-bearing資料を確認済みのためclean blind candidateを作成しない。
+- next_start: Topic 34のv1 candidate・v1 QA・公式解答・固定EXAM_ALIGNMENT・解説・練習・PowerPointを未閲覧のfresh workerがclean blind v2 candidateを固定し、独立再解答する。candidate固定後にのみ公式照合する。
 
 Topic 01〜33は `PASS / completed`。完成数は `33 / 39` のまま。
 
@@ -21,7 +21,7 @@ EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後cle
 
 ## Topic 34 コンプレッサ・ポンプ・ファンの負荷特性
 
-判定: `IN_PROGRESS / POWERPOINT_COMPLETE`
+判定: `IN_PROGRESS / CLEAN_BLIND_V1_FAILED`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -30,7 +30,7 @@ EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後cle
 - 固定公式過去問: `5問`
 - 一次: `3問 / 15答案要素`
 - 二次: `2問 / 12答案要素`
-- 独立再解答・公式照合: `27 / 27 PASS`
+- 制作前独立再解答・公式照合: `27 / 27 PASS`
 - SPEC固定7項目: `7 / 7 mapped`
 - 二次問題の件数合わせ採用: `0件`
 - exact blocker: `0件`
@@ -131,7 +131,22 @@ SPEC固定項目:
 - Topic 35以降の先取り: `0件`
 - exact blocker: `0件`
 
-Topic 34自体は未完了。次工程はfresh clean blind独立再解答。本runはanswer-bearing資料を閲覧済みのためcandidate固定は行わない。
+### clean blind v1
+
+- candidate: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_candidate.md`
+- candidate commit: `851446050c4e4e7723373e3cabf715f58d24bc65`
+- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_qa.md`
+- result: `26 / 27 FAIL`
+- 一次: `14 / 15`
+- 二次: `12 / 12`
+- candidate固定後修正: `0件`
+- 教材欠落によるFAIL: `0件`
+- 診断: `1要素の穴埋め文・選択肢対応ミス。必要な物理関係は既存解説sourceに収録済み。`
+- 既存成果物の修正・再生成: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+Topic 34自体は未完了。完成数は `33 / 39` のまま。次工程はanswer-bearing未閲覧のfresh workerによるclean blind v2。Topic 35以降はTopic 34完了まで先取りしない。
 
 ## Topic 21 固定注記
 
