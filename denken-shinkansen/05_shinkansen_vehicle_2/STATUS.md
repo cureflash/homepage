@@ -6,12 +6,37 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `31 / 39`
-- current_status: `topic_32_explanation_pdf_complete`
+- current_status: `topic_32_practice_source_complete`
 - last_completed_topic: `31 補助電源変換器`
 - active_topic: `32 照明設計`
-- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32練習sourceを固定5問・30答案要素とSPEC固定9項目へ接続して作成する
+- next_start: 最新main、上位仕様、系列SPEC、STATUS/HANDOFF、既存worker成果をreconcileし、Topic 32練習sourceから練習PDFを生成してPDF QAする
 
-Topic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 32は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QAまで `PASS`。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。
+Topic 01〜31は `PASS / completed`。完成数 `31 / 39`。Topic 32は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QAまで `PASS`。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。
+
+## Topic 32 練習source
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
+canonical artifacts:
+- `topics/32_lighting_design/32_lighting_design_practice_source.md`
+- `topics/32_lighting_design/32_lighting_design_practice_source_qa.md`
+
+QA:
+- source blob SHA: `ad3f1fabdb4e54da9196f0c8ff717c6c055b4c8f`
+- source QA blob SHA: `80f3f0cb5fede9d25bcc3ef5a5ddfa2d0946c852`
+- 一次試験型: `10 / 10`（全問五肢択一）
+- 正答一意性: `10 / 10 PASS`
+- 数値問題独立再計算: `7 / 7 PASS`
+- 固定5問・30答案要素: `30 / 30 connected`
+- 一次: `30 / 30 connected`
+- 二次: `対象外（公式「機械・制御」試験範囲に照明なし）`
+- SPEC固定9項目: `9 / 9 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 32練習PDF生成＋PDF QA。
 
 ## Topic 32 解説PDF
 
