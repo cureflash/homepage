@@ -6,8 +6,8 @@
 - Topic 01〜21: 最終QA `PASS / completed`
 - 完成数: `21 / 22`
 - active topic: `22 東京→新大阪を主回路＋走行制御でシミュレーション`
-- current status: `topic_22_practice_pdf_complete / IN_PROGRESS`
-- 次工程: Topic 22 解説画像PowerPoint source
+- current status: `topic_22_powerpoint_complete / IN_PROGRESS`
+- 次工程: Topic 22 固定公式過去問の独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -72,11 +72,21 @@
   - 未確認実車・実路線値の真値化 `0件 / PASS`
   - 系列SPEC外の新規制御方式・車両仕様追加 `0件 / PASS`
   - 固定公式過去問個別正答保存 `0件 / PASS`
+- 解説画像PowerPoint: `PASS / topic_22_powerpoint_complete / IN_PROGRESS`
+  - PowerPoint: `topics/22_integrated_route_simulation/22_integrated_route_simulation_images.pptx`
+  - QA: `topics/22_integrated_route_simulation/22_integrated_route_simulation_powerpoint_qa.md`
+  - 16:9・4枚
+  - 固定16答案要素 `16 / 16 COVERED`
+  - GitHub Actions構造QA・ZIP integrity: `PASS`
+  - 同一sourceのLibreOffice表示QA: `PASS`
+  - 外部画像転載 `0件`
+  - 未確認実車・実路線値の真値化 `0件 / PASS`
+  - 系列SPEC外の新規制御方式・車両仕様追加 `0件 / PASS`
+  - 固定公式過去問個別正答保存 `0件 / PASS`
 
 ## 未完了ゲート
-- 解説画像PowerPoint: `NOT_STARTED`
 - 全成果物完成後の独立過去問再解答: `NOT_RUN`
 - 最終QA: `NOT_RUN`
 
 ## 次工程
-Topic 22 解説画像PowerPoint source。固定EXAM_ALIGNMENTは変更しない。独立過去問再解答は全成果物完成後に行う。
+Topic 22の固定一次4問＋二次2問、計6問・16答案要素を全成果物完成後の状態で独立再解答する。固定EXAM_ALIGNMENTは変更しない。再解答結果の記録後に最終QAへ進む。
