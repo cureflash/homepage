@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `20 / 22`
-- current_status: `topic_21_blind_reanswer_ready / IN_PROGRESS`
+- current_status: `topic_21_independent_reanswer_pass / IN_PROGRESS`
 - last_completed_topic: `20 制御系はなぜ発振する？`
 - active_topic: `21 空転した車輪を再粘着させる`
-- next_start: Topic 21 完成後独立再解答
+- next_start: Topic 21 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -90,7 +90,7 @@
 
 ロック時点:
 - H23 一次 問7: `4 / 5`。設問(1)は概念「安定性」は正しいが解答群記号を `ヲ` と転記。公式は `ワ`。
-- H25 一次 問6 (1),(3),(4),(5): `4 / 4 PASS`
+- H25 一次 機械 問6 (1),(3),(4),(5): `4 / 4 PASS`
 - H30 二次 問4 (2): `0 / 1`。問題文 `Ti=0.1 s` を `0.01 s` と転記し、折点を `100 rad/s` とした。公式は `10 rad/s`。
 - R03 二次 問4 (3),(5): `2 / 2 PASS`
 - R04 二次 問4 (1),(2): `2 / 2 PASS`
@@ -167,7 +167,7 @@
 - 未確認実車再粘着アルゴリズムの仕様化: `0件 / PASS`
 - Topic 22先取り: `0件 / PASS`
 - SPEC外A-D変換器方式等の追加: `0件 / PASS`
-- 独立再解答: `NOT_RUN`（完成教材後）
+- 独立再解答: `NOT_RUN`（制作前時点）
 - 判定: `PASS / topic_21_exam_alignment_complete`
 
 ## Topic 21 解説source品質ゲート
@@ -255,6 +255,22 @@
 - 未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
 - 判定: `BLIND_REANSWER_READY / topic_21_blind_reanswer_ready / IN_PROGRESS`
 
+## Topic 21 完成後独立再解答・記録QA
+- `topics/21_readhesion_control/21_readhesion_control_independent_reanswer.md`
+- 公式照合前答案を commit `29fa8525a1a970236e44fac44421e3fa451b52a3` で固定: `PASS`
+- R08 一次 問8 (1)〜(5): `5 / 5 PASS`
+- R06 一次 問8 (5): `1 / 1 PASS`
+- R04 一次 問7 (3): `1 / 1 PASS`
+- H27 一次 問8 (3),(5): `4 / 4 PASS`
+- R07 二次 問4 (4),(5): `3 / 3 PASS`
+- 公式一致: `14 / 14 PASS`
+- 訂正: `0件`
+- 教材の概念・解法不足: `0件`
+- 記録QA: `8 / 8 PASS`
+- 教材本文・練習・固定EXAM_ALIGNMENT・PDF/PPTX変更: `0件`
+- 教材外知識補完・未確認実車仕様化・Topic 22先取り・SPEC外A-D変換器方式追加: `各0件 / PASS`
+- 判定: `PASS / topic_21_independent_reanswer_pass / IN_PROGRESS`
+
 ## Topic 21 成果物
 - `topics/21_readhesion_control/21_readhesion_control.md` — 制作前EXAM_ALIGNMENT＋解説source本文完了
 - `topics/21_readhesion_control/21_readhesion_control_explanation.pdf` — 解説PDF完了
@@ -265,9 +281,10 @@
 - `topics/21_readhesion_control/21_readhesion_control_images.pptx` — 解説画像PowerPoint完了
 - `topics/21_readhesion_control/21_readhesion_control_powerpoint_qa.md` — PowerPoint QA完了
 - `topics/21_readhesion_control/21_readhesion_control_blind_reanswer_gate.md` — 独立再解答前ゲート完了
+- `topics/21_readhesion_control/21_readhesion_control_independent_reanswer.md` — 完成後独立再解答・公式照合・記録QA完了
 
 ## 今回進めた内容
-Topic 21の独立再解答前ゲートを完了した。固定一次4問＋二次1問・14答案要素と完成済み教材を変更せず、公式正答・標準解答を開かない状態で正本同一性と成果物QAを再監査し、`BLIND_REANSWER_READY` を確定した。完成数は `20 / 22` のまま。
+Topic 21の完成後独立再解答を実施した。公式正答・標準解答を開く前に完成教材だけで固定5問・14答案要素を解き、commit `29fa8525a1a970236e44fac44421e3fa451b52a3` へ固定後に公式照合した。`14 / 14 PASS`、訂正0件、記録QA `8 / 8 PASS`。完成数は最終QA前のため `20 / 22` のまま。
 
 ## 次工程
-Topic 21「空転した車輪を再粘着させる」の完成後独立再解答。
+Topic 21「空転した車輪を再粘着させる」の最終QA。
