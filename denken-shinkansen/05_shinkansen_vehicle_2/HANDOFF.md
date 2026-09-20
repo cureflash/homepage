@@ -8,15 +8,23 @@
 
 Topic 01〜27は最終QAまで `PASS / completed`。完成数は `27 / 39`。
 
-現在地は `topic_28_explanation_pdf_resync_complete`。active topicは Topic 28 `L0系② 同期機のフェーザと推進力`。Topic 28はまだ `completed` ではない。
+現在地は `topic_28_clean_blind_fresh_worker_blocked`。active topicは Topic 28 `L0系② 同期機のフェーザと推進力`。Topic 28はまだ `completed` ではない。
 
 ## 今回のreconcileと進行
 
 最新main、系列 `STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、Topic 28既存成果、直近コミットをreconcileした。
 
-既存workerがclean blindの唯一のFAILだったH29二次「機械・制御」問1(1)の `φ / θ / δ` 記号対応を解説sourceへ最小補強済みだったため、その作業は重複しなかった。旧解説PDFだけが補強前sourceだったので、remediation後sourceから解説PDFを再生成し、PDFium/Poppler表示QA、テキスト抽出、数値再計算、H29記号対応同期QAまで実施した。
+Topic 28は解説source remediation、解説PDF再同期、練習source/PDF、PowerPointまで完了済み。次工程は、公式解答を先に見ていないfresh workerがremediation後教材だけを使ってclean blind候補を新規固定する工程。
 
-解説PDFは `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`。固定EXAM_ALIGNMENT、練習成果物、PowerPoint、旧clean blind候補は変更していない。
+しかし本runは必須reconcileとして `STATUS.md` / `HANDOFF.md` を読んだ時点で、前回clean blindの公式照合結果とH29二次「機械・制御」問1(1)の公式側の式・記号対応を既に閲覧している。このため本run自身が新規候補を作成しても、`EXAM_ALIGNMENT_SPEC.md` の「公式解答や保存済み正答を先に見ずに独立再解答する」条件、および既存handoffの「公式解答を見ていないfresh worker」条件を満たしたとは認定できない。
+
+推測でPASS扱いせず、exact blockerをGitHub正本へ記録して停止した。
+
+blocker record:
+- `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_fresh_worker_blocker.md`
+- 判定: `BLOCKED / FRESH_WORKER_CONDITION_NOT_CERTIFIABLE`
+
+今回、旧blind候補、固定EXAM_ALIGNMENT、教材成果物、Topic 21一般式は変更していない。
 
 ## Topic 28 固定EXAM_ALIGNMENT
 
@@ -57,7 +65,6 @@ SPEC必須8項目:
 - source blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
 - source remediation commit: `28692c4d7c5b0bfee99f28d32be4eaf19f404a14`
 - remediation QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
-- remediation QA commit: `2e24f142239ea932c6fb28631b9ad35aec2e76d1`
 - explanation PDF: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
 - PDF canonical blob SHA: `1eaa458d46a636ac4955d3475073e14071b4cd7f`
 - PDF source blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
@@ -69,8 +76,6 @@ SPEC必須8項目:
 - 固定答案要素接続: `27 / 27`
 - SPEC必須8項目: `8 / 8`
 - 指定3可視化: `3 / 3 PASS`
-- H29 `φ` = 本教材 `θ` = 力率角、`δ` = 負荷角: `PDF同期 PASS`
-- H29指定変数式 `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` と電圧変動率式: `PDF同期 PASS`
 - exact blocker: `0件`
 
 ### 練習source / PDF
@@ -105,55 +110,19 @@ SPEC必須8項目:
 - candidate blob SHA: `6bf27ac5829d763f30549f775e9c4b710c790588`
 - 公式照合QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_blind_compare_qa.md`
 - 判定: `NEEDS_REVISION / 26_OF_27_PASS`
-- R4一次: `5 / 5 PASS`
-- R7二次: `6 / 6 PASS`
-- R5二次: `6 / 6 PASS`
-- H29二次: `5 / 6 PASS`
-- H27二次: `4 / 4 PASS`
 - 一次合計: `5 / 5 PASS`
 - 二次合計: `21 / 22 PASS`
 - 全答案要素: `26 / 27 PASS`
-
-### 唯一の不一致
-
-H29二次「機械・制御」問1 `(1)`。
-
-本試験は電圧変動率 `ε` を `V, I, X_s, φ` で表すよう要求する。公式標準解答は
-
-`E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)`
-
-から
-
-`ε={sqrt(V^2+2VX_sI sinφ+(X_sI)^2)-V}/V×100 [%]`
-
-とする。
-
-固定候補は、力率角 `φ` ではなく負荷角 `δ` を用いる別表現を回答した。式自体の一般的フェーザ幾何ではなく、設問指定変数への適合でFAIL。
-
-原因は記号対応。本教材では力率角を `θ` と置く一方、H29本試験では同じ力率角を `φ` と置く。blind再解答時に `φ` と負荷角 `δ` を取り違えた。
-
-今回固定した旧候補は変更しない。
+- 唯一の不一致: H29二次「機械・制御」問1 `(1)` の設問指定変数への適合
+- 旧候補は公式照合後に編集しない
 
 ## source remediation
 
-追加したのはclean blindで露呈した最小範囲のみ。
+clean blindで露呈した最小範囲のみ補強済み。
 
-- §2: H29 `φ` = 本教材 `θ` = 力率角と明示。
-- §2: `φ / θ` は `V-I` 位相差、`δ` は `V-E` 位相差と分離。
-- §10: `V,I,X_s,φ` 指定時の `E` と `ε` の式を明記。
-- §16: `φ / θ` と `δ` の取り違えを頻出ミスへ追加。
-- H29対応節へ §2・§16を追加。
-
-式は既存の遅れ力率発電機フェーザ
-
-`E=(V+X_sI sinφ)+jX_sI cosφ`
-
-から平方和を展開し、
-
-`|E|^2=V^2+2VX_sI sinφ+(X_sI)^2`
-
-となることを独立確認済み。
-
+- H29 `φ` = 本教材 `θ` = 力率角、`δ` = 負荷角を分離
+- `V,I,X_s,φ` 指定時に必要な式を明記
+- 頻出ミスへ記号取り違えを追加
 - 固定過去問: `5問` のまま
 - 固定答案要素: `27` のまま
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -161,6 +130,20 @@ H29二次「機械・制御」問1 `(1)`。
 - 未確認L0系実車値の真値化: `0件`
 - Topic 29先取り: `0件`
 - remediation後PDF同期: `PASS / EXPLANATION_PDF_RESYNC_COMPLETE`
+
+## fresh-worker blocker
+
+- 判定: `BLOCKED / FRESH_WORKER_CONDITION_NOT_CERTIFIABLE`
+- 本runは既存公式照合内容を閲覧済みでありfresh worker条件を満たせない
+- この状態で新規blind候補を固定してPASS判定することは禁止
+- 旧blind候補変更: `0件`
+- fixed EXAM_ALIGNMENT変更: `0件`
+- Topic 28 completed化: `しない`
+
+解除条件:
+- 公式解答・既存blind比較結果を事前に参照していない別fresh workerが、remediation後教材のみを使って別ファイルへ候補を固定する
+- 候補固定後に公式照合を行う
+- `27 / 27 PASS` を確認した後に最終QAへ進む
 
 ## 固定境界
 
@@ -174,4 +157,4 @@ Topic 21 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は
 
 ## 次の安全な工程
 
-公式解答を見ていないfresh workerで、remediation後教材だけを使ったclean blind候補を別ファイルに新規固定し、固定5問・27答案要素を公式再照合する。旧候補は編集しない。再照合PASS後に最終QAへ進む。Topic 28はそれまで `completed` に数えない。
+公式解答・既存blind比較結果を事前に参照していない別fresh workerで、remediation後教材だけを使ったclean blind候補を別ファイルに新規固定する。固定後に公式照合し、PASSなら最終QAへ進む。Topic 28はそれまで `completed` に数えない。
