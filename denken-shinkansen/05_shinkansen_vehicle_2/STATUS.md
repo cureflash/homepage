@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `32 / 39`
-- current_status: `topic_33_practice_pdf_blocked_integrity_mismatch`
+- current_status: `topic_33_practice_pdf_complete`
 - last_completed_topic: `32 照明設計`
 - active_topic: `33 空調・電熱の熱収支`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENT、解説source/PDF/QA、練習source/QAと練習PDF staged payloadをreconcileする。`part0 + part1 + part2` は19,106 bytesへ復号できるが、宣言済みcanonical SHA256 `392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705` と一致しない。`part1a` の役割は正本・workflowに確定記載がないため推測で組み替えず停止する。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENT、解説source/PDF/QA、練習source/PDF/QAをreconcileし、重複がなければTopic 33 PowerPoint生成＋render QAへ進む。
 
 Topic 01〜32は `PASS / completed`。完成数 `32 / 39`。
 
@@ -35,7 +35,7 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 
 ## Topic 33 空調・電熱の熱収支
 
-判定: `BLOCKED / PRACTICE_PDF_INTEGRITY`
+判定: `IN_PROGRESS / PRACTICE_PDF_COMPLETE`
 
 制作前EXAM_ALIGNMENT:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
@@ -82,18 +82,23 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 - 未確認実車値の真値化: `0件`
 - Topic 21一般式変更: `0件`
 
-練習PDF materialization:
-- staging commits: `058e6ea5fbd7b2d6833c39c85aed2e4f5f90ed92`, `9a035479828e1c1c5045741fc6440e6ac8f710b6`
-- retrigger commit: `732c9851a44f89759fe28001bd528e3266423c5c`
-- workflow run / job: `35511621652 / 106080397325`
-- staged composition in workflow: `part0 + part1 + part2`
-- decoded size: `19,106 bytes PASS`
-- expected SHA256: `392e31a90e41f15d401214ffbada1d379305247cad1eed96d0421052163d0705`
-- SHA256 verification: `FAIL`
-- additional staged chunk: `part1a` exists, but canonical workflow・正本に用途指定なし
-- canonical practice PDF commit: `未成立`
-- practice PDF QA: `未実施`
-- exact blocker: `staged PDF payload checksum mismatch; part1aの用途を根拠なく推測できないため停止`
+練習PDF:
+- PDF: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice.pdf`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_practice_pdf_qa.md`
+- canonical commit: `3637ae75c356bfc3613d2102c729397a40a64fce`
+- canonical blob SHA: `6f97c59f3b4cd54c47ab1fc9f7039c3fbb39417f`
+- SHA-256: `079a09b8a2517c3171f4055d9549f9857570a68ecf3e3d8ad57e204c43503954`
+- file size: `21,971 bytes`
+- A4縦: `7頁`
+- PDFium / Poppler: `7 / 7 PASS`
+- page-edge overflow / blank page / U+FFFD: `0件`
+- 問1〜問10: `10 / 10収録 PASS`
+- 正答・完全解説: `10 / 10収録 PASS`
+- 固定5問・22答案要素: `22 / 22 connected`
+- SPEC固定7項目: `7 / 7 covered`
+- exact blocker: `0件`
+
+旧staging integrity blockerは解消済み。`part0 + part1 + part2` は19,106 bytesへ復号できたが旧宣言SHA256と一致しなかったためcanonical化せず、`part1a` が `part1` の先頭2,123文字と完全一致することだけを確認した。chunk順序を推測せず、canonical練習sourceからPDFを再生成し、PDFium / Poppler / text QAで検証した生成物を新canonicalとした。旧temporary chunks/workflowは削除済み。
 
 SPEC固定項目:
 - 熱量
@@ -104,7 +109,7 @@ SPEC固定項目:
 - 車内負荷
 - 効率
 
-次工程は上記integrity blockerの解消のみ。canonical payload構成または正しいchunkが確定するまでPDF生成・QA・PowerPoint・clean blindへ進めない。完成数は `32 / 39` のまま。
+次工程はTopic 33 PowerPoint生成＋render QA。完成数は `32 / 39` のまま。
 
 ## Topic 21 固定注記
 
