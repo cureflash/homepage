@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `35 / 39`
-- current_status: `topic_36_exam_alignment_complete`
+- current_status: `topic_36_explanation_source_complete`
 - last_completed_topic: `35 ATC① 軌道回路の回路解析`
 - active_topic: `36 ATC② 信号伝送と周波数`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36の固定EXAM_ALIGNMENTをreconcileし、Topic 36解説sourceから開始する。固定5問・25答案要素、SPEC固定8項目、二次は公式科目範囲外という適用判定、鉄道一次資料の境界を維持する。未確認実車値の真値化、Topic 37・38先取りは行わない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 36の固定EXAM_ALIGNMENTと解説source/QAをreconcileし、Topic 36解説PDF生成＋表示QAから開始する。固定5問・25答案要素、SPEC固定8項目、二次は公式科目範囲外という適用判定、鉄道一次資料の境界を維持する。未確認実車値の真値化、Topic 37・38先取りは行わない。
 
 Topic 01〜35は `PASS / completed`。完成数は `35 / 39`。
 
@@ -257,7 +257,7 @@ Topic 35はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 36 ATC② 信号伝送と周波数
 
-判定: `IN PROGRESS / EXAM_ALIGNMENT_COMPLETE`
+判定: `IN PROGRESS / EXPLANATION_SOURCE_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -292,7 +292,23 @@ SPEC固定項目:
 - デジタル判定
 - 冗長化
 
-次工程はTopic 36解説source。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
+### 解説source
+
+- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_source.md`
+- source commit: `886685450f33f48c929e19f09e4a37ac46e45fde`
+- source QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_source_qa.md`
+- source QA commit: `8a22bde3a2257187adafaf7503c8570efb7b5dec`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 公式・数値独立再計算: `PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 37・38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 36解説PDF生成＋表示QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
 
 ## Topic 21 固定注記
 
