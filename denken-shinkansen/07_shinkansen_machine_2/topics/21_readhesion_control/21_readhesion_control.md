@@ -4,7 +4,7 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説source本文を完了した。現在 `topic_21_explanation_source_complete / IN_PROGRESS`。固定一次4問＋二次1問、計5問・14答案要素を品質ゲート対象とする。次工程は解説PDF。
+制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPoint、完成後独立再解答を完了し、進捗メタデータを現行状態へ同期した。現在 `topic_21_metadata_sync_complete / IN_PROGRESS`。固定一次4問＋二次1問、計5問・14答案要素を品質ゲート対象とする。次工程は最終QA再実施。
 
 ## 固定範囲
 
@@ -631,8 +631,8 @@
 - 固定過去問の個別正答記号・最終数値の保存 — `0件 / PASS`
 - Topic 22総合走行シミュレーション先取り — `0件 / PASS`
 - SPEC外A-D変換器方式・高度制御理論の追加 — `0件 / PASS`
-- 独立再解答 — `NOT_RUN`（完成教材後）
+- 独立再解答 — `14 / 14 PASS`（完成教材のみで再解答し公式照合済み）
 
 判定: `PASS / topic_21_explanation_source_complete`
 
-次工程: 解説PDF。
+次工程: Topic 21 最終QA再実施。
