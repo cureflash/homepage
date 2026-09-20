@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `27 / 39`
-- current_status: `topic_28_blind_reanswer_needs_revision`
+- current_status: `topic_28_source_remediation_complete`
 - last_completed_topic: `27 L0系① リニア同期モータ`
 - active_topic: `28 L0系② 同期機のフェーザと推進力`
-- next_start: H29二次「機械・制御」問1(1)の `φ / θ / δ` 記号対応を教材へ最小補強しPDFへ同期した後、fresh workerでclean blindを再実施する
+- next_start: remediation後sourceから解説PDFを再生成しPDF QAを実施する。その後、公式解答を見ていないfresh workerでclean blindを新規固定する
 
 ## 完成済み
 
@@ -40,25 +40,29 @@ Topic 27最終QA:
 
 ## Topic 28 解説source
 
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 判定: `PASS / EXPLANATION_SOURCE_REMEDIATED`
 - path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_source.md`
-- blob SHA: `793d886094722b469d844cadded5d990bdb2cdf2`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_source_qa.md`
+- blob SHA: `8f9562b6b56a22ec7b507a5dc5834fda73787515`
+- 初回QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_source_qa.md`
+- remediation QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
 - 固定過去問: `5 / 5 mapped`
 - 合計答案要素: `27 / 27 covered`
 - SPEC必須8項目: `8 / 8 covered`
 - 指定3可視化: `3 / 3 defined`
+- H29 `φ / θ / δ` 記号対応: `補強済み`
 - 未確認L0系実車値の真値化: `0件`
 - Topic 29先取り: `0件`
+- fixed EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
 ## Topic 28 解説PDF
 
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- 判定: `STALE / RESYNC_REQUIRED`
 - path: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation.pdf`
-- canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
-- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_pdf_qa.md`
-- exact blocker: `0件`
+- stale canonical blob SHA: `a2bfff6ed03abc3d77a923b92fd0f275409719f5`
+- 旧QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_explanation_pdf_qa.md`
+- 理由: H29 `φ / θ / δ` 補強後source `8f9562b6b56a22ec7b507a5dc5834fda73787515` が未同期
+- exact blocker: `1件`（source/PDF同期）
 
 ## Topic 28 練習source
 
@@ -146,6 +150,19 @@ Topic 27最終QA:
 - 固定候補の公式照合後編集: `0件`
 - fixed EXAM_ALIGNMENT変更: `0件`
 
+## Topic 28 source remediation
+
+- 判定: `PASS / SOURCE_REMEDIATION_COMPLETE`
+- source commit: `28692c4d7c5b0bfee99f28d32be4eaf19f404a14`
+- QA commit: `2e24f142239ea932c6fb28631b9ad35aec2e76d1`
+- QA: `topics/28_l0_synchronous_machine_phasor_propulsion/28_l0_synchronous_machine_phasor_propulsion_remediation_source_qa.md`
+- 補強: H29 `φ` = 本教材 `θ` = 力率角、`δ` = 負荷角を分離
+- 指定変数式: `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` と電圧変動率式を明記
+- 式整合: 既存発電機フェーザ式から独立展開 `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 新規仕様追加: `0件`
+- PDF同期: `未実施`
+
 ## Topic 28 固定境界
 
 L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ推進コイルへ三相交流を供給し、移動磁界と車上超電導磁石との吸引・反発で推進する」という原理まで。公開一次資料で確認していない実際の `X_s`、`E`、`δ`、有効電力、無効電力、推力、推進効率を真値化しない。例題・グラフの数値は教材用仮定値として扱う。Topic 29の浮上・案内系は先取りしない。
@@ -156,4 +173,4 @@ L0系実車接続は、公開一次資料で確認済みの「ガイドウェイ
 
 ## 次の安全な工程
 
-Topic 28はまだ `completed` と数えない。H29二次「機械・制御」問1(1)について、「本試験の `φ` は本教材の力率角 `θ` に対応し、負荷角 `δ` とは別物。`V,I,X_s,φ` 指定なら `E=sqrt(V^2+2VX_sI sinφ+(X_sI)^2)` から `ε` を表す」という過去問固有注記を教材へ最小補強し、解説PDFへ同期する。その後、公式解答を見ていないfresh workerがclean blindを新規固定して再照合する。
+Topic 28はまだ `completed` と数えない。remediation後sourceから解説PDFを再生成しPDF QAを実施する。その後、公式解答を見ていないfresh workerがclean blindを新規固定して再照合する。今回固定した旧候補は修正しない。
