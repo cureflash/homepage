@@ -154,6 +154,19 @@
       "source": "articles/09_additive_color_mixing.md"
     },
     {
+      "id": "10_subtractive_color_mixing",
+      "articleNo": 10,
+      "seriesId": "physics",
+      "title": "色を重ねるとなぜ暗くなるのか――減法混色を分光透過率から考える",
+      "summary": "CMY減法混色を、分光透過率の乗算、光学濃度の加算、Beer–Lambert則、XYZ積分、実在色材の非理想性、Kubelka–Munk理論まで使って物理的に理解する。",
+      "levels": [
+        "3級：混色・減法混色・混色を応用した身近な例",
+        "2級：光の性質と色・印刷と色",
+        "大学：光学・分光学・測色学・放射輸送"
+      ],
+      "source": "articles/10_subtractive_color_mixing.md"
+    },
+    {
       "id": "14_retina_phototransduction",
       "articleNo": 14,
       "seriesId": "biology",
