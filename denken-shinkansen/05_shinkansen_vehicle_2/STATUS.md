@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `32 / 39`
-- current_status: `topic_33_practice_pdf_complete`
+- current_status: `topic_33_powerpoint_complete_ready_clean_blind`
 - last_completed_topic: `32 照明設計`
 - active_topic: `33 空調・電熱の熱収支`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33固定EXAM_ALIGNMENT、解説source/PDF/QA、練習source/PDF/QAをreconcileし、重複がなければTopic 33 PowerPoint生成＋render QAへ進む。
+- next_start: fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 33教材成果物をreconcileする。answer-bearing資料を先に開かず、教材だけで固定5問・22答案要素のclean blind candidateを作成・固定し、その後に公式解答と照合する。
 
 Topic 01〜32は `PASS / completed`。完成数 `32 / 39`。
 
@@ -35,7 +35,7 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 
 ## Topic 33 空調・電熱の熱収支
 
-判定: `IN_PROGRESS / PRACTICE_PDF_COMPLETE`
+判定: `IN_PROGRESS / POWERPOINT_COMPLETE / READY_CLEAN_BLIND`
 
 制作前EXAM_ALIGNMENT:
 - source: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance.md`
@@ -100,6 +100,28 @@ Topic 32のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、�
 
 旧staging integrity blockerは解消済み。`part0 + part1 + part2` は19,106 bytesへ復号できたが旧宣言SHA256と一致しなかったためcanonical化せず、`part1a` が `part1` の先頭2,123文字と完全一致することだけを確認した。chunk順序を推測せず、canonical練習sourceからPDFを再生成し、PDFium / Poppler / text QAで検証した生成物を新canonicalとした。旧temporary chunks/workflowは削除済み。
 
+PowerPoint:
+- PPTX: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_images.pptx`
+- QA: `topics/33_hvac_thermal_balance/33_hvac_thermal_balance_images_qa.md`
+- canonical commit: `1154f804df8acff3956fee2d1ded4666c46afaaa`
+- PPTX blob SHA: `22679f0b7d8ecd34b1a0556d1c591fc81bf996c4`
+- SHA-256: `cb1d632c0788653314a79ed9c1ab36cc13414d664b3de5b9dbd872d3d5dba594`
+- 16:9: `6枚`
+- python-pptx geometry: `6 / 6 PASS`
+- LibreOffice PDF render: `6 / 6 PASS`
+- PNG render: `6 / 6 PASS`
+- blank / page-edge overflow / U+FFFD: `0件`
+- 固定5問・一次22答案要素: `22 / 22 connected`
+- 二次: `対象外`
+- SPEC固定7項目: `7 / 7 PASS`
+- HFC過去問固有知識の現行実車仕様への一般化: `0件`
+- 未確認実車値の真値化: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+初回PowerPoint render QAは `pdftotext` が `SPEC 7項目` に空白を挿入したためexact-token assertionのみ失敗した。内容・geometry・renderに異常はなく、抽出テキストの空白だけを正規化した再試験でPASS。教材内容の変更はしていない。
+
 SPEC固定項目:
 - 熱量
 - 熱収支
@@ -109,7 +131,7 @@ SPEC固定項目:
 - 車内負荷
 - 効率
 
-次工程はTopic 33 PowerPoint生成＋render QA。完成数は `32 / 39` のまま。
+次工程はfresh clean blind独立再解答。今runはanswer-bearing資料を確認済みのためcandidate固定へ進まない。完成数は `32 / 39` のまま。
 
 ## Topic 21 固定注記
 
