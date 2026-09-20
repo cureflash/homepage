@@ -6,73 +6,52 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜31は最終QAまで `PASS / completed`。完成数 `31 / 39`。
+Topic 01〜32は最終QAまで `PASS / completed`。完成数 `32 / 39`。
 
-現在地は `topic_32_powerpoint_complete`。Topic 32 `照明設計` は制作前EXAM_ALIGNMENT、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、PowerPoint＋render QAまで完了。教材成果物一式は揃ったが、完成後clean blind独立試験が未実施なので未completed。固定公式過去問は一次5問・30答案要素、SPEC固定9項目は `9 / 9 connected`。二次は公式「機械・制御」試験範囲に照明が含まれないため対象外。
+現在地は `topic_32_completed`。次のactive topicは `33 空調・電熱の熱収支`。
 
-## Topic 32 PowerPoint完了記録
+## Topic 32 完了記録
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `PASS / COMPLETED`
 
-canonical artifacts:
-- `topics/32_lighting_design/32_lighting_design_images.pptx`
-- `topics/32_lighting_design/32_lighting_design_images_qa.md`
+clean blind canonical:
+- candidate: `topics/32_lighting_design/32_lighting_design_clean_blind_candidate.md`
+- candidate blob SHA: `b153d374febdd737285e8a6db7722ce14bf019fb`
+- lock commit: `30e30f320db482bf63c939ee2be3c6a00d8dbc42`
+- final QA: `topics/32_lighting_design/32_lighting_design_clean_blind_qa.md`
 
-QA:
-- 16:9 `6 slides`
-- python-pptx open / geometry bounds `6 / 6 PASS`
-- LibreOffice PDF変換 `6 / 6 pages PASS`
-- PNG render `6 / 6 PASS`
-- 空白render・ページ端・置換文字 `0件`
-- 固定5問・30答案要素 `30 / 30 connected`
-- 一次 `30 / 30 connected`
+最終QA:
+- 固定5問 `5 / 5 PASS`
+- 一次 `30 / 30 PASS`
 - 二次 `対象外（公式「機械・制御」試験範囲に照明なし）`
-- SPEC固定9項目 `9 / 9 PASS`
+- candidate固定後修正 `0件`
+- SPEC固定9項目 `9 / 9 connected`
 - 固定EXAM_ALIGNMENT変更 `0件`
 - 未確認実車値の真値化 `0件`
-- Topic 21一般式変更 `0件`
 - exact blocker `0件`
 
-固定境界:
-- 色温度・LED寿命はR7固定過去問を解くための最小ブリッジに限定する。
-- 光束発散度・輝度は測光量識別とR8/R3固定過去問対応に限定する。
-- 多重反射式は簡略球形グローブ条件に限定する。
-- 実車照明の方式・器具・灯数・定格・照度・消費電力・効率は一次資料なしに真値化しない。
-- `lm/W` と照明率 `U` を混同しない。
-- 光束法の保守率 `M` と光束発散度 `M` は別量として扱う。
-- Topic 21 H26二次「機械・制御」問1(4)の丸め差を理由に一般式 `P=Tω`、`ω=2πN/60` を変更しない。
+EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後clean blind独立再解答まで全工程を通過済み。
 
-## 次工程 — clean blind
+## 次工程 — Topic 33 制作前EXAM_ALIGNMENT
 
-次runはfresh workerで開始する。最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md` をreconcileした後、candidate固定前はanswer-bearing資料を開かない。
+テーマ: `空調・電熱の熱収支`
 
-candidate固定前に開いてよいもの:
-- Topic 32の解説PDF / 練習PDF / PowerPointなど教材成果物
-- 公式「問題」PDF
+系列SPEC固定項目:
+- 熱量
+- 熱収支
+- COP
+- 消費電力
 
-candidate固定前に開かないもの:
-- `32_lighting_design.md` の独立検証結果・正答情報部分
-- `32_lighting_design_exam_alignment_qa.md`
-- 電気技術者試験センター公式「解答」PDF
-- 過去のanswer-bearing compare資料
+fresh workerで最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、直近の車両二種worker成果をreconcileしてから開始する。
 
-固定5問を教材だけで独立再解答し、`32_lighting_design_clean_blind_candidate.md` を作成してcommitし、candidate blob SHAとlock commitを確定する。固定後に初めて公式解答等と照合する。本runはanswer-bearing資料を既に確認済みのためcandidate作成へ進まない。
+品質ゲート:
+- 電気技術者試験センター公式過去問を最優先し、直近年度から遡る。
+- 二種は一次・二次を合わせ原則5問以上を調査する。
+- 二次はTopic 33の固定論点に実際に対応する記述問題が確認できる場合のみ採用する。
+- 二次問題を件数合わせで採用しない。
+- 過去問の要求答案要素を分解し、SPEC固定項目との接続を記録する。
+- 仕様不整合・問題文解釈・公式解答との照合で確定不能事項が生じた場合は、推測せずexact blockerを記録して止める。
 
-## Topic 32 既完了canonical
+## Topic 21 固定境界
 
-- EXAM_ALIGNMENT: `topics/32_lighting_design/32_lighting_design.md`
-- EXAM_ALIGNMENT QA: `topics/32_lighting_design/32_lighting_design_exam_alignment_qa.md`
-- 解説source: `topics/32_lighting_design/32_lighting_design_explanation_source.md`
-- 解説source QA: `topics/32_lighting_design/32_lighting_design_explanation_source_qa.md`
-- 解説PDF: `topics/32_lighting_design/32_lighting_design_explanation.pdf`
-- 解説PDF QA: `topics/32_lighting_design/32_lighting_design_explanation_pdf_qa.md`
-- 練習source: `topics/32_lighting_design/32_lighting_design_practice_source.md`
-- 練習source QA: `topics/32_lighting_design/32_lighting_design_practice_source_qa.md`
-- 練習PDF: `topics/32_lighting_design/32_lighting_design_practice.pdf`
-- 練習PDF QA: `topics/32_lighting_design/32_lighting_design_practice_pdf_qa.md`
-- PowerPoint: `topics/32_lighting_design/32_lighting_design_images.pptx`
-- PowerPoint QA: `topics/32_lighting_design/32_lighting_design_images_qa.md`
-
-## Topic 31
-
-判定: `PASS / COMPLETED`。一次 `15 / 15`、二次 `12 / 12`、合計 `27 / 27 PASS`。詳細は `topics/31_auxiliary_power_converter/` 配下のcanonical QAを正本とする。
+H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有の丸め差として診断済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
