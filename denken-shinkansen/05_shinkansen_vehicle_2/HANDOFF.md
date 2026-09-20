@@ -8,7 +8,7 @@
 
 Topic 01〜35は最終QAまで `PASS / completed`。完成数 `35 / 39`。
 
-現在地は `topic_36_explanation_pdf_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QAまで完了。固定5問・25答案要素は `25 / 25 connected`、SPEC固定8項目は `8 / 8 PASS`、3段階例題 `3 / 3 PASS`、PDFium / Poppler renderは `2 / 2 PASS`、exact blocker `0件`。二次は公式科目範囲外のため固定0問とし、件数合わせは行っていない。次工程はTopic 36練習source作成＋QA。固定EXAM_ALIGNMENT、一次限定の二次適用判定、鉄道一次資料の境界を変更せず、未確認実車値の真値化、Topic 37・38先取りを行わない。
+現在地は `topic_36_practice_pdf_complete`。active topicは `36 ATC② 信号伝送と周波数`。制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QAまで完了。固定5問・25答案要素は `25 / 25 connected`、SPEC固定8項目は `8 / 8 PASS`、練習12問は `12 / 12` 五肢択一・正答一意、PDFium / Poppler renderは練習PDF `5 / 5 PASS`、exact blocker `0件`。二次は公式科目範囲外のため固定0問とし、件数合わせは行っていない。次工程はTopic 36解説画像PowerPoint作成＋QA。固定EXAM_ALIGNMENT、一次限定の二次適用判定、鉄道一次資料の境界を変更せず、未確認実車値の真値化、Topic 37・38先取りを行わない。
 
 ## Topic 34 完了記録
 
@@ -291,7 +291,7 @@ Topic 35は全工程を通過したため `PASS / COMPLETED`。完成数を `35 
 
 ## Topic 36 進捗
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -375,7 +375,57 @@ canonical:
 - Topic 37・38先取り: `0件`
 - exact blocker: `0件`
 
-次工程: Topic 36練習source作成＋QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
+### 練習source
+
+canonical:
+- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_source.md`
+- source commit: `f785bd183e5a3bebe976b9839a2b1a41c34168a1`
+- source blob SHA: `d39c83d9329b71336f327f41e86c2bc9f0bdc7bb`
+- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_source_qa.md`
+- QA commit: `d9c3cb66b01be29c05ba702e0c108de9492c0e2c`
+
+品質ゲート:
+- 一次試験型: `12 / 12`
+- 五肢択一: `12 / 12`
+- 正答一意性: `12 / 12 PASS`
+- 数値・公式独立再計算: `5 / 5 PASS`
+- 知識・境界問題: `7 / 7 PASS`
+- 二次試験型: `0問`（公式科目範囲外、件数合わせなし）
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 未確認実車値の真値化: `0件`
+- Topic 37・38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+### 練習PDF
+
+canonical:
+- PDF: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice.pdf`
+- PDF QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_pdf_qa.md`
+- PDF canonical commit: `51d9ea42398c28ac5b27006d6868aeb96f0b1838`
+- PDF blob SHA: `f678daa6fa5554266716877d32f1aca0acc21e02`
+- PDF SHA-256: `707d1ae1564b13393545c9b27e0d47ed36f1e33390aa827fdd5b4c9a7dfdf0bc`
+- file size: `6700 bytes`
+
+品質ゲート:
+- A4縦: `5頁`
+- Ghostscript nullpage parse/render: `PASS`
+- Poppler `pdfinfo` / `pdftotext -layout`: `PASS`
+- PDFium / Poppler render: `5 / 5 PASS`
+- visual inspection: `5 / 5 PASS`
+- extracted text: `2894 chars / PASS`
+- replacement character U+FFFD: `0件`
+- 一次問題・正答・解説: `12 / 12 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定8項目: `8 / 8 PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認実車値の真値化: `0件`
+- Topic 37・38先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程: Topic 36解説画像PowerPoint作成＋QA。固定5問・25答案要素、SPEC固定8項目、一次限定の二次適用判定、鉄道一次資料の境界を変更しない。
 
 ## Topic 21 固定境界
 
