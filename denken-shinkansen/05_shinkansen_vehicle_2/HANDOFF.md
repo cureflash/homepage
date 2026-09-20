@@ -8,7 +8,7 @@
 
 Topic 01〜28は最終QAまで `PASS / completed`。完成数は `28 / 39`。
 
-現在地は `topic_29_practice_source_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
+現在地は `topic_29_practice_pdf_complete`。active topicは Topic 29 `L0系③ 超電導磁気浮上の電磁力`。Topic 29はまだ `completed` ではない。
 
 ## Topic 28 完了状態
 
@@ -85,9 +85,7 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 - 固定EXAM_ALIGNMENT変更: `0件`
 - exact blocker: `0件`
 
-## Topic 29 今回完了
-
-練習sourceとQAをGitHub正本へ固定した。
+## Topic 29 練習source
 
 - source: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_source.md`
 - QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_source_qa.md`
@@ -95,6 +93,29 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 - 一次試験型: `8 / 8 PASS`、五肢択一・正答一意
 - 二次試験型: `4 / 4 PASS`、途中式・前提・単位・理由を記載
 - 数値・論理独立再計算: `12 / 12 PASS`
+- 固定5問・24答案要素: `24 / 24 connected`
+- 一次: `20 / 20 connected`
+- 二次: `4 / 4 connected`
+- SPEC必須8項目: `8 / 8 covered`
+- 指定3可視化の計算系: `3 / 3 aligned`
+- L0系未確認実車値の真値化: `0件`
+- Topic 30先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
+## Topic 29 今回完了
+
+練習PDFとPDF QAをGitHub正本へ固定した。
+
+- PDF: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice.pdf`
+- QA: `topics/29_l0_superconducting_magnetic_levitation_force/29_l0_superconducting_magnetic_levitation_force_practice_pdf_qa.md`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+- canonical blob SHA: `1f639d616e3c2432279e02e599c374771c0cfb70`
+- A4縦7頁
+- PDFium / Poppler: `7 / 7 PASS`
+- `pdftotext -layout`: `PASS`
+- 一次試験型: `8 / 8 PASS`
+- 二次試験型: `4 / 4 PASS`
 - 固定5問・24答案要素: `24 / 24 connected`
 - 一次: `20 / 20 connected`
 - 二次: `4 / 4 connected`
@@ -126,16 +147,16 @@ H23二次は相対速度→誘導電流→電磁トルクの二次記述式ゲ�
 
 ## 次の安全な工程
 
-`29_l0_superconducting_magnetic_levitation_force_practice_source.md` を正本として練習PDFを生成する。
+Topic 29解説画像PowerPointを生成し、QAする。
 
 QA項目:
-- A4縦、表示欠け・文字化けなし
-- 一次8問・二次4問を欠落なく収録
-- 解答・途中式・単位・符号がpractice sourceと一致
+- 16:9、表示欠け・文字化けなし
 - 固定5問・24答案要素への接続維持
-- SPEC必須8項目維持
+- SPEC必須8項目と指定3可視化を維持
+- 数式・単位・符号が解説source / 練習sourceと一致
 - L0系未確認実車値の真値化0件
 - Topic 30先取り0件
+- 固定EXAM_ALIGNMENT変更0件
 
 ## Topic 21 H26二次 問1(4)
 
