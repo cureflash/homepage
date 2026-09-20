@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `26 / 39`
-- current_status: `topic_27_clean_blind_official_match_complete`
-- last_completed_topic: `26 E7・W7系 勾配条件を含む総合走行解析`
-- active_topic: `27 L0系① リニア同期モータ`
-- next_start: Topic 27の既存必須成果物・QA・clean blind公式照合をreconcileし、最終QAを作成する
+- exam_aligned_completed_topics: `27 / 39`
+- current_status: `topic_27_completed`
+- last_completed_topic: `27 L0系① リニア同期モータ`
+- active_topic: `28 L0系② 同期機のフェーザと推進力`
+- next_start: Topic 28の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 25 最終状態
 
@@ -394,10 +394,29 @@ N700S実車接続は東芝一次メーカー資料で確認済みのSCiB採用�
 - 不一致: `0件`
 - exact blocker: `0件`
 
+## Topic 27 最終QA
+
+- 判定: `PASS / COMPLETED`
+- QA: `topics/27_l0_linear_synchronous_motor/27_l0_linear_synchronous_motor_final_qa.md`
+- 必須成果物: `全件存在・既存QA PASS`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `18 / 18 PASS`
+- 二次答案要素: `5 / 5 PASS`
+- 合計答案要素: `23 / 23 PASS`
+- SPEC必須7項目: `7 / 7 PASS`
+- SPEC指定2可視化: `2 / 2 PASS`
+- candidate lock後の修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認L0系実車値の真値化: `0件`
+- Topic 28範囲の先取り: `0件`
+- SPEC外主題追加: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## Topic 21 H26二次 問1(4)
 
 `48.0 / 48.1 N·m` 差は公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有丸め差として解決済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
 
 ## 完成数
 
-Topic 01〜26: `PASS / completed`。完成数 `26 / 39`。Topic 27はPowerPoint完了・clean blind公式照合PASS。次は最終QA。
+Topic 01〜27: `PASS / completed`。完成数 `27 / 39`。次はTopic 28 `L0系② 同期機のフェーザと推進力` の制作前EXAM_ALIGNMENT。
