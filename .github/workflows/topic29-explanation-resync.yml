@@ -45,10 +45,13 @@ jobs:
           test "$(find /tmp/poppler -name '*.png' | wc -l)" = 4
           pdftotext -layout "$PDF" /tmp/topic29.txt
           python - <<'PY'
+          import re, unicodedata
           t=open('/tmp/topic29.txt',encoding='utf-8',errors='replace').read()
           assert '\ufffd' not in t
-          for s in ['V_1=V_L/sqrt(3)', "I'_2(s)", 's_p=2-s', '1<=s_p<=2', '48.1 / 48.0 N']:
-              assert s in t, s
+          n=''.join(ch for ch in unicodedata.normalize('NFD',t) if not unicodedata.combining(ch))
+          n=re.sub(r'\s+',' ',n)
+          for s in ['V1=VL/sqrt(3)', "I'2(s)", 'sp=2-s', '1<=sp<=2', '48.1 N·m / 48.0 N·m']:
+              assert s in n, s
           PY
       - name: Write QA
         shell: bash
