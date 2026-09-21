@@ -2,7 +2,7 @@
 
 更新日: 2026-09-21
 
-判定: `FAIL / solver_error_and_fixed_split_nonconformance / clean_blind_v7_required`
+判定: `FAIL / solver_error_and_fixed_split_nonconformance / BLOCKED_PROCESS_SPEC`
 
 ## 固定条件
 
@@ -100,7 +100,9 @@ candidate固定後にTopic 39 canonical sourceと既存QAを照合した。
 
 ## 診断
 
-v6の不一致は教材欠落ではない。一次20答案要素は全一致。R2固定要素4の`3サイクル`欠落と固定5答案要素の区切り不適合は独立再解答側のsolver/structuring errorである。
+v6の内容不一致は教材欠落ではない。一次20答案要素は全一致。R2固定要素4の`3サイクル`欠落は独立再解答側のsolver errorである。
+
+一方、固定5答案要素の区切り不適合には工程仕様上の確定不能事項がある。candidate固定前に利用を許可された `clean_blind_intake.md` はR2二次を「5答案要素」とだけ記載し、既存EXAM_ALIGNMENTで固定した5群の境界を記載していない。公式問題本文からは複数の5分割が成立し得るため、fresh workerが「既存と同じ区切り」を確定するには、answer-bearingなEXAM_ALIGNMENT/sourceを先に読むか、区切りを推測する必要がある。前者はclean blind freshnessに反し、後者は推測禁止に反する。
 
 - 教材修正: `不要`
 - 解説PDF再生成: `不要`
@@ -110,6 +112,8 @@ v6の不一致は教材欠落ではない。一次20答案要素は全一致。R
 - 系列SPEC固定13項目変更: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
-- exact blocker: `0件`
+- exact blocker: `TOPIC39_CLEAN_BLIND_FIXED_SPLIT_NOT_AVAILABLE_IN_QUESTION_ONLY_INTAKE`
 
-次工程: 別fresh workerによるclean blind v7。同じ固定5問・25答案要素をquestion-onlyから独立再解答し、candidateを先にcommitする。R2二次は固定5答案要素の区切りをそのまま維持する。`公式標準解答一致 25 / 25`、`教材だけで導出可能 25 / 25`、固定区切り維持を全て満たした場合のみTopic 39をcompletedとする。
+## 停止条件
+
+このblockerが解消されるまでclean blind v7は開始しない。解消には、answer-aware coordinatorが正答内容を載せずにR2固定5群の「境界だけ」をquestion-only intakeへ明示し、その後に別fresh worker/contextでv7を実施する必要がある。本workerはcandidate固定後にanswer-bearing資料を参照済みのためv7を実施しない。
