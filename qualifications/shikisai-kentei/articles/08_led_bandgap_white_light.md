@@ -470,7 +470,58 @@ $$
 
 という実用的な経路を可能にした。
 
-## 13　色彩検定で押さえる内容と、大学レベルで追加して理解する内容
+## 13　LEDの色は温度でずれる――バンドギャップの温度依存
+
+LEDでは、投入した電力のすべてが光になるわけではない。非放射再結合、直列抵抗、蛍光体でのStokes損失などは熱へ回り、活性層の接合温度 $T_j$ を上げる。この温度上昇は効率だけでなく発光スペクトルにも影響する。
+
+多くの半導体では、温度上昇に伴う格子膨張と電子‐格子相互作用によってバンドギャップが小さくなる。その経験式としてVarshni式がよく用いられる。
+
+$$
+\boxed{
+E_g(T)=E_g(0)-\frac{\alpha T^2}{T+\beta}
+}
+$$
+
+ここで $\alpha,\beta$ は材料に依存する定数である。微分すると
+
+$$
+\frac{dE_g}{dT}
+=-\alpha\frac{T(T+2\beta)}{(T+\beta)^2}
+$$
+
+となり、通常の温度範囲では $dE_g/dT<0$ である。
+
+発光ピークを単純に
+
+$$
+\lambda_p\approx\frac{hc}{E_g}
+$$
+
+と近似すれば、
+
+$$
+\frac{d\lambda_p}{dT}
+\approx
+-\frac{hc}{E_g^2}\frac{dE_g}{dT}
+=
+\frac{hc\alpha}{E_g^2}
+\frac{T(T+2\beta)}{(T+\beta)^2}
+>0
+$$
+
+となる。つまり単純なバンド端発光では、接合温度の上昇によりバンドギャップが縮み、発光ピークは長波長側へ移る。
+
+この変化は測色にもつながる。LEDの分光分布を $S(\lambda,T)$ と書けば、XYZは
+
+$$
+X(T)=k\int S(\lambda,T)\bar{x}(\lambda)\,d\lambda
+$$
+
+などで決まるため、温度によるピーク波長・スペクトル幅・強度比の変化は、そのまま色度変化になる。白色pc-LEDでは青色チップだけでなく蛍光体の変換効率や発光帯も温度依存性を持つため、接合温度管理は光束維持だけでなく色安定性にも重要である。
+
+ただしInGaN量子井戸の発光ピークは、Varshni式だけでは完全には記述できない。組成ゆらぎによるキャリア局在、band-tail states、量子閉じ込めStark効果、注入電流による電場遮蔽などが重なり、温度上昇に対して一時的な青方偏移やS字型の変化が現れる場合がある。したがってVarshni式は「基礎となるバンドギャップの温度依存」を示す第一近似であり、実際のInGaN LEDの発光色は量子井戸内のキャリア状態まで含めて考える必要がある。
+
+## 14　色彩検定で押さえる内容と、大学レベルで追加して理解する内容
 
 色彩検定3級の公式テキスト目次では、「光とは何だろう」「光の性質と色」「照明と色の見え方」「混色」「加法混色」が範囲に入る。2級では「光の性質と色」「照明の表し方」「ランプの種類」に続いて「LED」が独立項目として示されている。
 
@@ -486,6 +537,7 @@ $$
 | 加法混色 | 分光分布とXYZ三刺激値の線形結合 |
 | 光源色 | 分光分布を等色関数で積分した結果 |
 | lm/W | 電気→光の効率 × 視感度による重み付け |
+| 温度による色ずれ | バンドギャップ・量子井戸状態・蛍光体特性の温度依存 |
 | 色の見え方 | 光源分光分布×物体の分光反射率×視覚系 |
 
 LEDを理解するには、「LEDは白く光る装置」と覚えるより、
@@ -518,13 +570,13 @@ $$
 
 一方、明るいLEDを作るには発光波長だけでなく、非放射再結合を抑え、内部で生まれた光を外へ取り出す必要がある。白色LEDではさらに、青色光の一部を蛍光体で長波長側へ変換するか、複数色LEDを加法混色して、人間の色覚に対して白となる分光分布を作る。
 
-つまりLED照明の色と効率は
+さらに実際のLEDでは接合温度がバンドギャップや量子井戸内のキャリア状態を変えるため、発光スペクトルと色度も温度依存になる。つまりLED照明の色と効率は
 
 $$
 \boxed{
 \text{半導体物理}
 \rightarrow
-\text{量子効率}
+\text{量子効率・温度}
 \rightarrow
 \text{分光放射}
 \rightarrow
@@ -549,3 +601,5 @@ $$
 - International Commission on Illumination, CIE 251:2023, *LED Reference Spectrum for Photometer Calibration*.
 - E. Fred Schubert, *Light-Emitting Diodes*, 3rd ed., Cambridge University Press, 2018.
 - S. M. Sze and Kwok K. Ng, *Physics of Semiconductor Devices*, 3rd ed., Wiley, 2007.
+- Y. P. Varshni, “Temperature dependence of the energy gap in semiconductors,” *Physica* 34(1), 149–154 (1967). https://doi.org/10.1016/0031-8914(67)90062-6
+- P. G. Eliseev, P. Perlin, J. Lee, and M. Osiński, “Blue temperature-induced shift and band-tail emission in InGaN-based light sources,” *Applied Physics Letters* 71(5), 569–571 (1997). https://doi.org/10.1063/1.119797
