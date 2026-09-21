@@ -70,8 +70,7 @@ $$
 
 $$
 x=\frac{20}{60}=\frac13,
-\qquad
-y=\frac{30}{60}=\frac12
+\qquad y=\frac{30}{60}=\frac12
 $$
 
 で同じである。
@@ -144,15 +143,11 @@ $$
 から得られるので、単色光の色度は
 
 $$
-x(\lambda)
-=
-\frac{\bar x(\lambda)}{\bar x(\lambda)+\bar y(\lambda)+\bar z(\lambda)}
+x(\lambda)=\frac{\bar x(\lambda)}{\bar x(\lambda)+\bar y(\lambda)+\bar z(\lambda)}
 $$
 
 $$
-y(\lambda)
-=
-\frac{\bar y(\lambda)}{\bar x(\lambda)+\bar y(\lambda)+\bar z(\lambda)}
+y(\lambda)=\frac{\bar y(\lambda)}{\bar x(\lambda)+\bar y(\lambda)+\bar z(\lambda)}
 $$
 
 となる。
@@ -180,8 +175,7 @@ $$
 とし、それぞれを係数 $a,b\ge0$ で混ぜると
 
 $$
-\mathbf C
-=a\mathbf C_1+b\mathbf C_2
+\mathbf C=a\mathbf C_1+b\mathbf C_2
 $$
 
 となる。
@@ -195,25 +189,19 @@ $$
 と置けば、
 
 $$
-X_i=S_ix_i,
-\qquad
-Y_i=S_iy_i
+X_i=S_ix_i,\qquad Y_i=S_iy_i
 $$
 
 なので、混合後の $x$ 座標は
 
 $$
-x
-=
-\frac{aS_1x_1+bS_2x_2}{aS_1+bS_2}
+x=\frac{aS_1x_1+bS_2x_2}{aS_1+bS_2}
 $$
 
 となる。同様に
 
 $$
-y
-=
-\frac{aS_1y_1+bS_2y_2}{aS_1+bS_2}
+y=\frac{aS_1y_1+bS_2y_2}{aS_1+bS_2}
 $$
 
 である。
@@ -227,8 +215,7 @@ $$
 と置けば、
 
 $$
-(x,y)
-=(1-t)(x_1,y_1)+t(x_2,y_2)
+(x,y)=(1-t)(x_1,y_1)+t(x_2,y_2)
 $$
 
 となる。これは2点の凸結合である。したがって混合色の色度は必ず $(x_1,y_1)$ と $(x_2,y_2)$ を結ぶ線分上に来る。
@@ -256,8 +243,7 @@ $$
 非負の係数で加法混色すると
 
 $$
-\mathbf C
-=r\mathbf R+g\mathbf G+b\mathbf B,
+\mathbf C=r\mathbf R+g\mathbf G+b\mathbf B,
 \qquad r,g,b\ge0
 $$
 
@@ -280,16 +266,13 @@ $$
 と置くと、
 
 $$
-w_R+w_G+w_B=1,
-\qquad
-w_R,w_G,w_B\ge0
+w_R+w_G+w_B=1,\qquad w_R,w_G,w_B\ge0
 $$
 
 であり、混合色の色度は
 
 $$
-(x,y)
-=w_R(x_R,y_R)+w_G(x_G,y_G)+w_B(x_B,y_B)
+(x,y)=w_R(x_R,y_R)+w_G(x_G,y_G)+w_B(x_B,y_B)
 $$
 
 となる。
@@ -333,13 +316,11 @@ xy色度図を見ると、2点間の距離をそのまま色差だと思いた�
 この問題を改善するため、CIEは後にUCS色度図を導入した。CIE 1976 UCSでは
 
 $$
-u'=\frac{4X}{X+15Y+3Z}
-=\frac{4x}{-2x+12y+3}
+u'=\frac{4X}{X+15Y+3Z}=\frac{4x}{-2x+12y+3}
 $$
 
 $$
-v'=\frac{9Y}{X+15Y+3Z}
-=\frac{9y}{-2x+12y+3}
+v'=\frac{9Y}{X+15Y+3Z}=\frac{9y}{-2x+12y+3}
 $$
 
 を使う。
@@ -347,9 +328,7 @@ $$
 2点の色度差は、この平面上で
 
 $$
-\Delta c
-=
-\sqrt{(\Delta u')^2+(\Delta v')^2}
+\Delta c=\sqrt{(\Delta u')^2+(\Delta v')^2}
 $$
 
 と表せる。ただし $u'v'$ は色度だけを扱う2次元座標であり、明度差まで含む完全な知覚色差ではない。物体色の3次元的な色差にはCIELABやCIELUVなどを用いる。
@@ -371,9 +350,7 @@ xy色度図が「混色関係を理解する図」として非常に便利なの
 厳密には単純な直交投影ではない。
 
 $$
-(x,y,z)
-=
-\frac{1}{X+Y+Z}(X,Y,Z)
+(x,y,z)=\frac{1}{X+Y+Z}(X,Y,Z)
 $$
 
 という正規化によって、XYZ空間の各半直線を
@@ -423,20 +400,70 @@ $$
 となる代表点を1つ選び、
 
 $$
-(x,y,z)
-=
-\left(
-\frac{X}{X+Y+Z},
-\frac{Y}{X+Y+Z},
-\frac{Z}{X+Y+Z}
-\right)
+(x,y,z)=\left(\frac{X}{X+Y+Z},\frac{Y}{X+Y+Z},\frac{Z}{X+Y+Z}\right)
 $$
 
 と表したものだと解釈できる。
 
 物理的に実現する通常の色刺激では $X,Y,Z\ge0$ なので、扱うのは射影空間全体ではなく、その正の領域である。この見方をすると、「明るさを捨てる」「2色混合が直線になる」「三原色色域が凸包になる」という性質が、すべて同じ幾何学から理解できる。
 
-## 12　色彩検定で押さえるところ
+## 12　射影のヤコビ行列――何の変化が失われるのか
+
+射影
+
+$$
+f(X,Y,Z)=\left(\frac{X}{S},\frac{Y}{S}\right),\qquad S=X+Y+Z
+$$
+
+を微分すると、XYZの微小変化をxyの微小変化へ写すヤコビ行列は
+
+$$
+J=\frac{\partial(x,y)}{\partial(X,Y,Z)}
+=\frac{1}{S^2}
+\begin{pmatrix}
+Y+Z & -X & -X\\
+-Y & X+Z & -Y
+\end{pmatrix}
+$$
+
+となる。したがって十分小さな測定変動 $\delta\mathbf X=(\delta X,\delta Y,\delta Z)^\mathsf T$ に対して
+
+$$
+\begin{pmatrix}
+\delta x\\
+\delta y
+\end{pmatrix}
+\approx J\,\delta\mathbf X
+$$
+
+と一次近似できる。
+
+ここで重要なのは
+
+$$
+J
+\begin{pmatrix}
+X\\Y\\Z
+\end{pmatrix}
+=
+\begin{pmatrix}
+0\\0
+\end{pmatrix}
+$$
+
+である。XYZベクトル自身の方向、すなわち $(X,Y,Z)\rightarrow(1+\varepsilon)(X,Y,Z)$ という「光量だけを変える方向」はヤコビ行列の零空間に入る。これが、xyへの射影が強度情報を局所的にも完全に捨てることの微分幾何学的な表現である。
+
+逆に、XYZの誤差共分散行列を $\Sigma_{XYZ}$ とすると、一次の誤差伝播では
+
+$$
+\Sigma_{xy}\approx J\Sigma_{XYZ}J^\mathsf T
+$$
+
+となる。$J$ は概ね $1/S$ に比例するため、三刺激値総和 $S$ が小さくなるほど同じ絶対XYZ誤差が大きな色度誤差へ増幅されやすい。完全な黒では $X=Y=Z=0$ となり $S=0$ なので、そもそも色度座標は定義できない。
+
+つまり「暗い試料ではxyが不安定になりやすい」という測色上の問題も、正規化の分母とヤコビ行列から直接説明できる。xy色度図は単に3次元を2次元へ縮めた図ではなく、強度方向を意図的に商として取り除く非線形写像である。
+
+## 13　色彩検定で押さえるところ
 
 検定対策としては、次の関係をまとめて理解するとよい。
 
@@ -453,12 +480,7 @@ $$
 最も重要なのは、xy色度図を「色を並べた地図」として暗記しないことである。
 
 $$
-(X,Y,Z)
-\rightarrow
-\left(
-\frac{X}{X+Y+Z},
-\frac{Y}{X+Y+Z}
-\right)
+(X,Y,Z)\rightarrow\left(\frac{X}{X+Y+Z},\frac{Y}{X+Y+Z}\right)
 $$
 
 という正規化の結果として理解すれば、色度、混色直線、色域、白色点、補色、均等色空間への流れを同じ数学で説明できる。
@@ -477,3 +499,4 @@ $$
 - [ISO/CIE 11664-1:2019 Colorimetry — Part 1: CIE standard colorimetric observers](https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0)
 - [ISO/CIE 11664-5:2016 Colorimetry — Part 5: CIE 1976 L*u*v* Colour Space and u', v' Uniform Chromaticity Scale Diagram](https://www.cie.co.at/publications/colorimetry-part-5-cie-1976-luv-colour-space-and-u-v-uniform-chromaticity-scale)
 - [CIE 015:2018 Colorimetry, 4th Edition](https://www.cie.co.at/publications/colorimetry-4th-edition)
+- [JCGM 100:2008(E) — Evaluation of measurement data — Guide to the expression of uncertainty in measurement](https://doi.org/10.59161/JCGM100-2008E)
