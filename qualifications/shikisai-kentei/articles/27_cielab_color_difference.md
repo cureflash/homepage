@@ -1,6 +1,6 @@
 # L*a*b*はなぜXYZを曲げるのか――均等色空間と色差
 
-色彩検定1級では、XYZ表色系から均等色空間へ進む。色彩検定協会が2026年に案内している1級公式テキスト解説セミナーでも、公式テキストp.41〜52の「混色」「XYZ表色系と均等色空間」が対象として明示されている。
+色彩検定1級では「測色」が学習領域として明示されている。CIELABは、この測色を大学レベルで理解する際の中心概念の一つである。色彩検定協会のセミナーアーカイブでも2025年9月に「XYZ 表色系と均等色空間」が扱われており、XYZと均等色空間の接続は公式の学習支援でも取り上げられている。
 
 XYZ表色系は、色刺激を三刺激値 $X,Y,Z$ で厳密に記述できる。しかしXYZ空間の距離は、人間が感じる「色の違いの大きさ」とは対応しない。そこでCIEは1976年、XYZを非線形変換したCIE 1976 L*a*b*色空間、すなわちCIELABを標準化した。
 
@@ -575,7 +575,7 @@ L*a*b*は3次元なので、数百点の波長ごとに定義される分光反�
 
 そのため、L*a*b*値だけでは「なぜその色になったか」や「別の照明でも同じ色に見えるか」までは決められない。
 
-これは今後扱う分光測色・メタメリズムの記事につながる。
+これは別記事の分光測色・メタメリズムにつながる。
 
 ## 14　L*a*b*はXYZ空間に「場所によって変わる物差し」を入れる
 
@@ -653,7 +653,90 @@ $$
 
 したがって「XYZを何桁まで正確に測れたか」だけではL*a*b*や色差の不確かさは決まらない。測定した色の位置と基準白を通じてヤコビ行列が変わるため、同じXYZ誤差でもL*a*b*上の誤差は場所によって異なる。
 
-## 15　色彩検定で混同しやすい点
+## 15　CIEDE2000は「球」を色領域依存の楕円体へ変える
+
+$\Delta E_{ab}^*$ で一定の許容色差 $r$ を置くと、
+
+$$
+(\Delta L^*)^2+(\Delta a^*)^2+(\Delta b^*)^2=r^2
+$$
+
+であり、L*a*b*空間では等色差面は球になる。これは三方向の感度を同じとみなす等方的な距離である。
+
+CIEDE2000では、式を
+
+$$
+u=\frac{\Delta L'}{k_LS_L},\qquad
+v=\frac{\Delta C'}{k_CS_C},\qquad
+w=\frac{\Delta H'}{k_HS_H}
+$$
+
+と正規化すると、
+
+$$
+\Delta E_{00}^2=u^2+v^2+w^2+R_Tvw
+$$
+
+と書ける。さらに
+
+$$
+\mathbf d=
+\begin{bmatrix}u\\v\\w\end{bmatrix},\qquad
+M=
+\begin{bmatrix}
+1&0&0\\
+0&1&R_T/2\\
+0&R_T/2&1
+\end{bmatrix}
+$$
+
+と置けば、
+
+$$
+\boxed{\Delta E_{00}^2=\mathbf d^{\mathsf T}M\mathbf d}
+$$
+
+という二次形式になる。交差項は $2M_{23}vw=R_Tvw$ である。
+
+係数を局所的に固定して考えると、$\Delta E_{00}=r$ の等色差面は球ではなく楕円体になる。特にクロマ―色相部分
+
+$$
+\begin{bmatrix}
+1&R_T/2\\
+R_T/2&1
+\end{bmatrix}
+$$
+
+の固有値は
+
+$$
+\lambda_{\pm}=1\pm\frac{R_T}{2}
+$$
+
+で、固有ベクトルは $(1,\pm1)/\sqrt2$ である。したがって $R_T\neq0$ なら、許容差の主軸は単純なクロマ軸・色相軸から回転する。
+
+CIEDE2000の回転項は
+
+$$
+R_T=-R_C\sin(2\Delta\theta)
+$$
+
+$$
+R_C=2\sqrt{\frac{\bar C'^7}{\bar C'^7+25^7}}
+$$
+
+$$
+\Delta\theta
+=30^\circ\exp\left[-\left(\frac{\bar h'-275^\circ}{25^\circ}\right)^2\right]
+$$
+
+と定義される。このためクロマ―色相の結合補正は、とくに平均色相が青領域の約 $275^\circ$ 付近で効きやすい。
+
+ただし、これは空間全体を一つの楕円体で表すという意味ではない。$S_L,S_C,S_H,R_T$ は色対の平均明度・平均クロマ・平均色相に依存するため、許容差の大きさと向きは色空間内の位置によって変わる。CIEDE2000は、CIELABの残る非均等性を色領域依存の重みとクロマ―色相結合で補正していると理解できる。
+
+この見方は品質管理にも直結する。同じ $\Delta L^*,\Delta a^*,\Delta b^*$ の数値差でも、基準色が違えば $\Delta E_{00}$ の評価は変わりうる。色差許容を単純な各座標の独立上限として扱えない理由である。
+
+## 16　色彩検定で混同しやすい点
 
 ### XYZとL*a*b*は目的が違う
 
@@ -671,7 +754,7 @@ RGB値から直接L*a*b*が決まるわけではない。RGB色空間の原色�
 
 $\Delta E_{ab}^*$ は知覚差に近づけるための指標だが、完全な均等性はない。用途によってCIEDE2000などが使われる。
 
-## 16　まとめ
+## 17　まとめ
 
 CIELABの本質は、XYZへ単に別名を付けたことではない。
 
@@ -725,6 +808,8 @@ $$
 
 と書ける。L*a*b*がXYZに対して場所ごとに異なる「物差し」を与えることが、均等色空間の数学的意味である。
 
+CIEDE2000については、正規化した明度差・クロマ差・色相差に対する二次形式として見ると、等色差面は球ではなく色領域依存の楕円体になる。つまり「色差1」という同じ数値でも、許容される変化の方向と大きさは基準色によって変わる。
+
 色彩検定では「L*は明度、a*は赤―緑、b*は黄―青」と覚えるだけでなく、
 
 $$
@@ -738,8 +823,10 @@ $$
 
 ## 参考資料
 
-- 色彩検定協会「セミナー・イベント」2026年「XYZ 表色系と均等色空間」―公式テキスト1級p.41〜52を対象とする解説案内  
-  https://www.aft.or.jp/pages/event-seminar
+- 色彩検定協会「色彩検定とは―各級の目安」  
+  https://www.aft.or.jp/pages/feature/level
+- 色彩検定協会「過去開催のセミナー・講座一覧」2025年9月「XYZ 表色系と均等色空間」  
+  https://www.aft.or.jp/pages/event-seminar/seminar-archive
 - CIE, e-ILV 17-23-076, “CIE 1976 L*a*b* colour space”  
   https://cie.co.at/eilvterm/17-23-076
 - CIE, e-ILV 17-23-077, “CIE 1976 L*a*b* colour difference”  
@@ -748,6 +835,8 @@ $$
   https://www.cie.co.at/publications/colorimetry-part-4-cie-1976-lab-colour-space-1
 - ISO/CIE 11664-6:2022(E), “Colorimetry — Part 6: CIEDE2000 Colour-Difference Formula”  
   https://www.cie.co.at/publications/colorimetry-part-6-ciede2000-colour-difference-formula-1
+- CIE 230:2019, “Validity of Formulae for Predicting Small Colour Differences”  
+  https://www.cie.co.at/publications/validity-formulae-predicting-small-colour-differences
 - Sharma, G., Wu, W., Dalal, E. N. (2005), “The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations”, Color Research & Application 30(1), 21–30.  
   https://doi.org/10.1002/col.20070
 - CIE 015:2018, “Colorimetry, 4th Edition”  
