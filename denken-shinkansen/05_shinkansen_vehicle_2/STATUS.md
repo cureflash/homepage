@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_clean_blind_v6_fail`
+- current_status: `topic_38_clean_blind_v7_invalid`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: Topic 38 fresh clean blind v7。candidate固定前は必須正本・question-only intake・公式「問題」PDFだけを確認し、保存済み正答を含むTopic 38 source/教材・prior candidate/QA・公式標準解答を開かず、固定5問・25答案要素を独立再解答する。
+- next_start: Topic 38 fresh clean blind v8。candidate固定前は必須正本・question-only intake・公式「問題」PDFだけを確認し、Topic 38 source/教材・prior candidate/QA・公式標準解答・answer-bearing commit diffを開かない。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,7 +29,7 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `CLEAN_BLIND_V6_FAIL`
+状態: `CLEAN_BLIND_V7_INVALID`
 
 ### remediation完了範囲
 
@@ -46,33 +46,36 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 - 未確認COMTRAC実装・数値の真値化: `0件`
 - Topic 39先取り: `0件`
 
-### clean blind v6
+### 直前の有効clean blind
 
-- freshness: `PASS`
-- candidate: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v6_candidate.md`
-- candidate固定commit: `1b23c2148a5878d88df2a4e13346de3b21b163c3`
-- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v6_qa.md`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 唯一の不一致: R2一次「機械」問8(3)。candidate `カ / 中断`、公式 `ヲ / 割込み`。
-- 診断: 状態変化の契機「割込み」と、割込み後の通常処理側の結果「中断」の選択肢対応を誤った独立再解答ミス。
-- 教材だけで導出可能: `25 / 25 PASS`
+- v6は品質ゲート未達で `FAIL`。
+- 詳細な答案・正誤位置・公式正答はv6 QA正本だけに保持し、mandatoryな `STATUS.md` / `HANDOFF.md` には再掲しない。
 - 教材欠落によるFAIL: `0件`
-- candidate固定後修正: `0件`
 - 教材本文修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 38 completed: `NO`
 
+### clean blind v7 invalidation
+
+- candidate作成: `0件`
+- candidate commit: `0件`
+- QA照合: `0件`
+- 原因: candidate固定前の必須reconcileで、当時の `STATUS.md` / `HANDOFF.md` 自体にv6の保存済み正答を特定できる答案詳細が記載されていた。
+- `MASTER_SPEC.md` §1は毎runで `STATUS.md` / `HANDOFF.md` の確認を必須とし、`EXAM_ALIGNMENT_SPEC.md` §10は保存済み正答を先に見ない独立再解答を要求するため、このrunではfreshnessを満たせない。
+- exact blocker: `TOPIC38_CLEAN_BLIND_V7_FRESHNESS_CONTAMINATED_BY_MANDATORY_RECORDS`
+- 記録: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v7_invalid.md`
+
 ### 次の安全な工程
 
-- Topic 38 fresh clean blind v7をfresh workerで実施する。
+- mandatory記録は本更新で非answer-bearing要約へ整理した。
+- Topic 38 fresh clean blind v8を、このrunのv6答案詳細を参照していないfresh workerで実施する。
 - candidate固定前は `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、question-only intake、公式「問題」PDFだけを読む。
 - Topic 38 source Markdown、練習source/PDF、解説PDF、prior clean-blind candidate / QA、公式標準解答、保存済み正答を含むQA・answer-bearing commit diffはcandidate固定前に開かない。
 - 固定5問・25答案要素を独立再解答してcandidateを固定する。
 - 固定後に公式標準解答と現行教材へ照合する。
 - `25 / 25` かつ教材依存 `25 / 25` ならcompleted判定へ進む。未達ならcandidateを修正せずQA記録する。
-- v6の不一致は教材欠落ではないため、v7前の教材remediation・固定EXAM_ALIGNMENT変更は行わない。
 
-exact blocker: `0件`。次工程は `TOPIC38_CLEAN_BLIND_V7`。
+次工程は `TOPIC38_CLEAN_BLIND_V8`。
 
 ## Topic 21 固定注記
 
