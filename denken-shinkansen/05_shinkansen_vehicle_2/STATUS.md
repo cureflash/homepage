@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v6_failed / clean_blind_v7_required`
+- current_status: `topic_39_clean_blind_v6_fail / BLOCKED_PROCESS_SPEC`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh workerでTopic 39 clean blind v7を開始し、同じ固定5問・25答案要素をquestion-onlyから再解答してcandidateを先にcommitする。R2二次は既存EXAM_ALIGNMENTの固定5答案要素区切りをそのまま維持する。v1〜v6 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材はcandidate固定後にのみ参照する。
+- next_start: clean blind v7は開始しない。R2二次の固定5答案要素について、answer-bearing情報を含めず「5群の境界だけ」をquestion-only intakeへ明示できるまで停止する。その修正後、別fresh worker/contextでv7を実施する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V6_FAIL / V7_REQUIRED`
+判定: `IN_PROGRESS / CLEAN_BLIND_V6_FAIL / BLOCKED_PROCESS_SPEC`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -39,7 +39,6 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 系列SPEC固定13項目: `13 / 13 mapped`
 - Topic 38固定問題の重複採用: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
-- exact blocker: `0件`
 
 固定5問:
 1. R4一次「機械」問3 — 計器用変成器
@@ -67,7 +66,6 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 公式標準解答一致: `24 / 25 FAIL`
 - 教材だけで導出可能: `25 / 25 PASS`
 - 診断: `solver error`。教材欠落ではない。
-- 教材・PDF・練習・PowerPoint修正: `0件`
 
 ### clean blind v2
 
@@ -107,9 +105,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ### clean blind v5
 
-- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v5_candidate.md`
 - candidate commit: `4ec9094da46b28a861a1af03fc57d72a4f363f87`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v5_qa.md`
 - candidate freshness: `PASS`
 - 公式標準解答一致: `22 / 25 FAIL`
 - 一次: `18 / 20 PASS`
@@ -142,17 +138,16 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
 
-### 今回runのfreshness状態
+### exact blocker
 
-- v6 candidateは別fresh workerがquestion-only intakeと公式「問題」PDFのみでcandidateを先に固定したため、candidate freshnessは `PASS`。
-- v6 candidate固定後に公式解答・既存教材・v5 QAを照合し、v6 QAを正本化した。
-- このworker/contextはv7 candidate固定前からanswer-bearing情報を参照済みのため、v7 workerとしてはfreshness invalid。
-- exact blocker: `TOPIC39_CLEAN_BLIND_V7_CURRENT_WORKER_FRESHNESS_INVALID`
-- blocker detail: `EXAM_ALIGNMENT_SPEC.md` §10のclean blind条件を満たすv7 candidateは別fresh worker/contextで生成する必要がある。
+- exact blocker: `TOPIC39_CLEAN_BLIND_FIXED_SPLIT_NOT_AVAILABLE_IN_QUESTION_ONLY_INTAKE`
+- detail: question-only intakeはR2二次を「5答案要素」とだけ記載し、既存EXAM_ALIGNMENTで固定した5群の境界を記載していない。公式問題本文からは複数の5分割が成立し得るため、fresh workerが「既存と同じ区切り」を確定するにはanswer-bearing資料を先に読むか区切りを推測する必要がある。前者はclean blind freshnessに反し、後者は推測禁止に反する。
+- resolution required: answer-aware coordinatorが正答内容を載せず、固定5群の境界だけをquestion-only intakeへ明示する。その後に別fresh worker/contextでv7を行う。
+- current worker: candidate固定後にanswer-bearing資料を参照済みのためv7 workerとしてはfreshness invalid。
 
 ### 次工程
 
-別fresh workerによるclean blind v7のみ。candidate固定前にv1〜v6 candidate/QA、公式解答、保存済み正答、Topic 39 answer-bearing教材を参照しない。v7ではR2二次の既存固定5答案要素区切りをそのまま維持する。`公式標準解答一致 25 / 25`、`教材だけで導出可能 25 / 25`、固定区切り維持をすべて満たした場合のみTopic 39を `completed`、系列を `39 / 39 completed` とする。
+blocker解消まで停止。教材成果物、固定EXAM_ALIGNMENT、系列SPEC、Topic 21一般式は変更しない。
 
 ## Topic 21 固定注記
 
