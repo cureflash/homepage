@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_clean_blind_v6_pending / current_worker_freshness_invalid`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_clean_blind_v6_blocked / current_worker_freshness_invalid`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 39 固定ゲート
 
@@ -111,26 +111,29 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
 
-## freshness
+## freshness / exact blocker
 
 v5はquestion-only intakeと公式「問題」PDFのみでcandidateを先に固定し、その後に公式標準解答・既存教材・v4 QAと照合したため、v5 candidateのfreshnessは `PASS`。
 
-ただし本workerはv5固定後にanswer-bearing資料を参照済みであり、clean blind v6のworkerとしてはfreshness invalid。v6は別fresh workerで実施する。
+ただし本worker/contextはv6 candidate固定前からTopic 39のanswer-bearing情報を参照済みであり、clean blind v6のworkerとしてfreshness invalid。同一automation contextを再実行しても参照済み情報は消えないためfreshnessを回復できない。
+
+- exact blocker: `TOPIC39_CLEAN_BLIND_V6_CURRENT_WORKER_FRESHNESS_INVALID`
+- basis: `EXAM_ALIGNMENT_SPEC.md` §10のclean blind条件により、candidate固定前にanswer-bearing情報を見たworkerは有効なblind candidateを生成できない。
+- resolution: v6は別fresh worker/contextで実施する。本workerはv6 candidate・QA・教材修正を行わない。
 
 ## 次工程
 
-`TOPIC39_CLEAN_BLIND_V6`。
+`TOPIC39_CLEAN_BLIND_V6`。別fresh worker/contextのみで実施する。
 
-1. 別fresh workerで開始する。
-2. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、直近コミットをmetadataレベルでreconcileする。
-3. candidate固定前はv1〜v5 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
-4. `39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md` と公式「問題」PDFだけで同じ固定5問を独立再解答する。
-5. 固定5問・25答案要素のv6 candidateを先に保存・commitする。R2二次は固定5答案要素の区切りをそのまま維持する。
-6. candidate固定後にのみ公式標準解答と既存教材を照合する。
-7. `公式標準解答一致 25 / 25`、`教材だけで導出可能 25 / 25`、R2固定区切り維持の全てを判定する。
-8. FAILが教材欠落なら既存仕様範囲内でremediationする。独立再解答側のミス又は固定区切り不適合なら教材を変更せず、さらに別fresh workerで再実施する。
-9. 固定EXAM_ALIGNMENT、系列SPEC固定13項目、Topic 21一般式を勝手に変更しない。
-10. PASS後にのみTopic 39を `completed`、系列を `39 / 39 completed` とする。
+1. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、直近コミットをmetadataレベルでreconcileする。
+2. candidate固定前はv1〜v5 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
+3. `39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md` と公式「問題」PDFだけで同じ固定5問を独立再解答する。
+4. 固定5問・25答案要素のv6 candidateを先に保存・commitする。R2二次は固定5答案要素の区切りをそのまま維持する。
+5. candidate固定後にのみ公式標準解答と既存教材を照合する。
+6. `公式標準解答一致 25 / 25`、`教材だけで導出可能 25 / 25`、R2固定区切り維持の全てを判定する。
+7. FAILが教材欠落なら既存仕様範囲内でremediationする。独立再解答側のミス又は固定区切り不適合なら教材を変更せず、さらに別fresh workerで再実施する。
+8. 固定EXAM_ALIGNMENT、系列SPEC固定13項目、Topic 21一般式を勝手に変更しない。
+9. PASS後にのみTopic 39を `completed`、系列を `39 / 39 completed` とする。
 
 ## 境界条件
 
