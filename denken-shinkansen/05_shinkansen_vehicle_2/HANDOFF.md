@@ -1,6 +1,6 @@
 # HANDOFF - 新幹線車両・電験二種
 
-更新日: 2026-09-21
+更新日: 2026-09-22
 
 ## 正本・現在地
 
@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_clean_blind_v9_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_clean_blind_v10_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 39 固定ゲート
 
@@ -45,74 +45,19 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 
 ## clean blind履歴
 
-### v1
-- candidate commit: `cb034e4e121512844cf0333c6df49de84d7555e8`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
+- v1: candidate `cb034e4e121512844cf0333c6df49de84d7555e8` / 公式一致 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS`
+- v2: candidate `0d2b169dff258124d088581b7690bfcdc063fc4f` / 公式一致 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS`
+- v3: candidate `d7408b99b0287bdc21c034379eb70b969f9ae370` / freshness `PASS` / 公式一致 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v4: candidate `32aa4a98774f662eb01d02f29d71fe6ba287f26a` / freshness `PASS` / 公式一致 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v5: candidate `4ec9094da46b28a861a1af03fc57d72a4f363f87` / freshness `PASS` / 一次 `18 / 20` / 二次 `4 / 5` / 合計 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v6: candidate `9f8a1260c334054eae18e124ff3a2722f75961b7` / freshness `PASS` / 一次 `20 / 20` / 二次 `4 / 5` / 合計 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v7: candidate `05a182424a027d47e2fc452aa8ca6a92d34a5dd8` / freshness `PASS` / 一次 `20 / 20` / 二次 `4 / 5` / 合計 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS`
+- v8: candidate `0763c9055298cf54f853c79b0ed60da7439f2d20` / freshness `PASS` / 一次 `20 / 20` / 二次 `4 / 5` / 合計 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS`
+- v9 pre-attempt: 別worker/contextでfreshness不成立のためcandidate未作成。
+- v9 actual: candidate `203bec75a792d541126e1863604eb35cddb59146` / freshness `PASS` / 一次 `19 / 20` / 二次 `4 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 
-### v2
-- candidate commit: `0d2b169dff258124d088581b7690bfcdc063fc4f`
-- 公式標準解答一致: `21 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
+v9 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v9_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
 
-### v3
-- candidate commit: `d7408b99b0287bdc21c034379eb70b969f9ae370`
-- candidate freshness: `PASS`
-- 公式標準解答一致: `23 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-
-### v4
-- candidate commit: `32aa4a98774f662eb01d02f29d71fe6ba287f26a`
-- candidate freshness: `PASS`
-- 公式標準解答一致: `22 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-
-### v5
-- candidate commit: `4ec9094da46b28a861a1af03fc57d72a4f363f87`
-- candidate freshness: `PASS`
-- 一次: `18 / 20 PASS`
-- 二次: `4 / 5 PASS`
-- 公式標準解答一致: `22 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-
-### v6
-- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v6_candidate.md`
-- candidate commit: `9f8a1260c334054eae18e124ff3a2722f75961b7`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v6_qa.md`
-- candidate freshness: `PASS`
-- 一次: `20 / 20 PASS`
-- 二次: `4 / 5 PASS`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-- 診断: `solver error + fixed split nonconformance`。教材欠落ではない。
-
-### v7
-- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_candidate.md`
-- candidate commit: `05a182424a027d47e2fc452aa8ca6a92d34a5dd8`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_qa.md`
-- candidate freshness: `PASS`
-- 一次: `20 / 20 PASS`
-- 二次: `4 / 5 PASS`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `PASS`
-- 診断: `solver error`。教材欠落ではない。
-
-### v8
-- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v8_candidate.md`
-- candidate commit: `0763c9055298cf54f853c79b0ed60da7439f2d20`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v8_qa.md`
-- candidate freshness: `PASS`
-- 一次: `20 / 20 PASS`
-- 二次: `4 / 5 PASS`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `PASS`
-- 診断: `solver error`。教材欠落ではない。
 - 教材修正・再生成: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC固定13項目変更: `0件`
@@ -122,10 +67,10 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 
 ## 次工程
 
-`TOPIC39_CLEAN_BLIND_V9`。別fresh worker/contextのみで実施する。
+`TOPIC39_CLEAN_BLIND_V10`。別fresh worker/contextのみで実施する。
 
 1. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、question-only intakeをreconcileする。
-2. candidate固定前はv1〜v8 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
+2. candidate固定前はv1〜v9 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
 3. question-only intakeと公式「問題」PDFだけで固定25答案要素を解く。R2二次はintake記載の5群境界を維持し、分割し直さない。
 4. candidateをcommitして固定した後にのみ、公式標準解答・既存教材と照合する。
 5. `25 / 25`公式一致、`25 / 25`教材導出可能、固定5群境界維持を満たした場合だけ最終QAへ進める。
