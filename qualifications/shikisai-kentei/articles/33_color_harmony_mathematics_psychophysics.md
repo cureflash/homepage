@@ -662,6 +662,64 @@ $$
 
 色彩検定の配色理論を大学レベルへ拡張すると、配色は「センスだけ」の話ではなく、円周幾何、色空間、測色、心理測定、統計モデルが接続する問題として扱える。
 
+## 18　一対比較なら「どちらがより調和的か」を確率として測れる
+
+10段階評定では、観察者ごとに「7点」の使い方が異なりうる。そこで絶対評定の代わりに、二つの配色 $i,j$ を同時に提示し、どちらがより調和的に見えるかを選ばせる一対比較を使える。
+
+Bradley–Terryモデルでは、各配色に潜在的な調和尺度 $\eta_i$ があると考え、
+
+$$
+P(i\succ j)
+=\frac{e^{\eta_i}}{e^{\eta_i}+e^{\eta_j}}
+=\frac{1}{1+e^{-(\eta_i-\eta_j)}}
+$$
+
+と置く。重要なのは、選択確率が個々の $\eta_i$ の絶対値ではなく差 $\eta_i-\eta_j$ だけで決まることである。
+
+配色の測色的特徴量 $\mathbf{x}_i$ から潜在尺度を
+
+$$
+\eta_i=\boldsymbol{\beta}^{\mathsf T}\mathbf{x}_i
+$$
+
+とモデル化すれば、
+
+$$
+P(i\succ j)
+=\sigma\!\left[\boldsymbol{\beta}^{\mathsf T}(\mathbf{x}_i-\mathbf{x}_j)\right]
+$$
+
+となる。例えば $\mathbf{x}$ に色相間隔、$\Delta L^*$、$\Delta C^*$、平均彩度、面積比などを入れれば、「どの特徴差が比較判断をどの方向へ動かすか」を係数 $\boldsymbol{\beta}$ として推定できる。
+
+$i$ と $j$ を $n_{ij}$ 回比較し、そのうち $i$ が $m_{ij}$ 回選ばれたなら、二項モデルの対数尤度は
+
+$$
+\ell
+=\sum_{i<j}
+\left[
+ m_{ij}\log p_{ij}
+ +(n_{ij}-m_{ij})\log(1-p_{ij})
+\right]
+$$
+
+である。これを最大化して潜在尺度や係数を推定する。
+
+ただし、すべての $\eta_i$ に同じ定数 $c$ を足しても
+
+$$
+(\eta_i+c)-(\eta_j+c)=\eta_i-\eta_j
+$$
+
+なので確率は変わらない。したがって絶対的な原点はデータから識別できず、例えば
+
+$$
+\sum_i\eta_i=0
+$$
+
+のような制約を置く必要がある。これは「調和の絶対値」を直接測っているのではなく、比較から相対尺度を構成していることの数学的表現である。
+
+この方法を使えば、古典的な「補色は調和する」「等間隔配置は調和する」といった命題を、配色対の選択確率という観測可能な量へ落として検証できる。BradleyとTerryの原論文が不完備ブロック計画を扱っているのも、すべての対象を総当たりで比較しなくても相対尺度を推定する必要があるためである。
+
 ## 参考資料
 
 1. 公益社団法人 色彩検定協会, 「色彩検定とは―各級の目安」. https://www.aft.or.jp/pages/feature/level
@@ -674,3 +732,4 @@ $$
 8. K. B. Schloss and S. E. Palmer, “Aesthetic response to color combinations: preference, harmony, and similarity,” *Attention, Perception, & Psychophysics*, 73, 551–571, 2011. DOI: 10.3758/s13414-010-0027-0.
 9. G. Sharma, W. Wu and E. N. Dalal, “The CIEDE2000 Color-Difference Formula: Implementation Notes, Supplementary Test Data, and Mathematical Observations,” *Color Research & Application*, 30(1), 21–30, 2005. DOI: 10.1002/col.20070.
 10. CIE, *CIE 015:2018 Colorimetry, 4th Edition*, International Commission on Illumination, 2018. https://cie.co.at/publications/colorimetry-4th-edition
+11. R. A. Bradley and M. E. Terry, “Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons,” *Biometrika*, 39(3/4), 324–345, 1952. DOI: 10.1093/biomet/39.3-4.324.
