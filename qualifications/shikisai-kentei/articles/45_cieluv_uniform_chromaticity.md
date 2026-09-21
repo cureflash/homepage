@@ -134,6 +134,86 @@ CIEはu′v′色度図を、xy色度図の射影変換として定義してい�
 
 「知覚的均等性を改善しながら、色度図として重要な直線関係も保つ」というのがu′v′図の設計上の利点である。
 
+### 発展：u′v′変換を同次座標で書く
+
+「射影変換だから直線を保つ」という性質は、同次座標を使うと厳密に確認できる。
+
+xy平面の点を
+
+$$
+\tilde{\mathbf{x}}
+=
+\begin{pmatrix}
+x\\y\\1
+\end{pmatrix}
+$$
+
+と表し、行列
+
+$$
+H=
+\begin{pmatrix}
+4&0&0\\
+0&9&0\\
+-2&12&3
+\end{pmatrix}
+$$
+
+を作用させる。
+
+すると
+
+$$
+\begin{pmatrix}
+U\\V\\W
+\end{pmatrix}
+=H\tilde{\mathbf{x}}
+=
+\begin{pmatrix}
+4x\\9y\\-2x+12y+3
+\end{pmatrix}
+$$
+
+となる。同次座標から通常の座標へ戻すと
+
+$$
+u'=\frac{U}{W}
+=\frac{4x}{-2x+12y+3}
+$$
+
+$$
+v'=\frac{V}{W}
+=\frac{9y}{-2x+12y+3}
+$$
+
+となり、CIE 1976 u′v′の式そのものが得られる。
+
+さらに
+
+$$
+\det H=108\neq0
+$$
+
+なので、この変換は退化していない射影変換である。
+
+xy平面上の直線を同次座標で
+
+$$
+\mathbf{l}^{\mathsf T}\tilde{\mathbf{x}}=0
+$$
+
+と書くと、変換後の直線係数は
+
+$$
+\mathbf{l}'=H^{-\mathsf T}\mathbf{l}
+$$
+
+で与えられる。したがって、元の直線上のすべての点は変換後も一本の直線上に並ぶ。
+
+これが、xy色度図で2色を結ぶ加法混色線が、u′v′色度図でも曲線にならず直線のまま残る数学的理由である。
+
+ただし射影変換は「直線上の距離比」まで保存するわけではない。したがって、混色点が直線上にあるという関係は保たれても、xy図での線分上の位置比とu′v′図でのユークリッド距離比を、そのまま同一視してはいけない。
+
 ## 5　u′v′だけでは明るさを持たない
 
 xyと同様、u′v′は色度だけの2次元座標であり、明るさ情報を含まない。
@@ -578,3 +658,4 @@ $$
 - [ISO/CIE 11664-5:2024, Colorimetry — Part 5: CIE 1976 L*u*v* colour space and u′, v′ uniform chromaticity scale diagram](https://www.iso.org/standard/86224.html)
 - [CIE 015:2018, Colorimetry, 4th Edition](https://cie.co.at/publications/colorimetry-4th-edition)
 - [Konica Minolta「L*u*v*色空間（CIE 1976）」](https://www.konicaminolta.jp/instruments/knowledge/color/section5/5-14/)
+- H. S. M. Coxeter, *Projective Geometry*, 2nd ed., Springer, 1987.
