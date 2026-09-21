@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_clean_blind_v19_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_clean_blind_v20_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 39 固定ゲート
 
@@ -64,26 +64,27 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 - v14 actual: candidate `ef9cf2b5deed62c03a5de0636815a161320339af` / freshness `PASS` / 一次 `19 / 20` / 二次 `3 / 5` / 合計 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×3`
 - v15: candidate `85db8a6cac8753bcaabe9eb3dc99515f4071e3e9` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v16: candidate `46e0bb622ce297352402fde037d479cd03e1d696` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver omission ×2`
-- v17 pre-attempt: 別worker/contextでfreshness不成立のためcandidate未作成。
+- v17 pre-attempt: 別worker/contextでcandidate固定前にTopic 39 answer-bearing情報を既読のためfreshness不成立。candidate未作成。
 - v17 actual: candidate `d52dd566563912b8aa20114d2da4ec1b91adac04` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission ×2`
 - v18: candidate `86687a455b86d8a4c05c203299bcba5038cbe339` / freshness `PASS` / 一次 `19 / 20` / 二次 `3 / 5` / 合計 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission ×3`
-- v19 pre-attempt: 本worker/contextはcandidate固定前にTopic 39 answer-bearing情報を既読のためfreshness不成立。candidate未作成。worker-local exact blocker: `TOPIC39_CLEAN_BLIND_V19_CURRENT_CONTEXT_FRESHNESS_INVALID`。
+- v19 pre-attempt: 既存worker/contextでfreshness不成立のためcandidate未作成。
+- v19 actual: candidate `e1c580c614b6e1da9db1b1e2c971b047988890f6` / freshness `PASS` / 一次 `19 / 20` / 二次 `3 / 5` / 合計 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission ×3`
 
-v18 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v18_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
+v19 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v19_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
 
 - 教材修正・再生成: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC固定13項目変更: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
-- exact blocker: `0件`（global。上記v19はworker-local）
+- exact blocker: `0件`
 
 ## 次工程
 
-`TOPIC39_CLEAN_BLIND_V19`。別fresh worker/contextのみで実施する。
+`TOPIC39_CLEAN_BLIND_V20`。別fresh worker/contextのみで実施する。
 
 1. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、question-only intakeをreconcileする。
-2. candidate固定前はv1〜v18 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
+2. candidate固定前はv1〜v19 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
 3. question-only intakeと公式「問題」PDFだけで固定25答案要素を解く。R2二次はintake記載の5群境界を維持し、分割し直さない。
 4. candidateをcommitして固定した後にのみ、公式標準解答・既存教材と照合する。
 5. `25 / 25`公式一致、`25 / 25`教材導出可能、固定5群境界維持を満たした場合だけ最終QAへ進める。
