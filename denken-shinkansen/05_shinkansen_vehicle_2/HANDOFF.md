@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_explanation_source_remediated`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_practice_source_remediated`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 37 完了記録
 
@@ -21,7 +21,7 @@ Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
 ## Topic 38 clean blind v1診断
 
-固定5問はR8一次「機械」問8、R2一次「機械」問8、H29一次「機械」問8、H26一次「機械」問3、H23一次「機械」問8。一次 `5問 / 25答案要素`、二次 `0問`、件数合わせ `0件`。固定5問自体は変更しない。
+固定5問はR8一次「機械」問8、R2一次「機械」問8、H29一次「機械」問8、H26一次「機械」問3、H23一次「機械」問8。一次 `5問 / 25答案要素`、二次 `0問`、直接対応なし・件数合わせ `0件`。固定5問自体は変更しない。
 
 clean blind v1は公式標準解答 `25 / 25 PASS`、教材だけで導出 `23 / 25 FAIL`。
 
@@ -30,7 +30,7 @@ clean blind v1は公式標準解答 `25 / 25 PASS`、教材だけで導出 `23 /
 - H29問8/H23問8: 固定答案要素mappingが実空欄と不一致
 - v1 candidate修正: `0件`
 
-## 今runのremediation完了範囲
+## remediation完了範囲
 
 ### EXAM_ALIGNMENT＋QA
 
@@ -61,16 +61,35 @@ clean blind v1は公式標準解答 `25 / 25 PASS`、教材だけで導出 `23 /
 - Topic 39先取り: `0件`
 - exact blocker: `0件`
 
-## 次工程: practice source remediation
+### 練習source＋source QA
 
-次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、remediated EXAM_ALIGNMENT・解説sourceをreconcileし、既存練習source/QAへ同じ3点と実空欄mappingを反映する。
+`PASS / PRACTICE_SOURCE_REMEDIATED`
 
-その後、旧派生成果物を流用せず以下を再生成・再QAする。
+- source remediation commit: `40f4234fad5e4087369e574978583928545e6b20`
+- source QA commit: `34a229e28e92425d7a25aa7953c3788f4b5159a9`
+- 一次試験型: `12問 / 12問五肢択一`
+- 一次正答一意性: `12 / 12 PASS`
+- 二次試験型: `0題`、直接対応なし・件数合わせ `0件`
+- R8(5): 角位置センサなしのオープンループ簡易位置決め、過負荷・急加減速時の脱調を問6へ反映
+- H23(3): ノイマン形コンピュータの記憶プログラム方式・原則逐次命令実行を問3へ反映
+- H29(4): 単体→結合→システム試験で対象プログラム量・範囲が大きくなることを問7へ反映
+- H29/H23実空欄mapping: `10 / 10 PASS`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 計算再検算: `3 / 3 PASS`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
+- exact blocker: `0件`
 
-1. explanation PDF / PDF QA
-2. practice PDF / PDF QA
-3. PowerPoint / PowerPoint QA
-4. fresh clean blind v2
+## 次工程: explanation PDF regeneration
+
+次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、remediated EXAM_ALIGNMENT・解説source・練習sourceをreconcileし、remediated解説sourceから解説PDFを再生成してPDF QAを行う。remediation前PDFは流用しない。
+
+その後、以下を順に進める。
+
+1. practice PDF / PDF QA
+2. PowerPoint / PowerPoint QA
+3. fresh clean blind v2
 
 v1 candidateは修正しない。v2は別candidateとして固定する。
 
