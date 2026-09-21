@@ -138,6 +138,70 @@ $$
 
 この式は、フィルター同士の多重反射や蛍光、散乱などを無視できる理想化された条件で特に明瞭に成立する。実物の印刷インキや絵具は散乱を伴うため、単純な掛け算だけでは表せない。
 
+### 3.1　多重反射まで入れると、単純な掛け算からずれる
+
+2枚の平行なフィルターの間で光が何度も反射する場合、$T_1T_2$ は最初の1回で通り抜ける成分しか数えていない。第1フィルターの前向き透過率を $T_1^{\rightarrow}$、第2フィルターを $T_2^{\rightarrow}$、第1フィルターを裏側から見た反射率を $R_1^{\leftarrow}$、第2フィルターを表側から見た反射率を $R_2^{\rightarrow}$ とする。
+
+最初に透過する成分は
+
+$$
+T_1^{\rightarrow}T_2^{\rightarrow}
+$$
+
+である。第2フィルターで反射され、第1フィルター裏面でも反射されてから再び第2フィルターを通る成分は
+
+$$
+T_1^{\rightarrow}
+R_2^{\rightarrow}
+R_1^{\leftarrow}
+T_2^{\rightarrow}
+$$
+
+となる。さらに1往復するごとに $R_1^{\leftarrow}R_2^{\rightarrow}$ が掛かるので、位相を平均できる非コヒーレント光では強度の総和は等比級数
+
+$$
+T_{\rm eff}
+=
+T_1^{\rightarrow}T_2^{\rightarrow}
+\left[
+1+R_1^{\leftarrow}R_2^{\rightarrow}
++\left(R_1^{\leftarrow}R_2^{\rightarrow}\right)^2+\cdots
+\right]
+$$
+
+となる。$|R_1^{\leftarrow}R_2^{\rightarrow}|<1$ なら
+
+$$
+\boxed{
+T_{\rm eff}
+=
+\frac{T_1^{\rightarrow}T_2^{\rightarrow}}
+{1-R_1^{\leftarrow}R_2^{\rightarrow}}
+}
+$$
+
+を得る。
+
+したがって、実際の積層系では「透過率を掛ける」だけでは多重反射による再透過を落としている。反射率が小さい、表面が粗く往復光が失われる、あるいは測定条件として多重反射を無視できる場合に
+
+$$
+T_{\rm eff}\approx T_1T_2
+$$
+
+がよい近似になる。
+
+一方、レーザーのようにコヒーレンスが高い光では往復光の位相差を無視できず、強度ではなく複素電場振幅を足し合わせる必要がある。この場合はFabry–Pérot干渉や薄膜の伝達行列法の問題になり、透過率は波長と膜厚に対して振動する。つまり
+
+$$
+\text{減法混色の単純モデル}
+\rightarrow
+\text{非コヒーレント多重反射}
+\rightarrow
+\text{コヒーレント干渉}
+$$
+
+は、同じ積層光学系を近似の精度に応じて段階的に記述したものである。
+
 ## 4　なぜ重ねるほど暗くなるのか
 
 各波長について
@@ -825,6 +889,7 @@ $$
 | CMYK | 実在色材の非理想性と印刷実務を補う4色系 |
 | 絵具の混色 | 吸収に加え散乱も必要で、単純な透過率積ではない |
 | 網点印刷 | インキ重なりの減法混色と、微小領域の面積平均が同時に起こる |
+| フィルターの多重反射 | 透過率の積だけでなく反射光の往復を等比級数として加える |
 
 試験対策としてはCMYの組合せを即答できることが重要だが、大学レベルでは「なぜその組合せになるのか」を分光透過率の積として説明し、さらに顔料ではKubelka–Munk理論、網点印刷ではNeugebauerモデルまで区別できることが本質である。
 
@@ -859,10 +924,11 @@ $$
 
 加法混色が分光分布の「足し算」であるのに対し、減法混色は分光透過率の「掛け算」である。この違いを理解すると、RGBとCMY、補色、印刷、フィルター、絵具混色の関係を同じ物理体系の中で整理できる。
 
-一方で、実在の顔料や印刷インキでは散乱・表面反射・網点構造などが加わる。顔料層ではKubelka–Munkの二流束モデルにより吸収係数 $K$ と散乱係数 $S$ の競合として反射率を扱い、網点印刷ではNeugebauer primaryの面積平均と紙内部散乱まで考える必要がある。したがってCMYの規則は重要な基礎モデルではあるが、現実の色材を精密に扱うには分光測色と放射輸送の考え方まで必要になる。
+一方で、実在の積層フィルターでは多重反射、顔料や印刷インキでは散乱・表面反射・網点構造などが加わる。積層系では非コヒーレントな多重反射を等比級数として扱い、顔料層ではKubelka–Munkの二流束モデルにより吸収係数 $K$ と散乱係数 $S$ の競合として反射率を扱い、網点印刷ではNeugebauer primaryの面積平均と紙内部散乱まで考える必要がある。したがってCMYの規則は重要な基礎モデルではあるが、現実の色材を精密に扱うには分光測色と放射輸送・積層光学の考え方まで必要になる。
 
 ## 参考資料
 
+- 色彩検定協会, 「色彩検定とは」. https://www.aft.or.jp/pages/feature/level
 - Commission Internationale de l'Éclairage (CIE), CIE S 017:2020 International Lighting Vocabulary, e-ILV 17-24-065 “transmittance”. https://cie.co.at/eilvterm/17-24-065
 - CIE, e-ILV 17-24-082 “absorptance”. https://cie.co.at/eilvterm/17-24-082
 - CIE, e-ILV 17-24-072 “transmittance optical density”. https://cie.co.at/eilvterm/17-24-072
@@ -870,6 +936,7 @@ $$
 - CIE, ISO/CIE 11664-3 / CIE S 014-3, Colorimetry — Part 3: CIE Tristimulus Values. https://www.cie.co.at/publications/colorimetry-part-3-cie-tristimulus-values-1
 - National Institute of Standards and Technology (NIST), Spectral Reflectance and Transmittance. https://www.nist.gov/programs-projects/spectral-reflectance-and-transmittance
 - NIST, Reference Transmittance Spectrophotometer (RTS). https://www.nist.gov/laboratories/tools-instruments/reference-transmittance-spectrophotometer-rts
+- H. A. Macleod, Thin-Film Optical Filters, 4th ed., CRC Press, 2010.
 - Dichter, D. W., “Kubelka-Munk model of full-gamut oil colour mixing,” Journal of the International Colour Association, 32 (2023). https://doi.org/10.82019/JAIC.3207
 - Berns, R. S., “Single-constant simplification of Kubelka-Munk turbid-media theory for paint systems—A review,” Color Research & Application, 32(3), 201–207 (2007). https://doi.org/10.1002/col.20309
 - Kubelka, P. & Munk, F., “Ein Beitrag zur Optik der Farbanstriche,” Zeitschrift für technische Physik, 12, 593–601 (1931).
