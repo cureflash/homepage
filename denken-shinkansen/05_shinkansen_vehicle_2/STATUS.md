@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_explanation_source_remediated`
+- current_status: `topic_38_practice_source_remediated`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`をreconcileし、remediated EXAM_ALIGNMENT・解説sourceを正本として練習source＋source QAを修正する。その後、解説PDF・練習PDF・PowerPointを再生成・再QAし、fresh clean blind v2へ進む。
+- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、remediated EXAM_ALIGNMENT・解説source・練習sourceをreconcileし、解説PDFを再生成＋PDF QAする。その後、練習PDF、PowerPoint、fresh clean blind v2へ進む。remediation前の派生成果物は流用しない。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,7 +29,7 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `SOURCE_REMEDIATION_IN_PROGRESS / explanation_source_pass`
+状態: `SOURCE_REMEDIATION_COMPLETE / derived_artifact_regeneration_pending`
 
 ### clean blind v1診断
 
@@ -48,7 +48,7 @@ EXAM_ALIGNMENT＋QA: `PASS / REMEDIATED`
 - H29実空欄へ修正: `(1)逐次的 (2)結合 (3)ドライバ (4)大きくなる (5)ブラックボックス`
 - H23実空欄へ修正: `(1)組合せ回路 (2)フリップフロップ (3)ノイマン形コンピュータ (4)ASIC (5)Quine–McCluskey法`
 - 一次: `5問 / 25答案要素`、`25 / 25 PASS`
-- 二次: `0問`、件数合わせ `0件`
+- 二次: `0問`、直接対応なし・件数合わせ `0件`
 - SPEC固定9項目: `9 / 9 PASS`
 
 解説source＋source QA: `PASS / REMEDIATED`
@@ -63,15 +63,31 @@ EXAM_ALIGNMENT＋QA: `PASS / REMEDIATED`
 - Topic 39先取り: `0件`
 - exact blocker: `0件`
 
+練習source＋source QA: `PASS / REMEDIATED`
+
+- 一次試験型: `12問 / 12問五肢択一`
+- 一次正答一意性: `12 / 12 PASS`
+- 二次試験型: `0題`、直接対応なし・件数合わせ `0件`
+- R8(5) 角位置センサなしオープンループ簡易位置決め・脱調条件: `PASS`
+- H23(3) ノイマン形コンピュータの記憶プログラム方式・原則逐次命令実行: `PASS`
+- H29(4) 単体→結合→システム試験で対象プログラム量・範囲が大きくなる: `PASS`
+- clean blind v1 remediation必須3点: `3 / 3 PASS`
+- H29/H23実空欄mapping: `10 / 10 PASS`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 計算再検算: `3 / 3 PASS`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
+- exact blocker: `0件`
+
 ### 既存派生成果物の扱い
 
-clean blind v1以前の練習source/QA、解説PDF、練習PDF、PowerPointはremediation前の内容を含むためTopic 38完成判定には使用しない。以下を順に再同期する。
+clean blind v1以前の解説PDF、練習PDF、PowerPointはremediation前の内容を含むためTopic 38完成判定には使用しない。source remediationは完了したため、以下を順に再同期する。
 
-1. practice source / source QA
-2. explanation PDF / PDF QA
-3. practice PDF / PDF QA
-4. PowerPoint / PowerPoint QA
-5. fresh clean blind v2
+1. explanation PDF / PDF QA
+2. practice PDF / PDF QA
+3. PowerPoint / PowerPoint QA
+4. fresh clean blind v2
 
 固定9項目、COMTRAC実装境界、二次0問、Topic 39非先取りは維持する。
 
