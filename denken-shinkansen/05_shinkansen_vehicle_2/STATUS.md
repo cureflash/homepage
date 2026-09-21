@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_exam_alignment_ready`
+- current_status: `topic_38_exam_alignment_complete`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、既存worker成果をreconcileし、Topic 38の制作前EXAM_ALIGNMENTを公式二種過去問から開始する。一次・二次の実対応を先に確定し、件数合わせで二次問題を採用しない。未確認のCOMTRAC内部実装・数値を推測せず、Topic 39を先取りしない。
+- next_start: 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、Topic 38 EXAM_ALIGNMENT成果をreconcileし、固定5問・25答案要素、SPEC固定9項目、鉄道一次資料境界を維持してTopic 38解説source＋独立source QAへ進む。PDF・練習・PowerPointはsource QA通過前に先行生成しない。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -67,22 +67,23 @@ v2:
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `EXAM_ALIGNMENT_READY`
+状態: `EXAM_ALIGNMENT_COMPLETE / explanation_source_pending`
 
-系列SPEC固定範囲:
-- 列車追跡
-- 状態データ
-- 論理処理
-- 時刻情報
-- ブール代数
-- インターロック
-- 状態遷移
-- 冗長化
-- 可用性
+### 制作前EXAM_ALIGNMENT
 
-制作前に、公式二種過去問で一次・二次の実対応を確認する。未確認のCOMTRAC内部構成、論理、冗長方式、可用性値、処理周期等は真値化しない。Topic 39のSCADA・遠隔計測・A/D変換等は先取りしない。
+- source: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability.md`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_exam_alignment_qa.md`
+- 固定公式過去問: `5 / 5 PASS`
+- 一次: `5問 / 25答案要素`、`25 / 25 PASS`
+- 二次: `0問`（当該コア論点の直接対応を固定できず、件数合わせ採用なし）
+- SPEC固定9項目: `9 / 9 mapped`
+- 二次問題の件数合わせ採用: `0件`
+- 鉄道一次資料境界: `PASS`
+- 未確認COMTRAC内部構成・アルゴリズム・処理周期・冗長方式・MTBF/MTTR/可用性値の真値化: `0件`
+- Topic 39先取り: `0件`
+- exact blocker: `0件`
 
-exact blocker: `0件`
+次工程はTopic 38解説source＋独立source QA。固定5問・25答案要素とSPEC固定9項目coverageを維持し、COMTRAC固有事実はJR東海/JRTT/鉄道総研等の一次資料で確認できる範囲に限定する。
 
 ## Topic 21 固定注記
 
