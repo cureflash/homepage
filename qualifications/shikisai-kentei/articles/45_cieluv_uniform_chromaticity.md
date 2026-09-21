@@ -618,7 +618,153 @@ $$
 
 したがってCIELUVは「センサーが直接読む物理量」ではなく、分光測定、標準測色観察者による三刺激値化、基準白を含む知覚的座標変換を重ねた結果である。
 
-## 12　色彩検定で押さえるところ
+## 12　「均等」とは何か――MacAdam楕円と局所計量
+
+色空間が完全に均等なら、ある色の周囲で「同じだけ違って見える」点は、座標上でほぼ同じ大きさの円として表せるはずである。しかしMacAdamの等色実験では、色合わせのばらつきはxy色度図上で位置ごとに大きさと向きの異なる楕円として現れる。これが、xy平面のユークリッド距離をそのまま知覚色差に使えないことの実験的な表現である。
+
+前節までのJacobianを使うと、この「均等性」を局所計量として書ける。微小変化を
+
+$$
+d\boldsymbol{\xi}=\begin{pmatrix}dx\\dy\end{pmatrix},\qquad
+d\boldsymbol{\eta}=\begin{pmatrix}du'\\dv'\end{pmatrix}
+$$
+
+とすると、
+
+$$
+d\boldsymbol{\eta}=J\,d\boldsymbol{\xi}
+$$
+
+である。u′v′平面で普通のユークリッド距離を使えば、
+
+$$
+ds_{uv}^2
+=du'^2+dv'^2
+=d\boldsymbol{\eta}^{\mathsf T}d\boldsymbol{\eta}
+$$
+
+だから、xy平面では
+
+$$
+ds_{uv}^2
+=d\boldsymbol{\xi}^{\mathsf T}
+\underbrace{(J^{\mathsf T}J)}_{G(x,y)}
+ d\boldsymbol{\xi}
+$$
+
+となる。
+
+この
+
+$$
+G(x,y)=J^{\mathsf T}J
+$$
+
+は、u′v′のユークリッド距離をxy平面へ引き戻した位置依存の計量テンソルである。一定の微小距離 $\varepsilon$ を満たす点は
+
+$$
+d\boldsymbol{\xi}^{\mathsf T}Gd\boldsymbol{\xi}=\varepsilon^2
+$$
+
+となり、一般にはxy平面上の楕円になる。
+
+$G$ の固有値を $\lambda_1,\lambda_2$ とすれば、楕円の主軸方向は固有ベクトル、半径は
+
+$$
+a_i=\frac{\varepsilon}{\sqrt{\lambda_i}}
+$$
+
+で決まる。つまり「均等色度図を作る」とは、知覚的な弁別領域が場所によって激しく変形するxy図を、できるだけ大きさと形の揃った領域へ写すことだと解釈できる。
+
+ただしCIE 1976 UCSはすべてのMacAdam楕円を完全な同じ円へ変換するわけではない。弁別閾は明るさ、順応状態、視野、観察者にも依存するため、単一の二次元座標変換だけで知覚を完全に平坦化することはできない。ここに「uniform」ではなく「approximately uniform」と考えるべき理由がある。
+
+## 13　測定誤差はどう伝わるか――分光測色からu′v′・CIELUVへ
+
+測定原理まで含めると、色空間の座標値には分光測定の不確かさも伝播する。
+
+波長を離散化し、分光反射率を
+
+$$
+\mathbf r=(R_1,R_2,\ldots,R_n)^{\mathsf T}
+$$
+
+とする。イルミナント、等色関数、波長刻みをまとめた行列を $A$ と書けば、三刺激値は
+
+$$
+\mathbf t=
+\begin{pmatrix}X\\Y\\Z\end{pmatrix}
+=A\mathbf r
+$$
+
+という線形演算になる。たとえば第1行の各要素は
+
+$$
+A_{1i}=kS_i\bar{x}_i\Delta\lambda
+$$
+
+である。
+
+反射率測定の共分散行列を $\Sigma_r$ とすると、XYZの共分散は一次近似で
+
+$$
+\Sigma_{XYZ}=A\Sigma_rA^{\mathsf T}
+$$
+
+となる。つまり、分光測色計の各波長でのノイズや相関は、XYZの誤差楕円へ線形に写される。
+
+次に
+
+$$
+Q=X+15Y+3Z
+$$
+
+と置くと、u′v′のXYZに対するJacobianは
+
+$$
+J_{u'v'}
+=
+\frac{1}{Q^2}
+\begin{pmatrix}
+4(15Y+3Z) & -60X & -12X\\
+-9Y & 9(X+3Z) & -27Y
+\end{pmatrix}.
+$$
+
+したがって
+
+$$
+\Sigma_{u'v'}
+\approx
+J_{u'v'}\Sigma_{XYZ}J_{u'v'}^{\mathsf T}
+$$
+
+である。$Q$ が小さい、すなわち信号量が小さい領域ではJacobianの要素が大きくなりやすく、絶対的なセンサーノイズが一定なら色度の不確かさは増える。暗部で色度が不安定になりやすいことは、測定系と座標変換の両方から説明できる。
+
+さらにCIELUVへの写像を
+
+$$
+F:(X,Y,Z)\mapsto(L^*,u^*,v^*)
+$$
+
+と書けば、
+
+$$
+\Sigma_{Luv}
+\approx
+J_F\Sigma_{XYZ}J_F^{\mathsf T}
+$$
+
+となる。基準白 $(X_n,Y_n,Z_n)$ 自体にも不確かさがあるなら、状態ベクトルを
+
+$$
+\mathbf q=(X,Y,Z,X_n,Y_n,Z_n)^{\mathsf T}
+$$
+
+へ拡張し、同じJacobianによる誤差伝播を行えばよい。
+
+ここから分かる重要点は、L*u*v*の値が「測定値そのもの」ではないことである。分光測定、XYZ積分、基準白、非線形座標変換という複数段階を通るため、最終的な色差を評価するなら、どの段階の不確かさが支配的かまで考える必要がある。
+
+## 14　色彩検定で押さえるところ
 
 色彩検定1級の測色分野へつなげるなら、次の因果関係を理解しておく。
 
@@ -628,9 +774,11 @@ $$
 - u′v′はxyを射影変換して色度の均等性を改善する
 - 射影変換なので混色直線は直線のまま保たれる
 - Jacobianが場所によって変わるため、xy図は非一様に伸縮される
+- u′v′のユークリッド距離をxyへ引き戻すと $G=J^{\mathsf T}J$ という位置依存の局所計量になる
 - CIELUVでは基準白との差 $(u'-u_n',v'-v_n')$ を $13L^*$ で尺度化する
 - $L^*$はCIELABと共通である
 - $\Delta E_{uv}^*$ はL*u*v*空間でのユークリッド距離である
+- 分光測定の不確かさは $\Sigma_{Luv}\approx J_F\Sigma_{XYZ}J_F^{\mathsf T}$ として最終座標へ伝播する
 - $L^*=0$ では色度方向が一点へ縮退し、逆変換が特異になる
 - CIELUVも完全な均等色空間ではない
 
@@ -650,6 +798,8 @@ $$
 
 - 公益社団法人 色彩検定協会「色彩検定とは・各級の目安」―1級「色彩学」に測色を明記  
   https://www.aft.or.jp/pages/feature/level
+- CIE e-ILV 17-23-073, “CIE 1976 uniform-chromaticity-scale diagram”  
+  https://cie.co.at/eilvterm/17-23-073
 - CIE e-ILV 17-23-074, “CIE 1976 L*u*v* colour space”  
   https://cie.co.at/eilvterm/17-23-074
 - CIE e-ILV 17-23-075, “CIE 1976 L*u*v* colour difference”  
@@ -658,6 +808,10 @@ $$
   https://www.iso.org/standard/86224.html
 - CIE 015:2018, *Colorimetry, 4th Edition*  
   https://cie.co.at/publications/colorimetry-4th-edition
+- D. L. MacAdam, “Visual Sensitivities to Color Differences in Daylight,” *Journal of the Optical Society of America*, 32(5), 247–274, 1942.  
+  https://doi.org/10.1364/JOSA.32.000247
+- JCGM 100:2008(E), *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*.  
+  https://doi.org/10.59161/JCGM100-2008E
 - Konica Minolta「L*u*v*色空間（CIE 1976）」  
   https://www.konicaminolta.jp/instruments/knowledge/color/section5/5-14/
 - H. S. M. Coxeter, *Projective Geometry*, 2nd ed., Springer, 1987.
