@@ -384,6 +384,56 @@ $$
 
 となる。プリズム頂角 $A$ と材料分散 $dn/d\lambda$ の積が、波長差を角度差へ変換する。
 
+### 12.1　角分散が大きくても「識別できる」とは限らない――プリズムの分解能
+
+ここで、角分散と分解能は区別する必要がある。$d\delta/d\lambda$ は2つの波長の中心方向がどれだけ離れるかを表すが、実際の光束には有限の幅があり、回折によって各スペクトル線も有限の角幅を持つ。中心が少し離れていても、その広がりより差が小さければ2本の線としては識別できない。
+
+プリズムを最小偏角付近で用い、光が通るプリズムの有効な底辺長を $b$ とする。波長 $\lambda$ と $\lambda+\Delta\lambda$ に対する屈折率差は
+
+$$
+\Delta n\approx\frac{dn}{d\lambda}\Delta\lambda
+$$
+
+である。プリズムの両端を通る光線どうしを比べると、この屈折率差によって生じる光学距離差の変化は概略
+
+$$
+\Delta(\mathrm{OPL})\approx b\,\Delta n
+$$
+
+となる。Rayleighの分解条件では、隣り合う2波長をぎりぎり識別できるとき、この差が1波長程度になるので
+
+$$
+b\left|\frac{dn}{d\lambda}\right|\Delta\lambda\approx\lambda
+$$
+
+したがってプリズムの理論的な色分解能は
+
+$$
+\boxed{
+R\equiv\frac{\lambda}{\Delta\lambda}
+\approx
+b\left|\frac{dn}{d\lambda}\right|
+}
+$$
+
+となる。
+
+この式が示すのは、色を細かく分ける能力には二つの要因が必要だということである。材料の分散 $|dn/d\lambda|$ が大きいほど近い波長の進み方が大きく違い、さらにプリズムが大きく光束が長い距離を通るほど、その小さな屈折率差を大きな位相差として蓄積できる。
+
+したがって
+
+$$
+\boxed{
+\text{材料分散}
+\times
+\text{有効光路の大きさ}
+\rightarrow
+\text{スペクトル分解能}
+}
+$$
+
+という因果関係になる。単に「紫のほうが赤より大きく曲がる」だけでなく、「どれほど近い2波長まで別々に測れるか」まで $n(\lambda)$ の微分から定量化できる。
+
 ## 13　Abbe数――可視域の分散を一つの数で表す
 
 レンズ材料では、可視域の分散をAbbe数で表すことが多い。代表的な定義は
@@ -589,6 +639,7 @@ $$
 - [The Feynman Lectures on Physics Vol. I Ch. 26: Optics: The Principle of Least Time](https://www.feynmanlectures.caltech.edu/I_26.html)
 - [NIST, Index Properties of Optical Materials (0.12 μm–15 μm)](https://www.nist.gov/programs-projects/index-properties-optical-materials-012-mm-15-mm)
 - [NIST, Minimum-Deviation-Angle Refractometry System](https://www.nist.gov/laboratories/tools-instruments/minimum-deviation-angle-refractometry-system)
+- [Photonics Dictionary, “prism chromatic resolving power”](https://www.photonics.com/Dictionary/prism-chromatic-resolving-power/d6397)
 - [Edmund Optics, Optical Glass](https://www.edmundoptics.com/knowledge-center/application-notes/optics/optical-glass/)
 - D. C. Hutchings, M. Sheik-Bahae, D. J. Hagan, E. W. Van Stryland, “Kramers-Kronig Relations in Nonlinear Optics,” *Optical and Quantum Electronics* 24 (1992).
 - Eugene Hecht, *Optics*, 5th ed., Pearson, 2017.
