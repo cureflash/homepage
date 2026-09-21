@@ -348,7 +348,101 @@ $$
 
 XYZは終点ではなく、現代測色の基礎座標である。
 
-## 11　色彩検定で押さえるところ
+## 11　物理的に存在できるXYZは「凸錐」をつくる
+
+XYZの線形性をさらに一段、幾何学的に見る。可視域を $n$ 個の波長に離散化し、分光分布を
+
+$$
+\mathbf p=
+\begin{bmatrix}
+p_1&p_2&\cdots&p_n
+\end{bmatrix}^{\mathsf T}
+$$
+
+とする。放射パワーなので、物理的な光では各成分は
+
+$$
+p_i\ge 0
+$$
+
+である。
+
+色合わせ関数を行に並べた $3\times n$ 行列
+
+$$
+A=K\Delta\lambda
+\begin{bmatrix}
+\bar x_1&\bar x_2&\cdots&\bar x_n\\
+\bar y_1&\bar y_2&\cdots&\bar y_n\\
+\bar z_1&\bar z_2&\cdots&\bar z_n
+\end{bmatrix}
+$$
+
+を作れば、三刺激値は
+
+$$
+\mathbf t=
+\begin{bmatrix}X\\Y\\Z\end{bmatrix}
+=A\mathbf p
+$$
+
+と一行で書ける。
+
+ここで $A$ の第 $i$ 列を
+
+$$
+\mathbf a_i
+=K\Delta\lambda
+\begin{bmatrix}
+\bar x_i\\\bar y_i\\\bar z_i
+\end{bmatrix}
+$$
+
+とおけば、
+
+$$
+\mathbf t
+=\sum_{i=1}^{n}p_i\mathbf a_i
+$$
+
+である。係数 $p_i$ は非負なので、物理的な光が作るXYZの集合は
+
+$$
+\mathcal C
+=\{A\mathbf p\mid \mathbf p\ge 0\}
+=\operatorname{cone}(\mathbf a_1,\ldots,\mathbf a_n)
+$$
+
+という凸錐（convex cone）になる。
+
+この表現から、加法混色の幾何学が直接出る。2つの実在光のXYZを $\mathbf t_1,\mathbf t_2\in\mathcal C$ とすると、$\alpha,\beta\ge0$ に対して
+
+$$
+\alpha\mathbf t_1+\beta\mathbf t_2\in\mathcal C
+$$
+
+である。つまり「光を足せばXYZも足される」というGrassmannの加法則は、物理的な色の集合が凸錐になることと同じ構造を持つ。
+
+一方、$X,Y,Z\ge0$ だからといって、第1象限のすべての点が実在スペクトルから作れるわけではない。XYZの基準刺激は実在の三原色ではなく、色合わせ関数を非負にするために導入された数学的な基準である。したがってXYZの座標軸そのものを、実在する単色光の「赤・緑・青」と解釈してはいけない。
+
+さらに、$X+Y+Z>0$ の各点を
+
+$$
+(x,y,z)
+=\frac{1}{X+Y+Z}(X,Y,Z)
+$$
+
+と正規化する操作は、3次元の凸錐に含まれる各「光量方向」の半直線を、平面
+
+$$
+x+y+z=1
+$$
+
+へ射影することに相当する。xy色度図が2次元になるのは、単に式の変数を1つ減らしたからではなく、XYZ空間の錐から強度方向を除いて色度だけを残しているからである。
+
+この見方をすると、XYZの線形性、加法混色、xy色度図の混色直線が同じ線形代数と凸幾何でつながる。
+
+## 12　色彩検定で押さえるところ
 
 色彩検定1級では、まず次の骨格を押さえる。
 
@@ -373,6 +467,7 @@ $$
 
 ## 参考資料
 
+- [色彩検定協会「受検案内・検定内容」](https://www.aft.or.jp/exam-orders)
 - [色彩検定協会「公式テキスト1級 目次」](https://www.aft.or.jp/images/text_of-1st-grade_mokuji.pdf)
 - [色彩検定協会「各級の目安」](https://www.aft.or.jp/pages/feature/level)
 - [CIE / ISO 11664-1:2019, Colorimetry — Part 1: CIE standard colorimetric observers](https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0)
@@ -380,3 +475,4 @@ $$
 - [CIE 1931 colour-matching functions, 2 degree observer, official dataset](https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer)
 - [NIST, Y. Ohno, CIE Fundamentals for Color Measurements](https://www.nist.gov/publications/cie-fundamentals-color-measurements-0)
 - [Fairman, Brill & Hemmendinger, How the CIE 1931 color-matching functions were derived from Wright-Guild data, Color Research & Application, 1997](https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291520-6378%28199702%2922%3A1%3C11%3A%3AAID-COL4%3E3.0.CO%3B2-7)
+- [Boyd & Vandenberghe, Convex Optimization, Cambridge University Press](https://web.stanford.edu/~boyd/cvxbook/)
