@@ -535,7 +535,99 @@ $$
 
 異なる分光反射率をもつ物体が、ある照明下でほぼ同じNCS知覚を生むこともあり得る。これは測色でいうメタメリズムと矛盾しない。
 
-## 13　マンセル・PCCS・NCS・XYZ・CIELABの違い
+## 13　機器測定からNCS記号を求めるのは「逆問題」である
+
+NCSは知覚の記述体系だが、実務では色票を目視比較するだけでなく、測色値からNCS記号を推定することもある。ASTM E2970-22は、NCS色の視感・機器による決定と、NCS記号とCIE三刺激値との関係を扱っている。
+
+物体色なら、まず測定幾何・照明・標準観察者を固定して分光反射率 $R(\lambda)$ を測り、
+
+$$
+R(\lambda)
+\rightarrow (X,Y,Z)
+\rightarrow (L^*,a^*,b^*)
+\rightarrow (s,c,h)
+$$
+
+という流れを考えられる。最後の写像を局所的に
+
+$$
+\mathbf n=F(\mathbf q),
+\qquad
+\mathbf q=(L^*,a^*,b^*)^{\mathsf T},
+\qquad
+\mathbf n=(s,c,h)^{\mathsf T}
+$$
+
+と書く。ここで $F$ は単一の線形行列ではなく、標準化された対応関係や色票データに基づく非線形写像である。
+
+測色値に小さな誤差 $\delta\mathbf q$ があるとき、一次近似では
+
+$$
+\delta\mathbf n
+\approx
+J_F(\mathbf q_0)\,\delta\mathbf q
+$$
+
+となる。$J_F$ はヤコビ行列である。入力側の共分散を $\Sigma_q$ とすると、出力側の不確かさはGUM型の一次伝播で
+
+$$
+\boxed{
+\Sigma_n
+\approx
+J_F\Sigma_qJ_F^{\mathsf T}
+}
+$$
+
+と近似できる。
+
+この式の意味は、同じ $\Delta E$ 程度の測定誤差でも、NCS空間の場所によって blackness・chromaticness・hue の不確かさが同じとは限らない、ということである。写像 $F$ が強く曲がっている領域ではヤコビ行列の成分が大きくなり、測色誤差がNCS記号側で増幅されうる。
+
+### 無彩色付近では色相推定が本質的に不安定になる
+
+この不安定性は、とくに $c\to0$ で明確になる。色相を便宜上、円周角 $\theta$ とし、色みを平面上へ
+
+$$
+u=c\cos\theta,
+\qquad
+v=c\sin\theta
+$$
+
+と埋め込む。逆変換は
+
+$$
+\theta=\operatorname{atan2}(v,u)
+$$
+
+であり、その勾配は
+
+$$
+\nabla\theta
+=
+\left(
+-\frac{v}{u^2+v^2},
+\frac{u}{u^2+v^2}
+\right)
+$$
+
+となる。
+
+$u^2+v^2=c^2$ なので、$(u,v)$ の測定・推定誤差の共分散を $\Sigma_{uv}$ とすれば、一次近似で
+
+$$
+\operatorname{Var}(\theta)
+\approx
+(\nabla\theta)^{\mathsf T}
+\Sigma_{uv}
+\nabla\theta
+$$
+
+である。$c\to0$ では分母 $c^2$ が小さくなるため、色相角の不確かさは急激に大きくなる。
+
+これは「灰色に近い試料では測色計の性能が悪い」というだけの問題ではない。無彩色では色相という座標自体が定義不能になるため、座標系の特異性が誤差を増幅するのである。
+
+なお、この円周埋め込みとヤコビ解析はNCS公式の変換式ではなく、NCS座標の数学的性質と測定不確かさを理解するための局所モデルである。非線形性が強い場合は一次近似だけでなく、Monte Carlo法などで分布そのものを伝播させる方が適切な場合もある。
+
+## 14　マンセル・PCCS・NCS・XYZ・CIELABの違い
 
 | 体系 | 主に表すもの | 基本座標 | 数学的性格 |
 |---|---|---|---|
@@ -559,7 +651,7 @@ $$
 
 が共存していることが分かる。
 
-## 14　色彩検定で押さえるところ
+## 15　色彩検定で押さえるところ
 
 色彩検定との接続では、次を整理しておくとよい。
 
@@ -590,6 +682,8 @@ $$
 
 - 公益社団法人 色彩検定協会「色彩検定とは」（1級で色彩学として測色、世界の色彩調和論などを扱うことを明記）  
   https://www.aft.or.jp/pages/feature/level
+- 公益社団法人 色彩検定協会「公式テキスト1級 目次」（「色の表示」にNCS、へリングの6主要色、色相環、等色相面、色立体、「測色」に視感測色・物理測色を掲載）  
+  https://www.aft.or.jp/images/text_of-1st-grade_mokuji.pdf
 - 公益社団法人 色彩検定協会「色彩検定1級 新旧公式テキスト 項目一覧」（2020年改訂版。「色の表示」のNCS、へリングの6主要色、色相環、等色相面、色立体などを確認）  
   https://www.aft.or.jp/images/%281%E7%B4%9A%29%E6%96%B0%E6%97%A7%E5%85%AC%E5%BC%8F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E9%A0%85%E7%9B%AE%E6%AF%94%E8%BC%83%E8%A1%A8.pdf
 - NCS Colour, “Learn the NCS System”（NCS記号、blackness、chromaticness、hueの公式解説）  
@@ -598,10 +692,14 @@ $$
   https://ncscolour.com/pages/colour-harmonies
 - Swedish Institute for Standards, SS 19100 “Colour notation system”（NCSの適用範囲と表面色の知覚記述）  
   https://www.sis.se/en/produkter/paint-and-colour-industries/paints-and-varnishes/ss191007/
-- ASTM International, ASTM E2970-22 “Standard Practice for Specifying Color by the Natural Colour System (NCS)”（NCS記号、CIE三刺激値との対応、適用範囲）  
+- ASTM International, ASTM E2970-22 “Standard Practice for Specifying Color by the Natural Colour System (NCS)”（NCS記号、CIE三刺激値との対応、視感・機器による決定、適用範囲）  
   https://store.astm.org/e2970-22.html
 - ASTM International, Adjunct to E2970（NCSとCIELAB・XYZ・xyの変換条件）  
   https://store.astm.org/adje297015-ea.html
+- JCGM 100:2008(E), “Evaluation of measurement data — Guide to the expression of uncertainty in measurement”  
+  https://doi.org/10.59161/JCGM100-2008E
+- JCGM 101:2008, “Supplement 1 to the Guide to the expression of uncertainty in measurement — Propagation of distributions using a Monte Carlo method”  
+  https://doi.org/10.59161/JCGM101-2008
 - Anders Hård, Lars Sivik, “NCS—Natural Color System: A Swedish Standard for Color Notation,” Color Research & Application, 6(3), 129–138, 1981.  
   https://doi.org/10.1002/col.5080060303
 - Anders Hård, Lars Sivik, Gunnar Tonnquist, “NCS, natural color system—From concept to research and applications. Part I,” Color Research & Application, 21(3), 180–205, 1996.  
