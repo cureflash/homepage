@@ -260,6 +260,72 @@ $$
 
 一方、人間が感じる「明るさ」はこの物理的強度そのものではない。眼の感度は波長依存であり、知覚応答も単純な比例関係ではない。放射量と測光量の違いは別記事で扱う。
 
+### 6.1　Poyntingの定理――「吸収」とは電磁場のエネルギーが物質へ渡ること
+
+Poyntingベクトルはエネルギーがどちらへ流れるかを示すだけでなく、Maxwell方程式から電磁場の局所的なエネルギー保存則まで導ける。真空の電磁場のエネルギー密度を
+
+$$
+\boxed{
+u=
+\frac{\varepsilon_0E^2}{2}
++
+\frac{B^2}{2\mu_0}
+}
+$$
+
+とすると、Poyntingの定理は
+
+$$
+\boxed{
+\frac{\partial u}{\partial t}
++\nabla\cdot\mathbf{S}
+=-\mathbf{J}\cdot\mathbf{E}
+}
+$$
+
+と書ける。$\mathbf{J}$ は物質中の電流密度である。
+
+各項の単位はすべて $\mathrm{W\,m^{-3}}$ であり、左辺第1項は「その場所に蓄えられた電磁エネルギーの増減」、第2項は「周囲へ流出する電磁エネルギー」、右辺は「電磁場が物質へする仕事」を表す。
+
+体積 $V$ について積分すれば、
+
+$$
+\frac{d}{dt}\int_Vu\,dV
++
+\oint_{\partial V}\mathbf{S}\cdot d\mathbf{A}
+=-\int_V\mathbf{J}\cdot\mathbf{E}\,dV
+$$
+
+となる。境界から入ってきた光エネルギーは、電磁場として内部に蓄えられるか、別の場所へ流出するか、荷電粒子へ仕事をして物質側のエネルギーへ移る。
+
+したがって「物体が光を吸収する」という現象は、古典電磁気学では概念的に
+
+$$
+\boxed{
+\mathbf{J}\cdot\mathbf{E}>0
+\quad\Rightarrow\quad
+\text{電磁場から物質へエネルギー移動}
+}
+$$
+
+と読める。実際の可視光吸収では、電子分極・分子振動・電子遷移などの微視的応答が $\mathbf{J}$ や分極電流として現れ、その波長依存性が吸収スペクトルを作る。
+
+つまり物体色の因果関係は、単に「特定波長を吸収する」で終わらない。
+
+$$
+\text{入射電場}
+\rightarrow
+\text{物質中の電荷・分極が応答}
+\rightarrow
+\mathbf{J}\cdot\mathbf{E}
+\rightarrow
+\text{電磁エネルギーが物質へ移る}
+\rightarrow
+\text{残った反射・透過スペクトルが変わる}
+$$
+
+というエネルギー保存の過程として捉えられる。
+
 ## 7　光子1個のエネルギーは振動数で決まる
 
 干渉・回折・偏光では波としての記述が有効だが、物質とのエネルギー交換では量子論が必要になる。
@@ -510,6 +576,11 @@ $$
 $$
 
 $$
+\frac{\partial u}{\partial t}+\nabla\cdot\mathbf{S}
+=-\mathbf{J}\cdot\mathbf{E}
+$$
+
+$$
 I=\frac{1}{2}c\varepsilon_0E_0^2
 $$
 
@@ -528,6 +599,7 @@ $$
 
 - Maxwell方程式：なぜ光が波として伝わるか
 - Poyntingベクトル：どうエネルギーを運ぶか
+- Poyntingの定理：電磁場のエネルギーが物質へ移る過程をどう保存則で表すか
 - 強度：単位面積・単位時間あたりのエネルギー流
 - 光子エネルギー：物質との量子的なエネルギー交換
 - 分光密度の変数変換：同じ放射を波長・振動数のどちらで表しても総量を保存する条件
@@ -537,7 +609,6 @@ $$
 光をこのように捉えると、反射、屈折、散乱、干渉、黒体放射、LED、加法混色までを同じ物理体系の中で理解できる。
 
 ## 参考資料
-
 - [色彩検定協会「色彩検定とは」](https://www.aft.or.jp/pages/feature/level)
 - [CIE International Lighting Vocabulary: visible radiation](https://cie.co.at/eilvterm/17-21-003)
 - [CIE International Lighting Vocabulary: spectral distribution](https://cie.co.at/eilvterm/17-21-029)
@@ -545,4 +616,5 @@ $$
 - [NIST Fundamental Physical Constants](https://physics.nist.gov/cuu/Constants/)
 - [OpenStax, University Physics Volume 2, Plane Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-2-plane-electromagnetic-waves)
 - [OpenStax, University Physics Volume 2, Energy Carried by Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-3-energy-carried-by-electromagnetic-waves)
+- [MIT OpenCourseWare, 6.013 Electromagnetics and Applications, Course Notes, §2.7 Poynting's Theorem](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/resources/mit6_013s09_notes/)
 - [OpenStax, University Physics Volume 3, Wave-Particle Duality](https://openstax.org/books/university-physics-volume-3/pages/6-6-wave-particle-duality)
