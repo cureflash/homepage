@@ -344,6 +344,45 @@ $$
 
 XYZ化は高次元スペクトルの全情報を保存する変換ではない。
 
+### 観察者メタメリズムは「零空間が観察者ごとにずれる」現象
+
+基準観察者の測色演算子を $A_r$、別の観察者または別の標準観察者の演算子を $A_t$ とする。二つの刺激のスペクトル差 $\Delta\boldsymbol{\Phi}$ が基準観察者に対してメタマーなら、
+
+$$
+A_r\Delta\boldsymbol{\Phi}=\mathbf0
+$$
+
+である。しかし観察者を変えたときの三刺激値差は
+
+$$
+\Delta\mathbf t_t
+=A_t\Delta\boldsymbol{\Phi}
+=(A_t-A_r)\Delta\boldsymbol{\Phi}
+$$
+
+となる。したがって同じ等色が維持されるには
+
+$$
+\Delta\boldsymbol{\Phi}
+\in
+\ker A_r\cap\ker A_t
+$$
+
+でなければならない。一般には $\ker A_r$ と $\ker A_t$ は完全には一致しないため、基準観察者で等色したスペクトル対が別の観察者ではずれる。これが観察者メタメリズムの数学的な意味である。
+
+観察者差を $\Delta A=A_t-A_r$ と書けば、測色値のずれには
+
+$$
+\|\Delta\mathbf t_t\|_2
+=\|\Delta A\,\Delta\boldsymbol{\Phi}\|_2
+\le
+\|\Delta A\|_2\,\|\Delta\boldsymbol{\Phi}\|_2
+$$
+
+という上界がある。つまり「等色関数の差が大きいほど」「メタマー対の分光差が大きいほど」観察者変更による測色値の不一致は大きくなり得る。ただし、このユークリッドノルムは知覚色差そのものではない。実際の評価では指定した表色系・色差式へ変換して扱う必要がある。
+
+CIE 080:1989は、基準観察者から試験観察者へ変えたことでメタマー対の一致が崩れる程度を Special Metamerism Index: Change in Observer として扱う。水晶体・黄斑色素・錐体分光感度などの差は等色関数を変え、最終的には測色演算子 $A$ の差として現れる。
+
 ## 13　「射影」を数学的に厳密に言うと、等色関数は線形汎関数である
 
 色彩学では「スペクトルをXYZへ射影する」という説明が便利である。しかし大学レベルでは、「直交射影」と「一般の線形写像」を区別した方が正確である。
@@ -627,3 +666,7 @@ $$
    https://www.bipm.org/en/doi/10.59161/jcgm100-2008e
 10. G. Strang, MIT OpenCourseWare, *Linear Algebra: Orthogonal Vectors and Subspaces / Orthogonal Matrices and Gram-Schmidt*.  
     https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/
+11. CIE, CIE 080-1989, *Special Metamerism Index: Change in Observer*.  
+    https://www.cie.co.at/publications/special-metamerism-index-change-observer
+12. CIE, CIE 170-1:2006, *Fundamental Chromaticity Diagram with Physiological Axes — Part 1*.  
+    https://www.cie.co.at/publications/fundamental-chromaticity-diagram-physiological-axes-part-1
