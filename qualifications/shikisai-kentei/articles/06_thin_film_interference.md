@@ -385,6 +385,96 @@ $R(\lambda)$ は干渉条件によって波長ごとに山と谷を持つ。そ�
 
 シャボン膜が可視光の波長と同程度のサブマイクロメートルから数マイクロメートル程度で鮮やかな色を示すのは、光路差が十分小さいためである。
 
+### 8.1　コヒーレンスは干渉の「見えやすさ」を決める
+
+ここまでの式では、2本の波の位相差が時間的に安定していると仮定した。しかし実際の光では位相は揺らぐ。そこで、時間差 $\tau$ をもつ2点の電場がどれだけ位相関係を保っているかを、1次の複素コヒーレンス度
+
+$$
+\boxed{
+\gamma^{(1)}(\tau)=
+\frac{\langle E^*(t)E(t+\tau)\rangle}
+{\sqrt{\langle |E(t)|^2\rangle\langle |E(t+\tau)|^2\rangle}}
+}
+$$
+
+で表す。$|\gamma^{(1)}|=1$ なら完全にコヒーレント、$|\gamma^{(1)}|=0$ なら位相関係は平均化されて干渉項が消える。
+
+2光束干渉の時間平均強度は、位相を固定した単純式より一般には
+
+$$
+I=I_1+I_2+2\sqrt{I_1I_2}\,
+\operatorname{Re}\left[\gamma^{(1)}(\tau)e^{i\delta_0}\right]
+$$
+
+と書ける。したがって干渉縞の可視度
+
+$$
+V=\frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}}
+$$
+
+は
+
+$$
+\boxed{
+V=\frac{2\sqrt{I_1I_2}}{I_1+I_2}|\gamma^{(1)}(\tau)|
+}
+$$
+
+となる。特に $I_1=I_2$ なら
+
+$$
+V=|\gamma^{(1)}(\tau)|
+$$
+
+であり、コヒーレンス度そのものが縞のコントラストになる。
+
+薄膜では2本の反射光の光学距離差が
+
+$$
+\Delta=2nt\cos\theta
+$$
+
+なので、対応する時間差は概ね
+
+$$
+\tau=\frac{\Delta}{c}
+$$
+
+である。光のコヒーレンス時間を $\tau_c$、コヒーレンス長を
+
+$$
+L_c=c\tau_c
+$$
+
+とすれば、鮮明な干渉には概ね
+
+$$
+\Delta\lesssim L_c
+$$
+
+が必要になる。
+
+さらにWiener–Khinchinの関係により、1次コヒーレンス度は光源スペクトル $S(\nu)$ のフーリエ変換として
+
+$$
+\boxed{
+\gamma^{(1)}(\tau)=
+\frac{\int S(\nu)e^{i2\pi\nu\tau}\,d\nu}
+{\int S(\nu)\,d\nu}
+}
+$$
+
+と表せる。スペクトル幅 $\Delta\nu$ が広い光ほど $\gamma^{(1)}(\tau)$ は短い時間差で減衰し、コヒーレンス長も短い。次数だけを見れば
+
+$$
+L_c\sim\frac{c}{\Delta\nu}
+\sim\frac{\lambda^2}{\Delta\lambda}
+$$
+
+と見積もれる。ただし係数はスペクトル形状と「コヒーレンス長」をどう定義するかで変わる。
+
+白色光はレーザーよりコヒーレンス長が短いが、薄膜では上面反射と下面反射の光路差も非常に短い。そのため白色光でも自己干渉が残り、波長ごとに異なる反射率が生じる。膜が厚くなって光路差がコヒーレンス長を大きく超えると、干渉項は平均化され、鮮やかな干渉色は失われる。
+
 ## 9　「透明な物質」なのに色がつく
 
 薄膜干渉の重要な点は、材料が可視光をほとんど吸収しなくても色が生じうることである。
@@ -664,4 +754,5 @@ $$
 - 公益社団法人 色彩検定協会「公式テキスト2級目次」。「光と色―光の性質と色」p.014。https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf
 - OpenStax, *University Physics Volume 3*, §3.4 “Interference in Thin Films”. https://openstax.org/books/university-physics-volume-3/pages/3-4-interference-in-thin-films
 - R. Nave, HyperPhysics, “Interference in Thin Films”. Georgia State University. https://hyperphysics.phy-astr.gsu.edu/hbase/phyopt/interf.html
+- Rüdiger Paschotta, RP Photonics Encyclopedia, “Coherence” and “Coherence Length”. https://www.rp-photonics.com/coherence.html ; https://www.rp-photonics.com/coherence_length.html
 - Eugene Hecht, *Optics*, 5th ed., Pearson, 2017. Chapters on interference and thin films.
