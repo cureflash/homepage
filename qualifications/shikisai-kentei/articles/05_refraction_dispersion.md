@@ -495,7 +495,63 @@ $$
 
 色彩検定ではここまで必要ないが、大学物理では「屈折率 $n$ は位相速度を表す量」であり、分散があるとパルス伝搬には屈折率の波長勾配も効くことを区別する。
 
-## 17　色彩検定で押さえる部分と大学レベルの発展
+## 17　Fermatの原理――Snellの法則を「光学距離の停留」から導く
+
+Snellの法則は境界での位相連続から導けるが、幾何光学では同じ内容をFermatの原理からも導ける。真空中の幾何学的距離 $ds$ に屈折率を掛けた
+
+$$
+d\ell_{\rm opt}=n(\mathbf r)\,ds
+$$
+
+を光学距離と呼ぶ。波長 $\lambda_0$ の単色光が経路 $\Gamma$ を進むときに蓄積する位相は
+
+$$
+\Phi=\frac{2\pi}{\lambda_0}\int_\Gamma n(\mathbf r)\,ds
+$$
+
+である。幾何光学で実現する光線経路は、この光学距離が近傍の経路変化に対して一次の変化を持たない、すなわち
+
+$$
+\boxed{\delta\int_\Gamma n\,ds=0}
+$$
+
+を満たす。しばしば「最短時間の原理」と呼ばれるが、厳密には必ず最小になるとは限らず、停留条件と考えるのが正確である。
+
+二つの一様媒質を平面境界で分け、上側の点Aから下側の点Bへ進む光を考える。境界上の通過点の横座標を $x$ とし、Aと境界の垂直距離を $a$、Bと境界の垂直距離を $b$、両点の水平方向の隔たりを $L$ とすれば、光学距離は
+
+$$
+S(x)=n_1\sqrt{x^2+a^2}+n_2\sqrt{(L-x)^2+b^2}
+$$
+
+である。Fermatの条件 $dS/dx=0$ から
+
+$$
+n_1\frac{x}{\sqrt{x^2+a^2}}
+=
+n_2\frac{L-x}{\sqrt{(L-x)^2+b^2}}
+$$
+
+を得る。左辺と右辺の分数は、それぞれ入射角・屈折角の正弦なので、
+
+$$
+\boxed{n_1\sin\theta_1=n_2\sin\theta_2}
+$$
+
+となる。つまりSnellの法則は、「境界で突然曲がる」という局所的な記述と、「経路全体の光学距離が停留する」という変分原理が同じ物理を表したものである。
+
+この考え方は、屈折率が連続的に変化する媒質へそのまま拡張できる。Fermatの原理にEuler–Lagrange方程式を適用すると、光線の単位接ベクトルを $d\mathbf r/ds$ として
+
+$$
+\boxed{
+\frac{d}{ds}\left(n\frac{d\mathbf r}{ds}\right)=\nabla n
+}
+$$
+
+が得られる。$\nabla n\neq0$ なら光線は連続的に曲がり、屈折率の大きい側へ向かって進行方向を変える。大気中で温度によって屈折率が高さ方向に変化する場合の蜃気楼や、屈折率を連続分布させたGRINレンズはこの式で記述できる。
+
+さらに $n=n(\lambda)$ なら、同じ空間的な屈折率分布でも波長ごとに軌道がわずかに異なる。したがって「分散」はプリズムの境界で色が分かれる現象に限られず、連続的に不均一な媒質でも波長依存の光線軌道として現れる。
+
+## 18　色彩検定で押さえる部分と大学レベルの発展
 
 色彩検定との接続でまず押さえるのは、次の因果関係である。
 
@@ -530,6 +586,7 @@ $$
 - [色彩検定協会「公式テキスト」](https://www.aft.or.jp/pages/official-product-orders)
 - [OpenStax, Physics, 16.2 Refraction](https://openstax.org/books/physics/pages/16-2-refraction)
 - [OpenStax, University Physics Volume 3, 1.5 Dispersion](https://openstax.org/books/university-physics-volume-3/pages/1-5-dispersion)
+- [The Feynman Lectures on Physics Vol. I Ch. 26: Optics: The Principle of Least Time](https://www.feynmanlectures.caltech.edu/I_26.html)
 - [NIST, Index Properties of Optical Materials (0.12 μm–15 μm)](https://www.nist.gov/programs-projects/index-properties-optical-materials-012-mm-15-mm)
 - [NIST, Minimum-Deviation-Angle Refractometry System](https://www.nist.gov/laboratories/tools-instruments/minimum-deviation-angle-refractometry-system)
 - [Edmund Optics, Optical Glass](https://www.edmundoptics.com/knowledge-center/application-notes/optics/optical-glass/)
