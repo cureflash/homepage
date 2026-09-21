@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_clean_blind_protocol_conflict_blocked`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_clean_blind_v5_ready`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 38 現在地
 
@@ -19,43 +19,33 @@ remediation後のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoi
 - SPEC固定9項目: `9 / 9 PASS`
 - 未確認COMTRAC実装・数値の真値化: `0件`
 - Topic 39先取り: `0件`
-- v1〜v3 candidate変更: `0件`
+- v1〜v4 candidate変更: `0件`
 
-## 直前成果のreconcile
+直近のfresh clean blind v4は公式標準解答一致 `23 / 25 FAIL`。教材だけで導出可能は `25 / 25 PASS`、教材欠落は `0件`。Topic 38はcompletedにしていない。
 
-latest main、`STATUS.md` / `HANDOFF.md`、直近commit metadataをreconcileした。Topic 38の最新有効成果はfresh clean blind v4。
+v4 QA正本: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v4_qa.md`
 
-- candidate commit: `4a2ee352f7496a8d1811fd8af9f2f2221b5ed738`
-- freshness: `PASS`
-- candidate固定後修正: `0件`
-- 公式標準解答一致: `23 / 25 FAIL`
-- 不一致位置: R2一次「機械」問8(3)、H23一次「機械」問8(3)の2要素
-- 教材だけで導出可能: `25 / 25 PASS`
-- 教材欠落: `0件`
-- 固定5問変更: `0件`
-- Topic 21一般式変更: `0件`
+## 今回の1段階: clean blind手順の上位仕様整合
 
-QA正本: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v4_qa.md`
+前回記録した `TOPIC38_CLEAN_BLIND_PROTOCOL_CONFLICT` を、既存上位仕様の記述だけでreconcileした。`MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`自体は変更していない。
 
-Topic 38はcompletedにしていない。
+- `MASTER_SPEC.md` §1は各runで正本とactive themeの既存成果物を読むことを要求する。
+- `MASTER_SPEC.md` §3は1テーマの必須成果物を、解説PDF・練習PDF・PowerPoint・source Markdown等として列挙している。
+- `EXAM_ALIGNMENT_SPEC.md` §10は、生成時に見た公式解答や保存済み正答を先に見ず、教材内容だけで固定過去問を独立再解答することを要求する。
+- prior clean-blind candidate / QAは§3の必須教材成果物ではなく独立試験の作業記録であるため、candidate固定前に開く必要はない。
 
-## 仕様不整合
-
-clean blind v5の現HANDOFF手順は上位仕様と両立しない。
-
-1. `EXAM_ALIGNMENT_SPEC.md` §10は、完成後の独立試験を「EXAM_ALIGNMENTで選定した過去問を教材内容だけを使って独立再解答する」ものとしている。
-2. `MASTER_SPEC.md` §1は、各runでactive themeの既存成果物を読むことを必須としている。
-3. 直前HANDOFFは、v5 candidate固定前に既存教材・既存answer-bearing資料を読まないことを要求していた。
-4. 同時に、そのHANDOFF / STATUS自体がv4結果を含み、必読startup文書になっている。
-
-したがって、現状では「上位仕様準拠の独立再解答」と「従来のfresh candidate条件」を同時に満たす手順が一意に定まらない。上位仕様が系列SPEC・ローカル運用より優先することは明記されているが、freshnessをどの範囲で要求するかをこちらで新規定義すると品質ゲート自体の意味を変更するため、推測で続行しない。
+したがって次runは、必須正本と現行教材成果物を確認したうえで、prior clean-blind candidate / QA・公式標準解答・保存済み正答をcandidate固定前に参照せず、固定5問を教材だけで再解答できる。candidate固定後にのみ公式標準解答へ照合する。この手順は上位仕様の追加・変更ではなく、§1・§3・§10の同時適用である。
 
 ## 次工程
 
-- clean blind v5を実施しない。
-- 教材remediation・固定EXAM_ALIGNMENT変更・Topic 39先取りをしない。
-- v4 candidateを変更しない。
-- clean blind正式手順が上位仕様と矛盾しない形で確定した後、その手順でTopic 38を再判定する。
+Topic 38 fresh clean blind v5を実施する。
+
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`を読む。
+2. Topic 38の§3必須教材成果物とquestion-only intakeを読む。
+3. candidate固定前はv1〜v4 clean-blind candidate / QA、公式標準解答、保存済み正答、answer-bearing commit diffを開かない。
+4. 固定5問・25答案要素を教材だけで独立再解答し、v5 candidateを固定する。
+5. 固定後に公式標準解答へ照合する。
+6. `25 / 25` かつ教材依存 `25 / 25` ならTopic 38をcompletedへ進める。未達ならcandidateを修正せず、原因をQAへ記録する。
 
 ## 境界条件
 
@@ -65,4 +55,4 @@ clean blind v5の現HANDOFF手順は上位仕様と両立しない。
 - Topic 39の内容を先取りしない。
 - Topic 21 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` は `π=3.14` 相当の丸め差診断を維持し、一般式 `P=Tω`、`ω=2πN/60` を変更しない。
 
-exact blocker: `TOPIC38_CLEAN_BLIND_PROTOCOL_CONFLICT` — `EXAM_ALIGNMENT_SPEC.md` §10の「教材内容だけで独立再解答」、`MASTER_SPEC.md` §1の既存成果物必読、従来HANDOFFの「candidate固定前に既存教材・answer-bearing資料を読まない」が両立せず、v5の正当な実施条件を一意に確定できない。
+exact blocker: `0件`。次は `TOPIC38_CLEAN_BLIND_V5`。
