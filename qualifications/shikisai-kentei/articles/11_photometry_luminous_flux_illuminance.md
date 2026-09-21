@@ -466,6 +466,66 @@ $$
 
 この点は、測光量が純粋な光の物理量ではなく「放射場と標準化された視覚系との組合せ」で定義されることを最も端的に示している。
 
+### 17.1　照度計は $V(\lambda)$ をどう実装するか――分光ミスマッチ
+
+理想的な照度計は、入射する分光放射照度 $E_{e,\lambda}(\lambda)$ を $V(\lambda)$ で重み付けし、
+
+$$
+E_v=K_m\int E_{e,\lambda}(\lambda)V(\lambda)\,d\lambda
+$$
+
+をそのまま出力すればよい。しかし実際の物理測光器は、フォトダイオードと光学フィルタを組み合わせ、相対分光応答度 $s_{\mathrm{rel}}(\lambda)$ を $V(\lambda)$ に近づけている。したがって検出器の生信号 $Q$ は
+
+$$
+\boxed{
+Q\propto\int E_{e,\lambda}(\lambda)s_{\mathrm{rel}}(\lambda)\,d\lambda
+}
+$$
+
+となる。
+
+もし $s_{\mathrm{rel}}(\lambda)\propto V(\lambda)$ が全波長で厳密に成立すれば、どの光源を測っても一つの校正係数で正しい照度へ変換できる。しかし実器では完全一致しない。CIE標準イルミナントAの分光分布を $S_A(\lambda)$ とし、この光源で照度計を校正したとする。校正係数を $C$ とすれば、
+
+$$
+C=K_m
+\frac{\int S_A(\lambda)V(\lambda)\,d\lambda}
+{\int S_A(\lambda)s_{\mathrm{rel}}(\lambda)\,d\lambda}
+$$
+
+である。別の光源 $S(\lambda)$ を測ったときの指示値は
+
+$$
+E_{\mathrm{ind}}
+=C\int S(\lambda)s_{\mathrm{rel}}(\lambda)\,d\lambda
+$$
+
+だが、真の明所視照度は
+
+$$
+E_{\mathrm{true}}
+=K_m\int S(\lambda)V(\lambda)\,d\lambda
+$$
+
+である。したがって、指示値を真値へ補正する分光ミスマッチ補正係数は
+
+$$
+\boxed{
+F^*
+=\frac{E_{\mathrm{true}}}{E_{\mathrm{ind}}}
+=
+\frac{\int S(\lambda)V(\lambda)\,d\lambda}
+{\int S(\lambda)s_{\mathrm{rel}}(\lambda)\,d\lambda}
+\frac{\int S_A(\lambda)s_{\mathrm{rel}}(\lambda)\,d\lambda}
+{\int S_A(\lambda)V(\lambda)\,d\lambda}
+}
+$$
+
+となる。
+
+この式は、「基準光源で一度合わせれば、どんな光源でも正しい照度を測れる」とは限らないことを示す。校正は $S_A(\lambda)$ という一つのスペクトルに対する誤差を消すだけで、$s_{\mathrm{rel}}(\lambda)$ と $V(\lambda)$ の形の違いそのものは残る。白熱電球のような滑らかなスペクトルでは誤差が平均化されやすい一方、狭帯域成分を持つLEDでは局所的な応答差が測定値へ強く反映されることがある。
+
+CIEは照度計・輝度計の性能を分光応答、余弦応答、直線性などの品質指標で評価しており、LED時代には標準イルミナントAを補完する測光器校正用LED参照スペクトル L41 も公表している。したがって「lux」は単にセンサーが受けた光量ではなく、実器の分光応答を標準視感度へどこまで一致させ、どのスペクトルで校正したかまで含む計測量である。
+
 ## 18　色彩検定の用語を大学物理へ翻訳する
 
 | 色彩検定での表現 | 物理・数学での意味 |
@@ -534,6 +594,10 @@ CIE 1931表色系では $\bar y(\lambda)=V(\lambda)$ なので測光と測色は
 - 公益社団法人 色彩検定協会, 「公式テキスト」. https://www.aft.or.jp/pages/official-product-orders
 - Commission Internationale de l'Éclairage (CIE), CIE 018:2019, *The Basis of Physical Photometry, 3rd Edition*. https://www.cie.co.at/publications/basis-physical-photometry-3rd-edition
 - ISO/CIE 23539:2023, *Photometry — The CIE system of physical photometry*. https://cie.co.at/publications/photometry-cie-system-physical-photometry-3
+- ISO/CIE 19476:2014(E), *Characterization of the Performance of Illuminance Meters and Luminance Meters*. https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters
+- CIE 231:2019, *CIE Classification System of Illuminance and Luminance Meters*. https://www.cie.co.at/publications/cie-classification-system-illuminance-and-luminance-meters
+- CIE 251:2023, *LED Reference Spectrum for Photometer Calibration*. https://www.cie.co.at/publications/led-reference-spectrum-photometer-calibration
+- CIE e-ILV 17-25-115, “spectral mismatch correction factor, <for a photometer>”. https://cie.co.at/eilvterm/17-25-115
 - CIE e-ILV 17-21-048, “optical extent / etendue”. https://cie.co.at/eilvterm/17-21-048
 - CIE e-ILV 17-21-049, “radiance”. https://cie.co.at/eilvterm/17-21-049
 - CIE e-ILV 17-21-050, “luminance”. https://cie.co.at/eilvterm/17-21-050
