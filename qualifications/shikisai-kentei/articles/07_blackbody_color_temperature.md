@@ -301,6 +301,43 @@ $$
 
 これがStefan–Boltzmann則である。
 
+### 7.1　なぜ $T^4$ になるのか
+
+Planckの法則をそのまま全波長で積分し、
+
+$$
+x=\frac{hc}{\lambda k_{\rm B}T}
+$$
+
+と変数変換すると、
+
+$$
+M(T)
+=
+\frac{2\pi k_{\rm B}^4T^4}{h^3c^2}
+\int_0^\infty
+\frac{x^3}{e^x-1}\,dx
+$$
+
+となる。ここで
+
+$$
+\int_0^\infty\frac{x^3}{e^x-1}\,dx
+=\frac{\pi^4}{15}
+$$
+
+だから、
+
+$$
+\boxed{
+\sigma
+=
+\frac{2\pi^5k_{\rm B}^4}{15h^3c^2}
+}
+$$
+
+を得る。したがって $T^4$ は経験的な近似ではなく、Planck分布を全波長で積分した結果である。量子定数 $h$、熱力学の $k_{\rm B}$、電磁波の速度 $c$ がStefan–Boltzmann定数の中で結びついている。
+
 温度が2倍なら、総放射量は
 
 $$
@@ -309,7 +346,34 @@ $$
 
 倍になる。
 
-白熱ランプではフィラメント温度を上げると、可視域の短波長成分が増えるだけでなく、放射総量も急増する。ただし2700～3000 K程度では放射の大きな部分が赤外域にあり、可視光として利用されない放射も多い。
+### 7.2　「放射エネルギー」と「明るさ」は同じではない
+
+照明では、放射されたワット数のすべてが人間に同じ明るさとして感じられるわけではない。明所視の分光視感効率 $V(\lambda)$ を使うと、黒体の放射発散度から測光量に対応する量は
+
+$$
+M_v(T)
+=
+K_m\int_0^\infty
+M_\lambda(\lambda,T)V(\lambda)\,d\lambda
+$$
+
+と書ける。ここで $K_m\approx683\ \mathrm{lm\,W^{-1}}$ は明所視における最大視感効果度である。
+
+放射の視感効率を
+
+$$
+K(T)
+=
+\frac{M_v(T)}{M(T)}
+=
+K_m
+\frac{\int M_\lambda(\lambda,T)V(\lambda)\,d\lambda}
+{\int M_\lambda(\lambda,T)\,d\lambda}
+$$
+
+とすれば、値を決めるのは「黒体スペクトルの形」と「人間の視感度」の重なりである。
+
+2700～3000 K程度の熱放射では放射エネルギーの大きな部分が赤外域にあり、そこは $V(\lambda)$ でほぼ重み付けされない。白熱ランプが多量の熱を出す割に照明として高効率ではないことは、Planck分布と視感度関数の積から説明できる。
 
 ## 8　黒体スペクトルをXYZへ変換すると「色」になる
 
@@ -435,7 +499,7 @@ $$
 
 それでも白熱ランプは熱放射が支配的で、連続スペクトルをもつ。そのため色温度は発光体の熱力学的温度と比較的直接に結びつく。
 
-CIE標準イルミナントAは、約2855.5 KのPlanckian radiationを基礎とする標準イルミナントである。
+CIE標準イルミナントAは、約2856 KのPlanckian radiationを基礎とする標準イルミナントである。
 
 ## 12　LEDの3000 Kはチップ温度ではない
 
@@ -594,7 +658,7 @@ $$
 M=\sigma T^4
 $$
 
-で増える。
+で増える。さらに、照明としての有効性はPlanck分布そのものではなく、分光視感効率 $V(\lambda)$ との重なりで決まる。
 
 このスペクトルをCIE等色関数で積分すると色度が得られ、温度を変えたときの色度の軌跡が黒体軌跡になる。黒体軌跡上では色温度、近傍の非熱放射源では相関色温度を用いる。
 
@@ -611,7 +675,9 @@ $$
 - CIE, *International Lighting Vocabulary*, 17-23-059 “Planckian locus”. https://cie.co.at/eilvterm/17-23-059
 - CIE, *International Lighting Vocabulary*, 17-23-067 “colour temperature”. https://cie.co.at/eilvterm/17-23-067
 - CIE, *International Lighting Vocabulary*, 17-23-068 “correlated colour temperature”. https://cie.co.at/eilvterm/17-23-068
-- CIE, *International Lighting Vocabulary*, 17-23-021 “CIE standard illuminant”. https://cie.co.at/eilvterm/17-23-021
+- CIE, *International Lighting Vocabulary*, 17-21-090 “luminous efficacy of radiation”. https://cie.co.at/eilvterm/17-21-090
+- CIE, “CIE spectral luminous efficiency for photopic vision”, data set based on CIE 018:2019. https://cie.co.at/datatable/cie-spectral-luminous-efficiency-photopic-vision
+- CIE, *Colorimetry — Part 2: CIE Standard Illuminants*. CIE standard illuminant A is based on a Planckian radiator at approximately 2856 K; D65 represents daylight of approximately 6500 K CCT. https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0
 - OpenStax, *University Physics Volume 3*, §6.1 “Blackbody Radiation”. https://openstax.org/books/university-physics-volume-3/pages/6-1-blackbody-radiation
 - U.S. Department of Energy, “LED Basics”. https://www.energy.gov/cmei/ssl/led-basics
 - Eugene Hecht, *Optics*, 5th ed., Pearson, 2017.
