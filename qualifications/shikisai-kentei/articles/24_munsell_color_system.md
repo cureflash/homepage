@@ -1,6 +1,6 @@
 # マンセル表色系は何を数値化しているのか――色相・明度・彩度を知覚尺度から考える
 
-色彩検定2級では、色の表示（表色系）としてマンセル表色系を学ぶ。公式の2020年改訂版項目表には、色相・色相環・明度・彩度・色の表示方法・色立体と並んで「マンセル表色系」が置かれている。
+色彩検定2級では、色の表示（表色系）としてマンセル表色系を学ぶ。色彩検定協会の現行案内では2級を「3級の知識をベースに、より高度な配色技法やイメージ表現を習得する」級として位置づけ、公式の項目一覧ではマンセル表色系が出題範囲に含まれている。
 
 マンセル表色系は、RGBやXYZのように光を三つの成分へ線形分解する表色系ではない。人が物体色を見たときの「色相 hue」「明るさ lightness」「鮮やかさ chroma」を、できるだけ知覚的に等しい段階で並べようとした色順序体系である。
 
@@ -211,7 +211,90 @@ $$
 
 マンセルは「色を秩序立てて指定・比較する体系」、CIELABは「測色値から知覚色差を扱いやすくする空間」と役割を分けて考えるとよい。
 
-## 9　マンセル・PCCS・NCS・XYZは同じ種類の体系ではない
+## 9　renotationを「非線形写像」として見る
+
+renotation dataによる対応を、数学的には
+
+$$
+\mathbf p=(h,V,C)^\mathsf T,
+\qquad
+\mathbf q=(x,y,Y)^\mathsf T
+$$
+
+として
+
+$$
+\mathbf q=F(\mathbf p)
+$$
+
+という非線形写像と考えられる。ここで $h$ は色相を円周上の連続座標へ展開したものとする。
+
+ある色 $\mathbf p_0$ のごく近傍だけを見れば、多変数関数は一次近似できる。
+
+$$
+\delta\mathbf q
+\approx
+J_F(\mathbf p_0)\,\delta\mathbf p
+$$
+
+ここで
+
+$$
+J_F=
+\begin{pmatrix}
+\partial x/\partial h & \partial x/\partial V & \partial x/\partial C\\
+\partial y/\partial h & \partial y/\partial V & \partial y/\partial C\\
+\partial Y/\partial h & \partial Y/\partial V & \partial Y/\partial C
+\end{pmatrix}
+$$
+
+はヤコビ行列である。
+
+この式は「マンセルとxyYの間には何の数学的関係もない」という意味ではないことを示す。近い色だけなら局所的には線形近似できる。ただし $J_F$ は色立体上の位置によって変わるので、全域を一つの固定行列で変換することはできない。
+
+局所的に逆写像が存在し、$J_F$ が正則なら
+
+$$
+\delta\mathbf p
+\approx
+J_F^{-1}\delta\mathbf q
+$$
+
+と書ける。測色値の共分散行列を $\Sigma_q$ とすれば、一次近似ではマンセル座標側の不確かさは
+
+$$
+\Sigma_p
+\approx
+J_F^{-1}\Sigma_q(J_F^{-1})^\mathsf T
+$$
+
+へ伝播する。
+
+つまり分光測色計の誤差が一定でも、マンセル値へ換算したときの不確かさは色立体上の場所によって変わりうる。
+
+### 無彩色軸では色相が特異になる
+
+さらに $C\to0$ では色相 $H$ の意味が失われる。これは極座標で半径 $r=0$ のとき角度 $\theta$ が定まらないのと同じ構造である。
+
+模式的に
+
+$$
+u=C\cos\theta,
+\qquad
+v=C\sin\theta
+$$
+
+と置けば、$C=0$ ではどの $\theta$ を選んでも
+
+$$
+(u,v)=(0,0)
+$$
+
+になる。したがって無彩色に近づくほど、微小な測定差から推定される色相が大きく振れやすい。
+
+これは単なる測定器の性能不足ではなく、色相を「角度」として持つ座標系そのものの特異性である。
+
+## 10　マンセル・PCCS・NCS・XYZは同じ種類の体系ではない
 
 色彩検定では複数の表色体系が登場するが、分類を混同しないことが重要である。
 
@@ -223,7 +306,7 @@ $$
 
 したがって「どれが最も正確か」という一列の優劣ではなく、何を記述するために作られた体系かを見る必要がある。
 
-## 10　色彩検定で押さえるところ
+## 11　色彩検定で押さえるところ
 
 色彩検定2級では、まず次を確実にする。
 
@@ -250,9 +333,10 @@ $$
 
 ## 参考資料
 
+- [色彩検定協会「色彩検定とは―各級の目安」](https://www.aft.or.jp/pages/feature/level)
 - [色彩検定協会「色彩検定2級 新旧公式テキスト項目一覧」](https://www.aft.or.jp/images/%282%E7%B4%9A%29%E6%96%B0%E6%97%A7%E5%85%AC%E5%BC%8F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E9%A0%85%E7%9B%AE%E6%AF%94%E8%BC%83%E8%A1%A8.pdf)
-- [色彩検定協会「各級の目安」](https://www.aft.or.jp/pages/feature/level)
 - [ASTM D1535-14(2023), Standard Practice for Specifying Color by the Munsell System](https://store.astm.org/d1535-14r23.html)
 - [Rochester Institute of Technology, Munsell Color Science Lab Educational Resources / Munsell Renotation Data](https://www.rit.edu/science/munsell-color-science-lab-educational-resources)
 - [Newhall, S. M., Nickerson, D., & Judd, D. B. (1943), “Final Report of the O.S.A. Subcommittee on the Spacing of the Munsell Colors,” Journal of the Optical Society of America, 33, 385–418](https://doi.org/10.1364/JOSA.33.000385)
+- G. Wyszecki & W. S. Stiles, *Color Science: Concepts and Methods, Quantitative Data and Formulae*, 2nd ed., Wiley, 1982.
 - [CIE 015:2018, Colorimetry, 4th Edition](https://www.cie.co.at/publications/colorimetry-4th-edition)
