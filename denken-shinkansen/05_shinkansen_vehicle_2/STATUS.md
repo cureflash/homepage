@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_38_clean_blind_v9_pass / completed`
+- current_status: `topic_39_exam_alignment_complete / explanation_source_pending`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: Topic 39 の制作前EXAM_ALIGNMENT。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`に従い、公式過去問を直近年度から調査する。
+- next_start: Topic 39の解説source作成。固定5問・25答案要素と系列SPEC固定13項目を変更せず、一般SCADA、CT/VT、A/D、情報伝送、信頼性・可用性を過去問要求へ接続する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -67,9 +67,37 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 v8はfreshness `PASS`、公式一致 `22 / 25 FAIL`、教材だけで導出可能 `25 / 25 PASS`。教材欠落ではなく独立再解答側の識別ミスだったため教材remediationは行わず、fresh v9を実施した。
 
-## 次工程
+## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-Topic 39 `COSMOS 統合監視・SCADA・信頼性` の制作前EXAM_ALIGNMENTから開始する。仕様は系列`SPEC.md`の固定範囲だけを使用し、Topic 38のCOMTRAC内部実装等を推測して持ち込まない。
+判定: `IN_PROGRESS`
+
+### 制作前EXAM_ALIGNMENT
+
+- EXAM_ALIGNMENT: `PASS`
+- EXAM_ALIGNMENT QA: `PASS`
+- 固定公式過去問: `5問`
+- 一次: `4問 / 20答案要素`
+- 二次: `1問 / 5答案要素`
+- 合計: `25答案要素`
+- 二次直接対応: R2二次「電力・管理」問2
+- 二次件数合わせ: `0件`
+- 系列SPEC固定13項目: `13 / 13 mapped`
+- Topic 38固定問題の重複採用: `0件`
+- 未確認COSMOS内部実装・数値の真値化: `0件`
+- exact blocker: `0件`
+
+固定5問:
+1. R4一次「機械」問3 — 計器用変成器
+2. R3一次「機械」問8 — A/D変換
+3. H30一次「機械」問8 — LAN中継機器・アドレス
+4. H25一次「機械」問8 — 変調・復調
+5. R2二次「電力・管理」問2 — 計器用変成器・保護リレー信頼性・自動監視・冗長化
+
+H26一次「機械」問3のUPS・並列冗長はTopic 38ですでに固定済みのため、Topic 39では重複固定しない。
+
+### 次工程
+
+Topic 39の解説sourceを作成し、固定25答案要素と固定13項目のcoverage QAを行う。SCADA、遠隔制御、可用性の名称そのものが固定過去問に直接出るとは扱わず、複数の直接出題論点から構成する一般教材モデルとして明示する。
 
 ## Topic 21 固定注記
 
