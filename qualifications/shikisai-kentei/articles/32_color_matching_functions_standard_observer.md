@@ -1,90 +1,84 @@
-# 等色関数は何を表しているのか――スペクトルをXYZへ射影する3つの重み
+# 等色関数は何を表しているのか――スペクトルをXYZへ写す3つの線形汎関数
 
-分光測色計は、物体や光源のスペクトルを細かい波長ごとの数値として測る。しかし色彩検定で扱うXYZ表色系では、その大量のスペクトル情報を最終的に3個の三刺激値 $X,Y,Z$ へまとめる。
+色彩検定1級では「測色」が学習範囲に含まれ、XYZ表色系、標準測色観察者、三刺激値、均等色空間などを理解する必要がある。等色関数（colour-matching functions）は、その中心にある。
 
-その変換の中心にあるのが、CIE等色関数（colour-matching functions）
+分光測色計が得るのは波長ごとの分光データである。一方、CIE XYZ表色系が扱うのは3個の三刺激値
 
 $$
-\bar{x}(\lambda),\qquad \bar{y}(\lambda),\qquad \bar{z}(\lambda)
+X,\quad Y,\quad Z
 $$
 
-である。
+である。その変換を担うのが
 
-等色関数を単に「人間の目の感度曲線」と覚えると、本質を取り違えやすい。等色関数は、特定の標準観察者について、各波長の単色光を3つの基準刺激で等色するときに必要な三刺激値を波長の関数として表した、測色系の重み関数である。
+$$
+\bar{x}(\lambda),\qquad
+\bar{y}(\lambda),\qquad
+\bar{z}(\lambda)
+$$
 
-この記事では、色彩検定1級のXYZ表色系・標準観察者・測色を、等色実験、線形代数、分光積分、2°・10°標準観察者、錐体分光感度との違いまで接続して理解する。
+という3本の等色関数である。
+
+等色関数を「人間の目の赤・緑・青の感度曲線」と覚えるのは不正確である。等色関数は、標準化された色合わせ実験から得られる測色上の重み関数であり、L・M・S錐体の分光感度そのものではない。本記事では、等色実験からXYZ積分、線形代数、2°・10°標準観察者、分光測色の不確かさまでを一つの数学としてつなぐ。
 
 ## 1　色合わせは「3本のつまみ」でできる
 
-正常色覚の明所視では、多くの色刺激について、独立な3つの基準刺激の量を調整すれば等色を作ることができる。
+正常色覚の明所視では、多くの色刺激について、独立な3つの原刺激の量を調整して等色を作ることができる。
 
-ある波長 $\lambda$ の単色光を試験光とし、3つの原刺激 $R,G,B$ の量を
+波長 $\lambda$ の単色光を試験光とし、3原刺激 $R,G,B$ の量を
 
 $$
 r(\lambda),\quad g(\lambda),\quad b(\lambda)
 $$
 
-とする。
-
-観察者が
+とする。観察者が
 
 $$
 C(\lambda)\equiv r(\lambda)R+g(\lambda)G+b(\lambda)B
 $$
 
-と等色したとき、波長ごとの $r,g,b$ を並べたものが、そのRGB測色系の等色関数になる。
+と判断したとき、波長ごとの $r,g,b$ を並べたものが、そのRGB測色系の等色関数になる。
 
-重要なのは、これは光受容器を直接測定しているのではなく、観察者が「同じ色に見える」と判断するために必要な原刺激量を測っている点である。
-
-つまり等色関数は
+ここで測っているのは光受容器の電気的応答ではない。「左右の色が同じに見える」という心理物理学的な等色条件を、原刺激量として数値化している。
 
 $$
-\boxed{\text{心理物理学的な色合わせ実験から得る系の応答関数}}
+\boxed{\text{等色関数}=\text{色合わせ実験から得る標準化された応答関数}}
 $$
 
-である。
+## 2　なぜRGB等色関数には負の値が現れるのか
 
-## 2　なぜRGB等色関数には負の値が出るのか
+実在する3原色の正の加算だけでは、すべてのスペクトル色を等色できない。
 
-実在する3原色を使った色合わせでは、すべてのスペクトル色を3原色の正の加算だけで作れるとは限らない。
-
-ある試験色 $C$ に対し
+例えば試験色 $C$ に赤原刺激を加えて
 
 $$
 C+|r|R\equiv gG+bB
 $$
 
-のように、原色 $R$ を試験色側へ加えなければ等色できない場合がある。
-
-この式を形式的に右辺へ移せば
+としなければ等色できない場合、形式的には
 
 $$
-C\equiv -|r|R+gG+bB
+C\equiv-|r|R+gG+bB
 $$
 
-となる。
+と書ける。
 
-この $-|r|$ が「負の三刺激値」である。負の光を物理的に発生させているわけではなく、原色を等色場の反対側へ加えた操作を符号付き量で表現している。
+この $-|r|$ が負の三刺激値である。物理的に「負の光」を出しているのではなく、原刺激を試験色側へ移した操作を符号付き量で表している。
 
-WrightとGuildによる20世紀前半の等色実験は、この種の三刺激値データをCIE 1931測色系へまとめる基礎になった。
+WrightとGuildの等色実験は、CIE 1931測色系を構築する主要な実験的基礎になった。
 
-## 3　XYZ表色系はRGBを線形変換した座標系である
+## 3　XYZはRGB等色関係を別の座標へ移したもの
 
-CIE 1931 XYZ表色系では、RGB系で扱いにくかった負の三刺激値を避けやすくし、測光量との接続も良くするため、仮想的な原刺激 $X,Y,Z$ が定義された。
+CIE 1931 XYZ表色系では、測色計算を扱いやすくするため仮想的な原刺激 $X,Y,Z$ が定義された。
 
-RGB三刺激値ベクトルを
+RGB三刺激値とXYZ三刺激値を
 
 $$
-\mathbf{c}_{RGB}=
+\mathbf c_{RGB}=
 \begin{bmatrix}
 R\\G\\B
-\end{bmatrix}
-$$
-
-XYZ三刺激値ベクトルを
-
-$$
-\mathbf{c}_{XYZ}=
+\end{bmatrix},
+\qquad
+\mathbf c_{XYZ}=
 \begin{bmatrix}
 X\\Y\\Z
 \end{bmatrix}
@@ -93,12 +87,12 @@ $$
 とすると、両者は線形変換
 
 $$
-\mathbf{c}_{XYZ}=M\mathbf{c}_{RGB}
+\mathbf c_{XYZ}=M\mathbf c_{RGB}
 $$
 
 で結ばれる。
 
-したがって等色関数も同じ基底変換を受ける。
+等色関数も同じ基底変換を受け、
 
 $$
 \begin{bmatrix}
@@ -115,25 +109,13 @@ M
 \end{bmatrix}
 $$
 
-つまりXYZ等色関数は、人間の視覚に突然現れる3種類の「XYZ受容器」ではない。
+となる。
 
-$$
-\boxed{\text{同じ等色関係を別の3次元座標で表したもの}}
-$$
+したがってXYZ等色関数は「XYZ受容器」の感度曲線ではない。同じ等色関係を、XYZという別の3次元座標で記述している。
 
-である。
+## 4　スペクトルからXYZを求める
 
-## 4　スペクトルは等色関数との内積で3個の数になる
-
-色刺激の分光分布を
-
-$$
-\Phi(\lambda)
-$$
-
-とする。
-
-CIE 1931 2°標準観察者に対する三刺激値は、概念的には
+色刺激の分光分布を $\Phi(\lambda)$ とすると、CIE 1931 2°標準測色観察者に対する三刺激値は概念的に
 
 $$
 X=k\int \Phi(\lambda)\bar{x}(\lambda)\,d\lambda
@@ -147,49 +129,41 @@ $$
 Z=k\int \Phi(\lambda)\bar{z}(\lambda)\,d\lambda
 $$
 
-で求められる。
+で求める。$k$ は用途に応じた規格化係数である。
 
-ここで $k$ は用途に応じた規格化係数である。
-
-線形代数では、これはスペクトル関数 $\Phi$ と3つの重み関数との内積と見なせる。
+内積記号を使えば
 
 $$
-X=\langle \Phi,\bar{x}\rangle,
-\qquad
-Y=\langle \Phi,\bar{y}\rangle,
-\qquad
-Z=\langle \Phi,\bar{z}\rangle
+X=\langle\Phi,\bar{x}\rangle,\qquad
+Y=\langle\Phi,\bar{y}\rangle,\qquad
+Z=\langle\Phi,\bar{z}\rangle
 $$
 
-したがって測色とは、非常に高次元なスペクトルを、3つの測色軸へ射影する操作だと考えられる。
+と書ける。
+
+重要なのは、数百波長分の情報を持つスペクトルが、3つの重み付き積分によって3個の数へ圧縮されることである。
 
 ## 5　離散化すると分光測色計の計算になる
 
-実際の測定では積分を無限に細かく行うのではなく、波長間隔 $\Delta\lambda$ で離散化する。
-
-波長を
+実際の装置では連続積分ではなく、波長間隔 $\Delta\lambda$ でサンプリングした値を使う。
 
 $$
-\lambda_1,\lambda_2,\dots,\lambda_n
-$$
-
-とすると、例えば $X$ は
-
-$$
-X\approx k\sum_{i=1}^{n}
+X\approx
+k\sum_{i=1}^{n}
 \Phi(\lambda_i)\bar{x}(\lambda_i)\Delta\lambda
 $$
 
-となる。
-
-3成分をまとめれば
+$Y,Z$ も同様である。まとめれば
 
 $$
+\mathbf t=A\boldsymbol{\Phi},
+\qquad
+\mathbf t=
 \begin{bmatrix}
 X\\Y\\Z
-\end{bmatrix}
-=
-A
+\end{bmatrix},
+\qquad
+\boldsymbol{\Phi}=
 \begin{bmatrix}
 \Phi_1\\
 \Phi_2\\
@@ -198,23 +172,19 @@ A
 \end{bmatrix}
 $$
 
-と書ける。
+と書ける。$A$ は3×$n$行列で、各行に離散化した $\bar{x},\bar{y},\bar{z}$ と積分重みが入る。
 
-行列 $A$ は3×$n$で、各行には $\bar{x},\bar{y},\bar{z}$ の離散値が入る。
-
-このため、分光測色計で得た数十〜数百個の波長データからXYZを計算する処理は、本質的には
+つまり分光測色は
 
 $$
-\boxed{\text{高次元ベクトルに3本の重みベクトルを掛ける線形変換}}
+\boxed{\mathbb{R}^n\xrightarrow{A}\mathbb{R}^3}
 $$
 
-である。
+という高次元から3次元への線形写像として表せる。
 
-## 6　物体色では照明と反射率を先に掛ける
+## 6　物体色では「照明×反射率×等色関数」
 
-物体色では、試料の分光反射率 $\rho(\lambda)$ だけからXYZは決まらない。
-
-照明の相対分光分布を $S(\lambda)$ とすると、眼へ届く分光刺激は
+物体の分光反射率を $\rho(\lambda)$、照明の相対分光分布を $S(\lambda)$ とすると、眼へ届く反射光は
 
 $$
 \Phi(\lambda)=S(\lambda)\rho(\lambda)
@@ -238,266 +208,340 @@ $$
 
 となる。
 
-ここから、同じ試料でも照明を変えるとXYZが変わる理由が分かる。
-
 測色では
 
-1. 光源の分光分布
+1. 照明の分光分布
 2. 試料の分光反射率
-3. 標準観察者の等色関数
+3. 標準測色観察者の等色関数
 
-の3者を区別する必要がある。
+を区別しなければならない。同じ試料でも照明を変えれば $S(\lambda)$ が変わり、XYZも変わる。
 
-## 7　$\bar{y}(\lambda)$だけ少し特別な理由
+## 7　$\bar{y}(\lambda)$が特別な理由
 
-CIE 1931 XYZ系では、$Y$ が測光量と接続するように設計されている。
+CIE 1931 XYZ系は、$Y$ が明所視の測光量と接続するよう設計されている。
 
-明所視の標準分光視感効率を
-
-$$
-V(\lambda)
-$$
-
-とすると、CIE 1931 2°標準観察者では
+明所視標準分光視感効率を $V(\lambda)$ とすると、CIE 1931 2°標準測色観察者では
 
 $$
 \bar{y}(\lambda)=V(\lambda)
 $$
 
-となるよう定義されている。
+となるよう定められている。
 
-したがって、適切に規格化した $Y$ は測光的な明るさの量と直接対応できる。
+したがって適切に規格化した $Y$ は測光量と直接対応できる。
 
-一方で、$\bar{x}$ と $\bar{z}$ は単独で「赤感度」「青感度」を意味するわけではない。
+ただし、$\bar{x}$ を「赤感度」、$\bar{y}$ を「緑感度」、$\bar{z}$ を「青感度」と読むのは誤りである。XYZは測色座標であり、三つの生理学的受容器を直接表してはいない。
 
-XYZは測色計算のための座標系であり、3本の等色関数をそのままL・M・S錐体の分光感度と同一視してはいけない。
+## 8　等色関数とL・M・S錐体感度は同じではない
 
-## 8　等色関数とL・M・S錐体感度は何が違うのか
+L・M・S錐体の分光感度も3本なので、XYZ等色関数と混同しやすい。
 
-L・M・S錐体の分光感度も3本なので、XYZ等色関数と同じものに見えやすい。しかし両者の意味は異なる。
+LMS錐体基礎関数は光受容の生理学的基盤に近い表現である。一方、XYZ等色関数は、標準化された等色関係を測色計算へ使うための関数である。
 
-LMS錐体基礎関数は、錐体光受容の生理学的基盤へ近い表現である。対してXYZ等色関数は、標準化された等色実験を測色計算へ使うための3つの関数である。
-
-両者はどちらも三色型色覚という同じ3次元性を背景に持ち、適切な条件では線形変換で関係づけられるが、各曲線を1本ずつ対応させて
+適切な条件では両者を線形変換で関係づけられるが、
 
 $$
-\bar{x}=L,\qquad \bar{y}=M,\qquad \bar{z}=S
+\bar{x}=L,\qquad
+\bar{y}=M,\qquad
+\bar{z}=S
 $$
 
-と考えるのは誤りである。
+ではない。
 
-この区別は、XYZを理解するときに非常に重要である。
+同じ3次元性を持つことと、各軸が同じ生理学的意味を持つことは別である。
 
-## 9　2°標準観察者とは何か
+## 9　2°標準測色観察者とは何か
 
-CIE 1931標準測色観察者は、現在のISO/CIE 11664-1:2019で標準化されている。
+CIE 1931標準測色観察者はISO/CIE 11664-1で標準化されている。
 
-CIEによれば、この等色関数は、明所視条件で視角がおよそ1°〜4°の視野について、正常色覚観察者の等色特性を代表する。
-
-測色では慣用的に「2°標準観察者」と呼ばれる。
-
-視角 $\theta$ は、対象の大きさ $d$ と観察距離 $L$ が十分小角なら
+「2°」は試料の物理サイズではなく視角である。対象の大きさを $d$、観察距離を $L$ とし、小角近似できるなら
 
 $$
 \theta\approx\frac{d}{L}
 $$
 
-で表せる。
+である。
 
-例えば観察距離50 cmで直径約1.75 cmの色票は、およそ2°の視角を占める。
+例えば50 cm離れた位置から直径約1.75 cmの色票を見ると、視角はおよそ2°になる。
 
-つまり「2°」は物理的な試料サイズそのものではなく、眼から見た角度である。
+CIE 1931標準測色観察者は、明所視の小視野に対する標準的な等色特性を表す。
 
-## 10　なぜ10°標準観察者も必要なのか
+## 10　なぜ10°標準測色観察者もあるのか
 
-小視野と大視野では、網膜上で使われる領域が異なる。特に中心窩付近とその周辺では、錐体分布や黄斑色素などの影響が同じではない。
+視野が大きくなると、刺激される網膜領域が変わる。中心窩とその周辺では、錐体分布や黄斑色素などの影響が同一ではない。
 
-そのため、大きな色面を扱う測色にはCIE 1964標準測色観察者が定義されている。
-
-現在のISO/CIE 11664-1:2019では、CIE 1964等色関数は、視角が約4°を超える視野における正常色覚観察者の等色特性を代表するものとして規定されている。
-
-10°系の三刺激値は
+そのため大視野用としてCIE 1964標準測色観察者が定義され、
 
 $$
-X_{10},\qquad Y_{10},\qquad Z_{10}
-$$
-
-等色関数は
-
-$$
-\bar{x}_{10}(\lambda),\qquad
-\bar{y}_{10}(\lambda),\qquad
+\bar{x}_{10}(\lambda),\quad
+\bar{y}_{10}(\lambda),\quad
 \bar{z}_{10}(\lambda)
 $$
 
-と書く。
+を用いる。
 
-したがって同じスペクトルでも
+同じスペクトル $\Phi(\lambda)$ でも
 
 $$
 (X,Y,Z)\ne(X_{10},Y_{10},Z_{10})
 $$
 
-となり得る。
-
-測色値を比較するときは、2°か10°かを揃えなければならない。
+となり得る。測色値を比較するときは、標準観察者の条件も一致させる必要がある。
 
 ## 11　標準観察者は「平均的な人そのもの」ではない
 
-標準観察者という言葉から、架空の平均的人物を想像しやすい。しかし実際には、標準化された等色関数の組を指す。
+標準測色観察者とは、人間一人を表すモデルではなく、標準化された等色関数の組である。
 
-個人の眼には、錐体分光感度、黄斑色素、加齢による水晶体透過率などの差がある。
+実在する観察者間には、錐体分光感度、黄斑色素、水晶体透過率などの個人差がある。したがって標準観察者で同じXYZになる刺激が、すべての人に完全に同じ色として見えることを保証するものではない。
 
-したがって実在する観察者AとBが、標準観察者では完全に同じXYZとなる2つの刺激を、必ず完全に同じ色と判断するとは限らない。
-
-これは前の記事で扱った観察者メタメリズムにつながる。
-
-測色値は
+測色値が表しているのは
 
 $$
-\boxed{\text{指定した標準観察者のもとでの標準化された色一致}}
+\boxed{\text{指定した標準測色観察者のもとでの標準化された色一致}}
 $$
 
-を表しているのであり、全人類の知覚を完全に保証する値ではない。
+である。
 
 ## 12　なぜ異なるスペクトルが同じXYZになるのか
-
-等色関数を使うと、スペクトルは3個の内積へ圧縮される。
 
 離散化して
 
 $$
-\mathbf{t}=A\boldsymbol{\Phi}
+\mathbf t=A\boldsymbol{\Phi}
 $$
 
-と書けば、$A$ は3×$n$行列である。
+とする。$A$ は3×$n$行列で、通常 $n>3$ である。
 
-$n>3$なら一般に、
-
-$$
-A\Delta\boldsymbol{\Phi}=\mathbf{0}
-$$
-
-を満たすゼロでない $\Delta\boldsymbol{\Phi}$ が多数存在する。
-
-したがって
+線形代数の階数・退化次元定理より、$A$ の階数が3なら
 
 $$
-A\boldsymbol{\Phi}_1=A\boldsymbol{\Phi}_2
+\dim\ker A=n-3
 $$
 
-でも
+である。したがって
 
 $$
-\boldsymbol{\Phi}_1\ne\boldsymbol{\Phi}_2
+A\Delta\boldsymbol{\Phi}=\mathbf0
 $$
 
-が起こる。
+を満たすゼロでないスペクトル差 $\Delta\boldsymbol{\Phi}$ が多数存在する。
 
-これがメタメリズムの線形代数的な理由である。
-
-つまり、等色関数はスペクトルを色へ変換する一方、スペクトルの情報を大量に捨てている。
-
-## 13　測定波長間隔と等色関数のサンプリング
-
-分光測色では、等色関数の値も波長ごとの表として扱う。
-
-CIEはCIE 1931 2°およびCIE 1964 10°の等色関数データを1 nm間隔で公開している。
-
-数値積分では、試料スペクトル、照明スペクトル、等色関数を同じ波長グリッドへそろえる必要がある。
-
-例えば
+よって
 
 $$
-380,381,382,\dots,780\ \mathrm{nm}
+\boldsymbol{\Phi}_2
+=
+\boldsymbol{\Phi}_1+\Delta\boldsymbol{\Phi}
 $$
 
-のような1 nmグリッドを使うなら、各データも同じ波長位置へ補間または再サンプリングしてから積和を取る。
+としても
 
-波長位置をずらしたまま掛け算すると、数学的には計算できても、物理的には異なる波長同士を掛ける誤った処理になる。
+$$
+A\boldsymbol{\Phi}_2=A\boldsymbol{\Phi}_1
+$$
 
-計測工学としては
+となり得る。これがメタメリズムの線形代数的な核心である。
 
-- 波長校正
-- 分光帯域幅
-- サンプリング間隔
-- 補間法
-- 迷光
+XYZ化は高次元スペクトルの全情報を保存する変換ではない。
 
-なども最終XYZの不確かさへ影響する。
+## 13　「射影」を数学的に厳密に言うと、等色関数は線形汎関数である
 
-## 14　分光帯域幅と測定誤差はXYZへどう伝わるか
+色彩学では「スペクトルをXYZへ射影する」という説明が便利である。しかし大学レベルでは、「直交射影」と「一般の線形写像」を区別した方が正確である。
 
-分光器は、ある波長だけを無限に細く切り出して測ることはできない。真のスペクトルを $\Phi(\lambda)$、装置の正規化された分光応答（スリット関数・line-spread function）を $h(\lambda)$ とすると、測定スペクトルは近似的に
+スペクトル関数の空間を $V$ とする。各等色関数は
+
+$$
+\ell_x[\Phi]
+=
+k\int\Phi(\lambda)\bar{x}(\lambda)\,d\lambda
+$$
+
+$$
+\ell_y[\Phi]
+=
+k\int\Phi(\lambda)\bar{y}(\lambda)\,d\lambda
+$$
+
+$$
+\ell_z[\Phi]
+=
+k\int\Phi(\lambda)\bar{z}(\lambda)\,d\lambda
+$$
+
+という、関数を1個の実数へ写す線形汎関数を定める。
+
+したがって測色写像は
+
+$$
+T:V\rightarrow\mathbb{R}^3,
+\qquad
+T[\Phi]
+=
+\begin{bmatrix}
+\ell_x[\Phi]\\
+\ell_y[\Phi]\\
+\ell_z[\Phi]
+\end{bmatrix}
+$$
+
+と書ける。
+
+つまり等色関数は、スペクトル空間の「基底ベクトル」というより、スペクトルを評価して座標値を返す三つの線形測定器として捉える方が数学的に正確である。
+
+### なぜ普通の直交射影とは違うのか
+
+$\bar{x},\bar{y},\bar{z}$ を関数空間中の3本のベクトルとみなし、
+
+$$
+\mathbf c_1=\bar{x},\quad
+\mathbf c_2=\bar{y},\quad
+\mathbf c_3=\bar{z}
+$$
+
+とする。
+
+これらが互いに正規直交しているなら、内積
+
+$$
+b_i=\langle\Phi,\mathbf c_i\rangle
+$$
+
+は、そのまま直交射影の展開係数になる。
+
+しかし一般には
+
+$$
+\langle\mathbf c_i,\mathbf c_j\rangle\ne\delta_{ij}
+$$
+
+である。Gram行列
+
+$$
+G_{ij}=\langle\mathbf c_i,\mathbf c_j\rangle
+$$
+
+を作ると、$\mathrm{span}\{\mathbf c_1,\mathbf c_2,\mathbf c_3\}$ への通常の直交射影係数 $\mathbf a$ は
+
+$$
+G\mathbf a=\mathbf b,
+\qquad
+\mathbf a=G^{-1}\mathbf b
+$$
+
+で求める。
+
+一方、XYZ測色で使う三刺激値は
+
+$$
+\mathbf b=
+\begin{bmatrix}
+\langle\Phi,\bar{x}\rangle\\
+\langle\Phi,\bar{y}\rangle\\
+\langle\Phi,\bar{z}\rangle
+\end{bmatrix}
+$$
+
+そのものである。
+
+したがってXYZへの変換を「射影」と呼ぶ場合、それは広い意味での次元圧縮・線形写像であり、ユークリッド空間でいう正規直交射影そのものではない。
+
+この区別を押さえると、「XYZはスペクトルの3次元近似形そのもの」ではなく、
+
+$$
+\boxed{\text{標準化された3つの線形測定値}}
+$$
+
+だと理解できる。
+
+## 14　分光帯域幅は「真のスペクトル」をぼかす
+
+分光器は無限に狭い波長幅を測定できない。
+
+真のスペクトルを $\Phi(\lambda)$、装置の正規化された分光応答を $h(\lambda)$ とすると、測定値は近似的に
 
 $$
 \Phi_{\mathrm{meas}}(\lambda)
 =
-\int h(\lambda-\lambda')\Phi(\lambda')\,d\lambda',
-\qquad
-\int h(\lambda)\,d\lambda=1
+\int
+h(\lambda-\lambda')
+\Phi(\lambda')
+\,d\lambda'
 $$
 
-と書ける。つまり装置は真のスペクトルをそのまま読むのではなく、装置自身の分光応答との畳み込みを測っている。
+である。
 
-分光帯域幅が広いほど、狭い発光ピークや急峻な吸収端は平滑化される。白熱光のような滑らかなスペクトルより、LEDやレーザーのような狭帯域成分を含む光源で影響が大きくなりやすい。
+これは畳み込みである。分光帯域幅が広いほど、狭い発光ピークや急峻な吸収端は平滑化される。白熱光のような滑らかなスペクトルより、LEDやレーザーのような狭帯域成分で影響が大きくなりやすい。
 
-離散化した測色式を
+## 15　測定誤差はXYZへ線形に伝播する
 
-$$
-\mathbf{t}=A\boldsymbol{\Phi},
-\qquad
-\mathbf{t}=
-\begin{bmatrix}X\\Y\\Z\end{bmatrix}
-$$
-
-と書く。スペクトル測定に誤差 $\delta\boldsymbol{\Phi}$ が加われば、XYZの一次誤差は
+離散測色式
 
 $$
-\delta\mathbf{t}=A\,\delta\boldsymbol{\Phi}
+\mathbf t=A\boldsymbol{\Phi}
 $$
 
-となる。これは「波長ごとの測定誤差が、等色関数による重み付き和としてXYZへ伝播する」ことを意味する。
+で、スペクトル測定誤差を $\delta\boldsymbol{\Phi}$ とすると
 
-さらにスペクトル測定値の共分散行列を $\Sigma_{\Phi}$ とすれば、線形モデルではXYZの共分散は
+$$
+\delta\mathbf t
+=
+A\,\delta\boldsymbol{\Phi}
+$$
+
+である。
+
+さらにスペクトル測定値の共分散行列を $\Sigma_\Phi$ とすれば、
 
 $$
 \boxed{
-\Sigma_{XYZ}=A\Sigma_{\Phi}A^{\mathsf T}
+\Sigma_{XYZ}
+=
+A\Sigma_\Phi A^{\mathsf T}
 }
 $$
 
-となる。したがって、同じ大きさの測定誤差でも、等色関数の重みが大きい波長域の誤差ほどXYZへ強く効く。また隣接波長の誤差が相関していれば、その相関もXYZの不確かさへ残る。
+となる。
 
-波長校正のずれも同様に評価できる。波長位置が微小量 $\delta\lambda_i$ ずれたとき、等色関数側だけを一次展開した単純化モデルでは
+これは、波長ごとの誤差が独立とは限らないことも含めて、XYZの不確かさを計算できることを意味する。
+
+等色関数の重みが大きい波長域の誤差は、対応する三刺激値へ強く効く。隣接波長の誤差が相関していれば、その相関もXYZ側へ伝わる。
+
+## 16　波長校正のずれも三刺激値を変える
+
+測定波長が微小量 $\delta\lambda_i$ だけずれたとする。単純化して等色関数側のずれだけを見ると、
 
 $$
 \delta X
 \approx
 k\sum_i
 \Phi_i
-\left.\frac{d\bar{x}}{d\lambda}\right|_{\lambda_i}
-\delta\lambda_i\,\Delta\lambda
+\left.
+\frac{d\bar{x}}{d\lambda}
+\right|_{\lambda_i}
+\delta\lambda_i
+\Delta\lambda
 $$
 
-となり、$Y,Z$ も同様である。実際には試料スペクトル自身の波長方向勾配も効くため、急峻なスペクトル構造では波長誤差の影響がさらに大きくなる。
+となり、$Y,Z$ も同様である。
 
-したがって、分光帯域幅・波長精度・迷光・サンプリング間隔は単なる「装置の仕様」ではない。それらは測定されたスペクトル $\boldsymbol{\Phi}$ を変え、最終的に
+実際には試料スペクトル自身の波長方向勾配も効くため、急峻な発光線や吸収端では波長校正誤差の影響が大きくなる。
+
+したがって
+
+- 波長校正
+- 分光帯域幅
+- サンプリング間隔
+- 補間
+- 迷光
+
+は単なる装置仕様ではなく、最終XYZの測定不確かさを決める要因である。
+
+## 17　色彩検定で押さえる因果関係
+
+まず次の流れを一つの系として理解する。
 
 $$
-\boldsymbol{\Phi}
-\xrightarrow{A}
-(X,Y,Z)
-$$
-
-という測色演算そのものへ誤差として入る。大学レベルでは、分光測色を「スペクトルを測ってXYZを計算する手順」だけでなく、「測定系と線形写像を通した不確かさ伝播」として理解するとよい。
-
-## 15　色彩検定で押さえるべき因果関係
-
-暗記ではなく、次の順序でつなげると理解しやすい。
-
-$$
-\text{色合わせ実験}
+\text{等色実験}
 \rightarrow
 \text{RGB等色関数}
 \rightarrow
@@ -510,7 +554,7 @@ $$
 (X,Y,Z)
 $$
 
-さらに物体色なら
+物体色ならさらに
 
 $$
 \boxed{
@@ -526,41 +570,60 @@ $$
 
 となる。
 
-色彩検定で「標準観察者」「等色関数」「XYZ表色系」「三刺激値」「分光測色」が別々の用語として出てきても、実際にはこの1本の計算経路の異なる部分を指している。
+色彩検定で「標準測色観察者」「等色関数」「XYZ表色系」「三刺激値」「分光測色」が別々の用語として現れても、数学的には同じ測色演算の異なる部分を指している。
 
-## 16　まとめ
+## 18　まとめ
 
-等色関数の本質は、各波長の色刺激をXYZ三刺激値へ変換するための3本の標準化された重み関数である。
-
-$$
-\boxed{
-\bar{x}(\lambda),\bar{y}(\lambda),\bar{z}(\lambda)
-}
-$$
-
-は錐体そのものの感度曲線ではなく、等色実験に基づく標準観察者の測色特性をXYZ座標で表したものだと考える必要がある。
-
-そして
+等色関数の本質は、
 
 $$
-X=k\int\Phi\bar{x}\,d\lambda,
-\qquad
-Y=k\int\Phi\bar{y}\,d\lambda,
-\qquad
-Z=k\int\Phi\bar{z}\,d\lambda
+\bar{x}(\lambda),\quad
+\bar{y}(\lambda),\quad
+\bar{z}(\lambda)
 $$
 
-という3つの内積によって、高次元のスペクトルが3個の三刺激値へ圧縮される。
+という3本の標準化された重み関数を使い、高次元のスペクトルを三刺激値へ変換することにある。
 
-この構造が分かれば、XYZ表色系、標準観察者、分光測色、メタメリズム、2°と10°の違いを同じ数学の上で理解できる。さらに測定誤差を $\delta\mathbf{t}=A\delta\boldsymbol{\Phi}$ と書けば、分光測定の不確かさがXYZへどう伝わるかまで同じ線形代数で追跡できる。
+連続系では
+
+$$
+T[\Phi]
+=
+\begin{bmatrix}
+\langle\Phi,\bar{x}\rangle\\
+\langle\Phi,\bar{y}\rangle\\
+\langle\Phi,\bar{z}\rangle
+\end{bmatrix},
+$$
+
+離散系では
+
+$$
+\mathbf t=A\boldsymbol{\Phi}
+$$
+
+である。
+
+この見方をすると、XYZ表色系、標準測色観察者、メタメリズム、分光測色、測定不確かさがすべて同じ線形代数でつながる。
+
+さらに厳密には、等色関数はスペクトル空間を評価する線形汎関数として働く。XYZ化は通常の意味の直交射影ではなく、CIEが標準化した3つの線形測定値への写像である。この数学的意味を押さえると、「なぜスペクトル情報が3数に圧縮できるのか」と「なぜその過程で情報が失われるのか」を同時に理解できる。
 
 ## 参考資料
 
-1. CIE, ISO/CIE 11664-1:2019(E), *Colorimetry — Part 1: CIE standard colorimetric observers*. https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0
-2. CIE, CIE 015:2018, *Colorimetry, 4th Edition*. https://www.cie.co.at/publications/colorimetry-4th-edition
-3. CIE, *CIE 1931 colour-matching functions, 2 degree observer*, DOI: 10.25039/CIE.DS.xvudnb9b. https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer
-4. CIE, *CIE 1964 colour-matching functions, 10 degree observer*, DOI: 10.25039/CIE.DS.sqksu2n5. https://cie.co.at/datatable/cie-1964-colour-matching-functions-10-degree-observer
-5. W. D. Wright, “A re-determination of the trichromatic coefficients of the spectral colours,” *Transactions of the Optical Society*, 30(4), 141–164, 1929. DOI: 10.1088/1475-4878/30/4/301.
-6. J. Guild, “The colorimetric properties of the spectrum,” *Philosophical Transactions of the Royal Society of London, Series A*, 230, 149–187, 1931/1932. DOI: 10.1098/rsta.1932.0005.
-7. H. S. Fairman, M. H. Brill, H. Hemmendinger, “How the CIE 1931 color-matching functions were derived from Wright-Guild data,” *Color Research & Application*, 22(1), 11–23, 1997.
-8. JCGM, *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*, JCGM 100:2008. DOI: 10.59161/JCGM100-2008E. https://www.bipm.org/en/doi/10.59161/jcgm100-2008e
+1. 公益社団法人 色彩検定協会「色彩検定とは―各級の目安」（1級の色彩学に「測色」を明記）  
+   https://www.aft.or.jp/pages/feature/level
+2. CIE, ISO/CIE 11664-1:2019(E), *Colorimetry — Part 1: CIE standard colorimetric observers*.  
+   https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0
+3. CIE, CIE 015:2018, *Colorimetry, 4th Edition*.  
+   https://www.cie.co.at/publications/colorimetry-4th-edition
+4. CIE, *CIE 1931 colour-matching functions, 2 degree observer*, DOI: 10.25039/CIE.DS.xvudnb9b.  
+   https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer
+5. CIE, *CIE 1964 colour-matching functions, 10 degree observer*, DOI: 10.25039/CIE.DS.sqksu2n5.  
+   https://cie.co.at/datatable/cie-1964-colour-matching-functions-10-degree-observer
+6. W. D. Wright, “A re-determination of the trichromatic coefficients of the spectral colours,” *Transactions of the Optical Society*, 30(4), 141–164, 1929. DOI: 10.1088/1475-4878/30/4/301.
+7. J. Guild, “The colorimetric properties of the spectrum,” *Philosophical Transactions of the Royal Society of London, Series A*, 230, 149–187, 1931/1932. DOI: 10.1098/rsta.1932.0005.
+8. H. S. Fairman, M. H. Brill, H. Hemmendinger, “How the CIE 1931 color-matching functions were derived from Wright-Guild data,” *Color Research & Application*, 22(1), 11–23, 1997.
+9. JCGM, *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*, JCGM 100:2008. DOI: 10.59161/JCGM100-2008E.  
+   https://www.bipm.org/en/doi/10.59161/jcgm100-2008e
+10. G. Strang, MIT OpenCourseWare, *Linear Algebra: Orthogonal Vectors and Subspaces / Orthogonal Matrices and Gram-Schmidt*.  
+    https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/
