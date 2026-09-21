@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_practice_source_complete`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_practice_pdf_complete`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 37 完了記録
 
@@ -90,17 +90,41 @@ clean blind v2は `25 / 25 PASS`。candidate固定後修正 `0件`、固定EXAM_
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-## 次工程: Topic 38 練習PDF＋PDF QA
+## Topic 38 練習PDF 完了記録
 
-次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、Topic 38 EXAM_ALIGNMENT、解説source/source QA、解説PDF/PDF QA、練習source/source QA、他workerの新規成果をreconcileしてから開始する。
+- PDF: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_practice.pdf`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_practice_pdf_qa.md`
+- PDF SHA-256: `b6fee6b8df42340297fe37584111ca0cca9636a629b82d25b4af6c3b148e4d95`
+- A4縦 `6頁`
+- 一次試験型: `12問 / 12問五肢択一`
+- 基礎 / 本試験標準 / 複合: `3 / 6 / 3`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 計算独立再検算: `3 / 3 PASS`
+- 二次試験型: `0題`。直接対応固定問題がないため件数合わせ採用 `0件`
+- Ghostscript parse: `PASS`
+- PDFium / Poppler render: `6 / 6 PASS`
+- U+FFFD: `0件`
+- clipped / overlap / black square / broken glyph: `0件`
+- 練習source本文保持: `PASS`
+- 教材用Boolean式・状態遷移・可用性計算を実COMTRAC実装値として使用: `0件`
+- 未確認COMTRAC内部構成・追跡アルゴリズム・処理周期・冗長方式・故障率・MTBF/MTTR/可用性値の真値化: `0件`
+- Topic 39先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
-- 練習sourceをA4縦の練習PDFへ変換する。
-- 問題・選択肢・正答・完全解説を欠落させない。
-- 固定25答案要素とSPEC固定9項目がPDF上でも追跡可能であることを確認する。
-- PDFium / Poppler等で全頁renderし、clipped / overlap / U+FFFD / broken glyphを確認する。
-- 問11の可用性計算、問10のn+1容量、問4のスループットをPDF表示値から再検算する。
+## 次工程: Topic 38 PowerPoint＋render/content QA
+
+次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、Topic 38 EXAM_ALIGNMENT、解説source/source QA、解説PDF/PDF QA、練習source/source QA、練習PDF/PDF QA、他workerの新規成果をreconcileしてから開始する。
+
+- Topic 38解説用PowerPointを作成する。
+- 固定25答案要素とSPEC固定9項目を追跡可能にする。
+- 列車追跡、状態データ、論理処理、時刻情報、ブール代数、インターロック、状態遷移、冗長化、可用性を仕様範囲内で扱う。
+- 教材用Boolean式・状態遷移・可用性モデルを実COMTRAC内部実装として表示しない。
+- 未確認実設備値を真値化しない。
+- 全スライドrender/content QAを行う。
 - 二次問題は直接対応固定問題がないため件数合わせで追加しない。
-- 既存workerが練習PDF＋QAを完了済みなら重複生成せず採用し、次の安全な工程へ進む。
+- 既存workerがPowerPoint＋QAを完了済みなら重複生成せず採用し、次の安全な工程へ進む。
 
 ## 境界条件
 

@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_practice_source_complete`
+- current_status: `topic_38_practice_pdf_complete`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、Topic 38 EXAM_ALIGNMENT・解説source/source QA・解説PDF/PDF QA・練習source/source QAをreconcileし、固定5問・25答案要素、SPEC固定9項目、鉄道一次資料境界を維持してTopic 38練習PDF生成＋PDF表示・内容QAへ進む。既存workerが同工程を完了済みなら重複生成せず、その成果を採用して次の安全な工程へ進む。
+- next_start: 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、Topic 38 EXAM_ALIGNMENT・解説source/source QA・解説PDF/PDF QA・練習source/source QA・練習PDF/PDF QAをreconcileし、固定5問・25答案要素、SPEC固定9項目、鉄道一次資料境界を維持してTopic 38 PowerPoint＋render/content QAへ進む。既存workerが同工程を完了済みなら重複生成せず、その成果を採用して次の安全な工程へ進む。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -67,7 +67,7 @@ v2:
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `PRACTICE_SOURCE_COMPLETE / practice_pdf_pending`
+状態: `PRACTICE_PDF_COMPLETE / powerpoint_pending`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -125,7 +125,27 @@ v2:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 38練習PDF生成＋PDF表示・内容QA。
+### 練習PDF
+
+- PDF: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_practice.pdf`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_practice_pdf_qa.md`
+- PDF SHA-256: `b6fee6b8df42340297fe37584111ca0cca9636a629b82d25b4af6c3b148e4d95`
+- A4縦 `6頁`
+- 一次試験型: `12問 / 12問五肢択一`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 計算再検算: `3 / 3 PASS`
+- 二次試験型: `0題`（直接対応固定問題なし、件数合わせ採用 `0件`）
+- PDFium / Poppler render: `6 / 6 PASS`
+- replacement character U+FFFD: `0件`
+- clipped / overlap / black square / broken glyph: `0件`
+- 練習source本文保持: `PASS`
+- 未確認COMTRAC実値・内部実装の真値化: `0件`
+- Topic 39先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+次工程はTopic 38 PowerPoint＋render/content QA。
 
 ## Topic 21 固定注記
 
