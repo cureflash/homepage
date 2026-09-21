@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v32_pending / IN_PROGRESS`
+- current_status: `topic_39_clean_blind_v33_pending / IN_PROGRESS`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh worker/contextでclean blind v32を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
+- next_start: 別fresh worker/contextでclean blind v33を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V32_PENDING`
+判定: `IN_PROGRESS / CLEAN_BLIND_V33_PENDING`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -99,10 +99,11 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - v29: candidate `6c9b7f89c2c40a6d6cdfdab8a77efb0a7ae1acd8` / freshness `PASS` / 一次 `18 / 20` / 二次 `3 / 5` / 合計 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission + nomenclature error ×4`
 - v30: candidate `c9745020487885c6ac05db05ee8005fe2e059551` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver omission + nomenclature error ×2`
 - v31: candidate `f2614f5629d12857a83529302bdc610dc9030d91` / freshness `PASS` / 一次 `19 / 20` / 二次 `2 / 5` / 合計 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver transcription error ×1 + solver omission ×3 groups + nomenclature error ×1 group`
+- v32: candidate `bfb071d996311cd3b944a02a6010014d8e9078bb` / freshness `PASS` / 一次 `18 / 20` / 二次 `2 / 5` / 合計 `20 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2 primary + solver omission ×3 secondary groups + nomenclature error ×1 secondary group`
 
-v31 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v31_qa.md`
+v32 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v32_qa.md`
 
-v31のanswer-bearingな不一致詳細はv31 QAにのみ保持し、mandatory recordには集計と診断だけを残す。
+v32のanswer-bearingな不一致詳細はv32 QAにのみ保持し、mandatory recordには集計と診断だけを残す。
 
 - 教材・PDF・練習・PowerPoint修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -113,7 +114,7 @@ v31のanswer-bearingな不一致詳細はv31 QAにのみ保持し、mandatory re
 
 ### 次工程
 
-別fresh worker/contextによるclean blind v32。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
+別fresh worker/contextによるclean blind v33。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
 
 ## Topic 21 固定注記
 
