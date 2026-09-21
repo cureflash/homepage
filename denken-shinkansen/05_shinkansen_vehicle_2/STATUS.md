@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_explanation_source_complete`
+- current_status: `topic_38_explanation_pdf_complete`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、Topic 38 EXAM_ALIGNMENT・解説source・source QAをreconcileし、固定5問・25答案要素、SPEC固定9項目、鉄道一次資料境界を維持してTopic 38解説PDF生成＋PDF QAへ進む。練習・PowerPointは解説PDF QA通過前に先行しない。
+- next_start: 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、Topic 38 EXAM_ALIGNMENT・解説source/source QA・解説PDF/PDF QAをreconcileし、固定5問・25答案要素、SPEC固定9項目、鉄道一次資料境界を維持してTopic 38練習source作成＋独立source QAへ進む。練習PDF・PowerPointは練習source QA通過前に先行しない。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -67,7 +67,7 @@ v2:
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `EXPLANATION_SOURCE_COMPLETE / explanation_pdf_pending`
+状態: `EXPLANATION_PDF_COMPLETE / practice_source_pending`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -88,12 +88,25 @@ v2:
 - SPEC固定9項目: `9 / 9 PASS`
 - 3段階例題: `3 / 3 PASS`
 - 可用性例題独立再計算: `PASS`
+
+### 解説PDF
+
+- PDF: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_explanation.pdf`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_explanation_pdf_qa.md`
+- A4縦 `5頁`
+- 固定5問・25答案要素接続: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 3段階例題: `3 / 3 PASS`
+- source実質行保持: `全22節 PASS`（結合上線14出現のみ `overline(...)` 表記へ正規化）
+- PDFium / Poppler render: `5 / 5 PASS`
+- replacement character U+FFFD: `0件`
+- clipped / overlap / broken glyph: `0件`
 - 未確認COMTRAC内部構成・アルゴリズム・処理周期・冗長方式・MTBF/MTTR/可用性値の真値化: `0件`
 - Topic 39先取り: `0件`
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程はTopic 38解説PDF生成＋PDF QA。
+次工程はTopic 38練習source作成＋独立source QA。
 
 ## Topic 21 固定注記
 
