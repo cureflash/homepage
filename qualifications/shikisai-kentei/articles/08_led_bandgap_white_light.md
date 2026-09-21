@@ -195,6 +195,106 @@ $$
 
 ここで $\eta_{\rm inj}$ はキャリア注入効率、$\eta_{\rm ext}$ は光取り出し効率である。半導体は屈折率が高いため、全反射によって内部に光が閉じ込められやすい。表面加工、反射層、封止形状などの光学設計が重要になるのはこのためである。
 
+### 5.1　なぜ内部で生まれた光が外へ出にくいのか――エスケープコーン
+
+屈折率 $n_1$ の半導体から、より低い屈折率 $n_2$ の外部媒質へ光が出る場合、Snellの法則は
+
+$$
+n_1\sin\theta_1=n_2\sin\theta_2
+$$
+
+である。外部に実数の屈折角が存在するには $\sin\theta_2\le 1$ が必要なので、内部入射角には
+
+$$
+\boxed{
+\theta_1\le\theta_c
+=\sin^{-1}\!\left(\frac{n_2}{n_1}\right)
+}
+$$
+
+という制限が生じる。$\theta_c$ を超える光は全反射し、平坦な界面から一度では外へ出られない。
+
+GaNの可視域での屈折率を概略 $n_1\approx2.5$、空気を $n_2\approx1$ とすると、
+
+$$
+\theta_c
+\approx
+\sin^{-1}\!\left(\frac{1}{2.5}\right)
+\approx23.6^\circ
+$$
+
+である。つまり内部で等方的に発生した光のうち、界面法線を中心とする狭い円錐、escape coneに入った方向だけが直接外へ出られる。
+
+この円錐の立体角は
+
+$$
+\Omega_c=2\pi(1-\cos\theta_c)
+$$
+
+なので、等方的に放出された光子の全方向 $4\pi$ に対する「一つの平面界面へ向かう単一通過の幾何学的方向割合」は
+
+$$
+\boxed{
+f_\Omega
+=\frac{\Omega_c}{4\pi}
+=\frac{1-\cos\theta_c}{2}}
+$$
+
+となる。$n_1=2.5$、$n_2=1$ なら
+
+$$
+f_\Omega\approx0.0417
+$$
+
+で、約4.2%にすぎない。$n_1\gg n_2$ の極限では
+
+$$
+\theta_c\approx\frac{n_2}{n_1},\qquad
+f_\Omega\approx\frac{1}{4}\left(\frac{n_2}{n_1}\right)^2
+$$
+
+となり、高屈折率半導体ほど平坦界面からの直接取り出しが難しいことが分かる。
+
+さらにescape cone内でもFresnel反射がある。垂直入射での反射率は
+
+$$
+R(0)=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2
+$$
+
+で、GaNから空気なら概略
+
+$$
+R(0)\approx
+\left(\frac{2.5-1}{2.5+1}\right)^2
+\approx0.184
+$$
+
+となる。したがって「放射再結合で光子を作る」ことと「その光子を外へ取り出す」ことは別の問題である。
+
+実際のLEDで表面粗化、マイクロ構造、ドーム状封止、反射層などを使うのは、単に見た目の形を整えるためではない。粗い表面や微細構造は内部光の進行方向と局所的な界面法線を変え、全反射していた光をescape coneへ散乱できる。封止材は空気より屈折率が高いため屈折率差を小さくし、臨界角を広げる。例えば $n_2=1.5$ なら
+
+$$
+\theta_c\approx36.9^\circ
+$$
+
+まで広がる。
+
+したがって光取り出しの物理的因果関係は
+
+$$
+\boxed{
+\text{高い半導体屈折率}
+\rightarrow
+\text{小さい臨界角}
+\rightarrow
+\text{全反射による光閉じ込め}
+\rightarrow
+\eta_{\rm ext}\text{低下}
+}
+$$
+
+であり、光学構造によってこの閉じ込めを崩すことがLED高効率化の重要な部分になる。なお上の4.2%は平坦な一界面を一度だけ通過する場合の単純な立体角評価であり、実際の素子では多重反射、再吸収、複数界面、表面散乱、封止材などによって取り出し率は変化する。
+
 ## 6　「白色LED」という単一の白い発光物質があるわけではない
 
 LEDは本来、比較的狭い波長域で発光する。一般照明に必要な白色は、複数波長の光を組み合わせて作る。
@@ -601,5 +701,6 @@ $$
 - International Commission on Illumination, CIE 251:2023, *LED Reference Spectrum for Photometer Calibration*.
 - E. Fred Schubert, *Light-Emitting Diodes*, 3rd ed., Cambridge University Press, 2018.
 - S. M. Sze and Kwok K. Ng, *Physics of Semiconductor Devices*, 3rd ed., Wiley, 2007.
+- J.-T. Chen, W.-C. Lai, Y.-J. Kao, Y.-Y. Yang, and J.-K. Sheu, “Laser-induced periodic structures for light extraction efficiency enhancement of GaN-based light emitting diodes,” *Optics Express* 20(5), 5689–5696 (2012). https://doi.org/10.1364/OE.20.005689
 - Y. P. Varshni, “Temperature dependence of the energy gap in semiconductors,” *Physica* 34(1), 149–154 (1967). https://doi.org/10.1016/0031-8914(67)90062-6
 - P. G. Eliseev, P. Perlin, J. Lee, and M. Osiński, “Blue temperature-induced shift and band-tail emission in InGaN-based light sources,” *Applied Physics Letters* 71(5), 569–571 (1997). https://doi.org/10.1063/1.119797
