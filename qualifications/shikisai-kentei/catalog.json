@@ -1,7 +1,7 @@
 {
   "title": "色彩検定×自然科学",
   "updated": "2026-09-21",
-  "targetArticles": 79,
+  "targetArticles": 101,
   "series": [
     {"id":"physics","order":1,"name":"物理","targetTopics":13,"description":"電磁波、光学、散乱、干渉、黒体放射、照明、混色"},
     {"id":"chemistry-geoscience","order":2,"name":"化学・地学","targetTopics":6,"description":"吸収、分子軌道、結晶場、顔料・染料、鉱物・宝石"},
@@ -9,7 +9,8 @@
     {"id":"vision-psychology","order":4,"name":"色覚・心理","targetTopics":7,"description":"順応、反対色、対比、色恒常性、心理物理学"},
     {"id":"colorimetry-design","order":5,"name":"測色・表色・配色","targetTopics":13,"description":"PCCS、マンセル、XYZ、L*a*b*、色差、測色、配色"},
     {"id":"digital-color","order":6,"name":"デジタル色彩・画像処理","targetTopics":18,"description":"RGB、画素、量子化、レイヤー合成、色調補正、トーンカーブ、画像処理、カラーマネジメント"},
-    {"id":"illustration-practice","order":7,"name":"イラスト実践・色彩学","targetTopics":13,"description":"影・光・彩度・明度設計・背景分離・肌・金属・髪・色調補正・色知覚をイラスト制作へ接続"}
+    {"id":"illustration-practice","order":7,"name":"イラスト実践・色彩学","targetTopics":13,"description":"影・光・彩度・明度設計・背景分離・肌・金属・髪・色調補正・色知覚をイラスト制作へ接続"},
+    {"id":"makeup-color-science","order":8,"name":"メイク・美容×色彩科学","targetTopics":22,"description":"肌・ベースメイク・ポイントメイク・質感・顔印象を色彩学、光学、視覚心理、皮膚科学から理解する"}
   ],
   "topics": [
     {"id":"01_what_is_light_color","articleNo":1,"seriesId":"physics","title":"光とは何だろう――「色」の入口を電磁波と光子から考える","summary":"色彩検定3級の「光とは何だろう」を、Maxwell方程式、波長・振動数、光子エネルギー、強度、スペクトル、波動粒子二重性まで物理学から掘り下げる。","levels":["3級：光と色・光とは何だろう","大学：電磁気学・量子論"],"source":"articles/01_what_is_light_color.md"},
@@ -83,6 +84,7 @@
     {"id":"71_character_background_color_separation","articleNo":71,"seriesId":"illustration-practice","title":"背景とキャラクターが同化する理由――色相差・明度差・彩度差・暖寒差から考える","summary":"背景とキャラクターの分離を、sRGB相対輝度、CIELABのL*・クロマ・色相角、反対色処理、暖色／寒色の知覚から整理し、明度差・色相差・彩度差・暖寒差を使い分ける実践へ接続する。","levels":["3級：色の三属性・配色・色の見え方（関連）","2級：配色・色彩心理（関連）","大学：色彩科学・視覚科学・画像工学・心理物理学"],"source":"articles/71_character_background_color_separation.md"},
     {"id":"72_skin_blood_light_subsurface_scattering","articleNo":72,"seriesId":"illustration-practice","title":"肌はなぜ単なるベージュではないのか――血色・光源・表面下散乱から考える","summary":"肌色を単一のベージュとして扱う場合と、メラニン・ヘモグロビンによる波長選択吸収、光源色、表面反射、表面下散乱を分けて考える場合を比較し、皮膚光学とBSSRDFをイラストの血色・影・逆光・ハイライト設計へ接続する。","levels":["3級：光と色・色の見え方・色の三属性（関連）","2級：照明と色・配色（関連）","大学：生体光学・色彩科学・コンピュータグラフィックス・放射輸送"],"source":"articles/72_skin_blood_light_subsurface_scattering.md"},
     {"id":"73_metal_diffuse_specular_environment_reflection","articleNo":73,"seriesId":"illustration-practice","title":"金属はなぜ白いハイライトだけでは金属に見えないのか――拡散反射・鏡面反射・環境映り込みから考える","summary":"灰色や金色のベースへ白いハイライトを足す描き方と、鏡面反射・粗さ・Fresnel反射・環境映り込みを分けて設計する描き方を比較し、導体の複素屈折率、microfacet BRDF、レンダリング方程式から金属らしさをイラスト実践へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・配色（関連）","大学：光学・コンピュータグラフィックス・放射輸送・色彩科学"],"source":"articles/73_metal_diffuse_specular_environment_reflection.md"},
-    {"id":"74_hair_highlight_flow_anisotropic_reflection","articleNo":74,"seriesId":"illustration-practice","title":"髪のツヤはなぜ帯状に見えるのか――毛流れ・異方性反射から考える","summary":"髪のツヤを単一の白い帯ではなく、毛流れに依存する異方性反射と多数の毛束の配向、曲面形状の集合として捉え、Marschner型のR・TT・TRT散乱、吸収、RGB合成から天使の輪・ハイライト設計へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・配色（関連）","大学：光学・コンピュータグラフィックス・放射輸送・色彩科学"],"source":"articles/74_hair_highlight_flow_anisotropic_reflection.md"}
+    {"id":"74_hair_highlight_flow_anisotropic_reflection","articleNo":74,"seriesId":"illustration-practice","title":"髪のツヤはなぜ帯状に見えるのか――毛流れ・異方性反射から考える","summary":"髪のツヤを単一の白い帯ではなく、毛流れに依存する異方性反射と多数の毛束の配向、曲面形状の集合として捉え、Marschner型のR・TT・TRT散乱、吸収、RGB合成から天使の輪・ハイライト設計へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・配色（関連）","大学：光学・コンピュータグラフィックス・放射輸送・色彩科学"],"source":"articles/74_hair_highlight_flow_anisotropic_reflection.md"},
+    {"id":"75_makeup_changes_color_texture_contrast","articleNo":75,"seriesId":"makeup-color-science","title":"メイクは顔の何を変えているのか――色・明暗・質感・コントラストを分解する","summary":"メイクを色相・明度・彩度・質感・局所コントラストの5変数へ分解し、CIELAB、光沢、顔内コントラスト、形状知覚から、ファンデーション・チーク・リップ・アイメイク・ハイライトの働きを色彩科学として整理する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：色彩科学・視覚科学・皮膚光学・心理物理学"],"source":"articles/75_makeup_changes_color_texture_contrast.md"}
   ]
 }
