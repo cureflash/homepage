@@ -231,6 +231,108 @@ $$
 
 「物体固有の色」という言い方は日常的には便利だが、測色学では物体の分光反射率と照明条件を分けて考える必要がある。
 
+### 6.1　物体色の測色では、照明の明るさを正規化する
+
+相対的な物体色を求めるとき、CIE測色では完全拡散反射面 $\rho(\lambda)=1$ の $Y$ が100になるように規格化する。標準イルミナントの相対分光分布を $S(\lambda)$ とすれば
+
+$$
+\boxed{
+k=
+\frac{100}{\int S(\lambda)\bar y(\lambda)\,d\lambda}
+}
+$$
+
+と置き、
+
+$$
+X=k\int S(\lambda)\rho(\lambda)\bar x(\lambda)\,d\lambda,
+$$
+
+$$
+Y=k\int S(\lambda)\rho(\lambda)\bar y(\lambda)\,d\lambda,
+$$
+
+$$
+Z=k\int S(\lambda)\rho(\lambda)\bar z(\lambda)\,d\lambda
+$$
+
+とする。
+
+この正規化によって、単に照明全体を2倍明るくしただけの変化と、スペクトル形状が変わったために物体色が変化する現象を分けて扱える。演色で重要なのは主として後者である。
+
+### 6.2　「同じ白色なのに演色が違う」を線形代数で書く
+
+波長を $n$ 個に離散化し、照明スペクトルを
+
+$$
+\mathbf{s}\in\mathbb{R}^n
+$$
+
+とする。各波長での等色関数を並べた行列を
+
+$$
+C=
+\begin{pmatrix}
+\bar x_1&\bar y_1&\bar z_1\\
+\vdots&\vdots&\vdots\\
+\bar x_n&\bar y_n&\bar z_n
+\end{pmatrix}
+$$
+
+とすれば、光源の三刺激値は定数因子を除いて
+
+$$
+\mathbf{t}=C^{\mathsf T}\mathbf{s}\,\Delta\lambda
+$$
+
+である。
+
+同じ明るさ・同じXYZに規格化した2つの白色光源 $\mathbf{s}_1,\mathbf{s}_2$ があるとする。差を
+
+$$
+\delta\mathbf{s}=\mathbf{s}_1-\mathbf{s}_2
+$$
+
+とすると、光源そのものは等色なので
+
+$$
+\boxed{
+C^{\mathsf T}\delta\mathbf{s}=\mathbf{0}
+}
+$$
+
+である。つまり $\delta\mathbf{s}$ は、XYZへの射影では見えなくなる零空間成分である。
+
+ところが、物体の分光反射率を対角行列
+
+$$
+D_{\rho}=\operatorname{diag}(\rho_1,\rho_2,\ldots,\rho_n)
+$$
+
+で表すと、その物体から返る光のXYZ差は
+
+$$
+\boxed{
+\Delta\mathbf{t}_{\rho}
+=
+C^{\mathsf T}D_{\rho}\delta\mathbf{s}\,\Delta\lambda
+}
+$$
+
+となる。
+
+一般には
+
+$$
+C^{\mathsf T}\delta\mathbf{s}=0
+\quad\not\Rightarrow\quad
+C^{\mathsf T}D_{\rho}\delta\mathbf{s}=0
+$$
+
+である。物体の反射率が波長ごとに照明差を選択的に重み付けするため、光源単体では見えなかったスペクトル差が、物体色の差として現れる。
+
+これが「同じ白色点の照明でも演色が異なる」ことの数学的な核心である。
+
 ## 7　同じ色温度でも演色は同じではない
 
 色温度や相関色温度は、光源の白色点が黒体軌跡のどこに近いかを表す指標である。
@@ -315,19 +417,19 @@ CIE 13.3は14個の試験色データを定め、そのうち最初の8色を一
 
 そのため、同じ $R_a$ を持つ2つのLEDでも、特定の波長域の強弱が異なり、赤・緑・青などの物体色の再現が異なる場合がある。
 
-NISTは、従来のCRIが8個の低〜中彩度試験色の平均に依存するため、ピークの多い固体照明では視覚評価と一致しにくい場合があることを指摘している。
+従来のCIE一般演色評価数 $R_a$ は8個の低〜中彩度試験色の平均に依存するため、固体照明では色忠実度を十分に表さない場合がある。この問題を受け、CIEはCIE 224:2017で99個の試験色を用いる一般色忠実度指数 $R_f$ を定義した。
 
-CIEもこの限界を認め、2017年にはより科学的な色忠実度評価のためCIE 224:2017を公表している。
+さらにCIEは2025年のPosition Statement CIE PS 002:2025で、$R_f$ の利用実績に反証となる問題が見つかっていないとして、照明分野で $R_f$ の採用を開始し、関連する規制・仕様・規格では将来的に $R_a$ を置き換えることを推奨した。移行期間は両者を並行して報告することが推奨されている。
 
-したがって大学レベルでは
+したがって現在の大学レベルの理解としては
 
 $$
 \boxed{
-R_a\text{ は有用だが、光源スペクトルの完全な要約ではない}
+R_a\text{ は歴史的に重要な指標だが、色忠実度評価は }R_f\text{ へ更新が進んでいる}
 }
 $$
 
-と理解すべきである。
+と整理するとよい。ただし $R_f$ も「好ましさ」や「鮮やかさ」を含む総合的な色品質尺度ではなく、基準光に対する色忠実度を評価する尺度である。
 
 ## 10　「白色点」と「物体色再現」を分ける
 
@@ -538,10 +640,12 @@ $$
 
 - 公益社団法人 色彩検定協会, 「色彩検定とは」. https://www.aft.or.jp/pages/feature/level
 - 公益社団法人 色彩検定協会, 「公式テキスト」. https://www.aft.or.jp/pages/official-product-orders
-- Commission Internationale de l'Éclairage (CIE), CIE 013.3-1995, *Method of Measuring and Specifying Colour Rendering Properties of Light Sources*. https://cie.co.at/publications/method-measuring-and-specifying-colour-rendering-properties-light-sources
+- Commission Internationale de l'Éclairage (CIE), CIE 015:2018, *Colorimetry, 4th Edition*. https://cie.co.at/publications/colorimetry-4th-edition
+- CIE, CIE 013.3-1995, *Method of Measuring and Specifying Colour Rendering Properties of Light Sources*. https://cie.co.at/publications/method-measuring-and-specifying-colour-rendering-properties-light-sources
 - CIE, *Spectral radiance factors of 14 test samples for the CIE colour rendering index calculation*. DOI: 10.25039/CIE.DS.wuiuu9cz. https://cie.co.at/datatable/spectral-radiance-factors-14-test-samples-cie-colour-rendering-index-calculation
 - CIE, ISO/CIE 11664-2:2022, *Colorimetry — Part 2: CIE Standard Illuminants*. https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0
 - CIE, CIE 224:2017, *CIE 2017 Colour Fidelity Index for accurate scientific use*. https://www.cie.co.at/publications/cie-2017-colour-fidelity-index-accurate-scientific-use
+- CIE, CIE PS 002:2025, *CIE Position Statement on Colour Quality Metrics, 2nd Edition*. https://cie.co.at/publications/cie-ps-0022025-cie-position-statement-colour-quality-metrics-2nd-edition
 - National Institute of Standards and Technology (NIST), Davis, W. L. & Ohno, Y., “Toward an Improved Color Rendering Metric,” 2005. https://www.nist.gov/publications/toward-improved-color-rendering-metric
 - U.S. Department of Energy, “Color and Spectrum.” https://www.energy.gov/cmei/ssl/color-and-spectrum
 - U.S. Department of Energy, *LED Color Characteristics* fact sheet. https://www.energy.gov/sites/prod/files/2016/08/f33/led-color-characteristics-factsheet.pdf
