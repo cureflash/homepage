@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_clean_blind_v2_failed`
+- current_status: `topic_38_clean_blind_v3_failed`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: Topic 38は教材remediationを再実施しない。answer-bearingなv2 candidate/QA・保存済み正答・既存教材/QAをcandidate固定前に参照していない別fresh workerだけがclean blind v3へ進める。本workerは既にanswer-bearing資料を参照済みのためv3 candidateを作成しない。外部workerの新成果があればreconcileする。
+- next_start: Topic 38は教材remediationを再実施しない。answer-bearingなv3 candidate/QA・保存済み正答・既存教材/QAをcandidate固定前に参照していない別fresh workerだけがclean blind v4へ進める。本workerは既にanswer-bearing資料を参照済みのためv4 candidateを作成しない。外部workerの新成果があればreconcileする。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,7 +29,7 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `CLEAN_BLIND_V2_FAILED`
+状態: `CLEAN_BLIND_V3_FAILED`
 
 ### remediation完了範囲
 
@@ -45,29 +45,29 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 - SPEC固定9項目: `9 / 9 PASS`
 - 未確認COMTRAC実装・数値の真値化: `0件`
 - Topic 39先取り: `0件`
-- v1 candidate変更: `0件`
+- v1/v2 candidate変更: `0件`
 
-### fresh clean blind v2結果
+### fresh clean blind v3結果
 
 - freshness: `PASS`
-- v2 candidate固定commit: `27149448c9f94e5a78628f19b558dd9352d69666`
+- v3 candidate固定commit: `888db60d6bf3f0d7a9b168a946ee654703073828`
 - candidate固定後修正: `0件`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 不一致位置: R2一次「機械」問8(3)の1要素
+- 公式標準解答一致: `23 / 25 FAIL`
+- 不一致位置: R2一次「機械」問8(3)、H23一次「機械」問8(5)の2要素
 - 教材だけで導出可能: `25 / 25 PASS`
 - 教材欠落によるFAIL: `0件`
-- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v2_qa.md`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v3_qa.md`
 - Topic 38 completed: `NO`
 
 ### 次の安全な工程
 
-- v2 candidateは変更しない。
+- v3 candidateは変更しない。
 - 教材・固定EXAM_ALIGNMENTを再修正しない。
-- 本workerはv2固定後に公式標準解答・教材を参照済みのため、fresh v3 candidateを作成しない。
-- clean blind v3は、candidate固定前にv2 candidate/QA、保存済み正答、既存answer-bearing資料を参照していない別fresh workerだけが実施する。
+- 本workerはv3固定後に公式標準解答・教材を参照済みのため、fresh v4 candidateを作成しない。
+- clean blind v4は、candidate固定前にv3 candidate/QA、保存済み正答、既存answer-bearing資料を参照していない別fresh workerだけが実施する。
 - 別workerの成果がmainへ入った場合は、その成果をreconcileして次工程を決める。
 
-exact blocker: `TOPIC38_CLEAN_BLIND_V2_OFFICIAL_MATCH_24_OF_25` — fresh clean blind v2が必須の公式標準解答一致 `25 / 25` に1要素不足。本workerはanswer-bearing資料参照済みのため自分でv3を再試行しない。
+exact blocker: `TOPIC38_CLEAN_BLIND_V3_OFFICIAL_MATCH_23_OF_25` — fresh clean blind v3が必須の公式標準解答一致 `25 / 25` に2要素不足。本workerはanswer-bearing資料参照済みのため自分でv4を再試行しない。
 
 ## Topic 21 固定注記
 
