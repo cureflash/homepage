@@ -669,6 +669,84 @@ $$
 
 数学的には逆写像が一意でない。
 
+この非一意性は、局所的にはヤコビ行列で確認できる。プリンタの色再現を
+
+$$
+F:\mathbb{R}^4\rightarrow\mathbb{R}^3,
+\qquad
+\mathbf{c}=(C,M,Y,K)^\mathsf T
+$$
+
+とし、そのヤコビ行列を
+
+$$
+J_F(\mathbf c)=\frac{\partial(X,Y,Z)}{\partial(C,M,Y,K)}
+$$
+
+とする。$J_F$ は $3\times4$ 行列なので、最大階数が3である。階数が3の場合でも、階数・退化次数定理から
+
+$$
+\dim\ker J_F=4-3=1
+$$
+
+となる。したがって少なくとも1方向の微小変化 $\delta\mathbf c$ について
+
+$$
+J_F\,\delta\mathbf c=0
+$$
+
+が成り立ち、一次近似では
+
+$$
+F(\mathbf c+\delta\mathbf c)
+\approx
+F(\mathbf c)
+$$
+
+となる。つまりPCS上の色をほとんど変えずにCMYK配分を変えられる自由度が局所的に存在する。黒生成やGCR/UCRで「同じ見えを保ちながらK版の使い方を変える」余地が生じる数学的背景の一つがここにある。
+
+逆にRGBディスプレイを
+
+$$
+F:\mathbb{R}^3\rightarrow\mathbb{R}^3
+$$
+
+とみなすと、ある点で
+
+$$
+\det J_F\neq0
+$$
+
+なら逆関数定理により、その近傍ではPCSからRGBへの局所逆写像が存在する。ただし、逆変換が存在することと安定であることは別問題である。
+
+ヤコビ行列の条件数を
+
+$$
+\kappa(J_F)=\|J_F\|\,\|J_F^{-1}\|
+$$
+
+とすると、$\kappa$ が大きい領域ではPCS側の小さな誤差や補間誤差が、逆変換後のデバイス値で大きく増幅されうる。色域境界付近や装置応答が飽和する領域でLUTの補間密度や測定精度が重要になるのは、この「逆問題の悪条件性」としても理解できる。
+
+CMYKの逆変換は一意でないため、実務的には単なる方程式の逆解ではなく、制約付き最適化として考えられる。目標PCSを $\mathbf p_t$ とすれば、模式的に
+
+$$
+\min_{0\le\mathbf c\le1}
+\left[
+\Delta E_{00}(F(\mathbf c),\mathbf p_t)^2
++\lambda R(\mathbf c)
+\right]
+$$
+
+と書ける。$R(\mathbf c)$ は総インク量、K版使用量、階調の滑らかさなど、色差以外の設計目的を表す正則化項である。さらに総インク量制限を
+
+$$
+C+M+Y+K\le T_{\max}
+$$
+
+のような制約として課すこともできる。
+
+したがってプリンタのプロファイル変換は、「色を合わせる」だけでなく、無数にありうる近似解の中から製版・印刷上望ましい解を選ぶ逆問題でもある。
+
 そのため出力プロファイルには、色再現だけでなく黒インク量、総インク量、階調安定性などの設計判断も入る。
 
 ## 18　ソフトプルーフは何を計算しているのか
@@ -827,6 +905,8 @@ $$
 
 ただし実際には、白色点の違いには色順応変換、再現可能範囲の違いには色域写像、装置の非線形性にはTRCやLUTが必要になる。
 
+さらに、デバイス→PCS変換の逆問題では、RGBのように局所逆が存在しても条件数によって誤差が増幅され、CMYKのように入力次元が高い系では逆解そのものが非一意になる。
+
 したがってカラーマネジメントは、単なる「色設定」ではなく、
 
 $$
@@ -835,7 +915,7 @@ $$
 +\text{線形代数}
 +\text{非線形近似}
 +\text{色順応}
-+\text{最適化}
++\text{逆問題・最適化}
 }
 $$
 
@@ -853,3 +933,5 @@ $$
 8. IEC, *IEC 61966-2-1:1999 Multimedia systems and equipment — Colour measurement and management — Part 2-1: Default RGB colour space — sRGB*. https://webstore.iec.ch/en/publication/6169
 9. CIE, *CIE 015:2018 Colorimetry, 4th Edition*, International Commission on Illumination, 2018. https://cie.co.at/publications/colorimetry-4th-edition
 10. ISO/CIE, *ISO/CIE 11664-4:2019 Colorimetry — Part 4: CIE 1976 L*a*b* colour space*. https://www.cie.co.at/publications/colorimetry-part-4-cie-1976-lab-colour-space-1
+11. R. S. Berns, *Billmeyer and Saltzman's Principles of Color Technology*, 3rd ed., Wiley, 2000.
+12. L. N. Trefethen and D. Bau III, *Numerical Linear Algebra*, SIAM, 1997.
