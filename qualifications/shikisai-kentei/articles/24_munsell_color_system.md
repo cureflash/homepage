@@ -366,7 +366,73 @@ RITが公開するMunsell renotation dataでも、補間用の外挿色の一部
 
 したがってマンセル色立体は、単なる「歪んだ円柱」ではない。知覚的な等歩度化と、分光反射率が満たす物理的制約の両方が重なって、不規則な外殻を持つ色立体になる。
 
-## 12　色彩検定で押さえるところ
+## 12　「1マンセル差」はどこでも同じ距離か――局所計量で考える
+
+マンセルは知覚的な等歩度を目指した体系だが、HVC座標の差をそのままユークリッド距離として扱えるわけではない。この点を、CIELABへの局所写像を使って定量化できる。
+
+固定した照明・標準観察者のもとで、renotationとXYZ→CIELAB変換をまとめて
+
+$$
+\boldsymbol{\ell}=G(\mathbf p),
+\qquad
+\mathbf p=(h,V,C)^\mathsf T,
+\qquad
+\boldsymbol{\ell}=(L^*,a^*,b^*)^\mathsf T
+$$
+
+と書く。ある色 $\mathbf p_0$ の近傍では
+
+$$
+\delta\boldsymbol{\ell}
+\approx
+J_G(\mathbf p_0)\,\delta\mathbf p
+$$
+
+である。CIELABの1976色差を局所的な距離として使うと
+
+$$
+(\Delta E^*_{ab})^2
+\approx
+\delta\boldsymbol{\ell}^{\mathsf T}\delta\boldsymbol{\ell}
+=
+\delta\mathbf p^{\mathsf T}
+\underbrace{J_G^{\mathsf T}J_G}_{M(\mathbf p_0)}
+\delta\mathbf p
+$$
+
+となる。
+
+$$
+\boxed{M(\mathbf p)=J_G(\mathbf p)^{\mathsf T}J_G(\mathbf p)}
+$$
+
+は、CIELAB側の距離をマンセル座標へ引き戻した局所的な計量行列とみなせる。$M$ が色立体のどこでも一定の単位行列の定数倍なら、H・V・Cの同じ数値差は場所によらず同じ色差を意味する。しかし実際には $J_G$ が位置によって変わるため、$M$ も変化する。
+
+対角成分は各座標方向へ少し動いたときの色差感度、非対角成分は色相・明度・彩度方向がCIELAB上で完全には直交しないことを表す。さらに $M$ の固有値と固有ベクトルを求めれば、その色の近傍で「最も色差が大きく増える方向」「最も増えにくい方向」を定量化できる。
+
+この見方は、前節の無彩色軸の特異性ともつながる。$C\to0$ では色相 $h$ を変えても色そのものはほとんど動かなくなるため、$\partial\boldsymbol{\ell}/\partial h$ は小さくなり、計量行列は色相方向で特異または悪条件になっていく。無彩色で色相が定義できないことが、微分幾何学的にも現れる。
+
+なおCIELAB自体も完全な均等色空間ではない。CIEDE2000のような局所的な色差モデルを二次形式
+
+$$
+(\Delta E_{00})^2
+\approx
+\delta\boldsymbol{\ell}^{\mathsf T}
+W(\boldsymbol{\ell})
+\delta\boldsymbol{\ell}
+$$
+
+として近似するなら、マンセル側では
+
+$$
+M_{00}(\mathbf p)
+=
+J_G^{\mathsf T}WJ_G
+$$
+
+となる。重要なのは、どの色差尺度を採用しても「HVCの固定した数値差＝どこでも同じ知覚距離」とは一般に言えないことである。
+
+## 13　色彩検定で押さえるところ
 
 色彩検定2級では、まず次を確実にする。
 
@@ -401,3 +467,4 @@ $$
 - [MacAdam, D. L. (1935), “The Theory of the Maximum Visual Efficiency of Colored Materials,” Journal of the Optical Society of America, 25, 249–252](https://doi.org/10.1364/JOSA.25.000249)
 - G. Wyszecki & W. S. Stiles, *Color Science: Concepts and Methods, Quantitative Data and Formulae*, 2nd ed., Wiley, 1982.
 - [CIE 015:2018, Colorimetry, 4th Edition](https://www.cie.co.at/publications/colorimetry-4th-edition)
+- [ISO/CIE 11664-4:2019, Colorimetry — Part 4: CIE 1976 L*a*b* colour space](https://www.cie.co.at/publications/colorimetry-part-4-cie-1976-lab-colour-space-1)
