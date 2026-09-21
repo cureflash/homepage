@@ -365,6 +365,71 @@ $$
 
 色の測定では、単に「反射率を測った」と言うだけでなく、照明・受光の幾何条件まで指定する必要がある。
 
+### 10.1　反射は「入射方向」と「観察方向」の二方向で決まる
+
+より厳密には、表面がどの方向へどれだけ光を返すかは、双方向反射率分布関数（BRDF）で表す。波長 $\lambda$、入射方向 $\omega_i$、反射方向 $\omega_r$ に対して、BRDFを
+
+$$
+f_r(\lambda,\omega_i,\omega_r)
+=\frac{dL_r(\lambda,\omega_r)}{dE_i(\lambda,\omega_i)}
+$$
+
+と定義する。$L_r$ は反射放射輝度、$E_i$ は入射放射照度で、$f_r$ の単位は $\mathrm{sr}^{-1}$ である。つまり通常の分光反射率 $R(\lambda)$ が「波長ごとの総量」を主に表すのに対し、BRDFはそこへ方向情報を加えた量である。
+
+任意の方向から光が入射する場合、観察方向 $\omega_r$ へ出る放射輝度は
+
+$$
+L_r(\lambda,\omega_r)
+=\int_{\Omega^+}
+f_r(\lambda,\omega_i,\omega_r)
+L_i(\lambda,\omega_i)
+\cos\theta_i\,d\omega_i
+$$
+
+で表される。$L_i$ は入射放射輝度、$\theta_i$ は表面法線と入射方向の角度である。$\cos\theta_i$ が入るのは、斜めから同じ放射輝度の光を受けても、表面へ投影される面積あたりの入射エネルギーが小さくなるためである。
+
+理想的なLambert反射面ではBRDFは方向によらず、分光反射率を $\rho(\lambda)$ とすると
+
+$$
+f_r(\lambda)=\frac{\rho(\lambda)}{\pi}
+$$
+
+である。半球について
+
+$$
+\int_{\Omega^+}\cos\theta\,d\omega=\pi
+$$
+
+だから、方向半球反射率は
+
+$$
+\int_{\Omega^+}f_r\cos\theta_r\,d\omega_r
+=\rho
+$$
+
+となる。この $1/\pi$ は単なる慣習ではなく、半球へエネルギーを分配しつつエネルギー保存を満たすために必要な係数である。
+
+一方、鏡面では反射エネルギーが正反射方向近傍へ集中するため、BRDFは鋭いピークを持つ。紙、塗膜、肌、金属フレーク塗装などの実在表面は、多くの場合Lambert拡散成分・鏡面成分・中間的なヘイズ成分を併せ持つ。このため、同じ分光反射率を持つ試料でも、観察角度や照明角度が変われば見かけの明るさや色が変化し得る。
+
+受動的な表面では、各入射方向について反射側へ出るエネルギーが入射エネルギーを超えないので、
+
+$$
+\int_{\Omega^+}
+f_r(\lambda,\omega_i,\omega_r)
+\cos\theta_r\,d\omega_r\le1
+$$
+
+を満たす必要がある。また磁気光学効果などで相反性が破れない通常の材料では、Helmholtzの相反則として概念的に
+
+$$
+f_r(\lambda,\omega_i,\omega_r)
+=f_r(\lambda,\omega_r,\omega_i)
+$$
+
+が成り立つ。
+
+したがって「白い紙はどの角度から見てもほぼ同じに見える」「光沢紙は角度を変えると白く飛ぶ」といった違いは、単なる感覚的な光沢差ではなく、反射光の角度分布 $f_r$ の違いとして記述できる。色の測定で照明・受光条件を指定する必要があるのも、この方向依存性を制御するためである。
+
 ## 11　色彩検定で押さえる部分と大学レベルの接続
 
 色彩検定では、まず次を押さえる。
@@ -380,7 +445,7 @@ $$
 R(\lambda)+T(\lambda)+A(\lambda)=1
 $$
 
-というエネルギー保存、Fresnel係数、Poyntingベクトル、複素屈折率、複素誘電率、吸収係数、散乱、そして
+というエネルギー保存、Fresnel係数、Poyntingベクトル、複素屈折率、複素誘電率、吸収係数、散乱、BRDF、そして
 
 $$
 (X,Y,Z)=\int S(\lambda)R(\lambda)(\bar x,\bar y,\bar z)\,d\lambda
@@ -401,3 +466,6 @@ $$
 - RP Photonics Encyclopedia, "Kramers–Kronig Relations", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/kramers_kronig_relations.html
 - [CIE, CIE 1931 colour-matching functions, 2 degree observer](https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer)
 - [OpenStax, College Physics 2e, 24.3 The Electromagnetic Spectrum](https://openstax.org/books/college-physics-2e/pages/24-3-the-electromagnetic-spectrum)
+- [NIST, Bidirectional optical scattering facility](https://www.nist.gov/laboratories/tools-instruments/bidirectional-optical-scattering-facility)
+- [NIST, Theoretical Concepts in Spectrophotometric Measurements](https://www.nist.gov/publications/theoretical-concepts-spectrophotometric-measurements)
+- [NIST SP 250-101, Ultraviolet to Short-wave Infrared Spectral Reflectance](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-101.pdf)
