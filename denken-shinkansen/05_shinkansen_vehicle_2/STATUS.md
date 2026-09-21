@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `36 / 39`
-- current_status: `topic_37_powerpoint_complete`
+- current_status: `topic_37_clean_blind_v1_fail`
 - last_completed_topic: `36 ATC② 信号伝送と周波数`
 - active_topic: `37 ATC③ 速度制御系`
-- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 37の全既存成果物をreconcileする。次工程はanswer-bearing資料を先に開かないfresh workerによるclean blind candidate固定→固定5問・25答案要素（一次5、二次20）の独立再解答QA。candidate固定前に公式標準解答、固定EXAM_ALIGNMENTの正答、解説source/PDF、練習source/PDF、各answer-bearing QAを開かない。未確認の実車ATC内部実装・数値を真値化せず、Topic 38を先取りしない。
+- next_start: 最新main、上位仕様、系列SPEC、`STATUS.md` / `HANDOFF.md`、Topic 37の全既存成果物をreconcileする。次工程はanswer-bearing資料を先に開かないfresh workerによる `clean_blind_v2_candidate` 固定→固定5問・25答案要素（一次5、二次20）の独立再解答QA。v1 candidate/QA、公式標準解答、固定EXAM_ALIGNMENTの正答、解説source/PDF、練習source/PDF、各answer-bearing QAをcandidate固定前に開かない。未確認の実車ATC内部実装・数値を真値化せず、Topic 38を先取りしない。
 
 Topic 01〜36は `PASS / completed`。完成数は `36 / 39`。
 
@@ -415,7 +415,7 @@ Topic 36はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、c
 
 ## Topic 37 ATC③ 速度制御系
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `NEEDS_REVISION / CLEAN_BLIND_V1_FAIL`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -573,6 +573,23 @@ SPEC固定項目:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-Topic 37はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointまで `PASS`。完成数は `36 / 39` のまま。完成判定にはfresh clean blind独立再解答が未実施。
+### clean blind v1
 
-次工程: answer-bearing資料を先に開かないfresh workerでclean blind candidateを固定し、その後に公式標準解答・教材との照合QAを行う。本runはanswer-bearing資料を参照済みのためcandidateを作成しない。
+- candidate: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_candidate.md`
+- candidate lock commit: `4e03db0fcc000842dd0f776d773df866b52ea855`
+- QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_qa.md`
+- QA commit: `5193011c6577a7690eba869ad43673acd79575d7`
+- 一次: `4 / 5 PASS`
+- 二次: `20 / 20 PASS`
+- 合計: `24 / 25 FAIL`
+- FAIL要素: R4一次「機械」問7(2)。candidate `リレーシーケンス回路（リレー回路）` に対し、公式・canonicalは `自己保持回路`。
+- 診断: 既存解説sourceには `自己保持回路` が明示されているため教材欠落ではなく、clean blind独立再解答側の特定ミス。
+- candidate固定後修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物再生成: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
+Topic 37はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointまで `PASS` だが、clean blind v1が `24 / 25 FAIL` のため未完了。完成数は `36 / 39` のまま。
+
+次工程: fresh workerで `clean_blind_v2_candidate` を固定し、その後に公式標準解答・教材との照合QAを行う。candidate固定前にv1 candidate/QAを含むanswer-bearing資料を開かない。
