@@ -431,6 +431,81 @@ $$
 
 と整理するとよい。ただし $R_f$ も「好ましさ」や「鮮やかさ」を含む総合的な色品質尺度ではなく、基準光に対する色忠実度を評価する尺度である。
 
+### 9.1　$R_f$ は99色の「平均的なずれ」を評価する
+
+CIE 224:2017では、従来の $R_a$ より広い色域を代表する99個の試験色を使い、試験光源と基準光源の下での色のずれを比較する。色差の計算には、知覚的な均等性を改善したCAM02-UCSが用いられる。
+
+試験色 $i$ のCAM02-UCS座標を、試験光源下で
+
+$$
+\mathbf{p}_{t,i}
+=
+\begin{pmatrix}
+J'_{t,i}\\
+a'_{t,i}\\
+b'_{t,i}
+\end{pmatrix}
+$$
+
+基準光源下で
+
+$$
+\mathbf{p}_{r,i}
+=
+\begin{pmatrix}
+J'_{r,i}\\
+a'_{r,i}\\
+b'_{r,i}
+\end{pmatrix}
+$$
+
+と書けば、各試験色の色差はユークリッド距離
+
+$$
+\boxed{
+\Delta E'_i
+=
+\left\|\mathbf{p}_{t,i}-\mathbf{p}_{r,i}\right\|_2
+=
+\sqrt{
+(J'_{t,i}-J'_{r,i})^2
++(a'_{t,i}-a'_{r,i})^2
++(b'_{t,i}-b'_{r,i})^2
+}
+}
+$$
+
+として扱える。99色について
+
+$$
+\boxed{
+\overline{\Delta E'}
+=
+\frac{1}{99}
+\sum_{i=1}^{99}\Delta E'_i
+}
+$$
+
+を求め、その平均色差をCIE 224で規定されたスケーリングによって忠実度指数 $R_f$ に変換する。全試験色が基準光と一致すれば $\overline{\Delta E'}=0$ となり、$R_f=100$ である。平均色差が大きくなるほど $R_f$ は低下する。
+
+物理過程まで戻せば、試験光源と基準光源の分光分布差 $\delta S(\lambda)$ が各試験色の反射率 $\rho_i(\lambda)$ によって異なる重みを受け、
+
+$$
+\delta S(\lambda)
+\rightarrow
+\rho_i(\lambda)\delta S(\lambda)
+\rightarrow
+\Delta XYZ_i
+\rightarrow
+\Delta E'_i
+\rightarrow
+R_f
+$$
+
+と伝播する。したがって演色評価は、単に光源スペクトル同士を比較するのではなく、「多数の物体を通したときに色刺激がどれだけ変わるか」を統計的に要約する操作である。
+
+ただし $R_f$ は平均値なので、同じ $R_f$ でも色相ごとの誤差分布は異なりうる。特定の赤だけが大きくずれる光源と、全色が少しずつずれる光源が同じ総合値になる可能性がある。このため、単一の忠実度指数だけで照明の色品質すべてを表すことはできない。
+
 ## 10　「白色点」と「物体色再現」を分ける
 
 照明を考えるときは、少なくとも次の3段階を区別する必要がある。
@@ -645,7 +720,9 @@ $$
 - CIE, *Spectral radiance factors of 14 test samples for the CIE colour rendering index calculation*. DOI: 10.25039/CIE.DS.wuiuu9cz. https://cie.co.at/datatable/spectral-radiance-factors-14-test-samples-cie-colour-rendering-index-calculation
 - CIE, ISO/CIE 11664-2:2022, *Colorimetry — Part 2: CIE Standard Illuminants*. https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0
 - CIE, CIE 224:2017, *CIE 2017 Colour Fidelity Index for accurate scientific use*. https://www.cie.co.at/publications/cie-2017-colour-fidelity-index-accurate-scientific-use
+- CIE, *Spectral radiance factors of 99 test samples for the CIE colour fidelity index calculation*. DOI: 10.25039/CIE.DS.wi5idbqu. https://www.cie.co.at/datatable/spectral-radiance-factors-99-test-samples-cie-colour-fidelity-index-calculation
 - CIE, CIE PS 002:2025, *CIE Position Statement on Colour Quality Metrics, 2nd Edition*. https://cie.co.at/publications/cie-ps-0022025-cie-position-statement-colour-quality-metrics-2nd-edition
+- Illuminating Engineering Society (IES), *PS-11-18: IES Position on TM-30-18, IES Method for Evaluating Light Source Color Rendition*. https://ies.org/advocacy/ps-11-18/
 - National Institute of Standards and Technology (NIST), Davis, W. L. & Ohno, Y., “Toward an Improved Color Rendering Metric,” 2005. https://www.nist.gov/publications/toward-improved-color-rendering-metric
 - U.S. Department of Energy, “Color and Spectrum.” https://www.energy.gov/cmei/ssl/color-and-spectrum
 - U.S. Department of Energy, *LED Color Characteristics* fact sheet. https://www.energy.gov/sites/prod/files/2016/08/f33/led-color-characteristics-factsheet.pdf
