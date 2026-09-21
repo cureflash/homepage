@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_clean_blind_v1_fail_textbook_gap`
+- current_status: `topic_38_explanation_source_remediated`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`をreconcileし、`38_comtrac_train_tracking_route_control_reliability_clean_blind_v1_remediation.md`に従ってEXAM_ALIGNMENT・解説source・練習sourceと各source QAを修正する。その後、解説PDF・練習PDF・PowerPointを再生成・再QAし、fresh clean blind v2へ進む。
+- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`をreconcileし、remediated EXAM_ALIGNMENT・解説sourceを正本として練習source＋source QAを修正する。その後、解説PDF・練習PDF・PowerPointを再生成・再QAし、fresh clean blind v2へ進む。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,44 +29,49 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `CLEAN_BLIND_V1_FAIL / textbook_gap_remediation_pending`
+状態: `SOURCE_REMEDIATION_IN_PROGRESS / explanation_source_pass`
 
-### 制作前EXAM_ALIGNMENT
+### clean blind v1診断
 
-- source: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability.md`
-- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_exam_alignment_qa.md`
-- 固定公式過去問: `5問`
-- 一次: `5問 / 25答案要素`
-- 二次: `0問`（当該コア論点の直接対応を固定できず、件数合わせ採用 `0件`）
-- SPEC固定9項目: `9 / 9 mapped`
-- 固定5問変更: `0件`
-
-### clean blind v1
-
-- question-only intake: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_intake.md`
-- candidate: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_candidate.md`
-- candidate commit: `e20fc83a3d1c9c4a17f647035d8fb666f20d02d0`
-- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_qa.md`
-- remediation: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v1_remediation.md`
 - 公式標準解答一致: `25 / 25 PASS`
 - 教材だけで導出: `23 / 25 FAIL`
-- FAIL 1: R8一次「機械」問8(5) — ステッピングモータのセンサレス位置決め・脱調条件が現教材では不足
-- FAIL 2: H23一次「機械」問8(3) — ノイマン形コンピュータが現教材に欠落
-- mapping不整合: H29問8とH23問8の既存25要素接続表が実空欄順と一致していない
-- candidate固定後修正: `0件`
+- FAIL 1: R8一次「機械」問8(5) — ステッピングモータの角位置センサなし簡易位置決め・脱調条件不足
+- FAIL 2: H23一次「機械」問8(3) — ノイマン形コンピュータ不足
+- mapping不整合: H29問8、H23問8
+- v1 candidate修正: `0件`
+
+### remediation進捗
+
+EXAM_ALIGNMENT＋QA: `PASS / REMEDIATED`
+
+- 固定5問変更: `0件`
+- H29実空欄へ修正: `(1)逐次的 (2)結合 (3)ドライバ (4)大きくなる (5)ブラックボックス`
+- H23実空欄へ修正: `(1)組合せ回路 (2)フリップフロップ (3)ノイマン形コンピュータ (4)ASIC (5)Quine–McCluskey法`
+- 一次: `5問 / 25答案要素`、`25 / 25 PASS`
+- 二次: `0問`、件数合わせ `0件`
+- SPEC固定9項目: `9 / 9 PASS`
+
+解説source＋source QA: `PASS / REMEDIATED`
+
+- R8(5) センサレス/オープンループ簡易位置決め・脱調: `PASS`
+- H23(3) 記憶プログラム方式・原則逐次命令実行: `PASS`
+- H29(4) 単体→結合→システム試験で対象プログラム量・範囲が大きくなる: `PASS`
+- 固定25答案要素: `25 / 25 connected`
+- SPEC固定9項目: `9 / 9 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
 - exact blocker: `0件`
 
-### 既存成果物の扱い
+### 既存派生成果物の扱い
 
-PowerPointまでの制作・表示QA自体は完了しているが、clean blind v1で教材接続不足を検出したため、Topic 38完成判定には使用しない。source remediation後に派生成果物を再生成・再QAする。
+clean blind v1以前の練習source/QA、解説PDF、練習PDF、PowerPointはremediation前の内容を含むためTopic 38完成判定には使用しない。以下を順に再同期する。
 
-再生成対象:
-
-- explanation source / source QA
-- explanation PDF / PDF QA
-- practice source / source QA
-- practice PDF / PDF QA
-- PowerPoint / PowerPoint QA
+1. practice source / source QA
+2. explanation PDF / PDF QA
+3. practice PDF / PDF QA
+4. PowerPoint / PowerPoint QA
+5. fresh clean blind v2
 
 固定9項目、COMTRAC実装境界、二次0問、Topic 39非先取りは維持する。
 
