@@ -1,23 +1,33 @@
-# Topic 38 COMTRAC 列車追跡・進路制御・高信頼化 — 練習source QA
+# Topic 38 COMTRAC 列車追跡・進路制御・高信頼化 — 練習source remediation QA
 
 更新日: 2026-09-21
 
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+判定: `PASS / PRACTICE_SOURCE_REMEDIATED`
 
 ## 正本・reconcile
 
 - `denken-shinkansen/MASTER_SPEC.md`: 確認済み
 - `denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`: 確認済み
 - `05_shinkansen_vehicle_2/SPEC.md`: 確認済み
-- `STATUS.md` / `HANDOFF.md`: Topic 01〜37 `PASS / completed`、Topic 38解説PDF＋PDF QAまで完了を確認
-- Topic 38固定EXAM_ALIGNMENT / QA: 変更なし
-- Topic 38解説source / source QA: 変更なし
-- Topic 38解説PDF / PDF QA: 変更なし
+- `STATUS.md` / `HANDOFF.md`: Topic 01〜37 `PASS / completed`、Topic 38はEXAM_ALIGNMENT・解説sourceまでremediation済みを確認
+- Topic 38固定EXAM_ALIGNMENT / QA: `PASS / REMEDIATED`、固定5問変更なし
+- Topic 38解説source / source QA: `PASS / REMEDIATED`
+- remediation前の解説PDF・練習PDF・PowerPoint: Topic 38完成判定には未使用
 - 練習source: `38_comtrac_train_tracking_route_control_reliability_practice_source.md`
-- 練習source commit: `9fbfd032f06a7dd21e8711c0c18a2722aae539a9`
-- 練習source blob SHA: `852491ff724289157213a8ea04440845be3efa66`
+- 練習source remediation commit: `40f4234fad5e4087369e574978583928545e6b20`
+- 練習source blob SHA: `8fd4c6b68d2e0f6a532b1bb6620b8f0ddc0ee8f8`
 
 固定EXAM_ALIGNMENT差し替え: `0件`。
+
+## clean blind v1 remediation反映QA
+
+1. R8一次「機械」問8(5): 問6へ「脱調がなければ角位置センサなしのオープンループ簡易位置決めが可能」「負荷トルク過大・急加減速時は脱調し得る」を反映。`PASS`
+2. H23一次「機械」問8(3): 問3へノイマン形コンピュータの「記憶プログラム方式」「命令を原則逐次実行」を反映。`PASS`
+3. H29一次「機械」問8(4): 問7へ「単体→結合→システム試験と進むにつれて対象プログラム量・範囲が大きくなる」を反映。`PASS`
+
+必須3点: `3 / 3 PASS`。
+
+H29/H23の固定答案要素mappingも実空欄へ同期済み。`PASS`。
 
 ## 問題構成QA
 
@@ -39,11 +49,11 @@
 
 1. 問1: 組合せ回路は現在入力、順序回路は内部状態を持つ。フリップフロップは二安定状態を持つため正答3のみ。`PASS`
 2. 問2: ド・モルガン則 `overline(A+B)=Ā・B̄` より正答2のみ。`PASS`
-3. 問3: Quine–McCluskey法はmintermを体系的にまとめて論理式を簡単化する。ASIC・状態遷移・安全系に関する他肢は不成立。正答3のみ。`PASS`
+3. 問3: ノイマン形は記憶プログラム方式で命令を原則逐次実行、ASICは特定用途向けIC、Quine–McCluskey法はmintermを体系的にまとめて論理式を簡単化する。三条件を満たす正答3のみ。`PASS`
 4. 問4: `READY` は実行可能待ち、FIFO順は `P1→P2→P3`、`240/120=2件/s`。三条件を満たす正答2のみ。`PASS`
 5. 問5: 割込みはイベント等で通常処理から所定処理へ制御を移す。starvationの説明を逆転した肢を除き正答2のみ。`PASS`
-6. 問6: マイクロコンピュータ、シーケンス制御、フィードバック制御、角位置センサ、ステッピングモータの五定義が全て成立するのは正答2のみ。`PASS`
-7. 問7: ウォーターフォール型の順次工程の説明が成立する正答1のみ。結合試験はモジュール間インタフェースを対象に含む。`PASS`
+6. 問6: マイクロコンピュータ、シーケンス制御、フィードバック制御、角位置センサの定義に加え、ステッピングモータは脱調がなければ角位置センサなしでオープンループ簡易位置決めができ、過負荷・急加減速時には脱調し得る。全条件が成立する正答2のみ。`PASS`
+7. 問7: ウォーターフォール型は工程を原則逐次的に進める。単体→結合→システム試験で対象プログラム量・範囲は一般に大きくなる。正答1のみ。`PASS`
 8. 問8: ボトムアップは下位から結合し、上位側を模擬するドライバを用いる場合がある。ブラックボックス試験は仕様上の入出力を確認する。正答3のみ。`PASS`
 9. 問9: オンライン形UPSの一般教材モデルとして整流器→直流母線→インバータ、蓄電池の直流側接続が成立する正答1のみ。`PASS`
 10. 問10: 必要容量300 kVA、100 kVA/台より `n=3`、`n+1=4台`。1台故障後3台で300 kVA。交流バイパス切替の同期条件も正しいため正答1のみ。`PASS`
@@ -62,7 +72,7 @@
 | R2 一次「機械」問8 | 5 | 問4、問5 | `5 / 5 PASS` |
 | H29 一次「機械」問8 | 5 | 問7、問8 | `5 / 5 PASS` |
 | H26 一次「機械」問3 | 5 | 問9、問10 | `5 / 5 PASS` |
-| H23 一次「機械」問8 | 5 | 問1〜問3 | `5 / 5 PASS` |
+| H23 一次「機械」問8 | 5 | 問1、問3 | `5 / 5 PASS` |
 
 一次: `25 / 25 PASS`。
 二次: `0 / 0`（直接対応固定問題なし）。
@@ -74,7 +84,7 @@
 - シーケンス制御: 問6 `PASS`
 - フィードバック制御: 問6 `PASS`
 - 角位置センサ: 問6 `PASS`
-- ステッピングモータ: 問6 `PASS`
+- ステッピングモータ: 問6。角位置センサなしのオープンループ簡易位置決め、過負荷・急加減速時の脱調まで収録。`PASS`
 
 `5 / 5 PASS`。
 
@@ -84,17 +94,19 @@
 - 実行可能状態: 問4の `READY`。`PASS`
 - 割込み: 問5。`PASS`
 - FIFO: 問4の `P1→P2→P3`。`PASS`
-- starvation: 問5で低優先度処理の実行機会消失を識別。`PASS`
+- 低優先度タスクのstarvation: 問5。`PASS`
 
 `5 / 5 PASS`。
 
-### H29 一次「機械」問8 — 5答案要素
+### H29 一次「機械」問8 — 実空欄5答案要素
 
-- ウォーターフォール型の順次工程: 問7 `PASS`
-- ボトムアップ試験: 問8 `PASS`
-- 結合試験: 問7 `PASS`
-- ドライバ・スタブ: 問8で役割を逆転せず識別。`PASS`
-- ブラックボックス試験: 問8 `PASS`
+- `(1) 逐次的`: 問7 `PASS`
+- `(2) 結合`: 問7 `PASS`
+- `(3) ドライバ`: 問8 `PASS`
+- `(4) 大きくなる`: 問7で単体→結合→システム試験の対象プログラム量・範囲増加を直接確認。`PASS`
+- `(5) ブラックボックス`: 問8 `PASS`
+
+ボトムアップ、スタブは周辺知識として保持するが固定答案要素に数えない。
 
 `5 / 5 PASS`。
 
@@ -108,13 +120,15 @@
 
 `5 / 5 PASS`。
 
-### H23 一次「機械」問8 — 5答案要素
+### H23 一次「機械」問8 — 実空欄5答案要素
 
-- 組合せ回路と順序回路: 問1 `PASS`
-- フリップフロップの二安定状態: 問1 `PASS`
-- 状態遷移: 問3、問12 `PASS`
-- ASIC: 問3 `PASS`
-- Quine–McCluskey法: 問3 `PASS`
+- `(1) 組合せ回路`: 問1 `PASS`
+- `(2) フリップフロップ`: 問1 `PASS`
+- `(3) ノイマン形コンピュータ`: 問3。記憶プログラム方式・原則逐次命令実行まで収録。`PASS`
+- `(4) ASIC`: 問3 `PASS`
+- `(5) Quine–McCluskey法`: 問3 `PASS`
+
+順序回路、状態遷移は周辺知識として保持するが固定答案要素に数えない。
 
 `5 / 5 PASS`。
 
@@ -126,7 +140,7 @@
 - 時刻情報: 問12で到着・発車時刻等を抽象状態条件へ接続。`PASS`
 - ブール代数: 問2、問12。`PASS`
 - インターロック: 問12。`PASS`
-- 状態遷移: 問1、問3、問12。`PASS`
+- 状態遷移: 問1、問12。`PASS`
 - 冗長化: 問10、問11。`PASS`
 - 可用性: 問11。`PASS`
 
@@ -192,18 +206,19 @@
 
 - 一次試験型: `12問 / 12問五肢択一`
 - 一次正答一意性: `12 / 12 PASS`
-- 二次試験型: `0題`（直接対応固定問題なし）
+- 二次試験型: `0題`（直接対応固定問題なし、件数合わせ `0件`）
 - 固定5問・25答案要素: `25 / 25 PASS`
+- clean blind v1 remediation必須3点: `3 / 3 PASS`
+- H29/H23実空欄mapping: `10 / 10 PASS`
 - SPEC固定9項目: `9 / 9 PASS`
 - 計算再検算: `3 / 3 PASS`
 - 鉄道一次資料境界: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 二次問題の件数合わせ採用: `0件`
 - Topic 39先取り: `0件`
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
+判定: `PASS / PRACTICE_SOURCE_REMEDIATED`。
 
 ## Topic 21固定注記
 
@@ -211,4 +226,4 @@ H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式
 
 ## 次工程
 
-練習source QA通過済み。次は練習PDF生成＋PDF表示・内容QAへ進む。PowerPointは練習PDF工程とreconcileし、重複生成しない。
+remediated解説sourceを正本として解説PDFを再生成し、表示・文字抽出・固定25答案要素・SPEC固定9項目・一次資料境界をPDF QAで再確認する。remediation前の解説PDFは流用しない。
