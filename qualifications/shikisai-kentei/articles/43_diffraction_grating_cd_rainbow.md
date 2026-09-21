@@ -12,7 +12,7 @@ $$
 
 ## 1　色彩検定との接続
 
-色彩検定では、光の波長、反射、透過、物体色、照明、混色などを扱う。回折格子は試験の中心語ではないが、「物体から眼へ届く分光分布がどう作られるか」を理解するうえで重要である。
+2026年度の色彩検定公式案内では、3級で光の基礎知識、2級で光の性質と色の見えに関わる照明を扱う。回折格子そのものは試験の中心語ではないが、「物体から眼へ届く分光分布がどう作られるか」を理解するうえで重要な発展題材である。
 
 顔料の色は主として波長ごとの吸収率・反射率によって決まる。一方、CD、ホログラム、鳥の羽、昆虫の翅などでは、微細構造による干渉・回折が強く関与する。これらは構造色と呼ばれる。
 
@@ -75,6 +75,74 @@ $$
 $$
 
 なので、波長が長いほど大きな角度へ回折される。可視光では一般に青より赤の方が大きな角度へ現れる。
+
+### 3.1　回折格子式を波数ベクトルで導く
+
+上の光路差による導出は直感的だが、周期構造の物理をより一般的に表すには波数ベクトルを使うとよい。格子が$x$方向に周期$d$を持つとき、その周期性に対応する逆格子ベクトルの大きさは
+
+$$
+\boxed{G=\frac{2\pi}{d}}
+$$
+
+である。周期構造による弾性回折では、光の周波数は変わらないため波数の大きさ
+
+$$
+|\mathbf{k}|=k=\frac{2\pi n}{\lambda_0}
+$$
+
+は同じ媒質中では一定である。一方、格子に平行な$x$方向の波数成分は、周期性から逆格子ベクトルの整数倍だけ変化できる。
+
+$$
+\boxed{k_{x,m}=k_{x,\mathrm{in}}+mG}
+$$
+
+入射角を$\alpha$、$m$次回折光の角度を$\theta_m$とし、どちらも格子法線から符号付きで測れば
+
+$$
+k\sin\theta_m=k\sin\alpha+m\frac{2\pi}{d}
+$$
+
+となる。空気中で$k=2\pi/\lambda$とすれば
+
+$$
+\boxed{d\left(\sin\theta_m-\sin\alpha\right)=m\lambda}
+$$
+
+を得る。反射格子で入射光と回折光を法線の反対側から正の角度として定義する教科書では
+
+$$
+d(\sin\alpha+\sin\beta_m)=m\lambda
+$$
+
+と書かれることもある。違いは角度の符号規約であり、物理内容は同じである。正入射なら$\alpha=0$なので、最初の式
+
+$$
+d\sin\theta_m=m\lambda
+$$
+
+へ戻る。
+
+この表現の利点は、回折を「光路差が整数波長になる」という幾何だけでなく、周期構造が光へ離散的な横方向波数
+
+$$
+mG=m\frac{2\pi}{d}
+$$
+
+を与える現象として理解できることである。光子の言葉では、周期構造と運動量を交換して進行方向が離散的に変わるとみなせる。エネルギーは保存されるので$|\mathbf{k}|$は変わらず、方向だけが変化する。
+
+さらに実在する回折次数には
+
+$$
+|\sin\theta_m|\le1
+$$
+
+という条件が必要である。したがって
+
+$$
+\left|\sin\alpha+m\frac{\lambda}{d}\right|\le1
+$$
+
+を満たす$m$だけが伝搬光として存在できる。周期$d$、波長$\lambda$、入射角$\alpha$によって、見える回折次数の数そのものが決まる。
 
 ## 4　多数の溝があるとピークが鋭くなる
 
@@ -247,7 +315,7 @@ $$
 
 この角度依存性がiridescence、すなわち玉虫色・虹色の大きな特徴である。
 
-照明位置も同様に重要である。斜入射では入射角も光路差に寄与するため、一般の回折格子式では入射角と回折角の両方が現れる。反射格子では符号規約によって式の形は変わるが、原理は「隣接溝からの光路差が$m\lambda$になる方向が強め合う」で共通している。
+照明位置も同様に重要である。斜入射では入射角も光路差に寄与するため、一般の回折格子式では入射角と回折角の両方が現れる。反射格子では符号規約によって式の形は変わるが、原理は「周期構造が接線方向の波数を$2\pi/d$の整数倍だけ変える」で共通している。
 
 ## 10　分解能はなぜ溝の本数で決まるのか
 
@@ -331,7 +399,13 @@ $$
 
 この式から、波長が長いほど大きな角度へ回折されること、白色光が虹色に分かれること、CDを傾けると色が動くことを説明できる。
 
-さらに、多数の溝を持つ場合は
+さらに、周期構造を波数空間で見れば
+
+$$
+\boxed{k_{x,m}=k_{x,\mathrm{in}}+m\frac{2\pi}{d}}
+$$
+
+であり、回折次数$m$は逆格子ベクトルの整数倍だけ横方向波数が変わることに対応する。多数の溝を持つ場合は
 
 $$
 I(\theta)\propto\left(\frac{\sin N\beta}{\sin\beta}\right)^2
@@ -349,8 +423,14 @@ $$
 
 ## 参考資料
 
+- 色彩検定協会「色彩検定とは」  
+  https://www.aft.or.jp/pages/feature/level
 - OpenStax, *University Physics Volume 3*, “4.4 Diffraction Gratings”  
   https://openstax.org/books/university-physics-volume-3/pages/4-4-diffraction-gratings
+- MIT OpenCourseWare, *Theory of Solids I*, Lecture 2: reciprocal lattice and diffraction condition.  
+  https://ocw.mit.edu/courses/8-511-theory-of-solids-i-fall-2004/resources/lec2/
+- MIT OpenCourseWare, *Electricity and Magnetism*, Chapter 14: Interference and Diffraction.  
+  https://ocw.mit.edu/courses/8-02t-electricity-and-magnetism-spring-2005/resources/ch14_inter_diffr/
 - Christopher Palmer, *Diffraction Grating Handbook*, 8th ed., Richardson Gratings / MKS Instruments, 2020.  
   https://www.newport.com/medias/sys_master/npresources/h30/h1b/9954522529822/MKS%20Diffraction%20Grating%20Handbook/MKS-Diffraction-Grating-Handbook.pdf
 - Thorlabs, “Diffraction Gratings Tutorial / Introduction to Diffraction Gratings”  
