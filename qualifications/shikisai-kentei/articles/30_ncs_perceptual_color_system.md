@@ -352,6 +352,67 @@ $$
 
 この構造は、円柱座標で半径 $r=0$ のとき角度 $\theta$ が意味を失うことに似ている。
 
+### ニュアンス三角形を重心座標として平面へ埋め込む
+
+三角形上の点を実際の2次元座標へ描くなら、$(s,w,c)$ は重心座標として扱える。正三角形の頂点を
+
+$$
+S=(0,0),\qquad W=(1,0),\qquad C=\left(\frac12,\frac{\sqrt3}{2}\right)
+$$
+
+とし、正規化した係数
+
+$$
+\hat s=\frac{s}{100},\qquad
+\hat w=\frac{w}{100},\qquad
+\hat c=\frac{c}{100}
+$$
+
+を使う。総和は
+
+$$
+\hat s+\hat w+\hat c=1
+$$
+
+なので、平面上の点 $\mathbf p$ は
+
+$$
+\mathbf p
+=\hat sS+\hat wW+\hat cC
+$$
+
+と一意に表せる。成分で書けば
+
+$$
+x=\frac{w}{100}+\frac{c}{200},
+\qquad
+y=\frac{\sqrt3\,c}{200}
+$$
+
+である。逆に
+
+$$
+c=\frac{200}{\sqrt3}y,
+$$
+
+$$
+w=100x-\frac{100}{\sqrt3}y,
+$$
+
+$$
+s=100-100x-\frac{100}{\sqrt3}y
+$$
+
+と元のNCSニュアンスへ戻せる。
+
+ここで得られる正三角形は、$s+w+c=100$ という制約を可視化するための幾何学的埋め込みである。したがって、この図上のユークリッド距離
+
+$$
+d=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}
+$$
+
+をそのまま知覚色差と解釈してはいけない。NCS座標の構造を図示できることと、色差の計量が定義されることは別問題である。
+
 ## 9　NCSとXYZは何が違うのか
 
 XYZは測色系であり、色刺激を線形空間の座標として表す。
@@ -529,6 +590,8 @@ $$
 
 - 公益社団法人 色彩検定協会「色彩検定とは」（1級で色彩学として測色、世界の色彩調和論などを扱うことを明記）  
   https://www.aft.or.jp/pages/feature/level
+- 公益社団法人 色彩検定協会「色彩検定1級 新旧公式テキスト 項目一覧」（2020年改訂版。「色の表示」のNCS、へリングの6主要色、色相環、等色相面、色立体などを確認）  
+  https://www.aft.or.jp/images/%281%E7%B4%9A%29%E6%96%B0%E6%97%A7%E5%85%AC%E5%BC%8F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E9%A0%85%E7%9B%AE%E6%AF%94%E8%BC%83%E8%A1%A8.pdf
 - NCS Colour, “Learn the NCS System”（NCS記号、blackness、chromaticness、hueの公式解説）  
   https://ncscolour.com/pages/the-system
 - NCS Colour, “Colour harmonies”（whiteness・blackness・chromaticness・saturation、$m=c/(c+w)=c/(100-s)$）  
