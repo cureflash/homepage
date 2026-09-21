@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_explanation_pdf_complete`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_practice_source_complete`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 37 完了記録
 
@@ -70,15 +70,37 @@ clean blind v2は `25 / 25 PASS`。candidate固定後修正 `0件`、固定EXAM_
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-## 次工程: Topic 38 練習source＋独立source QA
+## Topic 38 練習source 完了記録
 
-次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、Topic 38 EXAM_ALIGNMENT、解説source/source QA、解説PDF/PDF QA、他workerの新規成果をreconcileしてから開始する。
+- source: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_practice_source.md`
+- source commit: `9fbfd032f06a7dd21e8711c0c18a2722aae539a9`
+- source blob SHA: `852491ff724289157213a8ea04440845be3efa66`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_practice_source_qa.md`
+- 一次試験型: `12問 / 12問五肢択一`
+- 基礎 / 本試験標準 / 複合: `3 / 6 / 3`
+- 一次正答一意性: `12 / 12 PASS`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 計算独立再検算: `3 / 3 PASS`
+- 二次試験型: `0題`。直接対応固定問題がないため件数合わせ採用 `0件`
+- 公式過去問本文転載: `0件`
+- 教材用Boolean式・状態遷移・可用性計算を実COMTRAC実装値として使用: `0件`
+- 未確認COMTRAC内部構成・追跡アルゴリズム・処理周期・冗長方式・故障率・MTBF/MTTR/可用性値の真値化: `0件`
+- Topic 39先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
-- 二種一次「機械」の本試験形式に接続する練習問題を作成する。
-- 固定25答案要素とSPEC固定9項目を練習問題・解説へ接続する。
-- 二次は直接対応問題を固定していないため件数合わせで追加しない。
-- 解答は正答だけでなく根拠、誤答肢理由、式・成立条件まで示す。
-- source QA通過前に練習PDF、PowerPointを先行生成しない。
+## 次工程: Topic 38 練習PDF＋PDF QA
+
+次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、Topic 38 EXAM_ALIGNMENT、解説source/source QA、解説PDF/PDF QA、練習source/source QA、他workerの新規成果をreconcileしてから開始する。
+
+- 練習sourceをA4縦の練習PDFへ変換する。
+- 問題・選択肢・正答・完全解説を欠落させない。
+- 固定25答案要素とSPEC固定9項目がPDF上でも追跡可能であることを確認する。
+- PDFium / Poppler等で全頁renderし、clipped / overlap / U+FFFD / broken glyphを確認する。
+- 問11の可用性計算、問10のn+1容量、問4のスループットをPDF表示値から再検算する。
+- 二次問題は直接対応固定問題がないため件数合わせで追加しない。
+- 既存workerが練習PDF＋QAを完了済みなら重複生成せず採用し、次の安全な工程へ進む。
 
 ## 境界条件
 
