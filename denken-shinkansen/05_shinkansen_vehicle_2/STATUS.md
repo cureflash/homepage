@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v12_pending / IN_PROGRESS`
+- current_status: `topic_39_clean_blind_v13_pending / IN_PROGRESS`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh worker/contextでclean blind v12を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
+- next_start: 別fresh worker/contextでclean blind v13を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V12_PENDING`
+判定: `IN_PROGRESS / CLEAN_BLIND_V13_PENDING`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -74,22 +74,23 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - v9 actual: candidate `203bec75a792d541126e1863604eb35cddb59146` / freshness `PASS` / 一次 `19 / 20` / 二次 `4 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v10: candidate `2ec47a4b21c4f7cd9d89a5cfb5d919d6e399e5b0` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v11: candidate `1a038f86f340a0834ffaaa375d1e98da9a410455` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
-- v12 pre-attempt: current worker/contextはcandidate固定前にTopic 39のanswer-bearing情報を既読のためfreshness不成立。candidate未作成。exact blocker `TOPIC39_CLEAN_BLIND_V12_CURRENT_CONTEXT_FRESHNESS_INVALID`。
+- v12 pre-attempt: 別worker/contextでfreshness不成立のためcandidate未作成。worker-local blockerのみ記録。
+- v12 actual: candidate `2ed839295e292ccd7c5b520c5484e8b4e82bb7fe` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 
-v11 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v11_qa.md`
+v12 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v12_qa.md`
 
-v11のanswer-bearingな不一致詳細はv11 QAにのみ保持し、mandatory recordには集計と診断だけを残す。
+v12のanswer-bearingな不一致詳細はv12 QAにのみ保持し、mandatory recordには集計と診断だけを残す。
 
 - 教材・PDF・練習・PowerPoint修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC固定13項目変更: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
-- exact blocker: `1件 / TOPIC39_CLEAN_BLIND_V12_CURRENT_CONTEXT_FRESHNESS_INVALID`
+- exact blocker: `0件 / PASS`
 
 ### 次工程
 
-別fresh worker/contextによるclean blind v12。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
+別fresh worker/contextによるclean blind v13。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
 
 ## Topic 21 固定注記
 
