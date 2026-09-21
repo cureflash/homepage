@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v8_pending / IN_PROGRESS`
+- current_status: `topic_39_clean_blind_v9_pending / IN_PROGRESS`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh worker/contextでclean blind v8を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
+- next_start: 別fresh worker/contextでclean blind v9を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V8_PENDING`
+判定: `IN_PROGRESS / CLEAN_BLIND_V9_PENDING`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -60,109 +60,21 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 一般SCADAモデルをCOSMOS実装と断定: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 
-### clean blind v1
+### clean blind履歴
 
-- candidate commit: `cb034e4e121512844cf0333c6df49de84d7555e8`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- 診断: `solver error`。教材欠落ではない。
+- v1: candidate `cb034e4e121512844cf0333c6df49de84d7555e8` / 公式一致 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / `solver error`
+- v2: candidate `0d2b169dff258124d088581b7690bfcdc063fc4f` / 公式一致 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / `solver error`
+- v3: candidate `d7408b99b0287bdc21c034379eb70b969f9ae370` / freshness `PASS` / 公式一致 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v4: candidate `32aa4a98774f662eb01d02f29d71fe6ba287f26a` / freshness `PASS` / 公式一致 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v5: candidate `4ec9094da46b28a861a1af03fc57d72a4f363f87` / freshness `PASS` / 一次 `18 / 20` / 二次 `4 / 5` / 合計 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v6: candidate `9f8a1260c334054eae18e124ff3a2722f75961b7` / freshness `PASS` / 一次 `20 / 20` / 二次 `4 / 5` / 合計 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `FAIL`
+- v7: candidate `05a182424a027d47e2fc452aa8ca6a92d34a5dd8` / freshness `PASS` / 一次 `20 / 20` / 二次 `4 / 5` / 合計 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error`
+- v8: candidate `0763c9055298cf54f853c79b0ed60da7439f2d20` / freshness `PASS` / 一次 `20 / 20` / 二次 `4 / 5` / 合計 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error`
 
-### clean blind v2
+v8 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v8_qa.md`
 
-- candidate commit: `0d2b169dff258124d088581b7690bfcdc063fc4f`
-- 公式標準解答一致: `21 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- 診断: `solver error`。教材欠落ではない。
-- answer-bearingな不一致詳細はv2 QAにのみ保持し、mandatory recordには載せない。
-- 教材・PDF・練習・PowerPoint修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
+v8のanswer-bearingな不一致詳細はv8 QAに保持し、mandatory recordでは固定答案要素4のsolver errorであることだけを記録する。
 
-### clean blind v3
-
-- candidate commit: `d7408b99b0287bdc21c034379eb70b969f9ae370`
-- candidate freshness: `PASS`
-- 公式標準解答一致: `23 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-- 診断: `solver error + fixed split nonconformance`。教材欠落ではない。
-- answer-bearingな不一致詳細はv3 QAにのみ保持し、mandatory recordには載せない。
-- 教材・PDF・練習・PowerPoint修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-
-### clean blind v4
-
-- candidate commit: `32aa4a98774f662eb01d02f29d71fe6ba287f26a`
-- candidate freshness: `PASS`
-- 公式標準解答一致: `22 / 25 FAIL`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-- 診断: `solver/transcription error + fixed split nonconformance`。教材欠落ではない。
-- answer-bearingな不一致詳細はv4 QAにのみ保持し、mandatory recordには載せない。
-- 教材・PDF・練習・PowerPoint修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 系列SPEC変更: `0件`
-- Topic 21一般式変更: `0件`
-
-### clean blind v5
-
-- candidate commit: `4ec9094da46b28a861a1af03fc57d72a4f363f87`
-- candidate freshness: `PASS`
-- 公式標準解答一致: `22 / 25 FAIL`
-- 一次: `18 / 20 PASS`
-- 二次: `4 / 5 PASS`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-- 診断: `solver error + fixed split nonconformance`。教材欠落ではない。
-- 教材・PDF・練習・PowerPoint修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 系列SPEC固定13項目変更: `0件`
-- 未確認COSMOS内部実装・数値の真値化: `0件`
-- Topic 21一般式変更: `0件`
-
-### clean blind v6
-
-- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v6_candidate.md`
-- candidate commit: `9f8a1260c334054eae18e124ff3a2722f75961b7`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v6_qa.md`
-- candidate freshness: `PASS`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 一次: `20 / 20 PASS`
-- 二次: `4 / 5 PASS`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `FAIL`
-- 診断: `solver error + fixed split nonconformance`。教材欠落ではない。
-- answer-bearingな不一致詳細はv6 QAにのみ保持し、mandatory recordには載せない。
-- 教材・PDF・練習・PowerPoint修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 系列SPEC固定13項目変更: `0件`
-- 未確認COSMOS内部実装・数値の真値化: `0件`
-- Topic 21一般式変更: `0件`
-
-### clean blind v7 readiness
-
-- intake: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_readiness_qa.md`
-- R2固定5群の境界: `5 / 5 question-onlyで明示 / PASS`
-- 正答記号・公式標準解答本文・保存済み正答値のintake転記: `0件 / PASS`
-- 固定5問・25答案要素変更: `0件 / PASS`
-- 固定EXAM_ALIGNMENT変更: `0件 / PASS`
-- 教材成果物変更: `0件 / PASS`
-- 系列SPEC変更: `0件 / PASS`
-- exact blocker: `0件 / PASS`
-
-### clean blind v7
-
-- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_candidate.md`
-- candidate commit: `05a182424a027d47e2fc452aa8ca6a92d34a5dd8`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_qa.md`
-- candidate freshness: `PASS`
-- 公式標準解答一致: `24 / 25 FAIL`
-- 一次: `20 / 20 PASS`
-- 二次: `4 / 5 PASS`
-- 教材だけで導出可能: `25 / 25 PASS`
-- R2固定5答案要素区切り維持: `PASS`
-- 診断: `solver error`。教材欠落ではない。
-- answer-bearingな不一致詳細はv7 QAにのみ保持し、mandatory recordには載せない。
 - 教材・PDF・練習・PowerPoint修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC固定13項目変更: `0件`
@@ -172,7 +84,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ### 次工程
 
-別fresh worker/contextによるclean blind v8。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
+別fresh worker/contextによるclean blind v9。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
 
 ## Topic 21 固定注記
 
