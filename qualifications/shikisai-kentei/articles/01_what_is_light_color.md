@@ -366,7 +366,67 @@ $$
 
 ここからXYZ表色系や等色関数へつながる。
 
-## 10　色彩学では「光源 → 物体 → 眼」を分けて考える
+## 10　分光分布は「波長表示」と「振動数表示」で形が変わる
+
+分光分布は単なるグラフの形ではなく、「ある座標に対する密度」である。CIEも、分光分布を波長に関する放射量・測光量・光子量の密度として定義し、同じ量を振動数や波数に対する密度として表すこともできるとしている。
+
+ある放射量を $Q$ とし、波長に対する分光密度を $Q_\lambda$、振動数に対する分光密度を $Q_\nu$ とする。同じ微小帯域に含まれる物理量は同一なので、
+
+$$
+dQ
+=Q_\lambda(\lambda)\,d\lambda
+=Q_\nu(\nu)\,|d\nu|
+$$
+
+でなければならない。
+
+真空中では
+
+$$
+\nu=\frac{c}{\lambda}
+$$
+
+だから、
+
+$$
+\left|\frac{d\nu}{d\lambda}\right|
+=\frac{c}{\lambda^2}
+$$
+
+である。したがって、$\lambda$ をSIのメートルで扱うなら
+
+$$
+Q_\lambda(\lambda)
+=\frac{c}{\lambda^2}
+Q_\nu\!\left(\frac{c}{\lambda}\right)
+$$
+
+あるいは
+
+$$
+Q_\nu(\nu)
+=\frac{\lambda^2}{c}Q_\lambda(\lambda),
+\qquad
+\lambda=\frac{c}{\nu}
+$$
+
+となる。波長表示が W/nm などの場合は、その単位変換も同時に入れる必要がある。
+
+この $c/\lambda^2$ が変数変換のJacobianである。つまり、同じ光でも「1 nmあたり」と「1 Hzあたり」では1区間の幅が対応していないため、スペクトルの見かけの形は変わる。
+
+総量は
+
+$$
+Q
+=\int Q_\lambda(\lambda)\,d\lambda
+=\int Q_\nu(\nu)\,d\nu
+$$
+
+として不変であるが、グラフのピーク位置は一般には不変ではない。たとえば黒体放射で「波長表示のピーク」を単純に $\nu=c/\lambda$ で振動数ピークへ変換できないのは、このJacobianが入るためである。
+
+色彩学で通常使う等色関数や分光反射率は波長を独立変数として扱う。したがって測色積分を振動数座標へ書き換える場合も、積分変数だけを置き換えるのではなく、分光密度と重み関数を同じ変数に対して一貫して変換しなければならない。
+
+## 11　色彩学では「光源 → 物体 → 眼」を分けて考える
 
 色の成立を物理学から整理すると、少なくとも三段階に分けられる。
 
@@ -426,7 +486,7 @@ $$
 
 「リンゴが赤い」という日常表現は便利だが、物理的にはリンゴだけで赤が決まっているわけではない。光源の分光分布、リンゴの分光反射率、観察者の視覚系が組み合わさって色が成立する。
 
-## 11　色彩検定で押さえるところ
+## 12　色彩検定で押さえるところ
 
 検定レベルでは、まず次の関係を押さえる。
 
@@ -457,6 +517,11 @@ $$
 E=h\nu=\frac{hc}{\lambda}
 $$
 
+$$
+Q_\lambda(\lambda)\,d\lambda
+=Q_\nu(\nu)\,|d\nu|
+$$
+
 を区別して理解する。
 
 これらはそれぞれ、
@@ -465,15 +530,17 @@ $$
 - Poyntingベクトル：どうエネルギーを運ぶか
 - 強度：単位面積・単位時間あたりのエネルギー流
 - 光子エネルギー：物質との量子的なエネルギー交換
+- 分光密度の変数変換：同じ放射を波長・振動数のどちらで表しても総量を保存する条件
 
 を表している。
 
-光をこの4層で捉えると、反射、屈折、散乱、干渉、黒体放射、LED、加法混色までを同じ物理体系の中で理解できる。
+光をこのように捉えると、反射、屈折、散乱、干渉、黒体放射、LED、加法混色までを同じ物理体系の中で理解できる。
 
 ## 参考資料
 
 - [色彩検定協会「色彩検定とは」](https://www.aft.or.jp/pages/feature/level)
 - [CIE International Lighting Vocabulary: visible radiation](https://cie.co.at/eilvterm/17-21-003)
+- [CIE International Lighting Vocabulary: spectral distribution](https://cie.co.at/eilvterm/17-21-029)
 - [NIST CODATA: speed of light in vacuum](https://physics.nist.gov/cuu/Constants/Value/c.html)
 - [NIST Fundamental Physical Constants](https://physics.nist.gov/cuu/Constants/)
 - [OpenStax, University Physics Volume 2, Plane Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-2-plane-electromagnetic-waves)
