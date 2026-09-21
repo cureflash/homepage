@@ -660,7 +660,7 @@ $$
 - ISO/CIE 11664-1:2019(E), *Colorimetry — Part 1: CIE standard colorimetric observers*  
   https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0
 - ISO/CIE 11664-3:2019(E), *Colorimetry — Part 3: CIE tristimulus values*  
-  https://www.cie.co.at/publications/colorimetry-part-3-cie-tristimulus-values-2
+  https://cie.co.at/publications/colorimetry-part-3-cie-tristimulus-values-2
 - CIE, *CIE 1931 colour-matching functions, 2 degree observer*  
   https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer
 - NIST, *Reference Integrating Sphere for Spectral Reflectance*  
