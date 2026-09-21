@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_practice_source_remediated`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_explanation_pdf_remediated`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 37 完了記録
 
@@ -81,15 +81,32 @@ clean blind v1は公式標準解答 `25 / 25 PASS`、教材だけで導出 `23 /
 - Topic 39先取り: `0件`
 - exact blocker: `0件`
 
-## 次工程: explanation PDF regeneration
+### 解説PDF＋PDF QA
 
-次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、remediated EXAM_ALIGNMENT・解説source・練習sourceをreconcileし、remediated解説sourceから解説PDFを再生成してPDF QAを行う。remediation前PDFは流用しない。
+`PASS / EXPLANATION_PDF_REMEDIATED`
+
+- main base: `bb37a5552b51d1004071982a86ccfa2828b3baba`
+- source blob: `5e78be9bc99e279e977e482a7d08236b7bcc8304`
+- source QA blob: `90f48db5b346b713fd26d48bb81ae87ae148e5f4`
+- remediation前PDFを流用せず再生成
+- A4縦 `4頁`
+- PDFium / Poppler / visual: `4 / 4 PASS`
+- clean blind v1 remediation必須3点: `3 / 3 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定9項目: `9 / 9 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
+- exact blocker: `0件`
+
+## 次工程: practice PDF regeneration
+
+次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、remediated EXAM_ALIGNMENT・解説source・練習source、再生成済み解説PDF/QAをreconcileし、remediated練習sourceから練習PDFを再生成してPDF QAを行う。remediation前練習PDFは流用しない。
 
 その後、以下を順に進める。
 
-1. practice PDF / PDF QA
-2. PowerPoint / PowerPoint QA
-3. fresh clean blind v2
+1. PowerPoint / PowerPoint QA
+2. fresh clean blind v2
 
 v1 candidateは修正しない。v2は別candidateとして固定する。
 

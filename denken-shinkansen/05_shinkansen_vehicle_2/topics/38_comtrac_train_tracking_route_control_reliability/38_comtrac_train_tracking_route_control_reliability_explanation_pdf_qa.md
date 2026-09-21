@@ -2,43 +2,51 @@
 
 更新日: 2026-09-21
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+判定: `PASS / EXPLANATION_PDF_REMEDIATED`
 
 ## 正本・reconcile
 
-- main base: `14016af410f76c93242e77502c8325a014e50981`
-- active series latest commit before this run: `a4bf0cbe3be31091190bb23a298b8c6c5dcdb4fb`
+- main base: `bb37a5552b51d1004071982a86ccfa2828b3baba`
+- active series latest commit before this run: `fee98b0cbb742ec2b4ad1823062e4695de5ddfc8`
 - source: `38_comtrac_train_tracking_route_control_reliability_explanation_source.md`
-- source blob SHA: `ae6df73e7b0892f1ee37fce26556254f083f8207`
+- source blob SHA: `5e78be9bc99e279e977e482a7d08236b7bcc8304`
 - source QA: `38_comtrac_train_tracking_route_control_reliability_explanation_source_qa.md`
-- source QA blob SHA: `b6ec8378fbb6ef7d156b275ba42f734fd3783bf7`
+- source QA blob SHA: `90f48db5b346b713fd26d48bb81ae87ae148e5f4`
 - fixed EXAM_ALIGNMENT: `38_comtrac_train_tracking_route_control_reliability.md`
-- Topic 38既存成果物をreconcileし、解説PDF・PDF QAの重複成果物がないことを確認してから生成した。
-- main base以降の車両二種更新: `0件`。他系列の更新のみであり、Topic 38成果物との競合なし。
+- `STATUS.md` / `HANDOFF.md` の `topic_38_practice_source_remediated` を確認し、remediation前PDFを流用せず再生成した。
+- main baseまでの直近車両二種commitは `fee98b0c...`。以後mainの更新は他系列/色彩教材で、Topic 38との競合なし。
 
 ## PDF
 
 - file: `38_comtrac_train_tracking_route_control_reliability_explanation.pdf`
-- SHA-256: `e85827c8505972ed839eac15a29269520ccf6a4d3d4a1d25062f5b7c21357c7b`
-- file size: `14164 bytes`
-- A4縦: `5頁`
-- extracted text: `9270 chars`
+- SHA-256: `6c62015dbb8a88f8ba35383768e47bb9bf3a9e2b76d6bbd2b3fd93c2a3628989`
+- file size: `15512 bytes`
+- A4縦: `4頁`
+- extracted text: `8944 chars`
 - replacement character U+FFFD: `0件`
-- source本文は全22節を収録。CID標準フォントで結合上線を安定表示するため、`Ā` / `B̄` / `C̄` / `Conflict̄` の14出現だけを意味等価な `overline(...)` 表記へ置換した。その他の論点・数値・出典・固定過去問接続は削除なし。
+- remediated sourceの番号付き全22節を収録。
+- CID日本語フォントでの描画安定性のため、結合上線は意味等価な `overline(...)` 表記へ正規化。Markdown記号は紙面用に除去した。論点・数値・固定過去問接続は変更していない。
 
 ## 構文・表示QA
 
 - Ghostscript nullpage parse/render: `PASS`
 - Poppler `pdfinfo`: `PASS`
 - Poppler `pdftotext -layout`: `PASS`
-- PDFium render: `5 / 5 PASS`
-- Poppler render: `5 / 5 PASS`
-- visual inspection: `5 / 5 PASS`
-- HeiseiKakuGo-W5 Type0 CID / UniJIS-UCS2-H: PDFium・Poppler双方で日本語描画 `PASS`
+- PDFium render: `4 / 4 PASS`
+- Poppler render: `4 / 4 PASS`
+- PDFium / Poppler pixel comparison: `4 / 4 PASS`
+- visual inspection: `4 / 4 PASS`
+- HeiseiKakuGo-W5 CID: 日本語描画 `PASS`
 - clipped text / overlap / black square / broken glyph: `0件`
 - URLのはみ出し: `0件`
 
-`qpdf` は実行環境に未導入のため未実施。Ghostscript、Poppler、PDFiumの独立系統で構文・描画を確認した。
+## clean blind v1 remediation反映QA
+
+- R8一次「機械」問8(5): ステッピングモータの角位置センサなしオープンループ簡易位置決めと、過負荷・急加減速時の脱調: `PASS`
+- H23一次「機械」問8(3): ノイマン形コンピュータの記憶プログラム方式・原則逐次命令実行: `PASS`
+- H29一次「機械」問8(4): 単体→結合→システム試験で対象プログラム量・対象範囲が大きくなる: `PASS`
+
+判定: `3 / 3 PASS`。
 
 ## 固定過去問ゲート
 
@@ -52,14 +60,10 @@ PDF本文に固定5問を差し替えず接続した。
 
 - 一次: `25 / 25 connected`
 - 二次: `0問`
-- 合計: `25 / 25 connected`
 - 主題外二次問題の件数合わせ: `0件`
-
-抽出テキストで固定5問ラベル、`25 / 25 connected` を再確認した。
+- H29/H23 actual blank mapping: `10 / 10 PASS`
 
 ## SPEC固定9項目QA
-
-PDF本文で以下9項目を確認。
 
 - 列車追跡
 - 状態データ
@@ -75,11 +79,9 @@ PDF本文で以下9項目を確認。
 
 ## 3段階例題QA
 
-- 基礎例題: Boolean `R=A・B・C̄` — `PASS`
+- 基礎例題: Boolean `R=A・B・overline(C)` — `PASS`
 - 本試験標準例題: FIFOと割込み — `PASS`
-- 複合例題: MTBF/MTTR可用性＋独立二並列 — `PASS`
-
-抽出テキストで `MTBF=1000 h`、`99.8004 %`、`99.9996 %`、`A_parallel` を再確認した。
+- 複合例題: `MTBF=1000 h`, `MTTR=2 h`, `99.8004 %`, 独立二並列 `99.9996 %` — `PASS`
 
 判定: `3 / 3 PASS`。
 
@@ -102,13 +104,15 @@ H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式
 
 ## 最終判定
 
+- explanation PDF: `PASS / REMEDIATED`
 - 固定5問・25答案要素: `25 / 25 connected`
+- clean blind v1 remediation必須3点: `3 / 3 PASS`
 - SPEC固定9項目: `9 / 9 PASS`
 - 3段階例題: `3 / 3 PASS`
-- source全22節保持: `PASS`（結合上線14出現のみ意味等価な `overline(...)` 表記へ正規化）
+- source番号付き全22節: `PASS`
 - 未確認COMTRAC実装・数値の真値化: `0件`
 - Topic 39先取り: `0件`
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-次工程: Topic 38練習source作成＋独立source QA。固定EXAM_ALIGNMENT、一次25答案要素、SPEC固定9項目、鉄道一次資料の境界を変更しない。
+次工程: remediated練習sourceから練習PDFを再生成し、PDF表示・内容QAを行う。remediation前練習PDFは流用しない。

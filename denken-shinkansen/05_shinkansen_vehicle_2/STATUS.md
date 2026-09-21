@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_practice_source_remediated`
+- current_status: `topic_38_explanation_pdf_remediated`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、remediated EXAM_ALIGNMENT・解説source・練習sourceをreconcileし、解説PDFを再生成＋PDF QAする。その後、練習PDF、PowerPoint、fresh clean blind v2へ進む。remediation前の派生成果物は流用しない。
+- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、remediated EXAM_ALIGNMENT・解説source・練習source・再生成済み解説PDF/QAをreconcileし、練習PDFを再生成＋PDF QAする。その後、PowerPoint、fresh clean blind v2へ進む。remediation前の派生成果物は流用しない。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,7 +29,7 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `SOURCE_REMEDIATION_COMPLETE / derived_artifact_regeneration_pending`
+状態: `EXPLANATION_PDF_REMEDIATED / practice_pdf_regeneration_pending`
 
 ### clean blind v1診断
 
@@ -80,14 +80,27 @@ EXAM_ALIGNMENT＋QA: `PASS / REMEDIATED`
 - Topic 39先取り: `0件`
 - exact blocker: `0件`
 
+解説PDF＋PDF QA: `PASS / REMEDIATED`
+
+- remediated sourceから再生成: `PASS`
+- A4縦: `4頁`
+- PDFium / Poppler render: `4 / 4 PASS`
+- visual inspection: `4 / 4 PASS`
+- clean blind v1 remediation必須3点: `3 / 3 PASS`
+- 固定5問・25答案要素: `25 / 25 connected`
+- SPEC固定9項目: `9 / 9 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
+- exact blocker: `0件`
+
 ### 既存派生成果物の扱い
 
-clean blind v1以前の解説PDF、練習PDF、PowerPointはremediation前の内容を含むためTopic 38完成判定には使用しない。source remediationは完了したため、以下を順に再同期する。
+解説PDFはremediated sourceへ再同期済み。clean blind v1以前の練習PDF、PowerPointはremediation前の内容を含むためTopic 38完成判定には使用しない。以下を順に再同期する。
 
-1. explanation PDF / PDF QA
-2. practice PDF / PDF QA
-3. PowerPoint / PowerPoint QA
-4. fresh clean blind v2
+1. practice PDF / PDF QA
+2. PowerPoint / PowerPoint QA
+3. fresh clean blind v2
 
 固定9項目、COMTRAC実装境界、二次0問、Topic 39非先取りは維持する。
 
