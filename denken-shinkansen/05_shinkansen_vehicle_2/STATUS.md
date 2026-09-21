@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_exam_alignment_complete / explanation_source_pending`
+- current_status: `topic_39_explanation_source_complete / explanation_pdf_pending`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: Topic 39の解説source作成。固定5問・25答案要素と系列SPEC固定13項目を変更せず、一般SCADA、CT/VT、A/D、情報伝送、信頼性・可用性を過去問要求へ接続する。
+- next_start: Topic 39の解説PDF生成＋PDF QA。解説source正本を変更せず、固定25答案要素、系列SPEC固定13項目、3段階例題、計算・グラフ3種への接続を保つ。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -95,9 +95,27 @@ v8はfreshness `PASS`、公式一致 `22 / 25 FAIL`、教材だけで導出可�
 
 H26一次「機械」問3のUPS・並列冗長はTopic 38ですでに固定済みのため、Topic 39では重複固定しない。
 
+### 解説source＋source QA
+
+- source: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_explanation_source.md`
+- source QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_explanation_source_qa.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 固定25答案要素: `25 / 25 PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `5 / 5 PASS`
+- 系列SPEC固定13項目: `13 / 13 PASS`
+- 系列SPEC計算・グラフ: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 一般SCADAモデルをCOSMOS実装と断定: `0件`
+- 未確認COSMOS内部実装・数値の真値化: `0件`
+- 固定5問変更: `0件`
+- Topic 38固定問題重複採用: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ### 次工程
 
-Topic 39の解説sourceを作成し、固定25答案要素と固定13項目のcoverage QAを行う。SCADA、遠隔制御、可用性の名称そのものが固定過去問に直接出るとは扱わず、複数の直接出題論点から構成する一般教材モデルとして明示する。
+Topic 39の解説PDFをsource正本から生成し、PDFium/Poppler両系統でrender/content QAを行う。固定25答案要素、固定13項目、3段階例題、信頼度―時間・単一系/冗長系比較・可用性比較への接続を維持する。
 
 ## Topic 21 固定注記
 
