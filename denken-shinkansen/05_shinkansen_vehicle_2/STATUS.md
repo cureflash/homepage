@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_clean_blind_v2_ready`
+- current_status: `topic_38_clean_blind_v2_failed`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: Topic 38 fresh clean blind v2。必須startup文書を確認後、直近コミットはmetadataのみreconcileし、question-only intakeだけから別candidateを固定する。candidate固定前は直近commit diff、保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答を開かない。v1 candidateは変更しない。
+- next_start: Topic 38は教材remediationを再実施しない。answer-bearingなv2 candidate/QA・保存済み正答・既存教材/QAをcandidate固定前に参照していない別fresh workerだけがclean blind v3へ進める。本workerは既にanswer-bearing資料を参照済みのためv3 candidateを作成しない。外部workerの新成果があればreconcileする。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,7 +29,7 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `CLEAN_BLIND_V2_READY`
+状態: `CLEAN_BLIND_V2_FAILED`
 
 ### remediation完了範囲
 
@@ -47,19 +47,28 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 - Topic 39先取り: `0件`
 - v1 candidate変更: `0件`
 
-### fresh clean blind v2 readiness
+### fresh clean blind v2結果
 
-- question-only intakeは正答・公式標準解答・既存教材の解答情報を含めない構成を確認済み。
-- v2 candidateファイルは未作成（404確認）。
-- 本runでは直近コミットをreconcileする際にcommit diffを取得し、candidate固定前にanswer-bearing情報が露出したため、freshness条件を満たさない。v2 candidateは作成していない。
-- 次runは直近コミットをmetadataのみでreconcileし、candidate固定前にcommit diffを取得しない。
-- fresh v2 candidate: `未作成`
-- candidate固定前に参照可能: `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、その後question-only intakeのみ。
-- candidate固定前に参照禁止: 直近commit diff、保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答。
-- candidate固定後に「公式標準解答一致」と「教材だけで導出可能」を別々に判定し、固定5問・25答案要素の双方 `25 / 25` でなければcompletedにしない。
-- exact blocker for this run: `candidate固定前のcommit diff取得によりanswer-bearing情報が露出し、fresh clean blind条件不成立`
-- exact blocker for next fresh run: `0件`
+- freshness: `PASS`
+- v2 candidate固定commit: `27149448c9f94e5a78628f19b558dd9352d69666`
+- candidate固定後修正: `0件`
+- 公式標準解答一致: `24 / 25 FAIL`
+- 不一致位置: R2一次「機械」問8(3)の1要素
+- 教材だけで導出可能: `25 / 25 PASS`
+- 教材欠落によるFAIL: `0件`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v2_qa.md`
+- Topic 38 completed: `NO`
+
+### 次の安全な工程
+
+- v2 candidateは変更しない。
+- 教材・固定EXAM_ALIGNMENTを再修正しない。
+- 本workerはv2固定後に公式標準解答・教材を参照済みのため、fresh v3 candidateを作成しない。
+- clean blind v3は、candidate固定前にv2 candidate/QA、保存済み正答、既存answer-bearing資料を参照していない別fresh workerだけが実施する。
+- 別workerの成果がmainへ入った場合は、その成果をreconcileして次工程を決める。
+
+exact blocker: `TOPIC38_CLEAN_BLIND_V2_OFFICIAL_MATCH_24_OF_25` — fresh clean blind v2が必須の公式標準解答一致 `25 / 25` に1要素不足。本workerはanswer-bearing資料参照済みのため自分でv3を再試行しない。
 
 ## Topic 21 固定注記
 
-既存の丸め差診断と一般式は変更しない。詳細はTopic 21の専用成果物を正本とする。
+H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた丸め差として診断済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
