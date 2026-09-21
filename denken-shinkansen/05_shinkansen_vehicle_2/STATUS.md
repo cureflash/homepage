@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_practice_source_complete / practice_pdf_pending`
+- current_status: `topic_39_practice_pdf_complete / powerpoint_pending`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: Topic 39の練習PDF生成＋PDF QA。練習source正本を変更せずPDF化し、固定25答案要素、一次20＋二次5、系列SPEC固定13項目、計算・グラフ3種を保持してPDFium/Poppler両系統で確認する。
+- next_start: Topic 39のPowerPoint生成＋render/content QA。練習PDFまでの正本を変更せず、固定25答案要素、一次20＋二次5、系列SPEC固定13項目、計算・グラフ3種を保持し、未確認COSMOS実装・実値を追加しない。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -156,9 +156,32 @@ H26一次「機械」問3のUPS・並列冗長はTopic 38ですでに固定済�
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+### 練習PDF＋PDF QA
+
+- PDF: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_practice.pdf`
+- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_practice_pdf_qa.md`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+- A4縦: `7頁`
+- 一次12問・五肢・正答・完全解説: `12 / 12 PASS`
+- 二次1題5設問・模範解答: `5 / 5 PASS`
+- 固定25答案要素: `25 / 25 PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `5 / 5 PASS`
+- 系列SPEC固定13項目: `13 / 13 PASS`
+- 系列SPEC計算・グラフ: `3 / 3 PASS`
+- PDFium 200 dpi: `7 / 7 PASS`
+- Poppler 200 dpi: `7 / 7 PASS`
+- replacement character U+FFFD / `(cid:)`: `0件 / 0件`
+- clipped text / overlap / black square / broken glyph: `0件`
+- 一般SCADAモデルをCOSMOS実装と断定: `0件`
+- 未確認COSMOS内部実装・数値の真値化: `0件`
+- Topic 38固定問題重複採用: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ### 次工程
 
-Topic 39の練習PDFを練習source正本から生成し、PDF QAを行う。固定5問・25答案要素、一次20要素＋二次5要素、系列SPEC固定13項目、計算・グラフ3種を保持する。数式、和文フォント、表、改ページ、選択肢、二次模範解答をrender/content QAし、一般SCADAモデルとCOSMOS実設備仕様を混同しない。
+Topic 39のPowerPointを生成し、render/content QAを行う。固定5問・25答案要素、一次20要素＋二次5要素、系列SPEC固定13項目、計算・グラフ3種を保持し、一般SCADAモデルとCOSMOS実設備仕様を混同しない。PowerPoint QA通過後にのみfresh workerによるclean blind最終ゲートへ進む。
 
 ## Topic 21 固定注記
 

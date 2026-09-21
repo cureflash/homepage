@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_practice_source_complete / practice_pdf_pending`。last completed topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`、active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_practice_pdf_complete / powerpoint_pending`。last completed topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`、active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 38 完了判定
 
@@ -124,19 +124,45 @@ CT/VTは負担、励磁、固定比誤差式、CT二次開放禁止まで、A/D�
 
 二次問1はR2二次固定5答案要素だけへ直接接続し、計器用変成器の目的・CT/VT、比誤差、正動作/正不動作と信頼性向上策、77/66 kV級遮断器の5又は3サイクルとトリップコイル、トリップフリーを5設問で確認する。主題外二次問題は追加していない。
 
+## Topic 39 練習PDF＋PDF QA
+
+正本:
+- `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_practice.pdf`
+- `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_practice_pdf_qa.md`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+- A4縦: `7頁`
+- 一次12問・五肢・正答・完全解説: `12 / 12 PASS`
+- 二次1題5設問・模範解答: `5 / 5 PASS`
+- 固定25答案要素: `25 / 25 PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `5 / 5 PASS`
+- 系列SPEC固定13項目: `13 / 13 PASS`
+- 系列SPEC計算・グラフ3種: `3 / 3 PASS`
+- PDFium 200 dpi: `7 / 7 PASS`
+- Poppler 200 dpi: `7 / 7 PASS`
+- Ghostscript / pdfinfo / pdftotext: `PASS`
+- replacement character U+FFFD: `0件`
+- `(cid:)`: `0件`
+- clipped text / overlap / black square / broken glyph: `0件`
+- 一般SCADAモデルをCOSMOS実装と断定: `0件`
+- 未確認COSMOS内部実装・数値の真値化: `0件`
+- Topic 38固定問題重複採用: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ## 次工程
 
-`TOPIC39_PRACTICE_PDF`。
+`TOPIC39_POWERPOINT`。
 
-1. 練習source正本を変更せず練習PDFへ変換する。
-2. 一次12問の五肢・正答・完全解説、二次1題5設問・模範解答を欠落させない。
-3. 固定5問・25答案要素、一次20＋二次5を保持する。
-4. 系列SPEC固定13項目と計算・グラフ3種を保持する。
-5. CT二次開放禁止、VT二次短絡禁止、A/D量子化、LAN層、変調方式、信頼度/可用性の区別を落とさない。
-6. 数式、和文フォント、表、改ページ、選択肢番号の崩れをQAする。
-7. PDFium / Popplerの両系統でrender QAする。
-8. 一般SCADAモデル、信頼性計算の仮定例をCOSMOS実設備仕様と混同しない。
-9. 練習PDF QA通過後にのみPowerPointへ進む。
+1. 解説source・解説PDF・練習source・練習PDFの正本を変更せず、Topic 39の解説画像PowerPointを生成する。
+2. 固定5問・25答案要素、一次20＋二次5を解説画像へ接続する。
+3. 系列SPEC固定13項目と計算・グラフ3種を保持する。
+4. 一般SCADAモデル、CT/VT、A/D、通信・変調、遠隔計測/制御、信頼度/冗長系/可用性、保護リレー・遮断器を欠落させない。
+5. COSMOS未公開内部実装・実値を推測しない。
+6. スライドrender/content QAを行い、和文フォント、図表、数式、クリッピング、重なりを確認する。
+7. PowerPoint QA通過後にのみfresh workerによるclean blind最終ゲートへ進む。
 
 ## 境界条件
 
@@ -146,4 +172,4 @@ CT/VTは負担、励磁、固定比誤差式、CT二次開放禁止まで、A/D�
 - 完成後clean blindは公式解答・保存済み正答を先に見ないfresh workerで実施する。本runはanswer-bearing資料を参照済みなのでcandidateに流用しない。
 - Topic 21 H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` は既存の丸め差診断を維持し、一般式 `P=Tω`、`ω=2πN/60` を変更しない。
 
-次は `TOPIC39_PRACTICE_PDF`。
+次は `TOPIC39_POWERPOINT`。
