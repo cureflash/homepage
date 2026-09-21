@@ -57,6 +57,7 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 - v9 actual: candidate `203bec75a792d541126e1863604eb35cddb59146` / freshness `PASS` / 一次 `19 / 20` / 二次 `4 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v10: candidate `2ec47a4b21c4f7cd9d89a5cfb5d919d6e399e5b0` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v11: candidate `1a038f86f340a0834ffaaa375d1e98da9a410455` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
+- v12 pre-attempt: current worker/contextはcandidate固定前にTopic 39のanswer-bearing情報を既読のためfreshness不成立。candidate未作成。exact blocker `TOPIC39_CLEAN_BLIND_V12_CURRENT_CONTEXT_FRESHNESS_INVALID`。
 
 v11 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v11_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
 
@@ -65,7 +66,7 @@ v11 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_inte
 - 系列SPEC固定13項目変更: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
-- exact blocker: `0件`
+- exact blocker: `1件 / TOPIC39_CLEAN_BLIND_V12_CURRENT_CONTEXT_FRESHNESS_INVALID`
 
 ## 次工程
 
