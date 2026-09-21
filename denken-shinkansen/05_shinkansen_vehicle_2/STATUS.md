@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_powerpoint_complete / clean_blind_pending`
+- current_status: `topic_39_clean_blind_v1_fail_solver_error / clean_blind_v2_pending`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: fresh workerによるTopic 39 clean blind最終ゲート。公式解答・保存済み正答を先に見ずcandidateを固定し、その後に固定5問・25答案要素（一次20＋二次5）について公式標準解答一致と教材だけで導出可能を判定する。
+- next_start: 別fresh workerによるTopic 39 clean blind v2。同じ固定5問・25答案要素をquestion-onlyから再解答しcandidateを先にcommitする。v1 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材はcandidate固定後にのみ参照する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -26,7 +26,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS`
+判定: `IN_PROGRESS / CLEAN_BLIND_V1_FAIL_SOLVER_ERROR`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -78,9 +78,25 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
+### clean blind v1
+
+- question-only intake: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md`
+- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_candidate.md`
+- candidate commit: `cb034e4e121512844cf0333c6df49de84d7555e8`
+- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v1_qa.md`
+- 一次公式一致: `20 / 20 PASS`
+- 二次公式一致: `4 / 5 PASS`
+- 公式標準解答一致: `24 / 25 FAIL`
+- 教材だけで導出可能: `25 / 25 PASS`
+- 唯一の不一致: R2二次「電力・管理」問2 固定答案要素4。公式は定格遮断時間 `5サイクル及び3サイクル`、v1 candidateは `3サイクル` のみで5サイクルを欠落。
+- 診断: `solver error`。既存教材§10には5/3サイクルとトリップコイルが収録済み。
+- 教材・PDF・練習・PowerPoint修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- exact blocker: `0件`
+
 ### 次工程
 
-fresh workerによるclean blind最終ゲートのみ。candidate固定前に公式解答・保存済み正答を参照しない。本runはanswer-bearing資料を参照済みなのでcandidate作成には使用しない。教材欠落が判明した場合のみ既存仕様の範囲内でremediationし、固定EXAM_ALIGNMENTを勝手に変更しない。
+fresh workerによるclean blind v2のみ。本runはcandidate固定後にanswer-bearing資料を参照済みなのでv2 candidateには使用しない。v2で `公式標準解答一致 25 / 25` と `教材だけで導出可能 25 / 25` の両方を満たした場合のみTopic 39を `completed`、系列を `39 / 39 completed` とする。
 
 ## Topic 21 固定注記
 
