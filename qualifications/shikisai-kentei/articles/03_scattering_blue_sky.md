@@ -365,7 +365,81 @@ $$
 
 ここで重要なのは、Rayleigh散乱が単に「短波長を強く散らす」だけではないことである。散乱後の光は、波長・方向・偏光状態の3つが同時に変化する。
 
-## 12　色を理解するときは「スペクトルの再分配」と考える
+## 12　散乱を「光の出入り」で書く――放射輸送方程式
+
+ここまでは「直進光が散乱で減ること」と「別方向から散乱光が入ってくること」を分けて考えた。実際の大気では、この2つは同じ式で扱う。
+
+波長 $\lambda$、位置 $s$、進行方向 $\Omega$ の分光放射輝度を $L_\lambda(s,\Omega)$ とすると、定常状態の放射輸送方程式は概念的に
+
+$$
+\boxed{
+\frac{dL_\lambda(s,\Omega)}{ds}
+=
+-\beta_e(\lambda,s)L_\lambda(s,\Omega)
++
+\frac{\beta_s(\lambda,s)}{4\pi}
+\int_{4\pi}
+P(\Omega'\rightarrow\Omega;\lambda)
+L_\lambda(s,\Omega')\,d\Omega'
++
+j_\lambda(s,\Omega)
+}
+$$
+
+と書ける。
+
+ここで
+
+$$
+\beta_e=\beta_a+\beta_s
+$$
+
+は消散係数、$\beta_a$ は吸収係数、$\beta_s$ は散乱係数である。右辺第1項は「その方向を進んでいた光が吸収・散乱によって失われる量」、第2項は「他方向を進んでいた光が散乱されて観察方向へ入ってくる量」、$j_\lambda$ は物質自身の発光を表す。可視域の通常の大気散乱だけを考えるなら、熱放射などの $j_\lambda$ はほぼ無視できる。
+
+散乱の方向分布を表す $P$ を位相関数と呼ぶ。ここでは
+
+$$
+\int_{4\pi}P(\Omega'\rightarrow\Omega)\,d\Omega=4\pi
+$$
+
+となる規格化を採る。理想的な無偏光Rayleigh散乱なら
+
+$$
+\boxed{
+P_R(\theta)=\frac{3}{4}\left(1+\cos^2\theta\right)
+}
+$$
+
+であり、前節の微分断面積と同じ角度依存性を持つ。
+
+太陽光を1回だけ散乱する「単一散乱近似」にすると、空のある方向から来る分光放射輝度は概略
+
+$$
+L_{\mathrm{sky},\lambda}(\Omega)
+\approx
+\int_{\mathrm{LOS}}
+E_{\odot,\lambda}
+\,e^{-\tau_{\odot}(\lambda,s)}
+\frac{\beta_s(\lambda,s)P_R(\theta)}{4\pi}
+\,e^{-\tau_{\mathrm{obs}}(\lambda,s)}
+\,ds
+$$
+
+と書ける。$\tau_{\odot}$ は太陽から散乱点まで、$\tau_{\mathrm{obs}}$ は散乱点から観察者までの光学的厚さである。
+
+この式は、空の色を決める因果関係をそのまま表している。
+
+- $E_{\odot,\lambda}$：もとの太陽光スペクトル
+- $e^{-\tau_{\odot}}$：散乱点へ届くまでの減衰
+- $\beta_s$：その場所で散乱される確率
+- $P_R(\theta)$：観察方向へ振り分けられる割合
+- $e^{-\tau_{\mathrm{obs}}}$：散乱後、眼へ届くまでの減衰
+
+Rayleigh領域では $\beta_s\propto\lambda^{-4}$ なので短波長が強く散乱される。しかし、光路が長くなると指数減衰も短波長側ほど強くなる。したがって、空の色は単純な $\lambda^{-4}$ だけではなく、太陽高度・観察方向・大気の厚さ・エアロゾル量まで含めた放射輸送で決まる。
+
+これは青空や夕焼けの説明を「短波長は散乱しやすい」という一文から、実際に観察される分光放射輝度を計算する理論へ拡張した形である。
+
+## 13　色を理解するときは「スペクトルの再分配」と考える
 
 散乱で重要なのは、光が消えることではない。
 
@@ -387,7 +461,7 @@ $$
 
 つまり「何色に見えるか」は、吸収だけでなく、光がどこへ運ばれたかまで含めて考えなければならない。
 
-## 13　色彩検定で押さえる部分と大学レベルの発展
+## 14　色彩検定で押さえる部分と大学レベルの発展
 
 色彩検定では、まず次を押さえればよい。
 
@@ -417,7 +491,18 @@ $$
 I(\lambda)=I_0(\lambda)e^{-\tau(\lambda)}
 $$
 
-という誘起双極子、散乱断面積、角度分布、光学的厚さの連鎖として説明できる。
+さらに
+
+$$
+\frac{dL_\lambda}{ds}
+=
+-\beta_eL_\lambda
++
+\frac{\beta_s}{4\pi}
+\int_{4\pi}P\,L_\lambda\,d\Omega'
+$$
+
+という放射輸送まで拡張して、誘起双極子、散乱断面積、角度分布、光学的厚さ、方向間のエネルギー移送を一つの連鎖として説明できる。
 
 空の青も夕焼けの赤も、色そのものが空気中に存在しているのではない。太陽光のスペクトルが大気によって波長別・方向別に再配分され、その一部が眼へ入った結果である。
 
@@ -430,6 +515,8 @@ $$
 - [NASA Space Place, Why Is the Sky Blue?](https://spaceplace.nasa.gov/blue-sky/en/)
 - [NASA Goddard Space Flight Center, Planetary Spectrum Generator: Molecular (Rayleigh) and Aerosol (Mie) Scattering](https://psg.gsfc.nasa.gov/helpatm.php)
 - [UCAR Center for Science Education, The Appearance of the Sky](https://scied.ucar.edu/learning-zone/atmosphere/appearance-sky)
+- [UCAR, Atmospheric Remote Sensing Lecture 7: Rayleigh/Molecular Scattering](https://www2.acom.ucar.edu/sites/default/files/documents/Gautam_acam_lecture.pdf)
+- [NASA Reference Publication 1156, Introduction to the Theory of Atmospheric Radiative Transfer](https://ntrs.nasa.gov/citations/19860018367)
 - [New Mexico State University, Rayleigh Scattering: Optical Depth](https://atmos.nmsu.edu/education_and_outreach/encyclopedia/rayleigh_optical.htm)
 - [OpenStax University Physics Volume 3, 1.7 Polarization](https://openstax.org/books/university-physics-volume-3/pages/1-7-polarization)
 - C. F. Bohren and D. R. Huffman, *Absorption and Scattering of Light by Small Particles*, Wiley, 1983.
