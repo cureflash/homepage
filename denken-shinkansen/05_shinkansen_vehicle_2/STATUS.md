@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_clean_blind_v5_ready`
+- current_status: `topic_38_clean_blind_v6_ready`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: Topic 38 fresh clean blind v5。必須正本と現行教材成果物を確認し、prior clean-blind candidate / QA・公式標準解答・保存済み正答をcandidate固定前に参照せず、固定5問・25答案要素を教材だけで独立再解答する。
+- next_start: Topic 38 fresh clean blind v6。candidate固定前は必須正本・question-only intake・公式「問題」PDFだけを確認し、保存済み正答を含むTopic 38 source/教材・prior candidate/QA・公式標準解答を開かず、固定5問・25答案要素を独立再解答する。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,7 +29,7 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `CLEAN_BLIND_V5_READY`
+状態: `CLEAN_BLIND_V6_READY`
 
 ### remediation完了範囲
 
@@ -60,25 +60,29 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ### 今回の1段階
 
-前回のclean blind手順blockerを、既存上位仕様の記述だけでreconcileした。上位仕様・系列SPECは変更していない。
+fresh clean blind v5はcandidate固定前に freshness 汚染を検出したため、candidateを作らず `INVALID` として記録した。
 
-- `MASTER_SPEC.md` §1: 必須正本とactive themeの既存成果物を読む。
-- `MASTER_SPEC.md` §3: 必須成果物は解説PDF・練習PDF・PowerPoint・source Markdown等。
-- `EXAM_ALIGNMENT_SPEC.md` §10: 公式解答・保存済み正答を先に見ず、教材だけで固定過去問を独立再解答する。
-- prior clean-blind candidate / QAは独立試験の作業記録であり、§3の必須教材成果物ではないため、candidate固定前の参照対象から外せる。
-
-これにより、必須教材成果物を確認しつつ保存済み正答を先に見ないv5手順が成立する。仕様追加は行っていない。
+- v5 invalidation: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v5_invalid.md`
+- candidate固定前にTopic 38 source Markdownを確認したが、このsource自体に固定過去問の保存済み正答が含まれていた。
+- `EXAM_ALIGNMENT_SPEC.md` §10の「公式解答・保存済み正答を先に見ない」要件を満たさないため、このrunでのcandidate作成を中止した。
+- v5 candidate作成: `0件`
+- v5 candidate commit: `0件`
+- 公式標準解答照合: `0件`
+- 教材本文修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 仕様追加: `0件`
 
 ### 次の安全な工程
 
-- Topic 38 fresh clean blind v5を実施する。
-- candidate固定前はv1〜v4 clean-blind candidate / QA、公式標準解答、保存済み正答、answer-bearing commit diffを開かない。
-- 固定5問・25答案要素を教材だけで独立再解答してcandidateを固定する。
-- 固定後に公式標準解答へ照合する。
+- Topic 38 fresh clean blind v6をfresh workerで実施する。
+- candidate固定前は `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、question-only intake、公式「問題」PDFだけを読む。
+- Topic 38 source Markdown、練習source/PDF、解説PDF、prior clean-blind candidate / QA、公式標準解答、保存済み正答を含むQA・commit diffはcandidate固定前に開かない。
+- 固定5問・25答案要素を独立再解答してcandidateを固定する。
+- 固定後に公式標準解答と現行教材へ照合する。
 - `25 / 25` かつ教材依存 `25 / 25` ならcompleted判定へ進む。未達ならcandidateを修正せずQA記録する。
-- 教材remediation・固定EXAM_ALIGNMENT変更・Topic 39先取りは、v5結果が要求しない限り行わない。
+- 教材remediation・固定EXAM_ALIGNMENT変更・Topic 39先取りは、v6結果が要求しない限り行わない。
 
-exact blocker: `0件`。次工程は `TOPIC38_CLEAN_BLIND_V5`。
+exact blocker: `0件`。次工程は `TOPIC38_CLEAN_BLIND_V6`。
 
 ## Topic 21 固定注記
 
