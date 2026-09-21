@@ -365,6 +365,87 @@ $$
 
 ここで重要なのは、Rayleigh散乱が単に「短波長を強く散らす」だけではないことである。散乱後の光は、波長・方向・偏光状態の3つが同時に変化する。
 
+### 11.1　実在の大気では「屈折率」から散乱強度を計算できる
+
+ここまでの散乱断面積は、1分子の分極率 $\alpha$ を使って書いた。しかし大気について実際に計算するときは、測定しやすい巨視的な屈折率 $n$ からRayleigh散乱断面積を求めることができる。
+
+希薄な等方媒質では、分子の分極率と屈折率はClausius–Mossotti（Lorentz–Lorenz）関係
+
+$$
+\boxed{
+\frac{n^2-1}{n^2+2}
+=
+\frac{N\alpha}{3\varepsilon_0}
+}
+$$
+
+で結び付く。$N$ は数密度である。
+
+第3節の
+
+$$
+\sigma_{\mathrm R}
+=
+\frac{k^4|\alpha|^2}{6\pi\varepsilon_0^2},
+\qquad
+k=\frac{2\pi}{\lambda}
+$$
+
+へ $\alpha$ を代入すると、等方分子について
+
+$$
+\boxed{
+\sigma_{\mathrm R}(\lambda)
+=
+\frac{24\pi^3}{N^2\lambda^4}
+\left(\frac{n^2(\lambda)-1}{n^2(\lambda)+2}\right)^2
+}
+$$
+
+を得る。つまり $\lambda^{-4}$ だけでなく、空気の屈折率そのものの波長依存も散乱強度へ入る。
+
+ただし窒素や酸素の分子は完全な球対称ではなく、分極率には方向依存性がある。この非等方性を実用計算へ入れる代表的な補正がKing補正因子 $F_K$ である。脱偏光比を $\rho$ とすると、よく使われる形は
+
+$$
+\boxed{
+F_K
+=
+\frac{6+3\rho}{6-7\rho}
+}
+$$
+
+であり、実在大気のRayleigh散乱断面積は
+
+$$
+\boxed{
+\sigma_{\mathrm R}(\lambda)
+=
+\frac{24\pi^3}{N^2\lambda^4}
+\left(\frac{n^2(\lambda)-1}{n^2(\lambda)+2}\right)^2
+F_K(\lambda)
+}
+$$
+
+と表せる。$n$ と $N$ は同じ基準状態に対応させる必要がある。式の中に $N$ が見えるが、希薄気体では屈折率差 $n-1$ 自体が数密度に比例するため、1分子あたりの散乱断面積は圧力や温度を単純に変えただけでは変わらず、主に波長と気体組成で決まる。
+
+この式は、
+
+$$
+\text{分子の電子構造}
+\rightarrow
+\text{分極率テンソル}
+\rightarrow
+\text{屈折率・脱偏光比}
+\rightarrow
+\text{Rayleigh散乱断面積}
+\rightarrow
+\text{光学的厚さ}
+\rightarrow
+\text{空の分光放射輝度}
+$$
+
+という因果関係をつなぐ。BodhaineらやBucholtzの大気計算では、屈折率と脱偏光比の波長依存を含めることでRayleigh光学的厚さを高精度化している。したがって「青は $\lambda^{-4}$ で強く散乱される」は第一近似であり、実大気では $n(\lambda)$ と分子異方性まで含めて初めて定量的な散乱量になる。
+
 ## 12　散乱を「光の出入り」で書く――放射輸送方程式
 
 ここまでは「直進光が散乱で減ること」と「別方向から散乱光が入ってくること」を分けて考えた。実際の大気では、この2つは同じ式で扱う。
@@ -433,7 +514,7 @@ $$
 - $e^{-\tau_{\odot}}$：散乱点へ届くまでの減衰
 - $\beta_s$：その場所で散乱される確率
 - $P_R(\theta)$：観察方向へ振り分けられる割合
-- $e^{-\tau_{\mathrm{obs}}}$：散乱後、眼へ届くまでの減衰
+- $e^{-\tau_{\mathrm{obs}}$：散乱後、眼へ届くまでの減衰
 
 Rayleigh領域では $\beta_s\propto\lambda^{-4}$ なので短波長が強く散乱される。しかし、光路が長くなると指数減衰も短波長側ほど強くなる。したがって、空の色は単純な $\lambda^{-4}$ だけではなく、太陽高度・観察方向・大気の厚さ・エアロゾル量まで含めた放射輸送で決まる。
 
@@ -519,5 +600,7 @@ $$
 - [NASA Reference Publication 1156, Introduction to the Theory of Atmospheric Radiative Transfer](https://ntrs.nasa.gov/citations/19860018367)
 - [New Mexico State University, Rayleigh Scattering: Optical Depth](https://atmos.nmsu.edu/education_and_outreach/encyclopedia/rayleigh_optical.htm)
 - [OpenStax University Physics Volume 3, 1.7 Polarization](https://openstax.org/books/university-physics-volume-3/pages/1-7-polarization)
+- B. A. Bodhaine, N. B. Wood, E. G. Dutton, and J. R. Slusser, “On Rayleigh Optical Depth Calculations,” *Journal of Atmospheric and Oceanic Technology* 16, 1854–1861 (1999), DOI: 10.1175/1520-0426(1999)016<1854:ORODC>2.0.CO;2.
+- A. Bucholtz, “Rayleigh-scattering calculations for the terrestrial atmosphere,” *Applied Optics* 34(15), 2765–2773 (1995), DOI: 10.1364/AO.34.002765.
 - C. F. Bohren and D. R. Huffman, *Absorption and Scattering of Light by Small Particles*, Wiley, 1983.
 - J. D. Jackson, *Classical Electrodynamics*, 3rd ed., Wiley, 1998.
