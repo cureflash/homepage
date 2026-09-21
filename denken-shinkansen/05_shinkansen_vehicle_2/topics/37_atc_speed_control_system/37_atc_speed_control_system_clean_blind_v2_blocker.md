@@ -1,32 +1,30 @@
-# Topic 37 clean blind v2 exact blocker
+# Topic 37 clean blind v2 freshness blocker
 
 更新日: 2026-09-21
 
-判定: `BLOCKED / CLEAN_BLIND_FRESHNESS_CONFLICT`
+判定: `RESOLVED / CLEAN_BLIND_V2_READY`
 
-## reconcile
+## 発生していた競合
 
-- reconcile対象 main HEAD: `9c8af98a94d733e54a5cc6b5df55c87c3d7d9357`
-- `STATUS.md` / `HANDOFF.md` / 直近commitを確認済み
-- Topic 37現在地: `topic_37_clean_blind_v1_fail`
-- 完成数: `36 / 39`
-- Topic 21一般式変更: `0件`
+v2 candidateはanswer-bearing資料を見ていないfresh workerが先に固定する必要がある一方、当時の必須reconcile対象 `STATUS.md` / `HANDOFF.md` がv1の具体的な誤答・canonical正答を含んでいた。このため同一workerではfresh条件と必須reconcileを両立できなかった。
 
-## exact blocker
+## 解除
 
-次工程は、answer-bearing資料を見ていないfresh workerが `clean_blind_v2_candidate` を先に固定し、その後に照合QAを行うことを要求している。
+- `STATUS.md` をanswer-safeなcurrent stateへ更新した。
+- `HANDOFF.md` をanswer-safeなfresh handoffへ更新した。
+- v1の具体的な答案内容はanswer-bearing QAへ隔離した。
+- question-only intakeは `37_atc_speed_control_system_clean_blind_intake.md` を使用する。
+- 固定5問・25答案要素、固定EXAM_ALIGNMENT、既存教材、Topic 21一般式は変更していない。
 
-一方、毎run必須のreconcile対象である現行 `HANDOFF.md` と直近commit `9c8af98a94d733e54a5cc6b5df55c87c3d7d9357` 自体が、clean blind v1のFAIL答案とcanonical正答を明示している。このため、必須reconcileを実行した同一workerはv2 candidate固定時点で既にanswer-bearing情報を閲覧済みとなり、fresh clean blind条件を満たせない。
-
-これは一時的な取得障害ではなく、現行handoff契約とfreshness条件の両立不能である。推測・条件緩和・candidate作成は行わない。
+これにより、次のfresh workerは上位仕様、系列SPEC、answer-safeなSTATUS/HANDOFF、question-only intake、公式「問題」PDFだけを読んでv2 candidateを固定できる。
 
 ## 停止位置
 
 - `clean_blind_v2_candidate`: 未作成
 - v2 QA: 未実施
-- 既存成果物変更: `0件`
+- 既存教材変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 21一般式変更: `0件`
-- exact blocker: `TOPIC37_CLEAN_BLIND_V2_FRESHNESS_CONFLICT`
+- exact blocker: `0件`
 
-解除条件: candidate作成workerがanswer-bearing内容を含むreconcile情報から隔離される手順、またはfresh clean blind手順そのものの正本仕様変更が確定するまで停止する。
+本runはsanitize前のanswer-bearing情報を確認済みのため、v2 candidateは作成しない。次のfresh runからcandidate固定へ進む。
