@@ -125,6 +125,83 @@ $$
 
 これが測色で照明条件を固定しなければならない数学的理由である。
 
+### 発展：イルミナントの分光誤差はXYZへどう伝播するか
+
+実際の測色用光源は、理想的な標準イルミナントの分光分布を完全には再現しない。そこで、イルミナントのわずかな分光誤差がXYZへどのように伝わるかを微分で調べる。
+
+離散化した等色関数と波長刻みを $\mathbf C$ に含め、$\mathbf C$ の第2行を $\mathbf c_y^T$ とする。完全拡散反射面の $Y$ を100へ正規化した物体色XYZは
+
+$$
+\mathbf t(\mathbf s,\mathbf r)
+=
+100\,
+\frac{\mathbf C\,\mathrm{diag}(\mathbf r)\mathbf s}
+{\mathbf c_y^T\mathbf s}
+$$
+
+と書ける。
+
+分子を
+
+$$
+\mathbf u=\mathbf C\,\mathrm{diag}(\mathbf r)\mathbf s
+$$
+
+分母を
+
+$$
+d=\mathbf c_y^T\mathbf s
+$$
+
+とおく。イルミナントに微小な変化 $\delta\mathbf s$ が生じたとき、商の微分から
+
+$$
+\delta\mathbf t
+\approx
+J_s\,\delta\mathbf s
+$$
+
+となり、ヤコビ行列は
+
+$$
+\boxed{
+J_s
+=
+\frac{100}{d}
+\left[
+\mathbf C\,\mathrm{diag}(\mathbf r)
+-
+\frac{\mathbf u}{d}\mathbf c_y^T
+\right]
+}
+$$
+
+である。
+
+この式には二つの効果が同時に入っている。第1項は各波長の照明変化が試料反射率と等色関数を通じてXYZへ入る効果、第2項は基準白の $Y=100$ 正規化そのものがイルミナント変化で動く効果である。
+
+もしイルミナントの分光値に共分散行列
+
+$$
+\Sigma_s
+$$
+
+で表される不確かさがあるなら、一次近似ではGUMの不確かさ伝播と同じ形で
+
+$$
+\boxed{
+\Sigma_{XYZ}
+\approx
+J_s\Sigma_sJ_s^{\mathsf T}
+}
+$$
+
+と評価できる。
+
+ここから重要な結論が出る。同じ分光誤差 $\delta\mathbf s$ でも、$J_s$ には試料の $\mathbf r$ が含まれるため、XYZの誤差は試料ごとに異なる。したがって「光源の白色点が標準イルミナントとほぼ一致した」だけでは、あらゆる色票が標準条件と同じXYZになるとは保証できない。
+
+特に白色試料ではほぼ相殺されるような分光差でも、特定波長だけを強く反射する有彩色試料では差が増幅されうる。実用の昼光シミュレータの品質評価で、単なる白色点一致ではなく分光的な一致やメタメリズムを評価する必要があるのはこのためである。
+
 ## 4　標準イルミナントAはPlanck放射を基準にする
 
 標準イルミナントAは、典型的なタングステン電球に近い光を表すための基準である。現在のISO/CIE 11664-2では、約2855.5 KのPlanck放射を基礎として定義されている。
@@ -435,7 +512,9 @@ $$
 - 色彩検定協会「色彩検定とは」1級：色彩学に測色・世界の色彩調和論等を含む。https://www.aft.or.jp/pages/feature/level
 - CIE, *Colorimetry, 4th Edition*, CIE 015:2018. https://cie.co.at/publications/colorimetry-4th-edition
 - ISO/CIE 11664-2:2022, *Colorimetry — Part 2: CIE Standard Illuminants*. https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0
+- ISO/CIE 23603:2024, *Standard method of assessing the spectral quality of daylight simulators for visual appraisal and measurement of colour*. https://cie.co.at/publications/standard-method-assessing-spectral-quality-daylight-simulators-visual-appraisal-and-1
 - CIE, “CIE standard illuminant D65” dataset, DOI: 10.25039/CIE.DS.hjfjmt59. https://www.cie.co.at/datatable/cie-standard-illuminant-d65
 - CIE, “CIE standard illuminant A - 1 nm” dataset, DOI: 10.25039/CIE.DS.8jsxjrsn. https://cie.co.at/datatable/cie-standard-illuminant-1-nm
+- JCGM 100:2008, *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*. https://www.bipm.org/en/doi/10.59161/jcgm100-2008e
 - D. B. Judd, D. L. MacAdam, G. Wyszecki et al., “Spectral Distribution of Typical Daylight as a Function of Correlated Color Temperature,” *Journal of the Optical Society of America*, 54, 1031–1040 (1964).
 - G. Wyszecki and W. S. Stiles, *Color Science: Concepts and Methods, Quantitative Data and Formulae*, 2nd ed., Wiley, 1982.
