@@ -399,6 +399,90 @@ $$
 
 そのため「光源の白色点が近い」だけでは、すべての物体色が同じに見える保証にはならない。
 
+### 7.1　照明変化を「測色演算子の摂動」として定量化する
+
+照明が少し変わったとき、メタマー対の一致がどの程度崩れるかは、線形代数では演算子の摂動として書ける。
+
+基準条件の測色行列を $A_0$、試験条件を
+
+$$
+A_1=A_0+\Delta A
+$$
+
+とする。基準条件で2試料が完全に条件等色しているなら
+
+$$
+A_0\Delta\boldsymbol{\rho}=\mathbf 0
+$$
+
+である。試験条件で生じる三刺激値差は
+
+$$
+\Delta\mathbf t_1
+=A_1\Delta\boldsymbol{\rho}
+=(A_0+\Delta A)\Delta\boldsymbol{\rho}
+=\Delta A\,\Delta\boldsymbol{\rho}
+$$
+
+となる。
+
+この式は、照明変更後の不一致が「照明の変化」だけでも「試料の分光差」だけでも決まらず、その両者の作用で決まることを示している。2ノルムを使えば
+
+$$
+\lVert\Delta\mathbf t_1\rVert_2
+\le
+\lVert\Delta A\rVert_2
+\lVert\Delta\boldsymbol{\rho}\rVert_2
+$$
+
+なので、基準条件では見えなかった大きな分光差ほど、測色演算子が変わったときに大きな不一致を生む余地がある。ただし、同じ大きさの分光差でも方向によって影響は異なる。
+
+その方向依存性は特異値分解で調べられる。基準条件の零空間への直交射影を
+
+$$
+P_0=I-A_0^+A_0
+$$
+
+とすると、基準条件でXYZを変えない任意のスペクトル差は
+
+$$
+\mathbf n=P_0\mathbf q
+$$
+
+と書ける。試験条件での不一致は
+
+$$
+\Delta\mathbf t_1
+=A_1P_0\mathbf q
+$$
+
+であり、しかも $A_0P_0=0$ だから
+
+$$
+A_1P_0=\Delta A\,P_0
+$$
+
+である。
+
+ここで
+
+$$
+A_1P_0=U\Sigma V^{\mathsf T}
+$$
+
+と特異値分解すると、最大特異値 $\sigma_{\max}$ は、基準条件で完全に隠れていた単位ノルムのスペクトル差のうち、試験条件で最も大きなXYZ不一致を作る方向の増幅率を与える。
+
+$$
+\max_{\mathbf n\in\ker A_0,\ \lVert\mathbf n\rVert_2=1}
+\lVert A_1\mathbf n\rVert_2
+=
+\sigma_{\max}(A_1P_0)
+$$
+
+逆に小さい特異値に対応する方向は、その特定の照明変更に対して比較的頑健なメタメリックブラックである。
+
+ただし特異値の絶対値は、波長刻み $\Delta\lambda$、XYZの規格化、スペクトルベクトルの尺度に依存する。したがって普遍的な「メタメリズム指数」そのものではなく、指定した離散化・測色条件のもとで、どのスペクトル差が条件変更に敏感かを分析する道具として解釈する。
+
 ## 8　メタメリズム指数は何を数値化しているのか
 
 CIEでは、基準条件でメタマーとなる色対について、照明または観察者を変更したときに生じる色の不一致を色差として評価する考え方がある。
@@ -745,3 +829,4 @@ $$
 - ISO/CIE 23603:2024, *Standard method of assessing the spectral quality of daylight simulators for visual appraisal and measurement of colour*. https://www.cie.co.at/publications/standard-method-assessing-spectral-quality-daylight-simulators-visual-appraisal-and-1
 - CIE, *CIE standard illuminant D65* data set, DOI: 10.25039/CIE.DS.hjfjmt59. https://www.cie.co.at/datatable/cie-standard-illuminant-d65
 - J. B. Cohen and W. E. Kappauf, “Metameric Color Stimuli, Fundamental Metamers, and Wyszecki's Metameric Blacks,” *The American Journal of Psychology*, 95(4), 537–564 (1982). DOI: 10.2307/1422186.
+- G. H. Golub and C. F. Van Loan, *Matrix Computations*, 4th ed., Johns Hopkins University Press, 2013.
