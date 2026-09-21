@@ -14,7 +14,7 @@ $$
 
 ## 1　色彩検定との接続
 
-色彩検定協会の現行案内では、3級で光の基礎と照明、2級で光の性質と「色の見えに関わる照明」を扱う。大学レベルでは、照明を次の2段階に分けると整理しやすい。
+色彩検定協会の現行案内では、3級で光の基礎知識と照明、2級で光の性質と「色の見えに関わる照明」を扱う。大学レベルでは、照明を次の2段階に分けると整理しやすい。
 
 - 放射測定：光をエネルギーとして測る
 - 測光：その放射を標準化された人間の視覚感度で重み付けする
@@ -249,7 +249,121 @@ $$
 
 となる。$\pi$ は単なる換算係数ではなく、半球上の方向積分から現れる。
 
-## 12　測光量を一つの構造として見る
+## 12　照度から物体の輝度へ――なぜ白い紙は明るく見えるのか
+
+照度 $E_v$ は面へ入る光、輝度 $L_v$ は面から眼の方向へ出る光である。この二つは物体の反射率を介してつながる。
+
+入射光束のうち測光学的に $\rho_v$ の割合を反射する理想的な拡散反射面なら、光束発散度は
+
+$$
+\boxed{M_v=\rho_v E_v}
+$$
+
+である。さらにLambert面では $M_v=\pi L_v$ なので、
+
+$$
+\boxed{
+L_v=\frac{\rho_v E_v}{\pi}
+}
+$$
+
+を得る。
+
+同じ500 lxで照らしても、$\rho_v=0.8$ の白い紙なら
+
+$$
+L_v\approx\frac{0.8\times500}{\pi}\approx127\ \mathrm{cd/m^2}
+$$
+
+だが、$\rho_v=0.1$ の暗い紙なら約16 cd/m²しかない。したがって「照度が同じなら物体も同じ明るさ」ではない。
+
+ここで $\rho_v$ も単なる材料定数ではない。波長ごとの拡散反射率を $R(\lambda)$、入射分光放射照度を $E_{e,\lambda}(\lambda)$ とする単純化では、
+
+$$
+E_v
+=K_m\int E_{e,\lambda}(\lambda)V(\lambda)\,d\lambda
+$$
+
+$$
+M_v
+=K_m\int E_{e,\lambda}(\lambda)R(\lambda)V(\lambda)\,d\lambda
+$$
+
+だから、測光学的な反射率は
+
+$$
+\boxed{
+\rho_v
+=\frac{M_v}{E_v}
+=\frac{\int E_{e,\lambda}(\lambda)R(\lambda)V(\lambda)\,d\lambda}
+{\int E_{e,\lambda}(\lambda)V(\lambda)\,d\lambda}
+}
+$$
+
+となる。つまり同じ物体でも照明スペクトルが変われば、$R(\lambda)$ と $V(\lambda)$ の重なり方が変わり、測光学的な反射率や輝度も変わりうる。
+
+この式は「照明→分光反射→眼へ届く光→輝度」という因果関係を直接表している。
+
+## 13　レンズで輝度は増やせるか――エタンデュと基本輝度
+
+輝度は単なる面密度ではなく、「投影面積×立体角」に対する光束密度である。微小な光線束について幾何学的エタンデュを
+
+$$
+\boxed{
+dG=\cos\theta\,dA\,d\Omega
+}
+$$
+
+とする。屈折率 $n$ の媒質では、CIEの optical extent は
+
+$$
+\boxed{
+d\mathcal{E}=n^2dG=n^2\cos\theta\,dA\,d\Omega
+}
+$$
+
+で表される。
+
+一方、輝度の定義から
+
+$$
+d\Phi_v=L_v\cos\theta\,dA\,d\Omega
+$$
+
+なので、
+
+$$
+\boxed{
+d\Phi_v=\frac{L_v}{n^2}\,d\mathcal{E}}
+$$
+
+と書ける。
+
+吸収・反射損失・拡散がない理想的な光学系では optical extent が保存され、光束も保存される。したがって
+
+$$
+\boxed{
+\frac{L_v}{n^2}=\text{const.}
+}
+$$
+
+となる。CIEはこの量を basic luminance と呼ぶ。
+
+空気中では $n\approx1$ なので、理想レンズを通しても拡張光源の輝度そのものは増やせない。レンズができるのは、面積と立体角の配分を変えることである。
+
+受光面の照度は一般に
+
+$$
+\boxed{
+E_v=\int_{\Omega}L_v(\theta,\phi)\cos\theta\,d\Omega
+}
+$$
+
+である。したがってレンズで受光面から見た光源の立体角 $\Omega$ を大きくすれば照度は上げられるが、それは $L_v$ 自体を増幅したからではない。
+
+このため「レンズで光を集める」と「光源の輝度を高くする」は別の操作である。受動光学系では、損失を無視しても輝度という位相空間密度を勝手に増やすことはできない。
+
+## 14　測光量を一つの構造として見る
 
 波長方向には
 
@@ -274,7 +388,7 @@ $$
 | 照度 | $E_v$ | $d\Phi_v/dA$ | lx | 面へ入る光束密度 |
 | 輝度 | $L_v$ | $d^2\Phi_v/(dA\cos\theta d\Omega)$ | cd/m² | 面から特定方向へ出る光束密度 |
 
-## 13　測光とXYZ表色系はYでつながる
+## 15　測光とXYZ表色系はYでつながる
 
 CIE XYZでは
 
@@ -310,7 +424,7 @@ $$
 
 1000 lmの暖色LEDと1000 lmの昼光色LEDは、総光束が同じでも分光分布と色度は異なりうる。
 
-## 14　物体色は「照明スペクトル×分光反射率」で決まる
+## 16　物体色は「照明スペクトル×分光反射率」で決まる
 
 物体へ入射する照明の分光分布を $E(\lambda)$、物体の分光反射率を $R(\lambda)$ とすれば、眼へ向かう反射光は第一近似で
 
@@ -324,7 +438,7 @@ $$
 
 したがって同じ照度でも $E(\lambda)$ が異なれば、物体から返るスペクトルも異なる。照度を揃えるだけでは色の見えを揃えられない理由はここにある。
 
-## 15　暗くなると重み関数そのものが変わる――明所視・暗所視・薄明視
+## 17　暗くなると重み関数そのものが変わる――明所視・暗所視・薄明視
 
 ここまで使った $V(\lambda)$ は明るい環境における明所視 photopic vision の標準分光視感効率である。しかし眼の分光感度は照度・輝度に依存して一定ではない。
 
@@ -352,7 +466,7 @@ $$
 
 この点は、測光量が純粋な光の物理量ではなく「放射場と標準化された視覚系との組合せ」で定義されることを最も端的に示している。
 
-## 16　色彩検定の用語を大学物理へ翻訳する
+## 18　色彩検定の用語を大学物理へ翻訳する
 
 | 色彩検定での表現 | 物理・数学での意味 |
 |---|---|
@@ -362,11 +476,13 @@ $$
 | 輝度 | 投影面積・立体角あたりの光束密度 |
 | 距離が離れると暗い | 点光源近似では $E_v\propto1/r^2$ |
 | 斜めから照らすと暗い | $E_v\propto\cos\theta$ |
+| 白い紙ほど同じ照度で高輝度 | Lambert面なら $L_v=\rho_vE_v/\pi$ |
+| レンズで光を集める | 輝度ではなく面積と立体角の配分を変える。理想系では $L_v/n^2$ が不変 |
 | 照明で色が変わる | $E(\lambda)R(\lambda)$ が変わる |
 | 同じ明るさでも色が違う | 測光は基本的に1次元、測色はXYZの3次元 |
 | 暗所で青緑が相対的に明るくなる | $V(\lambda)$ から $V'(\lambda)$ へ感度が短波長側に移る |
 
-## 17　まとめ
+## 19　まとめ
 
 測光量は、放射スペクトルを標準視感度で重み付けして
 
@@ -394,11 +510,23 @@ $$
 \boxed{E_v=\frac{I_v\cos\theta}{r^2}}
 $$
 
-が導かれ、逆二乗則と余弦則を同時に説明できる。
+が導かれ、逆二乗則と余弦則を同時に説明できる。拡散反射面では
+
+$$
+\boxed{L_v=\frac{\rho_vE_v}{\pi}}
+$$
+
+によって照度・反射率・輝度がつながる。また理想的な受動光学系では optical extent の保存から
+
+$$
+\boxed{\frac{L_v}{n^2}=\mathrm{const.}}
+$$
+
+となり、レンズは面積と立体角を交換できても輝度を自由に増幅できない。
 
 CIE 1931表色系では $\bar y(\lambda)=V(\lambda)$ なので測光と測色はY成分を通じて接続する。ただし視覚の分光感度は一定ではなく、暗所視では $V'(\lambda)$、薄明視では $V_{\mathrm{mes};m}(\lambda)$ を考える必要がある。
 
-色彩検定の「照明」を大学レベルで理解するとは、lm・cd・lx・cd/m²を暗記することではなく、放射スペクトル、標準視感度、立体角、投影面積からそれぞれの量を導けるようにすることである。
+色彩検定の「照明」を大学レベルで理解するとは、lm・cd・lx・cd/m²を暗記することではなく、放射スペクトル、標準視感度、立体角、投影面積、反射率、エタンデュからそれぞれの量を導けるようにすることである。
 
 ## 参考資料
 
@@ -406,10 +534,13 @@ CIE 1931表色系では $\bar y(\lambda)=V(\lambda)$ なので測光と測色は
 - 公益社団法人 色彩検定協会, 「公式テキスト」. https://www.aft.or.jp/pages/official-product-orders
 - Commission Internationale de l'Éclairage (CIE), CIE 018:2019, *The Basis of Physical Photometry, 3rd Edition*. https://www.cie.co.at/publications/basis-physical-photometry-3rd-edition
 - ISO/CIE 23539:2023, *Photometry — The CIE system of physical photometry*. https://cie.co.at/publications/photometry-cie-system-physical-photometry-3
+- CIE e-ILV 17-21-048, “optical extent / etendue”. https://cie.co.at/eilvterm/17-21-048
+- CIE e-ILV 17-21-049, “radiance”. https://cie.co.at/eilvterm/17-21-049
+- CIE e-ILV 17-21-050, “luminance”. https://cie.co.at/eilvterm/17-21-050
 - CIE, *CIE spectral luminous efficiency for photopic vision, V(λ)*, DOI: 10.25039/CIE.DS.dktna2s3. https://cie.co.at/datatable/cie-spectral-luminous-efficiency-photopic-vision
 - CIE, *CIE spectral luminous efficiency for scotopic vision, V′(λ)*, DOI: 10.25039/CIE.DS.gr6w4b5g. https://www.cie.co.at/datatable/cie-spectral-luminous-efficiency-scotopic-vision
 - CIE, e-ILV 17-22-036, “Purkinje phenomenon”. https://cie.co.at/eilvterm/17-22-036
-- CIE, CIE 257:2026, *Recommendations for Practical Application of the CIE System for Mesopic Photometry in Outdoor Lighting*.
+- CIE, CIE 257:2026, *Recommendations for Practical Application of the CIE System for Mesopic Photometry in Outdoor Lighting*. https://www.cie.co.at/publications/recommendations-practical-application-cie-system-mesopic-photometry-outdoor-lighting
 - National Institute of Standards and Technology (NIST), “Realization of the candela”. https://www.nist.gov/pml/sensor-science/optical-radiation/realization-candela
 - NIST, “Photometry”. https://www.nist.gov/programs-projects/photometry
 - Bureau International des Poids et Mesures (BIPM), “The SI”. https://www.bipm.org/en/measurement-units
