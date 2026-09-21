@@ -8,7 +8,7 @@
 
 Topic 01〜36は最終QAまで `PASS / completed`。完成数 `36 / 39`。
 
-現在地は `topic_37_powerpoint_complete`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋render QAまで完了。固定5問・25答案要素は一次 `5 / 5`、二次 `20 / 20`、合計 `25 / 25 PASS`。練習は一次12問 `12 / 12` 正答一意、二次4題 `20 / 20` 独立再計算PASS。SPEC固定8項目 `8 / 8 PASS`、系列SPEC固定計算・グラフ2項目 `2 / 2 PASS`、二次問題の件数合わせ0件、未確認実車ATC内部実装・数値の真値化0件、Topic 38先取り0件、Topic 21一般式変更0件、exact blocker `0件`。完成判定に必要なfresh clean blindのみ未実施。次工程はanswer-bearing資料を先に開かないfresh workerによるcandidate固定→独立再解答QA。本runはanswer-bearing資料参照済みのためcandidateを作成しない。
+現在地は `topic_37_clean_blind_v1_fail`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋render QAまで完了。clean blind v1は固定5問・25答案要素で一次 `4 / 5`、二次 `20 / 20`、合計 `24 / 25 FAIL`。FAILはR4一次「機械」問7(2)のみで、candidateが `リレーシーケンス回路（リレー回路）`、公式・canonicalは `自己保持回路`。既存解説sourceに必要語句は収録済みのため教材欠落ではなく独立再解答側の特定ミス。既存成果物変更0件、Topic 21一般式変更0件、exact blocker `0件`。次工程はanswer-bearing資料を先に開かないfresh workerによる `clean_blind_v2_candidate` 固定→独立再解答QA。candidate固定前にv1 candidate/QA、公式標準解答、固定EXAM_ALIGNMENT正答、解説・練習のanswer-bearing資料を開かない。
 
 ## Topic 34 完了記録
 
@@ -474,7 +474,7 @@ Topic 36は全工程を通過したため `PASS / COMPLETED`。完成数を `36 
 
 ## Topic 37 進捗
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `NEEDS_REVISION / CLEAN_BLIND_V1_FAIL`
 
 canonical:
 - EXAM_ALIGNMENT source: `topics/37_atc_speed_control_system/37_atc_speed_control_system.md`
@@ -508,6 +508,10 @@ canonical:
 - PowerPoint SHA-256: `bab088b6ea5aa2ebb6833090c2fb5f4d7ce25c3af0fafa0caa9100392136f670`
 - PowerPoint QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_images_qa.md`
 - PowerPoint canonical commit: `de3e673ce4ebb12ab9e8c4c4b789e18371ff31bc`
+- clean blind v1 candidate: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_candidate.md`
+- clean blind v1 candidate lock commit: `4e03db0fcc000842dd0f776d773df866b52ea855`
+- clean blind v1 QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_qa.md`
+- clean blind v1 QA commit: `5193011c6577a7690eba869ad43673acd79575d7`
 
 固定過去問:
 - R4一次「機械」問7
@@ -517,10 +521,9 @@ canonical:
 - R3二次「機械・制御」問4
 
 品質ゲート:
-- 固定公式過去問: `5 / 5 PASS`
-- 一次固定答案要素: `5 / 5 PASS`
-- 二次固定答案要素: `20 / 20 PASS`
-- 合計: `25 / 25 PASS`
+- 制作物側固定公式過去問: `5 / 5 PASS`
+- 制作物側一次固定答案要素: `5 / 5 PASS`
+- 制作物側二次固定答案要素: `20 / 20 PASS`
 - 練習一次: `12問 / 12問五肢択一`
 - 一次正答一意性: `12 / 12 PASS`
 - 練習二次: `4題`
@@ -529,6 +532,14 @@ canonical:
 - PowerPoint: `16:9 / 6枚 / render 6 / 6 PASS`
 - SPEC固定8項目: `8 / 8 PASS`
 - 系列SPEC固定計算・グラフ: `2 / 2 PASS`
+- clean blind v1一次: `4 / 5 PASS`
+- clean blind v1二次: `20 / 20 PASS`
+- clean blind v1合計: `24 / 25 FAIL`
+- FAIL要素: R4一次「機械」問7(2) `リレーシーケンス回路（リレー回路）` → canonical `自己保持回路`
+- 教材欠落によるFAIL: `0件`
+- candidate固定後修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物再生成: `0件`
 - 二次問題の件数合わせ採用: `0件`
 - JRTT一次資料へのATC一般原理接続: `PASS`
 - ATS-Dxを新幹線ATC実装として使用: `0件`
@@ -538,6 +549,6 @@ canonical:
 - Topic 21一般式変更: `0件`
 - exact blocker: `0件`
 
-Topic 37はEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPointまで完了。完成数は `36 / 39` のまま。完成判定にはfresh clean blind独立再解答が未実施。
+Topic 37は制作物側の全工程を通過しているが、clean blind v1が `24 / 25 FAIL` のため未完了。完成数は `36 / 39` のまま。
 
-次工程: answer-bearing資料を先に開かないfresh workerでclean blind candidateを固定し、その後に公式標準解答・教材との照合QAを行う。本runはanswer-bearing資料を参照済みのためcandidateを作成しない。
+次工程: answer-bearing資料を先に開かないfresh workerで `clean_blind_v2_candidate` を固定し、その後に公式標準解答・教材との照合QAを行う。candidate固定前にv1 candidate/QA、公式標準解答、固定EXAM_ALIGNMENT正答、解説source/PDF、練習source/PDF、answer-bearing QAを開かない。
