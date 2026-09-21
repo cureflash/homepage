@@ -102,6 +102,84 @@ $$
 
 なので、$n_o$と$n_e$が違えば、同じ厚さを通過した後の位相がずれる。
 
+### 5.1　なぜ偏光方向で屈折率が変わるのか――誘電率テンソル
+
+複屈折の根本原因は、物質の電気分極が方向によって異なることにある。線形媒質では
+
+$$
+\mathbf{D}=\varepsilon_0\mathbf{E}+\mathbf{P}
+$$
+
+である。等方媒質なら $\mathbf{P}=\varepsilon_0\chi\mathbf{E}$ と書けるため
+
+$$
+\mathbf{D}=\varepsilon_0\varepsilon_r\mathbf{E}
+$$
+
+となり、光に対する応答は1個の誘電率で表せる。これに対して異方性媒質では電気感受率、したがって誘電率がテンソルになり、主誘電軸を座標軸に選べば
+
+$$
+\boxed{
+\mathbf{D}=\varepsilon_0\boldsymbol{\varepsilon}_r\mathbf{E}
+},\qquad
+\boldsymbol{\varepsilon}_r=
+\begin{pmatrix}
+\varepsilon_x&0&0\\
+0&\varepsilon_y&0\\
+0&0&\varepsilon_z
+\end{pmatrix}
+$$
+
+と書ける。つまり同じ大きさの電場を加えても、電場方向によって分極の大きさが異なる。
+
+時間依存を $e^{-i\omega t}$ とした平面波を非磁性・損失なしの異方性媒質で考えると、Maxwell方程式は電場について
+
+$$
+\boxed{
+\mathbf{k}\times(\mathbf{k}\times\mathbf{E})
++\frac{\omega^2}{c^2}\boldsymbol{\varepsilon}_r\mathbf{E}=0
+}
+$$
+
+という固有値問題になる。非自明な $\mathbf{E}$ が存在する条件から、同じ進行方向に対して一般に2つの固有偏光と2つの位相定数が得られる。主軸に沿う単純な配置で、電場が主誘電軸方向の固有偏光になる場合には
+
+$$
+k_i^2=\varepsilon_i\frac{\omega^2}{c^2}
+$$
+
+したがって
+
+$$
+\boxed{n_i=\frac{ck_i}{\omega}=\sqrt{\varepsilon_i}}
+$$
+
+となる。偏光方向によって屈折率が違うという現象は、電場方向ごとの分極応答、すなわち誘電率テンソルの固有値が異なることの光学的な現れである。
+
+単軸結晶なら主軸系で概念的に
+
+$$
+\boldsymbol{\varepsilon}_r=
+\operatorname{diag}(n_o^2,n_o^2,n_e^2)
+$$
+
+と表せる。ただし一般の進行方向で異常光が感じる実効屈折率は単純に常に $n_e$ ではなく、光軸との角度にも依存する。したがって複屈折の因果関係は
+
+$$
+\boxed{
+\text{結晶構造・分子配向}
+\rightarrow
+\boldsymbol{\varepsilon}_r\text{の異方性}
+\rightarrow
+\text{偏光ごとの異なる位相定数}
+\rightarrow
+\text{位相差}
+\rightarrow
+\text{偏光色}
+}
+$$
+
+と整理できる。配向高分子や応力を受けたプラスチックで複屈折が生じるのも、分子配向やひずみが誘電応答の対称性を崩すためである。
+
 ## 6　位相差はなぜ厚さと複屈折に比例するのか
 
 真空波長$\lambda$の光が厚さ$d$の複屈折材料を通るとする。屈折率$n$の媒質中で得る位相は
@@ -363,6 +441,7 @@ $$
 
 - 色彩検定協会「色彩検定とは」 https://www.aft.or.jp/pages/feature/level
 - OpenStax, *University Physics Volume 3*, 1.7 Polarization. https://openstax.org/books/university-physics-volume-3/pages/1-7-polarization
+- Physics LibreTexts, “Maxwell Equations in Matter.” https://phys.libretexts.org/Bookshelves/Optics/BSc_Optics_%28Konijnenberg_Adam_and_Urbach%29/01%3A_Basic_Electromagnetic_and_Wave_Optics/1.04%3A_Maxwell_Equations_in_Matter
 - Physics LibreTexts, “Creating and Manipulating Polarisation States.” https://phys.libretexts.org/Bookshelves/Optics/BSc_Optics_%28Konijnenberg_Adam_and_Urbach%29/04%3A_Polarization/4.03%3A_Creating_and_Manipulating_Polarisation_States
 - RP Photonics Encyclopedia, “Birefringence.” https://www.rp-photonics.com/birefringence.html
 - RP Photonics Encyclopedia, “Retardance.” https://www.rp-photonics.com/retardance.html
