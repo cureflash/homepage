@@ -343,6 +343,86 @@ $$
 
 xy色度図が「混色関係を理解する図」として非常に便利なのに対し、知覚的な色差を扱う目的では、さらにL*a*b*などの均等色空間が必要になる。
 
+### 9.1　MacAdam楕円――知覚の「物差し」は場所と方向で変わる
+
+xy色度図の非均等性は、MacAdamの色識別実験を見ると幾何学的に理解できる。ある基準色度
+
+$$
+\mathbf c_0=
+\begin{pmatrix}
+x_0\\y_0
+\end{pmatrix}
+$$
+
+の近傍で、基準色と区別しにくい微小な色度差を
+
+$$
+\delta\mathbf c=
+\begin{pmatrix}
+\delta x\\\delta y
+\end{pmatrix}
+$$
+
+とする。十分小さい範囲では、等しい識別尺度の境界を正定値対称行列 $G(\mathbf c_0)$ を用いて
+
+$$
+\delta\mathbf c^{\mathsf T}
+G(\mathbf c_0)
+\delta\mathbf c=1
+$$
+
+という二次形式で近似できる。これはxy平面上の楕円である。
+
+$$
+G=
+\begin{pmatrix}
+g_{xx}&g_{xy}\\g_{xy}&g_{yy}
+\end{pmatrix}
+$$
+
+を固有値分解し、主軸方向を並べた直交行列を $Q$、半径を $a,b$ とすれば
+
+$$
+G
+=Q
+\begin{pmatrix}
+1/a^2&0\\0&1/b^2
+\end{pmatrix}
+Q^{\mathsf T}.
+$$
+
+主軸座標
+
+$$
+\mathbf u=Q^{\mathsf T}\delta\mathbf c
+$$
+
+では
+
+$$
+\frac{u_1^2}{a^2}+\frac{u_2^2}{b^2}=1
+$$
+
+となる。$a\neq b$ なら、同じ大きさの $(\delta x,\delta y)$ でも方向によって識別されやすさが違う。さらに $a,b,Q$ が色度位置によって変わるなら、知覚の物差しは場所によっても違う。
+
+CIE Technical Note 001:2014は、MacAdam楕円の大きさと形がCIE 1931 $(x,y)$ 図上で場所ごとに異なること、理想的な均等色空間ならこれらが同じ大きさの円になるはずだと説明している。CIE 1976 $(u',v')$ 図では、とくに黒体軌跡付近で楕円がより円に近づくが、完全に一定にはならない。
+
+したがって局所的には
+
+$$
+ds^2=d\mathbf c^{\mathsf T}G(\mathbf c)d\mathbf c
+$$
+
+という位置依存の計量を考えられる。xy平面の単純なユークリッド距離
+
+$$
+ds^2=dx^2+dy^2
+$$
+
+が知覚差を表せないのは、実際の知覚が単位行列 $G=I$ では記述できないからである。
+
+ただしMacAdam楕円は普遍的な「人間の色差単位」ではない。元の実験は特定の観察者・輝度・視野・周辺条件で行われ、識別閾は順応や観察条件でも変わる。楕円は、xy色度図の非均等性を示す代表的な局所モデルとして理解するのが適切である。
+
 ## 10　xy色度図は3次元色空間の「断面」ではない
 
 よくある誤解は、xy色度図を「XYZ空間を上から見た図」と考えることだ。
@@ -498,5 +578,7 @@ $$
 - [CIE Datasets: CIE 1931 chromaticity coordinates of spectrum loci / colour-matching functions](https://www.cie.co.at/data-tables)
 - [ISO/CIE 11664-1:2019 Colorimetry — Part 1: CIE standard colorimetric observers](https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0)
 - [ISO/CIE 11664-5:2016 Colorimetry — Part 5: CIE 1976 L*u*v* Colour Space and u', v' Uniform Chromaticity Scale Diagram](https://www.cie.co.at/publications/colorimetry-part-5-cie-1976-luv-colour-space-and-u-v-uniform-chromaticity-scale)
+- [CIE TN 001:2014, Chromaticity Difference Specification for Light Sources](https://files.cie.co.at/738_CIE_TN_001-2014.pdf)
+- [MacAdam, D. L. (1942), “Visual Sensitivities to Color Differences in Daylight”, JOSA 32, 247–274](https://doi.org/10.1364/JOSA.32.000247)
 - [CIE 015:2018 Colorimetry, 4th Edition](https://www.cie.co.at/publications/colorimetry-4th-edition)
 - [JCGM 100:2008(E) — Evaluation of measurement data — Guide to the expression of uncertainty in measurement](https://doi.org/10.59161/JCGM100-2008E)
