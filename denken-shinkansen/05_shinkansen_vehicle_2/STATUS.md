@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v7_ready / IN_PROGRESS`
+- current_status: `topic_39_clean_blind_v8_pending / IN_PROGRESS`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh worker/contextでclean blind v7を実施する。candidate固定前は更新済みquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
+- next_start: 別fresh worker/contextでclean blind v8を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V7_READY`
+判定: `IN_PROGRESS / CLEAN_BLIND_V8_PENDING`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -150,9 +150,29 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 系列SPEC変更: `0件 / PASS`
 - exact blocker: `0件 / PASS`
 
+### clean blind v7
+
+- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_candidate.md`
+- candidate commit: `05a182424a027d47e2fc452aa8ca6a92d34a5dd8`
+- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_qa.md`
+- candidate freshness: `PASS`
+- 公式標準解答一致: `24 / 25 FAIL`
+- 一次: `20 / 20 PASS`
+- 二次: `4 / 5 PASS`
+- 教材だけで導出可能: `25 / 25 PASS`
+- R2固定5答案要素区切り維持: `PASS`
+- 診断: `solver error`。教材欠落ではない。
+- answer-bearingな不一致詳細はv7 QAにのみ保持し、mandatory recordには載せない。
+- 教材・PDF・練習・PowerPoint修正: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 系列SPEC固定13項目変更: `0件`
+- 未確認COSMOS内部実装・数値の真値化: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
+
 ### 次工程
 
-別fresh worker/contextによるclean blind v7。candidate固定前はanswer-bearing資料を開かず、更新済みquestion-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
+別fresh worker/contextによるclean blind v8。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
 
 ## Topic 21 固定注記
 
