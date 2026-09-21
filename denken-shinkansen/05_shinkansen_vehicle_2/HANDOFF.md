@@ -23,9 +23,14 @@ remediation後のEXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoi
 
 ## 今回の1段階
 
-fresh clean blind v2に入る前のfreshness blockerを解消した。
+latest main、必須startup文書、直近コミット、既存worker成果をreconcileした。直近コミット確認時にcommit diffを取得し、candidate固定前にanswer-bearing情報が露出したため、このrunではfresh clean blind v2 candidateを作成しない。
 
-必須startup文書の `STATUS.md` / `HANDOFF.md` にv1診断・remediationのanswer-bearing詳細が残っており、本runではそれをcandidate固定前に読んだためfresh v2 candidateを作成しない。品質ゲートを守り、startup文書からanswer-bearing詳細を隔離した。既存教材・固定問題・固定答案要素・SPECは変更していない。
+構造QAとして以下を確認した。
+
+- question-only intakeは正答・公式標準解答・既存教材の解答情報を含めない構成
+- v2 candidateファイルは未作成
+- remediation済み成果物を再生成しない
+- Topic 21一般式は変更しない
 
 readiness記録: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v2_blocker.md`
 
@@ -34,12 +39,13 @@ readiness記録: `topics/38_comtrac_train_tracking_route_control_reliability/38_
 次runは以下の順序だけで進める。
 
 1. `../MASTER_SPEC.md`、`../EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`、本`HANDOFF.md`、`STATUS.md`を確認する。
-2. `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_intake.md` のquestion-only intakeだけを開く。
-3. 保存済み正答・教材・QA・公式解答を見ずに、別ファイル `38_comtrac_train_tracking_route_control_reliability_clean_blind_v2_candidate.md` を固定する。
-4. candidate固定後にだけ公式標準解答と教材を開き、「公式標準解答一致」と「教材だけで導出可能」を別々に照合する。
-5. 固定5問・25答案要素の双方 `25 / 25` でなければcompletedにしない。二次は直接対応0問を維持し、件数合わせをしない。
+2. 直近コミットはmessage/SHA/date等のmetadataだけでreconcileし、candidate固定前にcommit diffを開かない。
+3. `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_intake.md` のquestion-only intakeだけを開く。
+4. 保存済み正答・教材・QA・公式解答を見ずに、別ファイル `38_comtrac_train_tracking_route_control_reliability_clean_blind_v2_candidate.md` を固定する。
+5. candidate固定後にだけ公式標準解答と教材を開き、「公式標準解答一致」と「教材だけで導出可能」を別々に照合する。
+6. 固定5問・25答案要素の双方 `25 / 25` でなければcompletedにしない。二次は直接対応0問を維持し、件数合わせをしない。
 
-candidate固定前に開かないもの: 保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答。
+candidate固定前に開かないもの: 直近commit diff、保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答。
 
 ## 境界条件
 
@@ -49,4 +55,5 @@ candidate固定前に開かないもの: 保存済み正答、v1 candidate/QA/re
 - Topic 39の内容を先取りしない。
 - Topic 21の既存診断・一般式は変更しない。
 
+exact blocker for this run: `candidate固定前のcommit diff取得によりanswer-bearing情報が露出し、fresh clean blind条件不成立`
 exact blocker for next fresh run: `0件`

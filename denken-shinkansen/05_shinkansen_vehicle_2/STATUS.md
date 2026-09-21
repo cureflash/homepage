@@ -9,7 +9,7 @@
 - current_status: `topic_38_clean_blind_v2_ready`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: Topic 38 fresh clean blind v2。必須startup文書を確認後、question-only intakeだけから別candidateを固定する。candidate固定前は保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答を開かない。v1 candidateは変更しない。
+- next_start: Topic 38 fresh clean blind v2。必須startup文書を確認後、直近コミットはmetadataのみreconcileし、question-only intakeだけから別candidateを固定する。candidate固定前は直近commit diff、保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答を開かない。v1 candidateは変更しない。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -49,12 +49,15 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ### fresh clean blind v2 readiness
 
-- 本runでは必須startup文書を読む時点でanswer-bearing情報が露出したため、freshnessを守ってv2 candidateは作成していない。
-- `STATUS.md` / `HANDOFF.md` のanswer-bearing詳細は本runでstartup文書から隔離した。
+- question-only intakeは正答・公式標準解答・既存教材の解答情報を含めない構成を確認済み。
+- v2 candidateファイルは未作成（404確認）。
+- 本runでは直近コミットをreconcileする際にcommit diffを取得し、candidate固定前にanswer-bearing情報が露出したため、freshness条件を満たさない。v2 candidateは作成していない。
+- 次runは直近コミットをmetadataのみでreconcileし、candidate固定前にcommit diffを取得しない。
 - fresh v2 candidate: `未作成`
-- 次runのcandidate固定前に参照可能: `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、その後question-only intakeのみ。
-- candidate固定前に参照禁止: 保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答。
+- candidate固定前に参照可能: `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、当該系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、その後question-only intakeのみ。
+- candidate固定前に参照禁止: 直近commit diff、保存済み正答、v1 candidate/QA/remediation、EXAM_ALIGNMENT QA、解説/練習source/PDF/QA、PowerPoint/QA、公式標準解答。
 - candidate固定後に「公式標準解答一致」と「教材だけで導出可能」を別々に判定し、固定5問・25答案要素の双方 `25 / 25` でなければcompletedにしない。
+- exact blocker for this run: `candidate固定前のcommit diff取得によりanswer-bearing情報が露出し、fresh clean blind条件不成立`
 - exact blocker for next fresh run: `0件`
 
 ## Topic 21 固定注記
