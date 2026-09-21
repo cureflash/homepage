@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_clean_blind_v12_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_clean_blind_v13_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 39 固定ゲート
 
@@ -57,23 +57,24 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 - v9 actual: candidate `203bec75a792d541126e1863604eb35cddb59146` / freshness `PASS` / 一次 `19 / 20` / 二次 `4 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v10: candidate `2ec47a4b21c4f7cd9d89a5cfb5d919d6e399e5b0` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v11: candidate `1a038f86f340a0834ffaaa375d1e98da9a410455` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
-- v12 pre-attempt: current worker/contextはcandidate固定前にTopic 39のanswer-bearing情報を既読のためfreshness不成立。candidate未作成。exact blocker `TOPIC39_CLEAN_BLIND_V12_CURRENT_CONTEXT_FRESHNESS_INVALID`。
+- v12 pre-attempt: 別worker/contextでfreshness不成立のためcandidate未作成。
+- v12 actual: candidate `2ed839295e292ccd7c5b520c5484e8b4e82bb7fe` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 
-v11 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v11_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
+v12 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v12_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
 
 - 教材修正・再生成: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC固定13項目変更: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
-- exact blocker: `1件 / TOPIC39_CLEAN_BLIND_V12_CURRENT_CONTEXT_FRESHNESS_INVALID`
+- exact blocker: `0件 / PASS`
 
 ## 次工程
 
-`TOPIC39_CLEAN_BLIND_V12`。別fresh worker/contextのみで実施する。
+`TOPIC39_CLEAN_BLIND_V13`。別fresh worker/contextのみで実施する。
 
 1. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、question-only intakeをreconcileする。
-2. candidate固定前はv1〜v11 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
+2. candidate固定前はv1〜v12 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
 3. question-only intakeと公式「問題」PDFだけで固定25答案要素を解く。R2二次はintake記載の5群境界を維持し、分割し直さない。
 4. candidateをcommitして固定した後にのみ、公式標準解答・既存教材と照合する。
 5. `25 / 25`公式一致、`25 / 25`教材導出可能、固定5群境界維持を満たした場合だけ最終QAへ進める。
