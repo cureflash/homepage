@@ -616,5 +616,5 @@ $$
 - [NIST Fundamental Physical Constants](https://physics.nist.gov/cuu/Constants/)
 - [OpenStax, University Physics Volume 2, Plane Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-2-plane-electromagnetic-waves)
 - [OpenStax, University Physics Volume 2, Energy Carried by Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-3-energy-carried-by-electromagnetic-waves)
-- [MIT OpenCourseWare, 6.013 Electromagnetics and Applications, Course Notes, §2.7 Poynting's Theorem](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/resources/mit6_013s09_notes/)
+- [MIT OpenCourseWare, 6.013 Electromagnetics and Applications, Course Notes, §2.7 Poynting's Theorem](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf)
 - [OpenStax, University Physics Volume 3, Wave-Particle Duality](https://openstax.org/books/university-physics-volume-3/pages/6-6-wave-particle-duality)
