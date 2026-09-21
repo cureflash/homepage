@@ -45,6 +45,23 @@ $$
 
 である。
 
+より一般には、光エネルギーの流れを表すPoyntingベクトル
+
+$$
+\mathbf S=\mathbf E\times\mathbf H
+$$
+
+の界面法線方向成分を使い、時間平均を $\langle\cdot\rangle$ とすれば
+
+$$
+R=-\frac{\langle\mathbf S_r\rangle\cdot\hat{\mathbf n}}
+{\langle\mathbf S_i\rangle\cdot\hat{\mathbf n}},\qquad
+T=\frac{\langle\mathbf S_t\rangle\cdot\hat{\mathbf n}}
+{\langle\mathbf S_i\rangle\cdot\hat{\mathbf n}}
+$$
+
+と定義できる。ここで $i,r,t$ は入射・反射・透過を表す。つまり「反射率」「透過率」は電場振幅ではなく、最終的にはエネルギー流の比である。
+
 空気 $n_1\approx1.00$ からガラス $n_2\approx1.50$ へ垂直入射すると、
 
 $$
@@ -60,10 +77,16 @@ $$
 平面電磁波では、電場 $E$ と磁場 $H$ の比を波動インピーダンス $Z$ として
 
 $$
-Z=\frac{E}{H}
+Z=\frac{E}{H}=\sqrt{\frac{\mu}{\varepsilon}}
 $$
 
-と表せる。非磁性媒質では、おおまかに屈折率が変わると波動インピーダンスも変化する。
+と表せる。非磁性・非吸収媒質では $\mu_r\approx1$ なので、
+
+$$
+n\approx\sqrt{\varepsilon_r},\qquad Z\approx\frac{Z_0}{n}
+$$
+
+となる。したがって屈折率が変わる境界は、同時に電磁波から見たインピーダンスが変わる境界でもある。
 
 境界面では接線方向の電場・磁場が連続になる必要がある。二つの媒質の波動インピーダンスが異なると、入射波だけをそのまま透過させたのでは両方の境界条件を同時に満たせない。そこで反射波が生じる。
 
@@ -115,6 +138,64 @@ $$
 
 つまり、複素屈折率の虚部 $\kappa$ は「電磁波が物質中でどれだけ速く減衰するか」を表す。
 
+### 3.1　Poyntingの定理で見る「吸収」の正体
+
+電磁場の局所的なエネルギー保存則はPoyntingの定理
+
+$$
+\frac{\partial u_{\mathrm{em}}}{\partial t}
++\nabla\cdot\mathbf S
+=-\mathbf J\cdot\mathbf E
+$$
+
+で表される。$u_{\mathrm{em}}$ は電磁場のエネルギー密度、$\mathbf S$ はPoyntingベクトル、$\mathbf J\cdot\mathbf E$ は電磁場から物質へ単位時間・単位体積あたりに渡される仕事である。
+
+線形で等方的な吸収媒質を、複素比誘電率
+
+$$
+\tilde\varepsilon_r=\varepsilon'+i\varepsilon''
+$$
+
+で表す。非磁性媒質では
+
+$$
+\tilde n^2\approx\tilde\varepsilon_r
+$$
+
+なので、
+
+$$
+\varepsilon'=n^2-\kappa^2,\qquad
+\varepsilon''=2n\kappa
+$$
+
+となる。調和電場 $\mathbf E(t)=\mathrm{Re}[\mathbf E_0e^{-i\omega t}]$ に対し、媒質が一周期平均で受け取る電力密度は
+
+$$
+\langle p_{\mathrm{abs}}\rangle
+=\frac{1}{2}\omega\varepsilon_0\varepsilon''|\mathbf E_0|^2
+$$
+
+である。
+
+したがって $\kappa>0$、すなわち $\varepsilon''>0$ ということは、単に「式の中で振幅が減る」という記述ではない。物質の分極が電場に完全には追随せず位相遅れを持つため、一周期ごとに電磁場から物質へ正味のエネルギーが渡ることを意味する。これが巨視的な吸収の物理的因果関係である。
+
+### 3.2　吸収と屈折は独立ではない
+
+物質の応答は因果律を満たすため、誘電率の実部 $\varepsilon'$ と虚部 $\varepsilon''$ は独立に好きな形を取れない。Kramers–Kronig関係の一つは
+
+$$
+\varepsilon'(\omega)-1
+=\frac{2}{\pi}\,\mathcal P
+\int_0^\infty
+\frac{\Omega\varepsilon''(\Omega)}{\Omega^2-\omega^2}
+\,d\Omega
+$$
+
+と書ける。$\mathcal P$ はCauchyの主値である。
+
+つまり、ある周波数帯に強い吸収があると、その周辺では屈折率 $n(\omega)$ の分散も変化する。色材の吸収スペクトルと、ガラスや結晶の屈折率分散が全く別の現象なのではなく、同じ電磁応答の実部と虚部として結び付いている。分散そのものは別稿「なぜプリズムで白い光が虹色に分かれるのか」で詳しく扱う。
+
 ## 4　厚さが増えると透過光が減る理由
 
 均一な吸収媒質内部だけを考えれば、厚さ $d$ を通過した光強度は
@@ -144,6 +225,27 @@ $$
 となる。
 
 したがって透過率は「吸収係数だけ」で決まるわけではなく、表面反射、厚さ、多重反射にも依存する。
+
+ここで用語を区別しておく。吸収率（absorptance）$A$ は入射エネルギーのうち吸収された割合であり、
+
+$$
+A=1-R-T
+$$
+
+である。一方、分光分析で使う吸光度（absorbance）は、ここでは記号 $D$ を用いると
+
+$$
+D=-\log_{10}T
+$$
+
+で定義される。表面反射を除いた内部透過率 $\tau=e^{-\alpha d}$ を用いるなら
+
+$$
+D=-\log_{10}\tau
+=\frac{\alpha d}{\ln 10}
+$$
+
+となる。吸収率 $A$ と吸光度 $D$ は別の物理量であり、同じ「吸収」という語から混同しないことが重要である。
 
 ## 5　波長によって吸収率が違うと色が生まれる
 
@@ -278,7 +380,7 @@ $$
 R(\lambda)+T(\lambda)+A(\lambda)=1
 $$
 
-というエネルギー保存、Fresnel係数、複素屈折率、吸収係数、散乱、そして
+というエネルギー保存、Fresnel係数、Poyntingベクトル、複素屈折率、複素誘電率、吸収係数、散乱、そして
 
 $$
 (X,Y,Z)=\int S(\lambda)R(\lambda)(\bar x,\bar y,\bar z)\,d\lambda
@@ -292,8 +394,10 @@ $$
 
 - [色彩検定協会「色彩検定とは・各級の目安」](https://www.aft.or.jp/pages/feature/level)
 - [色彩検定協会「公式テキスト3級目次」](https://www.aft.or.jp/images/text_of-3st-grade_mokuji.pdf)
-- RP Photonics Encyclopedia, article on "Fresnel Equations", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/fresnel_equations.html
-- RP Photonics Encyclopedia, article on "Absorption Coefficient", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/absorption_coefficient.html
-- RP Photonics Encyclopedia, article on "Refractive Index", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/refractive_index.html
+- [MIT OpenCourseWare, 6.013 Electromagnetics and Applications, Lecture 8: Transverse Electromagnetic Waves](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/resources/lec8/)
+- RP Photonics Encyclopedia, "Fresnel Reflections", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/fresnel_reflections.html
+- RP Photonics Encyclopedia, "Absorption Coefficient", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/absorption_coefficient.html
+- RP Photonics Encyclopedia, "Refractive Index", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/refractive_index.html
+- RP Photonics Encyclopedia, "Kramers–Kronig Relations", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/kramers_kronig_relations.html
 - [CIE, CIE 1931 colour-matching functions, 2 degree observer](https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer)
 - [OpenStax, College Physics 2e, 24.3 The Electromagnetic Spectrum](https://openstax.org/books/college-physics-2e/pages/24-3-the-electromagnetic-spectrum)
