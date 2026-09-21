@@ -5,13 +5,13 @@
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_clean_blind_v8_failed`
-- last_completed_topic: `37 ATC③ 速度制御系`
-- active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: Topic 38 fresh clean blind v9。candidate固定前は必須正本・question-only intake・公式「問題」PDFだけを確認し、Topic 38 source/教材・prior candidate/QA・公式標準解答・answer-bearing commit diffを開かない。
+- exam_aligned_completed_topics: `38 / 39`
+- current_status: `topic_38_clean_blind_v9_pass / completed`
+- last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
+- active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
+- next_start: Topic 39 の制作前EXAM_ALIGNMENT。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`に従い、公式過去問を直近年度から調査する。
 
-Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
+Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 37 ATC③ 速度制御系
 
@@ -29,9 +29,9 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `CLEAN_BLIND_V8_FAILED`
+判定: `PASS / completed`
 
-### remediation完了範囲
+### 完了済み成果物
 
 - EXAM_ALIGNMENT＋QA: `PASS / REMEDIATED`
 - 解説source＋source QA: `PASS / REMEDIATED`
@@ -46,31 +46,30 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 - 未確認COMTRAC実装・数値の真値化: `0件`
 - Topic 39先取り: `0件`
 
-### clean blind v8
+### clean blind v9
 
+- candidate: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v9_candidate.md`
+- candidate固定commit: `49733712ced101bee0bb42336084fe099bbe2c02`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v9_qa.md`
 - freshness: `PASS`
-- candidate固定commit: `a99a6acf46e02cd9b06bd35320f31b7a6ab29668`
-- 公式標準解答一致: `22 / 25 FAIL`
+- 公式標準解答一致: `25 / 25 PASS`
 - 教材だけで導出可能: `25 / 25 PASS`
 - 教材欠落によるFAIL: `0件`
 - candidate固定後修正: `0件`
 - 教材本文修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC固定9項目変更: `0件`
+- 二次問題件数合わせ: `0件`
 - exact blocker: `0件`
-- 詳細答案・正誤位置・公式正答はv8 candidate / QA正本だけに保持し、本STATUSには再掲しない。
-- Topic 38 completed: `NO`
+- Topic 38 completed: `YES`
 
-### 次の安全な工程
+### clean blind履歴
 
-- mandatory記録は引き続き非answer-bearing要約とする。
-- Topic 38 fresh clean blind v9をfresh workerで実施する。
-- candidate固定前は `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、`STATUS.md`、`HANDOFF.md`、question-only intake、公式「問題」PDFだけを読む。
-- Topic 38 source Markdown、練習source/PDF、解説PDF、prior clean-blind candidate / QA、公式標準解答、保存済み正答を含むQA・answer-bearing commit diffはcandidate固定前に開かない。
-- 固定5問・25答案要素を独立再解答してcandidateを固定する。
-- 固定後に公式標準解答と現行教材へ照合する。
-- `25 / 25` かつ教材依存 `25 / 25` ならcompleted判定へ進む。未達ならcandidateを修正せずQA記録する。
+v8はfreshness `PASS`、公式一致 `22 / 25 FAIL`、教材だけで導出可能 `25 / 25 PASS`。教材欠落ではなく独立再解答側の識別ミスだったため教材remediationは行わず、fresh v9を実施した。
 
-次工程は `TOPIC38_CLEAN_BLIND_V9`。
+## 次工程
+
+Topic 39 `COSMOS 統合監視・SCADA・信頼性` の制作前EXAM_ALIGNMENTから開始する。仕様は系列`SPEC.md`の固定範囲だけを使用し、Topic 38のCOMTRAC内部実装等を推測して持ち込まない。
 
 ## Topic 21 固定注記
 
