@@ -668,6 +668,92 @@ $$
 
 実務上の色合わせが「ひとつの照明下で同じに見せれば終わり」ではない理由を、数理的に表した形である。
 
+### 12.1　複数照明で同時に一致させると、メタマーの自由度はどう減るか
+
+複数照明を使う意味は、零空間の共通部分を調べると明確になる。照明 $S_j$ に対応する測色行列を $A_j$ とすると、2試料が $m$ 個すべての照明下で条件等色する条件は
+
+$$
+A_j\Delta\boldsymbol{\rho}=\mathbf 0
+\qquad (j=1,2,\dots,m)
+$$
+
+である。これらを縦に積み重ねた行列
+
+$$
+\mathcal A=
+\begin{bmatrix}
+A_1\\
+A_2\\
+\vdots\\
+A_m
+\end{bmatrix}
+\in\mathbb R^{3m\times n}
+$$
+
+を作れば、同時条件等色は
+
+$$
+\mathcal A\Delta\boldsymbol{\rho}=\mathbf 0
+$$
+
+と一つの式にまとめられる。したがって、複数照明すべてで隠れるスペクトル差の集合は
+
+$$
+\boxed{
+\ker(\mathcal A)
+=
+\bigcap_{j=1}^{m}\ker(A_j)
+}
+$$
+
+である。
+
+rank-nullity theoremより
+
+$$
+\dim\ker(\mathcal A)
+=n-\operatorname{rank}(\mathcal A)
+$$
+
+であり、スペクトル的に独立性の高い照明を追加して $\operatorname{rank}(\mathcal A)$ が増えれば、同時に条件等色できる自由度は減る。逆に、2つの照明の分光分布がほぼ比例し、追加された行が既存の行空間とほぼ重なるなら、照明を増やしても新しい情報はほとんど増えない。
+
+ただし、照明を数個増やしただけで分光反射率が一意に決まるわけではない。例えば31波長で反射率を表すとき、3照明から得られる三刺激値は最大9個なので
+
+$$
+\operatorname{rank}(\mathcal A)\le9,
+\qquad
+\dim\ker(\mathcal A)\ge31-9=22
+$$
+
+となる。理想的に各照明が独立な情報を与えても、まだ少なくとも22次元の曖昧さが残る。
+
+これは「RGBやXYZを何条件か測ればスペクトルそのものが分かる」とは限らないことを示す。未知の反射率 $\boldsymbol{\rho}$ を複数条件の測定値 $\mathbf y$ から推定する問題は
+
+$$
+\mathbf y=\mathcal A\boldsymbol{\rho}
+$$
+
+という逆問題であり、通常は劣決定である。そこで実際の分光推定では、反射率の物理制約
+
+$$
+0\le\rho_i\le1
+$$
+
+に加え、スペクトルが急激に振動しにくいという事前知識を使って、例えば
+
+$$
+\min_{0\le\boldsymbol{\rho}\le1}
+\left(
+\lVert\mathcal A\boldsymbol{\rho}-\mathbf y\rVert_2^2
++
+\lambda\lVert D\boldsymbol{\rho}\rVert_2^2
+\right)
+$$
+
+のような正則化付き最小二乗問題として解く。$D$ は波長方向の差分演算子で、第2項は不自然に細かいスペクトル振動を抑える。
+
+したがって複数照明による測色は、単に「いろいろな光で見比べる」操作ではない。線形代数的には、測色演算子の行空間を増やし、メタメリックブラックとして隠れていた方向を少しずつ観測可能にする操作と解釈できる。
+
 ## 13　昼光シミュレータの品質評価にもメタマー対が使われる
 
 ISO/CIE 23603:2024は、色の目視評価や測定に使う昼光シミュレータの分光品質を評価する規格である。
@@ -830,3 +916,4 @@ $$
 - CIE, *CIE standard illuminant D65* data set, DOI: 10.25039/CIE.DS.hjfjmt59. https://www.cie.co.at/datatable/cie-standard-illuminant-d65
 - J. B. Cohen and W. E. Kappauf, “Metameric Color Stimuli, Fundamental Metamers, and Wyszecki's Metameric Blacks,” *The American Journal of Psychology*, 95(4), 537–564 (1982). DOI: 10.2307/1422186.
 - G. H. Golub and C. F. Van Loan, *Matrix Computations*, 4th ed., Johns Hopkins University Press, 2013.
+- J. Y. Hardeberg, *Acquisition and Reproduction of Color Images: Colorimetric and Multispectral Approaches*, Dissertation.com, 2001.
