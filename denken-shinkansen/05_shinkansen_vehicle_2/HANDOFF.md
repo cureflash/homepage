@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_exam_alignment_complete`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_explanation_source_complete`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 37 完了記録
 
@@ -16,22 +16,7 @@ Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
 固定5問・25答案要素は一次5、二次20。既存教材接続は `25 / 25 PASS`、SPEC固定8項目 `8 / 8 PASS`、系列SPEC固定計算・グラフ `2 / 2 PASS`。
 
-clean blind v1は `24 / 25 FAIL` だったが、教材欠落ではなく独立再解答側の1要素ミスと診断済み。
-
-clean blind v2:
-- candidate: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_v2_candidate.md`
-- candidate lock commit: `6fe8f6262431c25870e7b44560f79bed8e7022f5`
-- QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_v2_qa.md`
-- 一次: `5 / 5 PASS`
-- 二次: `20 / 20 PASS`
-- 合計: `25 / 25 PASS`
-- v1唯一のR4一次「機械」問7(2)は、v2で `自己保持回路` をcandidate固定前に独立特定。
-- candidate固定後修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 既存成果物再生成: `0件`
-- exact blocker: `0件`
-
-よってTopic 37は `PASS / completed`。
+clean blind v2は `25 / 25 PASS`。candidate固定後修正 `0件`、固定EXAM_ALIGNMENT変更 `0件`、exact blocker `0件`。よってTopic 37は `PASS / completed`。
 
 ## Topic 38 制作前EXAM_ALIGNMENT 完了記録
 
@@ -44,7 +29,6 @@ clean blind v2:
 - 二次: `0問`。当該コア論点の直接対応を固定できず、件数合わせ採用 `0件`
 - SPEC固定9項目: `9 / 9 mapped`
 - 鉄道一次資料境界: `PASS`
-- exact blocker: `0件`
 
 固定問題:
 1. R8 一次「機械」問8 — マイクロコンピュータ、シーケンス制御、フィードバック、センサ、ステッピングモータ
@@ -53,28 +37,32 @@ clean blind v2:
 4. H26 一次「機械」問3 — UPS、バイパス、並列冗長、同期、n+1
 5. H23 一次「機械」問8 — 組合せ回路、順序回路、フリップフロップ、状態遷移、論理最小化
 
-固定9項目:
-- 列車追跡
-- 状態データ
-- 論理処理
-- 時刻情報
-- ブール代数
-- インターロック
-- 状態遷移
-- 冗長化
-- 可用性
-
 電験過去問はCOMTRACそのものの出題とは扱わない。情報処理・論理・状態・信頼性の試験要求を固定し、列車追跡・進路制御・インターロック等の鉄道固有部分はJR東海/JRTT/鉄道総研等の一次資料で接続する。
 
-## 次工程: Topic 38 解説source＋独立source QA
+## Topic 38 解説source 完了記録
 
-次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、Topic 38 EXAM_ALIGNMENT成果、他workerの新規成果をreconcileしてから開始する。
+- source: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_explanation_source.md`
+- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_explanation_source_qa.md`
+- source commit: `df6c2eac00d05178e71fae64295eaa9464864e25`
+- 固定5問・25答案要素接続: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 可用性例題: `MTBF=1000 h`, `MTTR=2 h` の単純二状態モデルを独立再計算し一致
+- 独立二並列モデルも独立再計算一致
+- 教材用Boolean式・状態遷移・可用性モデルを実COMTRAC実装として使用: `0件`
+- 未確認COMTRAC内部構成・追跡アルゴリズム・処理周期・冗長方式・MTBF/MTTR/可用性値の真値化: `0件`
+- Topic 39先取り: `0件`
+- exact blocker: `0件`
 
-- 固定5問・25答案要素の要求をすべて本文節へ接続する。
-- SPEC固定9項目を `9 / 9` 本文で説明する。
-- 組合せ論理/順序論理、状態遷移、イベント・割込み・FIFO、シーケンス制御、ソフトウェア試験、冗長化・可用性を電験二種の一般論として説明する。
-- COMTRACはJR東海一次資料で確認できる運行状況把握・進路制御・運行管理の範囲に限定して接続する。
-- 解説source完成後、独立source QAを通すまでPDF・練習・PowerPointを作らない。
+## 次工程: Topic 38 解説PDF＋PDF QA
+
+次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、Topic 38 EXAM_ALIGNMENT、解説source/source QA、他workerの新規成果をreconcileしてから開始する。
+
+- 解説sourceの内容を削らずPDF化する。
+- 固定25答案要素、SPEC固定9項目、3段階例題をPDF上で読めることを確認する。
+- 数式、上付き/否定表記、和文フォント、表・改ページ、URLの表示崩れをQAする。
+- 教材用モデルと実設備事実の区別を維持する。
+- PDF QA通過前に練習source/PDF、PowerPointを先行生成しない。
 
 ## 境界条件
 
