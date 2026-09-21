@@ -87,6 +87,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - v19 pre-attempt: 本worker/contextはcandidate固定前にTopic 39 answer-bearing情報を既読のためfreshness不成立。candidate未作成。worker-local exact blocker: `TOPIC39_CLEAN_BLIND_V19_CURRENT_CONTEXT_FRESHNESS_INVALID`。
 - v19 actual: candidate `e1c580c614b6e1da9db1b1e2c971b047988890f6` / freshness `PASS` / 一次 `19 / 20` / 二次 `3 / 5` / 合計 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission ×3`
 - v20: candidate `20ba1ceccff8966ceb2071c17d540776625b6569` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver omission + nomenclature error ×2`
+- v21 pre-attempt: 本worker/contextはcandidate固定前にTopic 39 answer-bearing情報を既読のためfreshness不成立。candidate未作成。worker-local exact blocker: `TOPIC39_CLEAN_BLIND_V21_CURRENT_CONTEXT_FRESHNESS_INVALID`。
 
 v20 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v20_qa.md`
 
