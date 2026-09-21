@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_clean_blind_v1_fail_textbook_gap`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_explanation_source_remediated`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 37 完了記録
 
@@ -19,45 +19,58 @@ Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 - clean blind v2: `25 / 25 PASS`
 - candidate固定後修正 `0件`、固定EXAM_ALIGNMENT変更 `0件`、exact blocker `0件`
 
-## Topic 38 進捗記録
+## Topic 38 clean blind v1診断
 
 固定5問はR8一次「機械」問8、R2一次「機械」問8、H29一次「機械」問8、H26一次「機械」問3、H23一次「機械」問8。一次 `5問 / 25答案要素`、二次 `0問`、件数合わせ `0件`。固定5問自体は変更しない。
 
-PowerPointまでの制作・表示QAは一度完了したが、clean blind v1で教材接続不足を検出したためTopic 38の完成判定は保留し、派生成果物はsource remediation後に再生成・再QAする。
+clean blind v1は公式標準解答 `25 / 25 PASS`、教材だけで導出 `23 / 25 FAIL`。
 
-### clean blind v1
+- R8問8(5): 角位置センサなしの簡易位置決め、過負荷・急加減速時の脱調不足
+- H23問8(3): ノイマン形コンピュータ不足
+- H29問8/H23問8: 固定答案要素mappingが実空欄と不一致
+- v1 candidate修正: `0件`
 
-- intake: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_intake.md`
-- candidate: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_candidate.md`
-- candidate commit: `e20fc83a3d1c9c4a17f647035d8fb666f20d02d0`
-- QA: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_qa.md`
-- remediation: `topics/38_comtrac_train_tracking_route_control_reliability/38_comtrac_train_tracking_route_control_reliability_clean_blind_v1_remediation.md`
-- 公式標準解答一致: `25 / 25 PASS`
-- 教材だけで導出: `23 / 25 FAIL`
-- candidate固定後修正: `0件`
+## 今runのremediation完了範囲
+
+### EXAM_ALIGNMENT＋QA
+
+`PASS / EXAM_ALIGNMENT_REMEDIATED`
+
+- source commit: `25eff5df4436b338d31dbbcd29ebb703018f0bd0`
+- QA commit: `0585a5803c75eb3e525bd8df3c90f60b043cb298`
+- H29実空欄: `(1)逐次的 (2)結合 (3)ドライバ (4)大きくなる (5)ブラックボックス`
+- H23実空欄: `(1)組合せ回路 (2)フリップフロップ (3)ノイマン形コンピュータ (4)ASIC (5)Quine–McCluskey法`
+- 固定5問変更: `0件`
+- 固定25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+
+### 解説source＋source QA
+
+`PASS / EXPLANATION_SOURCE_REMEDIATED`
+
+- source commit: `a7c57a477e4c33d2619de243204f5a0bd3bce6fe`
+- QA commit: `b718ffd4898442e5a898b8b036880465aa725e5e`
+- R8(5): 角位置センサなしのオープンループ簡易位置決めと脱調条件を明示
+- H23(3): ノイマン形コンピュータの記憶プログラム方式・原則逐次命令実行を明示
+- H29(4): 単体→結合→システム試験で対象プログラム量・範囲が大きくなることを明示
+- H29/H23接続表を実空欄単位へ修正
+- 固定25答案要素: `25 / 25 connected`
+- SPEC固定9項目: `9 / 9 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
 - exact blocker: `0件`
 
-FAIL要素:
+## 次工程: practice source remediation
 
-1. R8一次「機械」問8(5): 現解説sourceはステッピングモータを「入力パルスに対応して離散角だけ回転する位置決め用アクチュエータ」と説明するが、問題の識別根拠である角位置センサなしの簡易位置決めと、過負荷・急加速時の脱調を明記していない。
-2. H23一次「機械」問8(3): ノイマン形コンピュータの記憶プログラム・逐次命令実行が現解説source/練習sourceに欠落している。
+次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、remediated EXAM_ALIGNMENT・解説sourceをreconcileし、既存練習source/QAへ同じ3点と実空欄mappingを反映する。
 
-mapping不整合:
+その後、旧派生成果物を流用せず以下を再生成・再QAする。
 
-- H29問8の実空欄は `(1)逐次的 (2)結合 (3)ドライバ (4)大きくなる (5)ブラックボックス`。既存接続表はボトムアップ等の周辺語を答案要素として数えている。
-- H23問8の実空欄は `(1)組合せ回路 (2)フリップフロップ (3)ノイマン形コンピュータ (4)ASIC (5)Quine–McCluskey法`。既存接続表は(3)を状態遷移として誤接続している。
-
-H29(4)「大きくなる」は、現教材の「単体試験=個々のモジュール」「結合試験=複数モジュール」と問題文の試験進行から導出できるためclean blind判定自体はPASS。ただし明示とmapping修正を行う。
-
-## 次工程: Topic 38 source remediation
-
-次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFFをreconcileした後、`38_comtrac_train_tracking_route_control_reliability_clean_blind_v1_remediation.md`を正本として次を行う。
-
-1. EXAM_ALIGNMENTの答案要素記録を実空欄どおり修正する。
-2. 解説sourceへR8(5)のセンサレス位置決め・脱調、H23(3)のノイマン形コンピュータ、H29(4)の対象規模増加を明示する。
-3. 解説source QA、練習source/QAの接続表を空欄単位へ修正する。
-4. 解説PDF、練習PDF、PowerPointを再生成して表示・内容QAをやり直す。
-5. 全派生成果物の同期後にfresh clean blind v2をquestion-onlyから実施する。
+1. explanation PDF / PDF QA
+2. practice PDF / PDF QA
+3. PowerPoint / PowerPoint QA
+4. fresh clean blind v2
 
 v1 candidateは修正しない。v2は別candidateとして固定する。
 
