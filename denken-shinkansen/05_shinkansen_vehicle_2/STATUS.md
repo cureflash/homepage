@@ -84,6 +84,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - v17 pre-attempt: 別worker/contextでcandidate固定前にTopic 39 answer-bearing情報を既読のためfreshness不成立。candidate未作成。
 - v17 actual: candidate `d52dd566563912b8aa20114d2da4ec1b91adac04` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission ×2`
 - v18: candidate `86687a455b86d8a4c05c203299bcba5038cbe339` / freshness `PASS` / 一次 `19 / 20` / 二次 `3 / 5` / 合計 `22 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission ×3`
+- v19 pre-attempt: 本worker/contextはcandidate固定前にTopic 39 answer-bearing情報を既読のためfreshness不成立。candidate未作成。worker-local exact blocker: `TOPIC39_CLEAN_BLIND_V19_CURRENT_CONTEXT_FRESHNESS_INVALID`。
 
 v18 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v18_qa.md`
 
@@ -94,7 +95,7 @@ v18のanswer-bearingな不一致詳細はv18 QAにのみ保持し、mandatory re
 - 系列SPEC固定13項目変更: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - Topic 21一般式変更: `0件`
-- exact blocker: `0件`
+- exact blocker: `0件`（global。上記v19はworker-local）
 
 ### 次工程
 
