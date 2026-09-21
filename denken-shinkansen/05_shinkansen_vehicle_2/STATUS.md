@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `37 / 39`
-- current_status: `topic_38_explanation_pdf_remediated`
+- current_status: `topic_38_practice_pdf_remediated`
 - last_completed_topic: `37 ATC③ 速度制御系`
 - active_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
-- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、remediated EXAM_ALIGNMENT・解説source・練習source・再生成済み解説PDF/QAをreconcileし、練習PDFを再生成＋PDF QAする。その後、PowerPoint、fresh clean blind v2へ進む。remediation前の派生成果物は流用しない。
+- next_start: 最新main、上位2仕様書、系列`SPEC.md`、本`STATUS.md`、`HANDOFF.md`、remediated EXAM_ALIGNMENT・解説source・練習source・再生成済み解説PDF/QA・練習PDF/QAをreconcileし、Topic 38 PowerPointをremediated sourceへ再同期してrender/content QAする。その後fresh clean blind v2へ進む。remediation前PowerPointは流用しない。
 
 Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
@@ -29,7 +29,7 @@ Topic 01〜37は `PASS / completed`。完成数は `37 / 39`。
 
 ## Topic 38 COMTRAC 列車追跡・進路制御・高信頼化
 
-状態: `EXPLANATION_PDF_REMEDIATED / practice_pdf_regeneration_pending`
+状態: `PRACTICE_PDF_REMEDIATED / powerpoint_regeneration_pending`
 
 ### clean blind v1診断
 
@@ -94,13 +94,29 @@ EXAM_ALIGNMENT＋QA: `PASS / REMEDIATED`
 - Topic 39先取り: `0件`
 - exact blocker: `0件`
 
+練習PDF＋PDF QA: `PASS / REMEDIATED`
+
+- remediated practice sourceから再生成: `PASS`
+- A4縦: `4頁`
+- PDFium / Poppler render: `4 / 4 PASS`
+- visual inspection: `4 / 4 PASS`
+- 一次試験型: `12問 / 12問五肢択一`
+- clean blind v1 remediation必須3点: `3 / 3 PASS`
+- H29/H23実空欄mapping: `10 / 10 PASS`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 計算再検算: `3 / 3 PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
+- exact blocker: `0件`
+
 ### 既存派生成果物の扱い
 
-解説PDFはremediated sourceへ再同期済み。clean blind v1以前の練習PDF、PowerPointはremediation前の内容を含むためTopic 38完成判定には使用しない。以下を順に再同期する。
+解説PDF・練習PDFはremediated sourceへ再同期済み。clean blind v1以前のPowerPointはremediation前の内容を含むためTopic 38完成判定には使用しない。以下を順に再同期する。
 
-1. practice PDF / PDF QA
-2. PowerPoint / PowerPoint QA
-3. fresh clean blind v2
+1. PowerPoint / PowerPoint QA
+2. fresh clean blind v2
 
 固定9項目、COMTRAC実装境界、二次0問、Topic 39非先取りは維持する。
 

@@ -8,7 +8,7 @@
 
 Topic 01〜37は最終QAまで `PASS / completed`。完成数 `37 / 39`。
 
-現在地は `topic_38_explanation_pdf_remediated`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
+現在地は `topic_38_practice_pdf_remediated`。last completed topicは `37 ATC③ 速度制御系`、active topicは `38 COMTRAC 列車追跡・進路制御・高信頼化`。
 
 ## Topic 37 完了記録
 
@@ -67,6 +67,8 @@ clean blind v1は公式標準解答 `25 / 25 PASS`、教材だけで導出 `23 /
 
 - source remediation commit: `40f4234fad5e4087369e574978583928545e6b20`
 - source QA commit: `34a229e28e92425d7a25aa7953c3788f4b5159a9`
+- source blob: `8fd4c6b68d2e0f6a532b1bb6620b8f0ddc0ee8f8`
+- source QA blob: `f6aa766fb1b77469a11d1996bc8d82a323175f61`
 - 一次試験型: `12問 / 12問五肢択一`
 - 一次正答一意性: `12 / 12 PASS`
 - 二次試験型: `0題`、直接対応なし・件数合わせ `0件`
@@ -99,16 +101,35 @@ clean blind v1は公式標準解答 `25 / 25 PASS`、教材だけで導出 `23 /
 - Topic 39先取り: `0件`
 - exact blocker: `0件`
 
-## 次工程: practice PDF regeneration
+### 練習PDF＋PDF QA
 
-次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、remediated EXAM_ALIGNMENT・解説source・練習source、再生成済み解説PDF/QAをreconcileし、remediated練習sourceから練習PDFを再生成してPDF QAを行う。remediation前練習PDFは流用しない。
+`PASS / PRACTICE_PDF_REMEDIATED`
 
-その後、以下を順に進める。
+- main base: `9de1fa48ff22bb3fcd74fdc783024e5d6ed4218f`
+- practice source blob: `8fd4c6b68d2e0f6a532b1bb6620b8f0ddc0ee8f8`
+- practice source QA blob: `f6aa766fb1b77469a11d1996bc8d82a323175f61`
+- remediation前PDFを流用せず再生成
+- PDF Git blob: `de360021d9245e8637a7f0dabe1ed74065e03f23`
+- PDF SHA-256: `3f378ed05b795a1b6590270c5e9d0900fde8a8ac8dc5297d1af2c246a449a724`
+- A4縦 `4頁`
+- PDFium / Poppler / visual: `4 / 4 PASS`
+- 一次試験型: `12問 / 12問五肢択一`
+- clean blind v1 remediation必須3点: `3 / 3 PASS`
+- H29/H23実空欄mapping: `10 / 10 PASS`
+- 固定5問・25答案要素: `25 / 25 PASS`
+- SPEC固定9項目: `9 / 9 PASS`
+- 計算再検算: `3 / 3 PASS`
+- 二次問題の件数合わせ採用: `0件`
+- 未確認COMTRAC実装・数値の真値化: `0件`
+- Topic 39先取り: `0件`
+- Topic 21一般式変更: `0件`
+- exact blocker: `0件`
 
-1. PowerPoint / PowerPoint QA
-2. fresh clean blind v2
+## 次工程: PowerPoint regeneration
 
-v1 candidateは修正しない。v2は別candidateとして固定する。
+次runは最新main、上位2仕様書、系列SPEC、本STATUS/HANDOFF、remediated EXAM_ALIGNMENT・解説source・練習source、再生成済み解説PDF/QA・練習PDF/QAをreconcileし、Topic 38 PowerPointをremediated sourceへ再同期してrender/content QAを行う。remediation前PowerPointは流用しない。
+
+その後fresh clean blind v2へ進む。v1 candidateは修正しない。v2は別candidateとして固定する。
 
 ## 境界条件
 
