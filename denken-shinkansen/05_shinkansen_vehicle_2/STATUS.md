@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v6_pending / current_worker_freshness_invalid`
+- current_status: `topic_39_clean_blind_v6_blocked / current_worker_freshness_invalid`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh workerによるTopic 39 clean blind v6。同じ固定5問・25答案要素をquestion-onlyから再解答しcandidateを先にcommitする。R2二次は固定5答案要素の区切りをそのまま維持する。v1〜v5 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材はcandidate固定後にのみ参照する。
+- next_start: このworker/contextではv6を実施しない。別fresh workerでTopic 39 clean blind v6を開始し、同じ固定5問・25答案要素をquestion-onlyから再解答してcandidateを先にcommitする。R2二次は固定5答案要素の区切りをそのまま維持する。v1〜v5 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材はcandidate固定後にのみ参照する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V6_PENDING`
+判定: `IN_PROGRESS / CLEAN_BLIND_V6_BLOCKED_CURRENT_WORKER_FRESHNESS_INVALID`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -127,7 +127,9 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 - v5 candidateはquestion-only intakeと公式「問題」PDFのみでcandidateを先に固定したため、v5 candidateのfreshnessは `PASS`。
 - candidate固定後に公式解答・既存教材・v4 QAを照合したため、本workerはv6 workerとしてはfreshness invalid。
-- 次の別fresh workerはsanitized `STATUS.md` / `HANDOFF.md` とquestion-only intakeからv6を開始する。
+- 本automation contextにはcandidate固定前からTopic 39のanswer-bearing情報が残っており、同一contextの再実行ではfreshnessを回復できない。
+- exact blocker: `TOPIC39_CLEAN_BLIND_V6_CURRENT_WORKER_FRESHNESS_INVALID`
+- blocker detail: `EXAM_ALIGNMENT_SPEC.md` §10のclean blind条件を満たすv6 candidateを、このworker/contextから正当に生成できない。別fresh worker/contextが必要。
 
 ### 次工程
 
