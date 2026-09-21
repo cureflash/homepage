@@ -577,7 +577,83 @@ L*a*b*は3次元なので、数百点の波長ごとに定義される分光反�
 
 これは今後扱う分光測色・メタメリズムの記事につながる。
 
-## 14　色彩検定で混同しやすい点
+## 14　L*a*b*はXYZ空間に「場所によって変わる物差し」を入れる
+
+CIELABの数学的意味を、微小な色差についてさらに一段深く見る。
+
+XYZからL*a*b*への変換を
+
+$$
+\mathbf{l}=F(\mathbf{X}),\qquad
+\mathbf{X}=\begin{bmatrix}X\\Y\\Z\end{bmatrix},\quad
+\mathbf{l}=\begin{bmatrix}L^*\\a^*\\b^*\end{bmatrix}
+$$
+
+と書く。XYZが微小量 $d\mathbf{X}$ だけ変化したとき、一次近似では
+
+$$
+d\mathbf{l}=J\,d\mathbf{X}
+$$
+
+となる。ここで $J$ はヤコビ行列
+
+$$
+J=\frac{\partial(L^*,a^*,b^*)}{\partial(X,Y,Z)}
+$$
+
+である。
+
+$f_X'=f'(X/X_n)$、$f_Y'=f'(Y/Y_n)$、$f_Z'=f'(Z/Z_n)$ と置けば、
+
+$$
+J=
+\begin{bmatrix}
+0 & \dfrac{116f_Y'}{Y_n} & 0\\[8pt]
+\dfrac{500f_X'}{X_n} & -\dfrac{500f_Y'}{Y_n} & 0\\[8pt]
+0 & \dfrac{200f_Y'}{Y_n} & -\dfrac{200f_Z'}{Z_n}
+\end{bmatrix}.
+$$
+
+立方根領域では
+
+$$
+f'(t)=\frac{1}{3t^{2/3}}
+$$
+
+なので、$J$ の各要素は色の位置によって変わる。つまり、同じ $dX,dY,dZ$ でも、暗い色と明るい色、無彩色付近と高彩度色付近ではL*a*b*上の移動量が同じにならない。
+
+L*a*b*上の微小色差は
+
+$$
+dE_{ab}^{*2}=d\mathbf{l}^{\mathsf T}d\mathbf{l}
+$$
+
+だから、XYZで書き直すと
+
+$$
+dE_{ab}^{*2}
+=d\mathbf{X}^{\mathsf T}J^{\mathsf T}Jd\mathbf{X}.
+$$
+
+ここで
+
+$$
+G(\mathbf{X})=J^{\mathsf T}J
+$$
+
+と置けば、$G$ はXYZ空間上で「どの方向の変化をどれだけ大きな色差として数えるか」を決める局所的な計量になる。$G$ が位置によって変化することが、CIELABを「XYZを非線形に曲げた空間」とみなせる数学的理由である。
+
+この式は測定誤差にもそのまま使える。分光測色から得たXYZの誤差共分散行列を $\Sigma_{XYZ}$ とすれば、一次の誤差伝播では
+
+$$
+\Sigma_{Lab}\approx J\Sigma_{XYZ}J^{\mathsf T}
+$$
+
+となる。
+
+したがって「XYZを何桁まで正確に測れたか」だけではL*a*b*や色差の不確かさは決まらない。測定した色の位置と基準白を通じてヤコビ行列が変わるため、同じXYZ誤差でもL*a*b*上の誤差は場所によって異なる。
+
+## 15　色彩検定で混同しやすい点
 
 ### XYZとL*a*b*は目的が違う
 
@@ -595,7 +671,7 @@ RGB値から直接L*a*b*が決まるわけではない。RGB色空間の原色�
 
 $\Delta E_{ab}^*$ は知覚差に近づけるための指標だが、完全な均等性はない。用途によってCIEDE2000などが使われる。
 
-## 15　まとめ
+## 16　まとめ
 
 CIELABの本質は、XYZへ単に別名を付けたことではない。
 
@@ -641,6 +717,14 @@ $$
 
 ただしCIELABは完全に均等ではない。そのため実務では、必要に応じてCIEDE2000のような改良色差式が使われる。
 
+さらに微小変化では、XYZ→L*a*b*変換のヤコビ行列 $J$ により
+
+$$
+dE_{ab}^{*2}=d\mathbf{X}^{\mathsf T}J^{\mathsf T}Jd\mathbf{X}
+$$
+
+と書ける。L*a*b*がXYZに対して場所ごとに異なる「物差し」を与えることが、均等色空間の数学的意味である。
+
 色彩検定では「L*は明度、a*は赤―緑、b*は黄―青」と覚えるだけでなく、
 
 $$
@@ -664,5 +748,7 @@ $$
   https://www.cie.co.at/publications/colorimetry-part-4-cie-1976-lab-colour-space-1
 - ISO/CIE 11664-6:2022(E), “Colorimetry — Part 6: CIEDE2000 Colour-Difference Formula”  
   https://www.cie.co.at/publications/colorimetry-part-6-ciede2000-colour-difference-formula-1
+- Sharma, G., Wu, W., Dalal, E. N. (2005), “The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations”, Color Research & Application 30(1), 21–30.  
+  https://doi.org/10.1002/col.20070
 - CIE 015:2018, “Colorimetry, 4th Edition”  
   https://www.cie.co.at/publications/colorimetry-4th-edition
