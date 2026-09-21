@@ -251,6 +251,88 @@ $$
 
 PCCSが配色教育に強い理由は、測色精度を最大化したからではなく、人が配色操作を行いやすい粒度まで情報を整理したからである。
 
+### 発展：トーン境界では小さな測定誤差がカテゴリー差へ変わる
+
+トーンを領域分割として見ると、連続量をカテゴリーへ変換する際の重要な性質が見える。ここではPCCS公式の境界式を与えるのではなく、一般的な分類問題として数学化する。
+
+明度・彩度ベクトルを
+
+$$
+\mathbf{x}=
+\begin{pmatrix}
+V\\
+s
+\end{pmatrix}
+$$
+
+とし、二つのトーン領域 $T_a,T_b$ の境界を局所的に
+
+$$
+g(\mathbf{x})=0
+$$
+
+で表す。$g(\mathbf{x})>0$ 側を $T_a$、$g(\mathbf{x})<0$ 側を $T_b$ と考える。
+
+測色値から $V,s$ を推定するとき、測定・変換には微小な誤差 $\delta\mathbf{x}$ が入る。境界関数を一次近似すると
+
+$$
+g(\mathbf{x}+\delta\mathbf{x})
+\approx
+g(\mathbf{x})+
+\nabla g(\mathbf{x})^{\mathsf T}\delta\mathbf{x}
+$$
+
+となる。
+
+$\delta\mathbf{x}$ の共分散行列を $\Sigma_x$ とすれば、誤差伝播の一次近似から境界に垂直な方向の分散は
+
+$$
+\sigma_g^2
+\approx
+\nabla g(\mathbf{x})^{\mathsf T}
+\Sigma_x
+\nabla g(\mathbf{x})
+$$
+
+で与えられる。
+
+そこで
+
+$$
+m=
+\frac{|g(\mathbf{x})|}{\sigma_g}
+$$
+
+を「境界からの正規化距離」とみなせる。誤差を近似的に正規分布とみなす単純なモデルでは、最も近い境界を越える確率は概略
+
+$$
+P_{\mathrm{cross}}
+\approx
+\Phi(-m)
+$$
+
+となる。$\Phi$ は標準正規分布の累積分布関数である。
+
+つまり、トーン領域の内部深くにある色は多少の測定誤差があっても分類が安定しやすい。一方、境界近傍の色では非常に小さな測色差や変換誤差でもトーン記号が変わりうる。
+
+これはカテゴリー化された写像 $Q$ が境界で不連続だからである。任意に小さい $\varepsilon>0$ に対して、境界の両側から
+
+$$
+\|\mathbf{x}_1-\mathbf{x}_2\|<\varepsilon
+$$
+
+を満たす二点を選んでも
+
+$$
+Q(\mathbf{x}_1)\neq Q(\mathbf{x}_2)
+$$
+
+となりうる。逆に、同じトーン領域の中ではある程度離れた二色でも同じ記号へ圧縮される。
+
+したがってPCCSのトーン記号は、工業測色の許容差や連続的な色差の代用品ではない。PCCSは配色を操作しやすくするために情報を意図的に圧縮した体系であり、境界近傍の精密な品質管理にはCIELABや色差式など連続的な測色量を併用する必要がある。
+
+情報理論的には、この操作はベクトル量子化と同じ「連続空間を有限個のセルへ写す」構造を持つ。ただしPCCSのトーン領域が最小二乗誤差など特定の量子化損失を最小化するよう設計された、という意味ではない。ここでの対応は数学的構造を理解するための比喩である。
+
 ## 6　なぜ同じトーンは「似た印象」になりやすいのか
 
 色の印象には色相だけでなく、明度と彩度が強く関与する。
@@ -472,3 +554,7 @@ $$
   https://www.jcri.jp/product/pccs_color_calc
 - Mardia, K. V. & Jupp, P. E., *Directional Statistics*, Wiley, 1999. DOI: 10.1002/9780470316979  
   https://onlinelibrary.wiley.com/doi/book/10.1002/9780470316979
+- Gray, R. M. & Neuhoff, D. L., “Quantization,” *IEEE Transactions on Information Theory*, 44(6), 2325–2383, 1998. DOI: 10.1109/18.720541.  
+  https://doi.org/10.1109/18.720541
+- JCGM 100:2008, *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*. DOI: 10.59161/JCGM100-2008E.  
+  https://www.bipm.org/en/doi/10.59161/jcgm100-2008e
