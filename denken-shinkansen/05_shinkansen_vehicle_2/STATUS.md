@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v2_pending / current_worker_freshness_invalid`
+- current_status: `topic_39_clean_blind_v3_pending / current_worker_freshness_invalid`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh workerによるTopic 39 clean blind v2。同じ固定5問・25答案要素をquestion-onlyから再解答しcandidateを先にcommitする。v1 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材はcandidate固定後にのみ参照する。
+- next_start: 別fresh workerによるTopic 39 clean blind v3。同じ固定5問・25答案要素をquestion-onlyから再解答しcandidateを先にcommitする。v1/v2 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材はcandidate固定後にのみ参照する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -21,12 +21,11 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 固定5問・25答案要素: `25 / 25 PASS`
 - SPEC固定9項目: `9 / 9 PASS`
 - clean blind v9: 公式標準解答一致 `25 / 25 PASS`、教材だけで導出可能 `25 / 25 PASS`
-- 未確認COMTRAC実装・数値の真値化: `0件`
 - exact blocker: `0件`
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V2_PENDING`
+判定: `IN_PROGRESS / CLEAN_BLIND_V3_PENDING`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -56,50 +55,41 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 練習source＋source QA: `PASS / PRACTICE_SOURCE_COMPLETE`
 - 練習PDF＋PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
 - PowerPoint＋render/content QA: `PASS / POWERPOINT_COMPLETE`
-
-### PowerPoint＋render/content QA
-
-- PowerPoint: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_powerpoint.pptx`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_powerpoint_qa.md`
-- slide count: `10`
-- 固定25答案要素: `25 / 25 PASS`
-- 一次: `20 / 20 PASS`
-- 二次: `5 / 5 PASS`
+- 固定25答案要素の教材接続: `25 / 25 PASS`
 - 系列SPEC固定13項目: `13 / 13 PASS`
 - 系列SPEC計算・グラフ: `3 / 3 PASS`
-- Poppler 160 dpi render: `10 / 10 PASS`
-- PDFium 160 dpi render: `10 / 10 PASS`
-- clipped text / overlap / broken glyph: `0件`
-- replacement character U+FFFD / `(cid:)`: `0件 / 0件`
 - 一般SCADAモデルをCOSMOS実装と断定: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
-- 固定5問変更: `0件`
-- Topic 38固定問題重複採用: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
 
 ### clean blind v1
 
-- question-only intake: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md`
-- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_candidate.md`
 - candidate commit: `cb034e4e121512844cf0333c6df49de84d7555e8`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v1_qa.md`
 - 公式標準解答一致: `24 / 25 FAIL`
 - 教材だけで導出可能: `25 / 25 PASS`
 - 診断: `solver error`。教材欠落ではない。
-- answer-bearingな不一致詳細はmandatory recordから除去し、v2 candidate固定後にのみv1 QAを参照する。
+- 教材・PDF・練習・PowerPoint修正: `0件`
+
+### clean blind v2
+
+- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v2_candidate.md`
+- candidate commit: `0d2b169dff258124d088581b7690bfcdc063fc4f`
+- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v2_qa.md`
+- 公式標準解答一致: `21 / 25 FAIL`
+- 教材だけで導出可能: `25 / 25 PASS`
+- 診断: `solver error`。教材欠落ではない。
+- answer-bearingな不一致詳細はv2 QAにのみ保持し、mandatory recordには載せない。
 - 教材・PDF・練習・PowerPoint修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-### 今回runのfreshness処理
+### 今回runのfreshness状態
 
-- exact blocker: `TOPIC39_CLEAN_BLIND_V2_THIS_WORKER_CONTAMINATED_BY_MANDATORY_RECORDS`
-- 原因: sanitize前のmandatory `STATUS.md` / `HANDOFF.md` にv1のanswer-bearing不一致詳細が含まれており、本workerは必須reconcileで参照済み。
-- 処置: 本workerではv2 candidateを生成しない。mandatory recordからanswer-bearing詳細を除去し、次の別fresh workerがquestion-onlyから開始できる状態にした。
+- v2 candidateはquestion-onlyから固定後に公式解答・既存教材と照合したため、v2自身のfreshnessは `PASS`。
+- 本workerはcandidate固定後にanswer-bearing資料を参照済みのため、v3 workerとしてはfreshness invalid。
+- 次の別fresh workerはsanitized `STATUS.md` / `HANDOFF.md` とquestion-only intakeからv3を開始する。
 
 ### 次工程
 
-別fresh workerによるclean blind v2のみ。candidate固定前にv1 candidate/QA、公式解答、保存済み正答、Topic 39 answer-bearing教材を参照しない。v2で `公式標準解答一致 25 / 25` と `教材だけで導出可能 25 / 25` の両方を満たした場合のみTopic 39を `completed`、系列を `39 / 39 completed` とする。
+別fresh workerによるclean blind v3のみ。candidate固定前にv1/v2 candidate/QA、公式解答、保存済み正答、Topic 39 answer-bearing教材を参照しない。v3で `公式標準解答一致 25 / 25` と `教材だけで導出可能 25 / 25` の両方を満たした場合のみTopic 39を `completed`、系列を `39 / 39 completed` とする。
 
 ## Topic 21 固定注記
 
