@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v29_pending / IN_PROGRESS`
+- current_status: `topic_39_clean_blind_v30_pending / IN_PROGRESS`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh worker/contextでclean blind v29を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
+- next_start: 別fresh worker/contextでclean blind v30を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V29_PENDING`
+判定: `IN_PROGRESS / CLEAN_BLIND_V30_PENDING`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -96,10 +96,11 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - v26: candidate `0b425690643de052d14f087b54953643f06b22ca` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver omission + nomenclature error ×2`
 - v27: candidate `8321d05fe6fa53aad3ae03225b7b2df4bbaf519b` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver omission + nomenclature error ×2`
 - v28: candidate `57d0062708c4b44e6fac68d856eb389374f13016` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver omission + nomenclature error ×2`
+- v29: candidate `6c9b7f89c2c40a6d6cdfdab8a77efb0a7ae1acd8` / freshness `PASS` / 一次 `18 / 20` / 二次 `3 / 5` / 合計 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error + omission + nomenclature error ×4`
 
-v28 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v28_qa.md`
+v29 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v29_qa.md`
 
-v28のanswer-bearingな不一致詳細はv28 QAにのみ保持し、mandatory recordには集計と診断だけを残す。
+v29のanswer-bearingな不一致詳細はv29 QAにのみ保持し、mandatory recordには集計と診断だけを残す。
 
 - 教材・PDF・練習・PowerPoint修正: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -110,7 +111,7 @@ v28のanswer-bearingな不一致詳細はv28 QAにのみ保持し、mandatory re
 
 ### 次工程
 
-別fresh worker/contextによるclean blind v29。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
+別fresh worker/contextによるclean blind v30。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
 
 ## Topic 21 固定注記
 
