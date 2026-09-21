@@ -39,6 +39,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo mkdir -p /mnt/data
+          sudo chown "$USER":"$USER" /mnt/data
           node scripts/topic39_powerpoint_factory.js
           target='denken-shinkansen/05_shinkansen_vehicle_2/topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_powerpoint.pptx'
           tmpdir=$(mktemp -d)
