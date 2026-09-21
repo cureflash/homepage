@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_clean_blind_v7_ready / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_clean_blind_v8_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 39 固定ゲート
 
@@ -100,28 +100,33 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 - 系列SPEC固定13項目変更: `0件`
 - Topic 21一般式変更: `0件`
 
-## clean blind v7 readiness
+### v7
 
-- intake: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md`
-- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_readiness_qa.md`
-- R2固定5群境界: `5 / 5 question-onlyで明示 / PASS`
-- 公式問題文との境界対応: `PASS`
-- 正答記号・公式標準解答本文・保存済み正答値のintake転記: `0件 / PASS`
-- 固定5問・25答案要素変更: `0件 / PASS`
-- 教材成果物変更: `0件 / PASS`
-- 固定EXAM_ALIGNMENT変更: `0件 / PASS`
-- 系列SPEC変更: `0件 / PASS`
-- exact blocker: `0件 / PASS`
+- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_candidate.md`
+- candidate commit: `05a182424a027d47e2fc452aa8ca6a92d34a5dd8`
+- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v7_qa.md`
+- candidate freshness: `PASS`
+- 公式標準解答一致: `24 / 25 FAIL`
+- 一次: `20 / 20 PASS`
+- 二次: `4 / 5 PASS`
+- 教材だけで導出可能: `25 / 25 PASS`
+- R2固定5答案要素区切り維持: `PASS`
+- 診断: `solver error`。教材欠落ではない。
+- 教材修正・再生成: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 系列SPEC固定13項目変更: `0件`
+- 未確認COSMOS内部実装・数値の真値化: `0件`
+- exact blocker: `0件`
 
 ## 次工程
 
-`TOPIC39_CLEAN_BLIND_V7`。別fresh worker/contextのみで実施する。
+`TOPIC39_CLEAN_BLIND_V8`。別fresh worker/contextのみで実施する。
 
-1. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、更新済みquestion-only intakeをreconcileする。
-2. candidate固定前はv1〜v6 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
+1. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、question-only intakeをreconcileする。
+2. candidate固定前はv1〜v7 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
 3. question-only intakeと公式「問題」PDFだけで固定25答案要素を解く。R2二次はintake記載の5群境界を維持し、分割し直さない。
 4. candidateをcommitして固定した後にのみ、公式標準解答・既存教材と照合する。
-5. 25 / 25公式一致、25 / 25教材導出可能、固定5群境界維持を満たした場合だけ最終QAへ進める。
+5. `25 / 25`公式一致、`25 / 25`教材導出可能、固定5群境界維持を満たした場合だけ最終QAへ進める。
 
 ## 境界条件
 
