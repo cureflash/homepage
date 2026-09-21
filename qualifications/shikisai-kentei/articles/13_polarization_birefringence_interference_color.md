@@ -307,7 +307,129 @@ $$
 
 この導出から、偏光色は「複屈折体が色を直接発している」のではなく、2偏光成分の相対位相を変え、その後の偏光板が位相差を強度差へ変換していることが明確になる。
 
-また、$\delta=\pi/2$なら1/4波長板、$\delta=\pi$なら1/2波長板に相当する。Jones calculusは完全偏光した単色光に対する記述なので、白色光では各波長ごとに$J(\lambda)$を計算し、最終的な分光強度を足し合わせて扱う。
+また、$\delta=\pi/2$なら1/4波長板、$\delta=\pi$なら1/2波長板に相当する。Jones calculusは完全偏光した光の複素振幅を扱う記述なので、偏光板を通過した後の完全偏光成分には非常に便利である。一方、自然光のような非偏光光や部分偏光光まで一貫して扱うには、次節のStokes–Mueller形式が必要になる。
+
+### 8.1　Jones行列の限界――自然光はStokesベクトルで扱う
+
+太陽光、白熱放射、LEDなどの実在光源は、一般には「$x$成分と$y$成分の位相差が時間的に固定された1本のJonesベクトル」では表せない。偏光状態が高速に揺らぐ非偏光光や、偏光成分と非偏光成分が混在した部分偏光光では、電場そのものではなく時間平均された相関量を使う。
+
+その代表がStokesベクトル
+
+$$
+\boxed{
+\mathbf{S}=
+\begin{pmatrix}
+S_0\\S_1\\S_2\\S_3
+\end{pmatrix}
+}
+$$
+
+である。複素電場を$E_x,E_y$とし、十分長い時間平均を$\langle\cdot\rangle$で表すと、1つの代表的な符号規約では
+
+$$
+S_0=\left\langle |E_x|^2+|E_y|^2\right\rangle,
+$$
+
+$$
+S_1=\left\langle |E_x|^2-|E_y|^2\right\rangle,
+$$
+
+$$
+S_2=2\operatorname{Re}\left\langle E_xE_y^*\right\rangle,
+$$
+
+$$
+S_3=-2\operatorname{Im}\left\langle E_xE_y^*\right\rangle
+$$
+
+と書ける。$S_0$は全強度、$S_1,S_2$は直線偏光、$S_3$は円偏光に対応する。なお$S_3$の符号は右・左円偏光の定義によって文献間で逆になることがある。
+
+偏光度は
+
+$$
+\boxed{
+P=\frac{\sqrt{S_1^2+S_2^2+S_3^2}}{S_0}
+},\qquad 0\le P\le1
+$$
+
+で定義できる。$P=1$なら完全偏光、$P=0$なら理想的な非偏光光である。
+
+Jones行列に対応して、Stokesベクトルを変換する4×4実行列をMueller行列$M$と呼ぶ。波長依存性まで書けば
+
+$$
+\boxed{
+\mathbf{S}_{\mathrm{out}}(\lambda)
+=M(\lambda)\mathbf{S}_{\mathrm{in}}(\lambda)
+}
+$$
+
+となる。理想的な非偏光入射光なら
+
+$$
+\mathbf{S}_{\mathrm{in}}(\lambda)=
+\begin{pmatrix}
+I(\lambda)\\0\\0\\0
+\end{pmatrix}
+$$
+
+である。透過軸が$\theta$の理想直線偏光板を通ると、$c=\cos2\theta$、$s=\sin2\theta$として
+
+$$
+M_P(\theta)=\frac12
+\begin{pmatrix}
+1&c&s&0\\
+c&c^2&cs&0\\
+s&cs&s^2&0\\
+0&0&0&0
+\end{pmatrix}
+$$
+
+だから
+
+$$
+\mathbf{S}_{\mathrm{out}}
+=\frac{I}{2}
+\begin{pmatrix}
+1\\c\\s\\0
+\end{pmatrix}
+$$
+
+となる。つまり「非偏光光の半分が捨てられ、残りが直線偏光になる」という第3節の結果を、偏光状態まで含めて表現できる。
+
+この後に複屈折体のMueller行列、さらに2枚目の偏光板のMueller行列を順に掛ければ、非偏光の白色光から出発して偏光色が生まれる過程を統計光学として一貫して追跡できる。
+
+### 8.2　白色光では異なる波長の電場を直接足さない
+
+白色光を扱うときには、もう1つ重要な点がある。異なる波長成分は一般に固定された相対位相を持たないため、可視域全体の電場を1本のJonesベクトルとして足し合わせて色を計算するのではない。
+
+まず各波長ごとに
+
+$$
+\mathbf{S}_{\mathrm{out}}(\lambda)
+=M(\lambda)\mathbf{S}_{\mathrm{in}}(\lambda)
+$$
+
+を計算し、検出される分光強度
+
+$$
+\boxed{I_{\mathrm{out}}(\lambda)=S_{0,\mathrm{out}}(\lambda)}
+$$
+
+を求める。眼や通常の測色器は光の電場振動そのものを追跡できず、非常に速い光学振動を時間平均した強度を受け取るためである。
+
+したがって偏光色の計算は
+
+$$
+\boxed{
+\text{偏光状態の変換}
+\rightarrow
+I_{\mathrm{out}}(\lambda)
+\rightarrow
+XYZ
+}
+$$
+
+という2段階になる。偏光光学と測色学の接点は、電場そのものではなく、最終的に得られた波長別の強度分布である。
 
 ## 9　白色光では波長ごとの透過率が違う
 
@@ -433,7 +555,7 @@ $$
 I(\lambda)\propto\sin^2(2\phi)\sin^2\left(\frac{\pi\Delta n(\lambda)d}{\lambda}\right)
 $$
 
-という波長依存の透過強度へ変換される。Jones行列で見ると、複屈折体が作る相対位相差を最後の偏光板が強度差へ変換していることが数式として明確になる。白色光では波長ごとに透過量が変わるため、無色透明な材料にも色が現れる。
+という波長依存の透過強度へ変換される。Jones行列で見ると、複屈折体が作る相対位相差を最後の偏光板が強度差へ変換していることが数式として明確になる。さらに非偏光・部分偏光まで含める場合は、StokesベクトルとMueller行列で各波長の偏光状態を変換し、最終的な$S_0(\lambda)$を測色計算へ渡せばよい。
 
 透明プラスチックの虹色、偏光顕微鏡、応力解析、LCDは、すべて「偏光状態を操作して光の強度やスペクトルを変える」という同じ電磁波の性質につながっている。
 
@@ -441,13 +563,16 @@ $$
 
 - 色彩検定協会「色彩検定とは」 https://www.aft.or.jp/pages/feature/level
 - OpenStax, *University Physics Volume 3*, 1.7 Polarization. https://openstax.org/books/university-physics-volume-3/pages/1-7-polarization
+- MIT OpenCourseWare, “Lecture 17: Polarization, Polarizer,” *Physics III: Vibrations and Waves*. https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/pages/part-iii-optics/lecture-17/
 - Physics LibreTexts, “Maxwell Equations in Matter.” https://phys.libretexts.org/Bookshelves/Optics/BSc_Optics_%28Konijnenberg_Adam_and_Urbach%29/01%3A_Basic_Electromagnetic_and_Wave_Optics/1.04%3A_Maxwell_Equations_in_Matter
 - Physics LibreTexts, “Creating and Manipulating Polarisation States.” https://phys.libretexts.org/Bookshelves/Optics/BSc_Optics_%28Konijnenberg_Adam_and_Urbach%29/04%3A_Polarization/4.03%3A_Creating_and_Manipulating_Polarisation_States
 - RP Photonics Encyclopedia, “Birefringence.” https://www.rp-photonics.com/birefringence.html
 - RP Photonics Encyclopedia, “Retardance.” https://www.rp-photonics.com/retardance.html
 - RP Photonics Encyclopedia, “Waveplates.” https://www.rp-photonics.com/waveplates.html
+- RP Photonics Encyclopedia, “Unpolarized Light.” https://www.rp-photonics.com/unpolarized_light.html
 - Nikon MicroscopyU, “Principles of Birefringence.” https://www.microscopyu.com/techniques/polarized-light/principles-of-birefringence
 - Shribak, M. (2015), “Polychromatic polarization microscope: bringing colors to a colorless world,” *Scientific Reports* 5, 17340. https://doi.org/10.1038/srep17340
+- Russell A. Chipman, Wai-Sze Tiffany Lam, Garam Young, *Polarized Light and Optical Systems*, CRC Press, 2018. https://www.routledge.com/Polarized-Light-and-Optical-Systems/Chipman-Lam-Young/p/book/9781498700566
 - CIE, *Colorimetry, 4th Edition*, CIE 015:2018. https://cie.co.at/publications/colorimetry-4th-edition
 - Eugene Hecht, *Optics*, Pearson.
 - Max Born and Emil Wolf, *Principles of Optics*, Cambridge University Press.
