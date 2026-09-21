@@ -8,547 +8,60 @@
 
 Topic 01〜36は最終QAまで `PASS / completed`。完成数 `36 / 39`。
 
-現在地は `topic_37_clean_blind_v1_fail`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋render QAまで完了。clean blind v1は固定5問・25答案要素で一次 `4 / 5`、二次 `20 / 20`、合計 `24 / 25 FAIL`。FAILはR4一次「機械」問7(2)のみで、candidateが `リレーシーケンス回路（リレー回路）`、公式・canonicalは `自己保持回路`。既存解説sourceに必要語句は収録済みのため教材欠落ではなく独立再解答側の特定ミス。既存成果物変更0件、Topic 21一般式変更0件、exact blocker `0件`。次工程はanswer-bearing資料を先に開かないfresh workerによる `clean_blind_v2_candidate` 固定→独立再解答QA。candidate固定前にv1 candidate/QA、公式標準解答、固定EXAM_ALIGNMENT正答、解説・練習のanswer-bearing資料を開かない。
+現在地は `topic_37_clean_blind_v2_ready`。last completed topicは `36 ATC② 信号伝送と周波数`、active topicは `37 ATC③ 速度制御系`。
 
-## Topic 34 完了記録
+Topic 37は制作前EXAM_ALIGNMENT＋QA、解説source＋source QA、解説PDF＋PDF QA、練習source＋source QA、練習PDF＋PDF QA、解説画像PowerPoint＋render/content QAまで完了。固定5問・25答案要素は一次5、二次20で、既存教材との接続は `25 / 25 PASS`。SPEC固定8項目 `8 / 8 PASS`、系列SPEC固定計算・グラフ `2 / 2 PASS`。
 
-判定: `PASS / COMPLETED`
+clean blind v1は `24 / 25 FAIL`。FAILは1答案要素のみで、教材欠落ではなく独立再解答側の特定ミスと診断済み。具体的な誤答・canonical正答はanswer-bearingな `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_qa.md` に隔離し、本HANDOFFには記載しない。
 
-### 制作前EXAM_ALIGNMENT
+## 次工程
 
-canonical:
-- source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics.md`
-- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_exam_alignment_qa.md`
+fresh workerで `clean_blind_v2_candidate` を先に固定し、その後に公式標準解答・既存教材との照合QAを行う。
 
-固定過去問:
-- R7一次「機械」問2
-- R6一次「機械」問2
-- H25一次「機械」問3
-- R7二次「機械・制御」問2
-- R4二次「機械・制御」問3
+candidate固定前に開いてよいもの:
+- `../MASTER_SPEC.md`
+- `../EXAM_ALIGNMENT_SPEC.md`
+- `SPEC.md`
+- `STATUS.md`
+- 本`HANDOFF.md`
+- `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_intake.md`
+- 上記intakeが指す公式「問題」PDF
 
-品質ゲート:
-- 固定公式過去問: `5 / 5 PASS`
-- 一次: `15 / 15 PASS`
-- 二次: `12 / 12 PASS`
-- 合計: `27 / 27 PASS`
-- SPEC固定7項目: `7 / 7 mapped`
-- 二次問題の件数合わせ採用: `0件`
+candidate固定前に開かないもの:
+- `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_candidate.md`
+- `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_qa.md`
+- 公式標準解答
+- 固定EXAM_ALIGNMENT内の正答情報
+- 解説source/PDF
+- 練習source/PDF
+- 各answer-bearing QA
+- v1結果を具体的な答案内容まで示すcommit diff
+
+固定対象は変更しない。
+- R4一次「機械」問7: 5答案要素
+- R7二次「機械・制御」問4: 5答案要素
+- R6二次「機械・制御」問4: 5答案要素
+- R4二次「機械・制御」問4: 5答案要素
+- R3二次「機械・制御」問4: 5答案要素
+
+合計: 一次5＋二次20＝25答案要素。
+
+## 境界条件
+
+- 未確認の実車ATC速度検出方式、制御周期、制御器ゲイン、伝達関数、ブレーキ則、減速度、遅れ時間、フェイルセーフ内部実装を真値化しない。
+- 鉄道総研ATS-Dxは速度照査の補助資料に限定し、新幹線ATC実装として扱わない。
+- Topic 38を先取りしない。
+- Topic 21 H26二次「機械・制御」問1(4)の既存丸め差診断と一般式は変更しない。
+- 固定EXAM_ALIGNMENTを件数合わせ目的で変更しない。
+
+## clean blind v2 準備状況
+
+- question-only intake: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_intake.md`
+- intake QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_intake_qa.md`
+- R4一次「機械」問7 question-only fallback: intake内に正答情報なしで収録済み
+- STATUS/HANDOFFのstartup領域: answer-bearing具体答案を除去済み
+- v2 candidate: 未作成
+- v2 QA: 未実施
 - exact blocker: `0件`
 
-### 解説source / PDF
-
-canonical:
-- source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source.md`
-- source QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_source_qa.md`
-- PDF: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation.pdf`
-- PDF QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_explanation_pdf_qa.md`
-- PDF canonical commit: `fc51bf01a1ffbeca40d0ccf8c5820278731009ea`
-- PDF SHA-256: `0e296a9fe5efe720c7d1ed3d21194327b2eded20c6e4c80c0db03d6d0a00e507`
-
-品質ゲート:
-- A4縦: `8頁`
-- PDFium / Poppler: `8 / 8 PASS`
-- 固定5問・27答案要素: `27 / 27 PASS`
-- SPEC固定7項目: `7 / 7 PASS`
-- 3段階例題: `3 / 3 PASS`
-
-### 練習source / PDF
-
-canonical:
-- source: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_source.md`
-- source QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_source_qa.md`
-- PDF: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice.pdf`
-- PDF QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_practice_pdf_qa.md`
-- PDF canonical commit: `afa0daf7535ae614728734cebe48470a2651e631`
-- PDF SHA-256: `2f7c1af14e3c6ff1d60bcec1a51e3432b7fe1cfcb2b1056f9b71ff4197f08040`
-
-品質ゲート:
-- 一次試験型: `8問 / 8問五肢択一`
-- 二次試験型: `4問`
-- 一次正答一意性: `8 / 8 PASS`
-- A4縦: `8頁`
-- PDFium / Poppler: `8 / 8 PASS`
-- 固定5問・27答案要素: `27 / 27 connected`
-- SPEC固定7項目: `7 / 7 PASS`
-
-### 解説画像PowerPoint
-
-canonical:
-- PowerPoint: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images.pptx`
-- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_images_qa.md`
-- canonical commit: `e165d6db6fb212cfdf750ddbc7953138cde75cf8`
-- SHA-256: `a50257290c31e1ecc3a2c3456bc8ec9762cbc677333414313c0597e9770e44f0`
-
-品質ゲート:
-- 16:9: `6枚`
-- python-pptx geometry / LibreOffice PDF / PNG render: `6 / 6 PASS`
-- 固定5問・27答案要素: `27 / 27 connected`
-- SPEC固定7項目: `7 / 7 PASS`
-
-### clean blind v1
-
-- candidate: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_candidate.md`
-- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_qa.md`
-- result: `26 / 27 FAIL`
-- 一次: `14 / 15`
-- 二次: `12 / 12`
-- 診断: `1要素の穴埋め文・選択肢対応ミス。必要な物理関係は既存解説sourceに収録済み。`
-- 教材欠落によるFAIL: `0件`
-- 既存成果物の修正・再生成: `0件`
-
-### clean blind v2
-
-canonical:
-- candidate: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_v2_candidate.md`
-- candidate blob SHA: `fdf4b1217885497d478e17647598e4713fcca95b`
-- candidate lock commit: `94af90f8472262da74dda7b02eb6c362348fe207`
-- QA: `topics/34_compressor_pump_fan_load_characteristics/34_compressor_pump_fan_load_characteristics_clean_blind_v2_qa.md`
-- QA commit: `ca987b5b946caee121311fd17e14d71e6ab62ba2`
-
-品質ゲート:
-- 固定公式過去問: `5 / 5 PASS`
-- 一次: `15 / 15 PASS`
-- 二次: `12 / 12 PASS`
-- 合計: `27 / 27 PASS`
-- candidate固定後修正: `0件`
-- 教材外知識による補完: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 既存成果物再生成: `0件`
-- SPEC固定7項目: `7 / 7 connected`
-- exact blocker: `0件`
-
-過去問固有注記:
-- R7二次「機械・制御」問2の半負荷回転速度はcandidate計算値 `1179 min^-1`、公式最終表示 `1180 min^-1`。計算過程は同一で、表示丸め差として `PASS_WITH_ROUNDING_NOTE`。
-- R4二次「機械・制御」問3はcandidateの未丸め値を公式指定桁へ丸めると全6要素一致。平均直流電圧の `3√2/π` と公式係数 `1.35` は同一式の数値表現差。
-
-Topic 34は全工程を通過したため `PASS / COMPLETED`。完成数を `34 / 39` とする。
-
-## Topic 35 完了記録
-
-判定: `PASS / COMPLETED`
-
-### 制作前EXAM_ALIGNMENT
-
-canonical:
-- source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis.md`
-- source commit: `e23491f2b2a4178cbf270b28f417c79c76e4f2ef`
-- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_exam_alignment_qa.md`
-- QA commit: `b02af09ee5d016b9d0e1a27b2ac53c8b95a9804b`
-
-固定過去問:
-- R8一次「理論」問3
-- R7一次「理論」問3
-- R7一次「理論」問4
-- R6一次「理論」問6
-- R5一次「理論」問4
-
-品質ゲート:
-- 固定公式過去問: `5 / 5 PASS`
-- 一次: `5問 / 25答案要素`、`25 / 25 PASS`
-- 二次: `0問`
-- R8二次: 2026-09-21時点で未実施
-- R7〜R5二次確認範囲で本Topicへ直接対応する問題: `0件`
-- 二次問題の件数合わせ採用: `0件`
-- SPEC固定7項目: `7 / 7 mapped`
-- exact blocker: `0件`
-
-### 解説source
-
-canonical:
-- source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_source.md`
-- source commit: `6f1e43f9473bfe004b0385260f77bf49d4d21d82`
-- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_source_qa.md`
-- QA commit: `283cc934c5339f7eec882af4c1573bc024467dfe`
-
-品質ゲート:
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定7項目: `7 / 7 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 数値・複素数再計算: `PASS`
-- JRTT・鉄道総研一次資料への接続: `PASS`
-- 固定過去問を軌道回路そのものの出題と偽装: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 36・37先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-### 解説PDF
-
-canonical:
-- PDF: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation.pdf`
-- PDF QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_explanation_pdf_qa.md`
-- PDF canonical commit: `51bed9f651d4ba499d54e5de40d6e3061e68b420`
-- PDF SHA-256: `f35699fb423d486ef36ba8a4d69056c8b06eb5059139c8df459b9e1356fef9be`
-
-品質ゲート:
-- A4縦: `10頁`
-- qpdf syntax / stream check: `PASS`
-- Poppler `pdfinfo` / `pdftotext`: `PASS`
-- Poppler render: `10 / 10 PASS`
-- 文字抽出: `7576 chars / PASS`
-- 置換文字 U+FFFD: `0件`
-- SPEC固定語句: `7 / 7 PASS`
-- 固定過去問ラベル: `4 / 4 PASS`
-- 3段階例題代表値: `4 / 4 PASS`
-- 固定5問・25答案要素: `25 / 25 connected`
-- 二次問題の件数合わせ採用: `0件`
-- 3段階例題: `3 / 3 PASS`
-- 未確認実車値の真値化: `0件`
-- Topic 36・37先取り: `0件`
-- exact blocker: `0件`
-
-### 練習source
-
-canonical:
-- source: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice_source.md`
-- source commit: `d3179e7f0af0dd9e5650127dac65549132e6c8a1`
-- source blob SHA: `ad27d26a4f661e84160ecad4838baea6f43287a2`
-- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice_source_qa.md`
-- QA commit: `4e6d6b4e5a7ea736f39d611a5c5a955c0053c3e9`
-
-品質ゲート:
-- 一次試験型: `12 / 12`
-- 五肢択一: `12 / 12`
-- 正答一意性: `12 / 12 PASS`
-- 数値・回路式独立再計算: `10 / 10 PASS`
-- 知識・境界問題: `2 / 2 PASS`
-- 二次試験型: `0問`（直接対応問題未確認のため件数合わせなし）
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定7項目: `7 / 7 PASS`
-- 未確認実車値の真値化: `0件`
-- Topic 36・37先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-### 練習PDF
-
-canonical:
-- PDF: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice.pdf`
-- PDF QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_practice_pdf_qa.md`
-- PDF canonical commit: `408f00c194c4a407c1e0b885f62c58df63e5f36d`
-- PDF blob SHA: `060f442964cc94114e1e556c6a7dfb0ad891ad75`
-- PDF SHA-256: `305c1aeadc3a9ddbae73ea16b2d1b3b7abfeaf8ed2a5961c83f2e9dd602898e4`
-
-品質ゲート:
-- A4縦: `6頁`
-- PDFium / Poppler render: `6 / 6 PASS`
-- visual inspection: `6 / 6 PASS`
-- `pdfinfo` / `pdftotext -layout`: `PASS`
-- 文字抽出: `6847 chars / PASS`
-- 置換文字 U+FFFD: `0件`
-- 一次問題・正答・完全解説: `12 / 12 PASS`
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定7項目: `7 / 7 PASS`
-- 二次問題の件数合わせ採用: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 36・37先取り: `0件`
-- exact blocker: `0件`
-
-### 解説画像PowerPoint
-
-canonical:
-- PowerPoint: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_images.pptx`
-- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_images_qa.md`
-- canonical commit: `8207d885b2ef402e880cd9ede65994744cee3ec6`
-- SHA-256: `0859b0d59bed70367d108f9c0102f806c1d53bd371b2766f27f9686256955a52`
-- file size: `55935 bytes`
-
-品質ゲート:
-- 16:9: `6枚`
-- python-pptx geometry / content / source notes: `6 / 6 PASS`
-- LibreOffice PDF / Poppler text / PNG render: `6 / 6 PASS`
-- 固定5問・25答案要素: `25 / 25 connected`
-- 二次問題の件数合わせ採用: `0件`
-- SPEC固定7項目: `7 / 7 PASS`
-- 未確認実車値の真値化: `0件`
-- Topic 36・37先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-### clean blind
-
-canonical:
-- candidate: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_clean_blind_candidate.md`
-- candidate blob SHA: `132183604321049b5072c68476b93c06dd69d50a`
-- candidate lock commit: `2bcf5961818074ad647004af19ce8d74b3021d07`
-- QA: `topics/35_atc_track_circuit_analysis/35_atc_track_circuit_analysis_clean_blind_qa.md`
-- QA commit: `d401c3c67a7688bb3a6beeeb31a924959291b2cf`
-
-品質ゲート:
-- 固定公式過去問: `5 / 5 PASS`
-- 一次: `25 / 25 PASS`
-- 二次: `0問`（直接対応問題未確認、件数合わせなし）
-- 合計: `25 / 25 PASS`
-- candidate固定後修正: `0件`
-- 教材欠落による補完: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 既存成果物再生成: `0件`
-- SPEC固定7項目: `7 / 7 connected`
-- exact blocker: `0件`
-
-Topic 35は全工程を通過したため `PASS / COMPLETED`。完成数を `35 / 39` とする。
-
-## Topic 36 完了記録
-
-判定: `PASS / COMPLETED`
-
-### 制作前EXAM_ALIGNMENT
-
-canonical:
-- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency.md`
-- source commit: `8591e534ca4bd929ab953ca5ac31bf9131c98c06`
-- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_exam_alignment_qa.md`
-- QA commit: `35a7eab21032b3ae79398a29702973c734511f40`
-
-固定過去問:
-- R8一次「理論」問5
-- R3一次「機械」問8
-- H26一次「機械」問8
-- H25一次「機械」問8
-- H22一次「機械」問8
-
-品質ゲート:
-- 固定公式過去問: `5 / 5 PASS`
-- 一次: `5問 / 25答案要素`、`25 / 25 PASS`
-- 二次: `0問`（公式科目範囲外）
-- 主題外二次問題の件数合わせ採用: `0件`
-- SPEC固定8項目: `8 / 8 mapped`
-- e-sysnet直接対応ページ未確認時の無理な対応付け: `0件`
-- 鉄道一次資料への接続: `PASS`
-- 未確認実車周波数・変調方式・受信しきい値・S/N要求値・冗長構成の真値化: `0件`
-- Topic 37先取り: `0件`
-- exact blocker: `0件`
-
-SPEC固定項目:
-- 周波数
-- 信号伝送
-- 変調
-- フィルタ
-- ノイズ
-- S/N
-- デジタル判定
-- 冗長化
-
-### 解説source
-
-canonical:
-- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_source.md`
-- source commit: `886685450f33f48c929e19f09e4a37ac46e45fde`
-- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_source_qa.md`
-- QA commit: `8a22bde3a2257187adafaf7503c8570efb7b5dec`
-
-品質ゲート:
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定8項目: `8 / 8 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 公式・数値独立再計算: `PASS`
-- 二次問題の件数合わせ採用: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 37・38先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-### 解説PDF
-
-canonical:
-- PDF: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation.pdf`
-- PDF QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_explanation_pdf_qa.md`
-- PDF canonical commit: `bff073fc92073c69f3856bb7af61e667b70ca164`
-- PDF blob SHA: `18f138fc0c2fa6699645c61c7f4f4d2c7d7bf3c1`
-- PDF SHA-256: `dc304539249d3bb644872bfdb0516dc0eb6e2b207c45c4e75be0c30603dff932`
-- file size: `8521 bytes`
-
-品質ゲート:
-- A4縦: `2頁`
-- Ghostscript nullpage parse/render: `PASS`
-- Poppler `pdfinfo` / `pdftotext -layout`: `PASS`
-- PDFium / Poppler render: `2 / 2 PASS`
-- visual inspection: `2 / 2 PASS`
-- extracted text: `3007 chars / PASS`
-- replacement character U+FFFD: `0件`
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定8項目: `8 / 8 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 二次問題の件数合わせ採用: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 37・38先取り: `0件`
-- exact blocker: `0件`
-
-### 練習source
-
-canonical:
-- source: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_source.md`
-- source commit: `f785bd183e5a3bebe976b9839a2b1a41c34168a1`
-- source blob SHA: `d39c83d9329b71336f327f41e86c2bc9f0bdc7bb`
-- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_source_qa.md`
-- QA commit: `d9c3cb66b01be29c05ba702e0c108de9492c0e2c`
-
-品質ゲート:
-- 一次試験型: `12 / 12`
-- 五肢択一: `12 / 12`
-- 正答一意性: `12 / 12 PASS`
-- 数値・公式独立再計算: `5 / 5 PASS`
-- 知識・境界問題: `7 / 7 PASS`
-- 二次試験型: `0問`（公式科目範囲外、件数合わせなし）
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定8項目: `8 / 8 PASS`
-- 未確認実車値の真値化: `0件`
-- Topic 37・38先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-### 練習PDF
-
-canonical:
-- PDF: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice.pdf`
-- PDF QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_practice_pdf_qa.md`
-- PDF canonical commit: `51d9ea42398c28ac5b27006d6868aeb96f0b1838`
-- PDF blob SHA: `f678daa6fa5554266716877d32f1aca0acc21e02`
-- PDF SHA-256: `707d1ae1564b13393545c9b27e0d47ed36f1e33390aa827fdd5b4c9a7dfdf0bc`
-- file size: `6700 bytes`
-
-品質ゲート:
-- A4縦: `5頁`
-- Ghostscript nullpage parse/render: `PASS`
-- Poppler `pdfinfo` / `pdftotext -layout`: `PASS`
-- PDFium / Poppler render: `5 / 5 PASS`
-- visual inspection: `5 / 5 PASS`
-- extracted text: `2894 chars / PASS`
-- replacement character U+FFFD: `0件`
-- 一次問題・正答・解説: `12 / 12 PASS`
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定8項目: `8 / 8 PASS`
-- 二次問題の件数合わせ採用: `0件`
-- 未確認実車値の真値化: `0件`
-- Topic 37・38先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-## Topic 21 固定境界
-
-H26二次「機械・制御」問1(4)の `48.1 N·m / 48.0 N·m` 差は、公式標準解答が `π=3.14` 相当の数値処理を用いた過去問固有の丸め差として診断済み。一般式 `P=Tω`、`ω=2πN/60` は変更しない。
-
-### Topic 36 解説画像PowerPoint
-
-canonical:
-- PowerPoint: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_images.pptx`
-- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_images_qa.md`
-- SHA-256: `5de0ed500adca5da90ab90b172d5c591d1bb3e37f3d81e2f2acb3a9d2fb03691`
-
-品質ゲート:
-- 16:9: `6枚`
-- python-pptx geometry / text assertions / notes: `6 / 6 PASS`
-- LibreOffice PDF: `6 / 6 pages PASS`
-- Poppler PNG render: `6 / 6 PASS`
-- 固定5問・25答案要素: `25 / 25 connected`
-- SPEC固定8項目: `8 / 8 PASS`
-- 二次: `0問`（公式科目範囲外、件数合わせ0件）
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-### Topic 36 clean blind
-
-canonical:
-- candidate: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_clean_blind_candidate.md`
-- candidate blob SHA: `0117314c6f99beacdd5e203292da63619f04eaa2`
-- candidate lock commit: `08e103113ee309a460588224a0daceae23fa6ba1`
-- QA: `topics/36_atc_signal_transmission_frequency/36_atc_signal_transmission_frequency_clean_blind_qa.md`
-- QA commit: `f20b4601bd859ad05c1bdcf46a3d6cb0d1d0445d`
-
-品質ゲート:
-- 固定公式過去問: `5 / 5 PASS`
-- 一次: `25 / 25 PASS`
-- 二次: `0問`（公式科目範囲外、件数合わせなし）
-- 合計: `25 / 25 PASS`
-- candidate固定前に公式解答PDF・Topic 36 answer-bearing QAを参照: `0件`
-- candidate固定後修正: `0件`
-- 教材外知識による補完: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 既存成果物再生成: `0件`
-- SPEC固定8項目: `8 / 8 connected`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-Topic 36は全工程を通過したため `PASS / COMPLETED`。完成数を `36 / 39` とする。
-
-## Topic 37 進捗
-
-判定: `NEEDS_REVISION / CLEAN_BLIND_V1_FAIL`
-
-canonical:
-- EXAM_ALIGNMENT source: `topics/37_atc_speed_control_system/37_atc_speed_control_system.md`
-- EXAM_ALIGNMENT source commit: `b7f947e0f5faeeccc161bef37c11f105ead8fd2d`
-- EXAM_ALIGNMENT QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_exam_alignment_qa.md`
-- EXAM_ALIGNMENT QA commit: `482dcfa917de54c13d1a5904be0eb7185a14a1a7`
-- explanation source: `topics/37_atc_speed_control_system/37_atc_speed_control_system_explanation_source.md`
-- explanation source commit: `3964fa2fef6222dd65aa802c3e7d9363faefb27a`
-- explanation source blob SHA: `8f4f64b2fcbd75c8f13c156b57ae564c33a719dd`
-- explanation source QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_explanation_source_qa.md`
-- explanation source QA commit: `eb895eb15fd1bea8f89751d824375db0ea09b403`
-- explanation source QA blob SHA: `5f57ef0a04a90469c8d3d545eafefebc067c51d4`
-- explanation PDF: `topics/37_atc_speed_control_system/37_atc_speed_control_system_explanation.pdf`
-- explanation PDF QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_explanation_pdf_qa.md`
-- explanation PDF canonical commit: `369b8c4c8cb31dc1c931d1406ac68ccdc83f0a01`
-- explanation PDF blob SHA: `b69862efb2f2905b56cdd8a981ae39ea5e5db1d1`
-- explanation PDF SHA-256: `8b9a65616365ddbf7796982df62c3819dc850ef0cb3192effaa1f27de69e761b`
-- practice source: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_source.md`
-- practice source commit: `7359874c3d74128ccea71d6cd2b8fa63460f64de`
-- practice source blob SHA: `25f28d819dd5ebfe049d7c7bf6e181be0d5c58bc`
-- practice source QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_source_qa.md`
-- practice source QA commit: `a9db0039f49375a1155809d22128444c20ed22ba`
-- practice source QA blob SHA: `686ccbbe8df765f9c3e08ec1fad15d956d297e97`
-- practice PDF: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice.pdf`
-- practice PDF canonical commit: `b27f2fdc6d6fa78dc03aa5641ddbb14aebd5679c`
-- practice PDF blob SHA: `9605d04a84a1d9b0c44104ec1ae13c6919c275b4`
-- practice PDF SHA-256: `2b7df3337f220982f62a5a8758a9d1c9acc626c636f1f9edad7f0e5a08bf962f`
-- practice PDF QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_practice_pdf_qa.md`
-- practice PDF QA commit: `a36f4bfdf2b1366c891072561f0acf78cd507e2f`
-- PowerPoint: `topics/37_atc_speed_control_system/37_atc_speed_control_system_images.pptx`
-- PowerPoint SHA-256: `bab088b6ea5aa2ebb6833090c2fb5f4d7ce25c3af0fafa0caa9100392136f670`
-- PowerPoint QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_images_qa.md`
-- PowerPoint canonical commit: `de3e673ce4ebb12ab9e8c4c4b789e18371ff31bc`
-- clean blind v1 candidate: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_candidate.md`
-- clean blind v1 candidate lock commit: `4e03db0fcc000842dd0f776d773df866b52ea855`
-- clean blind v1 QA: `topics/37_atc_speed_control_system/37_atc_speed_control_system_clean_blind_qa.md`
-- clean blind v1 QA commit: `5193011c6577a7690eba869ad43673acd79575d7`
-
-固定過去問:
-- R4一次「機械」問7
-- R7二次「機械・制御」問4
-- R6二次「機械・制御」問4
-- R4二次「機械・制御」問4
-- R3二次「機械・制御」問4
-
-品質ゲート:
-- 制作物側固定公式過去問: `5 / 5 PASS`
-- 制作物側一次固定答案要素: `5 / 5 PASS`
-- 制作物側二次固定答案要素: `20 / 20 PASS`
-- 練習一次: `12問 / 12問五肢択一`
-- 一次正答一意性: `12 / 12 PASS`
-- 練習二次: `4題`
-- 二次独立再計算: `20 / 20 PASS`
-- 練習PDF: `6頁 / PDFium・Poppler 6 / 6 PASS`
-- PowerPoint: `16:9 / 6枚 / render 6 / 6 PASS`
-- SPEC固定8項目: `8 / 8 PASS`
-- 系列SPEC固定計算・グラフ: `2 / 2 PASS`
-- clean blind v1一次: `4 / 5 PASS`
-- clean blind v1二次: `20 / 20 PASS`
-- clean blind v1合計: `24 / 25 FAIL`
-- FAIL要素: R4一次「機械」問7(2) `リレーシーケンス回路（リレー回路）` → canonical `自己保持回路`
-- 教材欠落によるFAIL: `0件`
-- candidate固定後修正: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 既存成果物再生成: `0件`
-- 二次問題の件数合わせ採用: `0件`
-- JRTT一次資料へのATC一般原理接続: `PASS`
-- ATS-Dxを新幹線ATC実装として使用: `0件`
-- 教材用仮定値を実車値として使用: `0件`
-- 未確認実車速度検出方式・制御周期・制御器構造/ゲイン・伝達関数・ブレーキ則・減速度・遅れ時間・フェイルセーフ実装の真値化: `0件`
-- Topic 38先取り: `0件`
-- Topic 21一般式変更: `0件`
-- exact blocker: `0件`
-
-Topic 37は制作物側の全工程を通過しているが、clean blind v1が `24 / 25 FAIL` のため未完了。完成数は `36 / 39` のまま。
-
-次工程: answer-bearing資料を先に開かないfresh workerで `clean_blind_v2_candidate` を固定し、その後に公式標準解答・教材との照合QAを行う。candidate固定前にv1 candidate/QA、公式標準解答、固定EXAM_ALIGNMENT正答、解説source/PDF、練習source/PDF、answer-bearing QAを開かない。
+本runはsanitize前のanswer-bearing情報を確認済みのため、freshness条件を守ってv2 candidateは作成していない。次のfresh runは検索せず、上記candidate固定前許可資料だけから開始する。
