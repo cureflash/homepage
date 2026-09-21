@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_clean_blind_v2_pending / current_worker_freshness_invalid`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_clean_blind_v3_pending / current_worker_freshness_invalid`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 39 固定ゲート
 
@@ -37,59 +37,50 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 - 練習source＋source QA: `PASS / PRACTICE_SOURCE_COMPLETE`
 - 練習PDF＋PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
 - PowerPoint＋render/content QA: `PASS / POWERPOINT_COMPLETE`
-
-PowerPoint QA:
-- slide count: `10`
-- 固定25答案要素: `25 / 25 PASS`
-- 一次: `20 / 20 PASS`
-- 二次: `5 / 5 PASS`
+- 固定25答案要素の教材接続: `25 / 25 PASS`
 - 系列SPEC固定13項目: `13 / 13 PASS`
 - 系列SPEC計算・グラフ3種: `3 / 3 PASS`
-- Poppler 160 dpi: `10 / 10 PASS`
-- PDFium 160 dpi: `10 / 10 PASS`
-- clipped text / overlap / broken glyph: `0件`
 - 一般SCADAモデルをCOSMOS実装と断定: `0件`
 - 未確認COSMOS内部実装・数値の真値化: `0件`
 - exact blocker: `0件`
 
-## clean blind v1結果
+## clean blind履歴
 
-question-only intake:
-- `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md`
+### v1
 
-candidate:
-- `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_candidate.md`
 - candidate commit: `cb034e4e121512844cf0333c6df49de84d7555e8`
-
-QA:
-- `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v1_qa.md`
-
-結果:
 - 公式標準解答一致: `24 / 25 FAIL`
 - 教材だけで導出可能: `25 / 25 PASS`
 - 診断: `solver error`。教材欠落ではない。
-- answer-bearingな不一致詳細はmandatory recordから除去した。v2 candidate固定後にのみv1 QAを参照する。
+
+### v2
+
+- candidate: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v2_candidate.md`
+- candidate commit: `0d2b169dff258124d088581b7690bfcdc063fc4f`
+- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v2_qa.md`
+- 公式標準解答一致: `21 / 25 FAIL`
+- 教材だけで導出可能: `25 / 25 PASS`
+- 診断: `solver error`。教材欠落ではない。
+- answer-bearingな不一致詳細はv2 QAにのみ保持。mandatory recordには載せない。
 - 教材修正・再生成: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 21一般式変更: `0件`
 
-## 今回runのexact blocker
+## freshness
 
-`TOPIC39_CLEAN_BLIND_V2_THIS_WORKER_CONTAMINATED_BY_MANDATORY_RECORDS`
+v2はquestion-only intakeと公式「問題」PDFのみでcandidateを先に固定し、その後に公式標準解答・既存教材を照合したため、v2 candidateのfreshnessは `PASS`。
 
-sanitize前のmandatory `STATUS.md` / `HANDOFF.md` にv1のanswer-bearing不一致詳細が含まれており、本workerは毎run必須のreconcileで参照済み。そのため本worker自身はclean blind v2 candidateを生成しない。
-
-処置としてmandatory recordからanswer-bearing詳細を除去した。次の別fresh workerは、下記のcandidate固定前禁止事項を守ればv2を開始できる。
+ただし本workerはv2固定後にanswer-bearing資料を参照済みであり、clean blind v3のworkerとしてはfreshness invalid。v3は別fresh workerで実施する。
 
 ## 次工程
 
-`TOPIC39_CLEAN_BLIND_V2`。
+`TOPIC39_CLEAN_BLIND_V3`。
 
 1. 別fresh workerで開始する。
 2. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、直近コミットをmetadataレベルでreconcileする。
-3. candidate固定前はv1 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
-4. question-only intakeと公式「問題」PDFだけで同じ固定5問を独立再解答する。
-5. 25答案要素のv2 candidateを先に保存・commitする。
+3. candidate固定前はv1/v2 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
+4. `39_cosmos_integrated_monitoring_scada_reliability_clean_blind_intake.md` と公式「問題」PDFだけで同じ固定5問を独立再解答する。
+5. 固定5問・25答案要素のv3 candidateを先に保存・commitする。R2二次は固定5答案要素の区切りを維持する。
 6. candidate固定後にのみ公式標準解答と既存教材を照合する。
 7. `公式標準解答一致 25 / 25` と `教材だけで導出可能 25 / 25` の両方を判定する。
 8. FAILが教材欠落なら既存仕様範囲内でremediationする。独立再解答側のミスなら教材を変更せず、さらに別fresh workerで再実施する。
