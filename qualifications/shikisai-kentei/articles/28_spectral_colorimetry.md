@@ -434,6 +434,143 @@ $$
 
 また異方性のある織物、金属調塗装、パール顔料などではBRDF自体が方向によって大きく変わるため、単一の45/0やd/8測定だけでは外観を十分に表せない。この場合は多角度測色が必要になる。
 
+### 13.1　分光反射率の不確かさはXYZへどう伝わるのか
+
+波長を $n$ 点で離散化し、測定した分光反射率を
+
+$$
+\mathbf r=
+\begin{bmatrix}
+R_1&R_2&\cdots&R_n
+\end{bmatrix}^{\mathsf T}
+$$
+
+とする。照明、等色関数、波長間隔、正規化係数をまとめた3×$n$行列を $A$ とすれば、三刺激値は
+
+$$
+\mathbf t=
+\begin{bmatrix}X&Y&Z\end{bmatrix}^{\mathsf T}
+=A\mathbf r
+$$
+
+と書ける。
+
+分光反射率の測定不確かさを共分散行列
+
+$$
+\Sigma_r=\operatorname{Cov}(\mathbf r)
+$$
+
+で表すと、線形変換なのでXYZの共分散は
+
+$$
+\boxed{
+\Sigma_{XYZ}=A\Sigma_rA^{\mathsf T}
+}
+$$
+
+となる。
+
+各波長の誤差が独立で
+
+$$
+\Sigma_r=\operatorname{diag}(\sigma_1^2,\dots,\sigma_n^2)
+$$
+
+と近似できるなら、例えば
+
+$$
+\operatorname{Var}(X)
+=\sum_i a_{Xi}^2\sigma_i^2
+$$
+
+$$
+\operatorname{Cov}(X,Y)
+=\sum_i a_{Xi}a_{Yi}\sigma_i^2
+$$
+
+となる。
+
+ここで重要なのは、同じ分光反射率データから $X,Y,Z$ を同時に計算するため、入力波長ごとの誤差が独立でも、出力の $X,Y,Z$ は一般に相関することである。
+
+さらに実機では、有限の分光帯域幅、補間、波長校正、白色基準の校正などによって隣接波長の誤差に相関が生じうる。その場合、$\Sigma_r$ の非対角成分を無視すると不確かさを過小評価または過大評価する可能性がある。
+
+これはGUMでいう「測定モデルを通じた不確かさの伝播」を、分光測色へそのまま適用した形である。
+
+### 13.2　XYZからL*a*b*、色差へは非線形に伝わる
+
+CIELABはXYZの非線形変換である。基準白を固定し、
+
+$$
+\mathbf l=
+\begin{bmatrix}L^*&a^*&b^*\end{bmatrix}^{\mathsf T}
+=f(\mathbf t)
+$$
+
+と書く。XYZの不確かさが十分小さいなら、$f$ を測定点の周りで一次近似し、Jacobian
+
+$$
+J=
+\frac{\partial(L^*,a^*,b^*)}
+{\partial(X,Y,Z)}
+$$
+
+を使って
+
+$$
+\boxed{
+\Sigma_{Lab}
+\approx
+J\Sigma_{XYZ}J^{\mathsf T}
+}
+$$
+
+と伝播できる。
+
+さらに2試料のCIELAB差を
+
+$$
+\Delta\mathbf l
+=\mathbf l_1-\mathbf l_2
+$$
+
+とし、両測定が独立なら
+
+$$
+\Sigma_{\Delta}
+=\Sigma_{Lab,1}+\Sigma_{Lab,2}
+$$
+
+である。CIE 1976色差
+
+$$
+\Delta E^*_{ab}
+=\lVert\Delta\mathbf l\rVert
+$$
+
+について、$\Delta E^*_{ab}>0$ のとき勾配
+
+$$
+\mathbf g
+=\frac{\Delta\mathbf l}{\Delta E^*_{ab}}
+$$
+
+を用いれば、一次近似で
+
+$$
+u^2(\Delta E^*_{ab})
+\approx
+\mathbf g^{\mathsf T}
+\Sigma_{\Delta}
+\mathbf g
+$$
+
+と評価できる。
+
+したがって「$\Delta E=0.5$ だから必ず差がある」と単純には言えない。測定不確かさが同程度なら、その色差が装置・試料・測定条件のばらつきから十分に分離できているかまで見る必要がある。
+
+CIELAB変換の非線形性が強く効く条件や、CIEDE2000のように式が複雑な場合、一次Taylor近似だけでは十分でないことがある。その場合は数値微分やMonte Carlo法で入力分布を伝播させる。JCGM 101:2008は、このようなMonte Carloによる不確かさ伝播の一般的方法を定めている。またJCGM 100には2026年に非線形測定モデルを扱う追補が追加されている。
+
 ## 14　色彩検定の「物理測色」を理系的に整理する
 
 色彩検定で押さえるべき因果関係は次のようになる。
@@ -530,5 +667,11 @@ $$
   https://www.nist.gov/laboratories/tools-instruments/reference-integrating-sphere-spectral-reflectance
 - Barnes, P. Y., Parr, A. C., Early, E. A. (1998), *Spectral Reflectance*, NIST Special Publication 250-48  
   https://www.nist.gov/publications/spectral-reflectance
+- JCGM 100:2008(E), *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*.  
+  https://doi.org/10.59161/JCGM100-2008E
+- JCGM 100:2008/Amd.1:2026, *Evaluation of measurement data — Guide to the expression of uncertainty in measurement — Amendment 1: Nonlinearity in measurement models*.  
+  https://doi.org/10.59161/PPDI3267
+- JCGM 101:2008, *Evaluation of measurement data — Supplement 1 to the GUM — Propagation of distributions using a Monte Carlo method*.  
+  https://doi.org/10.59161/JCGM101-2008
 - コニカミノルタ「分光測色計とは？測定方法や種類、色彩計との違いを解説」2026-02-09  
   https://research.konicaminolta.com/jp/column/spectrophotometer/
