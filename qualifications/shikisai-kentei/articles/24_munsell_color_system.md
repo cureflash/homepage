@@ -306,7 +306,67 @@ $$
 
 したがって「どれが最も正確か」という一列の優劣ではなく、何を記述するために作られた体系かを見る必要がある。
 
-## 11　色彩検定で押さえるところ
+## 11　最大彩度はどこで止まるのか――物体色立体とMacAdam限界
+
+マンセル色立体の外殻が不規則になる理由は、知覚尺度だけでなく物体色の物理的制約からも理解できる。非蛍光で受動的な反射物体を理想化すると、各波長の分光反射率は
+
+$$
+0\le R(\lambda)\le1
+$$
+
+を満たす。
+
+標準イルミナントの分光分布を $S(\lambda)$ とし、標準観察者を固定すれば、物体色のXYZは
+
+$$
+\mathbf X[R]
+=
+k\int S(\lambda)R(\lambda)
+\begin{pmatrix}
+\bar x(\lambda)\\
+\bar y(\lambda)\\
+\bar z(\lambda)
+\end{pmatrix}d\lambda
+$$
+
+で与えられる。
+
+波長を離散化して、各波長帯の反射率をベクトル
+
+$$
+\mathbf r=(r_1,r_2,\ldots,r_n)^\mathsf T,
+\qquad 0\le r_i\le1
+$$
+
+と書けば、測色は
+
+$$
+\mathbf X=A\mathbf r
+$$
+
+という線形写像になる。許される $\mathbf r$ の集合は $n$ 次元の単位超立方体 $[0,1]^n$ であるため、その線形像として得られるXYZの実現可能集合は凸集合になる。これが固定照明・固定観察者のもとでの「物体色立体」を考える一つの数学的見方である。
+
+固定した明度 $Y$ の断面を取り、ある色相方向へ外側へ進むと、やがて $0\le R(\lambda)\le1$ を満たす反射スペクトルではそれ以上の色度へ到達できなくなる。この物理的境界が、マンセルで
+
+$$
+C_{\max}=C_{\max}(H,V)
+$$
+
+となる背景の一つである。最大彩度がすべての色相・明度で同じなら色立体は円柱状に近づくが、実際には物体色の到達可能領域そのものが方向によって異なる。
+
+さらに、XYZ空間である方向の値を最大化する問題は、離散化すれば
+
+$$
+\max_{0\le\mathbf r\le1}\ \mathbf c^\mathsf T A\mathbf r
+$$
+
+という線形計画問題として書ける。線形目的関数の極値は超立方体の頂点で達成できるため、境界を与える理想化反射率は各波長帯で $r_i=0$ または $1$ をとるスペクトルへ結びつく。これはMacAdamらが扱った「実現可能な物体色の限界」や optimal color の考え方と対応する。
+
+RITが公開するMunsell renotation dataでも、補間用の外挿色の一部は物理的に実在せず、MacAdam limitsの外側にあると明記されている。逆に real.dat はその限界内にある実在色として整理されている。
+
+したがってマンセル色立体は、単なる「歪んだ円柱」ではない。知覚的な等歩度化と、分光反射率が満たす物理的制約の両方が重なって、不規則な外殻を持つ色立体になる。
+
+## 12　色彩検定で押さえるところ
 
 色彩検定2級では、まず次を確実にする。
 
@@ -338,5 +398,6 @@ $$
 - [ASTM D1535-14(2023), Standard Practice for Specifying Color by the Munsell System](https://store.astm.org/d1535-14r23.html)
 - [Rochester Institute of Technology, Munsell Color Science Lab Educational Resources / Munsell Renotation Data](https://www.rit.edu/science/munsell-color-science-lab-educational-resources)
 - [Newhall, S. M., Nickerson, D., & Judd, D. B. (1943), “Final Report of the O.S.A. Subcommittee on the Spacing of the Munsell Colors,” Journal of the Optical Society of America, 33, 385–418](https://doi.org/10.1364/JOSA.33.000385)
+- [MacAdam, D. L. (1935), “The Theory of the Maximum Visual Efficiency of Colored Materials,” Journal of the Optical Society of America, 25, 249–252](https://doi.org/10.1364/JOSA.25.000249)
 - G. Wyszecki & W. S. Stiles, *Color Science: Concepts and Methods, Quantitative Data and Formulae*, 2nd ed., Wiley, 1982.
 - [CIE 015:2018, Colorimetry, 4th Edition](https://www.cie.co.at/publications/colorimetry-4th-edition)
