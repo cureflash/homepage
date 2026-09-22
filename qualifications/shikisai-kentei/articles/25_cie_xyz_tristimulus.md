@@ -548,15 +548,132 @@ $$
 
 この見方をすると、「なぜ3数値で色を表せるのか」「なぜメタマーが存在するのか」「なぜXYZからスペクトルへ戻れないのか」が同じ数学で説明できる。
 
+## 14　測定誤差はXYZへどう伝わるか――共分散行列で見る
+
+分光測色では、各波長の測定値には必ず不確かさがある。ここでもXYZが線形写像であることを使うと、スペクトルの測定誤差が三刺激値へどう伝播するかを行列で表せる。
+
+離散化したスペクトルを $\mathbf p$、その測定誤差を $\delta\mathbf p$ とし、
+
+$$
+\mathbf t=A\mathbf p,
+\qquad
+\mathbf t=\begin{bmatrix}X\\Y\\Z\end{bmatrix}
+$$
+
+とする。測定値が $\mathbf p+\delta\mathbf p$ になれば、XYZの誤差は
+
+$$
+\delta\mathbf t=A\,\delta\mathbf p
+$$
+
+である。スペクトル誤差の共分散行列を
+
+$$
+\Sigma_p
+=E[\delta\mathbf p\,\delta\mathbf p^{\mathsf T}]
+$$
+
+とすると、XYZの共分散行列は
+
+$$
+\Sigma_{XYZ}
+=A\Sigma_pA^{\mathsf T}
+$$
+
+となる。これは近似ではなく、XYZ計算が線形である限りそのまま成り立つ。
+
+もし各波長の誤差が互いに独立で、分散が $\sigma_i^2$ なら、
+
+$$
+\Sigma_p
+=\operatorname{diag}(\sigma_1^2,\ldots,\sigma_n^2)
+$$
+
+である。このとき例えば
+
+$$
+\operatorname{Var}(X)
+=\sum_i a_{Xi}^2\sigma_i^2
+$$
+
+$$
+\operatorname{Cov}(X,Y)
+=\sum_i a_{Xi}a_{Yi}\sigma_i^2
+$$
+
+となる。入力側で各波長の誤差が独立でも、同じ分光データを $\bar x,\bar y,\bar z$ で重み付けしているため、出力された $X,Y,Z$ は一般に互いに相関する。
+
+反射物体なら、照明スペクトルと色合わせ関数を含めた行列を $A_r$ として
+
+$$
+\mathbf t=A_r\mathbf r
+$$
+
+と書けば、分光反射率 $\mathbf r$ の不確かさについても
+
+$$
+\Sigma_{XYZ}=A_r\Sigma_rA_r^{\mathsf T}
+$$
+
+と同じ形になる。実際の分光測定では、迷光補正、波長校正、基準白板、平滑化などの影響で異なる波長間の誤差が相関することがある。その場合、$\Sigma_r$ の非対角成分を無視すると最終的な色の不確かさを過小評価または過大評価し得る。
+
+一方、xy色度座標やCIELABはXYZの非線形関数である。一般に
+
+$$
+\mathbf q=f(\mathbf t)
+$$
+
+なら、十分小さい誤差に対してヤコビ行列
+
+$$
+J=\frac{\partial f}{\partial\mathbf t}
+$$
+
+を使い、一次近似で
+
+$$
+\Sigma_q
+\approx
+J\Sigma_{XYZ}J^{\mathsf T}
+$$
+
+と伝播させられる。
+
+例えば
+
+$$
+x=\frac{X}{T},\qquad
+y=\frac{Y}{T},\qquad T=X+Y+Z
+$$
+
+に対するヤコビ行列は
+
+$$
+J_{xy}
+=\frac{1}{T^2}
+\begin{bmatrix}
+Y+Z&-X&-X\\
+-Y&X+Z&-Y
+\end{bmatrix}
+$$
+
+である。$T$ が小さくなるほど $1/T^2$ が大きくなるため、低信号域では同じXYZの絶対誤差でも色度座標の不確かさが大きくなりやすい。
+
+この考え方は、「測定値には誤差がある」という一般論より一歩進んでいる。分光測定の誤差構造と、XYZ・xy・L*a*b*という色空間変換の数学をつなぐことで、最終的な色差の信頼性まで定量的に追跡できる。NISTの反射測色の不確かさ解析でも、測定方程式と波長間の相関を明示的に扱う重要性が指摘されている。
+
 ## 参考資料
 
 - [色彩検定協会「受検案内・検定内容」](https://www.aft.or.jp/exam-orders)
 - [色彩検定協会「公式テキスト1級 目次」](https://www.aft.or.jp/images/text_of-1st-grade_mokuji.pdf)
 - [色彩検定協会「各級の目安」](https://www.aft.or.jp/pages/feature/level)
 - [CIE / ISO 11664-1:2019, Colorimetry — Part 1: CIE standard colorimetric observers](https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0)
+- [ISO/CIE 11664-3:2019(E), Colorimetry — Part 3: CIE tristimulus values](https://www.cie.co.at/publications/colorimetry-part-3-cie-tristimulus-values-2)
 - [CIE e-ILV: CIE 1931 standard colorimetric system](https://cie.co.at/eilvterm/17-23-045)
 - [CIE 1931 colour-matching functions, 2 degree observer, official dataset](https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer)
 - [NIST, Y. Ohno, CIE Fundamentals for Color Measurements](https://www.nist.gov/publications/cie-fundamentals-color-measurements-0)
+- [NIST, E. A. Early & M. E. Nadal, Uncertainty Analysis for Reflectance Colorimetry, 2004](https://www.nist.gov/publications/uncertainty-analysis-reflectance-colorimetry-1)
+- [NIST, Y. Ohno, A Numerical Method for Color Uncertainty, 2001](https://www.nist.gov/publications/numerical-method-color-uncertainty-0)
+- [JCGM 100:2008, Evaluation of measurement data — Guide to the expression of uncertainty in measurement](https://www.bipm.org/en/committees/jc/jcgm/publications)
 - [Fairman, Brill & Hemmendinger, How the CIE 1931 color-matching functions were derived from Wright-Guild data, Color Research & Application, 1997](https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291520-6378%28199702%2922%3A1%3C11%3A%3AAID-COL4%3E3.0.CO%3B2-7)
 - [Boyd & Vandenberghe, Convex Optimization, Cambridge University Press](https://web.stanford.edu/~boyd/cvxbook/)
 - [MIT OpenCourseWare, 18.06SC Linear Algebra](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/)
