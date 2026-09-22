@@ -8,7 +8,7 @@
 
 Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`。
 
-現在地は `topic_39_clean_blind_v49_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
+現在地は `topic_39_clean_blind_v50_pending / IN_PROGRESS`。active topicは `39 COSMOS 統合監視・SCADA・信頼性`。
 
 ## Topic 39 固定ゲート
 
@@ -101,8 +101,9 @@ Topic 01〜38は最終ゲートまで `PASS / completed`。完成数 `38 / 39`�
 - v46: candidate `93f32b6c24c56e15061cde48a634bd1934830c9f` / freshness `PASS` / 一次 `20 / 20` / 二次 `1 / 5` / 合計 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver omission ×4 secondary groups + nomenclature error ×1 secondary group`
 - v47: candidate `55aef95765a46358dda64afec73de9d7d73d7f9b` / freshness `PASS` / 一次 `19 / 20` / 二次 `2 / 5` / 合計 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `concept/nomenclature error ×1 primary + solver omission ×3 secondary groups`
 - v48: candidate `bb28177efa1ce234fb4f6ded03761ae7f8c682ac` / freshness `PASS` / 一次 `19 / 20` / 二次 `2 / 5` / 合計 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `concept/nomenclature error ×1 primary + solver omission ×3 secondary groups`
+- v49: candidate `51705262df5d0de3b218c95435165ee8f9054032` / freshness `PASS` / 一次 `19 / 20` / 二次 `2 / 5` / 合計 `21 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `concept/nomenclature error ×1 primary + solver omission ×3 secondary groups`
 
-v48 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v48_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
+v49 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v49_qa.md`。answer-bearingな不一致詳細はQAだけに保持し、本mandatory recordには書かない。
 
 - 教材修正・再生成: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -113,10 +114,10 @@ v48 QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_inte
 
 ## 次工程
 
-`TOPIC39_CLEAN_BLIND_V49`。別fresh worker/contextのみで実施する。
+`TOPIC39_CLEAN_BLIND_V50`。別fresh worker/contextのみで実施する。
 
 1. 最新main、上位仕様、系列SPEC、sanitized `STATUS.md` / `HANDOFF.md`、question-only intakeをreconcileする。
-2. candidate固定前はv1〜v48 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
+2. candidate固定前はv1〜v49 candidate/QA、公式標準解答、保存済み正答、Topic 39 answer-bearing教材・answer-bearing QAを開かない。
 3. question-only intakeと公式「問題」PDFだけで固定25答案要素を解く。R2二次はintake記載の5群境界を維持し、分割し直さない。
 4. candidateをcommitして固定した後にのみ、公式標準解答・既存教材と照合する。
 5. `25 / 25`公式一致、`25 / 25`教材導出可能、固定5群境界維持を満たした場合だけ最終QAへ進める。
