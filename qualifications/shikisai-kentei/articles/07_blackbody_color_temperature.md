@@ -549,6 +549,52 @@ $$
 
 CIE標準イルミナントAは、約2856 KのPlanckian radiationを基礎とする標準イルミナントである。
 
+### 11.1　灰色体なら「暗くなっても色度は変わらない」
+
+ここで、実在物体の放射率が可視域で波長に依存せず、一定値 $\varepsilon_0$ をとる理想化を考える。このような放射体を灰色体（grey body）として扱うと、
+
+$$
+L_\lambda(\lambda,T)
+=
+\varepsilon_0 B_\lambda(\lambda,T)
+$$
+
+である。するとXYZ三刺激値もすべて同じ倍率だけ小さくなる。
+
+$$
+X_{\rm g}=\varepsilon_0 X_{\rm b},\qquad
+Y_{\rm g}=\varepsilon_0 Y_{\rm b},\qquad
+Z_{\rm g}=\varepsilon_0 Z_{\rm b}
+$$
+
+ところが色度座標では共通因子が消える。
+
+$$
+x_{\rm g}
+=
+\frac{\varepsilon_0 X_{\rm b}}
+{\varepsilon_0(X_{\rm b}+Y_{\rm b}+Z_{\rm b})}
+=x_{\rm b}
+$$
+
+$$
+y_{\rm g}=y_{\rm b}
+$$
+
+したがって、同じ温度の理想灰色体は黒体より放射輝度が低くても、分光分布の形が同じなので色度は黒体と一致する。
+
+$$
+\boxed{
+\text{波長に依存しない放射率}
+\rightarrow
+\text{スペクトル全体を同倍率で縮小}
+\rightarrow
+\text{色度不変}
+}
+$$
+
+これは色温度が「光の絶対的な強さ」ではなく「可視域におけるスペクトル形状」から決まることを、数式で示している。反対に、実在のタングステンのように $\varepsilon(\lambda,T)$ が波長依存性をもつ選択放射体では、Planck分布の形そのものが変形するため、色温度と実温度は厳密には一致しない。
+
 ## 12　LEDの3000 Kはチップ温度ではない
 
 代表的な白色LEDは、青色LEDの発光と蛍光体による波長変換を組み合わせる。
@@ -720,12 +766,14 @@ $$
 - CIE, *International Lighting Vocabulary*, 17-24-004 “Planckian radiator”. https://cie.co.at/eilvterm/17-24-004
 - CIE, *International Lighting Vocabulary*, 17-24-005 “Planck's law”. https://cie.co.at/eilvterm/17-24-005
 - CIE, *International Lighting Vocabulary*, 17-24-007 “Stefan–Boltzmann's law”. https://cie.co.at/eilvterm/17-24-007
+- CIE, *International Lighting Vocabulary*, 17-24-009 “emissivity”. https://cie.co.at/eilvterm/17-24-009
 - CIE, *International Lighting Vocabulary*, 17-23-059 “Planckian locus”. https://cie.co.at/eilvterm/17-23-059
 - CIE, *International Lighting Vocabulary*, 17-23-067 “colour temperature”. https://cie.co.at/eilvterm/17-23-067
 - CIE, *International Lighting Vocabulary*, 17-23-068 “correlated colour temperature”. https://cie.co.at/eilvterm/17-23-068
 - CIE, *International Lighting Vocabulary*, 17-21-090 “luminous efficacy of radiation”. https://cie.co.at/eilvterm/17-21-090
 - CIE, “CIE spectral luminous efficiency for photopic vision”, data set based on CIE 018:2019. https://cie.co.at/datatable/cie-spectral-luminous-efficiency-photopic-vision
 - CIE, *Colorimetry — Part 2: CIE Standard Illuminants*. CIE standard illuminant A is based on a Planckian radiator at approximately 2856 K; D65 represents daylight of approximately 6500 K CCT. https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0
+- NIST, Watanabe, H. et al., “Spectral Emissivity Measurements”, 2014. https://www.nist.gov/publications/spectral-emissivity-measurements
 - OpenStax, *University Physics Volume 3*, §6.1 “Blackbody Radiation”. https://openstax.org/books/university-physics-volume-3/pages/6-1-blackbody-radiation
 - U.S. Department of Energy, “LED Basics”. https://www.energy.gov/cmei/ssl/led-basics
 - Eugene Hecht, *Optics*, 5th ed., Pearson, 2017.
