@@ -397,6 +397,75 @@ $$
 
 この区別は、LED、光化学、紫外線、生体作用を理解するときに重要である。
 
+### 8.1　エネルギーのスペクトルと光子数のスペクトルは同じ形ではない
+
+分光分布を扱うときは、さらに「波長ごとのエネルギー量」と「波長ごとの光子数」を区別する必要がある。CIEは放射量だけでなく光子量についても分光分布を定義している。
+
+波長 $\lambda$ における分光放射束を $\Phi_{e,\lambda}(\lambda)$、分光光子束を $\Phi_{p,\lambda}(\lambda)$ とする。1光子のエネルギーが
+
+$$
+E_\gamma=\frac{hc}{\lambda}
+$$
+
+であるから、同じ微小波長帯 $d\lambda$ に含まれる放射エネルギーと光子数の関係は
+
+$$
+\Phi_{e,\lambda}(\lambda)d\lambda
+=
+\frac{hc}{\lambda}
+\Phi_{p,\lambda}(\lambda)d\lambda
+$$
+
+となる。したがって、
+
+$$
+\boxed{
+\Phi_{p,\lambda}(\lambda)
+=
+\frac{\lambda}{hc}
+\Phi_{e,\lambda}(\lambda)
+}
+$$
+
+である。全光子束は
+
+$$
+\boxed{
+\Phi_p
+=
+\int
+\frac{\lambda}{hc}
+\Phi_{e,\lambda}(\lambda)\,d\lambda
+}
+$$
+
+となる。
+
+この式の意味は単純である。同じ1 Wの放射でも、長波長光ほど1光子あたりのエネルギーが小さいので、含まれる光子数は多い。
+
+たとえば450 nmと650 nmの単色光が同じ放射束を持つなら、光子束の比は
+
+$$
+\frac{\Phi_p(650)}{\Phi_p(450)}
+=
+\frac{650}{450}
+\approx1.44
+$$
+
+となる。つまり同じ放射パワーなら、650 nm光は450 nm光より約44%多い光子を含む。
+
+したがって、
+
+$$
+\text{分光放射量}
+\neq
+\text{分光光子量}
+$$
+
+であり、グラフの形も一般には一致しない。これはLEDの発光効率、光化学、光検出器、生体の光応答を比較するときに重要になる。
+
+ただし、人間の明るさ感覚も単純な光子数では決まらない。視感効率には強い波長依存性があるため、放射パワー、光子数、測光量はそれぞれ別の物理量として扱う必要がある。
+
 ## 9　白色光には「白という波長」はない
 
 白色光は特定の1波長ではない。
@@ -588,6 +657,11 @@ E=h\nu=\frac{hc}{\lambda}
 $$
 
 $$
+\Phi_{p,\lambda}(\lambda)
+=\frac{\lambda}{hc}\Phi_{e,\lambda}(\lambda)
+$$
+
+$$
 Q_\lambda(\lambda)\,d\lambda
 =Q_\nu(\nu)\,|d\nu|
 $$
@@ -601,6 +675,7 @@ $$
 - Poyntingの定理：電磁場のエネルギーが物質へ移る過程をどう保存則で表すか
 - 強度：単位面積・単位時間あたりのエネルギー流
 - 光子エネルギー：物質との量子的なエネルギー交換
+- 分光光子束：同じ放射エネルギーでも波長によって含まれる光子数が異なること
 - 分光密度の変数変換：同じ放射を波長・振動数のどちらで表しても総量を保存する条件
 
 を表している。
@@ -611,6 +686,7 @@ $$
 - [色彩検定協会「色彩検定とは」](https://www.aft.or.jp/pages/feature/level)
 - [CIE International Lighting Vocabulary: visible radiation](https://cie.co.at/eilvterm/17-21-003)
 - [CIE International Lighting Vocabulary: spectral distribution](https://cie.co.at/eilvterm/17-21-029)
+- [CIE International Lighting Vocabulary: photon flux](https://cie.co.at/eilvterm/17-21-040)
 - [NIST CODATA: speed of light in vacuum](https://physics.nist.gov/cuu/Constants/Value/c.html)
 - [NIST Fundamental Physical Constants](https://physics.nist.gov/cuu/Constants/)
 - [OpenStax, University Physics Volume 2, Plane Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-2-plane-electromagnetic-waves)
