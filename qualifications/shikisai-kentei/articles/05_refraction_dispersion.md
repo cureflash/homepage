@@ -478,6 +478,88 @@ $$
 
 異なるAbbe数を持つガラスを組み合わせると、ある複数波長で焦点を近づけられる。アクロマートがその代表である。
 
+### 14.1　なぜ2種類のガラスで色収差を打ち消せるのか――アクロマートの条件
+
+薄いレンズの屈折力を
+
+$$
+\Phi=\frac{1}{f}
+$$
+
+とする。第 $i$ レンズについて、FraunhoferのF線とC線の間で生じる屈折力の差を $\Delta\Phi_i=\Phi_{F,i}-\Phi_{C,i}$ と書く。
+
+レンズの形状を表す曲率因子を $K_i$ とすれば
+
+$$
+\Phi_i(\lambda)=[n_i(\lambda)-1]K_i
+$$
+
+なので、
+
+$$
+\Delta\Phi_i=(n_{F,i}-n_{C,i})K_i
+$$
+
+である。Abbe数
+
+$$
+V_i=\frac{n_{d,i}-1}{n_{F,i}-n_{C,i}}
+$$
+
+を使うと、d線での屈折力 $\Phi_{d,i}=(n_{d,i}-1)K_i$ との間に
+
+$$
+\boxed{
+\Delta\Phi_i=\frac{\Phi_{d,i}}{V_i}
+}
+$$
+
+が成り立つ。
+
+2枚の薄いレンズを密着させると、総屈折力は第一近似で
+
+$$
+\Phi=\Phi_1+\Phi_2
+$$
+
+である。F線とC線の焦点を一致させるには、2枚を合わせた屈折力の波長差を0にすればよいから、
+
+$$
+\Delta\Phi_1+\Delta\Phi_2=0
+$$
+
+すなわち
+
+$$
+\boxed{
+\frac{\Phi_1}{V_1}+\frac{\Phi_2}{V_2}=0
+}
+$$
+
+がアクロマートの一次色消し条件になる。
+
+通常は低分散でAbbe数の大きいクラウンガラスを正レンズ、高分散でAbbe数の小さいフリントガラスを負レンズとして組み合わせる。すると総屈折力
+
+$$
+\Phi_1+\Phi_2>0
+$$
+
+を保ちながら、色による屈折力差だけを互いに打ち消せる。
+
+目標となる総屈折力を $\Phi$ とすれば、二つの条件を連立して
+
+$$
+\boxed{
+\Phi_1=\Phi\frac{V_1}{V_1-V_2},
+\qquad
+\Phi_2=-\Phi\frac{V_2}{V_1-V_2}
+}
+$$
+
+となる。つまりアクロマートは「青と赤を同じように曲げる特殊なガラス」ではなく、分散の異なる2枚のレンズに正負の屈折力を分担させ、波長依存部分だけを相殺する設計である。
+
+ただしAbbe数はF・d・Cの3波長だけで分散を要約した量なので、2波長を一致させても全可視域で完全に焦点が一致するわけではない。残る波長依存性は二次スペクトルと呼ばれ、より高度な色収差補正では異常部分分散を持つ材料や3枚以上のレンズを用いる。
+
 ## 15　全反射もSnellの法則から出てくる
 
 屈折率の大きい媒質から小さい媒質へ光が進む場合、Snellの法則は
@@ -641,5 +723,6 @@ $$
 - [NIST, Minimum-Deviation-Angle Refractometry System](https://www.nist.gov/laboratories/tools-instruments/minimum-deviation-angle-refractometry-system)
 - [Photonics Dictionary, “prism chromatic resolving power”](https://www.photonics.com/Dictionary/prism-chromatic-resolving-power/d6397)
 - [Edmund Optics, Optical Glass](https://www.edmundoptics.com/knowledge-center/application-notes/optics/optical-glass/)
+- [RP Photonics, “Abbe Number”](https://www.rp-photonics.com/abbe_number.html)
 - D. C. Hutchings, M. Sheik-Bahae, D. J. Hagan, E. W. Van Stryland, “Kramers-Kronig Relations in Nonlinear Optics,” *Optical and Quantum Electronics* 24 (1992).
 - Eugene Hecht, *Optics*, 5th ed., Pearson, 2017.
