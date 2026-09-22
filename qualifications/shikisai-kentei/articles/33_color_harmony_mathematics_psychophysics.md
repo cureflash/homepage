@@ -720,6 +720,124 @@ $$
 
 この方法を使えば、古典的な「補色は調和する」「等間隔配置は調和する」といった命題を、配色対の選択確率という観測可能な量へ落として検証できる。BradleyとTerryの原論文が不完備ブロック計画を扱っているのも、すべての対象を総当たりで比較しなくても相対尺度を推定する必要があるためである。
 
+## 19　色相配列は円統計と高次円モーメントで測れる
+
+色相角 $\theta$ は直線上の変数ではなく、$2\pi$ で一周する周期変数である。したがって通常の算術平均をそのまま使うと、例えば $1^\circ$ と $359^\circ$ の平均が $180^\circ$ になり、色相環上の近さを壊してしまう。
+
+円統計では各色相を単位複素数
+
+$$
+z_j=e^{i\theta_j}
+$$
+
+へ写し、一次円モーメント
+
+$$
+\mu_1=
+\frac{1}{n}\sum_{j=1}^{n}e^{i\theta_j}
+$$
+
+を考える。その絶対値
+
+$$
+R_1=|\mu_1|,
+\qquad 0\le R_1\le1
+$$
+
+は平均合成ベクトル長（mean resultant length）で、1に近いほど色相が一方向へ集中し、0に近いほど円周上で互いに相殺されている。円分散の代表的な定義は
+
+$$
+V_c=1-R_1
+$$
+
+である。
+
+しかし一次モーメントだけでは、規則的な多色配色を十分に区別できない。正三角形のトライアドも、正方形のテトラードも、各ベクトルの和が0になるため
+
+$$
+\mu_1=0
+$$
+
+である。つまり「三方向へ規則的に分かれた配色」と「四方向へ規則的に分かれた配色」は、一次モーメントだけを見ると同じになってしまう。
+
+そこで高次の円モーメント
+
+$$
+\mu_m=
+\frac{1}{n}\sum_{j=1}^{n}e^{im\theta_j}
+$$
+
+を使う。正$n$角形型の配色
+
+$$
+\theta_j=\theta_0+\frac{2\pi j}{n},
+\qquad j=0,1,\dots,n-1
+$$
+
+を代入すると、
+
+$$
+\mu_m
+=e^{im\theta_0}
+\frac{1}{n}
+\sum_{j=0}^{n-1}
+e^{2\pi i m j/n}
+$$
+
+となる。右辺の和は等比数列なので、$m$ が $n$ の倍数なら
+
+$$
+|\mu_m|=1
+$$
+
+それ以外では
+
+$$
+|\mu_m|=0
+$$
+
+となる。したがって、理想的なトライアドでは $|\mu_3|=1$、理想的なテトラードでは $|\mu_4|=1$ となり、それぞれ3回対称・4回対称の規則性を抽出できる。
+
+さらに色相全体を一定角 $\alpha$ だけ回転させても
+
+$$
+\theta_j\rightarrow\theta_j+\alpha
+$$
+
+なら
+
+$$
+\mu_m\rightarrow e^{im\alpha}\mu_m
+$$
+
+であり、絶対値は
+
+$$
+|\mu_m|\rightarrow|\mu_m|
+$$
+
+と不変である。つまり $|\mu_m|$ は「赤を起点にするか青を起点にするか」といった絶対的な色相位置ではなく、配色内部の$n$回対称性だけを測る回転不変な特徴量になっている。
+
+この考え方は、色相配列を円周上の離散幾何からさらにフーリエ解析へ拡張したものとみなせる。$\mu_m$ は円周上の色相分布の$m$次フーリエ係数に相当し、どの周期構造が強いかを分解している。
+
+ただし、ここでも
+
+$$
+|\mu_3|=1
+$$
+
+だから「必ず調和する」という結論にはならない。$|\mu_m|$ はあくまで配色の幾何学的特徴量である。心理実験と接続するなら、例えば
+
+$$
+H
+=\beta_0
++\sum_{m=1}^{M}\beta_m|\mu_m|
++\boldsymbol{\gamma}^{\mathsf T}\mathbf q
++\varepsilon
+$$
+
+とし、$\mathbf q$ に明度差、彩度差、面積比などを入れて、係数を観察者データから推定する。この形なら「等間隔の色相は調和しやすい」という古典的命題を、最初から真と仮定せず、検証可能な統計仮説へ変換できる。
+
 ## 参考資料
 
 1. 公益社団法人 色彩検定協会, 「色彩検定とは―各級の目安」. https://www.aft.or.jp/pages/feature/level
@@ -733,3 +851,5 @@ $$
 9. G. Sharma, W. Wu and E. N. Dalal, “The CIEDE2000 Color-Difference Formula: Implementation Notes, Supplementary Test Data, and Mathematical Observations,” *Color Research & Application*, 30(1), 21–30, 2005. DOI: 10.1002/col.20070.
 10. CIE, *CIE 015:2018 Colorimetry, 4th Edition*, International Commission on Illumination, 2018. https://cie.co.at/publications/colorimetry-4th-edition
 11. R. A. Bradley and M. E. Terry, “Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons,” *Biometrika*, 39(3/4), 324–345, 1952. DOI: 10.1093/biomet/39.3-4.324.
+12. N. I. Fisher, *Statistical Analysis of Circular Data*, Cambridge University Press, 1993.
+13. K. V. Mardia and P. E. Jupp, *Directional Statistics*, Wiley, 2000.
