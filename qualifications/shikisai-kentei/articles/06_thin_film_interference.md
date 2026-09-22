@@ -630,6 +630,106 @@ $$
 
 シャボン膜では各面の反射率が低いため、最初の2本だけを考える近似でも色の主要な仕組みは理解できる。しかし干渉フィルター、多層膜、光学コーティングを定量的に設計するには、多重反射まで含めた振幅計算が必要になる。
 
+### 11.1　多層膜は2×2行列で一括計算できる
+
+膜が1層なら上の無限級数を直接扱えるが、数十層の誘電体膜では各界面の多重反射を一つずつ追うのは非効率である。そこで各層を「その層を通過すると電場と磁場がどう変換されるか」を表す2×2行列に置き換える。
+
+非磁性媒質、垂直入射を考え、真空インピーダンス $Z_0$ を用いて磁場を $Z_0H$ に規格化する。第 $j$ 層の屈折率を $n_j$、厚さを $d_j$、位相厚を
+
+$$
+\delta_j=\frac{2\pi n_jd_j}{\lambda_0}
+$$
+
+とすると、特性行列は
+
+$$
+\boxed{
+M_j=
+\begin{pmatrix}
+\cos\delta_j & i\,\sin\delta_j/n_j\\
+i\,n_j\sin\delta_j & \cos\delta_j
+\end{pmatrix}
+}
+$$
+
+と書ける。$N$ 層なら全体は単純な行列積
+
+$$
+\boxed{M=M_1M_2\cdots M_N}
+$$
+
+であり、
+
+$$
+M=
+\begin{pmatrix}
+A&B\\
+C&D
+\end{pmatrix}
+$$
+
+とする。基板の屈折率を $n_s$ とすれば、入射側から見た規格化アドミタンスは
+
+$$
+Y_{\rm in}
+=\frac{C+Dn_s}{A+Bn_s}
+$$
+
+となる。入射媒質の屈折率を $n_0$ とすると、反射振幅と反射率は
+
+$$
+\boxed{
+r=\frac{n_0-Y_{\rm in}}{n_0+Y_{\rm in}},\qquad
+R=|r|^2
+}
+$$
+
+で求められる。
+
+この形式の利点は、1層でも100層でも計算手順が変わらないことである。各層の厚さと屈折率を入れれば、波長ごとの $R(\lambda)$ を機械的に計算できる。
+
+特に高屈折率層 $H$ と低屈折率層 $L$ を交互に並べ、設計波長 $\lambda_B$ で
+
+$$
+n_Hd_H=n_Ld_L=\frac{\lambda_B}{4}
+$$
+
+とすると、各層で
+
+$$
+\delta_H=\delta_L=\frac{\pi}{2}
+$$
+
+となる。この「4分の1波長膜」では、多数の界面から戻る反射波が設計波長付近でほぼ同位相になり、高反射率のBragg mirror（誘電体多層膜鏡）を作れる。屈折率コントラスト $n_H/n_L$ と層対数が大きいほど、一般に高い反射率を得やすく、反射帯域も広くなる。
+
+斜入射では偏光ごとの光学アドミタンスを
+
+$$
+\eta_j^{(s)}=n_j\cos\theta_j,
+\qquad
+\eta_j^{(p)}=\frac{n_j}{\cos\theta_j}
+$$
+
+として同じ行列形式へ入れれば、$s$・$p$ 偏光の角度依存反射を扱える。したがって多層膜の色は
+
+$$
+\boxed{
+\{n_j,d_j\}
+\rightarrow
+M(\lambda,\theta,p)
+\rightarrow
+R(\lambda,\theta,p)
+\rightarrow
+S_{\rm out}(\lambda)
+\rightarrow
+(X,Y,Z)
+}
+$$
+
+という一続きの計算で記述できる。
+
+この枠組みは、シャボン膜のような単層干渉から、眼鏡の反射防止膜、誘電体ミラー、ダイクロイックフィルター、真珠光沢顔料の多層構造までを同じ波動光学で扱えることを示している。
+
 ## 12　反射防止膜も同じ原理を逆向きに使う
 
 干渉は色を強くするだけではない。特定波長の反射を打ち消すこともできる。
@@ -755,4 +855,7 @@ $$
 - OpenStax, *University Physics Volume 3*, §3.4 “Interference in Thin Films”. https://openstax.org/books/university-physics-volume-3/pages/3-4-interference-in-thin-films
 - R. Nave, HyperPhysics, “Interference in Thin Films”. Georgia State University. https://hyperphysics.phy-astr.gsu.edu/hbase/phyopt/interf.html
 - Rüdiger Paschotta, RP Photonics Encyclopedia, “Coherence” and “Coherence Length”. https://www.rp-photonics.com/coherence.html ; https://www.rp-photonics.com/coherence_length.html
+- RP Photonics Encyclopedia, article on “Quarter-wave Mirrors”, Dr. Rüdiger Paschotta, https://www.rp-photonics.com/quarter_wave_mirrors.html
+- RP Photonics Encyclopedia, article on “Dielectric Mirrors”, Dr. Rüdiger Paschotta, https://www.rp-photonics.com/dielectric_mirrors.html
+- CIE, *Colorimetry, 4th Edition*, CIE 015:2018. https://www.cie.co.at/publications/colorimetry-4th-edition
 - Eugene Hecht, *Optics*, 5th ed., Pearson, 2017. Chapters on interference and thin films.
