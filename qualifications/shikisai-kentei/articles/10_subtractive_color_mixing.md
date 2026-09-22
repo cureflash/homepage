@@ -800,6 +800,68 @@ $$
 
 を同時に扱う必要がある。CMYの暗記規則から実際のプリンタ色再現へ進むと、放射輸送と空間平均の両方が必要になる。
 
+### 12.2　Yule–Nielsen指数は何を補正しているのか
+
+通常のNeugebauer式
+
+$$
+R(\lambda)=\sum_j a_jR_j(\lambda)
+$$
+
+は、各微小領域で生じた反射光がその領域の真上からそのまま出てくる、という局所的な面積平均を仮定している。しかし実際の紙では、光は繊維内部へ入り、複数回散乱して横方向にも広がる。そのため、インキ網点の下へ入った光が紙白部から出たり、紙白部へ入った光がインキ領域を通って出たりする。幾何学的な網点境界と、光学的に観測される明暗の境界が一致しない。
+
+Yule–Nielsen修正式は、この非局所的な光輸送を厳密な放射輸送方程式で解く代わりに、反射率へべき変換を施して経験的に吸収するモデルである。
+
+二値の網点を考え、紙白の分光反射率を $R_W(\lambda)$、ベタインキ部を $R_I(\lambda)$、インキ面積率を $a$ とすれば
+
+$$
+\boxed{
+R(\lambda)^{1/n}
+=
+(1-a)R_W(\lambda)^{1/n}
++aR_I(\lambda)^{1/n}
+}
+$$
+
+となる。これを $a$ について解けば
+
+$$
+\boxed{
+a
+=
+\frac{R_W(\lambda)^{1/n}-R(\lambda)^{1/n}}
+{R_W(\lambda)^{1/n}-R_I(\lambda)^{1/n}}
+}
+$$
+
+を得る。したがって、実測した分光反射率から「光学的にどれだけインキで覆われているように見えるか」を逆算できる。
+
+$n=1$ では
+
+$$
+R=(1-a)R_W+aR_I
+$$
+
+となり、単純な面積平均へ戻る。$n\neq1$ が必要になることは、観測反射率が幾何学的面積率だけでは決まらず、紙内部散乱、内部反射、インキの広がり、網点寸法などが影響していることを示す。
+
+ただし $n$ は散乱係数そのものではない。基材、インキ、スクリーン線数、網点形状、測定条件など複数の効果をまとめて吸収する経験パラメータであり、普遍定数ではない。実際の高精度なプリンタモデルでは、Yule–Nielsen修正式に加えてインキの物理的ドットゲインや重なり条件ごとのインキ拡がりも別途モデル化する。
+
+ここで因果関係を整理すると、
+
+$$
+\boxed{
+\text{紙内部の横方向散乱・内部反射}
+\rightarrow
+\text{局所的な面積平均からのずれ}
+\rightarrow
+\text{光学的ドットゲイン}
+\rightarrow
+\text{Yule–Nielsen型の非線形補正}
+}
+$$
+
+となる。減法混色を印刷まで拡張すると、単に「インキが波長を吸収する」だけでなく、光が紙の中をどこへ移動してから出射するかまで色再現に影響する。
+
 ## 13　なぜシアンは「赤の補色」なのか
 
 理想的な白色光をRGB三成分で
@@ -942,3 +1004,5 @@ $$
 - Kubelka, P. & Munk, F., “Ein Beitrag zur Optik der Farbanstriche,” Zeitschrift für technische Physik, 12, 593–601 (1931).
 - Simonot, L. et al., “Quantitative coating thickness determination using a coefficient-independent hyperspectral scattering model,” Journal of the European Optical Society-Rapid Publications, 13, 20 (2017). https://doi.org/10.1186/s41476-017-0068-2
 - Wyble, D. R. & Berns, R. S., “A critical review of spectral models applied to binary color printing,” Color Research & Application, 25(1), 4–19 (2000). https://doi.org/10.1002/(SICI)1520-6378(200002)25:1%3C4::AID-COL3%3E3.0.CO;2-X
+- Hébert, M. & Hersch, R. D., “Review of spectral reflectance models for halftone prints: Principles, calibration, and prediction accuracy,” Color Research & Application, 40(4), 383–397 (2015). https://doi.org/10.1002/col.21907
+- Zuffi, S., Santini, S. & Schettini, R., “Accounting for Inks Interaction in the Yule-Nielsen Spectral Neugebauer Model,” Journal of Imaging Science and Technology, 50(1), 35–44 (2006). https://doi.org/10.2352/J.ImagingSci.Technol.(2006)50:1(35)
