@@ -333,6 +333,157 @@ $$
 
 これが「同じ白色点の照明でも演色が異なる」ことの数学的な核心である。
 
+### 6.3　微小な分光変化が物体色へどう伝わるか――感度核
+
+照明設計では「赤色域を少し増やしたら物体色がどちらへ動くか」のように、スペクトルの微小変化に対する色の感度を知りたいことがある。ここでは6.1の正規化を含めて、その関係を一次摂動として導く。
+
+等色関数をベクトル
+
+$$
+\mathbf{c}(\lambda)=
+\begin{pmatrix}
+\bar x(\lambda)\\
+\bar y(\lambda)\\
+\bar z(\lambda)
+\end{pmatrix}
+$$
+
+とし、
+
+$$
+Q=\int S(\lambda)\bar y(\lambda)\,d\lambda,
+\qquad
+\mathbf{A}_{\rho}=\int S(\lambda)\rho(\lambda)\mathbf{c}(\lambda)\,d\lambda
+$$
+
+と置くと、正規化された物体色の三刺激値は
+
+$$
+\mathbf{t}_{\rho}
+=
+\frac{100}{Q}\mathbf{A}_{\rho}
+$$
+
+である。照明を
+
+$$
+S(\lambda)\rightarrow S(\lambda)+\varepsilon\,\delta S(\lambda)
+$$
+
+だけ変化させる。さらに
+
+$$
+q=\int \delta S(\lambda)\bar y(\lambda)\,d\lambda,
+\qquad
+\mathbf{B}_{\rho}=\int \delta S(\lambda)\rho(\lambda)\mathbf{c}(\lambda)\,d\lambda
+$$
+
+とすれば、$\varepsilon$ の一次までで
+
+$$
+\boxed{
+\delta\mathbf{t}_{\rho}
+=
+\frac{100}{Q}
+\left(
+\mathbf{B}_{\rho}
+-
+\frac{q}{Q}\mathbf{A}_{\rho}
+\right)
+}
+$$
+
+となる。第1項は追加・削減した波長成分が物体の反射率と等色関数を通して直接XYZを動かす効果、第2項は白色基準の $Y=100$ を保つための正規化補正である。
+
+この式は積分核の形にも書ける。
+
+$$
+\boxed{
+\delta\mathbf{t}_{\rho}
+=
+\int
+\mathbf{K}_{\rho}(\lambda)\,
+\delta S(\lambda)\,d\lambda
+}
+$$
+
+ただし
+
+$$
+\boxed{
+\mathbf{K}_{\rho}(\lambda)
+=
+\frac{100}{Q}
+\left[
+\rho(\lambda)\mathbf{c}(\lambda)
+-
+\frac{\mathbf{A}_{\rho}}{Q}\bar y(\lambda)
+\right]
+}
+$$
+
+である。この $\mathbf{K}_{\rho}(\lambda)$ を、照明スペクトルに対する物体色の感度核とみなせる。どの波長を変えたときXYZがどの方向へ動くかは、光源だけでなく物体の $\rho(\lambda)$ に依存する。
+
+特に、照明全体を同じ割合だけ増やす
+
+$$
+\delta S(\lambda)=\alpha S(\lambda)
+$$
+
+という変化では
+
+$$
+\mathbf{B}_{\rho}=\alpha\mathbf{A}_{\rho},
+\qquad
+q=\alpha Q
+$$
+
+だから
+
+$$
+\boxed{
+\delta\mathbf{t}_{\rho}=\mathbf{0}
+}
+$$
+
+となる。つまり相対測色では、単なる光量の増減は色を変えず、スペクトルの「形」が変わったときに初めて色が動く。この結果は、演色性が照明の明るさそのものではなく分光構成に依存することを数式で示している。
+
+さらにXYZからxy色度への変化は、$T=X+Y+Z$ と置けば
+
+$$
+\begin{pmatrix}
+\delta x\\
+\delta y
+\end{pmatrix}
+\approx
+\frac{1}{T^2}
+\begin{pmatrix}
+Y+Z & -X & -X\\
+-Y & X+Z & -Y
+\end{pmatrix}
+\begin{pmatrix}
+\delta X\\
+\delta Y\\
+\delta Z
+\end{pmatrix}
+$$
+
+と一次近似できる。したがって物理的な因果関係は
+
+$$
+\boxed{
+\delta S(\lambda)
+\rightarrow
+\rho(\lambda)\delta S(\lambda)
+\rightarrow
+\delta XYZ
+\rightarrow
+\delta(x,y)
+}
+$$
+
+と連続的に追跡できる。たとえば深赤色域の放射を増やしたとき、長波長反射率の高い赤い物体ではその影響が大きく、長波長をほとんど反射しない青い物体では小さい。これが「同じ照明変更でも物体ごとに色の動き方が違う」理由である。
+
 ## 7　同じ色温度でも演色は同じではない
 
 色温度や相関色温度は、光源の白色点が黒体軌跡のどこに近いかを表す指標である。
@@ -720,7 +871,7 @@ $$
 - CIE, *Spectral radiance factors of 14 test samples for the CIE colour rendering index calculation*. DOI: 10.25039/CIE.DS.wuiuu9cz. https://cie.co.at/datatable/spectral-radiance-factors-14-test-samples-cie-colour-rendering-index-calculation
 - CIE, ISO/CIE 11664-2:2022, *Colorimetry — Part 2: CIE Standard Illuminants*. https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0
 - CIE, CIE 224:2017, *CIE 2017 Colour Fidelity Index for accurate scientific use*. https://www.cie.co.at/publications/cie-2017-colour-fidelity-index-accurate-scientific-use
-- CIE, *Spectral radiance factors of 99 test samples for the CIE colour fidelity index calculation*. DOI: 10.25039/CIE.DS.wi5idbqu. https://www.cie.co.at/datatable/spectral-radiance-factors-99-test-samples-cie-colour-fidelity-index-calculation
+- CIE, *Spectral radiance factors of 99 test samples for the CIE colour fidelity index calculation*. DOI: 10.25039/CIE.DS.wi5idbqu. https://cie.co.at/datatable/spectral-radiance-factors-99-test-samples-cie-colour-fidelity-index-calculation
 - CIE, CIE PS 002:2025, *CIE Position Statement on Colour Quality Metrics, 2nd Edition*. https://cie.co.at/publications/cie-ps-0022025-cie-position-statement-colour-quality-metrics-2nd-edition
 - Illuminating Engineering Society (IES), *PS-11-18: IES Position on TM-30-18, IES Method for Evaluating Light Source Color Rendition*. https://ies.org/advocacy/ps-11-18/
 - National Institute of Standards and Technology (NIST), Davis, W. L. & Ohno, Y., “Toward an Improved Color Rendering Metric,” 2005. https://www.nist.gov/publications/toward-improved-color-rendering-metric
