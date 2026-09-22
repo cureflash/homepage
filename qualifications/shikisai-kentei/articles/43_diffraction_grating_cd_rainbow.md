@@ -511,7 +511,13 @@ c_m=\frac{1}{d}\int_0^d g(x)
 }
 $$
 
-である。この$m$番目の空間Fourier成分が、横方向波数を$mG=m2\pi/d$だけ変える$m$次回折光に対応する。したがってスカラー回折の近似では、$m$次の回折効率は概念的に
+である。この$m$番目の空間Fourier成分が、横方向波数を
+
+$$
+mG=m\frac{2\pi}{d}
+$$
+
+だけ変える$m$次回折光に対応する。したがってスカラー回折の近似では、$m$次の回折効率は概念的に
 
 $$
 \boxed{\eta_m\propto|c_m|^2}
@@ -663,7 +669,7 @@ $$
   https://ocw.mit.edu/courses/8-511-theory-of-solids-i-fall-2004/resources/lec2/
 - MIT OpenCourseWare, *Electricity and Magnetism*, Chapter 14: Interference and Diffraction.  
   https://ocw.mit.edu/courses/8-02t-electricity-and-magnetism-spring-2005/resources/ch14_inter_diffr/
-- Christopher Palmer, *Diffraction Grating Handbook*, 8th ed., Richardson Gratings / MKS Instruments, 2020.  
+- Christopher Palmer, *Diffraction Grating Handbook*, 8th ed., Richardson Gratings / MKS Instruments, 2020, Ch. 2, 9, 12.  
   https://www.newport.com/medias/sys_master/npresources/h30/h1b/9954522529822/MKS%20Diffraction%20Grating%20Handbook/MKS-Diffraction-Grating-Handbook.pdf
 - Thorlabs, “Diffraction Gratings Tutorial / Introduction to Diffraction Gratings”  
   https://www.thorlabs.com/catalogpages/V21/876.PDF
