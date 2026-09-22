@@ -85,6 +85,57 @@ $$
 
 したがってu′v′は、新しい物理量を測って得る座標ではない。同じXYZの色度情報を、知覚的な距離関係がxyより改善するよう別の幾何学へ写し直したものである。
 
+### 1960 UCSとの関係――v′はなぜ1.5倍なのか
+
+CIE 1976 UCSの前には、CIE 1960 UCS $(u,v)$ が使われていた。共通の分母
+
+$$
+Q=X+15Y+3Z
+$$
+
+を使うと、1960 UCSは
+
+$$
+u=\frac{4X}{Q},\qquad
+v=\frac{6Y}{Q}
+$$
+
+である。1976 UCSと比較すれば
+
+$$
+\boxed{u'=u},\qquad
+\boxed{v'=\frac32v}
+$$
+
+となる。つまり1976 UCSは、1960 UCSから見ると $u$ 軸はそのまま、$v$ 軸だけを1.5倍した座標である。CIEも1976 UCSを1960 UCSの修正版として定義し、この関係を明記している。
+
+行列で書けば
+
+$$
+\begin{pmatrix}u'\\v'\end{pmatrix}
+=
+\begin{pmatrix}1&0\\0&3/2\end{pmatrix}
+\begin{pmatrix}u\\v\end{pmatrix}.
+$$
+
+したがって、2色の差について1976 UCS上のユークリッド距離は
+
+$$
+\Delta c_{76}^2
+=(\Delta u')^2+(\Delta v')^2
+=(\Delta u)^2+\frac94(\Delta v)^2
+$$
+
+となる。同じ色対でも、1960 UCSの $(u,v)$ と1976 UCSの $(u',v')$ では距離の数値が同じにはならない。これは単なる記号変更ではなく、色度平面の縦方向へ異方的な尺度変更を行ったためである。
+
+この違いは相関色温度を読むときにも重要である。CIEは1960 UCSが相関色温度の決定に広く使われてきたことを明記しており、現在の定義では修正1976 UCS上でPlanck軌跡への近さを扱う。古い資料や実装では $(u,v)$、新しい色度図では $(u',v')$ が現れるため、特に
+
+$$
+v'=1.5v
+$$
+
+を確認せずに数値を混用してはいけない。
+
 ## 3　xy→u′v′は射影変換である
 
 $$
@@ -772,6 +823,7 @@ $$
 - xyはXYZから強度方向を除いた色度座標である
 - xy図の距離は知覚色差と一致しない
 - u′v′はxyを射影変換して色度の均等性を改善する
+- CIE 1960 UCSと1976 UCSは $u'=u,\ v'=1.5v$ の関係にあり、両者の数値を混用しない
 - 射影変換なので混色直線は直線のまま保たれる
 - Jacobianが場所によって変わるため、xy図は非一様に伸縮される
 - u′v′のユークリッド距離をxyへ引き戻すと $G=J^{\mathsf T}J$ という位置依存の局所計量になる
@@ -800,6 +852,10 @@ $$
   https://www.aft.or.jp/pages/feature/level
 - CIE e-ILV 17-23-073, “CIE 1976 uniform-chromaticity-scale diagram”  
   https://cie.co.at/eilvterm/17-23-073
+- CIE e-ILV 17-23-079, “CIE 1960 uniform-chromaticity-scale diagram”  
+  https://cie.co.at/eilvterm/17-23-079
+- CIE e-ILV 17-23-068, “correlated colour temperature”  
+  https://cie.co.at/eilvterm/17-23-068
 - CIE e-ILV 17-23-074, “CIE 1976 L*u*v* colour space”  
   https://cie.co.at/eilvterm/17-23-074
 - CIE e-ILV 17-23-075, “CIE 1976 L*u*v* colour difference”  
