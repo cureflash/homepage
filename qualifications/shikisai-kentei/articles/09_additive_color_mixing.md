@@ -75,6 +75,113 @@ $$
 
 加法混色の物理的な「加法」は、まずここにある。
 
+### 2.1　なぜ異なる色の光では干渉項が消えるのか――ビート周波数と時間平均
+
+前節の「時間平均で干渉項が消える」を、異なる周波数を持つ2つの光で明示的に計算する。偏光方向が同じ単色波を
+
+$$
+E_1(t)=E_{01}\cos\omega_1t
+$$
+
+$$
+E_2(t)=E_{02}\cos(\omega_2t+\phi)
+$$
+
+とする。強度に現れる交差項は
+
+$$
+2E_1E_2
+=E_{01}E_{02}
+\left[
+\cos\{(\omega_1-\omega_2)t-\phi\}
++
+\cos\{(\omega_1+\omega_2)t+\phi\}
+\right]
+$$
+
+となる。ここで
+
+$$
+2\cos a\cos b=\cos(a-b)+\cos(a+b)
+$$
+
+を使った。
+
+検出器が時間 $T$ にわたって信号を平均すると、差周波数 $\Delta\omega=\omega_1-\omega_2$ の項は
+
+$$
+\frac{1}{T}\int_0^T
+\cos(\Delta\omega t-\phi)\,dt
+=
+\operatorname{sinc}\!\left(\frac{\Delta\omega T}{2}\right)
+\cos\!\left(\frac{\Delta\omega T}{2}-\phi\right)
+$$
+
+となる。ただし
+
+$$
+\operatorname{sinc}x=\frac{\sin x}{x}
+$$
+
+である。したがって
+
+$$
+|\Delta\omega|T\gg1
+$$
+
+ならこの項はほぼ0になり、さらに和周波数 $\omega_1+\omega_2$ の項も同様に平均で消える。その結果、
+
+$$
+\boxed{\langle I\rangle\approx I_1+I_2}
+$$
+
+が得られる。
+
+例えば630 nmの赤色光と530 nmの緑色光では
+
+$$
+\nu_R\approx4.76\times10^{14}\ \mathrm{Hz}
+$$
+
+$$
+\nu_G\approx5.66\times10^{14}\ \mathrm{Hz}
+$$
+
+なので、差周波数は
+
+$$
+|\Delta\nu|\approx9.0\times10^{13}\ \mathrm{Hz}
+$$
+
+であり、ビート周期は約
+
+$$
+T_{\rm beat}=\frac{1}{|\Delta\nu|}
+\approx1.1\times10^{-14}\ \mathrm{s}
+$$
+
+しかない。眼や通常の測光器が扱う時間尺度に比べて極端に短いため、赤と緑の交差項は観測上平均化され、各光の強度が独立に足される。
+
+逆に、周波数差が十分小さい2本のレーザーを高速フォトダイオードで重ねると、$|\nu_1-\nu_2|$ のビート信号を電気的に検出できる。また同じ周波数で位相差が安定していれば、通常の干渉縞として交差項が残る。
+
+つまり加法混色の「光は足し算できる」は、Maxwell方程式が線形だからだけではない。
+
+$$
+\boxed{
+\text{電場の重ね合わせ}
+\rightarrow
+\text{強度検出で二乗}
+\rightarrow
+\text{有限時間で平均}
+\rightarrow
+\text{高速な干渉項が消える}
+\rightarrow
+\text{強度の加算}
+}
+$$
+
+という検出過程まで含めて成立する近似である。
+
 ## 3　加わるのは「色名」ではなく分光分布である
 
 色を物理量として扱うには、波長ごとの放射量を表す分光分布 $S(\lambda)$ を使う。
@@ -702,5 +809,8 @@ $$
 - ISO/CIE 11664-1:2019, *Colorimetry — Part 1: CIE standard colorimetric observers*. https://www.cie.co.at/publications/colorimetry-part-1-cie-standard-colorimetric-observers-0
 - ISO/CIE 11664-3:2019, *Colorimetry — Part 3: CIE tristimulus values*. https://www.cie.co.at/publications/colorimetry-part-3-cie-tristimulus-values-2
 - CIE 185:2009, *Reappraisal of colour matching and Grassmann's laws*. https://www.cie.co.at/publications/reappraisal-colour-matching-and-grassmanns-laws
+- OpenStax, *University Physics Volume 3*, “Young's Double-Slit Interference.” https://openstax.org/books/university-physics-volume-3/pages/3-1-youngs-double-slit-interference
+- MIT, “Interference/diffraction.” https://www.mit.edu/~ashrstnv/interference.html
+- RP Photonics, “Beat Note.” https://www.rp-photonics.com/beat_note.html
 - W3C, *CSS Color Module Level 4*, sections on sRGB, linear-light sRGB, XYZ and color interpolation. https://www.w3.org/TR/css-color-4/
 - Günter Wyszecki and W. S. Stiles, *Color Science: Concepts and Methods, Quantitative Data and Formulae*, 2nd ed., Wiley, 1982.
