@@ -647,6 +647,111 @@ $$
 
 CIELAB変換の非線形性が強く効く条件や、CIEDE2000のように式が複雑な場合、一次Taylor近似だけでは十分でないことがある。その場合は数値微分やMonte Carlo法で入力分布を伝播させる。JCGM 101:2008は、このようなMonte Carloによる不確かさ伝播の一般的方法を定めている。またJCGM 100には2026年に非線形測定モデルを扱う追補が追加されている。
 
+### 13.3　波長校正誤差はスペクトルの「傾き」を通じて色誤差になる
+
+波長軸そのものがわずかにずれている場合を考える。装置が表示する波長を $\lambda$、実際に観測している波長を $\lambda+\delta\lambda$ とすると、測定スペクトルは
+
+$$
+\widetilde{R}(\lambda)=R(\lambda+\delta\lambda)
+$$
+
+となる。$\delta\lambda$ が十分小さければTaylor展開により
+
+$$
+\widetilde{R}(\lambda)
+\approx
+R(\lambda)
++\delta\lambda\frac{dR}{d\lambda}
+$$
+
+だから、波長ずれによる反射率誤差は
+
+$$
+\Delta R(\lambda)
+\approx
+\delta\lambda\frac{dR}{d\lambda}
+$$
+
+となる。
+
+この式から、平坦なスペクトルでは $dR/d\lambda\approx0$ なので波長ずれの影響は小さく、急峻な吸収端や狭いピークでは影響が大きいことが分かる。NISTの分光反射測定でも、波長尺度誤差の寄与は反射率の波長変化率に依存すると整理されている。
+
+XYZへの影響も直接導ける。$X$ の重み関数を
+
+$$
+w_X(\lambda)=kS(\lambda)\bar{x}(\lambda)
+$$
+
+とすれば、一次近似で
+
+$$
+\Delta X
+\approx
+\delta\lambda
+\int
+w_X(\lambda)
+\frac{dR}{d\lambda}
+\,d\lambda
+$$
+
+である。同様に
+
+$$
+\Delta Y
+\approx
+\delta\lambda
+\int
+w_Y(\lambda)
+\frac{dR}{d\lambda}
+\,d\lambda,
+\qquad
+\Delta Z
+\approx
+\delta\lambda
+\int
+w_Z(\lambda)
+\frac{dR}{d\lambda}
+\,d\lambda
+$$
+
+となる。
+
+境界項が無視できる範囲なら部分積分により
+
+$$
+\Delta X
+\approx
+-\delta\lambda
+\int
+R(\lambda)
+\frac{dw_X}{d\lambda}
+\,d\lambda
+$$
+
+とも書ける。つまり色誤差は「試料スペクトルが急に変わるか」だけでなく、「照明×等色関数という測色重みがどこで急に変わるか」との重なりで決まる。
+
+波長校正誤差 $\delta\lambda$ の標準不確かさを $u_\lambda$ とし、
+
+$$
+\mathbf g_\lambda
+=
+\frac{\partial(X,Y,Z)^{\mathsf T}}
+{\partial\delta\lambda}
+$$
+
+と置けば、この1個の共通誤差源がXYZへ作る共分散は
+
+$$
+\boxed{
+\Sigma_{XYZ}^{(\lambda)}
+\approx
+u_\lambda^2
+\mathbf g_\lambda\mathbf g_\lambda^{\mathsf T}
+}
+$$
+
+となる。波長軸のずれは全波長点へ共通に作用するため、各波長の独立ノイズとして扱うのではなく、強く相関した系統誤差として扱う必要がある。
+
 ## 14　色彩検定の「物理測色」を理系的に整理する
 
 色彩検定で押さえるべき因果関係は次のようになる。
@@ -741,7 +846,7 @@ $$
   https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer
 - NIST, *Reference Integrating Sphere for Spectral Reflectance*  
   https://www.nist.gov/laboratories/tools-instruments/reference-integrating-sphere-spectral-reflectance
-- Barnes, P. Y., Parr, A. C., Early, E. A. (1998), *Spectral Reflectance*, NIST Special Publication 250-48  
+- Barnes, P. Y., Parr, A. C., Early, E. A. (1998), *Spectral Reflectance*, NIST Special Publication 250-48 — 波長尺度誤差を含む分光反射率測定の不確かさ評価  
   https://www.nist.gov/publications/spectral-reflectance
 - NIST, *Stray light correction* — SLSFを用いた分光迷光補正行列 $C_{\rm spec}$ と実時間補正  
   https://www.nist.gov/pml/sensor-science/optical-radiation/stray-light-correction
