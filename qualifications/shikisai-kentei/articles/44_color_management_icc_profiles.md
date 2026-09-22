@@ -640,6 +640,97 @@ $$
 
 この点は、分光測色と三刺激値測色の違いそのものである。
 
+### 発展：iccMAXの分光PCSは何を残すのか
+
+ICC v4のPCSはD50・CIE 1931標準測色観察者を基準とする三刺激値色空間である。2026年時点でもv4の現行仕様はICC.1:2022（Profile version 4.4）であり、ICCはこれとは別に、より柔軟な次世代アーキテクチャとしてiccMAXを規格化している。現行iccMAX仕様はICC.2:2023で、ICC自身もv4の置き換えではなく、必要に応じた拡張・代替として位置づけている。
+
+この違いは、スペクトルから三刺激値への写像を考えると分かりやすい。波長を$n$点へ離散化したスペクトルを
+
+$$
+\mathbf{s}
+=
+\begin{pmatrix}
+s_1\\s_2\\\vdots\\s_n
+\end{pmatrix}
+\in\mathbb{R}^n
+$$
+
+とする。あるイルミナント・観察者条件でXYZへ変換する作用素を
+
+$$
+A_{I,O}\in\mathbb{R}^{3\times n}
+$$
+
+とすれば、通常の三刺激値PCSへ落とす操作は
+
+$$
+\mathbf t=A_{I,O}\mathbf s,
+\qquad
+\mathbf t=(X,Y,Z)^\mathsf T
+$$
+
+である。
+
+この時点で$n$次元のスペクトルは3次元へ圧縮される。したがって二つのスペクトルの差が
+
+$$
+\mathbf s_1-\mathbf s_2\in\ker(A_{I,O})
+$$
+
+なら、
+
+$$
+A_{I,O}\mathbf s_1=A_{I,O}\mathbf s_2
+$$
+
+となり、PCS上では区別できない。これが前節で述べたメタメリズムの線形代数的な形である。
+
+一方iccMAXは、固定D50の三刺激値PCSだけでなく、イルミナントや等色関数の選択を柔軟にし、オプションとして分光PCSを扱える。概念的には、デバイス値をいったん3個のXYZへ潰すのではなく、
+
+$$
+\mathbf d
+\xrightarrow{F_{\mathrm{spec}}}
+\mathbf s
+\xrightarrow{A_{I,O}}
+\mathbf t
+$$
+
+という二段階に分けられる。
+
+この構造なら、同じ分光情報 $\mathbf s$ に対して観察条件を変え、
+
+$$
+\mathbf t_1=A_{I_1,O_1}\mathbf s,
+\qquad
+\mathbf t_2=A_{I_2,O_2}\mathbf s
+$$
+
+と再計算できる。特に、ある条件ではメタマーだった二つの刺激について
+
+$$
+A_{I_1,O_1}(\mathbf s_1-\mathbf s_2)=0
+$$
+
+でも、別条件で
+
+$$
+A_{I_2,O_2}(\mathbf s_1-\mathbf s_2)\neq0
+$$
+
+なら、分光PCSに保持された差から条件等色の崩れを計算できる。三刺激値PCSへ一度圧縮した後では、この差は原理的に復元できない。
+
+ただし「分光PCSなら常に色再現が完全になる」わけではない。分光値には波長範囲・サンプリング間隔・分光帯域幅・測定不確かさがあり、蛍光材料では励起と発光を単純な1本の反射スペクトルだけで記述できない場合もある。また、分光一致と色の見えの一致は別問題であり、周囲・順応・輝度などの色の見え条件は依然として考慮が必要である。
+
+したがってiccMAXの分光PCSの意義は、
+
+$$
+\boxed{
+\text{三刺激値へ圧縮する前の分光自由度を、色管理ワークフロー内に保持できる}
+}
+$$
+
+点にある。これはカラーマネジメントを「3次元色座標の変換」から「測色条件そのものを切り替えられる分光データの変換」へ拡張する考え方である。
+
 ## 17　プリンタはなぜディスプレイよりモデル化が難しいのか
 
 ディスプレイの理想的な加法混色では、線形化後のRGBとXYZの関係を3×3行列で近似しやすい。
@@ -935,3 +1026,6 @@ $$
 10. ISO/CIE, *ISO/CIE 11664-4:2019 Colorimetry — Part 4: CIE 1976 L*a*b* colour space*. https://www.cie.co.at/publications/colorimetry-part-4-cie-1976-lab-colour-space-1
 11. R. S. Berns, *Billmeyer and Saltzman's Principles of Color Technology*, 3rd ed., Wiley, 2000.
 12. L. N. Trefethen and D. Bau III, *Numerical Linear Algebra*, SIAM, 1997.
+13. International Color Consortium, “iccMAX Profile Specification,” *ICC.2:2023 Image technology colour management — Extensions to architecture, profile format, and data structure*. https://www.color.org/iccmax/
+14. International Color Consortium, “Why use iccMAX profiles?” https://www.color.org/iccmax/whyiccmax/
+15. International Color Consortium, “Making connections with iccMAX.” https://www.color.org/iccmax/connection1/
