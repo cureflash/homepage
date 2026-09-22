@@ -520,6 +520,62 @@ Rayleigh領域では $\beta_s\propto\lambda^{-4}$ なので短波長が強く散
 
 これは青空や夕焼けの説明を「短波長は散乱しやすい」という一文から、実際に観察される分光放射輝度を計算する理論へ拡張した形である。
 
+### 12.1　エアロゾルは「どれだけ前方へ散らすか」も重要
+
+Rayleigh散乱では前方と後方が対称だが、サイズパラメータ $x\gtrsim1$ の水滴やエアロゾルではMie散乱が強い前方ピークを持つことが多い。角度分布を1個の数で要約する代表量が非対称因子
+
+$$
+\boxed{
+g=
+\frac{1}{4\pi}
+\int_{4\pi}
+P(\theta)\cos\theta\,d\Omega
+}
+$$
+
+である。ここでは前節と同じく $\int P\,d\Omega=4\pi$ と規格化している。
+
+$g=0$ は平均的に前後対称、$g>0$ は前方散乱優勢、$g<0$ は後方散乱優勢を表す。大きな粒子では $g$ が正になることが多く、散乱係数 $\beta_s$ が同じでも、光が横方向へ強く再配分されるとは限らない。
+
+放射輸送では、前方へ散乱された光は元の進行方向をあまり失っていない。そのため、拡散的に方向をランダム化する強さを近似的に
+
+$$
+\boxed{
+\beta_s'=\beta_s(1-g)
+}
+$$
+
+という「輸送散乱係数」で表すことがある。$g\to1$ なら $\beta_s'$ は小さくなり、散乱回数が多くても進行方向は比較的保たれる。
+
+実用計算でMie位相関数を簡略化するときにはHenyey–Greenstein型
+
+$$
+\boxed{
+P_{\mathrm{HG}}(\theta)
+=
+\frac{1-g^2}
+{\left(1+g^2-2g\cos\theta\right)^{3/2}}
+}
+$$
+
+がよく使われる。この規格化では $\int P_{\mathrm{HG}}\,d\Omega=4\pi$ である。
+
+したがって、霧・雲・エアロゾルの見え方は
+
+$$
+\text{粒子径・屈折率}
+\rightarrow
+\text{Mie位相関数}
+\rightarrow
+g
+\rightarrow
+\text{方向別の放射輸送}
+\rightarrow
+\text{眼へ届く分光放射輝度}
+$$
+
+とつながる。「大粒子ではRayleigh則が崩れる」というだけでなく、方向再分配の非対称性まで含めて初めて、霞・雲・太陽近傍のまぶしい散乱光を定量的に扱える。
+
 ## 13　色を理解するときは「スペクトルの再分配」と考える
 
 散乱で重要なのは、光が消えることではない。
@@ -598,6 +654,7 @@ $$
 - [UCAR Center for Science Education, The Appearance of the Sky](https://scied.ucar.edu/learning-zone/atmosphere/appearance-sky)
 - [UCAR, Atmospheric Remote Sensing Lecture 7: Rayleigh/Molecular Scattering](https://www2.acom.ucar.edu/sites/default/files/documents/Gautam_acam_lecture.pdf)
 - [NASA Reference Publication 1156, Introduction to the Theory of Atmospheric Radiative Transfer](https://ntrs.nasa.gov/citations/19860018367)
+- [NASA Technical Reports Server, Radiative Transfer in Spherical Shell Atmospheres. 2: Asymmetric Phase Functions](https://ntrs.nasa.gov/citations/19770026499)
 - [New Mexico State University, Rayleigh Scattering: Optical Depth](https://atmos.nmsu.edu/education_and_outreach/encyclopedia/rayleigh_optical.htm)
 - [OpenStax University Physics Volume 3, 1.7 Polarization](https://openstax.org/books/university-physics-volume-3/pages/1-7-polarization)
 - B. A. Bodhaine, N. B. Wood, E. G. Dutton, and J. R. Slusser, “On Rayleigh Optical Depth Calculations,” *Journal of Atmospheric and Oceanic Technology* 16, 1854–1861 (1999), DOI: 10.1175/1520-0426(1999)016<1854:ORODC>2.0.CO;2.
