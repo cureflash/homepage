@@ -99,6 +99,97 @@ $$
 
 実際の発光スペクトルには有限の幅がある。電子・正孔は単一のエネルギーだけを占めるわけではなく、温度、量子井戸の状態密度、組成ゆらぎなどによって再結合エネルギーに分布が生じるからである。それでも発光ピークを決める第一のエネルギースケールが $E_g$ であることは変わらない。
 
+### 2.1　LEDの光はなぜ単一波長ではないのか――状態密度とキャリア分布
+
+「$E_{\rm photon}\approx E_g$」は発光色を見積もるには便利だが、実際のLEDをデルタ関数のような単一波長光源とみなすことはできない。直接遷移型半導体の伝導帯と価電子帯を、バンド端付近で放物線近似すると
+
+$$
+E_c(k)=E_{c0}+\frac{\hbar^2k^2}{2m_e^*}
+$$
+
+$$
+E_v(k)=E_{v0}-\frac{\hbar^2k^2}{2m_h^*}
+$$
+
+と書ける。$m_e^*$ と $m_h^*$ は電子・正孔の有効質量である。
+
+光子の結晶運動量は電子の結晶波数に比べて小さいので、直接遷移では近似的に同じ $k$ の電子状態と正孔状態が再結合する。その光子エネルギーは
+
+$$
+E_\gamma=E_c(k)-E_v(k)
+=E_g+\frac{\hbar^2k^2}{2m_r}
+$$
+
+となる。ここで換算有効質量 $m_r$ は
+
+$$
+\boxed{
+\frac{1}{m_r}=\frac{1}{m_e^*}+\frac{1}{m_h^*}
+}
+$$
+
+で定義した。
+
+つまり、バンド端の $k\approx0$ にいるキャリアだけなら $E_\gamma\approx E_g$ だが、より大きな $k$ を占有するキャリアは $E_g$ より高いエネルギーの光子も放出する。注入された電子・正孔は多数の $k$ 状態へ分布するため、発光エネルギーにも幅が生じる。
+
+3次元の放物線バンドでは、直接遷移に利用できる電子・正孔対の結合状態密度はバンド端近傍で概略
+
+$$
+\boxed{
+g_J(E_\gamma)\propto\sqrt{E_\gamma-E_g}}
+\qquad(E_\gamma\ge E_g)
+$$
+
+となる。一方、低密度でキャリア分布をMaxwell–Boltzmann近似できる場合、バンド端から高いエネルギーほど占有確率はおおむね
+
+$$
+\exp\left[-\frac{E_\gamma-E_g}{k_{\rm B}T_c}\right]
+$$
+
+のように減る。$T_c$ はキャリア分布を特徴づける有効温度である。遷移行列要素のエネルギー依存を弱いとみなす単純化では、発光スペクトルのエネルギー依存は概念的に
+
+$$
+\boxed{
+R_{\rm sp}(E_\gamma)
+\propto
+\sqrt{E_\gamma-E_g}
+\exp\left[-\frac{E_\gamma-E_g}{k_{\rm B}T_c}\right]
+}
+$$
+
+のような形になる。
+
+この式は「バンドギャップが発光の下限エネルギーを決め、状態密度がバンド端から増え、熱的なキャリア分布が高エネルギー側を減らす」という三つの因果関係を一つにまとめている。実際のLEDではFermi–Dirac分布、量子井戸の2次元状態密度、励起子、内部電場、InGaN混晶の組成ゆらぎやキャリア局在などが重なるので、上式はバルク直接遷移半導体の基本像である。
+
+さらに、エネルギー表示のスペクトル $S_E(E)$ と波長表示のスペクトル $S_\lambda(\lambda)$ は、そのまま同じ形にはならない。$E=hc/\lambda$ なので
+
+$$
+\boxed{
+S_\lambda(\lambda)
+=S_E\!\left(\frac{hc}{\lambda}\right)
+\left|\frac{dE}{d\lambda}\right|
+=S_E\!\left(\frac{hc}{\lambda}\right)\frac{hc}{\lambda^2}
+}
+$$
+
+となる。したがって、同じ発光をeV軸で描くかnm軸で描くかによってピーク形状や左右の非対称性も変わりうる。
+
+最終的に色を決めるのは、この有限幅を持つ分光分布を等色関数で積分した三刺激値である。LEDの色を「バンドギャップ1個＝波長1本」と考えるより、
+
+$$
+\boxed{
+\text{バンド構造}
+\rightarrow
+\text{状態密度とキャリア分布}
+\rightarrow
+\text{有限幅の発光スペクトル}
+\rightarrow
+\text{XYZ・色度}
+}
+$$
+
+と理解する方が実際の測色へ直接つながる。
+
 ## 3　なぜシリコンでは明るいLEDを作りにくいのか――直接遷移と間接遷移
 
 結晶中の電子状態はエネルギー $E$ だけでなく結晶波数 $k$ でも区別される。光子の運動量は可視光の電子遷移で問題になる結晶運動量に比べて小さいため、光学遷移では電子の $k$ がほぼ保存される。
@@ -631,6 +722,7 @@ $$
 |---|---|
 | LED | pn接合へのキャリア注入と電気発光 |
 | 発光色 | バンドギャップと光子エネルギー |
+| 発光スペクトル幅 | バンド分散・状態密度・キャリア分布 |
 | 青色LED | GaN/InGaN系の直接遷移とバンドギャップ工学 |
 | 発光効率 | 放射・非放射再結合、内部量子効率、光取り出し |
 | 白色LED | 青色励起＋蛍光体、複数LEDの加法混色、ハイブリッド |
@@ -666,7 +758,7 @@ $$
 \lambda\approx\frac{hc}{E_g}
 $$
 
-によって発光波長と結びつく。
+によって発光波長と結びつく。ただし実際にはキャリアが多数の $k$ 状態へ分布するため、状態密度と占有確率に応じた有限幅の発光スペクトルになる。
 
 一方、明るいLEDを作るには発光波長だけでなく、非放射再結合を抑え、内部で生まれた光を外へ取り出す必要がある。白色LEDではさらに、青色光の一部を蛍光体で長波長側へ変換するか、複数色LEDを加法混色して、人間の色覚に対して白となる分光分布を作る。
 
@@ -699,6 +791,8 @@ $$
 - The Royal Swedish Academy of Sciences, “The Nobel Prize in Physics 2014: Efficient blue light-emitting diodes leading to bright and energy-saving white light sources.” https://www.nobelprize.org/prizes/physics/2014/advanced-information/
 - International Commission on Illumination, CIE 015:2018, *Colorimetry, 4th Edition*.
 - International Commission on Illumination, CIE 251:2023, *LED Reference Spectrum for Photometer Calibration*.
+- MIT OpenCourseWare, 3.46 *Photonic Materials and Devices*, Lecture 10 “LEDs.” https://ocw.mit.edu/courses/3-46-photonic-materials-and-devices-spring-2006/resources/3_46lec10_leds/
+- MIT OpenCourseWare, 3.23 *Electrical, Optical, and Magnetic Properties of Materials*, Lecture 24 “Luminescence.” https://ocw.mit.edu/courses/3-23-electrical-optical-and-magnetic-properties-of-materials-fall-2007/resources/lec24/
 - E. Fred Schubert, *Light-Emitting Diodes*, 3rd ed., Cambridge University Press, 2018.
 - S. M. Sze and Kwok K. Ng, *Physics of Semiconductor Devices*, 3rd ed., Wiley, 2007.
 - J.-T. Chen, W.-C. Lai, Y.-J. Kao, Y.-Y. Yang, and J.-K. Sheu, “Laser-induced periodic structures for light extraction efficiency enhancement of GaN-based light emitting diodes,” *Optics Express* 20(5), 5689–5696 (2012). https://doi.org/10.1364/OE.20.005689
