@@ -413,6 +413,87 @@ $$
 
 をそのまま知覚色差と解釈してはいけない。NCS座標の構造を図示できることと、色差の計量が定義されることは別問題である。
 
+### 発展：総和制約を「組成データ」の幾何として見る
+
+$(s,w,c)$ は物理的な混合比ではないが、3成分が非負で総和一定という数学的構造だけを見ると、組成データ（compositional data）と同じ単体上にある。ここではNCS公式の色差や変換式を導くのではなく、総和制約が統計解析に何をもたらすかを見る。
+
+正規化した
+
+$$
+\mathbf x=(\hat s,\hat w,\hat c)^{\mathsf T},
+\qquad
+\hat s+\hat w+\hat c=1
+$$
+
+に微小変化 $d\mathbf x$ を与えると、常に
+
+$$
+\mathbf 1^{\mathsf T}d\mathbf x=0
+$$
+
+である。したがって変化は3次元空間全体ではなく、総和一定平面の接空間に拘束される。複数のニュアンスを統計的に扱う場合も、共分散行列 $\Sigma_x$ は
+
+$$
+\Sigma_x\mathbf 1=\mathbf 0
+$$
+
+を満たし、階数は高くても2である。つまり $s,w,c$ を互いに独立な3変数として通常の多変量解析へそのまま入れると、総和制約そのものを相関構造と取り違える危険がある。
+
+組成データ解析では、内部点
+
+$$
+\hat s>0,\qquad \hat w>0,\qquad \hat c>0
+$$
+
+に対して比を中心に扱う。一例が centered log-ratio（clr）変換である。幾何平均を
+
+$$
+g(\mathbf x)=(\hat s\hat w\hat c)^{1/3}
+$$
+
+とすると、
+
+$$
+\operatorname{clr}(\mathbf x)=
+\begin{pmatrix}
+\ln(\hat s/g)\\
+\ln(\hat w/g)\\
+\ln(\hat c/g)
+\end{pmatrix}
+$$
+
+であり、必ず
+
+$$
+\mathbf 1^{\mathsf T}\operatorname{clr}(\mathbf x)=0
+$$
+
+となる。単体内部の2自由度を、通常のユークリッド空間の2次元部分空間として扱える。
+
+2点 $\mathbf x,\mathbf y$ のAitchison距離は
+
+$$
+d_A(\mathbf x,\mathbf y)
+=\|\operatorname{clr}(\mathbf x)-\operatorname{clr}(\mathbf y)\|_2
+$$
+
+で表せる。3成分なら同値に
+
+$$
+d_A^2
+=\frac13\sum_{i<j}
+\left[
+\ln\frac{x_i}{x_j}-
+\ln\frac{y_i}{y_j}
+\right]^2
+$$
+
+と書ける。ここで比較しているのは各成分の絶対差ではなく、黒み対白み、黒み対色み、白み対色みという比の変化である。
+
+ただし、これをNCSの知覚色差として使ってよいという意味ではない。NCSの $s,w,c$ は知覚的類似度であり、Aitchison距離は組成データの数学から導入した別の計量である。また三角形の辺や頂点では少なくとも1成分が0になり、対数比は定義できない。したがってclr表現はNCSニュアンス三角形の内部を解析するための数学的補助モデルに限られる。
+
+この見方から分かる本質は、$s+w+c=100$ が単なる暗記事項ではなく、NCSニュアンスを2自由度へ拘束する幾何学的条件だということである。重心座標、接空間、共分散の特異性、比に基づく座標化は、すべて同じ総和制約から生じる。
+
 ## 9　NCSとXYZは何が違うのか
 
 XYZは測色系であり、色刺激を線形空間の座標として表す。
@@ -700,6 +781,10 @@ $$
   https://doi.org/10.59161/JCGM100-2008E
 - JCGM 101:2008, “Supplement 1 to the Guide to the expression of uncertainty in measurement — Propagation of distributions using a Monte Carlo method”  
   https://doi.org/10.59161/JCGM101-2008
+- Aitchison, J., “The Statistical Analysis of Compositional Data,” Journal of the Royal Statistical Society: Series B, 44(2), 139–177, 1982.  
+  https://doi.org/10.1111/j.2517-6161.1982.tb01195.x
+- Egozcue, J. J., Pawlowsky-Glahn, V., “Modelling Compositional Data: The Sample Space Approach,” in Handbook of Mathematical Geosciences, 2018.  
+  https://link.springer.com/chapter/10.1007/978-3-319-78999-6_4
 - Anders Hård, Lars Sivik, “NCS—Natural Color System: A Swedish Standard for Color Notation,” Color Research & Application, 6(3), 129–138, 1981.  
   https://doi.org/10.1002/col.5080060303
 - Anders Hård, Lars Sivik, Gunnar Tonnquist, “NCS, natural color system—From concept to research and applications. Part I,” Color Research & Application, 21(3), 180–205, 1996.  
