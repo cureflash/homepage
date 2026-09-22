@@ -295,6 +295,99 @@ CIEは、色度図上の無彩色点・対象色・スペクトル軌跡上の�
 
 紫領域では、直線を延ばした先がスペクトル軌跡の反対側へ向かうため、補色主波長を用いる。
 
+### 7.1　主波長と刺激純度を数式で求める
+
+無彩色点、対象色、スペクトル軌跡との交点をそれぞれ
+
+$$
+\mathbf n=
+\begin{pmatrix}x_n\\y_n\end{pmatrix},\qquad
+\mathbf c=
+\begin{pmatrix}x\\y\end{pmatrix},\qquad
+\mathbf d=
+\begin{pmatrix}x_d\\y_d\end{pmatrix}
+$$
+
+とする。通常の主波長を定義できる色では、$N,C,D$ は同一直線上にあり、$C$ は $N$ と $D$ の間にある。したがって
+
+$$
+\mathbf c
+=\mathbf n+p_e(\mathbf d-\mathbf n),
+\qquad 0\le p_e\le1
+$$
+
+と書ける。この係数 $p_e$ がCIEの刺激純度（excitation purity）であり、幾何学的には
+
+$$
+\boxed{
+p_e=\frac{NC}{ND}
+=\frac{\|\mathbf c-\mathbf n\|}{\|\mathbf d-\mathbf n\|}
+}
+$$
+
+である。厳密に共線なら
+
+$$
+p_e
+=\frac{x-x_n}{x_d-x_n}
+=\frac{y-y_n}{y_d-y_n}
+$$
+
+とも書ける。CIEは、数値計算では分子の絶対値がより大きい方の座標式を使うと精度を得やすいとしている。
+
+ベクトルの射影として書けば
+
+$$
+p_e
+=\frac{(\mathbf c-\mathbf n)^{\mathsf T}(\mathbf d-\mathbf n)}
+{\|\mathbf d-\mathbf n\|^2}
+$$
+
+である。測定誤差などで3点が完全には共線にならない場合、この式は直線 $ND$ 上への射影係数として解釈できる。ただし規格上の刺激純度は、指定された色度図上の共線距離比として定義される。
+
+実際の計算では、無彩色点から対象色へ伸ばす半直線
+
+$$
+\mathbf r(t)=\mathbf n+t(\mathbf c-\mathbf n),
+\qquad t\ge0
+$$
+
+を考える。対象色 $C$ は $t=1$ にあり、この半直線がスペクトル軌跡と交わるパラメータを $t_D$ とすれば
+
+$$
+\mathbf d=\mathbf n+t_D(\mathbf c-\mathbf n)
+$$
+
+なので
+
+$$
+\boxed{p_e=\frac{1}{t_D}}
+$$
+
+となる。つまり分光測色から主波長と刺激純度を求める処理は、概念的には
+
+$$
+XYZ
+\rightarrow(x,y)
+\rightarrow\text{無彩色点から半直線を作る}
+\rightarrow\text{スペクトル軌跡との交点を求める}
+\rightarrow(\lambda_d,p_e)
+$$
+
+という幾何計算である。スペクトル軌跡にはCIE標準測色観察者の波長別色度データを用いる。
+
+刺激純度には、$p_e=0$ なら指定した無彩色点、$p_e=1$ なら境界上という明確な幾何学的意味がある。しかしxy色度図自体が知覚的に均等ではないため、$p_e$ をそのまま「人が感じる鮮やかさの百分率」と解釈してはいけない。PCCSの彩度、マンセル・クロマ、CIELABの $C^*_{ab}$ とも別の量である。
+
+またCIEは、光量の混合比に基づく色彩純度（colorimetric purity）$p_c$ も区別している。CIE 1931系では両者に
+
+$$
+p_c=p_e\frac{y_d}{y}
+$$
+
+の関係がある。刺激純度はxy図上の距離比、色彩純度は無彩色刺激と単色刺激を加法混色するときの測光量の比に基づくので、同じ「純度」でも意味が異なる。
+
+紫刺激では、刺激純度の境界点としてスペクトル軌跡ではなく紫軌跡上の点を用いる。一方、主波長は定義せず、CIEの定義に従って反対方向のスペクトル軌跡に対応する補色主波長を用いる。
+
 ## 8　補色は「反対側の色相」というだけではない
 
 加法混色で考えると、2つの色刺激 $C_1,C_2$ を適切な比率で混ぜた結果が指定した無彩色点 $N$ になるとき、この2刺激はその基準に対して補色関係にある。
@@ -554,6 +647,8 @@ $$
 - 紫軌跡には対応する単一波長がない
 - 2色の加法混色は2点を結ぶ線分上に現れる
 - 三原色の色域は3点を結ぶ三角形、数学的には凸包になる
+- 主波長は無彩色点から対象色へ伸ばした直線とスペクトル軌跡の交点で定まる
+- 刺激純度は $p_e=NC/ND$ であり、知覚的な彩度そのものではない
 - xy図上の距離は知覚的色差に比例しない
 - CIE 1976 UCSでは $u',v'$ を用いて色度の均等性を改善する
 
@@ -573,6 +668,9 @@ $$
 - [CIE e-ILV: chromaticity diagram](https://cie.co.at/eilvterm/17-23-054)
 - [CIE e-ILV: spectral chromaticity coordinates](https://cie.co.at/eilvterm/17-23-055)
 - [CIE e-ILV: purple boundary](https://cie.co.at/eilvterm/17-23-058)
+- [CIE e-ILV: dominant wavelength](https://cie.co.at/eilvterm/17-23-062)
+- [CIE e-ILV: complementary wavelength](https://cie.co.at/eilvterm/17-23-063)
+- [CIE e-ILV: colorimetric purity](https://cie.co.at/eilvterm/17-23-065)
 - [CIE e-ILV: excitation purity](https://cie.co.at/eilvterm/17-23-066)
 - [CIE e-ILV: CIE 1976 uniform-chromaticity-scale diagram](https://cie.co.at/eilvterm/17-23-073)
 - [CIE Datasets: CIE 1931 chromaticity coordinates of spectrum loci / colour-matching functions](https://www.cie.co.at/data-tables)
