@@ -202,6 +202,40 @@ $$
 
 特に白色試料ではほぼ相殺されるような分光差でも、特定波長だけを強く反射する有彩色試料では差が増幅されうる。実用の昼光シミュレータの品質評価で、単なる白色点一致ではなく分光的な一致やメタメリズムを評価する必要があるのはこのためである。
 
+### 発展：相対測色ではイルミナントの絶対強度は消える
+
+標準イルミナントが「相対」分光分布でよい理由は、正規化式から直接示せる。イルミナント全体を正の定数 $\alpha$ 倍して
+
+$$
+\mathbf s'=\alpha\mathbf s
+$$
+
+とする。このとき
+
+$$
+\mathbf t(\mathbf s',\mathbf r)
+=
+100\,
+\frac{\mathbf C\,\mathrm{diag}(\mathbf r)(\alpha\mathbf s)}
+{\mathbf c_y^T(\alpha\mathbf s)}
+$$
+
+であり、分子と分母の $\alpha$ は相殺される。
+
+$$
+\boxed{
+\mathbf t(\alpha\mathbf s,\mathbf r)
+=
+\mathbf t(\mathbf s,\mathbf r)
+}
+$$
+
+つまり、完全拡散反射面を $Y=100$ にそろえる相対測色では、イルミナントの総量を2倍、10倍にしても相対XYZは変わらない。効くのは各波長の比率、すなわちスペクトルの「形」である。
+
+線形代数的には、$\mathbf s$ と $\alpha\mathbf s$ はスペクトル空間内で同じ半直線上にあり、相対測色はそのスカラー倍を同一視している。したがって標準イルミナントの表が特定波長を100として規格化されていても、その100という絶対値自体に物理的な照度の意味はない。
+
+ただし、放射輝度・輝度・照度などの絶対量を測る場合はこの相殺は使えない。相対物体色の測色と、光源の絶対的な明るさの測定は別問題である。
+
 ## 4　標準イルミナントAはPlanck放射を基準にする
 
 標準イルミナントAは、典型的なタングステン電球に近い光を表すための基準である。現在のISO/CIE 11664-2では、約2855.5 KのPlanck放射を基礎として定義されている。
@@ -497,6 +531,7 @@ $$
 - イルミナントと実際の光源は同一概念ではない。
 - 物体色のXYZは $S(\lambda)R(\lambda)$ を等色関数で積分して求める。
 - イルミナントを変えると白色点だけでなく、物体色のXYZやメタメリズムの条件も変わる。
+- 相対測色ではイルミナント全体の倍率は正規化で消え、相対分光分布の形が測色結果を決める。
 
 大学レベルでは、さらに標準イルミナントを
 
@@ -512,6 +547,7 @@ $$
 - 色彩検定協会「色彩検定とは」1級：色彩学に測色・世界の色彩調和論等を含む。https://www.aft.or.jp/pages/feature/level
 - CIE, *Colorimetry, 4th Edition*, CIE 015:2018. https://cie.co.at/publications/colorimetry-4th-edition
 - ISO/CIE 11664-2:2022, *Colorimetry — Part 2: CIE Standard Illuminants*. https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0
+- ISO/CIE 11664-3:2019, *Colorimetry — Part 3: CIE tristimulus values*. https://www.cie.co.at/publications/colorimetry-part-3-cie-tristimulus-values-2
 - ISO/CIE 23603:2024, *Standard method of assessing the spectral quality of daylight simulators for visual appraisal and measurement of colour*. https://cie.co.at/publications/standard-method-assessing-spectral-quality-daylight-simulators-visual-appraisal-and-1
 - CIE, “CIE standard illuminant D65” dataset, DOI: 10.25039/CIE.DS.hjfjmt59. https://www.cie.co.at/datatable/cie-standard-illuminant-d65
 - CIE, “CIE standard illuminant A - 1 nm” dataset, DOI: 10.25039/CIE.DS.8jsxjrsn. https://cie.co.at/datatable/cie-standard-illuminant-1-nm
