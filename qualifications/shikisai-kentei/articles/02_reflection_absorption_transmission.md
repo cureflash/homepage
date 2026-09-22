@@ -357,6 +357,67 @@ $$
 
 銀は可視域で比較的高く平坦な反射率を持つため無彩色に近く見える。一方、金や銅では可視域内で電子遷移の影響が現れ、反射スペクトルに強い波長依存性が生じるため固有の色が見える。
 
+### 9.1　「内部で強く吸収する」と「表面で強く反射する」は矛盾しない
+
+ここは誤解しやすい。複素屈折率の虚部 $\kappa$ が大きい材料では、いったん内部へ入った電磁波は急速に減衰する。しかし、入射光のすべてが内部へ入るわけではない。界面では同じ $n$ と $\kappa$ がFresnel係数を決めるため、大きなインピーダンス不整合があれば、その前にかなりの光が反射される。
+
+複素波数を
+
+$$
+\tilde k=k_0(n+i\kappa),\qquad k_0=\frac{2\pi}{\lambda_0}
+$$
+
+とすると、媒質中の電場振幅は
+
+$$
+|E(z)|=|E(0)|e^{-k_0\kappa z}
+$$
+
+で減衰する。電場振幅が $1/e$ になる減衰長を $\delta_E$ とすれば、
+
+$$
+\boxed{
+\delta_E=\frac{1}{k_0\kappa}
+=\frac{\lambda_0}{2\pi\kappa}
+}
+$$
+
+である。
+
+一方、強度は電場の二乗に比例するので
+
+$$
+I(z)=I(0)e^{-2k_0\kappa z}=I(0)e^{-\alpha z}
+$$
+
+となり、強度が $1/e$ になる吸収長 $L_{\rm abs}$ は
+
+$$
+\boxed{
+L_{\rm abs}=\frac{1}{\alpha}
+=\frac{\lambda_0}{4\pi\kappa}
+=\frac{\delta_E}{2}
+}
+$$
+
+である。電場の減衰長と強度の吸収長には2倍の違いがあるため、どちらを「侵入深さ」と呼んでいるかを区別する必要がある。
+
+厚さ $d$ が $L_{\rm abs}$ より十分大きい半無限に近い金属なら、裏面まで届く透過光はほぼなく、
+
+$$
+T\approx0
+$$
+
+なので、全体のエネルギー収支は
+
+$$
+\boxed{A\approx1-R}
+$$
+
+となる。つまり「物質内部では強く減衰する」ことは「入射光の大部分を吸収する」ことと同義ではない。そもそも表面で反射されて内部へ入らない光があるからである。
+
+この区別を使うと、黒色材料と金属鏡の違いも整理できる。どちらも厚ければ $T\approx0$ になり得るが、黒色材料は可視域で $R$ が低いため $A$ が大きく、金属鏡は $R$ が高いため $A$ が相対的に小さい。物体の見た目を決めるのは「内部の吸収の強さ」だけではなく、まず界面でどれだけ反射され、入った光が内部でどれだけ減衰するかの両方である。
+
 ## 10　測定では「何を反射率と呼ぶか」を決める必要がある
 
 現実の表面では、鏡面反射と拡散反射が混在する。そのため分光反射率を測るときは、どの方向の光を集めるかによって結果が変わる。
@@ -462,6 +523,7 @@ $$
 - [MIT OpenCourseWare, 6.013 Electromagnetics and Applications, Lecture 8: Transverse Electromagnetic Waves](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/resources/lec8/)
 - RP Photonics Encyclopedia, "Fresnel Reflections", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/fresnel_reflections.html
 - RP Photonics Encyclopedia, "Absorption Coefficient", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/absorption_coefficient.html
+- RP Photonics Encyclopedia, "Absorption Length", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/absorption_length.html
 - RP Photonics Encyclopedia, "Refractive Index", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/refractive_index.html
 - RP Photonics Encyclopedia, "Kramers–Kronig Relations", Dr. Rüdiger Paschotta, https://www.rp-photonics.com/kramers_kronig_relations.html
 - [CIE, CIE 1931 colour-matching functions, 2 degree observer](https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer)
