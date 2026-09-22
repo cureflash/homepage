@@ -349,6 +349,140 @@ $$
 
 多数の溝があるほど干渉ピークが鋭くなることが、そのまま高い分光分解能につながる。
 
+### 10.1　なぜ $R=mN$ になるのか――干渉ピーク幅から導く
+
+上の式は経験的な規則ではなく、$N$本の溝が作る干渉ピークの幅と、回折格子の角分散を組み合わせると導ける。
+
+多重スリットの干渉項
+
+$$
+I(\theta)\propto\left(\frac{\sin N\beta}{\sin\beta}\right)^2,
+\qquad
+\beta=\frac{\pi d\sin\theta}{\lambda}
+$$
+
+を考える。$m$次の主極大では
+
+$$
+\beta=m\pi
+$$
+
+である。そのすぐ隣の最小は、分子が0になる条件
+
+$$
+\sin N\beta=0
+$$
+
+から
+
+$$
+N\beta=Nm\pi\pm\pi
+$$
+
+すなわち
+
+$$
+\boxed{\delta\beta=\frac{\pi}{N}}
+$$
+
+だけ離れた位置に現れる。
+
+一方、角度を微小量$\delta\theta$だけ変えると
+
+$$
+\delta\beta
+\approx
+\frac{\pi d\cos\theta_m}{\lambda}\,\delta\theta
+$$
+
+だから、主極大から最初の最小までの角幅は
+
+$$
+\boxed{
+\delta\theta_{\rm min}
+\approx
+\frac{\lambda}{Nd\cos\theta_m}
+}
+$$
+
+となる。これが「溝の本数$N$が多いほどピークが細くなる」の定量的な意味である。
+
+次に、同じ$m$次で波長を$\lambda$から$\lambda+\Delta\lambda$へ少し変える。回折格子式
+
+$$
+d\sin\theta_m=m\lambda
+$$
+
+を微分すると
+
+$$
+d\cos\theta_m\,\Delta\theta
+\approx
+m\Delta\lambda
+$$
+
+なので、2波長の主極大どうしの角度差は
+
+$$
+\boxed{
+\Delta\theta
+\approx
+\frac{m\Delta\lambda}{d\cos\theta_m}
+}
+$$
+
+である。
+
+Rayleighの分解条件では、一方の主極大が他方の最初の最小に重なる程度を「ちょうど分離できる」とみなす。したがって
+
+$$
+\Delta\theta\approx\delta\theta_{\rm min}
+$$
+
+を課すと、
+
+$$
+\frac{m\Delta\lambda}{d\cos\theta_m}
+\approx
+\frac{\lambda}{Nd\cos\theta_m}
+$$
+
+となり、共通因子を消して
+
+$$
+\boxed{
+\frac{\lambda}{\Delta\lambda}\approx mN
+}
+$$
+
+を得る。負の回折次数まで含めて分解能の大きさを書くなら$|m|N$である。
+
+さらに、照明されている格子の幅を$W$とすると$N\approx W/d$なので、
+
+$$
+\boxed{
+R\approx |m|\frac{W}{d}
+}
+$$
+
+とも書ける。同じ照明幅$W$なら、溝間隔$d$を小さくすると角分散が大きくなるだけでなく、照明される溝の本数も増えるため、理想分解能も高くなる。
+
+したがって
+
+$$
+\boxed{
+\text{周期構造を細かくする・広い範囲を照明する}
+\rightarrow
+N\text{増加}
+\rightarrow
+\text{干渉ピーク狭窄}
+\rightarrow
+\text{近接波長を分離}
+}
+$$
+
+という因果関係で分解能を理解できる。実際の分光器では、入射スリット幅、光学収差、検出器画素、格子効率なども最終的な分解能を制限するため、$R=|m|N$は回折格子そのものが与える理想上限である。
+
 ## 11　回折格子から測色へ
 
 ある方向から眼へ届く分光放射束を$S(\lambda,\theta)$とする。回折格子の角度依存効率を$\eta(\lambda,\theta)$、入射光の分光分布を$S_0(\lambda)$とすれば、単純化して
