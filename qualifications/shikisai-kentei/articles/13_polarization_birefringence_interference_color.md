@@ -507,6 +507,98 @@ $$
 
 つまり偏光板の間で見える色模様は、場所ごとの応力差を光学的な位相差へ変換したものと解釈できる。透明な定規、プラスチック容器、成形品などを直交偏光板ではさむと色模様が見えるのはこのためである。
 
+### 12.1　縞次数から主応力差を逆算できる
+
+光弾性を単色光で観察すると、虹色ではなく明暗の縞として応力分布を読める。第7節の透過強度式で、主応力軸が偏光板に対して$\phi=45^\circ$となる位置を考えると、$\sin^2(2\phi)=1$なので
+
+$$
+\frac{I}{I_0}
+=
+\sin^2\left(\frac{\pi\Delta n d}{\lambda}\right)
+$$
+
+となる。ここへ応力光学則
+
+$$
+\Delta n=C(\sigma_1-\sigma_2)
+$$
+
+を代入すれば
+
+$$
+\boxed{
+\frac{I}{I_0}
+=
+\sin^2\left[
+\frac{\pi C d(\sigma_1-\sigma_2)}{\lambda}
+\right]
+}
+$$
+
+を得る。したがって暗線が現れる条件は
+
+$$
+C d(\sigma_1-\sigma_2)=m\lambda,
+\qquad m=0,1,2,\ldots
+$$
+
+である。
+
+retardation $\Gamma=Cd(\sigma_1-\sigma_2)$ を波長で割った
+
+$$
+\boxed{
+N=\frac{\Gamma}{\lambda}
+=
+\frac{Cd(\sigma_1-\sigma_2)}{\lambda}
+}
+$$
+
+を縞次数とみなせば、整数次の暗線について
+
+$$
+\boxed{
+\sigma_1-\sigma_2
+=
+\frac{N\lambda}{Cd}
+}
+$$
+
+となる。つまり、材料の光弾性係数$C$と厚さ$d$が既知なら、縞次数を数えることで主応力差を逆算できる。ただし得られるのは個々の$\sigma_1,\sigma_2$ではなく、その差である。
+
+一般の透過強度式
+
+$$
+\frac{I}{I_0}
+=
+\underbrace{\sin^2(2\phi)}_{\text{主軸の向き}}
+\underbrace{\sin^2\left[
+\frac{\pi Cd(\sigma_1-\sigma_2)}{\lambda}
+\right]}_{\text{主応力差}}
+$$
+
+を見ると、模様には二種類の情報が重なっていることも分かる。$\phi=0^\circ,90^\circ$で暗くなる線は主応力方向に由来するisoclinic、同じretardation、すなわち同じ主応力差を結ぶ線はisochromaticである。
+
+白色光では$\lambda$が連続的に分布するため、同じ主応力差でも消光条件を満たす縞次数が波長ごとにずれる。ある場所では赤が弱まり、別の場所では緑や青が弱まるため、単色光での明暗縞が白色光では色縞へ変わる。因果関係は
+
+$$
+\boxed{
+\text{応力}
+\rightarrow
+\Delta n
+\rightarrow
+\Gamma
+\rightarrow
+T(\lambda)
+\rightarrow
+\text{分光分布}
+\rightarrow
+\text{色}
+}
+$$
+
+と整理できる。透明プラスチックの虹色は、単なる「きれいな干渉色」ではなく、力学量を光学量へ変換した可視化でもある。
+
 ## 13　LCDも偏光を使って明暗を制御する
 
 液晶ディスプレイも偏光を利用する代表例である。LCDでは、偏光板と液晶層を組み合わせ、液晶分子の配向を電場で変えることで透過する偏光状態を制御する。最終的にもう一方の偏光板を通る光量が変化し、画素の明暗を作る。
@@ -571,6 +663,7 @@ $$
 - RP Photonics Encyclopedia, “Waveplates.” https://www.rp-photonics.com/waveplates.html
 - RP Photonics Encyclopedia, “Unpolarized Light.” https://www.rp-photonics.com/unpolarized_light.html
 - Nikon MicroscopyU, “Principles of Birefringence.” https://www.microscopyu.com/techniques/polarized-light/principles-of-birefringence
+- 青山学院大学 米山研究室「光弾性法 Photoelasticity」 https://www.me.aoyama.ac.jp/~yoneyama/PE.html
 - Shribak, M. (2015), “Polychromatic polarization microscope: bringing colors to a colorless world,” *Scientific Reports* 5, 17340. https://doi.org/10.1038/srep17340
 - Russell A. Chipman, Wai-Sze Tiffany Lam, Garam Young, *Polarized Light and Optical Systems*, CRC Press, 2018. https://www.routledge.com/Polarized-Light-and-Optical-Systems/Chipman-Lam-Young/p/book/9781498700566
 - CIE, *Colorimetry, 4th Edition*, CIE 015:2018. https://cie.co.at/publications/colorimetry-4th-edition
