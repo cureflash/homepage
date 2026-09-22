@@ -575,7 +575,108 @@ $$
 
 は単なる装置仕様ではなく、最終XYZの測定不確かさを決める要因である。
 
-## 17　色彩検定で押さえる因果関係
+## 17　座標を変えても等色関係は変わらない――可逆線形変換の不変量
+
+等色関数を「座標系」として理解すると、どの性質が座標の取り方に依存し、どの性質が依存しないかを分離できる。
+
+同一の三色型等色関係を、二つの3成分座標で記述する。波長ごとの重み関数を
+
+$$
+\mathbf q(\lambda)
+=
+\begin{bmatrix}
+q_1(\lambda)\\q_2(\lambda)\\q_3(\lambda)
+\end{bmatrix},
+\qquad
+\mathbf c(\lambda)
+=
+\begin{bmatrix}
+c_1(\lambda)\\c_2(\lambda)\\c_3(\lambda)
+\end{bmatrix}
+$$
+
+とし、両者が可逆な3×3行列 $M$ により
+
+$$
+\mathbf c(\lambda)=M\mathbf q(\lambda),
+\qquad \det M\neq0
+$$
+
+と結ばれているとする。
+
+スペクトル $\Phi(\lambda)$ の三刺激値は
+
+$$
+\mathbf t_q
+=\int\Phi(\lambda)\mathbf q(\lambda)\,d\lambda
+$$
+
+$$
+\mathbf t_c
+=\int\Phi(\lambda)\mathbf c(\lambda)\,d\lambda
+$$
+
+だから、線形性より
+
+$$
+\boxed{
+\mathbf t_c=M\mathbf t_q
+}
+$$
+
+となる。
+
+二つのスペクトルの差を $\Delta\Phi$ とすると、三刺激値差についても
+
+$$
+\Delta\mathbf t_c=M\Delta\mathbf t_q
+$$
+
+である。$M$ は可逆なので
+
+$$
+\Delta\mathbf t_c=\mathbf0
+\iff
+\Delta\mathbf t_q=\mathbf0
+$$
+
+が成り立つ。
+
+離散化した測色行列を $A_q,A_c$ と書けば
+
+$$
+A_c=MA_q
+$$
+
+であり、
+
+$$
+\boxed{
+\ker A_c=\ker A_q
+}
+$$
+
+となる。つまり、同じ観察者モデルの三色型等色関係を可逆な線形座標変換で書き換える限り、「どのスペクトル対が等色するか」というメタマーの同値関係は変わらない。
+
+一方、数値の大きさやユークリッド距離は一般には保存されない。
+
+$$
+\|M\Delta\mathbf t\|_2
+\neq
+\|\Delta\mathbf t\|_2
+$$
+
+だからである。XYZ、RGB、LMSのような3成分表示を比べるとき、
+
+- 等色する／しないという関係
+- 各軸の数値
+- 座標上の距離
+
+は別問題である。
+
+この区別は「XYZ等色関数とLMS錐体基礎関数は同じではない」という第8節を数学的に補強する。CIE 170-1は、生理学的意味を持つ軸を目指して1°〜10°視野の錐体基礎関数を扱っている。ただしCIE 1931 2°標準測色観察者と現代のLMS標準を無条件に同じ行列で置換できる、という意味ではない。視野、観察者モデル、正規化条件をそろえたうえで座標変換を議論する必要がある。
+
+## 18　色彩検定で押さえる因果関係
 
 まず次の流れを一つの系として理解する。
 
@@ -611,7 +712,7 @@ $$
 
 色彩検定で「標準測色観察者」「等色関数」「XYZ表色系」「三刺激値」「分光測色」が別々の用語として現れても、数学的には同じ測色演算の異なる部分を指している。
 
-## 18　まとめ
+## 19　まとめ
 
 等色関数の本質は、
 
@@ -670,3 +771,5 @@ $$
     https://www.cie.co.at/publications/special-metamerism-index-change-observer
 12. CIE, CIE 170-1:2006, *Fundamental Chromaticity Diagram with Physiological Axes — Part 1*.  
     https://www.cie.co.at/publications/fundamental-chromaticity-diagram-physiological-axes-part-1
+13. A. Stockman, “Formulae for generating standard and individual human cone spectral sensitivities,” *Color Research & Application*, 48(6), 818–840, 2023. DOI: 10.1002/col.22879.  
+    https://doi.org/10.1002/col.22879
