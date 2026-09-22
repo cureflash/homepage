@@ -72,7 +72,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - v8: candidate `0763c9055298cf54f853c79b0ed60da7439f2d20` / freshness `PASS` / 一次 `20 / 20` / 二次 `4 / 5` / 合計 `24 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error`
 - v9 pre-attempt: 別worker/contextでfreshness不成立のためcandidate未作成。worker-local blockerのみ記録。
 - v9 actual: candidate `203bec75a792d541126e1863604eb35cddb59146` / freshness `PASS` / 一次 `19 / 20` / 二次 `4 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
-- v10: candidate `2ec47a4b21c4a7d?` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
+- v10: candidate `2ec47a4b21c4f7cd9d89a5cfb5d919d6e399e5b0` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v11: candidate `1a038f86f340a0834ffaaa375d1e98da9a410455` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
 - v12 pre-attempt: 別worker/contextでfreshness不成立のためcandidate未作成。worker-local blockerのみ記録。
 - v12 actual: candidate `2ed839295e292ccd7c5b520c5484e8b4e82bb7fe` / freshness `PASS` / 一次 `20 / 20` / 二次 `3 / 5` / 合計 `23 / 25 FAIL` / 教材導出 `25 / 25 PASS` / 固定5群境界 `PASS` / `solver error ×2`
