@@ -205,6 +205,82 @@ $$
 
 測色で波長ピッチだけでなく「分光帯域幅」が重要なのはこのためである。
 
+### 6.1　迷光補正は「装置の混色」を逆に解く問題である
+
+有限帯域幅に加えて、実際の分光器では本来その波長チャンネルへ入るべきでない光が回折格子、反射面、検出器周辺などを経て混入する。これが分光迷光である。特に、ある波長では強い光があり、別の波長では試料がほとんど光を返さないような大きなダイナミックレンジを持つ測定では、弱い側へ漏れ込む迷光が相対的に大きな誤差となる。
+
+波長を $n$ 点へ離散化し、真のスペクトルを
+
+$$
+\mathbf r=(R_1,R_2,\ldots,R_n)^{\mathsf T}
+$$
+
+とする。装置の有限帯域幅と迷光をまとめた応答行列を $H$ とすれば、測定信号は概念的に
+
+$$
+\boxed{
+\mathbf y=H\mathbf r+\boldsymbol\varepsilon
+}
+$$
+
+と書ける。理想的な分光器なら $H=I$ だが、実機では対角成分の周囲へ裾が広がり、さらに遠い波長からの迷光を表す非対角成分も持つ。
+
+NISTの分光迷光補正では、装置のspectral line spread function（SLSF）を測って補正行列 $C_{\rm spec}$ を求め、
+
+$$
+\boxed{
+\mathbf y_{\rm corr}=C_{\rm spec}\mathbf y_{\rm meas}
+}
+$$
+
+という行列演算で迷光を補正する。これは単なる「ノイズ除去」ではない。装置によって波長間に生じた混合を、校正済みの線形モデルを使って逆変換する操作である。
+
+数学的には、もし
+
+$$
+C_{\rm spec}\approx H^{-1}
+$$
+
+なら真のスペクトルを近似的に復元できる。しかし $H$ に非常に小さい特異値があると、逆行列は測定ノイズを強く増幅する。特異値分解
+
+$$
+H=U\Sigma V^{\mathsf T}
+$$
+
+を考えると、形式的な逆変換では
+
+$$
+H^{-1}=V\Sigma^{-1}U^{\mathsf T}
+$$
+
+となり、小さな特異値 $\sigma_i$ に対して $1/\sigma_i$ が大きくなるからである。
+
+したがって分光補正は一般に逆問題であり、単純な逆行列計算が常に安定とは限らない。必要なら、たとえば滑らかさを課した正則化
+
+$$
+\hat{\mathbf r}
+=
+\arg\min_{0\le r_i\le1}
+\left[
+\lVert H\mathbf r-\mathbf y\rVert_W^2
++\lambda\lVert L\mathbf r\rVert^2
+\right]
+$$
+
+のように、「測定信号を再現すること」と「不自然に激しく振動するスペクトルを避けること」を両立させる。
+
+この観点から見ると、分光測色計は単に波長ごとの値を読み取る装置ではない。
+
+$$
+\text{真のスペクトル}
+\xrightarrow{H}
+\text{装置が観測するスペクトル}
+\xrightarrow{\text{校正・補正}}
+\widehat{R}(\lambda)
+$$
+
+という測定モデルを通してスペクトルを推定している。NISTはSLSFから得た補正行列による方法で、条件によって迷光誤差を1桁以上低減できると報告している。
+
 ## 7　分光反射率からXYZを計算する
 
 分光反射率 $R(\lambda)$ が得られたら、次にCIE標準イルミナントと標準測色観察者を使って三刺激値へ変換する。
@@ -667,6 +743,10 @@ $$
   https://www.nist.gov/laboratories/tools-instruments/reference-integrating-sphere-spectral-reflectance
 - Barnes, P. Y., Parr, A. C., Early, E. A. (1998), *Spectral Reflectance*, NIST Special Publication 250-48  
   https://www.nist.gov/publications/spectral-reflectance
+- NIST, *Stray light correction* — SLSFを用いた分光迷光補正行列 $C_{\rm spec}$ と実時間補正  
+  https://www.nist.gov/pml/sensor-science/optical-radiation/stray-light-correction
+- Zong, Y., Brown, S. W., Lykke, K. R., Ohno, Y. (2007), *Correction of Stray Light In Spectroradiometers and Imaging Instruments*, NIST / CIE proceedings.  
+  https://www.nist.gov/publications/correction-stray-light-spectroradiometers-and-imaging-instruments
 - JCGM 100:2008(E), *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*.  
   https://doi.org/10.59161/JCGM100-2008E
 - JCGM 100:2008/Amd.1:2026, *Evaluation of measurement data — Guide to the expression of uncertainty in measurement — Amendment 1: Nonlinearity in measurement models*.  
