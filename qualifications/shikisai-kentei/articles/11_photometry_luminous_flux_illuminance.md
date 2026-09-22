@@ -526,6 +526,68 @@ $$
 
 CIEは照度計・輝度計の性能を分光応答、余弦応答、直線性などの品質指標で評価しており、LED時代には標準イルミナントAを補完する測光器校正用LED参照スペクトル L41 も公表している。したがって「lux」は単にセンサーが受けた光量ではなく、実器の分光応答を標準視感度へどこまで一致させ、どのスペクトルで校正したかまで含む計測量である。
 
+### 17.2　照度計は斜め光をどう測るか――余弦応答
+
+照度は受光面への入射方向も含む量である。面へさまざまな方向から光が入るとき、輝度分布を $L_v(\theta,\phi)$ とすれば、真の照度は
+
+$$
+\boxed{
+E_v=\int_{\Omega}L_v(\theta,\phi)\cos\theta\,d\Omega
+}
+$$
+
+である。$\cos\theta$ は受光面の投影面積から生じるので、照度計も同じ角度依存性を再現しなければならない。
+
+照度計の正面入射に対する感度を1へ規格化し、実際の方向応答を $a(\theta,\phi)$ とする。すると指示値は概念的に
+
+$$
+E_{\mathrm{ind}}
+=\int_{\Omega}L_v(\theta,\phi)a(\theta,\phi)\,d\Omega
+$$
+
+となる。理想的な照度計では
+
+$$
+\boxed{a(\theta,\phi)=\cos\theta}
+$$
+
+でなければならない。したがって方向応答による測定誤差は
+
+$$
+\boxed{
+\Delta E
+=E_{\mathrm{ind}}-E_v
+=\int_{\Omega}L_v(\theta,\phi)
+\left[a(\theta,\phi)-\cos\theta\right]d\Omega
+}
+$$
+
+と表せる。
+
+特に一方向 $\theta_0$ からだけ光が来る場合には、真値は $\cos\theta_0$ に比例し、指示値は $a(\theta_0)$ に比例するので、相対誤差は
+
+$$
+\boxed{
+\frac{E_{\mathrm{ind}}-E_v}{E_v}
+=\frac{a(\theta_0)}{\cos\theta_0}-1
+}
+$$
+
+となる。例えば受光器が角度によらずほぼ一定感度 $a\approx1$ のままなら、$\theta_0=60^\circ$ では $\cos60^\circ=1/2$ なので、理想照度に対して約2倍を指示してしまう。
+
+そこで実用的な照度計では、受光部の前に拡散板などを置き、斜入射ほど感度を落として $\cos\theta$ に近づける。これは単なる「光を均一にする部品」ではなく、照度という幾何学的定義そのものをセンサー上で実装するための光学系である。
+
+ただし実際の拡散板・検出器では完全な余弦応答にはならない。NISTの拡散板入力型放射照度計でも、方向応答は開口径・拡散板・波長に依存し、最適な余弦応答条件が波長によって変わることが報告されている。つまり実器では
+
+$$
+\boxed{
+\text{分光ミスマッチ}
++\text{角度ミスマッチ}
+}
+$$
+
+を独立に考えるだけでは不十分な場合があり、入射方向とスペクトルが同時に変わる照明環境では両者が結合して測定誤差を生みうる。CIE 231:2019が照度計・輝度計を複数の品質指標で評価するのは、このように測光器の精度が一つの校正係数だけでは決まらないためである。
+
 ## 18　色彩検定の用語を大学物理へ翻訳する
 
 | 色彩検定での表現 | 物理・数学での意味 |
@@ -536,6 +598,7 @@ CIEは照度計・輝度計の性能を分光応答、余弦応答、直線性�
 | 輝度 | 投影面積・立体角あたりの光束密度 |
 | 距離が離れると暗い | 点光源近似では $E_v\propto1/r^2$ |
 | 斜めから照らすと暗い | $E_v\propto\cos\theta$ |
+| 照度計で斜入射光を測る | 理想方向応答は $a(\theta)=\cos\theta$ |
 | 白い紙ほど同じ照度で高輝度 | Lambert面なら $L_v=\rho_vE_v/\pi$ |
 | レンズで光を集める | 輝度ではなく面積と立体角の配分を変える。理想系では $L_v/n^2$ が不変 |
 | 照明で色が変わる | $E(\lambda)R(\lambda)$ が変わる |
@@ -579,12 +642,12 @@ $$
 によって照度・反射率・輝度がつながる。また理想的な受動光学系では optical extent の保存から
 
 $$
-\boxed{\frac{L_v}{n^2}=\mathrm{const.}}
+\boxed{\frac{L_v}{n^2}=\text{const.}}
 $$
 
 となり、レンズは面積と立体角を交換できても輝度を自由に増幅できない。
 
-CIE 1931表色系では $\bar y(\lambda)=V(\lambda)$ なので測光と測色はY成分を通じて接続する。ただし視覚の分光感度は一定ではなく、暗所視では $V'(\lambda)$、薄明視では $V_{\mathrm{mes};m}(\lambda)$ を考える必要がある。
+CIE 1931表色系では $\bar y(\lambda)=V(\lambda)$ なので測光と測色はY成分を通じて接続する。ただし視覚の分光感度は一定ではなく、暗所視では $V'(\lambda)$、薄明視では $V_{\mathrm{mes};m}(\lambda)$ を考える必要がある。実際の照度計ではさらに、分光応答を $V(\lambda)$ に、方向応答を $\cos\theta$ に近づける必要があり、測定精度は光源スペクトルと入射角分布の両方に依存する。
 
 色彩検定の「照明」を大学レベルで理解するとは、lm・cd・lx・cd/m²を暗記することではなく、放射スペクトル、標準視感度、立体角、投影面積、反射率、エタンデュからそれぞれの量を導けるようにすることである。
 
@@ -607,5 +670,6 @@ CIE 1931表色系では $\bar y(\lambda)=V(\lambda)$ なので測光と測色は
 - CIE, CIE 257:2026, *Recommendations for Practical Application of the CIE System for Mesopic Photometry in Outdoor Lighting*. https://www.cie.co.at/publications/recommendations-practical-application-cie-system-mesopic-photometry-outdoor-lighting
 - National Institute of Standards and Technology (NIST), “Realization of the candela”. https://www.nist.gov/pml/sensor-science/optical-radiation/realization-candela
 - NIST, “Photometry”. https://www.nist.gov/programs-projects/photometry
+- NIST, Eppeldauer, G. P., Racz, M., Larason, T. C., “Optical Characterization of Diffuser-Input Standard Irradiance Meters”, 1998. https://www.nist.gov/publications/optical-characterization-diffuser-input-standard-irradiance-meters
 - Bureau International des Poids et Mesures (BIPM), “The SI”. https://www.bipm.org/en/measurement-units
 - Bureau International des Poids et Mesures, *Principles governing photometry*, Metrologia 56 (2019), including the CIE photopic, scotopic and mesopic luminous-efficiency relations.
