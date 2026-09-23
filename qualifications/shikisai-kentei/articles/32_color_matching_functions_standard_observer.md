@@ -283,7 +283,7 @@ $$
 同じスペクトル $\Phi(\lambda)$ でも
 
 $$
-(X,Y,Z)\ne(X_{10},Y_{10},Z_{10})
+(X,Y,Z)\neq(X_{10},Y_{10},Z_{10})
 $$
 
 となり得る。測色値を比較するときは、標準観察者の条件も一致させる必要がある。
@@ -450,7 +450,7 @@ $$
 しかし一般には
 
 $$
-\langle\mathbf c_i,\mathbf c_j\rangle\ne\delta_{ij}
+\langle\mathbf c_i,\mathbf c_j\rangle\neq\delta_{ij}
 $$
 
 である。Gram行列
@@ -676,6 +676,93 @@ $$
 
 この区別は「XYZ等色関数とLMS錐体基礎関数は同じではない」という第8節を数学的に補強する。CIE 170-1は、生理学的意味を持つ軸を目指して1°〜10°視野の錐体基礎関数を扱っている。ただしCIE 1931 2°標準測色観察者と現代のLMS標準を無条件に同じ行列で置換できる、という意味ではない。視野、観察者モデル、正規化条件をそろえたうえで座標変換を議論する必要がある。
 
+### 発展：三刺激値型センサーが正確な測色器になる条件――Luther-Ives条件
+
+ここまでの可逆線形変換は、三刺激値型の色彩計やカメラが「人間の標準観察者と同じ等色関係を保てる条件」にそのままつながる。
+
+3チャンネルセンサーの分光感度を
+
+$$
+\mathbf q(\lambda)=
+\begin{bmatrix}
+q_1(\lambda)\\q_2(\lambda)\\q_3(\lambda)
+\end{bmatrix}
+$$
+
+とすると、スペクトル $\Phi(\lambda)$ に対するセンサー出力は
+
+$$
+\mathbf s
+=
+\int \Phi(\lambda)\mathbf q(\lambda)\,d\lambda
+$$
+
+である。一方、標準観察者のXYZは
+
+$$
+\mathbf t
+=
+\int \Phi(\lambda)\mathbf x(\lambda)\,d\lambda,
+\qquad
+\mathbf x(\lambda)=
+\begin{bmatrix}
+\bar{x}(\lambda)\\
+\bar{y}(\lambda)\\
+\bar{z}(\lambda)
+\end{bmatrix}
+$$
+
+である。
+
+どのスペクトルに対しても、固定された3×3行列 $M$ だけで
+
+$$
+\mathbf t=M\mathbf s
+$$
+
+と正確に変換したい。そのためには、波長ごとのセンサー感度と等色関数が
+
+$$
+\boxed{
+\mathbf x(\lambda)=M\mathbf q(\lambda)
+}
+$$
+
+を満たす必要がある。言い換えれば、3本のセンサー感度関数が張る部分空間と、3本のCIE等色関数が張る部分空間が同じでなければならない。これがMaxwell–Ives criterion、Luther condition、Luther–Ives conditionなどと呼ばれる条件である。
+
+この条件が成り立てば、積分の線形性から
+
+$$
+\mathbf t
+=
+\int \Phi(\lambda)M\mathbf q(\lambda)\,d\lambda
+=
+M\int \Phi(\lambda)\mathbf q(\lambda)\,d\lambda
+=M\mathbf s
+$$
+
+となり、スペクトルの種類に依存しない一つの行列でXYZを復元できる。
+
+逆にこの条件を満たさない場合、センサー演算子を $Q$、標準観察者の測色演算子を $A$ とすると、一般には
+
+$$
+\ker Q\neq\ker A
+$$
+
+である。すると
+
+$$
+Q\Delta\boldsymbol{\Phi}=\mathbf0,
+\qquad
+A\Delta\boldsymbol{\Phi}\neq\mathbf0
+$$
+
+となるスペクトル差が存在し得る。つまりセンサーには同じRGB値に見える二つの刺激が、標準観察者には異なるXYZを持つ。これはセンサー側のメタメリズムであり、あとから3×3行列を掛けても失われた区別は復元できない。
+
+実際のカメラや三刺激値型色彩計は、この理想条件を完全には満たさないことが多い。その場合、校正色票や想定光源に対して最小二乗などで変換行列を求めれば実用精度を上げられるが、それは「あらゆるスペクトルに対して厳密な測色器になった」という意味ではない。狭帯域LEDなど校正集合と分光特性が大きく異なる刺激では、分光感度の不一致が測色誤差として現れやすい。
+
+CIE 179:2007は、光源色を測る三刺激値型色彩計について、分光応答を含む複数の性能要因を客観的に評価する方法をまとめている。等色関数は単なる計算表ではなく、測色器の受光系がどのような分光感度を持つべきかを決める基準でもある。
+
 ## 18　色彩検定で押さえる因果関係
 
 まず次の流れを一つの系として理解する。
@@ -748,6 +835,8 @@ $$
 
 さらに厳密には、等色関数はスペクトル空間を評価する線形汎関数として働く。XYZ化は通常の意味の直交射影ではなく、CIEが標準化した3つの線形測定値への写像である。この数学的意味を押さえると、「なぜスペクトル情報が3数に圧縮できるのか」と「なぜその過程で情報が失われるのか」を同時に理解できる。
 
+三刺激値型センサーまで含めると、センサー感度関数の張る空間がCIE等色関数の張る空間と一致するときに限り、固定された線形変換で任意スペクトルのXYZを正確に復元できる。Luther-Ives条件は、等色関数が測色器設計の基準になることを示している。
+
 ## 参考資料
 
 1. 公益社団法人 色彩検定協会「色彩検定とは―各級の目安」（1級の色彩学に「測色」を明記）  
@@ -773,3 +862,7 @@ $$
     https://www.cie.co.at/publications/fundamental-chromaticity-diagram-physiological-axes-part-1
 13. A. Stockman, “Formulae for generating standard and individual human cone spectral sensitivities,” *Color Research & Application*, 48(6), 818–840, 2023. DOI: 10.1002/col.22879.  
     https://doi.org/10.1002/col.22879
+14. CIE, CIE 179:2007, *Methods for characterising tristimulus colorimeters for measuring the colour of light*.  
+    https://cie.co.at/publications/methods-characterising-tristimulus-colorimeters-measuring-colour-light
+15. S. Quan, N. Ohta, “Evaluating Hypothetical Spectral Sensitivities with Quality Factors,” *Journal of Imaging Science and Technology*, 46(1), 8–14, 2002. DOI: 10.2352/J.ImagingSci.Technol.2002.46.1.art00003.  
+    https://library.imaging.org/jist/articles/46/1/art00003
