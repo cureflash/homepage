@@ -560,6 +560,69 @@ $$
 
 色彩学で通常使う等色関数や分光反射率は波長を独立変数として扱う。したがって測色積分を振動数座標へ書き換える場合も、積分変数だけを置き換えるのではなく、分光密度と重み関数を同じ変数に対して一貫して変換しなければならない。
 
+### 10.1　「単色光」は理想化――スペクトルは電場のFourier変換から生まれる
+
+ここまで単色光を $E_0\cos\omega_0 t$ のように書いてきたが、厳密な単色波は無限に長い時間続く理想化である。実際の光は有限時間の発光、有限寿命の遷移、衝突、温度揺らぎなどを持つため、一般にはゼロでないスペクトル幅を持つ。
+
+時間波形 $E(t)$ を角振動数ごとの成分へ分解する操作がFourier変換である。規約の一例では
+
+$$
+\tilde E(\omega)
+=\int_{-\infty}^{\infty}
+E(t)e^{i\omega t}\,dt
+$$
+
+であり、逆変換は
+
+$$
+E(t)
+=\frac{1}{2\pi}
+\int_{-\infty}^{\infty}
+\tilde E(\omega)e^{-i\omega t}\,d\omega
+$$
+
+となる。$|\tilde E(\omega)|^2$ は、正規化や観測条件に依存する定数を除けば、周波数ごとの強度分布に対応する。つまり「スペクトル」とは、時間変化する電場を周波数成分へ分解した表現でもある。
+
+このため、光パルスを時間的に短く閉じ込めるほど、必要な周波数帯域は広くなる。時間幅と角周波数幅を標準偏差で定義したFourier限界では
+
+$$
+\boxed{\Delta t\,\Delta\omega\ge\frac12}
+$$
+
+すなわち $\omega=2\pi\nu$ より
+
+$$
+\boxed{\Delta t\,\Delta\nu\ge\frac{1}{4\pi}}
+$$
+
+となる。等号はGaussian型の変換限界波形で成立する。FWHMで幅を定義すると係数は波形に依存し、Gaussian強度パルスでは代表的に
+
+$$
+\Delta t_{\mathrm{FWHM}}\Delta\nu_{\mathrm{FWHM}}\approx0.441
+$$
+
+である。
+
+ここで注意したいのは、これは「光子の量子力学的不確定性」を持ち出さなくても、Fourier変換だけから現れる古典的な時間―周波数の関係だという点である。短い信号を作るには多数の周波数成分を重ねる必要がある。
+
+色彩との因果関係は
+
+$$
+\text{時間波形 }E(t)
+\rightarrow
+\text{Fourier変換}
+\rightarrow
+\text{光源スペクトル}
+\rightarrow
+\text{物体の分光反射・透過}
+\rightarrow
+\text{眼へ届く分光分布}
+\rightarrow
+\text{色知覚}
+$$
+
+とつながる。LEDが比較的広い発光帯を持ち、単一周波数レーザーが非常に狭い線幅を持つという違いも、最終的には光源を構成する電磁場の周波数分布の違いである。ただし実際の線幅は、発光機構、位相雑音、温度、共振器、寿命などによって決まるため、「短時間だから広帯域」だけで全てを説明することはできない。
+
 ## 11　色彩学では「光源 → 物体 → 眼」を分けて考える
 
 色の成立を物理学から整理すると、少なくとも三段階に分けられる。
@@ -666,6 +729,15 @@ Q_\lambda(\lambda)\,d\lambda
 =Q_\nu(\nu)\,|d\nu|
 $$
 
+$$
+\tilde E(\omega)
+=\int_{-\infty}^{\infty}E(t)e^{i\omega t}\,dt
+$$
+
+$$
+\Delta t\,\Delta\omega\ge\frac12
+$$
+
 を区別して理解する。
 
 これらはそれぞれ、
@@ -677,6 +749,7 @@ $$
 - 光子エネルギー：物質との量子的なエネルギー交換
 - 分光光子束：同じ放射エネルギーでも波長によって含まれる光子数が異なること
 - 分光密度の変数変換：同じ放射を波長・振動数のどちらで表しても総量を保存する条件
+- Fourier変換：時間波形を周波数成分へ分解し、スペクトル幅と時間幅を結び付けること
 
 を表している。
 
@@ -692,4 +765,5 @@ $$
 - [OpenStax, University Physics Volume 2, Plane Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-2-plane-electromagnetic-waves)
 - [OpenStax, University Physics Volume 2, Energy Carried by Electromagnetic Waves](https://openstax.org/books/university-physics-volume-2/pages/16-3-energy-carried-by-electromagnetic-waves)
 - [MIT OpenCourseWare, 6.013 Electromagnetics and Applications, Course Notes, §2.7 Poynting's Theorem](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf)
+- [MIT OpenCourseWare, 6.974 Fundamentals of Photonics, Chapter 2: Classical Electromagnetism and Optics](https://ocw.mit.edu/courses/6-974-fundamentals-of-photonics-quantum-electronics-spring-2006/8e54d1625e9e71eb5b4e4998e6967e4e_chapter2.pdf)
 - [OpenStax, University Physics Volume 3, Wave-Particle Duality](https://openstax.org/books/university-physics-volume-3/pages/6-6-wave-particle-duality)
