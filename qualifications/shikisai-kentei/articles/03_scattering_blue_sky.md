@@ -514,7 +514,7 @@ $$
 - $e^{-\tau_{\odot}}$：散乱点へ届くまでの減衰
 - $\beta_s$：その場所で散乱される確率
 - $P_R(\theta)$：観察方向へ振り分けられる割合
-- $e^{-\tau_{\mathrm{obs}}}$：散乱後、眼へ届くまでの減衰
+- $e^{-\tau_{\mathrm{obs}}$：散乱後、眼へ届くまでの減衰
 
 Rayleigh領域では $\beta_s\propto\lambda^{-4}$ なので短波長が強く散乱される。しかし、光路が長くなると指数減衰も短波長側ほど強くなる。したがって、空の色は単純な $\lambda^{-4}$ だけではなく、太陽高度・観察方向・大気の厚さ・エアロゾル量まで含めた放射輸送で決まる。
 
@@ -575,6 +575,92 @@ g
 $$
 
 とつながる。「大粒子ではRayleigh則が崩れる」というだけでなく、方向再分配の非対称性まで含めて初めて、霞・雲・太陽近傍のまぶしい散乱光を定量的に扱える。
+
+### 12.2　エアロゾルの色依存性――Ångström指数
+
+Rayleigh散乱では理想化すると $\lambda^{-4}$ という強い波長依存が現れるが、エアロゾルの消散は粒径分布が広く、Mie領域も含むため、可視域で単純な4乗則にはならない。大気観測では、エアロゾル光学的厚さ（AOD）$\tau_a$ の波長依存を、ある波長範囲で経験的に
+
+$$
+\boxed{
+\tau_a(\lambda)
+=
+\tau_a(\lambda_0)
+\left(\frac{\lambda}{\lambda_0}\right)^{-\alpha_A}
+}
+$$
+
+と近似することが多い。$\alpha_A$ がÅngström指数である。
+
+対数を取ると
+
+$$
+\ln\tau_a
+=
+\ln\tau_a(\lambda_0)
+-
+\alpha_A\ln\left(\frac{\lambda}{\lambda_0}\right)
+$$
+
+なので、2波長 $\lambda_1,\lambda_2$ の観測から
+
+$$
+\boxed{
+\alpha_A
+=
+-\frac{
+\ln\tau_a(\lambda_1)-\ln\tau_a(\lambda_2)
+}{
+\ln\lambda_1-\ln\lambda_2
+}
+}
+$$
+
+と求められる。NASAのAERONETでも、複数波長のAODを対数化し、その傾きからÅngström指数を求める。
+
+物理的には、$\alpha_A$ が大きいほど消散の波長依存が強く、微小粒子が光学的に優勢である場合が多い。NASA Deep Blueは、概略として $\alpha_A>1$ なら煙や工業起源粒子などのfine modeが優勢、$\alpha_A<1$ なら砂塵・海塩などのcoarse modeが優勢になりやすいと説明している。ただしÅngström指数は粒径そのものではなく、粒径分布・屈折率・波長範囲をまとめて反映した経験量である。
+
+例えば440 nmと870 nmで比を取ると、
+
+$$
+\frac{\tau_a(440)}{\tau_a(870)}
+=
+\left(\frac{870}{440}\right)^{\alpha_A}
+$$
+
+である。$\alpha_A=1.5$ ならこの比は約2.78、$\alpha_A=0.5$ なら約1.41となる。つまりfine modeが優勢な大気ほど短波長側の直達光を相対的に強く削りやすい。
+
+直達太陽光を大気質量 $m$ を使って概略
+
+$$
+\boxed{
+I_\lambda
+=
+I_{0,\lambda}
+\exp\left[-m\left\{
+\tau_R(\lambda)
++\tau_a(\lambda)
++\tau_{\rm abs}(\lambda)
+\right\}\right]
+}
+$$
+
+と書けば、青空や夕焼けの色はRayleigh散乱だけでなく、エアロゾルの量とÅngström指数にも依存することが分かる。$\alpha_A$ が大きければエアロゾル消散そのものにも強い短波長選択性が加わり、低い場合には消散はより灰色に近づく。一方、coarse modeでは前節の非対称因子 $g$ が大きくなりやすいため、色の波長依存が弱くても前方散乱による霞や太陽周辺の白っぽい光が目立つ場合がある。
+
+したがって実大気の色は、
+
+$$
+\boxed{
+\text{分子のRayleigh散乱}
++
+\text{エアロゾルAODの波長依存}
++
+\text{位相関数の前方性}
+\rightarrow
+\text{方向別・波長別の放射輝度}
+}
+$$
+
+として考える必要がある。Ångström指数は、粒子サイズの物理を「色の付き方」へ接続するための実用的な指標である。
 
 ## 13　色を理解するときは「スペクトルの再分配」と考える
 
@@ -651,6 +737,8 @@ $$
 - [NASA Science, Wave Behaviors](https://science.nasa.gov/ems/03_behaviors/)
 - [NASA Space Place, Why Is the Sky Blue?](https://spaceplace.nasa.gov/blue-sky/en/)
 - [NASA Goddard Space Flight Center, Planetary Spectrum Generator: Molecular (Rayleigh) and Aerosol (Mie) Scattering](https://psg.gsfc.nasa.gov/helpatm.php)
+- [NASA AERONET, Spectral Optical Thickness](https://aeronet.gsfc.nasa.gov/Operational/BSSN/optical_thickness.html)
+- [NASA Earth, Deep Blue: How Aerosols Are Measured](https://earth.gsfc.nasa.gov/climate/data/deep-blue/science)
 - [UCAR Center for Science Education, The Appearance of the Sky](https://scied.ucar.edu/learning-zone/atmosphere/appearance-sky)
 - [UCAR, Atmospheric Remote Sensing Lecture 7: Rayleigh/Molecular Scattering](https://www2.acom.ucar.edu/sites/default/files/documents/Gautam_acam_lecture.pdf)
 - [NASA Reference Publication 1156, Introduction to the Theory of Atmospheric Radiative Transfer](https://ntrs.nasa.gov/citations/19860018367)
