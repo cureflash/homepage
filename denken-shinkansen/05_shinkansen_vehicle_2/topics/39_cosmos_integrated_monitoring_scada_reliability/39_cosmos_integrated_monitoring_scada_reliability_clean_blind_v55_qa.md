@@ -4,7 +4,7 @@
 
 ## 判定
 
-- candidate commit: `5d4a37562dea8bbdb5b01bfd1063fc6343f6fd63`
+- candidate commit: `5d4aad4dde6299d97a9ead58029340caeb078d5d`
 - freshness: `PASS`
 - 一次: `20 / 20 PASS`
 - 二次: `3 / 5 FAIL`
