@@ -1,111 +1,1264 @@
 {
   "title": "色彩検定×自然科学",
-  "updated": "2026-09-21",
+  "updated": "2026-09-23",
   "targetArticles": 101,
   "series": [
-    {"id":"physics","order":1,"name":"物理","targetTopics":13,"description":"電磁波、光学、散乱、干渉、黒体放射、照明、混色"},
-    {"id":"chemistry-geoscience","order":2,"name":"化学・地学","targetTopics":6,"description":"吸収、分子軌道、結晶場、顔料・染料、鉱物・宝石"},
-    {"id":"biology","order":3,"name":"生物","targetTopics":9,"description":"網膜、オプシン、生化学、遺伝、進化、動植物の色"},
-    {"id":"vision-psychology","order":4,"name":"色覚・心理","targetTopics":7,"description":"順応、反対色、対比、色恒常性、心理物理学"},
-    {"id":"colorimetry-design","order":5,"name":"測色・表色・配色","targetTopics":13,"description":"PCCS、マンセル、XYZ、L*a*b*、色差、測色、配色"},
-    {"id":"digital-color","order":6,"name":"デジタル色彩・画像処理","targetTopics":18,"description":"RGB、画素、量子化、レイヤー合成、色調補正、トーンカーブ、画像処理、カラーマネジメント"},
-    {"id":"illustration-practice","order":7,"name":"イラスト実践・色彩学","targetTopics":13,"description":"影・光・彩度・明度設計・背景分離・肌・金属・髪・色調補正・色知覚をイラスト制作へ接続"},
-    {"id":"makeup-color-science","order":8,"name":"メイク・美容×色彩科学","targetTopics":22,"description":"肌・ベースメイク・ポイントメイク・質感・顔印象を色彩学、光学、視覚心理、皮膚科学から理解する"}
+    {
+      "id": "physics",
+      "order": 1,
+      "name": "物理",
+      "targetTopics": 13,
+      "description": "電磁波、光学、散乱、干渉、黒体放射、照明、混色"
+    },
+    {
+      "id": "chemistry-geoscience",
+      "order": 2,
+      "name": "化学・地学",
+      "targetTopics": 6,
+      "description": "吸収、分子軌道、結晶場、顔料・染料、鉱物・宝石"
+    },
+    {
+      "id": "biology",
+      "order": 3,
+      "name": "生物",
+      "targetTopics": 9,
+      "description": "網膜、オプシン、生化学、遺伝、進化、動植物の色"
+    },
+    {
+      "id": "vision-psychology",
+      "order": 4,
+      "name": "色覚・心理",
+      "targetTopics": 7,
+      "description": "順応、反対色、対比、色恒常性、心理物理学"
+    },
+    {
+      "id": "colorimetry-design",
+      "order": 5,
+      "name": "測色・表色・配色",
+      "targetTopics": 13,
+      "description": "PCCS、マンセル、XYZ、L*a*b*、色差、測色、配色"
+    },
+    {
+      "id": "digital-color",
+      "order": 6,
+      "name": "デジタル色彩・画像処理",
+      "targetTopics": 18,
+      "description": "RGB、画素、量子化、レイヤー合成、色調補正、トーンカーブ、画像処理、カラーマネジメント"
+    },
+    {
+      "id": "illustration-practice",
+      "order": 7,
+      "name": "イラスト実践・色彩学",
+      "targetTopics": 13,
+      "description": "影・光・彩度・明度設計・背景分離・肌・金属・髪・色調補正・色知覚をイラスト制作へ接続"
+    },
+    {
+      "id": "makeup-color-science",
+      "order": 8,
+      "name": "メイク・美容×色彩科学",
+      "targetTopics": 22,
+      "description": "肌・ベースメイク・ポイントメイク・質感・顔印象を色彩学、光学、視覚心理、皮膚科学から理解する"
+    }
   ],
   "topics": [
-    {"id":"01_what_is_light_color","articleNo":1,"seriesId":"physics","title":"光とは何だろう――「色」の入口を電磁波と光子から考える","summary":"色彩検定3級の「光とは何だろう」を、Maxwell方程式、波長・振動数、光子エネルギー、強度、スペクトル、波動粒子二重性まで物理学から掘り下げる。","levels":["3級：光と色・光とは何だろう","大学：電磁気学・量子論"],"source":"articles/01_what_is_light_color.md"},
-    {"id":"02_reflection_absorption_transmission","articleNo":2,"seriesId":"physics","title":"物体の色はどう決まるのか――反射・吸収・透過を物理で考える","summary":"反射率・透過率・吸収率のエネルギー保存から、Fresnel反射、複素屈折率、吸収係数、散乱までを使って物体色の物理を理解する。","levels":["3級：光と色・光の性質と色","大学：電磁気学・光学"],"source":"articles/02_reflection_absorption_transmission.md"},
-    {"id":"03_scattering_blue_sky","articleNo":3,"seriesId":"physics","title":"空はなぜ青く、夕焼けはなぜ赤いのか――散乱を電磁気学から考える","summary":"誘起双極子と双極子放射からRayleigh散乱のλ^-4則を導き、青空・夕焼け・白い雲・偏光を光学的厚さと粒子サイズまで含めて理解する。","levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：電磁気学・大気光学"],"source":"articles/03_scattering_blue_sky.md"},
-    {"id":"04_transparent_color_beer_lambert","articleNo":4,"seriesId":"chemistry-geoscience","title":"透明な物質に、なぜ色がつくのか","summary":"「透明」と「無色」を分け、分光透過率とBeer–Lambert則から、濃度・光路長・吸収スペクトルが色を決める仕組みを理解する。","levels":["3級：光と色","大学化学：分光学"],"source":"articles/04_transparent_color_beer_lambert.md"},
-    {"id":"05_refraction_dispersion","articleNo":5,"seriesId":"physics","title":"なぜプリズムで白い光が虹色に分かれるのか――屈折と分散を電磁気学から考える","summary":"Snellの法則を位相連続から導き、Lorentz振動子による物質分極、複素屈折率、正常分散、Cauchy・Sellmeier式、プリズム分光、色収差までつなげて理解する。","levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：電磁気学・光学"],"source":"articles/05_refraction_dispersion.md"},
-    {"id":"06_thin_film_interference","articleNo":6,"seriesId":"physics","title":"シャボン玉はなぜ虹色に見えるのか――薄膜干渉と構造色","summary":"電場の重ね合わせ、光学距離、Fresnel反射によるπ位相反転から薄膜干渉条件を導き、膜厚・屈折率・観察角度が反射スペクトルと構造色を決める仕組みを理解する。","levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：波動光学・電磁気学"],"source":"articles/06_thin_film_interference.md"},
-    {"id":"07_blackbody_color_temperature","articleNo":7,"seriesId":"physics","title":"色温度はなぜ「温度」なのか――黒体放射とPlanckの法則","summary":"Planckの法則、Wienの変位則、Stefan–Boltzmann則から黒体スペクトルを導き、CIE XYZ、黒体軌跡、色温度・相関色温度、白熱ランプとLEDの違いまで理解する。","levels":["3級：光と色・照明と色の見え方","2級：照明の表し方・白熱ランプ・LED","大学：熱放射・量子論・測色学"],"source":"articles/07_blackbody_color_temperature.md"},
-    {"id":"08_led_bandgap_white_light","articleNo":8,"seriesId":"physics","title":"LEDはなぜ白く光るのか――半導体のバンドギャップと加法混色","summary":"pn接合へのキャリア注入、放射再結合、バンドギャップと発光波長の関係から、GaN/InGaN青色LED、蛍光体による白色化、RGB加法混色、分光分布とXYZまでを半導体物理と測色学で理解する。","levels":["3級：照明と色の見え方・混色・加法混色","2級：照明・ランプの種類・LED","大学：半導体物理・量子論・測色学"],"source":"articles/08_led_bandgap_white_light.md"},
-    {"id":"09_additive_color_mixing","articleNo":9,"seriesId":"physics","title":"光を足すとなぜ色が変わるのか――加法混色を線形代数で考える","summary":"独立光源の分光分布加算からXYZの線形性、Grassmannの法則、色度図上の混色直線、RGB色域、sRGBの線形化までを電磁気学・測色学・線形代数で理解する。","levels":["3級：混色・加法混色・混色を応用した身近な例","大学：電磁気学・測色学・線形代数・画像工学"],"source":"articles/09_additive_color_mixing.md"},
-    {"id":"10_subtractive_color_mixing","articleNo":10,"seriesId":"physics","title":"色を重ねるとなぜ暗くなるのか――減法混色を分光透過率から考える","summary":"CMY減法混色を、分光透過率の乗算、光学濃度の加算、Beer–Lambert則、XYZ積分、実在色材の非理想性、Kubelka–Munk理論まで使って物理的に理解する。","levels":["3級：混色・減法混色・混色を応用した身近な例","2級：光の性質と色・印刷と色","大学：光学・分光学・測色学・放射輸送"],"source":"articles/10_subtractive_color_mixing.md"},
-    {"id":"11_photometry_luminous_flux_illuminance","articleNo":11,"seriesId":"physics","title":"ルーメン・ルクス・カンデラは何が違うのか――測光量を放射量から導く","summary":"放射量をCIE明所視標準分光視感効率で重み付けするところから、光束・光度・照度・輝度、逆二乗則、余弦則、XYZのY成分との接続までを測光学と光学で理解する。","levels":["3級：光と色・照明と色の見え方","2級：光と色・照明・照明の表し方","大学：測光学・放射測定・光学・測色学"],"source":"articles/11_photometry_luminous_flux_illuminance.md"},
-    {"id":"12_spectral_power_distribution_color_rendering","articleNo":12,"seriesId":"physics","title":"同じ白色光なのに、なぜ物の色が違って見えるのか――分光分布と演色性","summary":"光源の分光分布と物体の分光反射率の積から反射スペクトルを導き、XYZ積分、同色度異スペクトル、色温度と演色性の違い、CIE演色評価数Raとその限界までを光学・測色学から理解する。","levels":["3級：光と色・照明と色の見え方","2級：光と色・照明・LED","大学：光学・分光放射測定・測色学"],"source":"articles/12_spectral_power_distribution_color_rendering.md"},
-    {"id":"13_polarization_birefringence_interference_color","articleNo":13,"seriesId":"physics","title":"透明なプラスチックに虹色が出るのはなぜか――偏光・複屈折・位相差","summary":"偏光を電場ベクトルとして捉え、Malusの法則、Brewster角、複屈折、位相差、直交偏光板での波長依存透過、応力複屈折、LCDまでを電磁気学・波動光学・測色学から理解する。","levels":["3級：光と色・光の性質と色（発展）","2級：光と色・照明・ディスプレイ（発展）","大学：電磁気学・波動光学・偏光光学・測色学"],"source":"articles/13_polarization_birefringence_interference_color.md"},
-    {"id":"14_retina_phototransduction","articleNo":14,"seriesId":"biology","title":"眼はどうやって光を電気信号に変えるのか――網膜の光情報変換","summary":"色彩検定3級の眼と網膜を、retinalの光異性化、オプシン、transducin、PDE6、cGMP、CNGチャネル、ON/OFF経路まで細胞生物学と神経科学から理解する。","levels":["3級：眼のしくみ・網膜における光の処理","2級：視覚系の構造と色・色覚説","大学：細胞生物学・神経科学"],"source":"articles/14_retina_phototransduction.md"},
-    {"id":"15_opsin_genetics_color_vision","articleNo":15,"seriesId":"biology","title":"赤緑の色覚特性はなぜ遺伝するのか――オプシン遺伝子とX染色体","summary":"L・M・S錐体のオプシン遺伝子、X染色体上のOPN1LW/OPN1MW遺伝子アレイ、不等組換え、分光感度変化から、先天的な色覚特性が生じる機構を遺伝学と線形代数で理解する。","levels":["2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説","3級：眼のしくみ・網膜における光の処理","大学：遺伝学・分子生物学・神経科学"],"source":"articles/15_opsin_genetics_color_vision.md"},
-    {"id":"16_trichromatic_color_vision_evolution","articleNo":16,"seriesId":"biology","title":"人はなぜ三色型色覚になったのか――オプシン遺伝子重複と霊長類の進化","summary":"祖先型M/Lオプシン遺伝子の重複と分光感度の分化から、人を含む狭鼻猿類の恒常的三色型、新世界ザルの多型的三色型、ホエザルの収斂進化、果実・若葉・社会シグナルに関する選択圧までを遺伝学・神経科学・進化生態学で理解する。","levels":["3級：眼のしくみ・網膜における光の処理","2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説・視覚系の構造と色","大学：進化生物学・遺伝学・神経科学"],"source":"articles/16_trichromatic_color_vision_evolution.md"},
-    {"id":"17_plant_pigments_color","articleNo":17,"seriesId":"biology","title":"植物はなぜ緑・赤・黄になるのか――クロロフィル、カロテノイド、アントシアニン","summary":"クロロフィル、カロテノイド、アントシアニンの吸収スペクトルと生理機能から、色素の生合成・遺伝子制御・細胞内局在・紅葉・組織散乱までつなぎ、植物の色を細胞生物学と生化学から理解する。","levels":["3級：光と色・光の性質と色・物体色","2級：光の性質と色・照明と色の見え方","大学：細胞生物学・生化学・植物生理学・遺伝学"],"source":"articles/17_plant_pigments_color.md"},
-    {"id":"18_warning_coloration_aposematism","articleNo":18,"seriesId":"biology","title":"なぜ警戒色は目立つのか――捕食者の学習とシグナル進化","summary":"警戒色を、受信者依存の色知覚、背景・模様内コントラスト、捕食者の学習、正の頻度依存選択、共進化、シグナルの正直性から捉え、誘目性と対比を進化生態学の情報通信として理解する。","levels":["3級：色の心理効果・光と色・色の見え方","2級：色彩心理・視覚系の構造と色","1級：誘目性を含む色彩設計","大学：進化生物学・行動生態学・感覚生態学"],"source":"articles/18_warning_coloration_aposematism.md"},
-    {"id":"19_complementary_afterimage","articleNo":19,"seriesId":"vision-psychology","title":"補色残像はなぜ見えるのか","summary":"色彩検定3級の補色残像を、L・M・S錐体の順応、cone-opponent処理、網膜神経節細胞の減算的順応とリバウンド、皮質の寄与まで分けて理解する。","levels":["3級：色彩心理・補色残像","大学：神経科学・心理物理学"],"source":"articles/19_complementary_afterimage.md"},
-    {"id":"20_simultaneous_color_contrast","articleNo":20,"seriesId":"vision-psychology","title":"同じ灰色なのに色が違って見えるのはなぜか――同時色対比を神経回路から考える","summary":"色彩検定3級の「色の対比」を、L・M・S錐体、反対色処理、中心―周辺型受容野、側抑制、V1のdouble-opponent細胞、色誘導の心理物理学まで掘り下げる。","levels":["3級：色彩心理・色の対比","大学：神経科学・心理物理学"],"source":"articles/20_simultaneous_color_contrast.md"},
-    {"id":"21_color_constancy_von_kries","articleNo":21,"seriesId":"vision-psychology","title":"なぜ照明が変わっても物体の色が同じに見えるのか――色恒常性とvon Kries順応","summary":"照明スペクトルと分光反射率の積から生じる逆問題を出発点に、L・M・S錐体、色順応、von Kries型対角変換、CAT、照明推定まで使って色恒常性を理解する。","levels":["3級：光と色・照明と色の見え方・網膜における光の処理","2級：光の性質と色・視覚系の構造と色・照明","大学：神経科学・心理物理学・色彩科学"],"source":"articles/21_color_constancy_von_kries.md"},
-    {"id":"22_psychological_scaling_color","articleNo":22,"seriesId":"vision-psychology","title":"色の印象はどうやって数値にするのか――心理学的尺度構成法と心理物理学","summary":"名義・順序・間隔・比率尺度の数学的意味から、一対比較法、Thurstoneモデル、SD法、因子分析、Weber–Fechner則、Stevens則、信頼性と妥当性までを使って色の印象測定を理解する。","levels":["1級：心理学的尺度構成法・一対比較法・SD法","大学：心理測定・心理物理学・認知科学・統計学"],"source":"articles/22_psychological_scaling_color.md"},
-    {"id":"23_opponent_color_process","articleNo":23,"seriesId":"vision-psychology","title":"なぜ「赤―緑」「青―黄」は反対関係になるのか――反対色過程を神経科学から考える","summary":"L・M・S錐体からL-M、S-(L+M)、輝度系への基底変換、網膜神経節細胞のcone-opponency、cardinal directions、皮質での再結合までを神経科学・心理物理学・線形代数で理解する。","levels":["2級：色覚説・視覚系の構造と色","3級：眼のしくみ・網膜における光の処理・補色残像","大学：神経科学・心理物理学・線形代数"],"source":"articles/23_opponent_color_process.md"},
-    {"id":"24_munsell_color_system","articleNo":24,"seriesId":"colorimetry-design","title":"マンセル表色系は何を数値化しているのか――色相・明度・彩度を知覚尺度から考える","summary":"マンセルのH V/Cを知覚尺度として捉え、明度と反射率の非線形関係、彩度と不規則な色立体、1943年renotation、CIE xyYとの対応、分光測色からHVCへの変換までを心理物理学と測色学で理解する。","levels":["2級：色の表示（表色系）・マンセル表色系","大学：測色学・心理物理学・色彩科学"],"source":"articles/24_munsell_color_system.md"},
-    {"id":"25_cie_xyz_tristimulus","articleNo":25,"seriesId":"colorimetry-design","title":"XYZ表色系はなぜ作られたのか――色を3つの数値にする","summary":"色合わせ実験から三刺激値を導き、RGBの負値、XYZへの基底変換、分光積分、標準観察者、メタメリズムまでを線形代数と測色学で理解する。","levels":["1級：XYZ表色系","大学：色彩科学・線形代数"],"source":"articles/25_cie_xyz_tristimulus.md"},
-    {"id":"26_xy_chromaticity_diagram","articleNo":26,"seriesId":"colorimetry-design","title":"xy色度図は何を捨て、何を残すのか――XYZを2次元へ射影する","summary":"XYZの正規化からxy色度座標を導き、スペクトル軌跡、紫軌跡、混色直線、三原色色域、白色点、補色、非均等性までを線形代数と測色学で理解する。","levels":["1級：XYZ表色系・均等色空間","大学：測色学・線形代数"],"source":"articles/26_xy_chromaticity_diagram.md"},
-    {"id":"27_cielab_color_difference","articleNo":27,"seriesId":"colorimetry-design","title":"L*a*b*はなぜXYZを曲げるのか――均等色空間と色差","summary":"XYZを基準白で正規化し非線形変換するCIELABを、区分的立方根、L*・a*・b*の数学的意味、ΔE*ab、CIEDE2000、分光測色との接続まで理解する。","levels":["1級：XYZ表色系・均等色空間・色差","大学：測色学・心理物理学・数理色彩学"],"source":"articles/27_cielab_color_difference.md"},
-    {"id":"28_spectral_colorimetry","articleNo":28,"seriesId":"colorimetry-design","title":"分光測色計は何を測っているのか――分光反射率からXYZへ","summary":"分光測色計の校正、45/0・d/8測定幾何、積分球、分光帯域幅から、分光反射率を標準イルミナントと等色関数で積分してXYZへ変換するまでを測定工学と線形代数で理解する。","levels":["1級：測色・物理測色・XYZ表色系","大学：測色学・光学・線形代数・計測工学"],"source":"articles/28_spectral_colorimetry.md"},
-    {"id":"29_pccs_hue_tone_system","articleNo":29,"seriesId":"colorimetry-design","title":"PCCSはなぜ「トーン」で配色できるのか――色相×明度・彩度の離散化","summary":"PCCSの24色相を循環座標、トーンを明度―彩度平面の領域分割として捉え、ヒュー・トーン表示、配色関係、測色値からPCCS分類へ至る流れを離散数学と色彩科学から理解する。","levels":["3級：PCCS・色の三属性・トーン・配色","2級：PCCSを用いた配色技法","大学：色彩科学・情報表現・離散数学"],"source":"articles/29_pccs_hue_tone_system.md"},
-    {"id":"30_ncs_perceptual_color_system","articleNo":30,"seriesId":"colorimetry-design","title":"NCSはなぜ「見え」を数で表せるのか――知覚的類似度を座標化する","summary":"NCSを6つのelementary coloursへの知覚的類似度として捉え、blackness・whiteness・chromaticnessの総和制約、ニュアンス三角形の2-simplex、色相比、saturation、XYZ・CIELABとの非線形な対応までを心理物理学と数理色彩学から理解する。","levels":["1級：色の表示・表色系・色彩学","大学：心理物理学・数理色彩学・測色学"],"source":"articles/30_ncs_perceptual_color_system.md"},
-    {"id":"31_metamerism_spectral_nullspace","articleNo":31,"seriesId":"colorimetry-design","title":"同じ色に見えるのにスペクトルが違うのはなぜか――メタメリズムを線形代数で考える","summary":"条件等色を、分光反射率からXYZへの高次元→3次元写像として捉え、零空間、照明メタメリズム、観察者メタメリズム、分光測色、メタメリズム指数までを測色学と線形代数から理解する。","levels":["1級：色彩学・測色（関連）","大学：測色学・線形代数・分光学"],"source":"articles/31_metamerism_spectral_nullspace.md"},
-    {"id":"32_color_matching_functions_standard_observer","articleNo":32,"seriesId":"colorimetry-design","title":"等色関数は何を表しているのか――スペクトルをXYZへ射影する3つの重み","summary":"等色実験からRGB等色関数、XYZへの基底変換、分光積分、CIE 1931 2°・CIE 1964 10°標準観察者、LMS錐体感度との違いまでを測色学・線形代数から理解する。","levels":["1級：XYZ表色系・標準観察者・測色","大学：測色学・心理物理学・線形代数・計測工学"],"source":"articles/32_color_matching_functions_standard_observer.md"},
-    {"id":"33_color_harmony_mathematics_psychophysics","articleNo":33,"seriesId":"colorimetry-design","title":"配色の「調和」は数式にできるのか――色相環・色差・心理測定から考える","summary":"PCCS色相環を円周上の離散座標として捉え、循環距離、正多角形配置、CIELAB色差、古典的色彩調和論、心理評定と回帰モデルまでを数理色彩学・心理物理学から理解する。","levels":["2級：PCCSを用いた配色技法・色彩調和","1級：世界の色彩調和論・測色","大学：数理色彩学・心理物理学・統計学・離散数学"],"source":"articles/33_color_harmony_mathematics_psychophysics.md"},
-    {"id":"34_emerald_crystal_field","articleNo":34,"seriesId":"chemistry-geoscience","title":"エメラルドはなぜ緑なのか――Cr³⁺と結晶場から発色を考える","summary":"ベリル中のCr³⁺が作るd軌道分裂とd-d遷移から、430 nm・600〜620 nm付近の選択吸収と緑色の発色を結晶場・配位子場理論で理解する。","levels":["3級：光と色・物体色","大学：無機化学・鉱物学"],"source":"articles/34_emerald_crystal_field.md"},
-    {"id":"35_organic_dyes_pi_conjugation","articleNo":35,"seriesId":"chemistry-geoscience","title":"有機色素はなぜ色づくのか――π共役とHOMO–LUMOギャップ","summary":"π共役による分子軌道の非局在化とHOMO–LUMOギャップの縮小から、可視吸収、発色団、吸収強度、置換基効果、染料・顔料の違いまで理解する。","levels":["3級：光と色・光の性質と色・減法混色","大学：有機化学・量子化学・分光学"],"source":"articles/35_organic_dyes_pi_conjugation.md"},
-    {"id":"36_prussian_blue_intervalence_charge_transfer","articleNo":36,"seriesId":"chemistry-geoscience","title":"プルシアンブルーはなぜ青いのか――混合原子価と電荷移動遷移","summary":"Fe²⁺/Fe³⁺混合原子価とシアノ架橋による原子価間電荷移動から、約700 nmの強い吸収、顔料粒子の散乱、Kubelka–Munk理論までつなげて青色発色を理解する。","levels":["3級：光と色・光の性質と色・減法混色","2級：光の性質と色","大学：無機化学・固体化学・分光学"],"source":"articles/36_prussian_blue_intervalence_charge_transfer.md"},
-    {"id":"37_amethyst_color_center","articleNo":37,"seriesId":"chemistry-geoscience","title":"アメシストはなぜ紫なのか――鉄不純物・照射・色中心から発色を考える","summary":"SiO₂格子中のFe不純物と放射線誘起色中心から、約545 nmの選択吸収、欠陥準位、加熱による退色、地質学的履歴と色の関係まで理解する。","levels":["3級：光と色・光の性質と色・照明と色の見え方","2級：光の性質と色","大学：固体化学・鉱物学・分光学"],"source":"articles/37_amethyst_color_center.md"},
-    {"id":"38_precious_opal_photonic_crystal","articleNo":38,"seriesId":"chemistry-geoscience","title":"オパールはなぜ虹色に見えるのか――シリカ球の周期構造とフォトニック結晶","summary":"含水シリカ球の規則配列を周期的な屈折率構造として捉え、Bragg–Snell則、(111)面間隔、実効屈折率、角度依存反射、秩序度からプレシャスオパールの遊色効果を理解する。","levels":["3級：光と色・光の性質と色","2級：光と色・光の性質と色","大学：鉱物学・波動光学・フォトニクス"],"source":"articles/38_precious_opal_photonic_crystal.md"},
-    {"id":"39_memory_color_color_memory","articleNo":39,"seriesId":"vision-psychology","title":"バナナはなぜ「黄色く」見えやすいのか――記憶色と色記憶を認知科学から考える","summary":"記憶色と色記憶を区別し、熟知物体の無彩色設定、Bayes的事前分布、色記憶のバイアスと分散、色恒常性との関係から、過去の経験が現在の色知覚へ作用する仕組みを理解する。","levels":["1級：色彩心理・記憶色と色記憶・心理物理学的測定法","大学：認知科学・心理物理学・視覚科学・統計学"],"source":"articles/39_memory_color_color_memory.md"},
-    {"id":"40_color_categorical_perception","articleNo":40,"seriesId":"vision-psychology","title":"色は連続なのに、なぜ「赤」「橙」と境界ができるのか――色カテゴリー知覚を心理物理学から考える","summary":"連続的な色空間を離散カテゴリーへ写す過程を、ロジスティック心理測定、信号検出理論、測色距離の統制、言語相対性、fMRIによるカテゴリー表現まで心理物理学・認知科学・神経科学から理解する。","levels":["1級：色彩心理・心理物理学的測定法・色知覚の複雑性・記憶色と色記憶","大学：認知科学・心理物理学・神経科学・統計学"],"source":"articles/40_color_categorical_perception.md"},
-    {"id":"41_mimicry_signal_detection","articleNo":41,"seriesId":"biology","title":"なぜ「似ている」だけで生き残れるのか――擬態を色覚・信号検出・進化から考える","summary":"擬態を受信者の分類問題として捉え、量子捕獲、知覚距離、Bayes推定、信号検出理論、ベイツ型・ミュラー型擬態、頻度依存選択、刺激一般化、Heliconiusの遺伝基盤までを進化生態学・感覚生態学から理解する。","levels":["3級：光と色・色の見え方・色の心理効果","2級：色彩心理・視覚系の構造と色","1級：誘目性・配色・色差（関連）","大学：進化生物学・行動生態学・感覚生態学・統計的意思決定"],"source":"articles/41_mimicry_signal_detection.md"},
-    {"id":"42_guppy_color_sexual_selection","articleNo":42,"seriesId":"biology","title":"なぜ派手なオスは選ばれるのか――グッピーの体色と性選択","summary":"グッピーの橙色斑を、カロテノイド・プテリジン、色素胞分化、オプシン発現、メスの配偶者選択、Fisher型共進化、捕食とのトレードオフまでつなぎ、色相・彩度・照明が進化へ変換される過程を理解する。","levels":["3級：光と色・色の見え方・色の心理効果","2級：色彩心理・視覚系の構造と色","1級：誘目性・配色・色差（関連）","大学：進化生物学・行動生態学・遺伝学・発生生物学"],"source":"articles/42_guppy_color_sexual_selection.md"},
-    {"id":"43_diffraction_grating_cd_rainbow","articleNo":43,"seriesId":"physics","title":"CDはなぜ虹色に見えるのか――回折格子と波の干渉","summary":"CDの周期的なトラックを反射型回折格子として捉え、回折格子式、Nスリット干渉、角分散、分解能、構造色、分光分布からXYZへの接続までを波動光学・測色学から理解する。","levels":["3級：光と色・光の性質と色（発展）","2級：光と色・光の性質と色（発展）","大学：波動光学・分光学・測色学"],"source":"articles/43_diffraction_grating_cd_rainbow.md"},
-    {"id":"44_color_management_icc_profiles","articleNo":44,"seriesId":"colorimetry-design","title":"同じRGB値なのに、なぜ色が違うのか――ICCカラーマネジメントを座標変換として理解する","summary":"RGB・CMYKをデバイス依存座標として捉え、ICCプロファイル、PCS（XYZ/L*a*b*）、TRC・行列・LUT、D50色順応、色域写像、レンダリングインテント、測定と色差評価までを測色学・線形代数・最適化から理解する。","levels":["1級：測色・色彩設計・色再現（発展）","大学：測色学・色彩工学・線形代数・数値最適化"],"source":"articles/44_color_management_icc_profiles.md"},
-    {"id":"45_cieluv_uniform_chromaticity","articleNo":45,"seriesId":"colorimetry-design","title":"u′v′とL*u*v*は何を均等にしたのか――CIELUVを射影変換と色差から理解する","summary":"CIE 1976 u′v′をxy色度図の射影変換として捉え、直線関係の保存、L*・u*・v*の定義、基準白、クロマ・色相角、ΔE*uv、CIELABとの違い、分光測色からの計算までを測色学・線形代数から理解する。","levels":["1級：XYZ表色系・均等色空間・測色","大学：測色学・線形代数・数理色彩学"],"source":"articles/45_cieluv_uniform_chromaticity.md"},
-    {"id":"46_standard_illuminants_colorimetry","articleNo":46,"seriesId":"colorimetry-design","title":"標準イルミナントは何を標準化しているのか――A・D65・D50を測色の演算子として理解する","summary":"標準イルミナントを測色計算の相対分光分布として捉え、AのPlanck放射、D系列の基底スペクトル、D65・D50、XYZ積分、白色点、メタメリズム、光源との違いまでを測色学・線形代数から理解する。","levels":["1級：標準イルミナント・測色・XYZ表色系","大学：測色学・分光学・線形代数"],"source":"articles/46_standard_illuminants_colorimetry.md"},
-    {"id":"49_rgb_pixels_quantization","articleNo":49,"seriesId":"digital-color","title":"デジタル画像の色は何でできているのか――RGB・画素・量子化","summary":"RGB画像を画素とチャンネルの配列として捉え、8 bitコード値、16進カラーコード、量子化誤差、ビット深度、バンディング、sRGBの非線形符号化までを画像工学から理解する。","levels":["3級：混色・加法混色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/49_rgb_pixels_quantization.md"},
-    {"id":"50_hsb_hsv_color_selection","articleNo":50,"seriesId":"digital-color","title":"HSB/HSVはなぜ色を選びやすいのか――RGBを「色相・彩度・明るさ」に組み替える","summary":"RGBをHue・Saturation・Brightness/Valueへ再パラメータ化し、RGB↔HSV変換、色相・彩度・明るさの数式、知覚明度・クロマとの違い、iBisPaintでの実用と注意点までを画像工学と色彩科学から理解する。","levels":["3級：色の三属性・混色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/50_hsb_hsv_color_selection.md"},
-    {"id":"51_alpha_compositing_opacity","articleNo":51,"seriesId":"digital-color","title":"レイヤーの不透明度は何をしているのか――α合成を数式で理解する","summary":"RGBにalphaを加えたRGBA表現から、source-over合成、出力alpha、straight/premultiplied alpha、レイヤー順序、透明PNGの縁、sRGBの非線形性、iBisPaintでの不透明度調整までを画像工学から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/51_alpha_compositing_opacity.md"},
-    {"id":"52_multiply_blend_mode","articleNo":52,"seriesId":"digital-color","title":"乗算はなぜ影に向くのか――RGBの掛け算から合成モードを理解する","summary":"MultiplyをRGB各チャンネルの乗算として定式化し、白・黒・灰色の性質、色付き影、不透明度との結合、Darkenとの差、線画用途、重ね掛け、sRGBと物理的光量の違いまでを画像工学とイラスト実践から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/52_multiply_blend_mode.md"},
-    {"id":"53_screen_blend_mode","articleNo":53,"seriesId":"digital-color","title":"スクリーンはなぜ光に向くのか――反転した乗算から合成モードを理解する","summary":"ScreenをRGBの反転→乗算→再反転として定式化し、黒・白・灰色の性質、Lighten・Addとの差、不透明度、重ね掛け、光・霞・蒸気への実用、sRGBと物理的光量の違いまでを画像工学とイラスト実践から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/53_screen_blend_mode.md"},
-    {"id":"54_additive_glow_blend_mode","articleNo":54,"seriesId":"digital-color","title":"加算・発光はなぜ光って見えるのか――RGBの足し算と白飛びを理解する","summary":"加算・発光をRGB各チャンネルの加算とクリッピングとして定式化し、Screenとの差、白飛び、不透明度、ソフト間の違い、発光体と照らされた物体、sRGBと物理光量の違いまでを画像工学とイラスト実践から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/54_additive_glow_blend_mode.md"},
-    {"id":"55_overlay_blend_mode","articleNo":55,"seriesId":"digital-color","title":"オーバーレイはなぜ絵を「締める」のか――乗算とスクリーンを明暗で切り替える","summary":"Overlayを下地の明暗に応じてMultiply型とScreen型を切り替える区分関数として定式化し、50%グレーの中立性、黒・白の保持、コントラスト増加、不透明度、Hard Lightとの差、仕上げ・色味調整への実用までを画像工学とイラスト実践から理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/55_overlay_blend_mode.md"},
-    {"id":"56_blend_modes_softlight_difference_hsl","articleNo":56,"seriesId":"digital-color","title":"合成モードをどう選ぶか――ソフトライト・比較・差・色相/彩度/カラー/輝度を数式で整理する","summary":"Soft Lightの区分関数、Darken/Lightenのmin/max、Difference/Exclusionの差分演算、Hue/Saturation/Color/Luminosityの非分離型合成を数式で整理し、iBisPaintでの用途と注意点までを理解する。","levels":["3級：混色・デジタル色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/56_blend_modes_softlight_difference_hsl.md"},
-    {"id":"57_brightness_contrast_tone_transform","articleNo":57,"seriesId":"digital-color","title":"明るさ・コントラストは何を変えているのか――階調変換を数式で理解する","summary":"明るさとコントラストを階調変換として捉え、加算的な明るさモデル、中間値を基準としたコントラスト変換、クリッピング、露出との違い、sRGBの非線形性、iBisPaint・CLIP STUDIO PAINT・Photoshopでの扱いまでを画像工学から理解する。","levels":["3級：デジタル色・配色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/57_brightness_contrast_tone_transform.md"},
-    {"id":"58_histogram_levels_adjustment","articleNo":58,"seriesId":"digital-color","title":"ヒストグラムは何を見せ、レベル補正は何を変えるのか――黒点・白点・中間調を数式で理解する","summary":"ヒストグラムを画素値の頻度分布として定義し、入力黒点・入力白点・中間調・出力レベルによる階調再配置、クリッピング、RGBチャンネル別補正、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用までを画像工学から理解する。","levels":["3級：デジタル色・配色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/58_histogram_levels_adjustment.md"},
-    {"id":"59_tone_curve","articleNo":59,"seriesId":"digital-color","title":"トーンカーブは何を変えているのか――入力と出力の写像からコントラストを設計する","summary":"トーンカーブを入力RGB値から出力値への非線形写像として捉え、局所的な傾きとコントラスト、S字・逆S字、アンカーポイント、階調圧縮、量子化、CLIP STUDIO PAINT・Photoshopでの実用までを画像工学から理解する。","levels":["3級：デジタル色・明度・配色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/59_tone_curve.md"},
-    {"id":"60_rgb_channel_tone_curves","articleNo":60,"seriesId":"digital-color","title":"RGB別トーンカーブはなぜ色を変えるのか――チャンネル比から色かぶり補正を理解する","summary":"Red・Green・Blueへ別々のトーンカーブを適用する処理を3本の1次元写像として捉え、補色方向、暗部と明部の色分離、色かぶり補正、sRGB相対輝度への影響、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用と注意点までを理解する。","levels":["3級：デジタル色・色の三属性・配色（関連）","大学：画像工学・デジタル信号処理・色彩科学"],"source":"articles/60_rgb_channel_tone_curves.md"},
-    {"id":"61_hue_saturation_adjustment","articleNo":61,"seriesId":"digital-color","title":"色相・彩度調整は何を変えているのか――RGBから色相環へ写して色を動かす","summary":"色相・彩度調整をHSV上の座標変換として捉え、色相回転、彩度低下、RGB↔HSV計算、低彩度でのHue不安定性、相対輝度変化、色域クリッピング、iBisPaint・CLIP STUDIO PAINT・Photoshopの実用と注意点まで理解する。","levels":["3級：色の三属性・デジタル色・配色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/61_hue_saturation_adjustment.md"},
-    {"id":"62_gradient_map","articleNo":62,"seriesId":"digital-color","title":"グラデーションマップは何をしているのか――明暗を色へ写像する1次元LUTとして理解する","summary":"グラデーションマップを階調値からRGB色への1次元写像として捉え、線形補間、複数色点、トーンカーブや色相・彩度調整との違い、相対輝度、バンディング、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用と注意点まで理解する。","levels":["3級：デジタル色・明度・配色（関連）","大学：画像工学・コンピュータグラフィックス・色彩科学"],"source":"articles/62_gradient_map.md"},
-    {"id":"63_gaussian_blur_convolution","articleNo":63,"seriesId":"digital-color","title":"ガウスぼかしは何をしているのか――畳み込みとガウス核から理解する","summary":"ガウスぼかしを近傍画素との畳み込みとして捉え、Gaussian kernel、標準偏差σ、RGB 0〜1計算、低域通過、分離可能性、sRGB・alpha・境界条件の注意、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。","levels":["3級：デジタル色・画像処理（関連）","大学：画像工学・デジタル信号処理・コンピュータグラフィックス"],"source":"articles/63_gaussian_blur_convolution.md"},
-    {"id":"64_sharpen_unsharp_mask","articleNo":64,"seriesId":"digital-color","title":"シャープ・アンシャープマスクは何をしているのか――高周波成分とエッジ強調から理解する","summary":"シャープ処理を高域強調、アンシャープマスクを元画像とぼけ画像の差分による高周波強調として捉え、畳み込み、RGB 0〜1計算、Radius・Amount/Strength・Threshold、ハロー・ノイズ・色縁、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。","levels":["3級：デジタル色・画像処理（関連）","大学：画像工学・デジタル信号処理・コンピュータグラフィックス"],"source":"articles/64_sharpen_unsharp_mask.md"},
-    {"id":"65_anti_aliasing_sampling","articleNo":65,"seriesId":"digital-color","title":"アンチエイリアスはなぜ輪郭を滑らかにするのか――サンプリングと画素被覆率から理解する","summary":"アンチエイリアスをサンプリングと画素被覆率から捉え、Nyquist周波数、エイリアシング、スーパーサンプリング、最近傍・バイリニア・バイキュービック・Lanczos、縮小時の低域通過、sRGB・alphaの注意、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。","levels":["3級：デジタル色・画像処理（関連）","大学：画像工学・デジタル信号処理・コンピュータグラフィックス"],"source":"articles/65_anti_aliasing_sampling.md"},
-    {"id":"66_srgb_gamma_gamut_color_management","articleNo":66,"seriesId":"digital-color","title":"sRGBは何を決めているのか――ガンマ・色域・カラーマネジメントを一本につなぐ","summary":"sRGBを原色・D65白色点・伝達関数を持つRGB色空間として捉え、sRGB↔線形光変換、ガンマ、RGB 0〜1計算、色域、色域外、プロファイルの割り当てと変換、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。","levels":["3級：デジタル色・画像処理（関連）","1級：測色・色彩設計・色再現（関連）","大学：画像工学・色彩科学・カラーマネジメント"],"source":"articles/66_srgb_gamma_gamut_color_management.md"},
-    {"id":"67_shadow_light_environment_object_color","articleNo":67,"seriesId":"illustration-practice","title":"影はなぜ黒で塗るだけでは不自然になるのか――光源色・環境光・物体色から考える","summary":"黒を重ねる単純な減衰と、直接光・環境光・物体反射率で決まる実際の影を比較し、分光反射、レンダリング方程式、XYZ、RGB計算から影色をイラスト実践へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・配色（関連）","大学：光学・コンピュータグラフィックス・色彩科学"],"source":"articles/67_shadow_light_environment_object_color.md"},
-    {"id":"68_sunset_orange_color_temperature_scattering_adaptation","articleNo":68,"seriesId":"illustration-practice","title":"夕方の絵をオレンジ一色で処理してはいけない理由――色温度・大気散乱・色順応から考える","summary":"全面を同じオレンジへ寄せる処理と、暖色の直達光・空からの環境光・大気散乱・色順応を分けた夕方照明を比較し、Rayleigh散乱、色温度、分光反射、von Kries順応、RGB合成から夕景の光をイラスト実践へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・色彩心理（関連）","大学：大気光学・色彩科学・心理物理学・コンピュータグラフィックス"],"source":"articles/68_sunset_orange_color_temperature_scattering_adaptation.md"},
-    {"id":"69_saturation_contrast_visual_attention","articleNo":69,"seriesId":"illustration-practice","title":"彩度を上げれば鮮やかになるのか――彩度差と視線誘導から考える","summary":"全体の彩度上昇と主役・背景の彩度差を比較し、HSV彩度、CIELABクロマ、sRGB相対輝度、saliency map、物体色と後処理の違いから、彩度を視線誘導へ使う方法と限界を理解する。","levels":["3級：色の三属性・配色・色彩心理（関連）","2級：配色・色彩心理（関連）","大学：色彩科学・心理物理学・画像工学・視覚科学"],"source":"articles/69_saturation_contrast_visual_attention.md"},
-    {"id":"70_grayscale_value_design_perceptual_luminance","articleNo":70,"seriesId":"illustration-practice","title":"グレースケール確認は何を検査しているのか――知覚輝度と明度設計から考える","summary":"グレースケール確認を色相・彩度の情報を外して明暗構造を検査する手法として捉え、sRGB線形化、相対輝度、CIE明度L*、局所コントラストから主役・背景・シルエットの明度設計へ接続する。","levels":["3級：色の三属性・配色・色の見え方（関連）","2級：配色・色彩心理（関連）","大学：色彩科学・視覚科学・画像工学・心理物理学"],"source":"articles/70_grayscale_value_design_perceptual_luminance.md"},
-    {"id":"71_character_background_color_separation","articleNo":71,"seriesId":"illustration-practice","title":"背景とキャラクターが同化する理由――色相差・明度差・彩度差・暖寒差から考える","summary":"背景とキャラクターの分離を、sRGB相対輝度、CIELABのL*・クロマ・色相角、反対色処理、暖色／寒色の知覚から整理し、明度差・色相差・彩度差・暖寒差を使い分ける実践へ接続する。","levels":["3級：色の三属性・配色・色の見え方（関連）","2級：配色・色彩心理（関連）","大学：色彩科学・視覚科学・画像工学・心理物理学"],"source":"articles/71_character_background_color_separation.md"},
-    {"id":"72_skin_blood_light_subsurface_scattering","articleNo":72,"seriesId":"illustration-practice","title":"肌はなぜ単なるベージュではないのか――血色・光源・表面下散乱から考える","summary":"肌色を単一のベージュとして扱う場合と、メラニン・ヘモグロビンによる波長選択吸収、光源色、表面反射、表面下散乱を分けて考える場合を比較し、皮膚光学とBSSRDFをイラストの血色・影・逆光・ハイライト設計へ接続する。","levels":["3級：光と色・色の見え方・色の三属性（関連）","2級：照明と色・配色（関連）","大学：生体光学・色彩科学・コンピュータグラフィックス・放射輸送"],"source":"articles/72_skin_blood_light_subsurface_scattering.md"},
-    {"id":"73_metal_diffuse_specular_environment_reflection","articleNo":73,"seriesId":"illustration-practice","title":"金属はなぜ白いハイライトだけでは金属に見えないのか――拡散反射・鏡面反射・環境映り込みから考える","summary":"灰色や金色のベースへ白いハイライトを足す描き方と、鏡面反射・粗さ・Fresnel反射・環境映り込みを分けて設計する描き方を比較し、導体の複素屈折率、microfacet BRDF、レンダリング方程式から金属らしさをイラスト実践へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・配色（関連）","大学：光学・コンピュータグラフィックス・放射輸送・色彩科学"],"source":"articles/73_metal_diffuse_specular_environment_reflection.md"},
-    {"id":"74_hair_highlight_flow_anisotropic_reflection","articleNo":74,"seriesId":"illustration-practice","title":"髪のツヤはなぜ帯状に見えるのか――毛流れ・異方性反射から考える","summary":"髪のツヤを単一の白い帯ではなく、毛流れに依存する異方性反射と多数の毛束の配向、曲面形状の集合として捉え、Marschner型のR・TT・TRT散乱、吸収、RGB合成から天使の輪・ハイライト設計へ接続する。","levels":["3級：光と色・色の見え方（関連）","2級：照明と色・配色（関連）","大学：光学・コンピュータグラフィックス・放射輸送・色彩科学"],"source":"articles/74_hair_highlight_flow_anisotropic_reflection.md"},
-    {"id":"75_makeup_changes_color_texture_contrast","articleNo":75,"seriesId":"makeup-color-science","title":"メイクは顔の何を変えているのか――色・明暗・質感・コントラストを分解する","summary":"メイクを色相・明度・彩度・質感・局所コントラストの5変数へ分解し、CIELAB、光沢、顔内コントラスト、形状知覚から、ファンデーション・チーク・リップ・アイメイク・ハイライトの働きを色彩科学として整理する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：色彩科学・視覚科学・皮膚光学・心理物理学"],"source":"articles/75_makeup_changes_color_texture_contrast.md"},
-    {"id":"76_foundation_optical_film_scattering_coverage","articleNo":76,"seriesId":"makeup-color-science","title":"ファンデーションは肌の上で何をしているのか――化粧膜・散乱・隠蔽・透明感を光学で考える","summary":"ファンデーションを皮膚上の光学膜として捉え、散乱・吸収・透過・表面反射・局所色差から、カバー力、毛穴、透明感、ツヤの関係を資生堂・花王の研究資料と放射輸送の考え方から理解する。","levels":["3級：光と色・色の見え方・色の三属性（関連）","2級：照明と色・配色（関連）","大学：皮膚光学・色彩科学・放射輸送・化粧品科学"],"source":"articles/76_foundation_optical_film_scattering_coverage.md"},
-    {"id":"77_control_color_concealer_cielab_spectral_reflectance","articleNo":77,"seriesId":"makeup-color-science","title":"コントロールカラーはなぜ赤み・青みを目立たなくできるのか――補色・CIELAB・化粧膜の分光反射から考える","summary":"コントロールカラーを単純な「補色で打ち消す」操作ではなく、CIELABの局所色差と化粧膜の分光反射・吸収・散乱を調整する操作として捉え、赤み・青ひげ・クマ・シミを自然に補正する原理を資生堂の一次資料から理解する。","levels":["3級：色の三属性・混色・色の見え方（関連）","2級：配色・光と色・色彩心理（関連）","大学：測色学・皮膚光学・化粧品科学・視覚科学"],"source":"articles/77_control_color_concealer_cielab_spectral_reflectance.md"},
-    {"id":"78_foundation_white_cast_illumination_scattering_metamerism","articleNo":78,"seriesId":"makeup-color-science","title":"ファンデーションが白浮きするのはなぜか――光源・散乱・メタメリズムから考える","summary":"室内では自然なファンデーションが屋外で白く浮く現象を、照明の分光分布、化粧膜の散乱、CIELABの明度差、照明メタメリズム、色順応から捉え、資生堂のフォトクロミック酸化チタン研究と花王の白浮き抑制技術へ接続する。","levels":["3級：光と色・照明と色の見え方・色の三属性（関連）","2級：照明・配色・色彩心理（関連）","1級：測色・標準イルミナント・メタメリズム（関連）","大学：測色学・皮膚光学・散乱光学・化粧品科学・心理物理学"],"source":"articles/78_foundation_white_cast_illumination_scattering_metamerism.md"},
-    {"id":"79_pearl_highlight_interference_orientation_face_shape","articleNo":79,"seriesId":"makeup-color-science","title":"パール・ハイライトはなぜ肌を明るく立体的に見せるのか――薄膜干渉・粉体配向・顔の陰影から考える","summary":"パール剤をマイカと酸化チタン薄膜からなる方向性反射材料として捉え、薄膜干渉、BRDF、板状粉体の配向、shape-from-shadingから、ツヤ・テカリ・立体感の違いとハイライト配置を資生堂・花王の一次資料へ接続する。","levels":["3級：光と色・色の見え方・色の三属性（関連）","2級：照明と色・配色・色彩心理（関連）","大学：波動光学・色彩科学・視覚科学・化粧品科学・コンピュータグラフィックス"],"source":"articles/79_pearl_highlight_interference_orientation_face_shape.md"},
-    {"id":"80_blush_blood_color_hemoglobin_cielab_health_perception","articleNo":80,"seriesId":"makeup-color-science","title":"チークはなぜ顔を健康的に見せるのか――血色・ヘモグロビン・CIELAB・顔色知覚から考える","summary":"チークを単なる赤色追加ではなく、皮膚の血色手掛かりを化粧膜で局所的に再構成する操作として捉え、ヘモグロビンの波長選択吸収、CIELABのa*・b*、顔色と健康印象の心理物理、頬への空間配置を資生堂・花王の一次資料と研究論文から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：色彩心理・配色・光と色（関連）","大学：皮膚光学・測色学・視覚科学・心理物理学・化粧品科学"],"source":"articles/80_blush_blood_color_hemoglobin_cielab_health_perception.md"},
-    {"id":"81_lip_color_skin_lightness_holistic_face_perception","articleNo":81,"seriesId":"makeup-color-science","title":"リップの色で肌まで違って見えるのはなぜか――顔特有の色錯視・CIELAB・顔内コントラストから考える","summary":"リップを唇だけの着色ではなく、顔全体の色知覚を変える誘導刺激として捉え、CIELAB、顔特有の明るさ同化、顔内コントラスト、光沢・照明から、肌の明るさ・透明感印象が変化する仕組みを資生堂・花王の一次資料と心理物理学研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：色彩心理・配色・照明と色（関連）","大学：測色学・視覚科学・心理物理学・化粧品科学"],"source":"articles/81_lip_color_skin_lightness_holistic_face_perception.md"},
-    {"id":"82_eye_makeup_eye_size_assimilation_contrast","articleNo":82,"seriesId":"makeup-color-science","title":"アイメイクで目が大きく見えるのはなぜか――アイシャドウ・アイライン・マスカラと同化錯視から考える","summary":"アイメイクを眼の物理サイズを変えず知覚サイズを動かす操作として捉え、アイシャドウ・アイライン・マスカラによる目の拡大錯視、Delboeuf型の同化、眉との配置、局所コントラスト、瞳色との関係を資生堂・花王の一次資料と心理物理学研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：色彩心理・配色・照明と色（関連）","大学：視覚科学・心理物理学・色彩科学・化粧品科学"],"source":"articles/82_eye_makeup_eye_size_assimilation_contrast.md"},
-    {"id":"83_hair_lightness_skin_makeup_face_contrast","articleNo":83,"seriesId":"makeup-color-science","title":"髪色が変わると同じメイクが違って見えるのはなぜか――顔まわりの明度差・顔内コントラストから考える","summary":"髪を顔の大きな隣接色として捉え、髪―肌の明度差、顔内コントラスト、CIELAB色差、周辺色による肌の均一さ知覚から、髪色変更後にリップ・眉・目もとの強さが変わって見える仕組みを資生堂・花王の一次資料と心理物理学研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：色彩心理・配色・照明と色（関連）","大学：色彩科学・視覚科学・心理物理学・化粧品科学"],"source":"articles/83_hair_lightness_skin_makeup_face_contrast.md"},
-    {"id":"84_eyebrow_color_position_facial_contrast_eye_illusion","articleNo":84,"seriesId":"makeup-color-science","title":"眉の色と位置で顔の印象が変わるのはなぜか――顔内コントラスト・目の錯視・CIELABから考える","summary":"眉を肌上の色面かつ目の上の幾何学的フレームとして捉え、眉―肌の明度・色差、毛密度と輪郭、眉位置による目の大きさ・傾き錯視から、眉メイクが顔印象を変える仕組みを資生堂・花王の一次資料と心理物理研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：色彩心理・配色・照明と色（関連）","大学：測色学・視覚科学・心理物理学・化粧品科学"],"source":"articles/84_eyebrow_color_position_facial_contrast_eye_illusion.md"},
-    {"id":"85_makeup_breakdown_sebum_sweat_film_gloss","articleNo":85,"seriesId":"makeup-color-science","title":"メイクはなぜ時間がたつと崩れて見えるのか――皮脂・汗・化粧膜・ツヤ／テカリから考える","summary":"化粧崩れを単なる『落ち』ではなく、皮脂・汗・摩擦・表情運動によって化粧膜の付着状態と光学特性が時間変化する現象として捉え、皮脂による濡れと散乱変化、鏡面反射によるテカリ、局所色差の再出現、耐水・耐皮脂・柔軟被膜設計を資生堂・花王の一次資料と研究論文から理解する。","levels":["3級：光と色・色の見え方・色の三属性（関連）","2級：照明と色・配色・色彩心理（関連）","大学：皮膚科学・光学・界面／材料科学・化粧品科学・画像評価"],"source":"articles/85_makeup_breakdown_sebum_sweat_film_gloss.md"},
-    {"id":"86_personal_color_skin_harmony_cielab_face_perception","articleNo":86,"seriesId":"makeup-color-science","title":"パーソナルカラーはどこまで科学で説明できるのか――イエベ・ブルベをCIELAB・顔色知覚・皮膚光学から考える","summary":"パーソナルカラーを単純なイエベ／ブルベ分類ではなく、肌・唇・髪・瞳の色、CIELAB、化粧膜の透過・吸収・散乱、周辺色による顔色知覚、照明・色順応の複合問題として捉え、2026年の研究を含む資生堂・花王の一次資料と色彩研究から「似合う色」の科学的基盤と限界を理解する。","levels":["3級：色の三属性・配色・色の見え方（関連）","2級：配色・色彩心理・照明と色（関連）","大学：測色学・皮膚光学・視覚科学・心理物理学・化粧品科学"],"source":"articles/86_personal_color_skin_harmony_cielab_face_perception.md"},
-    {"id":"87_shading_contour_shape_from_shading_face_perception","articleNo":87,"seriesId":"makeup-color-science","title":"シェーディングで顔が小さく・立体的に見えるのはなぜか――明度勾配・shape-from-shading・顔形知覚から考える","summary":"シェーディングを単なる暗色追加ではなく、皮膚上の局所反射率と明度勾配を変えて三次元形状手掛かりを再構成する操作として捉え、shape-from-shading、light-from-above assumption、CIELAB、輪郭コントラスト、照明条件から小顔・立体感の仕組みと限界を資生堂・花王の一次資料と心理物理研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：視覚科学・心理物理学・測色学・皮膚光学・化粧品科学"],"source":"articles/87_shading_contour_shape_from_shading_face_perception.md"},
-    {"id":"88_under_eye_dark_circles_melanin_hemoglobin_shadow_spectral_imaging","articleNo":88,"seriesId":"makeup-color-science","title":"目の下のクマはなぜ青・茶・黒に見えるのか――メラニン・ヘモグロビン・皮膚光学・陰影から考える","summary":"目の下のクマを単純な青・茶・黒の三分類ではなく、メラニン、ヘモグロビン量・酸素化、皮膚厚と散乱、tear troughなどの形状陰影、照明の複合現象として捉え、資生堂・花王の分光研究から色差補正と陰影補正を分けて理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：皮膚光学・分光測色・生理学・視覚科学・化粧品科学"],"source":"articles/88_under_eye_dark_circles_melanin_hemoglobin_shadow_spectral_imaging.md"},
-    {"id":"89_visible_pores_microtopography_sebum_shadow_soft_focus","articleNo":89,"seriesId":"makeup-color-science","title":"毛穴はなぜ目立つのか――すり鉢状構造・皮脂・陰影・光拡散から考える","summary":"毛穴の目立ちを単なる「穴の大きさ」ではなく、毛孔周囲のすり鉢状構造、皮脂・不全角化、形状陰影、局所コントラスト、鏡面反射・光拡散の複合現象として捉え、プライマー・ファンデーション・ソフトフォーカス粉体が何を変えているのかを資生堂・花王の一次研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：皮膚科学・光学・画像工学・視覚科学・化粧品科学"],"source":"articles/89_visible_pores_microtopography_sebum_shadow_soft_focus.md"},
-    {"id":"90_skin_translucency_subsurface_scattering_melanin_collagen","articleNo":90,"seriesId":"makeup-color-science","title":"肌の「透明感」は何で決まるのか――内部散乱光・メラニン・コラーゲン・ベースメイクから考える","summary":"肌の「透明感」を単なる白さではなく、皮膚内部から戻る内部散乱光、メラニン吸収、真皮コラーゲン、角層水分、色むら、表面反射を統合した知覚的質感として捉え、ベースメイクで色差・被覆・ツヤをどう設計すればよいかを資生堂・花王の一次研究と皮膚光学から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：皮膚光学・測色学・視覚科学・心理物理学・化粧品科学"],"source":"articles/90_skin_translucency_subsurface_scattering_melanin_collagen.md"},
-    {"id":"91_lipstick_tooth_whiteness_cielab_context_contrast","articleNo":91,"seriesId":"makeup-color-science","title":"口紅の色で歯が白く見えるのはなぜか――CIELAB・周辺色対比・歯の光学から考える","summary":"口紅で歯そのものの色を変えずに白く見せられる現象を、歯科用白さ指数WI_D、象牙質・エナメル質の散乱、唇との明度・色相・彩度差、周辺色による知覚、口紅塗膜と唇の地色から捉え、「青みリップなら必ず白く見える」という単純化の限界まで花王・資生堂の一次資料と心理物理研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：色彩心理・照明と色・配色（関連）","大学：測色学・視覚科学・心理物理学・生体光学・化粧品科学"],"source":"articles/91_lipstick_tooth_whiteness_cielab_context_contrast.md"},
-    {"id":"92_skin_yellowing_glycation_carbonylation_cielab_makeup","articleNo":92,"seriesId":"makeup-color-science","title":"肌はなぜ「黄ぐすみ」して見えるのか――AGEs・タンパク質カルボニル化・CIELAB・補正メイクから考える","summary":"肌の黄ぐすみを単純な黄色ではなく、角層の蛍光性AGEs、真皮タンパク質のカルボニル化、メラニン・血色、皮膚内散乱、照明、化粧膜の複合現象として捉え、CIELABのb*と分光反射から黄みの見分け方と過補正を避けるベースメイク実践まで資生堂・花王の一次研究と2026年の最新研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：皮膚科学・生体光学・測色学・化粧品科学・タンパク質化学"],"source":"articles/92_skin_yellowing_glycation_carbonylation_cielab_makeup.md"},
-    {"id":"93_lipstick_color_underlying_lip_optics_cielab","articleNo":93,"seriesId":"makeup-color-science","title":"同じ口紅なのに人によって発色が違うのはなぜか――唇の地色・透過／散乱・CIELAB・化粧膜から考える","summary":"同じ口紅でも仕上がりが変わる理由を、唇本来のL*a*b*・ヘモグロビン／メラニン、口紅膜の隠蔽率・透過・散乱・鏡面反射、塗布量と照明から分解し、花王の唇色4分類と資生堂の唇くすみ・発色研究を使って、テスターを唇で確認すべき理由と色選びを科学化する。","levels":["3級：色の三属性・色の見え方・混色（関連）","2級：照明と色・配色・色彩心理（関連）","大学：皮膚光学・測色学・化粧品科学・視覚科学"],"source":"articles/93_lipstick_color_underlying_lip_optics_cielab.md"},
-    {"id":"94_foundation_shade_matching_face_neck_cielab_skin_optics","articleNo":94,"seriesId":"makeup-color-science","title":"ファンデーションはどこで色合わせすべきか――顔と首の色差・CIELAB・皮膚光学から考える","summary":"ファンデーションの色合わせを一点の肌色一致ではなく、顔・首・フェイスラインのL*a*b*差、メラニン／ヘモグロビン、化粧膜の透過・散乱、境界コントラスト、照明、顔色知覚の問題として捉え、資生堂・花王の一次資料と皮膚色研究から自然な色選びを理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・配色・色彩心理（関連）","大学：測色学・皮膚光学・視覚科学・化粧品科学"],"source":"articles/94_foundation_shade_matching_face_neck_cielab_skin_optics.md"},
-    {"id":"95_nasolabial_fold_shadow_sagging_local_contrast_film","articleNo":95,"seriesId":"makeup-color-science","title":"ほうれい線はなぜ影として目立つのか――頬のたるみ・形状陰影・局所コントラスト・化粧膜から考える","summary":"ほうれい線を単なる暗色の線ではなく、溝と頬のふくらみが照明下で作る形状陰影として捉え、表面法線・自己遮蔽・局所コントラスト・CIELAB、皮膚弾性と皮下組織、化粧膜の光学／力学から、色補正と形状補正を使い分ける実践を資生堂・花王の一次研究から理解する。","levels":["3級：色の三属性・色の見え方・配色（関連）","2級：照明と色・色彩心理・配色（関連）","大学：皮膚科学・光学・視覚科学・測色学・材料科学・化粧品科学"],"source":"articles/95_nasolabial_fold_shadow_sagging_local_contrast_film.md"},
-    {"id":"96_skin_radiance_oily_shine_specular_diffuse_perception","articleNo":96,"seriesId":"makeup-color-science","title":"ツヤ肌とテカリは何が違うのか――鏡面反射・内部散乱・皮脂・顔印象から考える","summary":"ツヤ肌とテカリを単なる光沢の強弱ではなく、鏡面反射・内部散乱光・皮脂・化粧膜・反射の空間分布・顔印象の複合現象として捉え、資生堂の2025年研究と花王Kirei肌AIから、好ましいツヤを作るベースメイクを光学・視覚心理・皮膚科学で理解する。","levels":["3級：光と色・色の見え方・色の三属性（関連）","2級：照明と色・色彩心理・配色（関連）","大学：皮膚光学・測色学・視覚科学・心理物理学・化粧品科学"],"source":"articles/96_skin_radiance_oily_shine_specular_diffuse_perception.md"}
+    {
+      "id": "01_what_is_light_color",
+      "articleNo": 1,
+      "seriesId": "physics",
+      "title": "光とは何だろう――「色」の入口を電磁波と光子から考える",
+      "summary": "色彩検定3級の「光とは何だろう」を、Maxwell方程式、波長・振動数、光子エネルギー、強度、スペクトル、波動粒子二重性まで物理学から掘り下げる。",
+      "levels": [
+        "3級：光と色・光とは何だろう",
+        "大学：電磁気学・量子論"
+      ],
+      "source": "articles/01_what_is_light_color.md"
+    },
+    {
+      "id": "02_reflection_absorption_transmission",
+      "articleNo": 2,
+      "seriesId": "physics",
+      "title": "物体の色はどう決まるのか――反射・吸収・透過を物理で考える",
+      "summary": "反射率・透過率・吸収率のエネルギー保存から、Fresnel反射、複素屈折率、吸収係数、散乱までを使って物体色の物理を理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色",
+        "大学：電磁気学・光学"
+      ],
+      "source": "articles/02_reflection_absorption_transmission.md"
+    },
+    {
+      "id": "03_scattering_blue_sky",
+      "articleNo": 3,
+      "seriesId": "physics",
+      "title": "空はなぜ青く、夕焼けはなぜ赤いのか――散乱を電磁気学から考える",
+      "summary": "誘起双極子と双極子放射からRayleigh散乱のλ^-4則を導き、青空・夕焼け・白い雲・偏光を光学的厚さと粒子サイズまで含めて理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色",
+        "2級：光と色・光の性質と色",
+        "大学：電磁気学・大気光学"
+      ],
+      "source": "articles/03_scattering_blue_sky.md"
+    },
+    {
+      "id": "04_transparent_color_beer_lambert",
+      "articleNo": 4,
+      "seriesId": "chemistry-geoscience",
+      "title": "透明な物質に、なぜ色がつくのか",
+      "summary": "「透明」と「無色」を分け、分光透過率とBeer–Lambert則から、濃度・光路長・吸収スペクトルが色を決める仕組みを理解する。",
+      "levels": [
+        "3級：光と色",
+        "大学化学：分光学"
+      ],
+      "source": "articles/04_transparent_color_beer_lambert.md"
+    },
+    {
+      "id": "05_refraction_dispersion",
+      "articleNo": 5,
+      "seriesId": "physics",
+      "title": "なぜプリズムで白い光が虹色に分かれるのか――屈折と分散を電磁気学から考える",
+      "summary": "Snellの法則を位相連続から導き、Lorentz振動子による物質分極、複素屈折率、正常分散、Cauchy・Sellmeier式、プリズム分光、色収差までつなげて理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色",
+        "2級：光と色・光の性質と色",
+        "大学：電磁気学・光学"
+      ],
+      "source": "articles/05_refraction_dispersion.md"
+    },
+    {
+      "id": "06_thin_film_interference",
+      "articleNo": 6,
+      "seriesId": "physics",
+      "title": "シャボン玉はなぜ虹色に見えるのか――薄膜干渉と構造色",
+      "summary": "電場の重ね合わせ、光学距離、Fresnel反射によるπ位相反転から薄膜干渉条件を導き、膜厚・屈折率・観察角度が反射スペクトルと構造色を決める仕組みを理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色",
+        "2級：光と色・光の性質と色",
+        "大学：波動光学・電磁気学"
+      ],
+      "source": "articles/06_thin_film_interference.md"
+    },
+    {
+      "id": "07_blackbody_color_temperature",
+      "articleNo": 7,
+      "seriesId": "physics",
+      "title": "色温度はなぜ「温度」なのか――黒体放射とPlanckの法則",
+      "summary": "Planckの法則、Wienの変位則、Stefan–Boltzmann則から黒体スペクトルを導き、CIE XYZ、黒体軌跡、色温度・相関色温度、白熱ランプとLEDの違いまで理解する。",
+      "levels": [
+        "3級：光と色・照明と色の見え方",
+        "2級：照明の表し方・白熱ランプ・LED",
+        "大学：熱放射・量子論・測色学"
+      ],
+      "source": "articles/07_blackbody_color_temperature.md"
+    },
+    {
+      "id": "08_led_bandgap_white_light",
+      "articleNo": 8,
+      "seriesId": "physics",
+      "title": "LEDはなぜ白く光るのか――半導体のバンドギャップと加法混色",
+      "summary": "pn接合へのキャリア注入、放射再結合、バンドギャップと発光波長の関係から、GaN/InGaN青色LED、蛍光体による白色化、RGB加法混色、分光分布とXYZまでを半導体物理と測色学で理解する。",
+      "levels": [
+        "3級：照明と色の見え方・混色・加法混色",
+        "2級：照明・ランプの種類・LED",
+        "大学：半導体物理・量子論・測色学"
+      ],
+      "source": "articles/08_led_bandgap_white_light.md"
+    },
+    {
+      "id": "09_additive_color_mixing",
+      "articleNo": 9,
+      "seriesId": "physics",
+      "title": "光を足すとなぜ色が変わるのか――加法混色を線形代数で考える",
+      "summary": "独立光源の分光分布加算からXYZの線形性、Grassmannの法則、色度図上の混色直線、RGB色域、sRGBの線形化までを電磁気学・測色学・線形代数で理解する。",
+      "levels": [
+        "3級：混色・加法混色・混色を応用した身近な例",
+        "大学：電磁気学・測色学・線形代数・画像工学"
+      ],
+      "source": "articles/09_additive_color_mixing.md"
+    },
+    {
+      "id": "10_subtractive_color_mixing",
+      "articleNo": 10,
+      "seriesId": "physics",
+      "title": "色を重ねるとなぜ暗くなるのか――減法混色を分光透過率から考える",
+      "summary": "CMY減法混色を、分光透過率の乗算、光学濃度の加算、Beer–Lambert則、XYZ積分、実在色材の非理想性、Kubelka–Munk理論まで使って物理的に理解する。",
+      "levels": [
+        "3級：混色・減法混色・混色を応用した身近な例",
+        "2級：光の性質と色・印刷と色",
+        "大学：光学・分光学・測色学・放射輸送"
+      ],
+      "source": "articles/10_subtractive_color_mixing.md"
+    },
+    {
+      "id": "11_photometry_luminous_flux_illuminance",
+      "articleNo": 11,
+      "seriesId": "physics",
+      "title": "ルーメン・ルクス・カンデラは何が違うのか――測光量を放射量から導く",
+      "summary": "放射量をCIE明所視標準分光視感効率で重み付けするところから、光束・光度・照度・輝度、逆二乗則、余弦則、XYZのY成分との接続までを測光学と光学で理解する。",
+      "levels": [
+        "3級：光と色・照明と色の見え方",
+        "2級：光と色・照明・照明の表し方",
+        "大学：測光学・放射測定・光学・測色学"
+      ],
+      "source": "articles/11_photometry_luminous_flux_illuminance.md"
+    },
+    {
+      "id": "12_spectral_power_distribution_color_rendering",
+      "articleNo": 12,
+      "seriesId": "physics",
+      "title": "同じ白色光なのに、なぜ物の色が違って見えるのか――分光分布と演色性",
+      "summary": "光源の分光分布と物体の分光反射率の積から反射スペクトルを導き、XYZ積分、同色度異スペクトル、色温度と演色性の違い、CIE演色評価数Raとその限界までを光学・測色学から理解する。",
+      "levels": [
+        "3級：光と色・照明と色の見え方",
+        "2級：光と色・照明・LED",
+        "大学：光学・分光放射測定・測色学"
+      ],
+      "source": "articles/12_spectral_power_distribution_color_rendering.md"
+    },
+    {
+      "id": "13_polarization_birefringence_interference_color",
+      "articleNo": 13,
+      "seriesId": "physics",
+      "title": "透明なプラスチックに虹色が出るのはなぜか――偏光・複屈折・位相差",
+      "summary": "偏光を電場ベクトルとして捉え、Malusの法則、Brewster角、複屈折、位相差、直交偏光板での波長依存透過、応力複屈折、LCDまでを電磁気学・波動光学・測色学から理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色（発展）",
+        "2級：光と色・照明・ディスプレイ（発展）",
+        "大学：電磁気学・波動光学・偏光光学・測色学"
+      ],
+      "source": "articles/13_polarization_birefringence_interference_color.md"
+    },
+    {
+      "id": "14_retina_phototransduction",
+      "articleNo": 14,
+      "seriesId": "biology",
+      "title": "眼はどうやって光を電気信号に変えるのか――網膜の光情報変換",
+      "summary": "色彩検定3級の眼と網膜を、retinalの光異性化、オプシン、transducin、PDE6、cGMP、CNGチャネル、ON/OFF経路まで細胞生物学と神経科学から理解する。",
+      "levels": [
+        "3級：眼のしくみ・網膜における光の処理",
+        "2級：視覚系の構造と色・色覚説",
+        "大学：細胞生物学・神経科学"
+      ],
+      "source": "articles/14_retina_phototransduction.md"
+    },
+    {
+      "id": "15_opsin_genetics_color_vision",
+      "articleNo": 15,
+      "seriesId": "biology",
+      "title": "赤緑の色覚特性はなぜ遺伝するのか――オプシン遺伝子とX染色体",
+      "summary": "L・M・S錐体のオプシン遺伝子、X染色体上のOPN1LW/OPN1MW遺伝子アレイ、不等組換え、分光感度変化から、先天的な色覚特性が生じる機構を遺伝学と線形代数で理解する。",
+      "levels": [
+        "2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説",
+        "3級：眼のしくみ・網膜における光の処理",
+        "大学：遺伝学・分子生物学・神経科学"
+      ],
+      "source": "articles/15_opsin_genetics_color_vision.md"
+    },
+    {
+      "id": "16_trichromatic_color_vision_evolution",
+      "articleNo": 16,
+      "seriesId": "biology",
+      "title": "人はなぜ三色型色覚になったのか――オプシン遺伝子重複と霊長類の進化",
+      "summary": "祖先型M/Lオプシン遺伝子の重複と分光感度の分化から、人を含む狭鼻猿類の恒常的三色型、新世界ザルの多型的三色型、ホエザルの収斂進化、果実・若葉・社会シグナルに関する選択圧までを遺伝学・神経科学・進化生態学で理解する。",
+      "levels": [
+        "3級：眼のしくみ・網膜における光の処理",
+        "2級：色覚特性の多様性・遺伝による色覚特性のタイプ・色覚説・視覚系の構造と色",
+        "大学：進化生物学・遺伝学・神経科学"
+      ],
+      "source": "articles/16_trichromatic_color_vision_evolution.md"
+    },
+    {
+      "id": "17_plant_pigments_color",
+      "articleNo": 17,
+      "seriesId": "biology",
+      "title": "植物はなぜ緑・赤・黄になるのか――クロロフィル、カロテノイド、アントシアニン",
+      "summary": "クロロフィル、カロテノイド、アントシアニンの吸収スペクトルと生理機能から、色素の生合成・遺伝子制御・細胞内局在・紅葉・組織散乱までつなぎ、植物の色を細胞生物学と生化学から理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色・物体色",
+        "2級：光の性質と色・照明と色の見え方",
+        "大学：細胞生物学・生化学・植物生理学・遺伝学"
+      ],
+      "source": "articles/17_plant_pigments_color.md"
+    },
+    {
+      "id": "18_warning_coloration_aposematism",
+      "articleNo": 18,
+      "seriesId": "biology",
+      "title": "なぜ警戒色は目立つのか――捕食者の学習とシグナル進化",
+      "summary": "警戒色を、受信者依存の色知覚、背景・模様内コントラスト、捕食者の学習、正の頻度依存選択、共進化、シグナルの正直性から捉え、誘目性と対比を進化生態学の情報通信として理解する。",
+      "levels": [
+        "3級：色の心理効果・光と色・色の見え方",
+        "2級：色彩心理・視覚系の構造と色",
+        "1級：誘目性を含む色彩設計",
+        "大学：進化生物学・行動生態学・感覚生態学"
+      ],
+      "source": "articles/18_warning_coloration_aposematism.md"
+    },
+    {
+      "id": "19_complementary_afterimage",
+      "articleNo": 19,
+      "seriesId": "vision-psychology",
+      "title": "補色残像はなぜ見えるのか",
+      "summary": "色彩検定3級の補色残像を、L・M・S錐体の順応、cone-opponent処理、網膜神経節細胞の減算的順応とリバウンド、皮質の寄与まで分けて理解する。",
+      "levels": [
+        "3級：色彩心理・補色残像",
+        "大学：神経科学・心理物理学"
+      ],
+      "source": "articles/19_complementary_afterimage.md"
+    },
+    {
+      "id": "20_simultaneous_color_contrast",
+      "articleNo": 20,
+      "seriesId": "vision-psychology",
+      "title": "同じ灰色なのに色が違って見えるのはなぜか――同時色対比を神経回路から考える",
+      "summary": "色彩検定3級の「色の対比」を、L・M・S錐体、反対色処理、中心―周辺型受容野、側抑制、V1のdouble-opponent細胞、色誘導の心理物理学まで掘り下げる。",
+      "levels": [
+        "3級：色彩心理・色の対比",
+        "大学：神経科学・心理物理学"
+      ],
+      "source": "articles/20_simultaneous_color_contrast.md"
+    },
+    {
+      "id": "21_color_constancy_von_kries",
+      "articleNo": 21,
+      "seriesId": "vision-psychology",
+      "title": "なぜ照明が変わっても物体の色が同じに見えるのか――色恒常性とvon Kries順応",
+      "summary": "照明スペクトルと分光反射率の積から生じる逆問題を出発点に、L・M・S錐体、色順応、von Kries型対角変換、CAT、照明推定まで使って色恒常性を理解する。",
+      "levels": [
+        "3級：光と色・照明と色の見え方・網膜における光の処理",
+        "2級：光の性質と色・視覚系の構造と色・照明",
+        "大学：神経科学・心理物理学・色彩科学"
+      ],
+      "source": "articles/21_color_constancy_von_kries.md"
+    },
+    {
+      "id": "22_psychological_scaling_color",
+      "articleNo": 22,
+      "seriesId": "vision-psychology",
+      "title": "色の印象はどうやって数値にするのか――心理学的尺度構成法と心理物理学",
+      "summary": "名義・順序・間隔・比率尺度の数学的意味から、一対比較法、Thurstoneモデル、SD法、因子分析、Weber–Fechner則、Stevens則、信頼性と妥当性までを使って色の印象測定を理解する。",
+      "levels": [
+        "1級：心理学的尺度構成法・一対比較法・SD法",
+        "大学：心理測定・心理物理学・認知科学・統計学"
+      ],
+      "source": "articles/22_psychological_scaling_color.md"
+    },
+    {
+      "id": "23_opponent_color_process",
+      "articleNo": 23,
+      "seriesId": "vision-psychology",
+      "title": "なぜ「赤―緑」「青―黄」は反対関係になるのか――反対色過程を神経科学から考える",
+      "summary": "L・M・S錐体からL-M、S-(L+M)、輝度系への基底変換、網膜神経節細胞のcone-opponency、cardinal directions、皮質での再結合までを神経科学・心理物理学・線形代数で理解する。",
+      "levels": [
+        "2級：色覚説・視覚系の構造と色",
+        "3級：眼のしくみ・網膜における光の処理・補色残像",
+        "大学：神経科学・心理物理学・線形代数"
+      ],
+      "source": "articles/23_opponent_color_process.md"
+    },
+    {
+      "id": "24_munsell_color_system",
+      "articleNo": 24,
+      "seriesId": "colorimetry-design",
+      "title": "マンセル表色系は何を数値化しているのか――色相・明度・彩度を知覚尺度から考える",
+      "summary": "マンセルのH V/Cを知覚尺度として捉え、明度と反射率の非線形関係、彩度と不規則な色立体、1943年renotation、CIE xyYとの対応、分光測色からHVCへの変換までを心理物理学と測色学で理解する。",
+      "levels": [
+        "2級：色の表示（表色系）・マンセル表色系",
+        "大学：測色学・心理物理学・色彩科学"
+      ],
+      "source": "articles/24_munsell_color_system.md"
+    },
+    {
+      "id": "25_cie_xyz_tristimulus",
+      "articleNo": 25,
+      "seriesId": "colorimetry-design",
+      "title": "XYZ表色系はなぜ作られたのか――色を3つの数値にする",
+      "summary": "色合わせ実験から三刺激値を導き、RGBの負値、XYZへの基底変換、分光積分、標準観察者、メタメリズムまでを線形代数と測色学で理解する。",
+      "levels": [
+        "1級：XYZ表色系",
+        "大学：色彩科学・線形代数"
+      ],
+      "source": "articles/25_cie_xyz_tristimulus.md"
+    },
+    {
+      "id": "26_xy_chromaticity_diagram",
+      "articleNo": 26,
+      "seriesId": "colorimetry-design",
+      "title": "xy色度図は何を捨て、何を残すのか――XYZを2次元へ射影する",
+      "summary": "XYZの正規化からxy色度座標を導き、スペクトル軌跡、紫軌跡、混色直線、三原色色域、白色点、補色、非均等性までを線形代数と測色学で理解する。",
+      "levels": [
+        "1級：XYZ表色系・均等色空間",
+        "大学：測色学・線形代数"
+      ],
+      "source": "articles/26_xy_chromaticity_diagram.md"
+    },
+    {
+      "id": "27_cielab_color_difference",
+      "articleNo": 27,
+      "seriesId": "colorimetry-design",
+      "title": "L*a*b*はなぜXYZを曲げるのか――均等色空間と色差",
+      "summary": "XYZを基準白で正規化し非線形変換するCIELABを、区分的立方根、L*・a*・b*の数学的意味、ΔE*ab、CIEDE2000、分光測色との接続まで理解する。",
+      "levels": [
+        "1級：XYZ表色系・均等色空間・色差",
+        "大学：測色学・心理物理学・数理色彩学"
+      ],
+      "source": "articles/27_cielab_color_difference.md"
+    },
+    {
+      "id": "28_spectral_colorimetry",
+      "articleNo": 28,
+      "seriesId": "colorimetry-design",
+      "title": "分光測色計は何を測っているのか――分光反射率からXYZへ",
+      "summary": "分光測色計の校正、45/0・d/8測定幾何、積分球、分光帯域幅から、分光反射率を標準イルミナントと等色関数で積分してXYZへ変換するまでを測定工学と線形代数で理解する。",
+      "levels": [
+        "1級：測色・物理測色・XYZ表色系",
+        "大学：測色学・光学・線形代数・計測工学"
+      ],
+      "source": "articles/28_spectral_colorimetry.md"
+    },
+    {
+      "id": "29_pccs_hue_tone_system",
+      "articleNo": 29,
+      "seriesId": "colorimetry-design",
+      "title": "PCCSはなぜ「トーン」で配色できるのか――色相×明度・彩度の離散化",
+      "summary": "PCCSの24色相を循環座標、トーンを明度―彩度平面の領域分割として捉え、ヒュー・トーン表示、配色関係、測色値からPCCS分類へ至る流れを離散数学と色彩科学から理解する。",
+      "levels": [
+        "3級：PCCS・色の三属性・トーン・配色",
+        "2級：PCCSを用いた配色技法",
+        "大学：色彩科学・情報表現・離散数学"
+      ],
+      "source": "articles/29_pccs_hue_tone_system.md"
+    },
+    {
+      "id": "30_ncs_perceptual_color_system",
+      "articleNo": 30,
+      "seriesId": "colorimetry-design",
+      "title": "NCSはなぜ「見え」を数で表せるのか――知覚的類似度を座標化する",
+      "summary": "NCSを6つのelementary coloursへの知覚的類似度として捉え、blackness・whiteness・chromaticnessの総和制約、ニュアンス三角形の2-simplex、色相比、saturation、XYZ・CIELABとの非線形な対応までを心理物理学と数理色彩学から理解する。",
+      "levels": [
+        "1級：色の表示・表色系・色彩学",
+        "大学：心理物理学・数理色彩学・測色学"
+      ],
+      "source": "articles/30_ncs_perceptual_color_system.md"
+    },
+    {
+      "id": "31_metamerism_spectral_nullspace",
+      "articleNo": 31,
+      "seriesId": "colorimetry-design",
+      "title": "同じ色に見えるのにスペクトルが違うのはなぜか――メタメリズムを線形代数で考える",
+      "summary": "条件等色を、分光反射率からXYZへの高次元→3次元写像として捉え、零空間、照明メタメリズム、観察者メタメリズム、分光測色、メタメリズム指数までを測色学と線形代数から理解する。",
+      "levels": [
+        "1級：色彩学・測色（関連）",
+        "大学：測色学・線形代数・分光学"
+      ],
+      "source": "articles/31_metamerism_spectral_nullspace.md"
+    },
+    {
+      "id": "32_color_matching_functions_standard_observer",
+      "articleNo": 32,
+      "seriesId": "colorimetry-design",
+      "title": "等色関数は何を表しているのか――スペクトルをXYZへ射影する3つの重み",
+      "summary": "等色実験からRGB等色関数、XYZへの基底変換、分光積分、CIE 1931 2°・CIE 1964 10°標準観察者、LMS錐体感度との違いまでを測色学・線形代数から理解する。",
+      "levels": [
+        "1級：XYZ表色系・標準観察者・測色",
+        "大学：測色学・心理物理学・線形代数・計測工学"
+      ],
+      "source": "articles/32_color_matching_functions_standard_observer.md"
+    },
+    {
+      "id": "33_color_harmony_mathematics_psychophysics",
+      "articleNo": 33,
+      "seriesId": "colorimetry-design",
+      "title": "配色の「調和」は数式にできるのか――色相環・色差・心理測定から考える",
+      "summary": "PCCS色相環を円周上の離散座標として捉え、循環距離、正多角形配置、CIELAB色差、古典的色彩調和論、心理評定と回帰モデルまでを数理色彩学・心理物理学から理解する。",
+      "levels": [
+        "2級：PCCSを用いた配色技法・色彩調和",
+        "1級：世界の色彩調和論・測色",
+        "大学：数理色彩学・心理物理学・統計学・離散数学"
+      ],
+      "source": "articles/33_color_harmony_mathematics_psychophysics.md"
+    },
+    {
+      "id": "34_emerald_crystal_field",
+      "articleNo": 34,
+      "seriesId": "chemistry-geoscience",
+      "title": "エメラルドはなぜ緑なのか――Cr³⁺と結晶場から発色を考える",
+      "summary": "ベリル中のCr³⁺が作るd軌道分裂とd-d遷移から、430 nm・600〜620 nm付近の選択吸収と緑色の発色を結晶場・配位子場理論で理解する。",
+      "levels": [
+        "3級：光と色・物体色",
+        "大学：無機化学・鉱物学"
+      ],
+      "source": "articles/34_emerald_crystal_field.md"
+    },
+    {
+      "id": "35_organic_dyes_pi_conjugation",
+      "articleNo": 35,
+      "seriesId": "chemistry-geoscience",
+      "title": "有機色素はなぜ色づくのか――π共役とHOMO–LUMOギャップ",
+      "summary": "π共役による分子軌道の非局在化とHOMO–LUMOギャップの縮小から、可視吸収、発色団、吸収強度、置換基効果、染料・顔料の違いまで理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色・減法混色",
+        "大学：有機化学・量子化学・分光学"
+      ],
+      "source": "articles/35_organic_dyes_pi_conjugation.md"
+    },
+    {
+      "id": "36_prussian_blue_intervalence_charge_transfer",
+      "articleNo": 36,
+      "seriesId": "chemistry-geoscience",
+      "title": "プルシアンブルーはなぜ青いのか――混合原子価と電荷移動遷移",
+      "summary": "Fe²⁺/Fe³⁺混合原子価とシアノ架橋による原子価間電荷移動から、約700 nmの強い吸収、顔料粒子の散乱、Kubelka–Munk理論までつなげて青色発色を理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色・減法混色",
+        "2級：光の性質と色",
+        "大学：無機化学・固体化学・分光学"
+      ],
+      "source": "articles/36_prussian_blue_intervalence_charge_transfer.md"
+    },
+    {
+      "id": "37_amethyst_color_center",
+      "articleNo": 37,
+      "seriesId": "chemistry-geoscience",
+      "title": "アメシストはなぜ紫なのか――鉄不純物・照射・色中心から発色を考える",
+      "summary": "SiO₂格子中のFe不純物と放射線誘起色中心から、約545 nmの選択吸収、欠陥準位、加熱による退色、地質学的履歴と色の関係まで理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色・照明と色の見え方",
+        "2級：光の性質と色",
+        "大学：固体化学・鉱物学・分光学"
+      ],
+      "source": "articles/37_amethyst_color_center.md"
+    },
+    {
+      "id": "38_precious_opal_photonic_crystal",
+      "articleNo": 38,
+      "seriesId": "chemistry-geoscience",
+      "title": "オパールはなぜ虹色に見えるのか――シリカ球の周期構造とフォトニック結晶",
+      "summary": "含水シリカ球の規則配列を周期的な屈折率構造として捉え、Bragg–Snell則、(111)面間隔、実効屈折率、角度依存反射、秩序度からプレシャスオパールの遊色効果を理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色",
+        "2級：光と色・光の性質と色",
+        "大学：鉱物学・波動光学・フォトニクス"
+      ],
+      "source": "articles/38_precious_opal_photonic_crystal.md"
+    },
+    {
+      "id": "39_memory_color_color_memory",
+      "articleNo": 39,
+      "seriesId": "vision-psychology",
+      "title": "バナナはなぜ「黄色く」見えやすいのか――記憶色と色記憶を認知科学から考える",
+      "summary": "記憶色と色記憶を区別し、熟知物体の無彩色設定、Bayes的事前分布、色記憶のバイアスと分散、色恒常性との関係から、過去の経験が現在の色知覚へ作用する仕組みを理解する。",
+      "levels": [
+        "1級：色彩心理・記憶色と色記憶・心理物理学的測定法",
+        "大学：認知科学・心理物理学・視覚科学・統計学"
+      ],
+      "source": "articles/39_memory_color_color_memory.md"
+    },
+    {
+      "id": "40_color_categorical_perception",
+      "articleNo": 40,
+      "seriesId": "vision-psychology",
+      "title": "色は連続なのに、なぜ「赤」「橙」と境界ができるのか――色カテゴリー知覚を心理物理学から考える",
+      "summary": "連続的な色空間を離散カテゴリーへ写す過程を、ロジスティック心理測定、信号検出理論、測色距離の統制、言語相対性、fMRIによるカテゴリー表現まで心理物理学・認知科学・神経科学から理解する。",
+      "levels": [
+        "1級：色彩心理・心理物理学的測定法・色知覚の複雑性・記憶色と色記憶",
+        "大学：認知科学・心理物理学・神経科学・統計学"
+      ],
+      "source": "articles/40_color_categorical_perception.md"
+    },
+    {
+      "id": "41_mimicry_signal_detection",
+      "articleNo": 41,
+      "seriesId": "biology",
+      "title": "なぜ「似ている」だけで生き残れるのか――擬態を色覚・信号検出・進化から考える",
+      "summary": "擬態を受信者の分類問題として捉え、量子捕獲、知覚距離、Bayes推定、信号検出理論、ベイツ型・ミュラー型擬態、頻度依存選択、刺激一般化、Heliconiusの遺伝基盤までを進化生態学・感覚生態学から理解する。",
+      "levels": [
+        "3級：光と色・色の見え方・色の心理効果",
+        "2級：色彩心理・視覚系の構造と色",
+        "1級：誘目性・配色・色差（関連）",
+        "大学：進化生物学・行動生態学・感覚生態学・統計的意思決定"
+      ],
+      "source": "articles/41_mimicry_signal_detection.md"
+    },
+    {
+      "id": "42_guppy_color_sexual_selection",
+      "articleNo": 42,
+      "seriesId": "biology",
+      "title": "なぜ派手なオスは選ばれるのか――グッピーの体色と性選択",
+      "summary": "グッピーの橙色斑を、カロテノイド・プテリジン、色素胞分化、オプシン発現、メスの配偶者選択、Fisher型共進化、捕食とのトレードオフまでつなぎ、色相・彩度・照明が進化へ変換される過程を理解する。",
+      "levels": [
+        "3級：光と色・色の見え方・色の心理効果",
+        "2級：色彩心理・視覚系の構造と色",
+        "1級：誘目性・配色・色差（関連）",
+        "大学：進化生物学・行動生態学・遺伝学・発生生物学"
+      ],
+      "source": "articles/42_guppy_color_sexual_selection.md"
+    },
+    {
+      "id": "43_diffraction_grating_cd_rainbow",
+      "articleNo": 43,
+      "seriesId": "physics",
+      "title": "CDはなぜ虹色に見えるのか――回折格子と波の干渉",
+      "summary": "CDの周期的なトラックを反射型回折格子として捉え、回折格子式、Nスリット干渉、角分散、分解能、構造色、分光分布からXYZへの接続までを波動光学・測色学から理解する。",
+      "levels": [
+        "3級：光と色・光の性質と色（発展）",
+        "2級：光と色・光の性質と色（発展）",
+        "大学：波動光学・分光学・測色学"
+      ],
+      "source": "articles/43_diffraction_grating_cd_rainbow.md"
+    },
+    {
+      "id": "44_color_management_icc_profiles",
+      "articleNo": 44,
+      "seriesId": "colorimetry-design",
+      "title": "同じRGB値なのに、なぜ色が違うのか――ICCカラーマネジメントを座標変換として理解する",
+      "summary": "RGB・CMYKをデバイス依存座標として捉え、ICCプロファイル、PCS（XYZ/L*a*b*）、TRC・行列・LUT、D50色順応、色域写像、レンダリングインテント、測定と色差評価までを測色学・線形代数・最適化から理解する。",
+      "levels": [
+        "1級：測色・色彩設計・色再現（発展）",
+        "大学：測色学・色彩工学・線形代数・数値最適化"
+      ],
+      "source": "articles/44_color_management_icc_profiles.md"
+    },
+    {
+      "id": "45_cieluv_uniform_chromaticity",
+      "articleNo": 45,
+      "seriesId": "colorimetry-design",
+      "title": "u′v′とL*u*v*は何を均等にしたのか――CIELUVを射影変換と色差から理解する",
+      "summary": "CIE 1976 u′v′をxy色度図の射影変換として捉え、直線関係の保存、L*・u*・v*の定義、基準白、クロマ・色相角、ΔE*uv、CIELABとの違い、分光測色からの計算までを測色学・線形代数から理解する。",
+      "levels": [
+        "1級：XYZ表色系・均等色空間・測色",
+        "大学：測色学・線形代数・数理色彩学"
+      ],
+      "source": "articles/45_cieluv_uniform_chromaticity.md"
+    },
+    {
+      "id": "46_standard_illuminants_colorimetry",
+      "articleNo": 46,
+      "seriesId": "colorimetry-design",
+      "title": "標準イルミナントは何を標準化しているのか――A・D65・D50を測色の演算子として理解する",
+      "summary": "標準イルミナントを測色計算の相対分光分布として捉え、AのPlanck放射、D系列の基底スペクトル、D65・D50、XYZ積分、白色点、メタメリズム、光源との違いまでを測色学・線形代数から理解する。",
+      "levels": [
+        "1級：標準イルミナント・測色・XYZ表色系",
+        "大学：測色学・分光学・線形代数"
+      ],
+      "source": "articles/46_standard_illuminants_colorimetry.md"
+    },
+    {
+      "id": "49_rgb_pixels_quantization",
+      "articleNo": 49,
+      "seriesId": "digital-color",
+      "title": "デジタル画像の色は何でできているのか――RGB・画素・量子化",
+      "summary": "RGB画像を画素とチャンネルの配列として捉え、8 bitコード値、16進カラーコード、量子化誤差、ビット深度、バンディング、sRGBの非線形符号化までを画像工学から理解する。",
+      "levels": [
+        "3級：混色・加法混色（関連）",
+        "大学：画像工学・デジタル信号処理・色彩科学"
+      ],
+      "source": "articles/49_rgb_pixels_quantization.md"
+    },
+    {
+      "id": "50_hsb_hsv_color_selection",
+      "articleNo": 50,
+      "seriesId": "digital-color",
+      "title": "HSB/HSVはなぜ色を選びやすいのか――RGBを「色相・彩度・明るさ」に組み替える",
+      "summary": "RGBをHue・Saturation・Brightness/Valueへ再パラメータ化し、RGB↔HSV変換、色相・彩度・明るさの数式、知覚明度・クロマとの違い、iBisPaintでの実用と注意点までを画像工学と色彩科学から理解する。",
+      "levels": [
+        "3級：色の三属性・混色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/50_hsb_hsv_color_selection.md"
+    },
+    {
+      "id": "51_alpha_compositing_opacity",
+      "articleNo": 51,
+      "seriesId": "digital-color",
+      "title": "レイヤーの不透明度は何をしているのか――α合成を数式で理解する",
+      "summary": "RGBにalphaを加えたRGBA表現から、source-over合成、出力alpha、straight/premultiplied alpha、レイヤー順序、透明PNGの縁、sRGBの非線形性、iBisPaintでの不透明度調整までを画像工学から理解する。",
+      "levels": [
+        "3級：混色・デジタル色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/51_alpha_compositing_opacity.md"
+    },
+    {
+      "id": "52_multiply_blend_mode",
+      "articleNo": 52,
+      "seriesId": "digital-color",
+      "title": "乗算はなぜ影に向くのか――RGBの掛け算から合成モードを理解する",
+      "summary": "MultiplyをRGB各チャンネルの乗算として定式化し、白・黒・灰色の性質、色付き影、不透明度との結合、Darkenとの差、線画用途、重ね掛け、sRGBと物理的光量の違いまでを画像工学とイラスト実践から理解する。",
+      "levels": [
+        "3級：混色・デジタル色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/52_multiply_blend_mode.md"
+    },
+    {
+      "id": "53_screen_blend_mode",
+      "articleNo": 53,
+      "seriesId": "digital-color",
+      "title": "スクリーンはなぜ光に向くのか――反転した乗算から合成モードを理解する",
+      "summary": "ScreenをRGBの反転→乗算→再反転として定式化し、黒・白・灰色の性質、Lighten・Addとの差、不透明度、重ね掛け、光・霞・蒸気への実用、sRGBと物理的光量の違いまでを画像工学とイラスト実践から理解する。",
+      "levels": [
+        "3級：混色・デジタル色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/53_screen_blend_mode.md"
+    },
+    {
+      "id": "54_additive_glow_blend_mode",
+      "articleNo": 54,
+      "seriesId": "digital-color",
+      "title": "加算・発光はなぜ光って見えるのか――RGBの足し算と白飛びを理解する",
+      "summary": "加算・発光をRGB各チャンネルの加算とクリッピングとして定式化し、Screenとの差、白飛び、不透明度、ソフト間の違い、発光体と照らされた物体、sRGBと物理光量の違いまでを画像工学とイラスト実践から理解する。",
+      "levels": [
+        "3級：混色・デジタル色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/54_additive_glow_blend_mode.md"
+    },
+    {
+      "id": "55_overlay_blend_mode",
+      "articleNo": 55,
+      "seriesId": "digital-color",
+      "title": "オーバーレイはなぜ絵を「締める」のか――乗算とスクリーンを明暗で切り替える",
+      "summary": "Overlayを下地の明暗に応じてMultiply型とScreen型を切り替える区分関数として定式化し、50%グレーの中立性、黒・白の保持、コントラスト増加、不透明度、Hard Lightとの差、仕上げ・色味調整への実用までを画像工学とイラスト実践から理解する。",
+      "levels": [
+        "3級：混色・デジタル色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/55_overlay_blend_mode.md"
+    },
+    {
+      "id": "56_blend_modes_softlight_difference_hsl",
+      "articleNo": 56,
+      "seriesId": "digital-color",
+      "title": "合成モードをどう選ぶか――ソフトライト・比較・差・色相/彩度/カラー/輝度を数式で整理する",
+      "summary": "Soft Lightの区分関数、Darken/Lightenのmin/max、Difference/Exclusionの差分演算、Hue/Saturation/Color/Luminosityの非分離型合成を数式で整理し、iBisPaintでの用途と注意点までを理解する。",
+      "levels": [
+        "3級：混色・デジタル色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/56_blend_modes_softlight_difference_hsl.md"
+    },
+    {
+      "id": "57_brightness_contrast_tone_transform",
+      "articleNo": 57,
+      "seriesId": "digital-color",
+      "title": "明るさ・コントラストは何を変えているのか――階調変換を数式で理解する",
+      "summary": "明るさとコントラストを階調変換として捉え、加算的な明るさモデル、中間値を基準としたコントラスト変換、クリッピング、露出との違い、sRGBの非線形性、iBisPaint・CLIP STUDIO PAINT・Photoshopでの扱いまでを画像工学から理解する。",
+      "levels": [
+        "3級：デジタル色・配色（関連）",
+        "大学：画像工学・デジタル信号処理・色彩科学"
+      ],
+      "source": "articles/57_brightness_contrast_tone_transform.md"
+    },
+    {
+      "id": "58_histogram_levels_adjustment",
+      "articleNo": 58,
+      "seriesId": "digital-color",
+      "title": "ヒストグラムは何を見せ、レベル補正は何を変えるのか――黒点・白点・中間調を数式で理解する",
+      "summary": "ヒストグラムを画素値の頻度分布として定義し、入力黒点・入力白点・中間調・出力レベルによる階調再配置、クリッピング、RGBチャンネル別補正、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用までを画像工学から理解する。",
+      "levels": [
+        "3級：デジタル色・配色（関連）",
+        "大学：画像工学・デジタル信号処理・色彩科学"
+      ],
+      "source": "articles/58_histogram_levels_adjustment.md"
+    },
+    {
+      "id": "59_tone_curve",
+      "articleNo": 59,
+      "seriesId": "digital-color",
+      "title": "トーンカーブは何を変えているのか――入力と出力の写像からコントラストを設計する",
+      "summary": "トーンカーブを入力RGB値から出力値への非線形写像として捉え、局所的な傾きとコントラスト、S字・逆S字、アンカーポイント、階調圧縮、量子化、CLIP STUDIO PAINT・Photoshopでの実用までを画像工学から理解する。",
+      "levels": [
+        "3級：デジタル色・明度・配色（関連）",
+        "大学：画像工学・デジタル信号処理・色彩科学"
+      ],
+      "source": "articles/59_tone_curve.md"
+    },
+    {
+      "id": "60_rgb_channel_tone_curves",
+      "articleNo": 60,
+      "seriesId": "digital-color",
+      "title": "RGB別トーンカーブはなぜ色を変えるのか――チャンネル比から色かぶり補正を理解する",
+      "summary": "Red・Green・Blueへ別々のトーンカーブを適用する処理を3本の1次元写像として捉え、補色方向、暗部と明部の色分離、色かぶり補正、sRGB相対輝度への影響、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用と注意点までを理解する。",
+      "levels": [
+        "3級：デジタル色・色の三属性・配色（関連）",
+        "大学：画像工学・デジタル信号処理・色彩科学"
+      ],
+      "source": "articles/60_rgb_channel_tone_curves.md"
+    },
+    {
+      "id": "61_hue_saturation_adjustment",
+      "articleNo": 61,
+      "seriesId": "digital-color",
+      "title": "色相・彩度調整は何を変えているのか――RGBから色相環へ写して色を動かす",
+      "summary": "色相・彩度調整をHSV上の座標変換として捉え、色相回転、彩度低下、RGB↔HSV計算、低彩度でのHue不安定性、相対輝度変化、色域クリッピング、iBisPaint・CLIP STUDIO PAINT・Photoshopの実用と注意点まで理解する。",
+      "levels": [
+        "3級：色の三属性・デジタル色・配色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/61_hue_saturation_adjustment.md"
+    },
+    {
+      "id": "62_gradient_map",
+      "articleNo": 62,
+      "seriesId": "digital-color",
+      "title": "グラデーションマップは何をしているのか――明暗を色へ写像する1次元LUTとして理解する",
+      "summary": "グラデーションマップを階調値からRGB色への1次元写像として捉え、線形補間、複数色点、トーンカーブや色相・彩度調整との違い、相対輝度、バンディング、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用と注意点まで理解する。",
+      "levels": [
+        "3級：デジタル色・明度・配色（関連）",
+        "大学：画像工学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/62_gradient_map.md"
+    },
+    {
+      "id": "63_gaussian_blur_convolution",
+      "articleNo": 63,
+      "seriesId": "digital-color",
+      "title": "ガウスぼかしは何をしているのか――畳み込みとガウス核から理解する",
+      "summary": "ガウスぼかしを近傍画素との畳み込みとして捉え、Gaussian kernel、標準偏差σ、RGB 0〜1計算、低域通過、分離可能性、sRGB・alpha・境界条件の注意、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。",
+      "levels": [
+        "3級：デジタル色・画像処理（関連）",
+        "大学：画像工学・デジタル信号処理・コンピュータグラフィックス"
+      ],
+      "source": "articles/63_gaussian_blur_convolution.md"
+    },
+    {
+      "id": "64_sharpen_unsharp_mask",
+      "articleNo": 64,
+      "seriesId": "digital-color",
+      "title": "シャープ・アンシャープマスクは何をしているのか――高周波成分とエッジ強調から理解する",
+      "summary": "シャープ処理を高域強調、アンシャープマスクを元画像とぼけ画像の差分による高周波強調として捉え、畳み込み、RGB 0〜1計算、Radius・Amount/Strength・Threshold、ハロー・ノイズ・色縁、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。",
+      "levels": [
+        "3級：デジタル色・画像処理（関連）",
+        "大学：画像工学・デジタル信号処理・コンピュータグラフィックス"
+      ],
+      "source": "articles/64_sharpen_unsharp_mask.md"
+    },
+    {
+      "id": "65_anti_aliasing_sampling",
+      "articleNo": 65,
+      "seriesId": "digital-color",
+      "title": "アンチエイリアスはなぜ輪郭を滑らかにするのか――サンプリングと画素被覆率から理解する",
+      "summary": "アンチエイリアスをサンプリングと画素被覆率から捉え、Nyquist周波数、エイリアシング、スーパーサンプリング、最近傍・バイリニア・バイキュービック・Lanczos、縮小時の低域通過、sRGB・alphaの注意、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。",
+      "levels": [
+        "3級：デジタル色・画像処理（関連）",
+        "大学：画像工学・デジタル信号処理・コンピュータグラフィックス"
+      ],
+      "source": "articles/65_anti_aliasing_sampling.md"
+    },
+    {
+      "id": "66_srgb_gamma_gamut_color_management",
+      "articleNo": 66,
+      "seriesId": "digital-color",
+      "title": "sRGBは何を決めているのか――ガンマ・色域・カラーマネジメントを一本につなぐ",
+      "summary": "sRGBを原色・D65白色点・伝達関数を持つRGB色空間として捉え、sRGB↔線形光変換、ガンマ、RGB 0〜1計算、色域、色域外、プロファイルの割り当てと変換、iBisPaint・CLIP STUDIO PAINT・Photoshopでの実用まで理解する。",
+      "levels": [
+        "3級：デジタル色・画像処理（関連）",
+        "1級：測色・色彩設計・色再現（関連）",
+        "大学：画像工学・色彩科学・カラーマネジメント"
+      ],
+      "source": "articles/66_srgb_gamma_gamut_color_management.md"
+    },
+    {
+      "id": "67_shadow_light_environment_object_color",
+      "articleNo": 67,
+      "seriesId": "illustration-practice",
+      "title": "影はなぜ黒で塗るだけでは不自然になるのか――光源色・環境光・物体色から考える",
+      "summary": "黒を重ねる単純な減衰と、直接光・環境光・物体反射率で決まる実際の影を比較し、分光反射、レンダリング方程式、XYZ、RGB計算から影色をイラスト実践へ接続する。",
+      "levels": [
+        "3級：光と色・色の見え方（関連）",
+        "2級：照明と色・配色（関連）",
+        "大学：光学・コンピュータグラフィックス・色彩科学"
+      ],
+      "source": "articles/67_shadow_light_environment_object_color.md"
+    },
+    {
+      "id": "68_sunset_orange_color_temperature_scattering_adaptation",
+      "articleNo": 68,
+      "seriesId": "illustration-practice",
+      "title": "夕方の絵をオレンジ一色で処理してはいけない理由――色温度・大気散乱・色順応から考える",
+      "summary": "全面を同じオレンジへ寄せる処理と、暖色の直達光・空からの環境光・大気散乱・色順応を分けた夕方照明を比較し、Rayleigh散乱、色温度、分光反射、von Kries順応、RGB合成から夕景の光をイラスト実践へ接続する。",
+      "levels": [
+        "3級：光と色・色の見え方（関連）",
+        "2級：照明と色・色彩心理（関連）",
+        "大学：大気光学・色彩科学・心理物理学・コンピュータグラフィックス"
+      ],
+      "source": "articles/68_sunset_orange_color_temperature_scattering_adaptation.md"
+    },
+    {
+      "id": "69_saturation_contrast_visual_attention",
+      "articleNo": 69,
+      "seriesId": "illustration-practice",
+      "title": "彩度を上げれば鮮やかになるのか――彩度差と視線誘導から考える",
+      "summary": "全体の彩度上昇と主役・背景の彩度差を比較し、HSV彩度、CIELABクロマ、sRGB相対輝度、saliency map、物体色と後処理の違いから、彩度を視線誘導へ使う方法と限界を理解する。",
+      "levels": [
+        "3級：色の三属性・配色・色彩心理（関連）",
+        "2級：配色・色彩心理（関連）",
+        "大学：色彩科学・心理物理学・画像工学・視覚科学"
+      ],
+      "source": "articles/69_saturation_contrast_visual_attention.md"
+    },
+    {
+      "id": "70_grayscale_value_design_perceptual_luminance",
+      "articleNo": 70,
+      "seriesId": "illustration-practice",
+      "title": "グレースケール確認は何を検査しているのか――知覚輝度と明度設計から考える",
+      "summary": "グレースケール確認を色相・彩度の情報を外して明暗構造を検査する手法として捉え、sRGB線形化、相対輝度、CIE明度L*、局所コントラストから主役・背景・シルエットの明度設計へ接続する。",
+      "levels": [
+        "3級：色の三属性・配色・色の見え方（関連）",
+        "2級：配色・色彩心理（関連）",
+        "大学：色彩科学・視覚科学・画像工学・心理物理学"
+      ],
+      "source": "articles/70_grayscale_value_design_perceptual_luminance.md"
+    },
+    {
+      "id": "71_character_background_color_separation",
+      "articleNo": 71,
+      "seriesId": "illustration-practice",
+      "title": "背景とキャラクターが同化する理由――色相差・明度差・彩度差・暖寒差から考える",
+      "summary": "背景とキャラクターの分離を、sRGB相対輝度、CIELABのL*・クロマ・色相角、反対色処理、暖色／寒色の知覚から整理し、明度差・色相差・彩度差・暖寒差を使い分ける実践へ接続する。",
+      "levels": [
+        "3級：色の三属性・配色・色の見え方（関連）",
+        "2級：配色・色彩心理（関連）",
+        "大学：色彩科学・視覚科学・画像工学・心理物理学"
+      ],
+      "source": "articles/71_character_background_color_separation.md"
+    },
+    {
+      "id": "72_skin_blood_light_subsurface_scattering",
+      "articleNo": 72,
+      "seriesId": "illustration-practice",
+      "title": "肌はなぜ単なるベージュではないのか――血色・光源・表面下散乱から考える",
+      "summary": "肌色を単一のベージュとして扱う場合と、メラニン・ヘモグロビンによる波長選択吸収、光源色、表面反射、表面下散乱を分けて考える場合を比較し、皮膚光学とBSSRDFをイラストの血色・影・逆光・ハイライト設計へ接続する。",
+      "levels": [
+        "3級：光と色・色の見え方・色の三属性（関連）",
+        "2級：照明と色・配色（関連）",
+        "大学：生体光学・色彩科学・コンピュータグラフィックス・放射輸送"
+      ],
+      "source": "articles/72_skin_blood_light_subsurface_scattering.md"
+    },
+    {
+      "id": "73_metal_diffuse_specular_environment_reflection",
+      "articleNo": 73,
+      "seriesId": "illustration-practice",
+      "title": "金属はなぜ白いハイライトだけでは金属に見えないのか――拡散反射・鏡面反射・環境映り込みから考える",
+      "summary": "灰色や金色のベースへ白いハイライトを足す描き方と、鏡面反射・粗さ・Fresnel反射・環境映り込みを分けて設計する描き方を比較し、導体の複素屈折率、microfacet BRDF、レンダリング方程式から金属らしさをイラスト実践へ接続する。",
+      "levels": [
+        "3級：光と色・色の見え方（関連）",
+        "2級：照明と色・配色（関連）",
+        "大学：光学・コンピュータグラフィックス・放射輸送・色彩科学"
+      ],
+      "source": "articles/73_metal_diffuse_specular_environment_reflection.md"
+    },
+    {
+      "id": "74_hair_highlight_flow_anisotropic_reflection",
+      "articleNo": 74,
+      "seriesId": "illustration-practice",
+      "title": "髪のツヤはなぜ帯状に見えるのか――毛流れ・異方性反射から考える",
+      "summary": "髪のツヤを単一の白い帯ではなく、毛流れに依存する異方性反射と多数の毛束の配向、曲面形状の集合として捉え、Marschner型のR・TT・TRT散乱、吸収、RGB合成から天使の輪・ハイライト設計へ接続する。",
+      "levels": [
+        "3級：光と色・色の見え方（関連）",
+        "2級：照明と色・配色（関連）",
+        "大学：光学・コンピュータグラフィックス・放射輸送・色彩科学"
+      ],
+      "source": "articles/74_hair_highlight_flow_anisotropic_reflection.md"
+    },
+    {
+      "id": "75_makeup_changes_color_texture_contrast",
+      "articleNo": 75,
+      "seriesId": "makeup-color-science",
+      "title": "メイクは顔の何を変えているのか――色・明暗・質感・コントラストを分解する",
+      "summary": "メイクを色相・明度・彩度・質感・局所コントラストの5変数へ分解し、CIELAB、光沢、顔内コントラスト、形状知覚から、ファンデーション・チーク・リップ・アイメイク・ハイライトの働きを色彩科学として整理する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：色彩科学・視覚科学・皮膚光学・心理物理学"
+      ],
+      "source": "articles/75_makeup_changes_color_texture_contrast.md"
+    },
+    {
+      "id": "76_foundation_optical_film_scattering_coverage",
+      "articleNo": 76,
+      "seriesId": "makeup-color-science",
+      "title": "ファンデーションは肌の上で何をしているのか――化粧膜・散乱・隠蔽・透明感を光学で考える",
+      "summary": "ファンデーションを皮膚上の光学膜として捉え、散乱・吸収・透過・表面反射・局所色差から、カバー力、毛穴、透明感、ツヤの関係を資生堂・花王の研究資料と放射輸送の考え方から理解する。",
+      "levels": [
+        "3級：光と色・色の見え方・色の三属性（関連）",
+        "2級：照明と色・配色（関連）",
+        "大学：皮膚光学・色彩科学・放射輸送・化粧品科学"
+      ],
+      "source": "articles/76_foundation_optical_film_scattering_coverage.md"
+    },
+    {
+      "id": "77_control_color_concealer_cielab_spectral_reflectance",
+      "articleNo": 77,
+      "seriesId": "makeup-color-science",
+      "title": "コントロールカラーはなぜ赤み・青みを目立たなくできるのか――補色・CIELAB・化粧膜の分光反射から考える",
+      "summary": "コントロールカラーを単純な「補色で打ち消す」操作ではなく、CIELABの局所色差と化粧膜の分光反射・吸収・散乱を調整する操作として捉え、赤み・青ひげ・クマ・シミを自然に補正する原理を資生堂の一次資料から理解する。",
+      "levels": [
+        "3級：色の三属性・混色・色の見え方（関連）",
+        "2級：配色・光と色・色彩心理（関連）",
+        "大学：測色学・皮膚光学・化粧品科学・視覚科学"
+      ],
+      "source": "articles/77_control_color_concealer_cielab_spectral_reflectance.md"
+    },
+    {
+      "id": "78_foundation_white_cast_illumination_scattering_metamerism",
+      "articleNo": 78,
+      "seriesId": "makeup-color-science",
+      "title": "ファンデーションが白浮きするのはなぜか――光源・散乱・メタメリズムから考える",
+      "summary": "室内では自然なファンデーションが屋外で白く浮く現象を、照明の分光分布、化粧膜の散乱、CIELABの明度差、照明メタメリズム、色順応から捉え、資生堂のフォトクロミック酸化チタン研究と花王の白浮き抑制技術へ接続する。",
+      "levels": [
+        "3級：光と色・照明と色の見え方・色の三属性（関連）",
+        "2級：照明・配色・色彩心理（関連）",
+        "1級：測色・標準イルミナント・メタメリズム（関連）",
+        "大学：測色学・皮膚光学・散乱光学・化粧品科学・心理物理学"
+      ],
+      "source": "articles/78_foundation_white_cast_illumination_scattering_metamerism.md"
+    },
+    {
+      "id": "79_pearl_highlight_interference_orientation_face_shape",
+      "articleNo": 79,
+      "seriesId": "makeup-color-science",
+      "title": "パール・ハイライトはなぜ肌を明るく立体的に見せるのか――薄膜干渉・粉体配向・顔の陰影から考える",
+      "summary": "パール剤をマイカと酸化チタン薄膜からなる方向性反射材料として捉え、薄膜干渉、BRDF、板状粉体の配向、shape-from-shadingから、ツヤ・テカリ・立体感の違いとハイライト配置を資生堂・花王の一次資料へ接続する。",
+      "levels": [
+        "3級：光と色・色の見え方・色の三属性（関連）",
+        "2級：照明と色・配色・色彩心理（関連）",
+        "大学：波動光学・色彩科学・視覚科学・化粧品科学・コンピュータグラフィックス"
+      ],
+      "source": "articles/79_pearl_highlight_interference_orientation_face_shape.md"
+    },
+    {
+      "id": "80_blush_blood_color_hemoglobin_cielab_health_perception",
+      "articleNo": 80,
+      "seriesId": "makeup-color-science",
+      "title": "チークはなぜ顔を健康的に見せるのか――血色・ヘモグロビン・CIELAB・顔色知覚から考える",
+      "summary": "チークを単なる赤色追加ではなく、皮膚の血色手掛かりを化粧膜で局所的に再構成する操作として捉え、ヘモグロビンの波長選択吸収、CIELABのa*・b*、顔色と健康印象の心理物理、頬への空間配置を資生堂・花王の一次資料と研究論文から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：色彩心理・配色・光と色（関連）",
+        "大学：皮膚光学・測色学・視覚科学・心理物理学・化粧品科学"
+      ],
+      "source": "articles/80_blush_blood_color_hemoglobin_cielab_health_perception.md"
+    },
+    {
+      "id": "81_lip_color_skin_lightness_holistic_face_perception",
+      "articleNo": 81,
+      "seriesId": "makeup-color-science",
+      "title": "リップの色で肌まで違って見えるのはなぜか――顔特有の色錯視・CIELAB・顔内コントラストから考える",
+      "summary": "リップを唇だけの着色ではなく、顔全体の色知覚を変える誘導刺激として捉え、CIELAB、顔特有の明るさ同化、顔内コントラスト、光沢・照明から、肌の明るさ・透明感印象が変化する仕組みを資生堂・花王の一次資料と心理物理学研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：色彩心理・配色・照明と色（関連）",
+        "大学：測色学・視覚科学・心理物理学・化粧品科学"
+      ],
+      "source": "articles/81_lip_color_skin_lightness_holistic_face_perception.md"
+    },
+    {
+      "id": "82_eye_makeup_eye_size_assimilation_contrast",
+      "articleNo": 82,
+      "seriesId": "makeup-color-science",
+      "title": "アイメイクで目が大きく見えるのはなぜか――アイシャドウ・アイライン・マスカラと同化錯視から考える",
+      "summary": "アイメイクを眼の物理サイズを変えず知覚サイズを動かす操作として捉え、アイシャドウ・アイライン・マスカラによる目の拡大錯視、Delboeuf型の同化、眉との配置、局所コントラスト、瞳色との関係を資生堂・花王の一次資料と心理物理学研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：色彩心理・配色・照明と色（関連）",
+        "大学：視覚科学・心理物理学・色彩科学・化粧品科学"
+      ],
+      "source": "articles/82_eye_makeup_eye_size_assimilation_contrast.md"
+    },
+    {
+      "id": "83_hair_lightness_skin_makeup_face_contrast",
+      "articleNo": 83,
+      "seriesId": "makeup-color-science",
+      "title": "髪色が変わると同じメイクが違って見えるのはなぜか――顔まわりの明度差・顔内コントラストから考える",
+      "summary": "髪を顔の大きな隣接色として捉え、髪―肌の明度差、顔内コントラスト、CIELAB色差、周辺色による肌の均一さ知覚から、髪色変更後にリップ・眉・目もとの強さが変わって見える仕組みを資生堂・花王の一次資料と心理物理学研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：色彩心理・配色・照明と色（関連）",
+        "大学：色彩科学・視覚科学・心理物理学・化粧品科学"
+      ],
+      "source": "articles/83_hair_lightness_skin_makeup_face_contrast.md"
+    },
+    {
+      "id": "84_eyebrow_color_position_facial_contrast_eye_illusion",
+      "articleNo": 84,
+      "seriesId": "makeup-color-science",
+      "title": "眉の色と位置で顔の印象が変わるのはなぜか――顔内コントラスト・目の錯視・CIELABから考える",
+      "summary": "眉を肌上の色面かつ目の上の幾何学的フレームとして捉え、眉―肌の明度・色差、毛密度と輪郭、眉位置による目の大きさ・傾き錯視から、眉メイクが顔印象を変える仕組みを資生堂・花王の一次資料と心理物理研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：色彩心理・配色・照明と色（関連）",
+        "大学：測色学・視覚科学・心理物理学・化粧品科学"
+      ],
+      "source": "articles/84_eyebrow_color_position_facial_contrast_eye_illusion.md"
+    },
+    {
+      "id": "85_makeup_breakdown_sebum_sweat_film_gloss",
+      "articleNo": 85,
+      "seriesId": "makeup-color-science",
+      "title": "メイクはなぜ時間がたつと崩れて見えるのか――皮脂・汗・化粧膜・ツヤ／テカリから考える",
+      "summary": "化粧崩れを単なる『落ち』ではなく、皮脂・汗・摩擦・表情運動によって化粧膜の付着状態と光学特性が時間変化する現象として捉え、皮脂による濡れと散乱変化、鏡面反射によるテカリ、局所色差の再出現、耐水・耐皮脂・柔軟被膜設計を資生堂・花王の一次資料と研究論文から理解する。",
+      "levels": [
+        "3級：光と色・色の見え方・色の三属性（関連）",
+        "2級：照明と色・配色・色彩心理（関連）",
+        "大学：皮膚科学・光学・界面／材料科学・化粧品科学・画像評価"
+      ],
+      "source": "articles/85_makeup_breakdown_sebum_sweat_film_gloss.md"
+    },
+    {
+      "id": "86_personal_color_skin_harmony_cielab_face_perception",
+      "articleNo": 86,
+      "seriesId": "makeup-color-science",
+      "title": "パーソナルカラーはどこまで科学で説明できるのか――イエベ・ブルベをCIELAB・顔色知覚・皮膚光学から考える",
+      "summary": "パーソナルカラーを単純なイエベ／ブルベ分類ではなく、肌・唇・髪・瞳の色、CIELAB、化粧膜の透過・吸収・散乱、周辺色による顔色知覚、照明・色順応の複合問題として捉え、2026年の研究を含む資生堂・花王の一次資料と色彩研究から「似合う色」の科学的基盤と限界を理解する。",
+      "levels": [
+        "3級：色の三属性・配色・色の見え方（関連）",
+        "2級：配色・色彩心理・照明と色（関連）",
+        "大学：測色学・皮膚光学・視覚科学・心理物理学・化粧品科学"
+      ],
+      "source": "articles/86_personal_color_skin_harmony_cielab_face_perception.md"
+    },
+    {
+      "id": "87_shading_contour_shape_from_shading_face_perception",
+      "articleNo": 87,
+      "seriesId": "makeup-color-science",
+      "title": "シェーディングで顔が小さく・立体的に見えるのはなぜか――明度勾配・shape-from-shading・顔形知覚から考える",
+      "summary": "シェーディングを単なる暗色追加ではなく、皮膚上の局所反射率と明度勾配を変えて三次元形状手掛かりを再構成する操作として捉え、shape-from-shading、light-from-above assumption、CIELAB、輪郭コントラスト、照明条件から小顔・立体感の仕組みと限界を資生堂・花王の一次資料と心理物理研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：視覚科学・心理物理学・測色学・皮膚光学・化粧品科学"
+      ],
+      "source": "articles/87_shading_contour_shape_from_shading_face_perception.md"
+    },
+    {
+      "id": "88_under_eye_dark_circles_melanin_hemoglobin_shadow_spectral_imaging",
+      "articleNo": 88,
+      "seriesId": "makeup-color-science",
+      "title": "目の下のクマはなぜ青・茶・黒に見えるのか――メラニン・ヘモグロビン・皮膚光学・陰影から考える",
+      "summary": "目の下のクマを単純な青・茶・黒の三分類ではなく、メラニン、ヘモグロビン量・酸素化、皮膚厚と散乱、tear troughなどの形状陰影、照明の複合現象として捉え、資生堂・花王の分光研究から色差補正と陰影補正を分けて理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：皮膚光学・分光測色・生理学・視覚科学・化粧品科学"
+      ],
+      "source": "articles/88_under_eye_dark_circles_melanin_hemoglobin_shadow_spectral_imaging.md"
+    },
+    {
+      "id": "89_visible_pores_microtopography_sebum_shadow_soft_focus",
+      "articleNo": 89,
+      "seriesId": "makeup-color-science",
+      "title": "毛穴はなぜ目立つのか――すり鉢状構造・皮脂・陰影・光拡散から考える",
+      "summary": "毛穴の目立ちを単なる「穴の大きさ」ではなく、毛孔周囲のすり鉢状構造、皮脂・不全角化、形状陰影、局所コントラスト、鏡面反射・光拡散の複合現象として捉え、プライマー・ファンデーション・ソフトフォーカス粉体が何を変えているのかを資生堂・花王の一次研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：皮膚科学・光学・画像工学・視覚科学・化粧品科学"
+      ],
+      "source": "articles/89_visible_pores_microtopography_sebum_shadow_soft_focus.md"
+    },
+    {
+      "id": "90_skin_translucency_subsurface_scattering_melanin_collagen",
+      "articleNo": 90,
+      "seriesId": "makeup-color-science",
+      "title": "肌の「透明感」は何で決まるのか――内部散乱光・メラニン・コラーゲン・ベースメイクから考える",
+      "summary": "肌の「透明感」を単なる白さではなく、皮膚内部から戻る内部散乱光、メラニン吸収、真皮コラーゲン、角層水分、色むら、表面反射を統合した知覚的質感として捉え、ベースメイクで色差・被覆・ツヤをどう設計すればよいかを資生堂・花王の一次研究と皮膚光学から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：皮膚光学・測色学・視覚科学・心理物理学・化粧品科学"
+      ],
+      "source": "articles/90_skin_translucency_subsurface_scattering_melanin_collagen.md"
+    },
+    {
+      "id": "91_lipstick_tooth_whiteness_cielab_context_contrast",
+      "articleNo": 91,
+      "seriesId": "makeup-color-science",
+      "title": "口紅の色で歯が白く見えるのはなぜか――CIELAB・周辺色対比・歯の光学から考える",
+      "summary": "口紅で歯そのものの色を変えずに白く見せられる現象を、歯科用白さ指数WI_D、象牙質・エナメル質の散乱、唇との明度・色相・彩度差、周辺色による知覚、口紅塗膜と唇の地色から捉え、「青みリップなら必ず白く見える」という単純化の限界まで花王・資生堂の一次資料と心理物理研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：色彩心理・照明と色・配色（関連）",
+        "大学：測色学・視覚科学・心理物理学・生体光学・化粧品科学"
+      ],
+      "source": "articles/91_lipstick_tooth_whiteness_cielab_context_contrast.md"
+    },
+    {
+      "id": "92_skin_yellowing_glycation_carbonylation_cielab_makeup",
+      "articleNo": 92,
+      "seriesId": "makeup-color-science",
+      "title": "肌はなぜ「黄ぐすみ」して見えるのか――AGEs・タンパク質カルボニル化・CIELAB・補正メイクから考える",
+      "summary": "肌の黄ぐすみを単純な黄色ではなく、角層の蛍光性AGEs、真皮タンパク質のカルボニル化、メラニン・血色、皮膚内散乱、照明、化粧膜の複合現象として捉え、CIELABのb*と分光反射から黄みの見分け方と過補正を避けるベースメイク実践まで資生堂・花王の一次研究と2026年の最新研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：皮膚科学・生体光学・測色学・化粧品科学・タンパク質化学"
+      ],
+      "source": "articles/92_skin_yellowing_glycation_carbonylation_cielab_makeup.md"
+    },
+    {
+      "id": "93_lipstick_color_underlying_lip_optics_cielab",
+      "articleNo": 93,
+      "seriesId": "makeup-color-science",
+      "title": "同じ口紅なのに人によって発色が違うのはなぜか――唇の地色・透過／散乱・CIELAB・化粧膜から考える",
+      "summary": "同じ口紅でも仕上がりが変わる理由を、唇本来のL*a*b*・ヘモグロビン／メラニン、口紅膜の隠蔽率・透過・散乱・鏡面反射、塗布量と照明から分解し、花王の唇色4分類と資生堂の唇くすみ・発色研究を使って、テスターを唇で確認すべき理由と色選びを科学化する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・混色（関連）",
+        "2級：照明と色・配色・色彩心理（関連）",
+        "大学：皮膚光学・測色学・化粧品科学・視覚科学"
+      ],
+      "source": "articles/93_lipstick_color_underlying_lip_optics_cielab.md"
+    },
+    {
+      "id": "94_foundation_shade_matching_face_neck_cielab_skin_optics",
+      "articleNo": 94,
+      "seriesId": "makeup-color-science",
+      "title": "ファンデーションはどこで色合わせすべきか――顔と首の色差・CIELAB・皮膚光学から考える",
+      "summary": "ファンデーションの色合わせを一点の肌色一致ではなく、顔・首・フェイスラインのL*a*b*差、メラニン／ヘモグロビン、化粧膜の透過・散乱、境界コントラスト、照明、顔色知覚の問題として捉え、資生堂・花王の一次資料と皮膚色研究から自然な色選びを理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・配色・色彩心理（関連）",
+        "大学：測色学・皮膚光学・視覚科学・化粧品科学"
+      ],
+      "source": "articles/94_foundation_shade_matching_face_neck_cielab_skin_optics.md"
+    },
+    {
+      "id": "95_nasolabial_fold_shadow_sagging_local_contrast_film",
+      "articleNo": 95,
+      "seriesId": "makeup-color-science",
+      "title": "ほうれい線はなぜ影として目立つのか――頬のたるみ・形状陰影・局所コントラスト・化粧膜から考える",
+      "summary": "ほうれい線を単なる暗色の線ではなく、溝と頬のふくらみが照明下で作る形状陰影として捉え、表面法線・自己遮蔽・局所コントラスト・CIELAB、皮膚弾性と皮下組織、化粧膜の光学／力学から、色補正と形状補正を使い分ける実践を資生堂・花王の一次研究から理解する。",
+      "levels": [
+        "3級：色の三属性・色の見え方・配色（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：皮膚科学・光学・視覚科学・測色学・材料科学・化粧品科学"
+      ],
+      "source": "articles/95_nasolabial_fold_shadow_sagging_local_contrast_film.md"
+    },
+    {
+      "id": "96_skin_radiance_oily_shine_specular_diffuse_perception",
+      "articleNo": 96,
+      "seriesId": "makeup-color-science",
+      "title": "ツヤ肌とテカリは何が違うのか――鏡面反射・内部散乱・皮脂・顔印象から考える",
+      "summary": "ツヤ肌とテカリを単なる光沢の強弱ではなく、鏡面反射・内部散乱光・皮脂・化粧膜・反射の空間分布・顔印象の複合現象として捉え、資生堂の2025年研究と花王Kirei肌AIから、好ましいツヤを作るベースメイクを光学・視覚心理・皮膚科学で理解する。",
+      "levels": [
+        "3級：光と色・色の見え方・色の三属性（関連）",
+        "2級：照明と色・色彩心理・配色（関連）",
+        "大学：皮膚光学・測色学・視覚科学・心理物理学・化粧品科学"
+      ],
+      "source": "articles/96_skin_radiance_oily_shine_specular_diffuse_perception.md"
+    },
+    {
+      "id": "97_structural_color_iridescence_culture",
+      "articleNo": 97,
+      "seriesId": "physics",
+      "title": "玉虫色は何色なのか――構造色の仕組みと、世界に残る「変わる色」の名前",
+      "summary": "タマムシ、モルフォチョウ、クジャク、真珠、オパールなどの構造色を、薄膜干渉・周期構造・フォトニック結晶から理解し、「玉虫色」「烏の濡れ羽色」や世界各地の変彩色名まで物理と色彩文化をつないで学ぶ。",
+      "levels": [
+        "3級：光と色・色の見え方（関連）",
+        "2級：光の性質と色（関連）",
+        "大学：波動光学・フォトニクス・色彩科学"
+      ]
+    }
   ]
 }
