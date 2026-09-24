@@ -95,6 +95,7 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - OtoLogic audio resources are complete and bundled.
   - All 4 approved temporary Irasutoya works are now pinned to exact Blogger-hosted PNGs and bundled identically for Web and SwiftPM behind semantic IDs: sergeant, skinny trainee, muscular trainee, bodybuilder trainee.
   - Stage 5 uses the verified `body_builder.png` resource; its direct original Blogger URL is corroborated against historical article metadata for the same Irasutoya title/date. Runtime hotlinking remains disabled.
+  - Release metadata tests reject bundled character entries unless they keep an official Irasutoya article URL, approved Blogger/Google-hosted direct image URL, matching resource filename, and lowercase 64-hex SHA256 provenance.
   - Temporary character-art accounting is 4 unique works, safely below the 20-work commercial-free threshold in the project policy.
   - The only remaining repository-owned submission blocker is the final original AppIcon artwork. Keep Task 11.4 unchecked until that artwork is supplied, packaged, validated, and the final metadata/privacy readiness audit passes.
 
