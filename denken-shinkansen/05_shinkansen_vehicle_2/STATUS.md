@@ -1,15 +1,15 @@
 # STATUS - 新幹線車両・電験二種
 
-更新日: 2026-09-23
+更新日: 2026-09-24
 
 ## 状態
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `38 / 39`
-- current_status: `topic_39_clean_blind_v61_pending / IN_PROGRESS`
+- current_status: `topic_39_clean_blind_v62_pending / IN_PROGRESS`
 - last_completed_topic: `38 COMTRAC 列車追跡・進路制御・高信頼化`
 - active_topic: `39 COSMOS 統合監視・SCADA・信頼性`
-- next_start: 別fresh worker/contextでclean blind v61を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
+- next_start: 別fresh worker/contextでclean blind v62を実施する。candidate固定前はquestion-only intakeと公式「問題」PDFだけを用い、R2二次はintake記載の固定5群境界を維持する。
 
 Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
@@ -25,7 +25,7 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ## Topic 39 COSMOS 統合監視・SCADA・信頼性
 
-判定: `IN_PROGRESS / CLEAN_BLIND_V61_PENDING`
+判定: `IN_PROGRESS / CLEAN_BLIND_V62_PENDING`
 
 ### 制作前EXAM_ALIGNMENT
 
@@ -73,7 +73,21 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v60_qa.md`
 - answer-bearingな不一致詳細はv60 QAにのみ保持する。
 
-過去のv1〜v59 clean blind記録は各candidate/QAとGit履歴を正本とし、現行STATUSでは最新判定を保持する。
+### clean blind v61
+
+- candidate commit: `7d7983a6ab3ec20fc22b30eef6d46ca923791718`
+- freshness: `PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `3 / 5 FAIL`
+- 合計: `23 / 25 FAIL`
+- 教材導出: `25 / 25 PASS`
+- 固定5群境界: `PASS`
+- 診断: `solver omission ×2 secondary groups`
+- QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v61_qa.md`
+- 群3で `点検・自動監視 / 低故障率 / 冗長化`、群4で `5サイクル及び3サイクル` の列挙を欠いた。
+- 教材不足は `0件`。教材修正は行わない。
+
+過去のv1〜v60 clean blind記録は各candidate/QAとGit履歴を正本とし、現行STATUSでは最新判定を保持する。
 
 ### 反映判断
 
@@ -88,9 +102,9 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 
 ### 次工程
 
-別fresh worker/contextによるclean blind v61。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
+別fresh worker/contextによるclean blind v62。candidate固定前はanswer-bearing資料を開かず、question-only intakeと公式「問題」PDFだけで25答案要素を解く。R2二次はintakeの固定5群境界を維持する。candidate固定後に公式標準解答・教材と照合する。
 
-現v60 worker/contextはcandidate固定後にanswer-bearing資料を参照済みのためv61を実施しない。worker-local exact blocker: `TOPIC39_CLEAN_BLIND_V61_CURRENT_CONTEXT_FRESHNESS_INVALID`。
+現v61 worker/contextはcandidate固定後にanswer-bearing資料を参照済みのためv62を実施しない。worker-local exact blocker: `TOPIC39_CLEAN_BLIND_V62_CURRENT_CONTEXT_FRESHNESS_INVALID`。
 
 ## Topic 21 固定注記
 
