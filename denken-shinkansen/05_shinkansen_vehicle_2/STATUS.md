@@ -84,7 +84,6 @@ Topic 01〜38は `PASS / completed`。完成数は `38 / 39`。
 - 固定5群境界: `PASS`
 - 診断: `solver omission ×2 secondary groups`
 - QA: `topics/39_cosmos_integrated_monitoring_scada_reliability/39_cosmos_integrated_monitoring_scada_reliability_clean_blind_v61_qa.md`
-- 群3で `点検・自動監視 / 低故障率 / 冗長化`、群4で `5サイクル及び3サイクル` の列挙を欠いた。
 - 教材不足は `0件`。教材修正は行わない。
 
 過去のv1〜v60 clean blind記録は各candidate/QAとGit履歴を正本とし、現行STATUSでは最新判定を保持する。
