@@ -56,10 +56,8 @@ v61:
 - 教材導出: `25 / 25 PASS`
 - 固定5群境界: `PASS`
 - 診断: `solver omission ×2 secondary groups`
-- 群3: `点検・自動監視 / 低故障率 / 冗長化` の列挙不足
-- 群4: `5サイクル及び3サイクル` のうち5サイクルの列挙不足
 
-answer-bearingな不一致詳細はv61 QAに保持する。v1〜v60の履歴は各candidate/QAとGit履歴を正本とする。
+answer-bearingな不一致詳細はv61 QAにのみ保持し、fresh workerはcandidate固定前に開かない。v1〜v60の履歴は各candidate/QAとGit履歴を正本とする。
 
 - 教材修正・再生成: `0件`
 - `SPEC.md`変更: `0件`
