@@ -1,13 +1,13 @@
 {
   "title": "色彩検定×自然科学",
-  "updated": "2026-09-23",
-  "targetArticles": 101,
+  "updated": "2026-09-24",
+  "targetArticles": 102,
   "series": [
     {
       "id": "physics",
       "order": 1,
       "name": "物理",
-      "targetTopics": 13,
+      "targetTopics": 14,
       "description": "電磁波、光学、散乱、干渉、黒体放射、照明、混色"
     },
     {
@@ -641,6 +641,32 @@
       "source": "articles/46_standard_illuminants_colorimetry.md"
     },
     {
+      "id": "47_cone_spectral_sensitivity_univariance",
+      "articleNo": 47,
+      "seriesId": "biology",
+      "title": "錐体はなぜ3種類で色を見分けられるのか――S・M・L錐体の分光感度と単変量性",
+      "summary": "S・M・L錐体を単純な青・緑・赤センサーとせず、重なった分光感度、単変量性、錐体応答の比較、行列によるスペクトル圧縮から、三色型色覚・加法混色・メタメリズムがなぜ成立するかを理解する。",
+      "levels": [
+        "3級：眼のしくみ・色を見るしくみ（関連）",
+        "2級：色覚説・視覚系の構造と色（関連）",
+        "大学：視覚神経科学・心理物理学・線形代数"
+      ],
+      "source": "articles/47_cone_spectral_sensitivity_univariance.md"
+    },
+    {
+      "id": "48_rods_cones_mesopic_purkinje_shift",
+      "articleNo": 48,
+      "seriesId": "biology",
+      "title": "暗くなると色が消えるのはなぜか――桿体・錐体・薄明視とプルキンエ現象",
+      "summary": "明所視・薄明視・暗所視で桿体と錐体の寄与がどう変わるかを整理し、暗くなると色識別が弱まり、赤が沈み青緑側が相対的に明るく見えるプルキンエ現象をCIE視感度関数と視覚生理から理解する。",
+      "levels": [
+        "3級：眼のしくみ・色の見え方（関連）",
+        "2級：照明と色・視覚系（関連）",
+        "大学：網膜生理学・測光学・心理物理学"
+      ],
+      "source": "articles/48_rods_cones_mesopic_purkinje_shift.md"
+    },
+    {
       "id": "49_rgb_pixels_quantization",
       "articleNo": 49,
       "seriesId": "digital-color",
@@ -1259,6 +1285,71 @@
         "2級：光の性質と色（関連）",
         "大学：波動光学・フォトニクス・色彩科学"
       ]
+    },
+    {
+      "id": "98_multiply_shadow_reason_limits",
+      "articleNo": 98,
+      "seriesId": "illustration-practice",
+      "title": "乗算で影を描くとなぜそれっぽくなるのか――RGBの掛け算と「影＝暗くする」の限界",
+      "summary": "乗算が元の色関係を残しながらRGBを減衰するため影に使いやすい理由を数式で確認し、現実の影では環境光・反射光・鏡面反射が残るため乗算だけでは不十分になる条件まで整理する。",
+      "levels": [
+        "3級：色の三属性・光と色（関連）",
+        "2級：照明と色・配色（関連）",
+        "大学：画像処理・放射測光・レンダリング"
+      ],
+      "source": "articles/98_multiply_shadow_reason_limits.md"
+    },
+    {
+      "id": "99_add_screen_light_emitter_vs_illuminated",
+      "articleNo": 99,
+      "seriesId": "illustration-practice",
+      "title": "加算・スクリーンで光を描くのはなぜか――「発光体」と「照らされた物体」を分けて考える",
+      "summary": "AddとScreenの数式を比較し、発光成分と反射成分を分ける放射輝度の考え方から、強い光源・ブルーム・反射光をどう描き分けるか、白飛びや材質消失を避ける実践まで整理する。",
+      "levels": [
+        "3級：加法混色・光と色（関連）",
+        "2級：照明と色（関連）",
+        "大学：画像処理・放射測光・コンピュータグラフィックス"
+      ],
+      "source": "articles/99_add_screen_light_emitter_vs_illuminated.md"
+    },
+    {
+      "id": "100_overlay_contrast_color_grading",
+      "articleNo": 100,
+      "seriesId": "illustration-practice",
+      "title": "オーバーレイで絵が「締まって」見えるのはなぜか――コントラスト変換と色味を分けて考える",
+      "summary": "Overlayが暗部で乗算、明部でScreen系に働く区分関数を使ってコントラストと色味を同時に変える仕組みを整理し、仕上げ・色調統一への使い方と黒つぶれ・過彩度の限界を理解する。",
+      "levels": [
+        "3級：色の三属性・配色（関連）",
+        "2級：色彩調和・配色（関連）",
+        "大学：画像処理・非線形階調変換"
+      ],
+      "source": "articles/100_overlay_contrast_color_grading.md"
+    },
+    {
+      "id": "101_tone_curve_illustration_s_curve_rgb",
+      "articleNo": 101,
+      "seriesId": "illustration-practice",
+      "title": "トーンカーブをイラストでどう使うか――S字・黒点・RGB別調整を「入出力関数」で理解する",
+      "summary": "トーンカーブをy=f(x)という入出力写像として捉え、S字の傾きによるコントラスト、黒点持ち上げ、RGB別カーブによる暗部・明部の色調整を、イラスト仕上げの手順と失敗例まで含めて理解する。",
+      "levels": [
+        "3級：明度・色の三属性（関連）",
+        "2級：配色・色調（関連）",
+        "大学：画像処理・階調変換・色空間"
+      ],
+      "source": "articles/101_tone_curve_illustration_s_curve_rgb.md"
+    },
+    {
+      "id": "102_same_rgb_different_perception_context_adaptation",
+      "articleNo": 102,
+      "seriesId": "illustration-practice",
+      "title": "同じRGBなのに違う色に見えるのはなぜか――同時対比・色順応・色恒常性から考える",
+      "summary": "同じディスプレイ上の同一RGBでも周囲色・順応・照明解釈によって知覚色が変わる理由を、同時色対比・von Kries型順応・色恒常性から説明し、端末差によるRGB不一致とは切り分けて実践へつなぐ。",
+      "levels": [
+        "3級：色の見え方・色の三属性（関連）",
+        "2級：色彩心理・照明と色（関連）",
+        "大学：視覚科学・心理物理学・色恒常性"
+      ],
+      "source": "articles/102_same_rgb_different_perception_context_adaptation.md"
     }
   ]
 }
