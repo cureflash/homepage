@@ -105,7 +105,7 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 - [x] Open generated weakness/test recipes in an editor before quiz start; add native multi-skill count/add/remove editing.
 - [x] Connect finite presets and bounded endless continuation/stop/results through the existing session engines.
 - [x] Bundle the same verified 30-question pilot for native offline use and wire Home → editor/quiz → results, attempt persistence, due reviews and trainee growth/audio.
-- [ ] Validate the repaired source with Web tests, mobile browser smoke test, Swift tests and simulator/device/archive CI. Local Web tests pass 80/80; joint CI pending.
+- [x] Validate the repaired source with Web tests (80/80), mobile browser smoke test, Swift tests (38/38) and simulator/device/archive CI, including the archived verified 30-question resource. Runs: Web 37113407832, Swift 37113407833, app build 37113407848; all passed.
 
 This repairs integration gaps behind earlier component-level completion claims. It does not mark App Store submission complete, expand production content, or supply icon/signing/operator inputs.
 

@@ -4,7 +4,7 @@
   "track": "app_ui_program",
   "phase": 11,
   "active_task": "11.4",
-  "next_role": "verify_learner_flow_ci_then_icon_and_submission_reaudit",
+  "next_role": "supply_final_original_app_icon_then_submission_reaudit",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
   "native_implementation_path": "subjects/english/power-toeic-ios/",
@@ -31,8 +31,8 @@
       "SemanticAssetId"
     ],
     "last_joint_ci": {
-      "web_run": 33029986760,
-      "swift_run": 33029986881,
+      "web_run": 37113407832,
+      "swift_run": 37113407833,
       "result": "success"
     }
   },
@@ -64,7 +64,8 @@
       "quiz_session",
       "mastery",
       "review",
-      "progression"
+      "progression",
+      "selected_scope_shortage"
     ],
     "native_views": [
       "Home",
@@ -154,7 +155,7 @@
   "updated_at": "2026-10-03",
   "learner_flow_repair": {
     "date": "2026-10-03",
-    "status": "implemented_ci_pending",
+    "status": "verified",
     "shared_pilot_question_count": 30,
     "category_drill_down": true,
     "selected_category_tests": true,
@@ -174,7 +175,17 @@
       "passed": 80,
       "failed": 0
     },
-    "joint_ci": "pending",
+    "joint_ci": {
+      "web_run": 37113407832,
+      "swift_run": 37113407833,
+      "ios_app_build_run": 37113407848,
+      "web_tests_passed": 80,
+      "swift_tests_passed": 38,
+      "mobile_browser_smoke": "success",
+      "simulator_device_unsigned_archive": "success",
+      "archived_30_question_bank": "success",
+      "result": "success"
+    },
     "app_store_submission_complete": false
   }
 }

@@ -4,7 +4,7 @@
 
 **APP TRACK Phase 11 / Task 11.4 — App Store submission readiness — is still in progress.**
 
-The 2026-10-03 learner-flow repair connects functionality that earlier records had counted at component level: category drill-down/tests, strict selected scope, pre-start editing, finite/endless sessions, and native Home/editor/quiz/result navigation with saved attempts, review scheduling and trainee growth. Web Node tests pass 80/80; browser/Swift/app build regression is pending CI. No production taxonomy/question generation/QA work belongs to this track.
+The 2026-10-03 learner-flow repair connects functionality that earlier records had counted at component level: category drill-down/tests, strict selected scope, pre-start editing, finite/endless sessions, and native Home/editor/quiz/result navigation with saved attempts, review scheduling and trainee growth. Web Node tests pass 80/80, Swift tests pass 38/38, and mobile browser smoke, simulator/device builds, unsigned archive and archived-resource checks pass. Runs: Web 37113407832, Swift 37113407833, iOS build 37113407848. No production taxonomy/question generation/QA work belongs to this track.
 
 Both learner runtimes intentionally use the same 30 verified pilot questions and September 4 concise Japanese rules. `tools/export-pilot-bank.mjs` derives Web/native resource copies from the existing beta bank and canonical taxonomy; it does not generate new educational content. Native startup now uses `BundledQuestionBankRepository` instead of an empty bank, and injects the real bundled audio adapter into the quiz.
 
@@ -66,7 +66,7 @@ The intended Google Drive SE files remain verified and bundled:
 
 ## Exact next work
 
-Complete the learner-flow regression checkpoint first. Final release work still requires the final original AppIcon artwork:
+The learner-flow regression checkpoint is complete. Final release work still requires the final original AppIcon artwork:
 
 1. Reconcile latest `main` before changing release assets.
 2. Populate the native `AppIcon.appiconset` from the supplied final original artwork. Do not use the temporary Irasutoya character art as the final brand icon by default and do not invent a final logo merely to clear the blocker.
