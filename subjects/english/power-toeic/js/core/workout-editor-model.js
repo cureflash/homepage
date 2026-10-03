@@ -32,7 +32,7 @@ function resolveAllocationCounts(recipe) {
     remaining -= 1;
   }
 
-  return resolved.map(({ skillId, count }) => ({ skillId, count }));
+  return resolved.filter(({ count }) => count > 0).map(({ skillId, count }) => ({ skillId, count }));
 }
 
 export function createWorkoutDraft(recipe) {
@@ -82,6 +82,7 @@ export function removeSkillAllocation(draft, skillId) {
 }
 
 export function normalizeEditedWorkout(draft) {
+  if (!draft.skillAllocations.length) throw new Error('分野を1つ以上追加してください。');
   return createWorkoutRecipe({
     ...draft,
     mode: draft.mode === 'WEAKNESS' ? 'CUSTOM' : draft.mode,

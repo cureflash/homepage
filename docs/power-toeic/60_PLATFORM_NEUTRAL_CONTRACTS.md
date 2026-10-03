@@ -23,6 +23,10 @@ This document freezes the JSON-compatible data shapes shared by the Web referenc
 
 Required fields: `id`, `label`, `categoryId`.
 
+## Category metadata
+
+Repositories may expose learner-facing category metadata as `{ "id": "connectors-prepositions", "label": "前置詞・接続詞" }`. IDs match `Skill.categoryId` and labels come from the canonical content taxonomy. This is repository metadata; it does not change the frozen question/workout fields.
+
 ## Question
 
 ```json

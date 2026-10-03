@@ -58,10 +58,20 @@ Selection semantics:
 4. among seen questions, prefer least recently seen;
 5. break remaining ties using the deterministic FNV-style `hashSeed(seed, questionId)` ordering used by the Web implementation;
 6. never duplicate a question ID inside one finite selected list;
-7. after requested skill allocations, fill remaining capacity from the general eligible bank;
+7. after requested skill allocations, fill remaining capacity only from the union of selected skills; use the general eligible bank only when no explicit allocations are specified. If the scoped bank is exhausted, return fewer unique questions rather than widening the scope;
 8. `review_due` selects only IDs supplied as due-review IDs.
 
 The exact seeded result is pinned by the shared conformance fixture. Swift must reproduce the fixture output exactly; use a compatible 32-bit unsigned integer implementation for the hash ordering.
+
+2026-10-03 scope checkpoint: `scopeSelections` in the shared fixture covers a five-question request with only three eligible alpha questions. Both selectors must return those three alpha IDs and no beta IDs. Existing fully allocated seeded fixtures remain unchanged.
+
+## 3a. Learner-flow composition
+
+- Home shows broad categories before micro-skills. Broad-category drills/tests and selected-category mixed tests resolve to skill allocations through the same builder.
+- Generated weakness recipes and selected test scopes enter the editor before quiz start. The editor supports changing allocations, adding/removing skills, 5/10/30/50/100 presets, and endless training.
+- Web `WorkoutRun` and native `TrainingRun` compose the existing quiz, selector, review, persistence and progression engines. Native `PowerTOEICAppRoot` owns navigation.
+- Endless runs select at most 30 unique IDs per chunk and repeat eligible content in later chunks. Results aggregate every submitted answer; stopping awards session completion at most once per run. Progress displays an overall question number.
+- Both shipped runtimes consume the same 30-question pilot export from verified beta content, with the September 4 concise Japanese rules. Do not expand the learner bank without a new content decision.
 
 ## 4. QuizSession
 

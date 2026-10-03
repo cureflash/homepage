@@ -31,7 +31,8 @@ let package = Package(
             ],
             resources: [
                 .process("Resources/Audio"),
-                .process("Resources/Character")
+                .process("Resources/Character"),
+                .process("Resources/Questions")
             ]
         ),
         .testTarget(

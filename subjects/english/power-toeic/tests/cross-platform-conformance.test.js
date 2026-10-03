@@ -18,6 +18,13 @@ test('cross-platform fixture: seeded question selection is exact', () => {
   assert.deepEqual([...actual], fixture.selection.expectedQuestionIds);
 });
 
+test('cross-platform fixture: shortages never expand the selected skill scope', () => {
+  for (const scenario of fixture.scopeSelections) {
+    const actual = selectQuestionIds({ repository, recipe: createWorkoutRecipe(scenario.recipe), attempts: scenario.attempts });
+    assert.deepEqual([...actual], scenario.expectedQuestionIds);
+  }
+});
+
 test('cross-platform fixture: QuizSession attempts and results are exact', () => {
   const clock = [...fixture.session.clockMs];
   const session = new QuizSession({

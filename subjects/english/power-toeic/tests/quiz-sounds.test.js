@@ -22,14 +22,15 @@ test('Power TOEIC reuses the same valid quiz audio assets as Power Color', () =>
 
 test('Power TOEIC plays prompt and answer sounds from the session authority', () => {
   assert.match(mainSource, /import \{ playAnswerSound, playQuestionSound \} from '\.\/quiz-sounds\.js'/);
-  assert.match(mainSource, /renderer\.render\(question\); playQuestionSound\(\);/);
-  assert.match(mainSource, /renderer\.showResult\([^;]+\); playAnswerSound\(attempt\.correct\);/);
+  assert.match(mainSource, /renderer\.render\(question\);\s*playQuestionSound\(\);/);
+  assert.match(mainSource, /renderer\.showResult\([^;]+\);\s*playAnswerSound\(attempt\.correct\);/);
   assert.match(soundSource, /sound\.currentTime = 0/);
   assert.match(soundSource, /sound\.play\(\)/);
 });
 
 test('Power TOEIC browser entry refreshes the current concise pilot build and its nested data module', () => {
-  assert.match(indexHtml, /js\/main\.js\?v=20260904-short-pilot-v2/);
-  assert.match(mainSource, /data\/runtime-bank\.js\?v=20260904-short-pilot-v2/);
+  const version = indexHtml.match(/js\/main\.js\?v=([^"']+)/)?.[1];
+  assert.ok(version);
+  assert.ok(mainSource.includes(`data/runtime-bank.js?v=${version}`));
   assert.match(runtimeBankSource, /pilot-question-set\.js\?v=20260904-short-pilot-v2/);
 });

@@ -4,7 +4,9 @@
 
 **APP TRACK Phase 11 / Task 11.4 — App Store submission readiness — is still in progress.**
 
-Phase 11.3 is complete. Phase 11.4 now has Credits, machine-readable submission blockers, the three verified OtoLogic MP3s committed as native SwiftPM resources, a non-blocking semantic audio playback path, and **all 4 approved temporary Irasutoya character works physically bundled for both Web and SwiftPM**. No production taxonomy/question generation/QA work belongs to this track.
+The 2026-10-03 learner-flow repair connects functionality that earlier records had counted at component level: category drill-down/tests, strict selected scope, pre-start editing, finite/endless sessions, and native Home/editor/quiz/result navigation with saved attempts, review scheduling and trainee growth. Web Node tests pass 80/80, Swift tests pass 38/38, and mobile browser smoke, simulator/device builds, unsigned archive and archived-resource checks pass. Runs: Web 37113407832, Swift 37113407833, iOS build 37113407848. No production taxonomy/question generation/QA work belongs to this track.
+
+Both learner runtimes intentionally use the same 30 verified pilot questions and September 4 concise Japanese rules. `tools/export-pilot-bank.mjs` derives Web/native resource copies from the existing beta bank and canonical taxonomy; it does not generate new educational content. Native startup now uses `BundledQuestionBankRepository` instead of an empty bank, and injects the real bundled audio adapter into the quiz.
 
 ## Phase 11.4 progress
 
@@ -16,7 +18,7 @@ Native `CreditsView` is reachable from Home and preserves the exact required att
 
 `subjects/english/power-toeic-ios/Release/SubmissionReadiness.json` keeps `submission_ready: false` and separates repository-owned blockers from Apple/account/operator inputs.
 
-The temporary character-art blocker and OtoLogic audio blocker are closed. The **only remaining repository-owned blocker is the final original App Store icon artwork**.
+The temporary character-art blocker and OtoLogic audio blocker are closed. Final original App Store icon artwork remains an asset blocker. Learner-flow CI and final submission readiness must still be verified; the earlier “only icon remains” statement was insufficient as an app-functionality audit.
 
 ### Irasutoya character bundle checkpoint — complete
 
@@ -64,7 +66,7 @@ The intended Google Drive SE files remain verified and bundled:
 
 ## Exact next work
 
-Continue **Phase 11.4** only after the final original AppIcon artwork is supplied:
+The learner-flow regression checkpoint is complete. Final release work still requires the final original AppIcon artwork:
 
 1. Reconcile latest `main` before changing release assets.
 2. Populate the native `AppIcon.appiconset` from the supplied final original artwork. Do not use the temporary Irasutoya character art as the final brand icon by default and do not invent a final logo merely to clear the blocker.

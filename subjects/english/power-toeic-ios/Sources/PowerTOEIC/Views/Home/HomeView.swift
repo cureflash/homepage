@@ -23,6 +23,7 @@ public struct HomeView: View {
     public let progression: ProgressionState
     public let reviewDueCount: Int
     public let onSelect: (WorkoutMode) -> Void
+    public let onShowWeakness: (() -> Void)?
 
     @State private var showingPrivacyPolicy = false
     @State private var showingCredits = false
@@ -37,10 +38,11 @@ public struct HomeView: View {
         .init(id: "custom", title: "カスタム", subtitle: "問題数と分野を自分で編集", systemImage: "slider.horizontal.3", mode: .custom)
     ]
 
-    public init(progression: ProgressionState, reviewDueCount: Int, onSelect: @escaping (WorkoutMode) -> Void) {
+    public init(progression: ProgressionState, reviewDueCount: Int, onSelect: @escaping (WorkoutMode) -> Void, onShowWeakness: (() -> Void)? = nil) {
         self.progression = progression
         self.reviewDueCount = reviewDueCount
         self.onSelect = onSelect
+        self.onShowWeakness = onShowWeakness
     }
 
     public var body: some View {
@@ -74,6 +76,11 @@ public struct HomeView: View {
                         .accessibilityHint(action.subtitle)
                         .accessibilityIdentifier("home.\(action.id)")
                     }
+                }
+
+                if let onShowWeakness {
+                    Button("弱点を見る", action: onShowWeakness)
+                        .accessibilityIdentifier("home.weaknessList")
                 }
 
                 HStack(spacing: 16) {

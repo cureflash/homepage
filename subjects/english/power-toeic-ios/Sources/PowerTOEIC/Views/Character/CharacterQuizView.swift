@@ -9,6 +9,9 @@ public struct CharacterQuizView: View {
     public let audioPlayer: any AudioCuePlaying
     public let skillLabel: (String) -> String
     public let onComplete: (SessionResults) -> Void
+    public let endless: Bool
+    public let progressOffset: Int
+    public let onAttemptSubmitted: (Attempt) -> Void
 
     @State private var reaction: CharacterReaction = .neutral
 
@@ -18,6 +21,9 @@ public struct CharacterQuizView: View {
         catalog: AssetCatalog = AssetCatalog(),
         audioPlayer: any AudioCuePlaying = SilentAudioCuePlayer(),
         skillLabel: @escaping (String) -> String = { $0 },
+        endless: Bool = false,
+        progressOffset: Int = 0,
+        onAttemptSubmitted: @escaping (Attempt) -> Void = { _ in },
         onComplete: @escaping (SessionResults) -> Void
     ) {
         self.session = session
@@ -26,6 +32,9 @@ public struct CharacterQuizView: View {
         self.audioPlayer = audioPlayer
         self.skillLabel = skillLabel
         self.onComplete = onComplete
+        self.endless = endless
+        self.progressOffset = progressOffset
+        self.onAttemptSubmitted = onAttemptSubmitted
     }
 
     public var body: some View {
@@ -41,6 +50,8 @@ public struct CharacterQuizView: View {
                 QuizView(
                     session: session,
                     skillLabel: skillLabel,
+                    endless: endless,
+                    progressOffset: progressOffset,
                     onAttemptSubmitted: handleAttempt,
                     onQuestionAdvanced: { reaction = .neutral },
                     onComplete: handleComplete
@@ -76,13 +87,16 @@ public struct CharacterQuizView: View {
     }
 
     private func handleAttempt(_ attempt: Attempt) {
+        onAttemptSubmitted(attempt)
         reaction = attempt.correct ? .correct : .wrong
         audioPlayer.play(attempt.correct ? AssetCatalog.audioCorrect : AssetCatalog.audioWrong)
     }
 
     private func handleComplete(_ results: SessionResults) {
-        reaction = .complete
-        audioPlayer.play(AssetCatalog.audioInspiration)
+        if !endless {
+            reaction = .complete
+            audioPlayer.play(AssetCatalog.audioInspiration)
+        }
         onComplete(results)
     }
 }

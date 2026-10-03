@@ -21,6 +21,13 @@
     ],
     "expectedQuestionIds": ["syn-q3","syn-q2","syn-q5","syn-q6"]
   },
+  "scopeSelections": [
+    {
+      "recipe":{"mode":"CUSTOM","totalCount":5,"skillAllocations":[{"skillId":"skill.alpha","count":5}],"selectionPolicy":"standard","labelPolicy":"show_skill","seed":7,"endless":false},
+      "attempts":[{"questionId":"syn-q1","answeredAt":"2026-01-03T00:00:00.000Z"}],
+      "expectedQuestionIds":["syn-q3","syn-q2","syn-q1"]
+    }
+  ],
   "session": {
     "questionIds": ["syn-q3","syn-q2"],
     "context": "mixed",

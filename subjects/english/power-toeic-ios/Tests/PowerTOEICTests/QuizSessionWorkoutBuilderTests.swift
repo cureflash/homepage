@@ -7,6 +7,7 @@ final class QuizSessionWorkoutBuilderTests: XCTestCase {
         let questions: [Question]
         let skills: [Skill]
         let selection: SelectionFixture
+        let scopeSelections: [SelectionFixture]
         let session: SessionFixture
     }
 
@@ -94,6 +95,15 @@ final class QuizSessionWorkoutBuilderTests: XCTestCase {
         )
 
         XCTAssertEqual(selected, fixture.selection.expectedQuestionIds)
+    }
+
+    func testSelectedScopeShortagesMatchCanonicalWebFixture() throws {
+        let fixture = try loadSharedFixture()
+        let repository = MemoryRepository(questionValues: fixture.questions, skillValues: fixture.skills)
+        for scenario in fixture.scopeSelections {
+            XCTAssertEqual(try WorkoutBuilder.selectQuestionIDs(repository: repository, recipe: scenario.recipe,
+                                                               history: scenario.attempts), scenario.expectedQuestionIds)
+        }
     }
 
     func testQuizSessionMatchesCanonicalWebFixture() throws {

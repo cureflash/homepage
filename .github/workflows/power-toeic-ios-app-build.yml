@@ -74,6 +74,16 @@ jobs:
           plutil -lint "$APP_PATH/PrivacyInfo.xcprivacy"
           plutil -p "$APP_PATH/Info.plist"
 
+          BANK_PATH="$(find "$APP_PATH" -type f -name 'pilot-bank.json' -print -quit)"
+          test -n "$BANK_PATH"
+          python3 - "$BANK_PATH" <<'PY'
+          import json, sys
+          bank = json.load(open(sys.argv[1]))
+          assert bank['format'] == 'power-toeic-pilot-runtime-bank-v1'
+          assert len(bank['questions']) == 30
+          assert all(q['validationStatus'] == 'verified' for q in bank['questions'])
+          PY
+
           for audio in otologic_correct.mp3 otologic_incorrect.mp3 otologic_inspiration.mp3; do
             match="$(find "$APP_PATH" -type f -name "$audio" -print -quit)"
             if [ -z "$match" ]; then

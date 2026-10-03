@@ -6,11 +6,15 @@ public struct ResultView: View {
     public let results: SessionResults
     public let skillLabel: (String) -> String
     public let onHome: () -> Void
+    public let onRestart: (() -> Void)?
+    public let onEdit: (() -> Void)?
 
-    public init(results: SessionResults, skillLabel: @escaping (String) -> String = { $0 }, onHome: @escaping () -> Void) {
+    public init(results: SessionResults, skillLabel: @escaping (String) -> String = { $0 }, onHome: @escaping () -> Void, onRestart: (() -> Void)? = nil, onEdit: (() -> Void)? = nil) {
         self.results = results
         self.skillLabel = skillLabel
         self.onHome = onHome
+        self.onRestart = onRestart
+        self.onEdit = onEdit
     }
 
     public var body: some View {
@@ -51,6 +55,8 @@ public struct ResultView: View {
                     .background(RoundedRectangle(cornerRadius: 14).fill(.thinMaterial))
                 }
 
+                if let onRestart { Button("もう一度", action: onRestart).buttonStyle(.bordered) }
+                if let onEdit { Button("内容を調整", action: onEdit).buttonStyle(.bordered) }
                 Button("ホームへ戻る", action: onHome)
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)

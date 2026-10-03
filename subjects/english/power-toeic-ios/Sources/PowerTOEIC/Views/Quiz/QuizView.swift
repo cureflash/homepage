@@ -5,6 +5,8 @@ import SwiftUI
 public struct QuizView: View {
     public let session: QuizSession
     public let skillLabel: (String) -> String
+    public let endless: Bool
+    public let progressOffset: Int
     public let onAttemptSubmitted: (Attempt) -> Void
     public let onQuestionAdvanced: () -> Void
     public let onComplete: (SessionResults) -> Void
@@ -17,12 +19,16 @@ public struct QuizView: View {
     public init(
         session: QuizSession,
         skillLabel: @escaping (String) -> String = { $0 },
+        endless: Bool = false,
+        progressOffset: Int = 0,
         onAttemptSubmitted: @escaping (Attempt) -> Void = { _ in },
         onQuestionAdvanced: @escaping () -> Void = {},
         onComplete: @escaping (SessionResults) -> Void
     ) {
         self.session = session
         self.skillLabel = skillLabel
+        self.endless = endless
+        self.progressOffset = progressOffset
         self.onAttemptSubmitted = onAttemptSubmitted
         self.onQuestionAdvanced = onQuestionAdvanced
         self.onComplete = onComplete
@@ -34,14 +40,16 @@ public struct QuizView: View {
             HStack {
                 Text("POWER TOEIC").font(.headline)
                 Spacer()
-                Text("\(progress.current) / \(progress.total)").monospacedDigit()
+                Text(endless ? "\(progressOffset + progress.current)問目・無限" : "\(progress.current) / \(progress.total)").monospacedDigit()
             }
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("問題 \(progress.current) / \(progress.total)")
+            .accessibilityLabel(endless ? "\(progressOffset + progress.current)問目、無限反復" : "問題 \(progress.current) / \(progress.total)")
 
-            ProgressView(value: Double(progress.current - 1), total: Double(max(progress.total, 1)))
+            if !endless {
+              ProgressView(value: Double(progress.current - 1), total: Double(max(progress.total, 1)))
                 .accessibilityLabel("セッション進捗")
                 .accessibilityValue("\(progress.current)問目、全\(progress.total)問")
+            }
 
             if let question = session.currentQuestion {
                 if session.context != .mixed {
@@ -105,7 +113,7 @@ public struct QuizView: View {
                         .accessibilityLabel("エラー、\(errorMessage)")
                 }
 
-                Button(submittedAttempt == nil ? "回答する" : (progress.current == progress.total ? "結果を見る" : "次の問題")) {
+                Button(submittedAttempt == nil ? "回答する" : (progress.current == progress.total && !endless ? "結果を見る" : "次の問題")) {
                     advance(question: question)
                 }
                 .buttonStyle(.borderedProminent)
@@ -139,7 +147,7 @@ public struct QuizView: View {
 
     private func primaryActionHint(progress: (current: Int, total: Int)) -> String {
         if submittedAttempt == nil { return "選択した答えを確定します" }
-        return progress.current == progress.total ? "セッション結果を表示します" : "次の問題へ進みます"
+        return progress.current == progress.total && !endless ? "セッション結果を表示します" : "次の問題へ進みます"
     }
 
     private func advance(question: Question) {
