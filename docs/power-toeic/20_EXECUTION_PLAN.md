@@ -96,7 +96,18 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - All 4 approved temporary Irasutoya works are now pinned to exact Blogger-hosted PNGs and bundled identically for Web and SwiftPM behind semantic IDs: sergeant, skinny trainee, muscular trainee, bodybuilder trainee.
   - Stage 5 uses the verified `body_builder.png` resource; its direct original Blogger URL is corroborated against historical article metadata for the same Irasutoya title/date. Runtime hotlinking remains disabled.
   - Temporary character-art accounting is 4 unique works, safely below the 20-work commercial-free threshold in the project policy.
-  - The only remaining repository-owned submission blocker is the final original AppIcon artwork. Keep Task 11.4 unchecked until that artwork is supplied, packaged, validated, and the final metadata/privacy readiness audit passes.
+  - Final original AppIcon artwork remains blocked. Keep Task 11.4 unchecked until that artwork is supplied, packaged, validated, the learner-flow regression checkpoint passes, and the final metadata/privacy readiness audit passes.
+
+## 2026-10-03 learner-flow repair checkpoint — APP TRACK
+
+- [x] Connect broad-category drill-down, broad-category tests and selected-category mixed tests on Web and SwiftUI.
+- [x] Restrict shortage fill to the selected skill scope on both platforms; add a shared scope fixture.
+- [x] Open generated weakness/test recipes in an editor before quiz start; add native multi-skill count/add/remove editing.
+- [x] Connect finite presets and bounded endless continuation/stop/results through the existing session engines.
+- [x] Bundle the same verified 30-question pilot for native offline use and wire Home → editor/quiz → results, attempt persistence, due reviews and trainee growth/audio.
+- [ ] Validate the repaired source with Web tests, mobile browser smoke test, Swift tests and simulator/device/archive CI. Local Web tests pass 80/80; joint CI pending.
+
+This repairs integration gaps behind earlier component-level completion claims. It does not mark App Store submission complete, expand production content, or supply icon/signing/operator inputs.
 
 ## Deferred / only when required
 account login and cross-device sync; server-side analytics/persistence; payments; Part 2/6/7/listening expansion; advanced item-response statistics; third-party UI/game frameworks; more character skins/animation.

@@ -6,6 +6,8 @@ import {
   setSkillCount,
   setWorkoutTotalCount,
 } from '../core/workout-editor-model.js';
+import { createFiniteSessionRecipe, FINITE_SESSION_SIZES } from '../core/session-planner.js';
+import { selectQuestionIds } from '../core/workout-builder.js';
 
 export class WorkoutEditor {
   constructor({ container, repository, onStart }) {
@@ -14,6 +16,7 @@ export class WorkoutEditor {
     this.onStart = onStart;
     this.draft = null;
     this.error = '';
+    this.addCategoryId = null;
   }
 
   open(recipe) {
@@ -28,6 +31,11 @@ export class WorkoutEditor {
     const labels = new Map(skills.map((skill) => [skill.id, skill.label]));
     const allocated = new Set(this.draft.skillAllocations.map((entry) => entry.skillId));
     const addable = skills.filter((skill) => !allocated.has(skill.id));
+    const categories = this.repository.listCategories().filter((category) => addable.some((skill) => skill.categoryId === category.id));
+    if (!categories.some((category) => category.id === this.addCategoryId)) this.addCategoryId = categories[0]?.id ?? null;
+    const categorySkills = addable.filter((skill) => skill.categoryId === this.addCategoryId);
+    let available = 0;
+    try { available = selectQuestionIds({ repository: this.repository, recipe: normalizeEditedWorkout(this.draft) }).length; } catch { /* Validation below owns the error. */ }
 
     this.container.innerHTML = `
       <div class="editor-card">
@@ -40,6 +48,13 @@ export class WorkoutEditor {
             <input data-editor="total" inputmode="numeric" type="number" min="1" value="${this.draft.totalCount}">
           </label>
         </div>
+        <div class="size-presets" aria-label="問題数プリセット">
+          ${FINITE_SESSION_SIZES.map((size) => `<button type="button" class="secondary-button" data-editor="size" data-size="${size}">${size}問</button>`).join('')}
+        </div>
+        ${this.draft.selectionPolicy !== 'review_due' ? `<label class="category-choice"><input type="checkbox" data-editor="endless" ${this.draft.endless ? 'checked' : ''}>無限反復</label>` : ''}
+        <p class="editor-availability" data-role="editor-availability">${this.draft.endless
+          ? '選んだ範囲の問題を繰り返し出題します。'
+          : available > 0 && available < this.draft.totalCount ? `選んだ範囲では最大${available}問を出題します。` : ''}</p>
         <div class="allocation-list">
           ${this.draft.skillAllocations.map((entry) => `
             <div class="allocation-row" data-skill="${entry.skillId}">
@@ -51,11 +66,16 @@ export class WorkoutEditor {
             </div>
           `).join('') || '<p class="editor-empty">スキルを1つ以上追加してください。</p>'}
         </div>
-        <div class="editor-add-row">
+        <div class="editor-add-row" ${addable.length ? '' : 'hidden'}>
+          <label>大分類
+            <select data-editor="category-picker">
+              ${categories.map((category) => `<option value="${category.id}" ${category.id === this.addCategoryId ? 'selected' : ''}>${category.label}</option>`).join('')}
+            </select>
+          </label>
           <label>追加する分野
             <select data-editor="skill-picker">
               <option value="">選択...</option>
-              ${addable.map((skill) => `<option value="${skill.id}">${skill.label}</option>`).join('')}
+              ${categorySkills.map((skill) => `<option value="${skill.id}">${skill.label}</option>`).join('')}
             </select>
           </label>
           <button type="button" class="secondary-button" data-editor="add" ${addable.length ? '' : 'disabled'}>追加</button>
@@ -68,6 +88,21 @@ export class WorkoutEditor {
   }
 
   bind() {
+    this.container.querySelector('[data-editor="category-picker"]')?.addEventListener('change', (event) => {
+      this.addCategoryId = event.target.value;
+      this.render();
+    });
+    this.container.querySelector('[data-editor="endless"]')?.addEventListener('change', (event) => {
+      this.draft = { ...this.draft, endless: event.target.checked };
+      this.render();
+    });
+    this.container.querySelectorAll('[data-editor="size"]').forEach((button) => button.addEventListener('click', () => {
+      const weighted = { ...this.draft, skillAllocations: this.draft.skillAllocations.map((entry) => ({ skillId: entry.skillId, weight: Math.max(1, entry.count) })) };
+      const recipe = createFiniteSessionRecipe(weighted, Number(button.dataset.size));
+      this.draft = createWorkoutDraft({ ...recipe, endless: this.draft.endless });
+      this.error = '';
+      this.render();
+    }));
     this.container.querySelector('[data-editor="total"]')?.addEventListener('change', (event) => {
       this.draft = setWorkoutTotalCount(this.draft, event.target.value);
       this.tryValidate(false);

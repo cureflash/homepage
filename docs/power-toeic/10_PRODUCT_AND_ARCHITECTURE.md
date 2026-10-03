@@ -228,11 +228,13 @@ Every mode resolves to the same recipe/session mechanism:
 - TEST;
 - REVIEW.
 
-Long sessions use 10/30/50/100 presets and bounded-chunk endless continuation.
+Sessions use 5/10/30/50/100 presets and bounded-chunk endless continuation.
 
 ## Question selection policy
 
 Prefer eligible unseen questions, then least-recently-seen questions, then deliberate review items. Avoid duplicate IDs inside finite sessions.
+
+Explicit skill allocations define the allowed scope. A shortage may be filled only from other selected skills, never from unselected categories/skills. If the selected pool is still too small, a finite session uses fewer unique questions and the editor states that limit. Endless sessions repeat the selected pool across bounded chunks.
 
 The selector operates on IDs/metadata supplied by `QuestionBankRepository`; it does not care whether data came from fixtures, static JSON, or a future backend.
 

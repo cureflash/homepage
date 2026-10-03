@@ -142,7 +142,9 @@ export function selectQuestionIds({ repository, recipe, attempts = [], reviewQue
 
   const allocations = allocationCounts(recipe);
   allocations.forEach((entry, index) => addFrom(repository.listQuestions({ skillId: entry.skillId }), entry.resolvedCount, index + 1));
-  if (selected.length < recipe.totalCount) addFrom(repository.listQuestions(), recipe.totalCount - selected.length, 5000);
+  const allowedSkills = new Set(allocations.map((entry) => entry.skillId));
+  const eligible = repository.listQuestions().filter((question) => !allowedSkills.size || allowedSkills.has(question.skillId));
+  if (selected.length < recipe.totalCount) addFrom(eligible, recipe.totalCount - selected.length, 5000);
   return Object.freeze(selected);
 }
 

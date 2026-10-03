@@ -1,5 +1,15 @@
 import Foundation
 
+public struct QuestionCategory: Codable, Equatable, Sendable, Identifiable {
+    public let id: String
+    public let label: String
+
+    public init(id: String, label: String) {
+        self.id = id
+        self.label = label
+    }
+}
+
 public struct Skill: Codable, Equatable, Sendable {
     public let id: String
     public let label: String

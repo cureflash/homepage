@@ -94,8 +94,12 @@ public enum WorkoutBuilder {
             addFrom(questions, count: allocation.resolvedCount, salt: index + 1)
         }
         if selected.count < recipe.totalCount {
+            let allowedSkills = Set(allocations.map(\.skillId))
+            let eligible = try repository.questions().filter {
+                allowedSkills.isEmpty || allowedSkills.contains($0.skillId)
+            }
             addFrom(
-                try repository.questions(),
+                eligible,
                 count: recipe.totalCount - selected.count,
                 salt: 5_000
             )
@@ -165,6 +169,30 @@ public enum WorkoutBuilder {
         )
         try validate(recipe)
         return recipe
+    }
+
+    public static func categoryRecipe(
+        repository: any QuestionBankRepository,
+        categoryIDs: Set<String>,
+        mode: WorkoutMode,
+        totalCount: Int = 30
+    ) throws -> WorkoutRecipe {
+        let skills = try repository.skills().filter { categoryIDs.contains($0.categoryId) }
+        guard !skills.isEmpty else { throw WorkoutBuilderError.weaknessRequiresSkills }
+        let recipe = WorkoutRecipe(
+            mode: mode, totalCount: totalCount,
+            skillAllocations: skills.map { SkillAllocation(skillId: $0.id, weight: 1) },
+            selectionPolicy: .standard, labelPolicy: mode == .test ? .hideSkill : .showSkill,
+            seed: 1, endless: false
+        )
+        try validate(recipe)
+        return recipe
+    }
+
+    public static func resolvedSkillAllocations(_ recipe: WorkoutRecipe) -> [SkillAllocation] {
+        allocationCounts(recipe).filter { $0.resolvedCount > 0 }.map {
+            SkillAllocation(skillId: $0.skillId, count: $0.resolvedCount)
+        }
     }
 
     private struct ResolvedAllocation {

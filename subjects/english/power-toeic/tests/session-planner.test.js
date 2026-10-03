@@ -12,9 +12,9 @@ function makeRepository(count = 160) {
   };
 }
 
-test('finite session presets support 10, 30, 50 and 100', () => {
+test('finite session presets support 5, 10, 30, 50 and 100', () => {
   const base = createWorkoutRecipe({ mode: 'CUSTOM', totalCount: 30, skillAllocations: [{ skillId: 'a', weight: 1 }] });
-  assert.deepEqual(FINITE_SESSION_SIZES, [10, 30, 50, 100]);
+  assert.deepEqual(FINITE_SESSION_SIZES, [5, 10, 30, 50, 100]);
   for (const size of FINITE_SESSION_SIZES) {
     const recipe = createFiniteSessionRecipe(base, size);
     assert.equal(recipe.totalCount, size);

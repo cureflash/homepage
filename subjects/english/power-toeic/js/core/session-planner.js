@@ -1,6 +1,6 @@
 import { createWorkoutRecipe, selectQuestionIds } from './workout-builder.js';
 
-export const FINITE_SESSION_SIZES = Object.freeze([10, 30, 50, 100]);
+export const FINITE_SESSION_SIZES = Object.freeze([5, 10, 30, 50, 100]);
 export const DEFAULT_ENDLESS_CHUNK_SIZE = 30;
 
 export function isSupportedFiniteSessionSize(size) {

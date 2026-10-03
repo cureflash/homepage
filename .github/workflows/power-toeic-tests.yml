@@ -25,3 +25,9 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      - name: Install browser test tools
+        run: npm install --no-save --package-lock=false playwright@1.62.1
+      - name: Install Chromium for browser smoke test
+        run: npx playwright install --with-deps chromium
+      - name: Exercise the learner flow in a mobile browser
+        run: node tools/browser-smoke.mjs
