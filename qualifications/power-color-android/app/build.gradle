@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'jp.cureflash.powercolor'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'jp.cureflash.powercolor'
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName '0.1.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    sourceSets.main.assets.srcDir(layout.buildDirectory.dir('generated/powerColorAssets'))
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.14.0'
+    androidTestImplementation 'androidx.test:core:1.6.1'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+}
+
+// Keep the web app and shared TOEIC engine as the single source of truth.
+def syncPowerColorAssets = tasks.register('syncPowerColorAssets', Sync) {
+    from(rootProject.projectDir.parentFile.parentFile) {
+        include 'qualifications/color-certification/index.html'
+        include 'qualifications/color-certification/styles.css'
+        include 'qualifications/color-certification/js/**'
+        include 'qualifications/color-certification/audio/**'
+        include 'qualifications/color-certification/data/grade3-colors.json'
+        include 'qualifications/color-certification/data/grade3-runtime.json'
+        include 'subjects/english/power-toeic/js/core/session.js'
+        include 'subjects/english/power-toeic/js/core/workout-builder.js'
+        include 'subjects/english/power-toeic/js/data/question-bank-adapter.js'
+    }
+    into(layout.buildDirectory.dir('generated/powerColorAssets'))
+    doLast {
+        [
+            'qualifications/color-certification/index.html',
+            'qualifications/color-certification/styles.css',
+            'qualifications/color-certification/js/main.js',
+            'qualifications/color-certification/js/color-choice-renderer.js',
+            'qualifications/color-certification/js/quiz-sounds.js',
+            'qualifications/color-certification/audio/quiz-correct.mp3',
+            'qualifications/color-certification/audio/quiz-wrong.mp3',
+            'qualifications/color-certification/audio/quiz-question.mp3',
+            'qualifications/color-certification/data/grade3-colors.json',
+            'qualifications/color-certification/data/grade3-runtime.json',
+            'subjects/english/power-toeic/js/core/session.js',
+            'subjects/english/power-toeic/js/core/workout-builder.js',
+            'subjects/english/power-toeic/js/data/question-bank-adapter.js'
+        ].each { relativePath ->
+            if (!layout.buildDirectory.file("generated/powerColorAssets/${relativePath}").get().asFile.isFile()) {
+                throw new GradleException("Required Power Color asset is missing: ${relativePath}")
+            }
+        }
+    }
+}
+
+tasks.named('preBuild').configure {
+    dependsOn(syncPowerColorAssets)
+}
