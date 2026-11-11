@@ -1,0 +1,31 @@
+name: PowerColor SE catalog
+on:
+  push:
+    branches: [work/powercolor-audio-20261111]
+    paths: [.github/workflows/powercolor-se-catalog.yml]
+permissions:
+  contents: read
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read public sound catalog markup
+        run: |
+          mkdir -p sound-catalog
+          python3 - <<'PY'
+          import urllib.request,pathlib,json
+          pages={'button':'https://soundeffect-lab.info/sound/button/','life1':'https://soundeffect-lab.info/sound/various/','life2':'https://soundeffect-lab.info/sound/various/various2.html'}
+          result=[]
+          for key,url in pages.items():
+            try:
+              with urllib.request.urlopen(url,timeout=30) as r: data=r.read(2000000)
+              pathlib.Path('sound-catalog',key+'.html').write_bytes(data);result.append({'key':key,'url':url,'bytes':len(data)})
+            except Exception as e:result.append({'key':key,'url':url,'error':str(e)})
+          pathlib.Path('sound-catalog/index.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: powercolor-se-catalog-review
+          path: sound-catalog/
+          retention-days: 1
