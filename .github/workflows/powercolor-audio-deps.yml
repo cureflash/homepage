@@ -1,0 +1,58 @@
+name: PowerColor audio dependencies
+on:
+  push:
+    branches: [work/powercolor-audio-20261111]
+    paths: [.github/workflows/powercolor-audio-deps.yml]
+permissions:
+  contents: read
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Retrieve official CC-BY PeriTune source files
+        shell: bash
+        run: |
+          mkdir -p powercolor-audio
+          python3 - <<'PY'
+          import urllib.request, urllib.parse, zipfile, io, hashlib, json, pathlib
+          out=pathlib.Path('powercolor-audio')
+          tracks=[
+            ('gentle_brew','https://peritune.com/music/Peritune_Gentle_Brew.zip','https://peritune.com/blog/2025/01/22/gentle_brew/'),
+            ('village_fete','https://peritune.com/music/PeriTune_Village_Fete.zip','https://peritune.com/blog/2024/04/12/village_fete/'),
+            ('cafe_seaside','https://peritune.com/music/PerituneMaterial_Cafe_Seaside.zip','https://peritune.com/blog/2023/07/31/cafe_seaside/'),
+            ('laid_back2','https://peritune.com/music/PerituneMaterial_Laid_Back2.mp3','https://peritune.com/blog/2017/06/11/laid_back2/'),
+            ('afternoon_garden','https://peritune.com/loop/PerituneMaterial_Afternoon_Garden_loop.zip','https://peritune.com/afternoon_garden/'),
+            ('sugar_sprinkle','https://peritune.com/music/PeriTune_Sugar_Sprinkle.zip','https://peritune.com/blog/2024/04/11/sugar_sprinkle/'),
+            ('recollection','https://peritune.com/loop/PerituneMaterial_Recollection_loop.zip','https://peritune.com/blog/2022/05/03/recollection/')
+          ]
+          results=[]
+          for key,url,page in tracks:
+            row={'id':key,'source':url,'page':page,'author':'PeriTune / Sei Mutsuki','license':'CC BY 4.0','licenseUrl':'https://creativecommons.org/licenses/by/4.0/','terms':'https://peritune.com/about/','status':'failed'}
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'PowerColor dependency build (credited game integration)'})
+              with urllib.request.urlopen(req,timeout=45) as r:
+                if urllib.parse.urlparse(r.url).hostname not in ('peritune.com','www.peritune.com'): raise ValueError('Unexpected redirect host')
+                data=r.read(64000001)
+              if len(data)>64000000: raise ValueError('Dependency exceeds size cap')
+              member=None
+              if url.endswith('.zip'):
+                with zipfile.ZipFile(io.BytesIO(data)) as z:
+                  candidates=[i for i in z.infolist() if i.filename.lower().endswith('.mp3') and not i.filename.startswith('__MACOSX/') and i.file_size<32000000]
+                  candidates.sort(key=lambda i:('loop' not in i.filename.lower(),len(i.filename)))
+                  if not candidates: raise ValueError('No MP3 in official archive')
+                  member=candidates[0].filename;data=z.read(candidates[0])
+              if len(data)<10000 or data[:80].lower().find(b'<html')>=0: raise ValueError('Not an audio payload')
+              p=out/(key+'.mp3');p.write_bytes(data)
+              row.update(status='downloaded',file=p.name,bytes=len(data),sha256=hashlib.sha256(data).hexdigest(),archiveMember=member,loopProvided=bool(member and 'loop' in member.lower()),modifications='Archive extraction only; original MP3 bytes')
+            except Exception as e: row['error']=str(e)
+            results.append(row);print(key,row['status'],row.get('bytes'),row.get('error',''))
+          (out/'manifest.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf8')
+          (out/'CREDITS.txt').write_text('PowerColor game build dependencies, not a soundtrack product.\nMusic: PeriTune / Sei Mutsuki (mutsuki sei).\nAll selected tracks were published before March 2026 and retain CC BY 4.0 per https://peritune.com/about/ .\nLicense: https://creativecommons.org/licenses/by/4.0/ .\nIndividual source pages, original file URLs, processing and SHA256 are in manifest.json.\nNo affiliation or endorsement is implied.\n',encoding='utf8')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: powercolor-peritune-dependencies
+          path: powercolor-audio/
+          if-no-files-found: error
+          retention-days: 3
